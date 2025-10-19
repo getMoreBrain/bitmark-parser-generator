@@ -487,12 +487,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return this.standardHandler(node, route, NodeType.bitsValue, { array: true });
   }
 
-  // bitmarkAst -> bits -> bitsValue -> sourcePageNumber
-
-  protected enter_sourcePageNumber(node: NodeInfo, route: NodeInfo[]): boolean {
-    return this.standardHandler(node, route, NodeType.bitsValue, { array: true });
-  }
-
   // bitmarkAst -> bits -> bitsValue -> marginNumber
 
   protected enter_marginNumber(node: NodeInfo, route: NodeInfo[]): boolean {
@@ -1573,7 +1567,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       delete bitJson.item;
       delete bitJson.lead;
       delete bitJson.pageNumber;
-      delete bitJson.sourcePageNumber;
       delete bitJson.marginNumber;
       delete bitJson.hint;
       delete bitJson.instruction;
@@ -1589,8 +1582,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.lead == null || bitJson.lead?.length === 0) delete bitJson.lead;
         if (bitJson.pageNumber == null || bitJson.pageNumber?.length === 0)
           delete bitJson.pageNumber;
-        if (bitJson.sourcePageNumber == null || bitJson.sourcePageNumber?.length === 0)
-          delete bitJson.sourcePageNumber;
         if (bitJson.marginNumber == null || bitJson.marginNumber?.length === 0)
           delete bitJson.marginNumber;
         if (bitJson.hint == null || bitJson.hint?.length === 0) delete bitJson.hint;
@@ -1603,7 +1594,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.hint == null) bitJson.hint = this.textDefault;
         if (bitJson.instruction == null) bitJson.instruction = this.textDefault;
         if (bitJson.pageNumber == null) bitJson.pageNumber = this.textDefault;
-        if (bitJson.sourcePageNumber == null) bitJson.sourcePageNumber = this.textDefault;
         if (bitJson.marginNumber == null) bitJson.marginNumber = this.textDefault;
       }
       if (bitJson.body == null) bitJson.body = this.bodyDefault;

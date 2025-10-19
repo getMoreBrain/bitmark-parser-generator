@@ -4,9 +4,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -23,7 +21,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -62,9 +59,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -81,7 +76,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -120,9 +114,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rathe",
       "item": [],
@@ -139,7 +131,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -158,9 +149,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -177,7 +166,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -237,7 +225,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -269,9 +256,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [
         {
@@ -286,7 +271,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -307,13 +291,10 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -334,9 +315,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "ra",
       "item": [],
       "lead": [
@@ -352,7 +331,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -372,13 +350,10 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -410,13 +385,10 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -448,13 +420,10 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -493,13 +462,10 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -541,7 +507,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -556,9 +521,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "gap tag"
-                ],
+                "solutions": ["gap tag"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -586,13 +549,10 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

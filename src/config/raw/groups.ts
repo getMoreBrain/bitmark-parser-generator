@@ -28,6 +28,11 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_sourceRL,
+        description: 'The original location of the information in the original source material',
+        format: TagFormat.plainText,
+      },
+      {
         key: ConfigKey.property_isTemplate,
         description: 'If true, the bit is a template',
         format: TagFormat.boolean,
@@ -673,6 +678,11 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_sourceDocument,
         description: 'Url of the source document for the book (for example, a PDF file)',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_internalPrintPdf,
+        description: 'Url of the internal print PDF for the book',
         format: TagFormat.plainText,
       },
     ],

@@ -4,14 +4,11 @@
       "type": "vendor-datadog-dashboard-embed",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
       "vendorDashboardId": "here is  the survey id",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -29,13 +26,10 @@
       "type": "vendor-datadog-dashboard-embed",
       "format": "text",
       "bitLevel": 1,
-      "id": [
-        "342341"
-      ],
+      "id": ["342341"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

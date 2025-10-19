@@ -4,17 +4,11 @@
       "type": "hand-in-file",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "189522"
-      ],
-      "handInAcceptFileType": [
-        "application/pdf",
-        "image/tiff"
-      ],
+      "id": ["189522"],
+      "handInAcceptFileType": ["application/pdf", "image/tiff"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -64,9 +58,7 @@
       "type": "hand-in-file",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213729"
-      ],
+      "id": ["213729"],
       "item": [
         {
           "type": "paragraph",
@@ -81,7 +73,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -132,12 +123,8 @@
       "type": "hand-in-file",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213734"
-      ],
-      "handInAcceptFileType": [
-        "image/tiff"
-      ],
+      "id": ["213734"],
+      "handInAcceptFileType": ["image/tiff"],
       "item": [
         {
           "type": "paragraph",
@@ -152,7 +139,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -222,9 +208,7 @@
       "type": "hand-in-file",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213737"
-      ],
+      "id": ["213737"],
       "item": [
         {
           "type": "paragraph",
@@ -250,7 +234,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -325,13 +308,10 @@
       "type": "hand-in-file",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197943"
-      ],
+      "id": ["197943"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

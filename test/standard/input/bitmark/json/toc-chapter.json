@@ -4,14 +4,11 @@
       "type": "toc-chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "92374"
-      ],
+      "id": ["92374"],
       "maxDisplayLevel": 99,
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

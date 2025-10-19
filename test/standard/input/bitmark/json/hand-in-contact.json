@@ -4,13 +4,10 @@
       "type": "hand-in-contact",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "189522"
-      ],
+      "id": ["189522"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -60,9 +57,7 @@
       "type": "hand-in-contact",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213729"
-      ],
+      "id": ["213729"],
       "item": [
         {
           "type": "paragraph",
@@ -77,7 +72,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -127,9 +121,7 @@
       "type": "hand-in-contact",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213734"
-      ],
+      "id": ["213734"],
       "item": [
         {
           "type": "paragraph",
@@ -144,7 +136,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -214,9 +205,7 @@
       "type": "hand-in-contact",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213737"
-      ],
+      "id": ["213737"],
       "item": [
         {
           "type": "paragraph",
@@ -242,7 +231,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -316,13 +304,10 @@
       "type": "hand-in-contact",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "197943"
-      ],
+      "id": ["197943"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

@@ -4,13 +4,10 @@
       "type": "image-portrait",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "342343"
-      ],
+      "id": ["342343"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

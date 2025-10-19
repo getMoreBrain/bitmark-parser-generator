@@ -4,9 +4,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287883"
-      ],
+      "id": ["287883"],
       "labelTrue": "rather yes",
       "labelFalse": "rather no",
       "item": [],
@@ -23,15 +21,10 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "additionalSolutions": [
-        "word1",
-        "word2",
-        "word3"
-      ],
+      "additionalSolutions": ["word1", "word2", "word3"],
       "body": [],
       "statements": [
         {
@@ -67,9 +60,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287885"
-      ],
+      "id": ["287885"],
       "item": [],
       "lead": [
         {
@@ -84,7 +75,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -142,9 +132,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287887"
-      ],
+      "id": ["287887"],
       "item": [],
       "lead": [
         {
@@ -159,7 +147,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -244,9 +231,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "249542"
-      ],
+      "id": ["249542"],
       "labelTrue": "Richtig",
       "labelFalse": "Falsch",
       "item": [],
@@ -263,7 +248,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -422,15 +406,12 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "165223"
-      ],
+      "id": ["165223"],
       "labelTrue": "richtig",
       "labelFalse": "falsch",
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -545,9 +526,7 @@
       "type": "true-false",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "213731"
-      ],
+      "id": ["213731"],
       "labelTrue": "p",
       "labelFalse": "s",
       "item": [
@@ -564,7 +543,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -670,7 +648,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -709,7 +686,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -748,7 +724,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

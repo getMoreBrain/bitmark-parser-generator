@@ -4,17 +4,11 @@
       "type": "collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "machineTranslated": "© Google 2024",
       "lang": "en-UK",
-      "publisher": [
-        "kpmg"
-      ],
-      "theme": [
-        "grundzuege"
-      ],
+      "publisher": ["kpmg"],
+      "theme": ["grundzuege"],
       "item": [
         {
           "type": "paragraph",
@@ -45,18 +39,6 @@
           "content": [
             {
               "text": "pageNumber",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
-      "sourcePageNumber": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "sourcePageNumber",
               "type": "text"
             }
           ],
@@ -194,20 +176,17 @@
         }
       ]
     },
-    "bitmark": "[.collapsible:bitmark++]\n[@id:151970]\n[@machineTranslated: © Google 2024]\n[@lang:en-UK]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%sourcePageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
+    "bitmark": "[.collapsible:bitmark++]\n[@id:151970]\n[@machineTranslated: © Google 2024]\n[@lang:en-UK]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
   },
   {
     "bit": {
       "type": "side-note-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -258,13 +237,10 @@
       "type": "info-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -315,13 +291,10 @@
       "type": "remark-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -372,13 +345,10 @@
       "type": "warning-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -429,13 +399,10 @@
       "type": "danger-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -486,13 +453,10 @@
       "type": "note-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -543,13 +507,10 @@
       "type": "example-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -600,13 +561,10 @@
       "type": "hint-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {
@@ -657,13 +615,10 @@
       "type": "bug-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151970"
-      ],
+      "id": ["151970"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [
         {

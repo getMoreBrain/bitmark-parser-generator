@@ -16,6 +16,7 @@
       "processHandInLocation": "Auckland",
       "maxTocChapterLevel": 45,
       "sourceDocument": "http://example.com/source.pdf",
+      "internalPrintPdf": "http://example.com/print.pdf",
       "title": [
         {
           "type": "paragraph",
@@ -43,7 +44,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -102,7 +102,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

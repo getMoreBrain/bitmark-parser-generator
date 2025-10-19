@@ -42,9 +42,7 @@
         "id-with-a-^]-in-it-and-at-the-end-^]",
         "id-with-a-^^]-in-it-and-at-the-end-^^]"
       ],
-      "externalId": [
-        "[externalId with square bracked at end]"
-      ],
+      "externalId": ["[externalId with square bracked at end]"],
       "lang": "[lang] with square bracked in middle",
       "item": [
         {
@@ -71,7 +69,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -142,9 +139,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "[gap]"
-                ],
+                "solutions": ["[gap]"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -190,7 +185,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -239,7 +233,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -276,7 +269,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -331,7 +323,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -459,7 +450,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

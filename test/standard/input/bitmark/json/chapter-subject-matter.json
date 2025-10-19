@@ -4,13 +4,10 @@
       "type": "chapter-subject-matter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "342336"
-      ],
+      "id": ["342336"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

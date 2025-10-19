@@ -5,14 +5,10 @@
       "format": "bitmark++",
       "bitLevel": 1,
       "isTemplate": true,
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

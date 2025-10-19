@@ -4,9 +4,7 @@
       "type": "review-reviewer-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "210022"
-      ],
+      "id": ["210022"],
       "item": [],
       "lead": [
         {
@@ -26,7 +24,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -58,9 +55,7 @@
       "type": "review-reviewer-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "210040"
-      ],
+      "id": ["210040"],
       "item": [],
       "lead": [
         {
@@ -80,7 +75,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

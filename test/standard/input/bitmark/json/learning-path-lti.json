@@ -6,13 +6,10 @@
       "bitLevel": 1,
       "action": "Übungsprüfung",
       "duration": "3600s",
-      "deeplink": [
-        "https://other.platform/path/to/quiz"
-      ],
+      "deeplink": ["https://other.platform/path/to/quiz"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [

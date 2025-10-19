@@ -4,13 +4,10 @@
       "type": "side-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "210103"
-      ],
+      "id": ["210103"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -168,14 +165,10 @@
       "type": "side-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "ageRange": ["18", "120"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

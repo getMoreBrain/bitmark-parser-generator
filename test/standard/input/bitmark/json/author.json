@@ -4,13 +4,8 @@
       "type": "author",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
-      "ageRange": [
-        "18",
-        "120"
-      ],
+      "id": ["151971"],
+      "ageRange": ["18", "120"],
       "fullName": "John Smith",
       "pseudonym": "Smithy",
       "title": "Geeza",
@@ -18,7 +13,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -69,12 +63,8 @@
       "type": "book-author",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
-      "ageRange": [
-        "120"
-      ],
+      "id": ["151971"],
+      "ageRange": ["120"],
       "fullName": "John Smith",
       "pseudonym": "Smithy",
       "title": "Geeza",
@@ -82,7 +72,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -133,12 +122,8 @@
       "type": "article-author",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
-      "ageRange": [
-        "18"
-      ],
+      "id": ["151971"],
+      "ageRange": ["18"],
       "fullName": "John Smith",
       "pseudonym": "Smithy",
       "title": "Geeza",
@@ -146,7 +131,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -200,7 +184,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

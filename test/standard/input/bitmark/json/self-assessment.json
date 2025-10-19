@@ -37,7 +37,6 @@
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -73,9 +72,7 @@
       "type": "self-assessment",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "92484"
-      ],
+      "id": ["92484"],
       "item": [
         {
           "type": "paragraph",
@@ -90,7 +87,6 @@
       ],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [
@@ -137,13 +133,10 @@
       "type": "self-assessment",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "191222"
-      ],
+      "id": ["191222"],
       "item": [],
       "lead": [],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],

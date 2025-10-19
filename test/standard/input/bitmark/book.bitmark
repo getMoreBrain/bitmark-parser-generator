@@ -30,6 +30,7 @@
 [@levelACTFL:levelACTFL]
 [@maxTocChapterLevel:5]
 [@sourceDocument:http://example.com/source.pdf]
+[@internalPrintPdf:http://example.com/print.pdf]
 [@processHandIn]
 [@chatWithBook]
 [@isEditable]

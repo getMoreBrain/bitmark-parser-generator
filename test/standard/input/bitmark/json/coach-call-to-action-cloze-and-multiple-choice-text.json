@@ -4,9 +4,7 @@
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287842"
-      ],
+      "id": ["287842"],
       "item": [],
       "lead": [
         {
@@ -21,7 +19,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -36,9 +33,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "cloze"
-                ],
+                "solutions": ["cloze"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -262,9 +257,7 @@
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287843"
-      ],
+      "id": ["287843"],
       "item": [],
       "lead": [
         {
@@ -279,7 +272,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -294,9 +286,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "cloze"
-                ],
+                "solutions": ["cloze"],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -531,9 +521,7 @@
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "287844"
-      ],
+      "id": ["287844"],
       "item": [],
       "lead": [
         {
@@ -548,7 +536,6 @@
         }
       ],
       "pageNumber": [],
-      "sourcePageNumber": [],
       "marginNumber": [],
       "hint": [],
       "instruction": [],
@@ -563,10 +550,7 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [
-                  "cloze",
-                  "gap"
-                ],
+                "solutions": ["cloze", "gap"],
                 "item": [],
                 "lead": [],
                 "hint": [],
