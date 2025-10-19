@@ -14,6 +14,7 @@
 [@bookAlias: test-id]
 [@maxTocChapterLevel:45]
 [@sourceDocument:http://example.com/source.pdf]
+[@internalPrintPdf:http://example.com/print.pdf]
 
 
 [.book-alias]
