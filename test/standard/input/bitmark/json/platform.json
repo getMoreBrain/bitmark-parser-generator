@@ -33,7 +33,15 @@
         "image": {
           "format": "png",
           "provider": "sobrado.getmorebrain.com",
-          "src": "https://sobrado.getmorebrain.com/sobrado_icon.png"
+          "src": "https://sobrado.getmorebrain.com/sobrado_icon.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
         }
       },
       "item": [],
@@ -62,7 +70,15 @@
         "image": {
           "format": "png",
           "provider": "sobrado.getmorebrain.com",
-          "src": "https://sobrado.getmorebrain.com/sobrado_logo.png"
+          "src": "https://sobrado.getmorebrain.com/sobrado_logo.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
         }
       },
       "platformPrimaryColor": "white",
@@ -295,7 +311,15 @@
         "image": {
           "format": "png",
           "provider": "sobrado.getmorebrain.com",
-          "src": "https://sobrado.getmorebrain.com/sobrado_bg.png"
+          "src": "https://sobrado.getmorebrain.com/sobrado_bg.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
         }
       },
       "item": [],
