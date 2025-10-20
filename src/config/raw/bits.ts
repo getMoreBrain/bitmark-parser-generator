@@ -3159,6 +3159,23 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.interview,
     description: 'Bot interview bit, used to create bot interviews in articles or books',
   },
+  [BitType.brandColor]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Brand color bit, used to define brand colors',
+    tags: [
+      {
+        key: ConfigKey.property_brandColor,
+        description: 'The brand color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_brandColorName,
+        description: 'The brand color name',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
   [BitType.learningPathBook]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -3944,6 +3961,160 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.image,
     description: 'Photo bit, used to create photo bits in articles or books',
+  },
+  [BitType.platform]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform bit, used to define platform properties',
+    tags: [
+      {
+        key: ConfigKey.property_platformName,
+        description: 'The platform name',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.resource_platformIcon,
+        description: 'The platform icon',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the platform icon resource',
+          },
+        ],
+        maxCount: 1,
+      },
+    ],
+  },
+  [BitType.platformHeader]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform header bit, used to define platform header properties',
+    tags: [
+      {
+        key: ConfigKey.resource_platformLogo,
+        description: 'The platform logo',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the platform logo resource',
+          },
+        ],
+        maxCount: 1,
+      },
+      {
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
+      },
+    ],
+  },
+  [BitType.platformMain]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform main bit, used to define platform main properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
+      },
+    ],
+  },
+  [BitType.platformMainButton]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform main button bit, used to define platform main button properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
+      },
+    ],
+  },
+  [BitType.platformMainInput]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform main input bit, used to define platform main input properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
+      },
+    ],
+  },
+  [BitType.platformSection]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform section bit, used to define platform section properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
+      },
+    ],
+  },
+  [BitType.platformSectionButton]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform section button bit, used to define platform section button properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
+      },
+    ],
+  },
+  [BitType.platformSectionChat]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform section chat bit, used to define platform section chat properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
+      },
+      {
+        key: ConfigKey.resource_platformBackgroundImage,
+        description: 'The platform section chat background image',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the platform background image resource',
+          },
+        ],
+      },
+    ],
+  },
+  [BitType.platformSectionHeader]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform section header bit, used to define platform section header properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
+      },
+    ],
+  },
+  [BitType.platformSectionInput]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform section input bit, used to define platform section input properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
+      },
+    ],
+  },
+  [BitType.platformSystemIcon]: {
+    since: '4.12.0',
+    baseBitType: BitType._standard,
+    description: 'Platform system icon bit, used to define platform system icon properties',
+    tags: [
+      {
+        key: ConfigKey.group_platformColorsCommon,
+        description: 'Common platform colors',
+      },
+    ],
   },
   [BitType.quote]: {
     since: '1.3.0',

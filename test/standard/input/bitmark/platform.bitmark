@@ -1,0 +1,66 @@
+[.brand-color]
+[@brandColor: #e95a0c]
+[@brandColorName: Vibrant Orange]
+
+
+[.platform]
+[@platformName: Sobrado]
+[&platformIcon: https://sobrado.getmorebrain.com/sobrado_icon.png]
+
+[.platform-header]
+[&platformLogo: https://sobrado.getmorebrain.com/sobrado_logo.png]
+[@platformPrimaryColor: white]
+[@platformBackgroundColor: #19333B]
+
+[.platform-system-icon]
+[@platformPrimaryColor: white]
+[@platformBackgroundColor: green]
+
+[.platform-main]
+[@platformPrimaryColor: white]
+[@platformSecondaryColor: white]
+[@platformScrollbarColor: white]
+[@platformSelectionColor: orange]
+[@platformSeparatorColor: orange]
+[@platformBackgroundColor: white]
+
+[.platform-main-button]
+[@platformPrimaryColor: white]
+[@platformBackgroundColor: white]
+
+[.platform-main-input]
+[@platformPlaceholderColor: gray]
+[@platformTextSelectionColor: orange]
+[@platformPrimaryColor: white]
+[@platformBackgroundColor: green]
+
+[.platform-section-header]
+[@platformPrimaryColor: white]
+[@platformBackgroundColor: #19333B]
+[@platformButtonPrimaryColor: white]
+[@platformButtonBackgroundColor: white]
+
+[.platform-section]
+[@platformPrimaryColor: white]
+[@platformSecondaryColor: white]
+[@platformScrollbarColor: white]
+[@platformSelectionColor: orange]
+[@platformBackgroundColor: white]
+
+[.platform-section-button]
+[@platformPrimaryColor: white]
+[@platformBackgroundColor: white]
+
+[.platform-section-input]
+[@platformPlaceholderColor: gray]
+[@platformTextSelectionColor: orange]
+[@platformPrimaryColor: white]
+[@platformBackgroundColor: green]
+
+[.platform-section-chat]
+[@platformPrimaryColor: white]
+[@platformSecondaryColor: white]
+[@platformScrollbarColor: white]
+[@platformMessageBackgroundColor: white]
+[@platformBackgroundColor: white]
+[&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]

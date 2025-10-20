@@ -347,7 +347,10 @@ class BitmarkPegParserValidator {
         const resourceKey = key.replace(/^@/, '&') as ConfigKeyType;
         if (
           resourceKey === ConfigKey.resource_backgroundWallpaper ||
-          resourceKey === ConfigKey.resource_imagePlaceholder
+          resourceKey === ConfigKey.resource_imagePlaceholder ||
+          resourceKey === ConfigKey.resource_platformIcon ||
+          resourceKey === ConfigKey.resource_platformLogo ||
+          resourceKey === ConfigKey.resource_platformBackgroundImage
         ) {
           tagData = validTypeKeys.get(resourceKey);
           if (tagData) {

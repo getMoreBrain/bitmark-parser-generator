@@ -195,7 +195,10 @@ function resourceContentProcessor(
     // Depending on the resource type, add it to the appropriate part of the target
     if (
       configKey === ConfigKey.resource_backgroundWallpaper ||
-      configKey === ConfigKey.resource_imagePlaceholder
+      configKey === ConfigKey.resource_imagePlaceholder ||
+      configKey === ConfigKey.resource_platformIcon ||
+      configKey === ConfigKey.resource_platformLogo ||
+      configKey === ConfigKey.resource_platformBackgroundImage
     ) {
       if (target.propertyStyleResources) target.propertyStyleResources[resourceType] = resource;
     } else {

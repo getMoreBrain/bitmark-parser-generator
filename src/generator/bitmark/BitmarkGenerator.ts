@@ -1907,6 +1907,42 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return true;
   }
 
+  // bitmarkAst -> bits -> bitsValue -> platformIcon
+  protected enter_platformIcon(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const resource = node.value as ResourceJson;
+
+    // This is a resource, so handle it with the common code
+    this.writeNL();
+    this.writePropertyStyleResource(node.key, resource);
+
+    // Continue traversal
+    return true;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> platformLogo
+  protected enter_platformLogo(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const resource = node.value as ResourceJson;
+
+    // This is a resource, so handle it with the common code
+    this.writeNL();
+    this.writePropertyStyleResource(node.key, resource);
+
+    // Continue traversal
+    return true;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> platformBackgroundImage
+  protected enter_platformBackgroundImage(node: NodeInfo, _route: NodeInfo[]): boolean {
+    const resource = node.value as ResourceJson;
+
+    // This is a resource, so handle it with the common code
+    this.writeNL();
+    this.writePropertyStyleResource(node.key, resource);
+
+    // Continue traversal
+    return true;
+  }
+
   protected exit_imagePlaceholder(_node: NodeInfo, _route: NodeInfo[]): void {
     // this.writeNL();
   }

@@ -773,6 +773,67 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_platformColorsCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform colors',
+    tags: [
+      {
+        key: ConfigKey.property_platformPrimaryColor,
+        description: 'The platform system primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSecondaryColor,
+        description: 'The platform section secondary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBackgroundColor,
+        description: 'The platform system background color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformButtonPrimaryColor,
+        description: 'The platform section header button primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformButtonBackgroundColor,
+        description: 'The platform section header button background color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformScrollbarColor,
+        description: 'The platform main scrollbar color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSelectionColor,
+        description: 'The platform main selection color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformTextSelectionColor,
+        description: 'The platform main input text selection color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSeparatorColor,
+        description: 'The platform main separator color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformPlaceholderColor,
+        description: 'The platform main input placeholder color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformMessageBackgroundColor,
+        description: 'The platform section chat message background color',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
   [ConfigKey.group_quizCommon]: {
     type: GroupConfigType.standard,
     description: 'Common quiz tags',
