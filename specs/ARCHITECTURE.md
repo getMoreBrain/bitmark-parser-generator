@@ -272,6 +272,8 @@ graph TD
 - Performance-critical: used in all parsing/generation
 - No external dependencies
 
+**Text Parsing Principle**: Text is always text unless it's a valid bitmark tag.
+
 ## Interactions
 
 ### Bitmark → JSON Conversion Flow
