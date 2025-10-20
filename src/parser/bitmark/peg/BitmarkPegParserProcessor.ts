@@ -718,8 +718,7 @@ class BitmarkPegParserProcessor {
       if (l > 0) result.item = result.itemLead[0];
       if (l > 1) result.lead = result.itemLead[1];
       if (l > 2) result.pageNumber = result.itemLead[2];
-      if (l > 3) result.sourcePageNumber = result.itemLead[3];
-      if (l > 4) result.marginNumber = result.itemLead[l - 1];
+      if (l > 3) result.marginNumber = result.itemLead[l - 1];
     }
 
     // Validate and build the body (trimmed)

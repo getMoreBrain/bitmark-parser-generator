@@ -28,6 +28,11 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_sourceRL,
+        description: 'The original location of the information in the original source material',
+        format: TagFormat.plainText,
+      },
+      {
         key: ConfigKey.property_isTemplate,
         description: 'If true, the bit is a template',
         format: TagFormat.boolean,
@@ -675,6 +680,11 @@ const GROUPS: _GroupsConfig = {
         description: 'Url of the source document for the book (for example, a PDF file)',
         format: TagFormat.plainText,
       },
+      {
+        key: ConfigKey.property_internalPrintPdf,
+        description: 'Url of the internal print PDF for the book',
+        format: TagFormat.plainText,
+      },
     ],
   },
   [ConfigKey.group_learningPathCommon]: {
@@ -759,6 +769,67 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_advertisingClickUrl,
         description: 'The URL to which the advertisement should link',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [ConfigKey.group_platformColorsCommon]: {
+    type: GroupConfigType.standard,
+    description: 'Common platform colors',
+    tags: [
+      {
+        key: ConfigKey.property_platformPrimaryColor,
+        description: 'The platform system primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSecondaryColor,
+        description: 'The platform section secondary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBackgroundColor,
+        description: 'The platform system background color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformButtonPrimaryColor,
+        description: 'The platform section header button primary color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformButtonBackgroundColor,
+        description: 'The platform section header button background color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformScrollbarColor,
+        description: 'The platform main scrollbar color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSelectionColor,
+        description: 'The platform main selection color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformTextSelectionColor,
+        description: 'The platform main input text selection color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSeparatorColor,
+        description: 'The platform main separator color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformPlaceholderColor,
+        description: 'The platform main input placeholder color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformMessageBackgroundColor,
+        description: 'The platform section chat message background color',
         format: TagFormat.plainText,
       },
     ],

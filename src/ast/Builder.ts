@@ -131,6 +131,7 @@ class Builder extends BaseBuilder {
       padletId?: string;
       jupyterId?: string;
       jupyterExecutionCount?: number;
+      sourceRL?: string;
       isPublic?: boolean;
       isTemplate?: boolean;
       isTemplateStripTheme?: boolean;
@@ -269,6 +270,8 @@ class Builder extends BaseBuilder {
       buttonCaption?: string;
       callToActionUrl?: string;
       advertisingClickUrl?: string;
+      brandColor?: string;
+      brandColorName?: string;
       caption?: JsonText;
       quotedPerson?: string;
       reasonableNumOfChars?: number;
@@ -282,9 +285,25 @@ class Builder extends BaseBuilder {
       maxDisplayLevel?: number;
       maxTocChapterLevel?: number;
       sourceDocument?: string;
+      internalPrintPdf?: string;
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
+      platformName?: string;
+      platformIcon?: Partial<ImageResourceWrapperJson>;
+      platformLogo?: Partial<ImageResourceWrapperJson>;
+      platformPrimaryColor?: string;
+      platformSecondaryColor?: string;
+      platformBackgroundColor?: string;
+      platformScrollbarColor?: string;
+      platformSelectionColor?: string;
+      platformSeparatorColor?: string;
+      platformPlaceholderColor?: string;
+      platformTextSelectionColor?: string;
+      platformButtonPrimaryColor?: string;
+      platformButtonBackgroundColor?: string;
+      platformMessageBackgroundColor?: string;
+      platformBackgroundImage?: Partial<ImageResourceWrapperJson>;
       productId?: string | string[];
       product?: string | string[];
       // productList?: string | string[];
@@ -312,7 +331,6 @@ class Builder extends BaseBuilder {
       item?: JsonText;
       lead?: JsonText;
       pageNumber?: JsonText;
-      sourcePageNumber?: JsonText;
       marginNumber?: JsonText;
       hint?: JsonText;
       instruction?: JsonText;
@@ -436,6 +454,7 @@ class Builder extends BaseBuilder {
         data.jupyterExecutionCount,
         options,
       ),
+      sourceRL: this.toAstProperty(bitType, ConfigKey.property_sourceRL, data.sourceRL, options),
       isPublic: this.toAstProperty(bitType, ConfigKey.property_isPublic, data.isPublic, options),
       isTemplate: this.toAstProperty(
         bitType,
@@ -959,6 +978,18 @@ class Builder extends BaseBuilder {
         data.advertisingClickUrl,
         options,
       ),
+      brandColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_brandColor,
+        data.brandColor,
+        options,
+      ),
+      brandColorName: this.toAstProperty(
+        bitType,
+        ConfigKey.property_brandColorName,
+        data.brandColorName,
+        options,
+      ),
       caption: this.handleJsonText(context, TextLocation.tag, data.caption),
       quotedPerson: this.toAstProperty(
         bitType,
@@ -1022,6 +1053,12 @@ class Builder extends BaseBuilder {
         data.sourceDocument,
         options,
       ),
+      internalPrintPdf: this.toAstProperty(
+        bitType,
+        ConfigKey.property_internalPrintPdf,
+        data.internalPrintPdf,
+        options,
+      ),
       tocResource: this.toAstProperty(
         bitType,
         ConfigKey.property_tocResource,
@@ -1035,6 +1072,81 @@ class Builder extends BaseBuilder {
         options,
       ),
       page: this.toAstProperty(bitType, ConfigKey.property_page, data.page, options),
+      platformName: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformName,
+        data.platformName,
+        options,
+      ),
+      platformIcon: this.toImageResource(context, data.platformIcon),
+      platformLogo: this.toImageResource(context, data.platformLogo),
+      platformPrimaryColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformPrimaryColor,
+        data.platformPrimaryColor,
+        options,
+      ),
+      platformSecondaryColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformSecondaryColor,
+        data.platformSecondaryColor,
+        options,
+      ),
+      platformBackgroundColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformBackgroundColor,
+        data.platformBackgroundColor,
+        options,
+      ),
+      platformScrollbarColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformScrollbarColor,
+        data.platformScrollbarColor,
+        options,
+      ),
+      platformSelectionColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformSelectionColor,
+        data.platformSelectionColor,
+        options,
+      ),
+      platformSeparatorColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformSeparatorColor,
+        data.platformSeparatorColor,
+        options,
+      ),
+      platformPlaceholderColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformPlaceholderColor,
+        data.platformPlaceholderColor,
+        options,
+      ),
+      platformTextSelectionColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformTextSelectionColor,
+        data.platformTextSelectionColor,
+        options,
+      ),
+      platformButtonPrimaryColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformButtonPrimaryColor,
+        data.platformButtonPrimaryColor,
+        options,
+      ),
+      platformButtonBackgroundColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformButtonBackgroundColor,
+        data.platformButtonBackgroundColor,
+        options,
+      ),
+      platformMessageBackgroundColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformMessageBackgroundColor,
+        data.platformMessageBackgroundColor,
+        options,
+      ),
+      platformBackgroundImage: this.toImageResource(context, data.platformBackgroundImage),
       productId: this.toAstProperty(bitType, ConfigKey.property_productId, data.productId, options),
       product: this.toAstProperty(bitType, ConfigKey.property_product, data.product, options),
       // productList: this.toAstProperty(
@@ -1109,7 +1221,6 @@ class Builder extends BaseBuilder {
       item: this.handleJsonText(context, TextLocation.tag, data.item),
       lead: this.handleJsonText(context, TextLocation.tag, data.lead),
       pageNumber: this.handleJsonText(context, TextLocation.tag, data.pageNumber),
-      sourcePageNumber: this.handleJsonText(context, TextLocation.tag, data.sourcePageNumber),
       marginNumber: this.handleJsonText(context, TextLocation.tag, data.marginNumber),
       hint: this.handleJsonText(context, TextLocation.tag, data.hint),
       instruction: this.handleJsonText(context, TextLocation.tag, data.instruction),
@@ -1236,15 +1347,7 @@ class Builder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
       ignoreUndefined: ['example'],
-      ignoreEmptyArrays: [
-        'item',
-        'lead',
-        'pageNumber',
-        'sourcePageNumber',
-        'marginNumber',
-        'hint',
-        'instruction',
-      ],
+      ignoreEmptyArrays: ['item', 'lead', 'pageNumber', 'marginNumber', 'hint', 'instruction'],
     });
 
     // Validate and correct invalid bits as much as possible
