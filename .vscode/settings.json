@@ -29,6 +29,10 @@
     "**/dist": true,
     "**/docs": true
   },
+  "chat.tools.terminal.autoApprove": {
+    "/^npm (install|ci|run|build|test).*$/": true,
+    "/^npx (prettier|eslint).*$/": true
+  },
   // "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
   // "jest.jestCommandLine": "yarn test"
   "jest.runMode": "on-demand",

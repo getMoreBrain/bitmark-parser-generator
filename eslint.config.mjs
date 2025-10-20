@@ -22,6 +22,8 @@ const config = [
       '**/coverage',
       '**/build',
       'assets',
+      'specs',
+      '.github',
       'src/generated',
       '**/*.d.ts',
     ],
