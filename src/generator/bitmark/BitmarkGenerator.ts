@@ -1569,10 +1569,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       const rows = section?.rows ?? [];
 
       if (rows.length === 0) {
-        // if (qualifier && section) {
-        //   this.writeCardSetCardDivider(qualifier);
-        //   rowCount++;
-        // }
         continue;
       }
 

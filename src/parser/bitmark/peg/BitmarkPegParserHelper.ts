@@ -284,12 +284,6 @@ class BitmarkPegParserHelper {
     };
 
     if (cards) {
-      const debugGlobal = globalThis as {
-        __loggedAdvancedTableUnparsedCardSetCount?: number;
-      };
-      const nextDebugCount = (debugGlobal.__loggedAdvancedTableUnparsedCardSetCount ?? 0) + 1;
-      debugGlobal.__loggedAdvancedTableUnparsedCardSetCount = nextDebugCount;
-
       // Get current parser location
       const parser = {
         text: this.parserText(),
