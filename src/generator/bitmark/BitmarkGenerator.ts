@@ -45,6 +45,10 @@ import {
   type ResponseJson,
   type ServingsJson,
   type StatementJson,
+  type TableCellJson,
+  type TableJson,
+  type TableRowJson,
+  type TableSectionJson,
   type TechnicalTermJson,
 } from '../../model/json/BitJson.ts';
 import {
@@ -61,11 +65,14 @@ import {
   type ResourceDataJson,
   type ResourceJson,
 } from '../../model/json/ResourceJson.ts';
+import { normalizeTableFormat } from '../../parser/json/TableUtils.ts';
 import { BooleanUtils } from '../../utils/BooleanUtils.ts';
 import { ObjectUtils } from '../../utils/ObjectUtils.ts';
 import { StringUtils } from '../../utils/StringUtils.ts';
 import { AstWalkerGenerator } from '../AstWalkerGenerator.ts';
 import { type GenerateOptions, TextGenerator } from '../text/TextGenerator.ts';
+
+type TableSectionKey = 'thead' | 'tbody' | 'tfoot';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
   debugGenerationInline: false,
@@ -167,6 +174,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   private hasCardSet = false;
   private hasFooter = false;
   private inTag = true;
+  private skipTableTraversal = false;
 
   /**
    * Generate bitmark markup from a bitmark AST
@@ -1466,6 +1474,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     _right: NodeInfo,
     _route: NodeInfo[],
   ): void {
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed) return;
+
     this.writeCardSetCardDivider();
   }
 
@@ -1510,6 +1521,20 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table
 
+  protected enter_table(node: NodeInfo, route: NodeInfo[]): boolean | void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.cardNode) return true;
+
+    const table = node.value as TableJson | undefined;
+    if (!table) return true;
+
+    if (this.writeAdvancedTable(table)) {
+      return false;
+    }
+
+    return true;
+  }
+
   protected between_table(
     _node: NodeInfo,
     _left: NodeInfo,
@@ -1523,6 +1548,87 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (!this.isCardAllowed) return;
 
     this.writeCardSetCardDivider();
+  }
+
+  private writeAdvancedTable(table: TableJson): boolean {
+    const normalized = normalizeTableFormat(table);
+
+    const sections: Array<{
+      key: TableSectionKey;
+      qualifier?: string;
+      section?: TableSectionJson;
+    }> = [
+      { key: 'thead', qualifier: 'thead', section: normalized.head },
+      { key: 'tbody', qualifier: undefined, section: normalized.body },
+      { key: 'tfoot', qualifier: 'tfoot', section: normalized.foot },
+    ];
+
+    let rowCount = 0;
+
+    for (const { key, qualifier, section } of sections) {
+      const rows = section?.rows ?? [];
+
+      if (rows.length === 0) {
+        continue;
+      }
+
+      for (const row of rows) {
+        this.writeCardSetCardDivider(qualifier);
+        this.writeTableRow(row, key);
+        rowCount++;
+      }
+    }
+
+    return rowCount > 0;
+  }
+
+  private writeTableRow(row: TableRowJson, section: TableSectionKey): void {
+    const cells = row?.cells ?? [];
+    if (cells.length === 0) return;
+
+    for (let index = 0; index < cells.length; index++) {
+      if (index > 0) {
+        this.writeCardSetSideDivider();
+      }
+      this.writeNL();
+      this.writeTableCell(cells[index], section);
+    }
+  }
+
+  private writeTableCell(cell: TableCellJson, section: TableSectionKey): void {
+    const defaultCellType = section === 'tbody' ? 'td' : 'th';
+    const cellType = cell.title ? 'th' : 'td';
+
+    if (cellType !== defaultCellType) {
+      this.writeTableCellProperty('tableCellType', cellType);
+      this.writeNL();
+    }
+
+    if (cell.rowspan && cell.rowspan > 1) {
+      this.writeTableCellProperty('tableRowSpan', cell.rowspan);
+      this.writeNL();
+    }
+
+    if (cell.colspan && cell.colspan > 1) {
+      this.writeTableCellProperty('tableColSpan', cell.colspan);
+      this.writeNL();
+    }
+
+    if (cell.scope) {
+      this.writeTableCellProperty('tableScope', cell.scope);
+      this.writeNL();
+    }
+
+    const content = cell.content ?? Breakscape.EMPTY_STRING;
+    this.writeTextOrValue(content, this.textFormat, TextLocation.body);
+  }
+
+  private writeTableCellProperty(name: string, value: string | number): void {
+    this.writeOPA();
+    this.writeTagKey(name);
+    this.writeColon();
+    this.writeTextOrValue(`${value}`, TextFormat.plainText, TextLocation.tag);
+    this.writeCL();
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table -> data
@@ -3169,12 +3275,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
-  protected writeCardSetCardDivider(): void {
+  protected writeCardSetCardDivider(qualifier?: string): void {
     this.writeNL();
-    if (this.options.cardSetVersion === CardSetVersion.v1) {
-      this.write('===');
-    } else {
-      this.write('====');
+    const divider = this.getCardDividerMarker();
+    this.write(divider);
+    if (qualifier) {
+      this.appendCardDividerQualifier(qualifier);
     }
   }
 
@@ -3194,6 +3300,22 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     } else {
       this.write('++');
     }
+  }
+
+  private getCardDividerMarker(): string {
+    return this.options.cardSetVersion === CardSetVersion.v1 ? '===' : '====';
+  }
+
+  private appendCardDividerQualifier(qualifier: string): void {
+    const marker = this.getCardDividerMarker();
+    const normalizedQualifier = Breakscape.breakscape(qualifier, {
+      format: TextFormat.plainText,
+      location: TextLocation.tag,
+    });
+    this.write(' ');
+    this.write(normalizedQualifier);
+    this.write(' ');
+    this.write(marker);
   }
 
   protected writeNL_IfNotChain(route: NodeInfo[]): void {
@@ -3345,7 +3467,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected calculateIsCardAllowed(): boolean {
-    return this.isBodyBitmarkText && !this.isOfBitType1();
+    return this.isBodyBitmarkText && !this.isOfBitType1() && !this.isTableBitType();
+  }
+
+  protected isTableBitType(): boolean {
+    return this.isOfBitType([BitType.table]);
   }
 
   protected isOfBitType1(): boolean {

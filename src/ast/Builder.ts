@@ -45,7 +45,10 @@ import {
   type ResponseJson,
   type ServingsJson,
   type StatementJson,
+  type TableCellJson,
   type TableJson,
+  type TableRowJson,
+  type TableSectionJson,
   type TechnicalTermJson,
   type TextAndIconJson,
 } from '../model/json/BitJson.ts';
@@ -65,6 +68,7 @@ import {
 } from '../model/json/ResourceJson.ts';
 import { type ParserError } from '../model/parser/ParserError.ts';
 import { type ParserInfo } from '../model/parser/ParserInfo.ts';
+import { normalizeTableFormat } from '../parser/json/TableUtils.ts';
 import { ArrayUtils } from '../utils/ArrayUtils.ts';
 import { BitUtils } from '../utils/BitUtils.ts';
 import { BooleanUtils } from '../utils/BooleanUtils.ts';
@@ -224,6 +228,10 @@ class Builder extends BaseBuilder {
       tableAutoWidth?: boolean;
       tableResizableColumns?: boolean;
       tableColumnMinWidth?: number;
+      tableCellType?: string;
+      tableRowSpan?: number;
+      tableColSpan?: number;
+      tableScope?: string;
       quizCountItems?: boolean;
       quizStrikethroughSolutions?: boolean;
       codeLineNumbers?: boolean;
@@ -797,6 +805,30 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_tableColumnMinWidth,
         data.tableColumnMinWidth,
+        options,
+      ),
+      tableCellType: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tableCellType,
+        data.tableCellType,
+        options,
+      ),
+      tableRowSpan: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tableRowSpan,
+        data.tableRowSpan,
+        options,
+      ),
+      tableColSpan: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tableColSpan,
+        data.tableColSpan,
+        options,
+      ),
+      tableScope: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tableScope,
+        data.tableScope,
         options,
       ),
       quizCountItems: this.toAstProperty(
@@ -2107,15 +2139,57 @@ class Builder extends BaseBuilder {
   ): TableJson | undefined {
     if (!dataIn) return undefined;
 
-    // NOTE: Node order is important and is defined here
-    const node: TableJson = {
-      columns: (dataIn.columns || []).map((col) =>
+    const node: TableJson = {};
+
+    const normalized = normalizeTableFormat(dataIn as TableJson);
+
+    if (Array.isArray(dataIn.columns) && dataIn.columns.length > 0) {
+      node.columns = dataIn.columns.map((col) =>
         this.handleJsonText(context, TextLocation.tag, col),
-      ),
-      data: (dataIn.data || []).map((row) =>
+      );
+    }
+
+    if (Array.isArray(dataIn.data) && dataIn.data.length > 0) {
+      node.data = dataIn.data.map((row) =>
         (row || []).map((cell) => this.handleJsonText(context, TextLocation.tag, cell)),
-      ),
+      );
+    }
+
+    const buildSection = (section: TableSectionJson | undefined): TableSectionJson | undefined => {
+      if (!section || !Array.isArray(section.rows)) return undefined;
+
+      const rows = section.rows.map((row: Partial<TableRowJson>) => {
+        const cells = (row.cells || []).map((cell: Partial<TableCellJson>) => {
+          const tableCell: TableCellJson = {
+            content: this.handleJsonText(context, TextLocation.tag, cell.content),
+          };
+
+          if (cell.title != null) tableCell.title = cell.title;
+          if (cell.rowspan != null) tableCell.rowspan = cell.rowspan;
+          if (cell.colspan != null) tableCell.colspan = cell.colspan;
+          if (cell.scope) tableCell.scope = cell.scope;
+
+          return tableCell;
+        });
+
+        return {
+          cells,
+        };
+      });
+
+      return {
+        rows,
+      };
     };
+
+    const head = buildSection(normalized.head);
+    if (head && head.rows?.length > 0) node.head = head;
+
+    const body = buildSection(normalized.body);
+    if (body && body.rows?.length > 0) node.body = body;
+
+    const foot = buildSection(normalized.foot);
+    if (foot && foot.rows?.length > 0) node.foot = foot;
 
     // Remove Unset Optionals
     // ObjectUtils.removeUnwantedProperties(node, {
@@ -3283,7 +3357,9 @@ class Builder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyObjects: ['table'],
+    });
 
     return Object.keys(node).length > 0 ? node : undefined;
   }

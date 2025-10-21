@@ -373,6 +373,26 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.tag_title,
               description: 'Title of the table.',
             },
+            {
+              key: ConfigKey.property_tableCellType,
+              description: 'Table cell type (th/td).',
+              format: TagFormat.plainText,
+            },
+            {
+              key: ConfigKey.property_tableRowSpan,
+              description: 'Number of rows the cell spans.',
+              format: TagFormat.number,
+            },
+            {
+              key: ConfigKey.property_tableColSpan,
+              description: 'Number of columns the cell spans.',
+              format: TagFormat.number,
+            },
+            {
+              key: ConfigKey.property_tableScope,
+              description: 'Scope attribute for header cells.',
+              format: TagFormat.plainText,
+            },
           ],
           repeatCount: Count.infinity,
         },

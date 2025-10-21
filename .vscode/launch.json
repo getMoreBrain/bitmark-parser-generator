@@ -241,7 +241,7 @@
       "name": "Test: Current file",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
-      "args": ["${fileBasenameNoExtension}"],
+      "args": ["run", "--no-file-parallelism", "--maxWorkers=1", "${relativeFile}"],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
       // "disableOptimisticBPs": true,
@@ -255,7 +255,7 @@
       "name": "Test: ALL Standard Tests",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
-      "args": ["-i"],
+      "args": ["run", "--no-file-parallelism", "--maxWorkers=1", "test/standard"],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
       // "disableOptimisticBPs": true,
@@ -270,10 +270,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/bitmark-parser.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/bitmark-parser.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -289,10 +289,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/bitmark-generator.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/bitmark-generator.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -308,10 +308,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/text-bitmark-body-parser.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/text-bitmark-body-parser.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -327,10 +327,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/text-bitmark-body-generator.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/text-bitmark-body-generator.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -346,10 +346,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/text-bitmark-tag-parser.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/text-bitmark-tag-parser.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -365,10 +365,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/text-bitmark-tag-generator.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/text-bitmark-tag-generator.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -384,10 +384,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/text-bitmark-body-breakscape.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/text-bitmark-body-breakscape.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -403,10 +403,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/text-bitmark-body-unbreakscape.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/text-bitmark-body-unbreakscape.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -422,10 +422,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/text-bitmark-tag-breakscape.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/text-bitmark-tag-breakscape.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -441,10 +441,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/text-bitmark-tag-unbreakscape.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/text-bitmark-tag-unbreakscape.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -460,10 +460,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/text-plain-body-breakscape.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/text-plain-body-breakscape.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -479,10 +479,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/text-plain-body-unbreakscape.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/text-plain-body-unbreakscape.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -498,10 +498,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/text-plain-tag-breakscape.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/text-plain-tag-breakscape.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -517,10 +517,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/text-plain-tag-unbreakscape.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/text-plain-tag-unbreakscape.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -536,10 +536,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/web-parser.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/web-parser.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"
@@ -555,10 +555,10 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
       "args": [
-        "--config=jest.config.js",
-        "--testMatch",
-        "<rootDir>/test/standard/web-generator.test.ts",
-        "-i"
+        "run",
+        "--no-file-parallelism",
+        "--maxWorkers=1",
+        "test/standard/web-generator.test.ts"
       ],
       // "preLaunchTask": "build",
       "console": "integratedTerminal"

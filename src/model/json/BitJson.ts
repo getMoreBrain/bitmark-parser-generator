@@ -486,8 +486,27 @@ export interface PronunciationTableJson {
 }
 
 export interface TableJson {
-  columns: JsonText[];
-  data: JsonText[][];
+  columns?: JsonText[];
+  data?: JsonText[][];
+  head?: TableSectionJson;
+  body?: TableSectionJson;
+  foot?: TableSectionJson;
+}
+
+export interface TableSectionJson {
+  rows: TableRowJson[];
+}
+
+export interface TableRowJson {
+  cells: TableCellJson[];
+}
+
+export interface TableCellJson {
+  content: JsonText;
+  title?: boolean;
+  rowspan?: number;
+  colspan?: number;
+  scope?: 'row' | 'col' | 'rowgroup' | 'colgroup';
 }
 
 export interface QuestionJson {

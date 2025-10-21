@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { normalizeTableFormat } from '../../src/parser/json/TableUtils.ts';
+
 class JsonCleanupUtils {
   cleanupBitJson(
     obj: any,
@@ -45,6 +47,10 @@ class JsonCleanupUtils {
           this.removeTemporaryProperties(bw);
         }
       }
+
+      for (const bw of bitWrappers) {
+        this.normalizeTableFormats(bw);
+      }
     }
   }
 
@@ -88,6 +94,24 @@ class JsonCleanupUtils {
         delete obj[key];
       } else if (typeof obj[key] === 'object') {
         this.removeTemporaryProperties(obj[key] as Record<string, unknown>);
+      }
+    }
+  }
+
+  private normalizeTableFormats(node: unknown): void {
+    if (!node || typeof node !== 'object') return;
+
+    const record = node as Record<string, unknown>;
+
+    if (record.table && typeof record.table === 'object') {
+      record.table = normalizeTableFormat(record.table as any);
+    }
+
+    for (const value of Object.values(record)) {
+      if (Array.isArray(value)) {
+        value.forEach((child) => this.normalizeTableFormats(child));
+      } else if (value && typeof value === 'object') {
+        this.normalizeTableFormats(value);
       }
     }
   }

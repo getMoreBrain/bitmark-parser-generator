@@ -1,6 +1,6 @@
 import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
 import { Config } from '../../../../config/Config.ts';
-import { type CardBit } from '../../../../model/ast/Nodes.ts';
+import { type CardBit, type ExtraProperties } from '../../../../model/ast/Nodes.ts';
 import { type JsonText, type TextAst } from '../../../../model/ast/TextNodes.ts';
 import { CardSetConfigKey } from '../../../../model/config/enum/CardSetConfigKey.ts';
 import { BitType, type BitTypeType } from '../../../../model/enum/BitType.ts';
@@ -27,7 +27,9 @@ import {
   type QuizJson,
   type ResponseJson,
   type StatementJson,
+  type TableCellJson,
   type TableJson,
+  type TableRowJson,
   type TextAndIconJson,
 } from '../../../../model/json/BitJson.ts';
 import { type SelectJson } from '../../../../model/json/BodyBitJson.ts';
@@ -177,12 +179,14 @@ function processCardSet(
     const processedCard: ProcessedCard = {
       no: cardNo++,
       sides: [],
+      qualifier: card.qualifier,
     };
     processedCardSet.cards.push(processedCard);
     for (const side of card.sides) {
       const processedSide: ProcessedCardSide = {
         no: sideNo++,
         variants: [],
+        qualifier: side.qualifier,
       };
       processedCard.sides.push(processedSide);
       for (const variant of side.variants) {
@@ -190,6 +194,7 @@ function processCardSet(
         const processedVariant: ProcessedCardVariant = {
           parser,
           no: variantNo++,
+          qualifier: variant.qualifier,
         } as ProcessedCardVariant;
         processedSide.variants.push(processedVariant);
 
@@ -896,53 +901,208 @@ function parsePronunciationTable(
 }
 
 function parseTable(
-  _context: BitmarkPegParserContext,
+  context: BitmarkPegParserContext,
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  let isHeading = false;
-  const columns: JsonText[] = [];
-  const rows: JsonText[][] = [];
-  let rowValues: JsonText[] = [];
+  type TableSectionKey = 'thead' | 'tbody' | 'tfoot';
+
+  const sectionRows: Record<TableSectionKey, TableRowJson[]> = {
+    thead: [],
+    tbody: [],
+    tfoot: [],
+  };
+
+  const getNormalizedQualifier = (
+    rawQualifier: string | undefined,
+  ): TableSectionKey | undefined => {
+    if (!rawQualifier) return undefined;
+    const normalized = rawQualifier.trim().toLowerCase();
+    if (normalized === 'thead' || normalized === 'tbody' || normalized === 'tfoot') {
+      return normalized;
+    }
+
+    context.addWarning(`Unknown table section qualifier '${rawQualifier}', defaulting to tbody.`);
+    return undefined;
+  };
+
+  const isLegacyHeadingRow = (card: ProcessedCard, cardIndex: number): boolean => {
+    if (cardIndex !== 0) return false;
+    return card.sides.some((side) =>
+      side.variants.some((variant) => {
+        const titles = variant.data.title;
+        return Array.isArray(titles) && titles[1]?.titleAst;
+      }),
+    );
+  };
+
+  const readExtraProperty = (extra: ExtraProperties | undefined, key: string): unknown => {
+    if (!extra) return undefined;
+    const value = extra[key];
+    return Array.isArray(value) ? value[0] : value;
+  };
+
+  const cleanupExtraProperties = (tags: BitContentProcessorResult, keys: string[]) => {
+    const extra = tags.extraProperties;
+    if (!extra) return;
+
+    for (const key of keys) {
+      if (Object.prototype.hasOwnProperty.call(extra, key)) delete extra[key];
+    }
+
+    if (Object.keys(extra).length === 0) {
+      delete tags.extraProperties;
+    }
+  };
+
+  const normalizeCellType = (raw: unknown, section: TableSectionKey): 'th' | 'td' => {
+    if (typeof raw === 'string') {
+      const normalized = raw.trim().toLowerCase();
+      if (normalized === 'th' || normalized === 'td') {
+        return normalized;
+      }
+      context.addWarning(
+        `Invalid table cell type '${raw}', using default for section '${section}'.`,
+      );
+    }
+
+    return section === 'tbody' ? 'td' : 'th';
+  };
+
+  const normalizeSpan = (raw: unknown, kind: 'rowspan' | 'colspan'): number => {
+    if (raw == null) return 1;
+
+    const numeric = NumberUtils.asNumber(raw);
+    if (numeric == null || !Number.isInteger(numeric) || numeric < 1) {
+      context.addWarning(`Invalid table ${kind} '${raw}', defaulting to 1.`);
+      return 1;
+    }
+
+    return numeric;
+  };
+
+  const normalizeScope = (raw: unknown): TableCellJson['scope'] | undefined => {
+    if (raw == null) return undefined;
+
+    if (typeof raw !== 'string') {
+      context.addWarning(`Invalid table scope '${raw}', ignoring.`);
+      return undefined;
+    }
+
+    const normalized = raw.trim().toLowerCase();
+    switch (normalized) {
+      case 'row':
+      case 'col':
+      case 'rowgroup':
+      case 'colgroup':
+        return normalized;
+      default:
+        context.addWarning(`Invalid table scope '${raw}', ignoring.`);
+        return undefined;
+    }
+  };
+
+  const buildCell = (variant: ProcessedCardVariant, section: TableSectionKey): TableCellJson => {
+    const tags = variant.data;
+
+    const heading = tags.title && tags.title[1]?.titleAst;
+    const bodyContent =
+      (tags.cardBody?.body as JsonText | undefined) ?? tags.cardBodyStr ?? Breakscape.EMPTY_STRING;
+    const content: JsonText = heading ?? bodyContent;
+
+    const cellTypeRaw =
+      tags.tableCellType ?? readExtraProperty(tags.extraProperties, 'tableCellType');
+    const rowSpanRaw = tags.tableRowSpan ?? readExtraProperty(tags.extraProperties, 'tableRowSpan');
+    const colSpanRaw = tags.tableColSpan ?? readExtraProperty(tags.extraProperties, 'tableColSpan');
+    const scopeRaw = tags.tableScope ?? readExtraProperty(tags.extraProperties, 'tableScope');
+
+    cleanupExtraProperties(tags, ['tableCellType', 'tableRowSpan', 'tableColSpan', 'tableScope']);
+
+    const cellType = normalizeCellType(cellTypeRaw, section);
+    const rowspan = normalizeSpan(rowSpanRaw, 'rowspan');
+    const colspan = normalizeSpan(colSpanRaw, 'colspan');
+    const scope = normalizeScope(scopeRaw);
+
+    const cell: TableCellJson = {
+      content,
+    };
+
+    if (cellType === 'th') cell.title = true;
+    if (rowspan > 1) cell.rowspan = rowspan;
+    if (colspan > 1) cell.colspan = colspan;
+    if (scope) cell.scope = scope;
+
+    return cell;
+  };
+
+  const resolveSectionQualifier = (card: ProcessedCard): TableSectionKey | undefined => {
+    const cardQualifier = getNormalizedQualifier(card.qualifier);
+    if (cardQualifier) return cardQualifier;
+
+    for (const side of card.sides) {
+      const sideQualifier = getNormalizedQualifier(side.qualifier);
+      if (sideQualifier) return sideQualifier;
+
+      for (const variant of side.variants) {
+        const variantQualifier = getNormalizedQualifier(variant.qualifier);
+        if (variantQualifier) return variantQualifier;
+      }
+    }
+
+    return undefined;
+  };
 
   for (let cardIdx = 0; cardIdx < cardSet.cards.length; cardIdx++) {
     const card = cardSet.cards[cardIdx];
 
-    isHeading = false;
-    rowValues = [];
+    const qualifier = resolveSectionQualifier(card);
+    const section: TableSectionKey = qualifier
+      ? qualifier
+      : isLegacyHeadingRow(card, cardIdx)
+        ? 'thead'
+        : 'tbody';
 
+    const cells: TableCellJson[] = [];
     for (const side of card.sides) {
-      for (const content of side.variants) {
-        // variant = content;
-        const tags = content.data;
-
-        const { title, cardBody } = tags;
-
-        // Get the 'heading' which is the [#title] at level 1
-        // const heading = title && title[1].titleString;
-        const heading = title && title[1].titleAst;
-        if (cardIdx === 0 && heading != null) isHeading = true;
-
-        if (isHeading) {
-          columns.push(heading ?? []);
-        } else {
-          // If not a heading, it is a row cell value
-          // const value = cardBodyStr ?? '';
-          const value = (cardBody?.body ?? []) as JsonText;
-          rowValues.push(value);
-        }
+      for (const variant of side.variants) {
+        cells.push(buildCell(variant, section));
       }
     }
 
-    if (!isHeading) {
-      rows.push(rowValues);
-    }
+    sectionRows[section].push({
+      cells,
+    });
   }
 
-  const table: Partial<TableJson> = {
-    columns,
-    data: rows,
-  };
+  const table: Partial<TableJson> = {};
+
+  const hasHeadRows = sectionRows.thead.length > 0;
+  const hasBodyRows = sectionRows.tbody.length > 0;
+  const hasFootRows = sectionRows.tfoot.length > 0;
+
+  if (hasHeadRows) {
+    table.head = {
+      rows: sectionRows.thead,
+    };
+  }
+
+  if (hasBodyRows) {
+    table.body = {
+      rows: sectionRows.tbody,
+    };
+  }
+
+  if (hasFootRows) {
+    table.foot = {
+      rows: sectionRows.tfoot,
+    };
+  }
+
+  if (!hasHeadRows && !hasBodyRows && !hasFootRows) {
+    table.head = { rows: [] };
+    table.body = { rows: [] };
+    table.foot = { rows: [] };
+  }
 
   return { table };
 }
