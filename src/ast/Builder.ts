@@ -228,6 +228,10 @@ class Builder extends BaseBuilder {
       tableAutoWidth?: boolean;
       tableResizableColumns?: boolean;
       tableColumnMinWidth?: number;
+      tableCellType?: string;
+      tableRowSpan?: number;
+      tableColSpan?: number;
+      tableScope?: string;
       quizCountItems?: boolean;
       quizStrikethroughSolutions?: boolean;
       codeLineNumbers?: boolean;
@@ -800,6 +804,30 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_tableColumnMinWidth,
         data.tableColumnMinWidth,
+        options,
+      ),
+      tableCellType: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tableCellType,
+        data.tableCellType,
+        options,
+      ),
+      tableRowSpan: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tableRowSpan,
+        data.tableRowSpan,
+        options,
+      ),
+      tableColSpan: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tableColSpan,
+        data.tableColSpan,
+        options,
+      ),
+      tableScope: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tableScope,
+        data.tableScope,
         options,
       ),
       quizCountItems: this.toAstProperty(

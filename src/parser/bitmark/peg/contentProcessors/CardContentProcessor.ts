@@ -1010,10 +1010,11 @@ function parseTable(
       (tags.cardBody?.body as JsonText | undefined) ?? tags.cardBodyStr ?? Breakscape.EMPTY_STRING;
     const content: JsonText = heading ?? bodyContent;
 
-    const cellTypeRaw = readExtraProperty(tags.extraProperties, 'tableCellType');
-    const rowSpanRaw = readExtraProperty(tags.extraProperties, 'tableRowSpan');
-    const colSpanRaw = readExtraProperty(tags.extraProperties, 'tableColSpan');
-    const scopeRaw = readExtraProperty(tags.extraProperties, 'tableScope');
+    const cellTypeRaw =
+      tags.tableCellType ?? readExtraProperty(tags.extraProperties, 'tableCellType');
+    const rowSpanRaw = tags.tableRowSpan ?? readExtraProperty(tags.extraProperties, 'tableRowSpan');
+    const colSpanRaw = tags.tableColSpan ?? readExtraProperty(tags.extraProperties, 'tableColSpan');
+    const scopeRaw = tags.tableScope ?? readExtraProperty(tags.extraProperties, 'tableScope');
 
     cleanupExtraProperties(tags, ['tableCellType', 'tableRowSpan', 'tableColSpan', 'tableScope']);
 
@@ -1075,22 +1076,32 @@ function parseTable(
 
   const table: Partial<TableJson> = {};
 
-  if (sectionRows.thead.length > 0) {
+  const hasHeadRows = sectionRows.thead.length > 0;
+  const hasBodyRows = sectionRows.tbody.length > 0;
+  const hasFootRows = sectionRows.tfoot.length > 0;
+
+  if (hasHeadRows) {
     table.head = {
       rows: sectionRows.thead,
     };
   }
 
-  if (sectionRows.tbody.length > 0) {
+  if (hasBodyRows) {
     table.body = {
       rows: sectionRows.tbody,
     };
   }
 
-  if (sectionRows.tfoot.length > 0) {
+  if (hasFootRows) {
     table.foot = {
       rows: sectionRows.tfoot,
     };
+  }
+
+  if (!hasHeadRows && !hasBodyRows && !hasFootRows) {
+    table.head = { rows: [] };
+    table.body = { rows: [] };
+    table.foot = { rows: [] };
   }
 
   return { table };

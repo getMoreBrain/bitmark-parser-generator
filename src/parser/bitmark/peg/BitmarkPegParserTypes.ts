@@ -122,6 +122,10 @@ export interface BitContentProcessorResult {
   cardBodyStr?: string;
   body?: Body;
   footer?: Footer;
+  tableCellType?: string;
+  tableRowSpan?: number;
+  tableColSpan?: number;
+  tableScope?: string;
   groupTag?: Partial<GroupTagJson>[];
   tag?: string[];
   imageSource?: Partial<ImageSourceJson>;
