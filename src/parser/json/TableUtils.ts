@@ -184,11 +184,9 @@ export function validateTable(table: TableJson): string[] {
 export function normalizeTableFormat(table: TableJson): TableJson {
   // If mixed format, new takes precedence (ignore old)
   if (isMixedTableFormat(table)) {
-    return {
-      head: table.head,
-      body: table.body,
-      foot: table.foot,
-    };
+    delete table.columns;
+    delete table.data;
+    return table;
   }
 
   // If old format only, convert to new

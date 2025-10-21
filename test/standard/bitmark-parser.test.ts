@@ -106,6 +106,8 @@ describe('bitmark-parser', () => {
       test(`${id}`, async () => {
         fs.ensureDirSync(fullFolder);
 
+        if (id.startsWith('parameters')) debugger;
+
         // Calculate the filenames
         const testJsonFile = path.resolve(fullJsonInputFolder, `${id}.json`);
         const originalMarkupFile = path.resolve(fullFolder, `${id}.bitmark`);

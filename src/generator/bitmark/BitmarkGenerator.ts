@@ -1474,6 +1474,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     _right: NodeInfo,
     _route: NodeInfo[],
   ): void {
+    // Ignore cards if not allowed
+    if (!this.isCardAllowed) return;
+
     this.writeCardSetCardDivider();
   }
 
@@ -1519,8 +1522,6 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> cardNode -> table
 
   protected enter_table(node: NodeInfo, route: NodeInfo[]): boolean | void {
-    if (!this.isCardAllowed) return true;
-
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return true;
 
@@ -1568,31 +1569,21 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       const rows = section?.rows ?? [];
 
       if (rows.length === 0) {
-        if (qualifier && section) {
-          this.writeTableRowDivider(qualifier, rowCount === 0);
-          rowCount++;
-        }
+        // if (qualifier && section) {
+        //   this.writeCardSetCardDivider(qualifier);
+        //   rowCount++;
+        // }
         continue;
       }
 
       for (const row of rows) {
-        this.writeTableRowDivider(qualifier, rowCount === 0);
+        this.writeCardSetCardDivider(qualifier);
         this.writeTableRow(row, key);
         rowCount++;
       }
     }
 
     return rowCount > 0;
-  }
-
-  private writeTableRowDivider(qualifier: string | undefined, isFirstRow: boolean): void {
-    if (isFirstRow) {
-      if (qualifier) {
-        this.appendCardDividerQualifier(qualifier);
-      }
-    } else {
-      this.writeCardSetCardDivider(qualifier);
-    }
   }
 
   private writeTableRow(row: TableRowJson, section: TableSectionKey): void {
@@ -3480,7 +3471,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected calculateIsCardAllowed(): boolean {
-    return this.isBodyBitmarkText && !this.isOfBitType1();
+    return this.isBodyBitmarkText && !this.isOfBitType1() && !this.isTableBitType();
+  }
+
+  protected isTableBitType(): boolean {
+    return this.isOfBitType([BitType.table]);
   }
 
   protected isOfBitType1(): boolean {

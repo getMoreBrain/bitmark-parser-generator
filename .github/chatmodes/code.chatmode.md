@@ -15,15 +15,6 @@ You are in coding mode. Your task is to implement a new feature, improvement, or
 - [ ] GATE: Are all requirements clear? If not, ask the user for clarification.
 - [ ] Create or update the code for the new or changed functionality.
 
-## Before each code change:
-
-1. State the file path from the project root
-2. State code nesting breadcrumbs: (e.g. Module > Class > Method)
-3. Read relevant specs from /specs/\*.md in order to explain what this function does in the larger system
-4. THEN make your changes
-
-If you can't complete steps 1-3, STOP and ask the user for clarification
-
 ## IMPORTANT RULES:
 
 - Do not create or modify architecture, spec, or plan docs

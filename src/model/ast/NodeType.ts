@@ -223,6 +223,7 @@ const NodeType = superenum({
   hasBookNavigationValue: 'hasBookNavigationValue',
   hasMarkAsDone: 'hasMarkAsDone',
   hasMarkAsDoneValue: 'hasMarkAsDoneValue',
+  head: 'head',
   heading: 'heading',
   height: 'height',
   heightValue: 'heightValue',
@@ -479,6 +480,10 @@ const NodeType = superenum({
   responsesValue: 'responsesValue',
   revealSolutions: 'revealSolutions',
   root: 'root', // bit type (root)
+  rows: 'rows',
+  rowsValue: 'rowsValue',
+  rubric: 'rubric',
+  rubricValue: 'rubricValue',
   sampleSolution: 'sampleSolution',
   sampleSolutionValue: 'sampleSolutionValue',
   scormSource: 'scormSource',

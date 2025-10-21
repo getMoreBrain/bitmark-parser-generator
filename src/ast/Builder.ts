@@ -2176,13 +2176,13 @@ class Builder extends BaseBuilder {
     };
 
     const head = buildSection(normalized.head);
-    if (head) node.head = head;
+    if (head && head.rows?.length > 0) node.head = head;
 
     const body = buildSection(normalized.body);
-    if (body) node.body = body;
+    if (body && body.rows?.length > 0) node.body = body;
 
     const foot = buildSection(normalized.foot);
-    if (foot) node.foot = foot;
+    if (foot && foot.rows?.length > 0) node.foot = foot;
 
     // Remove Unset Optionals
     // ObjectUtils.removeUnwantedProperties(node, {
@@ -3350,7 +3350,9 @@ class Builder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyObjects: ['table'],
+    });
 
     return Object.keys(node).length > 0 ? node : undefined;
   }
