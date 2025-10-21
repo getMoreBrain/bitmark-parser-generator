@@ -18,6 +18,8 @@
 
 import '../../../config/Config.ts';
 
+import { appendFileSync, mkdirSync, writeFileSync } from 'node:fs';
+
 import { Breakscape } from '../../../breakscaping/Breakscape.ts';
 import { type BreakscapedString } from '../../../model/ast/BreakscapedString.ts';
 import { type Bit } from '../../../model/ast/Nodes.ts';
@@ -77,6 +79,9 @@ class BitmarkPegParserHelper {
   private cardIndex = 0;
   private cardSideIndex = 0;
   private cardVariantIndex = 0;
+  private currentCardQualifier: string | undefined;
+  private currentSideQualifier: string | undefined;
+  private currentVariantQualifier: string | undefined;
 
   private parse: ParseFunction;
   private parserText: () => ParserError['text'];
@@ -281,6 +286,26 @@ class BitmarkPegParserHelper {
     };
 
     if (cards) {
+      const debugGlobal = globalThis as {
+        __loggedAdvancedTableUnparsedCardSetCount?: number;
+      };
+      const nextDebugCount = (debugGlobal.__loggedAdvancedTableUnparsedCardSetCount ?? 0) + 1;
+      debugGlobal.__loggedAdvancedTableUnparsedCardSetCount = nextDebugCount;
+      mkdirSync('./tmp', { recursive: true });
+
+      const debugSnapshot = cards.map((content) => {
+        const cardData = content as TypeValue;
+        return {
+          type: cardData?.type,
+          value: cardData?.value,
+        };
+      });
+
+      writeFileSync(
+        `./tmp/unparsed-cardset-${nextDebugCount}.json`,
+        JSON.stringify(debugSnapshot, null, 2),
+      );
+
       // Get current parser location
       const parser = {
         text: this.parserText(),
@@ -296,6 +321,9 @@ class BitmarkPegParserHelper {
           cardSideIndex,
           cardVariantIndex: cardContentIndex,
           value,
+          cardQualifier,
+          cardSideQualifier,
+          cardVariantQualifier,
         } = cardData as CardData;
 
         // Get or create card
@@ -303,8 +331,11 @@ class BitmarkPegParserHelper {
         if (!card) {
           card = {
             sides: [],
+            qualifier: cardQualifier,
           };
           unparsedCardSet.cards[cardIndex] = card;
+        } else if (cardQualifier && !card.qualifier) {
+          card.qualifier = cardQualifier;
         }
 
         // Get or create side
@@ -312,8 +343,11 @@ class BitmarkPegParserHelper {
         if (!side) {
           side = {
             variants: [],
+            qualifier: cardSideQualifier,
           };
           card.sides[cardSideIndex] = side;
+        } else if (cardSideQualifier && !side.qualifier) {
+          side.qualifier = cardSideQualifier;
         }
 
         // Set variant value
@@ -322,9 +356,13 @@ class BitmarkPegParserHelper {
           side.variants[cardContentIndex] = {
             value,
             parser,
+            qualifier: cardVariantQualifier,
           };
         } else {
           side.variants[cardContentIndex].value += value;
+          if (cardVariantQualifier && !variant.qualifier) {
+            variant.qualifier = cardVariantQualifier;
+          }
         }
       }
 
@@ -342,11 +380,13 @@ class BitmarkPegParserHelper {
       for (const unparsedCard of unparsedCardSet.cards) {
         const card = {
           sides: [],
+          qualifier: unparsedCard.qualifier,
         } as ParsedCard;
         cardSet.cards.push(card);
         for (const unparsedSide of unparsedCard.sides) {
           const side = {
             variants: [],
+            qualifier: unparsedSide.qualifier,
           } as ParsedCardSide;
           card.sides.push(side);
           for (const unparsedContent of unparsedSide.variants) {
@@ -380,6 +420,7 @@ class BitmarkPegParserHelper {
             side.variants.push({
               parser,
               content,
+              qualifier: unparsedContent.qualifier,
             });
           }
         }
@@ -402,6 +443,9 @@ class BitmarkPegParserHelper {
     this.cardIndex = -1; // Incremented by first card divider to 0 for first card
     this.cardSideIndex = 0;
     this.cardVariantIndex = 0;
+    this.currentCardQualifier = undefined;
+    this.currentSideQualifier = undefined;
+    this.currentVariantQualifier = undefined;
   }
 
   handleCardSetEnd() {
@@ -410,6 +454,9 @@ class BitmarkPegParserHelper {
     this.cardIndex = 0;
     this.cardSideIndex = 0;
     this.cardVariantIndex = 0;
+    this.currentCardQualifier = undefined;
+    this.currentSideQualifier = undefined;
+    this.currentVariantQualifier = undefined;
   }
 
   handleCards(value: unknown): unknown {
@@ -423,30 +470,69 @@ class BitmarkPegParserHelper {
     let isCardDivider = false;
     let isSideDivider = false;
     let isVariantDivider = false;
+    let qualifier: string | undefined;
+
+    if (Array.isArray(value)) {
+      mkdirSync('./tmp', { recursive: true });
+      appendFileSync(
+        './tmp/card-line-debug.txt',
+        `${new Date().toISOString()} cardLineOrDivider=${JSON.stringify(value)}\n`,
+      );
+    }
 
     if (Array.isArray(value) && value.length === 2) {
-      value = value[0];
-      if (version === CardSetVersion.v1) {
-        isCardDivider = value === CARD_DIVIDER_V1;
-        isSideDivider = value === CARD_SIDE_DIVIDER_V1;
-        isVariantDivider = value === CARD_VARIANT_DIVIDER_V1;
+      const [divider, maybeQualifier] = value as [unknown, unknown];
+      if (typeof divider === 'string') {
+        value = divider;
+        if (
+          typeof maybeQualifier === 'string' &&
+          maybeQualifier.trim() === maybeQualifier &&
+          maybeQualifier.length > 0
+        ) {
+          qualifier = maybeQualifier;
+        }
       } else {
-        isCardDivider = value === CARD_DIVIDER_V2;
-        isSideDivider = value === CARD_SIDE_DIVIDER_V2;
-        isVariantDivider = value === CARD_VARIANT_DIVIDER_V2;
+        value = divider;
       }
+    } else if (Array.isArray(value) && value.length === 1) {
+      const [divider] = value as [unknown];
+      value = divider;
+    }
+
+    if (version === CardSetVersion.v1) {
+      isCardDivider = value === CARD_DIVIDER_V1;
+      isSideDivider = value === CARD_SIDE_DIVIDER_V1;
+      isVariantDivider = value === CARD_VARIANT_DIVIDER_V1;
+    } else {
+      isCardDivider = value === CARD_DIVIDER_V2;
+      isSideDivider = value === CARD_SIDE_DIVIDER_V2;
+      isVariantDivider = value === CARD_VARIANT_DIVIDER_V2;
     }
 
     if (isCardDivider) {
       this.cardIndex++;
       this.cardSideIndex = 0;
       this.cardVariantIndex = 0;
+      this.currentCardQualifier = qualifier;
+      this.currentSideQualifier = undefined;
+      this.currentVariantQualifier = undefined;
+
+      if (qualifier) {
+        mkdirSync('./tmp', { recursive: true });
+        appendFileSync(
+          './tmp/card-divider-log.txt',
+          `${new Date().toISOString()} cardIndex=${this.cardIndex} qualifier=${qualifier}\n`,
+        );
+      }
     } else if (isSideDivider) {
       this.cardSideIndex++;
       this.cardVariantIndex = 0;
+      this.currentSideQualifier = qualifier;
+      this.currentVariantQualifier = undefined;
       // console.log(`Card ${this.cardIndex} Side: ${value}`);
     } else if (isVariantDivider) {
       this.cardVariantIndex++;
+      this.currentVariantQualifier = qualifier;
       // console.log(`Card ${this.cardIndex}, Side ${this.cardSideIndex}, Variant: ${this.cardVariantIndex}`);
     }
 
@@ -459,6 +545,9 @@ class BitmarkPegParserHelper {
         cardSideIndex: this.cardSideIndex,
         cardVariantIndex: this.cardVariantIndex,
         value: '',
+        cardQualifier: this.currentCardQualifier,
+        cardSideQualifier: this.currentSideQualifier,
+        cardVariantQualifier: this.currentVariantQualifier,
       } as CardData,
       parser: {
         text: this.parserText(),
@@ -482,6 +571,9 @@ class BitmarkPegParserHelper {
         cardSideIndex: this.cardSideIndex,
         cardVariantIndex: this.cardVariantIndex,
         value,
+        cardQualifier: this.currentCardQualifier,
+        cardSideQualifier: this.currentSideQualifier,
+        cardVariantQualifier: this.currentVariantQualifier,
       } as CardData,
       parser: {
         text: this.parserText(),

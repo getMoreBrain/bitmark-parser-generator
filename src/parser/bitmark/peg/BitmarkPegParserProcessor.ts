@@ -62,6 +62,8 @@
  *   and in BitmarkPegParserHelper.ts
  */
 
+import { mkdirSync, writeFileSync } from 'node:fs';
+
 import { Builder } from '../../../ast/Builder.ts';
 import { Breakscape } from '../../../breakscaping/Breakscape.ts';
 import { Config } from '../../../config/Config.ts';
@@ -281,6 +283,16 @@ class BitmarkPegParserProcessor {
       choices,
       responses,
     );
+
+    const debugGlobal = globalThis as { __loggedTableCard?: boolean };
+    if (!debugGlobal.__loggedTableCard && bitSpecificCards.table) {
+      debugGlobal.__loggedTableCard = true;
+      mkdirSync('./tmp', { recursive: true });
+      writeFileSync(
+        './tmp/bit-specific-cards-table.json',
+        JSON.stringify(bitSpecificCards.table, null, 2),
+      );
+    }
 
     // Build the resources
     const filteredResources = buildResources(this.context, resourceType, resources);

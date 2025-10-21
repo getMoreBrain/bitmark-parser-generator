@@ -23,6 +23,7 @@ const config = [
       '**/build',
       'assets',
       'specs',
+      'plans',
       '.github',
       'src/generated',
       '**/*.d.ts',

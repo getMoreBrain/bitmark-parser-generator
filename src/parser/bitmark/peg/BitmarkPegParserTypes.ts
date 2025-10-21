@@ -111,6 +111,9 @@ export interface CardData {
   cardSideIndex: number;
   cardVariantIndex: number;
   value: string;
+  cardQualifier?: string;
+  cardSideQualifier?: string;
+  cardVariantQualifier?: string;
 }
 
 export interface BitContentProcessorResult {
@@ -315,14 +318,17 @@ export interface UnparsedCardSet {
 
 export interface UnparsedCard {
   sides: UnparsedCardSide[];
+  qualifier?: string;
 }
 
 export interface UnparsedCardSide {
   variants: UnparsedCardContent[];
+  qualifier?: string;
 }
 
 interface UnparsedCardContent extends ParserData {
   value: string;
+  qualifier?: string;
 }
 
 export interface ParsedCardSet {
@@ -331,14 +337,17 @@ export interface ParsedCardSet {
 
 export interface ParsedCard {
   sides: ParsedCardSide[];
+  qualifier?: string;
 }
 
 export interface ParsedCardSide {
   variants: ParsedCardContent[];
+  qualifier?: string;
 }
 
 interface ParsedCardContent extends ParserData {
   content: BitContent[];
+  qualifier?: string;
 }
 
 export interface ProcessedCardSet {
@@ -349,16 +358,19 @@ export interface ProcessedCardSet {
 export interface ProcessedCard {
   no: number;
   sides: ProcessedCardSide[];
+  qualifier?: string;
 }
 
 export interface ProcessedCardSide {
   no: number;
   variants: ProcessedCardVariant[];
+  qualifier?: string;
 }
 
 export interface ProcessedCardVariant extends ParserData {
   no: number;
   data: BitContentProcessorResult;
+  qualifier?: string;
 }
 
 // Context
