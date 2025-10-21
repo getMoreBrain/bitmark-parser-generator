@@ -18,8 +18,6 @@
 
 import '../../../config/Config.ts';
 
-import { appendFileSync, mkdirSync, writeFileSync } from 'node:fs';
-
 import { Breakscape } from '../../../breakscaping/Breakscape.ts';
 import { type BreakscapedString } from '../../../model/ast/BreakscapedString.ts';
 import { type Bit } from '../../../model/ast/Nodes.ts';
@@ -291,20 +289,6 @@ class BitmarkPegParserHelper {
       };
       const nextDebugCount = (debugGlobal.__loggedAdvancedTableUnparsedCardSetCount ?? 0) + 1;
       debugGlobal.__loggedAdvancedTableUnparsedCardSetCount = nextDebugCount;
-      mkdirSync('./tmp', { recursive: true });
-
-      const debugSnapshot = cards.map((content) => {
-        const cardData = content as TypeValue;
-        return {
-          type: cardData?.type,
-          value: cardData?.value,
-        };
-      });
-
-      writeFileSync(
-        `./tmp/unparsed-cardset-${nextDebugCount}.json`,
-        JSON.stringify(debugSnapshot, null, 2),
-      );
 
       // Get current parser location
       const parser = {
@@ -472,14 +456,6 @@ class BitmarkPegParserHelper {
     let isVariantDivider = false;
     let qualifier: string | undefined;
 
-    if (Array.isArray(value)) {
-      mkdirSync('./tmp', { recursive: true });
-      appendFileSync(
-        './tmp/card-line-debug.txt',
-        `${new Date().toISOString()} cardLineOrDivider=${JSON.stringify(value)}\n`,
-      );
-    }
-
     if (Array.isArray(value) && value.length === 2) {
       const [divider, maybeQualifier] = value as [unknown, unknown];
       if (typeof divider === 'string') {
@@ -516,14 +492,6 @@ class BitmarkPegParserHelper {
       this.currentCardQualifier = qualifier;
       this.currentSideQualifier = undefined;
       this.currentVariantQualifier = undefined;
-
-      if (qualifier) {
-        mkdirSync('./tmp', { recursive: true });
-        appendFileSync(
-          './tmp/card-divider-log.txt',
-          `${new Date().toISOString()} cardIndex=${this.cardIndex} qualifier=${qualifier}\n`,
-        );
-      }
     } else if (isSideDivider) {
       this.cardSideIndex++;
       this.cardVariantIndex = 0;

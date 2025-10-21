@@ -1,5 +1,3 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
-
 import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
 import { Config } from '../../../../config/Config.ts';
 import { type CardBit, type ExtraProperties } from '../../../../model/ast/Nodes.ts';
@@ -907,31 +905,6 @@ function parseTable(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const debugGlobal = globalThis as { __loggedAdvancedTableCardSetCount?: number };
-  const nextLogCount = (debugGlobal.__loggedAdvancedTableCardSetCount ?? 0) + 1;
-  debugGlobal.__loggedAdvancedTableCardSetCount = nextLogCount;
-  mkdirSync('./tmp', { recursive: true });
-  writeFileSync(
-    `./tmp/table-cardset-${nextLogCount}.json`,
-    JSON.stringify(
-      {
-        cards: cardSet.cards.map((card) => ({
-          qualifier: card.qualifier,
-          sides: card.sides.map((side) => ({
-            qualifier: side.qualifier,
-            variants: side.variants.map((variant) => ({
-              qualifier: variant.qualifier,
-              preview: variant.data?.cardBodyStr?.slice(0, 40),
-              parserText: variant.parser?.text,
-            })),
-          })),
-        })),
-      },
-      null,
-      2,
-    ),
-  );
-
   type TableSectionKey = 'thead' | 'tbody' | 'tfoot';
 
   const sectionRows: Record<TableSectionKey, TableRowJson[]> = {
@@ -1031,27 +1004,6 @@ function parseTable(
 
   const buildCell = (variant: ProcessedCardVariant, section: TableSectionKey): TableCellJson => {
     const tags = variant.data;
-
-    const debugGlobal = globalThis as { __loggedAdvancedTableCell?: boolean };
-    if (!debugGlobal.__loggedAdvancedTableCell) {
-      debugGlobal.__loggedAdvancedTableCell = true;
-      mkdirSync('./tmp', { recursive: true });
-      writeFileSync(
-        './tmp/table-cell-debug.json',
-        JSON.stringify(
-          {
-            section,
-            qualifier: variant.qualifier,
-            title: tags.title,
-            cardBody: tags.cardBody,
-            cardBodyStr: tags.cardBodyStr,
-            extraProperties: tags.extraProperties,
-          },
-          null,
-          2,
-        ),
-      );
-    }
 
     const heading = tags.title && tags.title[1]?.titleAst;
     const bodyContent =

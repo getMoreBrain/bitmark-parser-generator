@@ -1,5 +1,3 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
-
 import { Breakscape } from '../breakscaping/Breakscape.ts';
 import { Config } from '../config/Config.ts';
 import { type BreakscapedString } from '../model/ast/BreakscapedString.ts';
@@ -2162,13 +2160,6 @@ class Builder extends BaseBuilder {
     // ObjectUtils.removeUnwantedProperties(node, {
     //   ignoreAllFalse: true,
     // });
-
-    const debugGlobal = globalThis as { __loggedBuildTable?: boolean };
-    if (!debugGlobal.__loggedBuildTable) {
-      debugGlobal.__loggedBuildTable = true;
-      mkdirSync('./tmp', { recursive: true });
-      writeFileSync('./tmp/build-table-debug.json', JSON.stringify(node, null, 2));
-    }
 
     return node;
   }

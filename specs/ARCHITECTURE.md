@@ -9,6 +9,7 @@
   - [Technology Stack](#technology-stack)
   - [High-Level Architecture](#high-level-architecture)
   - [File-system Structure](#file-system-structure)
+  - [Build Scripts](#build-scripts)
   - [Layers / Subsystems](#layers--subsystems)
     - [Grammar Layer](#grammar-layer)
     - [Parser Layer](#parser-layer)
@@ -140,6 +141,121 @@ graph TD
 │   └── browser/                  # Browser builds
 └── docs/                         # API documentation
 ```
+
+## Build Scripts
+
+The project uses npm scripts for all build, development, and testing tasks. Scripts are defined in `package.json` and organized by purpose:
+
+### Core Build Scripts
+
+- **`npm run build`**: Full production build pipeline
+  - Cleans output directories
+  - Runs init script
+  - Compiles grammars (bitmark + text)
+  - Runs type checking and linting
+  - Builds Node packages (ESM + CJS)
+  - Builds browser bundles
+  - Generates supported bits documentation
+
+- **`npm run clean`**: Removes `dist/` and `build/` directories
+
+- **`npm run init`**: Initializes project state and generates metadata
+
+### Grammar Compilation
+
+- **`npm run build-grammar-bit`**: Compiles bitmark PEG grammar to JavaScript parser
+- **`npm run build-grammar-bit-test`**: Same as above with test mode enabled
+- **`npm run build-grammar-text`**: Compiles text PEG grammar to JavaScript parser
+- **`npm run build-grammar-text-test`**: Same as above with test mode enabled
+
+Grammar compilation uses Peggy.js to generate parsers from `.pegjs` files in `assets/grammar/` to `src/generated/`.
+
+### Build Variants
+
+- **`npm run build-browser`**: Webpack build for browser (minified bundle)
+- **`npm run build-doc`**: Generates API documentation with TypeDoc
+- **`npm run build-supported-info`**: Generates `SUPPORTED_BITS.md` from configuration
+
+### Testing Scripts
+
+- **`npm test`** or **`npm run test`**: Runs full test suite with Vitest
+- **`npm run test-watch`**: Runs tests in watch mode for development
+- **`npm run test-ci`**: Runs tests for CI environments
+
+**Component-specific tests:**
+- `npm run test-parser`: Bitmark parser tests
+- `npm run test-generator`: Bitmark generator tests
+- `npm run test-web-parser`: Browser parser tests
+- `npm run test-web-generator`: Browser generator tests
+
+**Text format tests:**
+- `npm run test-text-bitmark-body-parser`: Bitmark body text parser
+- `npm run test-text-bitmark-body-generator`: Bitmark body text generator
+- `npm run test-text-bitmark-tag-parser`: Bitmark tag text parser
+- `npm run test-text-bitmark-tag-generator`: Bitmark tag text generator
+- `npm run test-text-bitmark-body-breakscape`: Bitmark body breakscaping
+- `npm run test-text-bitmark-body-unbreakscape`: Bitmark body unbreakscaping
+- `npm run test-text-bitmark-tag-breakscape`: Bitmark tag breakscaping
+- `npm run test-text-bitmark-tag-unbreakscape`: Bitmark tag unbreakscaping
+- `npm run test-text-plain-body-breakscape`: Plain text body breakscaping
+- `npm run test-text-plain-body-unbreakscape`: Plain text body unbreakscaping
+- `npm run test-text-plain-tag-breakscape`: Plain text tag breakscaping
+- `npm run test-text-plain-tag-unbreakscape`: Plain text tag unbreakscaping
+
+### Quality Checks
+
+- **`npm run check`**: Runs all quality checks (init + typecheck + lint)
+- **`npm run typecheck`**: TypeScript type checking without emit
+- **`npm run lint`**: ESLint with zero warnings policy
+- **`npm run lint-fix`**: Auto-fixes linting issues where possible
+
+### Development Scripts
+
+- **`npm start`** or **`npm run start-parser`**: Runs development parser script
+- `npm run start-generator`: Runs development generator script
+- `npm run start-prettify`: Tests bitmark prettification
+- `npm run start-info`: Tests info/introspection APIs
+- `npm run start-generate-config`: Generates configuration
+
+**Text format development scripts:** Available for all text parsing/generating/breakscaping variants (see pattern above in testing scripts)
+
+### Utility Scripts
+
+- **`npm run regenerate-bitmark-test-json`**: Regenerates expected JSON outputs for tests
+- **`npm run prepublishOnly`**: Pre-publish hook (clean + build + test)
+
+### Build Tools (Direct Access)
+
+- `npm run tsup`: Direct access to tsup bundler
+- `npm run tsc`: Direct access to TypeScript compiler
+- `npm run webpack`: Direct access to webpack
+
+### Build Pipeline Flow
+
+```mermaid
+graph TD
+    Start[npm run build] --> Clean[clean: Remove dist/]
+    Clean --> Init[init: Generate metadata]
+    Init --> Grammar[build-grammar-*: Compile PEG grammars]
+    Grammar --> Check[check: typecheck + lint]
+    Check --> Tsup[tsup: Build Node ESM/CJS]
+    Tsup --> Browser[build-browser: Webpack minified bundle]
+    Browser --> Info[build-supported-info: Generate docs]
+    Info --> End[✓ Build Complete]
+
+    Test[npm test] --> Vitest[vitest run: All tests]
+
+    Publish[npm publish] --> PrePublish[prepublishOnly hook]
+    PrePublish --> Clean
+```
+
+**Key Points:**
+- All builds start with `clean` to ensure no stale artifacts
+- Grammar compilation must happen before TypeScript compilation
+- Type checking and linting happen before bundling
+- Browser builds include polyfills for Node.js APIs
+- Test suite covers parser, generator, and browser variants
+- Pre-publish hook ensures package is fully built and tested
 
 ## Layers / Subsystems
 
