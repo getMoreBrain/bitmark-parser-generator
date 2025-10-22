@@ -27,19 +27,52 @@
       "body": [],
       "statements": [
         {
-          "statement": "A house is bigger than a car.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A house is bigger than a car.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "A tiger is bigger than a cat.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A tiger is bigger than a cat.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "A cow is bigger than a dog.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A cow is bigger than a dog.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
@@ -48,7 +81,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -82,19 +115,52 @@
       "body": [],
       "statements": [
         {
-          "statement": "A house is bigger than a car.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A house is bigger than a car.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "A tiger is bigger than a cat.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A tiger is bigger than a cat.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "A cow is bigger than a dog.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A cow is bigger than a dog.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
@@ -103,7 +169,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -138,7 +204,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -172,7 +238,18 @@
       "body": [],
       "statements": [
         {
-          "statement": "A house",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A house",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
@@ -181,7 +258,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -193,7 +270,7 @@
       "bitLevel": 1
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "errors": [
@@ -245,7 +322,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -280,7 +357,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -304,7 +381,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -339,7 +416,7 @@
       "labelFalse": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -374,7 +451,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -409,7 +486,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -433,7 +510,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -475,7 +552,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -538,7 +615,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -577,7 +654,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

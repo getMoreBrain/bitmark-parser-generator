@@ -34,12 +34,61 @@
       "hint": [],
       "instruction": [],
       "body": [],
-      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."],
+      "elements": [
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Ein Elefant",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "ist",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "grösser als",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "eine Maus.",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ]
+      ],
       "isExample": true,
       "example": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -80,12 +129,61 @@
       "hint": [],
       "instruction": [],
       "body": [],
-      "elements": ["Ein Elefant", "ist", "grösser als", "eine Maus."],
+      "elements": [
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Ein Elefant",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "ist",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "grösser als",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "eine Maus.",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ]
+      ],
       "isExample": true,
       "example": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -127,18 +225,156 @@
       "instruction": [],
       "body": [],
       "elements": [
-        "**zu oberst**\nDach",
-        "**oben**\n3. Stock",
-        "**in der Mitte**\n2. Stock",
-        "**in der Mitte**\n1. Stock",
-        "**unten**\nErdgeschoss",
-        "**zu unterst**\nKeller"
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "zu oberst",
+                "type": "text"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "text": "Dach",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "oben",
+                "type": "text"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "text": "3. Stock",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "in der Mitte",
+                "type": "text"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "text": "2. Stock",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "in der Mitte",
+                "type": "text"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "text": "1. Stock",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "unten",
+                "type": "text"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "text": "Erdgeschoss",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "text": "zu unterst",
+                "type": "text"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "text": "Keller",
+                "type": "text"
+              }
+            ],
+            "attrs": {}
+          }
+        ]
       ],
       "isExample": false,
       "example": null
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

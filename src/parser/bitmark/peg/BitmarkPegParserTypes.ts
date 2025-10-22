@@ -102,6 +102,7 @@ export interface BitHeader {
 
 export interface TrueFalseValue {
   text: string;
+  textAst: TextAst;
   isCorrect: boolean;
   example?: ExampleJson;
   __isDefaultExample: boolean;
@@ -225,7 +226,7 @@ export interface StatementsOrChoicesOrResponses {
 
 export interface BitSpecificCards {
   sampleSolution?: string; // ??
-  elements?: string[];
+  elements?: JsonText[];
   flashcards?: Partial<FlashcardJson>[];
   definitions?: Partial<DefinitionListItemJson>[];
   statements?: Partial<StatementJson>[];

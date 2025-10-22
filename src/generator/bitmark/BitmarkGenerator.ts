@@ -1231,7 +1231,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     _right: NodeInfo,
     _route: NodeInfo[],
   ): void {
-    this.writeCardSetVariantDivider();
+    this.writeCardSetSideDivider();
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards
@@ -2432,9 +2432,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
   }
 
-  // bitmarkAst -> bits -> bitsValue -> elements -> elementsValue
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> elements -> elementsValue
 
-  protected leaf_elementsValue(node: NodeInfo, _route: NodeInfo[]): void {
+  protected enter_elementsValue(node: NodeInfo, _route: NodeInfo[]): void {
     if (node.value) {
       this.writeNL();
       this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
@@ -2538,12 +2538,25 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> question
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> questions -> questionsValue -> question
+
+  protected enter_question(node: NodeInfo, route: NodeInfo[]): void {
+    // Ignore responses that are not at the questionsValue level as they are handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.questionsValue) return;
+
+    if (node.value) {
+      this.writeNL();
+      this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
+    }
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue -> question
 
   protected leaf_question(node: NodeInfo, route: NodeInfo[]): void {
     // Ignore responses that are not at the questionsValue level as they are handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.questionsValue && parent?.key !== NodeType.flashcardsValue) return;
+    if (parent?.key !== NodeType.flashcardsValue) return;
 
     if (node.value) {
       this.writeNL();
