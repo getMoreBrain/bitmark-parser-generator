@@ -36,7 +36,7 @@
       "body": [],
       "questions": [
         {
-          "question": "",
+          "question": [],
           "partialAnswer": "",
           "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.",
           "additionalSolutions": [
@@ -52,7 +52,7 @@
           "example": null
         },
         {
-          "question": "",
+          "question": [],
           "partialAnswer": "",
           "sampleSolution": "Some other text **2**.",
           "reasonableNumOfChars": 20,
@@ -63,7 +63,7 @@
           "example": null
         },
         {
-          "question": "",
+          "question": [],
           "partialAnswer": "",
           "sampleSolution": "Some other text again.",
           "item": [],
@@ -74,7 +74,7 @@
           "reasonableNumOfChars": 100
         },
         {
-          "question": "",
+          "question": [],
           "partialAnswer": "This is a **partialAnswer** 2",
           "sampleSolution": "Some other text again.",
           "item": [],
@@ -89,7 +89,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -256,7 +256,18 @@
       ],
       "questions": [
         {
-          "question": "Nothing here",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Nothing here",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -270,7 +281,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -348,7 +359,7 @@
       "body": [],
       "questions": [
         {
-          "question": "",
+          "question": [],
           "partialAnswer": "",
           "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.",
           "item": [],
@@ -362,7 +373,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -486,7 +497,18 @@
       ],
       "questions": [
         {
-          "question": "Ereignis Steuern",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Ereignis Steuern",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "Erbvorbezug, Schenkung Eltern\nIn vielen Kantonen schenkungssteuerfrei für Nachkommen. Nach Erhalt Einkommens-und Vermögenssteuer.",
           "item": [],
@@ -496,7 +518,18 @@
           "example": null
         },
         {
-          "question": "Ereignis Steuern",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Ereignis Steuern",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "Erbvorbezug, Schenkung Onkel Tante\nIn den meisten Kantonen steuerbar bei der Schenkungssteuer. Sonst aber Kantone LU und SZ. Nach Erhalt Einkommens- und Vermögenssteuer.",
           "item": [],
@@ -506,7 +539,18 @@
           "example": null
         },
         {
-          "question": "Ereignis Steuern",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Ereignis Steuern",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "Selbständigkeit\nWechsel bei der Einkommenssteuer von unselbständig zu selbständig, u.a. Buchwertprinzip.",
           "item": [],
@@ -534,7 +578,18 @@
           ]
         },
         {
-          "question": "Ereignis Steuern",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Ereignis Steuern",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "Heirat und Tochter\nWechsel zur Familienbesteuerung für Einkommens- und Vermögensbesteuerung.",
           "item": [],
@@ -544,7 +599,18 @@
           "example": null
         },
         {
-          "question": "Ereignis Steuern",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Ereignis Steuern",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "Hauskauf\nEigenmietwert, Schuldzinsenabzug, LUK, Vermögenssteuerwert, Schulden bei Einkommens- und Vermögenssteuer.",
           "item": [],
@@ -554,7 +620,18 @@
           "example": null
         },
         {
-          "question": "Ereignis Steuern",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Ereignis Steuern",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "Bezug Säule 2\nKapitalleistungen aus Vorsorge mit reduzierter Einkommenssteuer.",
           "item": [],
@@ -564,7 +641,18 @@
           "example": null
         },
         {
-          "question": "Ereignis Steuern",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Ereignis Steuern",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "Umwandlung EU in AG\nGrundsätzlich Steuerneutralität, Wechsel selbständig zu unselbständig, Beginn Arbeitstätigkeit Ehefrau bei Einkommens und Vermögenssteuer, ggf Emissionsabgabe",
           "item": [],
@@ -574,7 +662,18 @@
           "example": null
         },
         {
-          "question": "Ereignis Steuern",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Ereignis Steuern",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "Mitarbeiteraktien\nGgf Verkauf Aktien grundsätzlich steuerfrei bei Einkommenssteuer wenn aus Privatvermögen. Kapitalgewinn aus Verkauf eigene Aktien unterliegt bei Aktiengesellschaft der Gewinnsteuer",
           "item": [],
@@ -584,7 +683,18 @@
           "example": null
         },
         {
-          "question": "Ereignis Steuern",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Ereignis Steuern",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "Dividende\nEinkommenssteuer, allenfalls reduziert, wenn Voraussetzungen erfüllt.",
           "item": [],
@@ -594,7 +704,18 @@
           "example": null
         },
         {
-          "question": "Ereignis Steuern",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Ereignis Steuern",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "Eigene Aktien\nPlafonierung und Veräusserungsfrist, ansonsten Einkommens- und Verrechnungssteuer.",
           "item": [],
@@ -604,7 +725,18 @@
           "example": null
         },
         {
-          "question": "Ereignis Steuern",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Ereignis Steuern",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "Hausvermietung\nMietertrag und LUK Einkommenssteuer, interkantonale Steuerausscheidung",
           "item": [],
@@ -618,7 +750,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -679,7 +811,7 @@
       "body": [],
       "questions": [
         {
-          "question": "",
+          "question": [],
           "partialAnswer": "",
           "sampleSolution": "Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.",
           "item": [],
@@ -693,7 +825,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -786,7 +918,18 @@
       "body": [],
       "questions": [
         {
-          "question": "Dieser Bildungsbericht wurde am",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Dieser Bildungsbericht wurde am",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -796,7 +939,30 @@
           "example": null
         },
         {
-          "question": "besprochen.\n**Unterschrift der verantwortlichen Berufsbildnerin / des verantwortlichen Berufsbildners:**",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "besprochen.",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "text": "Unterschrift der verantwortlichen Berufsbildnerin / des verantwortlichen Berufsbildners:",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -806,7 +972,23 @@
           "example": null
         },
         {
-          "question": "**Unterschrift der lernenden Person:**",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "text": "Unterschrift der lernenden Person:",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -816,7 +998,30 @@
           "example": null
         },
         {
-          "question": "**Visum des gesetzlichen Vertreters / der gesetzlichen Vertreterin:**\nDatum:",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "text": "Visum des gesetzlichen Vertreters / der gesetzlichen Vertreterin:",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "Datum:",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -826,7 +1031,18 @@
           "example": null
         },
         {
-          "question": "Unterschrift:",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Unterschrift:",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -840,7 +1056,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -899,7 +1115,18 @@
       "body": [],
       "questions": [
         {
-          "question": "Von wie vielen Würfeln der Gesamtfigur sind genau drei Seitenflächen (Quadrate) sichtbar?",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Von wie vielen Würfeln der Gesamtfigur sind genau drei Seitenflächen (Quadrate) sichtbar?",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [
@@ -920,7 +1147,18 @@
           "example": null
         },
         {
-          "question": "Wie viele Quadrate der Figur A werden beim Zusammenfügen mit der Figur B verdeckt?",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Wie viele Quadrate der Figur A werden beim Zusammenfügen mit der Figur B verdeckt?",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [
@@ -941,7 +1179,18 @@
           "example": null
         },
         {
-          "question": "Wie viele Quadrate der Gesamtfigur sind von aussen sichtbar?",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Wie viele Quadrate der Gesamtfigur sind von aussen sichtbar?",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [
@@ -962,7 +1211,18 @@
           "example": null
         },
         {
-          "question": "Auf der Gesamtfigur wandert man entlang von Würfelkanten vom Punkt P auf A zum Punkt Q auf B. Wie lange ist eine solcher Weg mindestens?",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Auf der Gesamtfigur wandert man entlang von Würfelkanten vom Punkt P auf A zum Punkt Q auf B. Wie lange ist eine solcher Weg mindestens?",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [
@@ -987,7 +1247,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1019,7 +1279,18 @@
       "body": [],
       "questions": [
         {
-          "question": "Name:",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Name:",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -1029,7 +1300,18 @@
           "example": null
         },
         {
-          "question": "Vorname:",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Vorname:",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -1039,7 +1321,18 @@
           "example": null
         },
         {
-          "question": "Prüfungsnummer:",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Prüfungsnummer:",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -1049,7 +1342,18 @@
           "example": null
         },
         {
-          "question": "Kantonsschule:",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Kantonsschule:",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -1063,7 +1367,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -1129,7 +1433,25 @@
       "body": [],
       "questions": [
         {
-          "question": "Beurteilen Sie, ob sich die Geschwister im MWST-Register der ESTV eintragen lassen\nmüssen? Begründen Sie Ihre Antwort mit Hinweis auf das MWSTG.",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Beurteilen Sie, ob sich die Geschwister im MWST-Register der ESTV eintragen lassen",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "müssen? Begründen Sie Ihre Antwort mit Hinweis auf das MWSTG.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "Ja, die Eintragung ist zwingend, da die Geschwister eine unternehmerische Tätigkeit im Sinne von Art. 10 MWSTG ausüben und der Umsatz von CHF 100'000 mit dem Verkauf der Wohnung 1 (Verkauf vor Baubeginn stellt eine steuerbare Tätigkeit dar) überschritten wird.",
           "item": [],
@@ -1139,7 +1461,18 @@
           "example": null
         },
         {
-          "question": "Erstellen Sie die MWST-Abrechnung (davon ausgehend, dass die Geschwister unabhängig Ihrer Antwort in Aufgabe 1 registriert sind) für die Baute. Der Einfachheit halber erstellen Sie nur eine Abrechnung über das gesamte Bauwerk (keine Quartalsabrechnungen).",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Erstellen Sie die MWST-Abrechnung (davon ausgehend, dass die Geschwister unabhängig Ihrer Antwort in Aufgabe 1 registriert sind) für die Baute. Der Einfachheit halber erstellen Sie nur eine Abrechnung über das gesamte Bauwerk (keine Quartalsabrechnungen).",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -1153,7 +1486,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -1430,7 +1763,18 @@
       ],
       "questions": [
         {
-          "question": "Variante 1: Verkauf gemäss Art. 21 MWSTG",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Variante 1: Verkauf gemäss Art. 21 MWSTG",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -1440,7 +1784,18 @@
           "example": null
         },
         {
-          "question": "Variante 2: Verkauf mit Option gemäss Art. 22 MWSTG",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Variante 2: Verkauf mit Option gemäss Art. 22 MWSTG",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -1450,7 +1805,18 @@
           "example": null
         },
         {
-          "question": "Variante 3: Verkauf mittels Meldeverfahren gemäss Art. 38 MWSTG.",
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Variante 3: Verkauf mittels Meldeverfahren gemäss Art. 38 MWSTG.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "partialAnswer": "",
           "sampleSolution": "",
           "item": [],
@@ -1464,7 +1830,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

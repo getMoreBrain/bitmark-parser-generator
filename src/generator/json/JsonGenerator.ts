@@ -789,7 +789,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     if (parent?.key !== NodeType.cardNode) return;
 
     if (statement) {
-      this.bitJson.statement = statement.statement ?? '';
+      this.bitJson.statement = statement.statement ?? [];
       this.bitJson.isCorrect = statement.isCorrect ?? false;
       this.bitJson.example = statement.example;
       this.bitJson.isExample = statement.isExample;
@@ -1698,6 +1698,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         if (bitJson.footer == null) bitJson.footer = this.textDefault;
         if (bitJson.questions == null) bitJson.questions = [];
+      }
+
+      if (Config.isOfBitType(bitType, BitType.sequence)) {
+        if (bitJson.elements == null) bitJson.elements = [];
       }
 
       if (bitType === BitType.matchMatrix) {

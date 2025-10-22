@@ -354,7 +354,7 @@ class Builder extends BaseBuilder {
       sampleSolution?: string;
       additionalSolutions?: string | string[];
       heading?: Partial<HeadingJson>;
-      elements?: string[];
+      elements?: JsonText[];
       flashcards?: Partial<FlashcardJson>[];
       definitions?: Partial<DefinitionListItemJson>[];
       legend?: Partial<DefinitionListItemJson>[];
@@ -2209,7 +2209,7 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: QuestionJson = {
-      question: data.question ?? '',
+      question: this.handleJsonText(context, TextLocation.body, data.question),
       partialAnswer: data.partialAnswer ?? '',
       sampleSolution: data.sampleSolution ?? '',
       additionalSolutions: (data.additionalSolutions ?? undefined) as string[],
@@ -2225,9 +2225,9 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
+      ignoreEmptyArrays: ['question', 'item', 'hint', 'instruction'],
       ignoreUndefined: ['example'],
-      ignoreEmptyString: ['question', 'partialAnswer', 'sampleSolution'],
+      ignoreEmptyString: ['partialAnswer', 'sampleSolution'],
     });
 
     return node;
@@ -2976,7 +2976,7 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: StatementJson = {
-      statement: data.statement ?? '',
+      statement: this.handleJsonText(context, TextLocation.tag, data.statement),
       isCorrect: !!data.isCorrect,
       item: this.handleJsonText(context, TextLocation.tag, data.item),
       lead: this.handleJsonText(context, TextLocation.tag, data.lead),
@@ -2988,7 +2988,7 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      // ignoreAllEmptyArrays: true,
+      ignoreEmptyArrays: ['statement'],
       ignoreUndefined: ['example'],
     });
 
@@ -3292,7 +3292,7 @@ class Builder extends BaseBuilder {
       definitions?: Partial<DefinitionListItemJson>[];
       legend?: Partial<DefinitionListItemJson>[];
       questions?: Partial<QuestionJson>[];
-      elements?: string[];
+      elements?: JsonText[];
       statement?: Partial<StatementJson>;
       statements?: Partial<StatementJson>[];
       choices?: Partial<ChoiceJson>[];
@@ -3314,7 +3314,7 @@ class Builder extends BaseBuilder {
     const node: CardNode = {
       heading: this.buildHeading(context, data.heading),
       questions: this.buildQuestions(context, data.questions),
-      elements: data.elements,
+      elements: this.handleJsonText(context, TextLocation.body, data.elements),
       flashcards: this.buildFlashcards(context, data.flashcards),
       definitions: this.buildDefinitionList(context, data.definitions ?? data.legend),
       statement: this.buildStatement(context, data.statement),

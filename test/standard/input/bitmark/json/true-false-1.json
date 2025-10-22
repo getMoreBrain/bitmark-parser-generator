@@ -34,13 +34,24 @@
       "hint": [],
       "instruction": [],
       "body": [],
-      "statement": "Ein Elefant ist grösser als eine Maus.",
+      "statement": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ein Elefant ist grösser als eine Maus.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isCorrect": true,
       "isExample": true,
       "example": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -81,13 +92,24 @@
       "hint": [],
       "instruction": [],
       "body": [],
-      "statement": "Ein Elefant ist grösser als eine Maus.",
+      "statement": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ein Elefant ist grösser als eine Maus.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isCorrect": true,
       "isExample": true,
       "example": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -128,13 +150,24 @@
       "hint": [],
       "instruction": [],
       "body": [],
-      "statement": "Ein Elefant ist grösser als eine Maus.",
+      "statement": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ein Elefant ist grösser als eine Maus.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isCorrect": true,
       "isExample": true,
       "example": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -175,13 +208,24 @@
       "hint": [],
       "instruction": [],
       "body": [],
-      "statement": "Ein Elefant ist grösser als eine Maus.",
+      "statement": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ein Elefant ist grösser als eine Maus.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
       "isCorrect": true,
       "isExample": true,
       "example": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

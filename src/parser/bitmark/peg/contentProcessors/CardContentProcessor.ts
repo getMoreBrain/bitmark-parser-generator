@@ -346,7 +346,7 @@ function parseElements(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  const elements: string[] = [];
+  const elements: JsonText[] = [];
 
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
@@ -354,7 +354,9 @@ function parseElements(
         const tags = content.data;
 
         // if (tags.cardBody) {
-        elements.push(tags.cardBodyStr ?? '');
+        const element =
+          (tags.cardBody?.body as JsonText) ?? tags.cardBodyStr ?? Breakscape.EMPTY_STRING;
+        elements.push(element);
         // } else {
         //   context.addWarning('Ignoring card with empty element', content);
         // }
@@ -388,7 +390,7 @@ function parseStatements(
           for (const s of chainedStatements) {
             // if (s.text) {
             const statement: Partial<StatementJson> = {
-              statement: s.statement ?? '',
+              statement: s.statement ?? [],
               isCorrect: s.isCorrect,
               item: s.item,
               lead: s.lead,
@@ -594,7 +596,8 @@ function parseQuestions(
 
         // if (tags.cardBody) {
         const q: Partial<QuestionJson> = {
-          question: tags.cardBodyStr ?? '',
+          question:
+            (tags.cardBody?.body as JsonText) ?? tags.cardBodyStr ?? Breakscape.EMPTY_STRING,
           ...tags,
         };
         if (q) questions.push(q);

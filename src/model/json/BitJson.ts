@@ -245,7 +245,7 @@ export interface BitJson {
   additionalSolutions: string[];
   partialAnswer: string;
   elements: string[];
-  statement: string;
+  statement: JsonText;
   isCorrect: boolean;
   cards: FlashcardJson[];
   definitions: DefinitionListItemJson[];
@@ -338,7 +338,7 @@ export interface TextAndIconJson {
 }
 
 export interface StatementJson {
-  statement: string;
+  statement: JsonText;
   isCorrect: boolean;
   item: JsonText;
   lead: JsonText;
@@ -514,7 +514,7 @@ export interface TableCellJson {
 }
 
 export interface QuestionJson {
-  question: string;
+  question: JsonText;
   partialAnswer: string;
   sampleSolution: string;
   additionalSolutions: string[];

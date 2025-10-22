@@ -28,19 +28,52 @@
       "body": [],
       "statements": [
         {
-          "statement": "A house is bigger than a car.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A house is bigger than a car.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "A tiger is bigger than a cat.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A tiger is bigger than a cat.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "A cow is bigger than a dog.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "A cow is bigger than a dog.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
@@ -49,7 +82,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -92,25 +125,69 @@
       "body": [],
       "statements": [
         {
-          "statement": "brown",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "brown",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "purple, but only in chocolate ads",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "purple, but only in chocolate ads",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "blue",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "blue",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "green",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "green",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
@@ -121,7 +198,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -169,13 +246,35 @@
       "body": [],
       "statements": [
         {
-          "statement": "On the picture, you see a mouse.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "On the picture, you see a mouse.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "There is a cat on the picture.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "There is a cat on the picture.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
@@ -186,7 +285,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -254,139 +353,482 @@
       "body": [],
       "statements": [
         {
-          "statement": "Das Blut setzt sich zusammen aus: Blutplasma, Erythrozyten, Leukozyten, Thrombozyten und Lymphozyten.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Das Blut setzt sich zusammen aus: Blutplasma, Erythrozyten, Leukozyten, Thrombozyten und Lymphozyten.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Die Leukozyten haben die Fächigkeit, sich aktiv fortzubewegen. Sie können fremde Zellen erkennen und diese imitieren, indem sie spezielle Substanzen freisetzen.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Die Leukozyten haben die Fächigkeit, sich aktiv fortzubewegen. Sie können fremde Zellen erkennen und diese imitieren, indem sie spezielle Substanzen freisetzen.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Zu den Schutzbarrieren des Körpers gehören u.a. der Säureschutzmantel (pH-Wert), die Melanozyten (pigmentbildend gegen UV-Strahlen) und die Hornschicht der Haut.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Zu den Schutzbarrieren des Körpers gehören u.a. der Säureschutzmantel (pH-Wert), die Melanozyten (pigmentbildend gegen UV-Strahlen) und die Hornschicht der Haut.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Lzmphozyten werden auch als spezifisches Immunsystem bezeichnet, da sie nur an spezifischen Geweben des Körpers ihre Immunabwehr verrichten.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Lzmphozyten werden auch als spezifisches Immunsystem bezeichnet, da sie nur an spezifischen Geweben des Körpers ihre Immunabwehr verrichten.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Makrophagen werden angelockt, indem die Antikörper aus den B-Lymphozyten die Antigene auf dem eingedrungenen Erreger besetzen.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Makrophagen werden angelockt, indem die Antikörper aus den B-Lymphozyten die Antigene auf dem eingedrungenen Erreger besetzen.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "T- und B-Lymphozyten, Granulozyten und Makrophagen sind von Geburt an zur Abwehr von Krankeitserregern im Einsatz.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "T- und B-Lymphozyten, Granulozyten und Makrophagen sind von Geburt an zur Abwehr von Krankeitserregern im Einsatz.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Fieber zeigt an, dass das Immunsystem der Körpers aktiv ist, denn ab einer Körpertemperatur von 37°C können sich die Lymphoyzten besser vermehren und sind aktiver.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Fieber zeigt an, dass das Immunsystem der Körpers aktiv ist, denn ab einer Körpertemperatur von 37°C können sich die Lymphoyzten besser vermehren und sind aktiver.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Bei einer aktiven Impfung werden abgeschwächte Krankheitserreger in den Körper gespritzt, woraufhin die T- und B-Lzmphozyten gegen die Antigene bilden.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Bei einer aktiven Impfung werden abgeschwächte Krankheitserreger in den Körper gespritzt, woraufhin die T- und B-Lzmphozyten gegen die Antigene bilden.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Zu den Mikroorganismen zählen z. B. Pilze, Bakterien und Viren.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Zu den Mikroorganismen zählen z. B. Pilze, Bakterien und Viren.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Um sich zu vermehren und den Stoffwechsel aufrechtzuerhalten, benötigen Bakterien Wärme, Feuchtigkeit, Nährszoffe und einen Wirt (z. B. den Menschen).",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Um sich zu vermehren und den Stoffwechsel aufrechtzuerhalten, benötigen Bakterien Wärme, Feuchtigkeit, Nährszoffe und einen Wirt (z. B. den Menschen).",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Eine Mzkosen werden Kugelbakterien (Kokken) verursacht.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Eine Mzkosen werden Kugelbakterien (Kokken) verursacht.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Medikamente, die gegen Pilze wirken, heissen Antimykotika. Medikamente gegen Viren sint Virostatika und solche gegen Bakkterien Antibiotika.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Medikamente, die gegen Pilze wirken, heissen Antimykotika. Medikamente gegen Viren sint Virostatika und solche gegen Bakkterien Antibiotika.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Stresshormone dienen dem Körper dazu, um in lebensbedrohlichen Situationen sofort reagieren zu können.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Stresshormone dienen dem Körper dazu, um in lebensbedrohlichen Situationen sofort reagieren zu können.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Bei der therapeutischen Nutzung von Kortison muss grundsätzlich bei alle Anwendungen, ob lokal oder systemisch, mit erheblichen Nebenwirkungen gerechnet werden.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Bei der therapeutischen Nutzung von Kortison muss grundsätzlich bei alle Anwendungen, ob lokal oder systemisch, mit erheblichen Nebenwirkungen gerechnet werden.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Bei den sogenannten Superinfektionen handelt es sich um die jeweiligen Varianten der Influenza, die gerade in Umlauf sind und viele Menschenleben kosten können.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Bei den sogenannten Superinfektionen handelt es sich um die jeweiligen Varianten der Influenza, die gerade in Umlauf sind und viele Menschenleben kosten können.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Sobald die klassischen Entzündungszeichen erkennbar sind, liegt immer eine Infektion mit Krankheitserregern vor.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Sobald die klassischen Entzündungszeichen erkennbar sind, liegt immer eine Infektion mit Krankheitserregern vor.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Bei der indirekten Übertragung werden Keime beispielsweise über die Türklinke weitergegeben, bei der direkten Übertragung zum Beispiel über Tröpfchen.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Bei der indirekten Übertragung werden Keime beispielsweise über die Türklinke weitergegeben, bei der direkten Übertragung zum Beispiel über Tröpfchen.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Bei der vektoriellen Übertragung werden Krankheitserreger von z. B. Mücken oder Zecken auf den Menschen übertragen.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Bei der vektoriellen Übertragung werden Krankheitserreger von z. B. Mücken oder Zecken auf den Menschen übertragen.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Eine nosokomiale Infektion wurde in einer Einrichtung der Gesundheitswesens (z- B- Spital, Pflegeheim, Arztpraxis) erworben.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Eine nosokomiale Infektion wurde in einer Einrichtung der Gesundheitswesens (z- B- Spital, Pflegeheim, Arztpraxis) erworben.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "MRSA ist die Abkürzung für Methicillin resistenter Staphylococcus aureus.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "MRSA ist die Abkürzung für Methicillin resistenter Staphylococcus aureus.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Eine Händedesinfektion hat nach WHO immer zu erfolgen:\n\n• bei Arbeitsbeginn und -Ende\n• vor Mahlzeitzubereitung\n• vor und nach dem Engpässen\n• vor und nach Pausen\n• bei sichtbarer Verschmutzung der Hände\n• nach der Toilettenbenutzung",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Eine Händedesinfektion hat nach WHO immer zu erfolgen:",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "• bei Arbeitsbeginn und -Ende",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "• vor Mahlzeitzubereitung",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "• vor und nach dem Engpässen",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "• vor und nach Pausen",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "• bei sichtbarer Verschmutzung der Hände",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "• nach der Toilettenbenutzung",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Zur persönlicher Hygiene (Individualhyhiene) gehören die Haut-, die Haar-, die Nagel- und die Mundpflege.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Zur persönlicher Hygiene (Individualhyhiene) gehören die Haut-, die Haar-, die Nagel- und die Mundpflege.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Hygiene bezieht such nicht nur auf die persönliche Hygiene (Individualhygiene). Hygiene umfasst auch Themen wie:\n\n• Lebensmittel gyhiene\n• Wasserhygiene (Trinkwasser und Abwasser)\n• Umwelthygiene (Luft, Boden)\n• Abfallentsorgung\n• Arbeitsschutz, die\n• Sozialhygiene und Psychohygiene",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Hygiene bezieht such nicht nur auf die persönliche Hygiene (Individualhygiene). Hygiene umfasst auch Themen wie:",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "• Lebensmittel gyhiene",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "• Wasserhygiene (Trinkwasser und Abwasser)",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "• Umwelthygiene (Luft, Boden)",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "• Abfallentsorgung",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "• Arbeitsschutz, die",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "• Sozialhygiene und Psychohygiene",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
@@ -395,7 +837,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -418,61 +860,171 @@
       "body": [],
       "statements": [
         {
-          "statement": "Der Säureschutzmantel und die Lipidbarriere sind in oder auf der Epidermis zu finden.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Der Säureschutzmantel und die Lipidbarriere sind in oder auf der Epidermis zu finden.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Glycerin und Hyaluronsäure binden Feuchtigkeit in der Haut.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Glycerin und Hyaluronsäure binden Feuchtigkeit in der Haut.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Zu den Funktionen der Haut gehören die Bildung einer Lichtschwiele und die Ausscheidung von Urin.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Zu den Funktionen der Haut gehören die Bildung einer Lichtschwiele und die Ausscheidung von Urin.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Die Haut verändert sich mit dem Alter, unter anderem verliert sie an Elastizität.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Die Haut verändert sich mit dem Alter, unter anderem verliert sie an Elastizität.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Pflegeprodukte sind dazu da, gesunde Haut für Krankheiten empfänglicher zu machen.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Pflegeprodukte sind dazu da, gesunde Haut für Krankheiten empfänglicher zu machen.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Wird Wasser zur Reinigung der Haut eingesetzt, so löst es vor allem Fett und hat dadurch eine austrocknende Wirkung.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Wird Wasser zur Reinigung der Haut eingesetzt, so löst es vor allem Fett und hat dadurch eine austrocknende Wirkung.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Wer seine Ernährung fettarm gestaltet oder die falschen Fette zu sich nimmt, kann unter trockener Haut und Juckreiz leiden.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Wer seine Ernährung fettarm gestaltet oder die falschen Fette zu sich nimmt, kann unter trockener Haut und Juckreiz leiden.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Schwitzen ist ein Mechanismus, der dem Körper hilft, die Temperatur zu regulieren.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Schwitzen ist ein Mechanismus, der dem Körper hilft, die Temperatur zu regulieren.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Deos beeinflussen den Geruch, Antitranispirantien reduzieren das Schwitzen.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Deos beeinflussen den Geruch, Antitranispirantien reduzieren das Schwitzen.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Meditation kann dabei helfen, Stress abzubauen und damit auch weniger zu schwitzen.",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Meditation kann dabei helfen, Stress abzubauen und damit auch weniger zu schwitzen.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
@@ -481,7 +1033,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -560,37 +1112,103 @@
       "body": [],
       "statements": [
         {
-          "statement": "Beobachtung",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Beobachtung",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Test",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Test",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Daten aus ausserbetrieblichen Quellen",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Daten aus ausserbetrieblichen Quellen",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Daten aus innerbetrieblichen Quellen",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Daten aus innerbetrieblichen Quellen",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Telefonische Befragungen",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Telefonische Befragungen",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
         },
         {
-          "statement": "Panel",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Panel",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": false,
           "example": null
@@ -599,7 +1217,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -654,13 +1272,35 @@
       "body": [],
       "statements": [
         {
-          "statement": "TrueAnswer",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "TrueAnswer",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": true,
           "example": true
         },
         {
-          "statement": "FalseAnswer",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "FalseAnswer",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": true,
           "example": false
@@ -671,7 +1311,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -692,13 +1332,35 @@
       "body": [],
       "statements": [
         {
-          "statement": "TrueAnswer",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "TrueAnswer",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": true,
           "example": true
         },
         {
-          "statement": "FalseAnswer",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "FalseAnswer",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": true,
           "example": false
@@ -709,7 +1371,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -730,13 +1392,35 @@
       "body": [],
       "statements": [
         {
-          "statement": "TrueAnswer",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "TrueAnswer",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": true,
           "isExample": true,
           "example": false
         },
         {
-          "statement": "FalseAnswer",
+          "statement": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "FalseAnswer",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
           "isCorrect": false,
           "isExample": true,
           "example": true
@@ -747,7 +1431,7 @@
       "labelTrue": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.14.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
