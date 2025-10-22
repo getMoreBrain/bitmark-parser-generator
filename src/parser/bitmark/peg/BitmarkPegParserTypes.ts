@@ -47,6 +47,7 @@ import {
   type ResponseJson,
   type ServingsJson,
   type StatementJson,
+  type TableExtendedJson,
   type TableJson,
   type TechnicalTermJson,
 } from '../../../model/json/BitJson.ts';
@@ -237,7 +238,7 @@ export interface BitSpecificCards {
   choices?: Partial<ChoiceJson>[];
   questions?: Partial<QuestionJson>[];
   pronunciationTable?: Partial<PronunciationTableJson>;
-  table?: Partial<TableJson>;
+  table?: Partial<TableJson | TableExtendedJson>;
   botResponses?: Partial<BotResponseJson>[];
   ingredients?: Partial<IngredientJson>[];
   // DEPRECATED - TO BE REMOVED IN THE FUTURE

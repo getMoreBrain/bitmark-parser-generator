@@ -6,14 +6,14 @@
 
 ## Overview
 
-Enhance the existing `[.table]` bit to support full HTML table semantics including thead, tbody, tfoot, rowspan, colspan, scope, and cell types, while maintaining full backwards compatibility with the current table JSON format.
+Add a new `[.table-extended]` bit to support full HTML table semantics including thead, tbody, tfoot, rowspan, colspan, scope, and cell types, while maintaining full backwards compatibility with the current table JSON format.
 
 The enhancement introduces **qualified card dividers** - a generic parser feature enabling special row types within card-like structures. For tables, qualifiers `thead`, `tbody`, and `tfoot` enable semantic table sections.
 
 ## Goals
 
 1. **Full HTML Table Support**: Map bitmark tables 1:1 with HTML table capabilities
-2. **Backwards Compatibility**: Existing table JSON must parse and generate correctly
+2. **Backwards Compatibility**: Existing table JSON and Bitmark must parse and generate correctly as [.table] or [.table-extended]
 3. **Generic Card Qualifiers**: Implement qualifiers as a reusable parser feature
 4. **Semantic Clarity**: Use standard HTML table terminology and structure
 5. **Cell-Level Control**: Support cell properties via tags (rowspan, colspan, scope, cell type)

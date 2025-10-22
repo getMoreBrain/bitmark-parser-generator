@@ -46,6 +46,7 @@ import {
   type ServingsJson,
   type StatementJson,
   type TableCellJson,
+  type TableExtendedJson,
   type TableJson,
   type TableRowJson,
   type TableSectionJson,
@@ -1525,7 +1526,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.cardNode) return true;
 
-    const table = node.value as TableJson | undefined;
+    const table = node.value as TableJson | TableExtendedJson | undefined;
     if (!table) return true;
 
     if (this.writeAdvancedTable(table)) {
@@ -1550,8 +1551,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeCardSetCardDivider();
   }
 
-  private writeAdvancedTable(table: TableJson): boolean {
-    const normalized = normalizeTableFormat(table);
+  private writeAdvancedTable(table: TableJson | TableExtendedJson): boolean {
+    const normalized = normalizeTableFormat(BitType.tableExtended, table) as TableExtendedJson;
 
     const sections: Array<{
       key: TableSectionKey;

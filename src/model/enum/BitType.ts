@@ -577,6 +577,7 @@ const BitType = superenum({
   surveyRatingOnce: 'survey-rating-once',
   table: 'table',
   tableAlt: 'table-alt',
+  tableExtended: 'table-extended',
   tableImage: 'table-image',
   tableImageAlt: 'table-image-alt',
   takePicture: 'take-picture',

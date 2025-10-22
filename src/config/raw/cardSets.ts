@@ -373,6 +373,27 @@ const CARDSETS: _CardSetsConfig = {
               key: ConfigKey.tag_title,
               description: 'Title of the table.',
             },
+          ],
+          repeatCount: Count.infinity,
+        },
+      ],
+    ],
+  },
+  [CardSetConfigKey.tableExtended]: {
+    variants: [
+      // Side 1
+      [
+        // Variant 1..N
+        {
+          tags: [
+            {
+              key: ConfigKey.group_standardItemLeadInstructionHint,
+              description: 'Standard tags for lead, instruction, and hint.',
+            },
+            {
+              key: ConfigKey.tag_title,
+              description: 'Title of the table.',
+            },
             {
               key: ConfigKey.property_tableCellType,
               description: 'Table cell type (th/td).',

@@ -1,7 +1,7 @@
 [
   {
     "bit": {
-      "type": "table",
+      "type": "table-extended",
       "format": "bitmark++",
       "bitLevel": 1,
       "caption": [
@@ -580,5 +580,187 @@
       "textParserVersion": "8.35.0"
     },
     "bitmark": "[.table]\n[@caption:Sample Quarterly Summary]\n\n==== thead ====\n[@tableRowSpan:2]\n[@tableScope:col]\nRegion\n--\n[@tableRowSpan:2]\n[@tableScope:col]\nArea\n--\n[@tableColSpan:3]\n[@tableScope:colgroup]\nQ1\n--\n[@tableRowSpan:2]\n[@tableScope:col]\nTotal\n\n==== thead ====\n[@tableScope:col]\nJan\n--\n[@tableScope:col]\nFeb\n--\n[@tableScope:col]\nMar\n\n====\n[@tableCellType:th]\n[@tableRowSpan:2]\n[@tableScope:row]\nWest\n--\nCoastal\n--\n10\n--\n12\n--\n11\n--\n33\n\n====\nInland\n--\n8\n--\n9\n--\n7\n--\n24\n\n====\n[@tableCellType:th]\n[@tableScope:row]\nNorth\n--\n(all)\n--\n14\n--\n13\n--\n12\n--\n39\n\n====\n[@tableCellType:th]\n[@tableScope:row]\nSouth\n--\n(all)\n--\n6\n--\n7\n--\n8\n--\n21\n\n==== tfoot ====\n[@tableCellType:th]\n[@tableColSpan:5]\n[@tableScope:row]\nGrand total\n--\n117\n\n==== tfoot ====\n[@tableColSpan:6]\nNote: values are example numbers.\n\n===="
+  },
+  {
+    "bit": {
+      "type": "table-extended",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "tableFixedHeader": true,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "head": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Name",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Email",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Phone Number",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true
+                }
+              ]
+            }
+          ]
+        },
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "John",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "john@example.com",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "(353) 01 222 3333",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Mark",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "mark@gmail.com",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "(01) 22 888 4444",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "4.14.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.table-extended]\n[@tableFixedHeader:true]\n[@tableHeaderWhitespaceNoWrap:false]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   }
 ]

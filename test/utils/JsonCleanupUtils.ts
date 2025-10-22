@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { BitType } from '../../src/index.ts';
 import { normalizeTableFormat } from '../../src/parser/json/TableUtils.ts';
 
 class JsonCleanupUtils {
@@ -104,7 +105,7 @@ class JsonCleanupUtils {
     const record = node as Record<string, unknown>;
 
     if (record.table && typeof record.table === 'object') {
-      record.table = normalizeTableFormat(record.table as any);
+      record.table = normalizeTableFormat(BitType.tableExtended, record.table as any);
     }
 
     for (const value of Object.values(record)) {

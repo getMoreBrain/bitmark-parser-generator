@@ -119,6 +119,8 @@ describe('web-bitmark-generator', () => {
         // Copy the original test markup file to the output folder
         fs.copySync(testFile, originalMarkupFile);
 
+        if (id === 'table-extended') debugger;
+
         // Read in the test markup file
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 

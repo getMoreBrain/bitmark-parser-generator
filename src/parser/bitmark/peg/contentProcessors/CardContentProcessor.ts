@@ -28,7 +28,7 @@ import {
   type ResponseJson,
   type StatementJson,
   type TableCellJson,
-  type TableJson,
+  type TableExtendedJson,
   type TableRowJson,
   type TextAndIconJson,
 } from '../../../../model/json/BitJson.ts';
@@ -122,6 +122,7 @@ function buildCards(
       break;
 
     case CardSetConfigKey.table:
+    case CardSetConfigKey.tableExtended:
       // ==> heading / table
       result = parseTable(context, bitType, processedCardSet);
       break;
@@ -1074,7 +1075,7 @@ function parseTable(
     });
   }
 
-  const table: Partial<TableJson> = {};
+  const table: Partial<TableExtendedJson> = {};
 
   const hasHeadRows = sectionRows.thead.length > 0;
   const hasBodyRows = sectionRows.tbody.length > 0;
