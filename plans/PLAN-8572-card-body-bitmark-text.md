@@ -4,7 +4,13 @@
 
 ## Problem Statement
 
-Card sets content can be either plain string (`cardBodyStr`) or bitmark++ styled text (`cardBody`). Currently, some bits return plain strings for card bodies instead of styled text, limiting formatting capabilities and creating inconsistency across bit types.
+Card sets content can be either plain string (`cardBodyStr`) or bitmark++ styled text (`cardBody`). Currently, four specific card set types return plain strings for card bodies instead of styled text, limiting formatting capabilities and creating inconsistency across bit types.
+
+**Scope**: This plan addresses only the following card set types:
+- **questions** (`[.interview]`, `[.interview-instruction-grouped]`, `[.bot-interview]`)
+- **elements** (`[.sequence]`, `[.sequence-content]`)
+- **statements** (`[.true-false]`, `[.true-false-1]`)
+- **ingredients** (`[.cooking-ingredient]`)
 
 ## Strategy Overview
 
@@ -29,28 +35,14 @@ Card sets content can be either plain string (`cardBodyStr`) or bitmark++ styled
 
 ## Current State Analysis
 
-### Card Set Types & Body Usage
+### Card Set Types Requiring Updates
 
 | Card Set Type | Uses Plain String | Uses Bitmark++ Text | Parsing Function |
 |---------------|------------------|---------------------|------------------|
 | `questions` | ✅ YES | ❌ NO | `parseQuestions()` |
 | `elements` | ✅ YES | ❌ NO | `parseElements()` |
-| `matchPairs` | ✅ YES (partially) | ✅ YES (partially) | `parseMatchPairs()` |
-| `matchAudioPairs` | ✅ YES (partially) | ✅ YES (partially) | `parseMatchPairs()` |
-| `matchImagePairs` | ✅ YES (partially) | ✅ YES (partially) | `parseMatchPairs()` |
-| `matchMatrix` | ✅ YES (partially) | ✅ YES (partially) | `parseMatchMatrix()` |
-| `botActionResponses` | ✅ YES | ❌ NO | `parseBotActionResponses()` |
+| `statements` | ✅ YES | ❌ NO | `parseStatements()` |
 | `ingredients` | ✅ YES (partially) | ✅ YES (partially) | `parseIngredients()` |
-| `flashcard` | ❌ NO | ✅ YES | `parseFlashcardOrDefinitionList()` |
-| `definitionList` | ❌ NO | ✅ YES | `parseFlashcardOrDefinitionList()` |
-| `statements` | ✅ YES (mixed) | ❌ NO | `parseStatements()` |
-| `feedback` | ✅ YES (mixed) | ✅ YES (mixed) | `parseFeedback()` |
-| `quiz` | ✅ YES (mixed) | ✅ YES (mixed) | `parseQuiz()` |
-| `table` | ❌ NO | ✅ YES | `parseTable()` |
-| `pronunciationTable` | ❌ NO | ✅ YES | `parsePronunciationTable()` |
-| `clozeList` | ❌ NO | ✅ YES | `parseCardBits()` |
-| `exampleBitList` | ❌ NO | ✅ YES | `parseCardBits()` |
-| `bookReferenceList` | ❌ NO | ✅ YES | `parseCardBits()` |
 
 ### Bits Affected by Plain String Usage
 
@@ -63,45 +55,12 @@ Card sets content can be either plain string (`cardBodyStr`) or bitmark++ styled
 - `[.sequence]`
 - `[.sequence-content]`
 
-**CardSetConfigKey.botActionResponses** (PLAIN STRING):
-- `[.bot-action-send]`
-- `[.bot-action-send-payment]`
-- `[.bot-action-response]`
-- `[.bot-action-show-image]`
-
-**CardSetConfigKey.matchPairs** (MIXED - pair values use plain string):
-- `[.match]`
-- `[.match-all]`
-- `[.match-reverse]`
-- `[.match-all-reverse]`
-- `[.match-solution-grouped]`
-
-**CardSetConfigKey.matchAudioPairs** (MIXED):
-- `[.match-audio]`
-
-**CardSetConfigKey.matchImagePairs** (MIXED):
-- `[.match-picture]`
-
-**CardSetConfigKey.matchMatrix** (MIXED):
-- `[.match-matrix]`
-
-**CardSetConfigKey.ingredients** (MIXED):
-- `[.cooking-ingredient]`
-
-**CardSetConfigKey.statements** (MIXED):
+**CardSetConfigKey.statements** (PLAIN STRING):
 - `[.true-false]`
 - `[.true-false-1]`
 
-**CardSetConfigKey.feedback** (MIXED):
-- `[.feedback]`
-- `[.learning-documentation-feedback]`
-- `[.hand-in-feedback-expert]`
-
-**CardSetConfigKey.quiz** (MIXED):
-- `[.multiple-choice]`
-- `[.multiple-choice-text]`
-- `[.multiple-response]`
-- `[.multiple-response-text]`
+**CardSetConfigKey.ingredients** (PARTIALLY):
+- `[.cooking-ingredient]`
 
 ## Architecture Impact
 
@@ -121,10 +80,9 @@ Card sets content can be either plain string (`cardBodyStr`) or bitmark++ styled
 
 **JSON API Changes**:
 - `QuestionJson.question` changes from `string` to `JsonText` (TextAst | string)
-- `BotResponseJson.response` changes from `string` to `JsonText`
-- `BotResponseJson.reaction` changes from `string` to `JsonText`
-- `BotResponseJson.feedback` changes from `string` to `JsonText`
-- Array element types change from `string[]` to `JsonText[]` for elements
+- `StatementJson.statement` changes from `string` to `JsonText` (TextAst | string)
+- `IngredientJson.ingredient` changes from `string` to `JsonText` (TextAst | string)
+- Array element types change from `string[]` to `JsonText[]` for elements in sequences
 
 **Parser Changes**:
 - Card body parsing will use `cardBody.body` instead of `cardBodyStr`
@@ -152,35 +110,22 @@ elements.push(tags.cardBodyStr ?? '')
 elements.push(tags.cardBody?.body ?? '')
 ```
 
-#### 1.3 Update `parseBotActionResponses()`
+#### 1.3 Update `parseStatements()`
 ```typescript
 // BEFORE:
-response: __instructionString ?? Breakscape.EMPTY_STRING,
-reaction: reaction ?? Breakscape.EMPTY_STRING,
-feedback: cardBodyStr ?? Breakscape.EMPTY_STRING
+statement: tags.cardBodyStr ?? ''
 
 // AFTER:
-response: __instructionString ?? '',
-reaction: reaction ?? '',
-feedback: cardBody?.body ?? ''
+statement: tags.cardBody?.body ?? ''
 ```
 
-#### 1.4 Update `parseMatchPairs()` - Pair Values
+#### 1.4 Update `parseIngredients()`
 ```typescript
 // BEFORE:
-const value = cardBodyStr ?? '';
+ingredient: cardBodyStr ?? ''
 
 // AFTER:
-const value = cardBody?.body ?? '';
-```
-
-#### 1.5 Update `parseMatchMatrix()` - Matrix Cell Values
-```typescript
-// BEFORE:
-const value = cardBodyStr ?? Breakscape.EMPTY_STRING;
-
-// AFTER:
-const value = cardBody?.body ?? '';
+ingredient: cardBody?.body ?? ''
 ```
 
 ### Phase 2: Model Layer (Priority: HIGH)
@@ -194,12 +139,10 @@ export interface QuestionJson {
 }
 ```
 
-#### 2.2 Update `BotResponseJson` interface
+#### 2.2 Update `StatementJson` interface
 ```typescript
-export interface BotResponseJson {
-  response: TextAst; // Changed from: string - ALWAYS TextAst
-  reaction: TextAst; // Changed from: string - ALWAYS TextAst
-  feedback: TextAst; // Changed from: string - ALWAYS TextAst
+export interface StatementJson {
+  statement: TextAst; // Changed from: string - ALWAYS TextAst
   // ... other properties
 }
 ```
@@ -210,22 +153,10 @@ export interface BotResponseJson {
 elements?: TextAst[]; // Changed from: string[] - ALWAYS TextAst array
 ```
 
-#### 2.4 Update `PairJson` interface
+#### 2.4 Update `IngredientJson` interface
 ```typescript
-export interface PairJson {
-  keyAudio?: AudioResourceWrapperJson;
-  keyImage?: ImageResourceWrapperJson;
-  key: TextAst; // Changed from: string - ALWAYS TextAst
-  values: TextAst[]; // Changed from: string[] - ALWAYS TextAst array
-  // ... other properties
-}
-```
-
-#### 2.5 Update `MatrixCellJson` interface
-```typescript
-export interface MatrixCellJson {
-  key: TextAst; // Changed from: string - ALWAYS TextAst
-  values: TextAst[]; // Changed from: string[] - ALWAYS TextAst array
+export interface IngredientJson {
+  ingredient: TextAst; // Changed from: string - ALWAYS TextAst
   // ... other properties
 }
 ```
@@ -324,7 +255,7 @@ export class JsonParser {
 - [ ] Backward compatibility maintained for legacy JSON input (string values)
 - [ ] No breaking changes to bitmark syntax
 - [ ] All existing tests pass
-- [ ] New tests added for styled text in card bodies
+- [ ] New tests added for styled text in card bodies (questions, elements, statements, ingredients)
 
 ## Risks & Mitigation
 
@@ -338,7 +269,7 @@ export class JsonParser {
 
 ## Success Metrics
 
-1. All card set types consistently use TextAst for card bodies
+1. Four card set types consistently use TextAst for card bodies (questions, elements, statements, ingredients)
 2. Parser always outputs TextAst (regardless of formatting presence)
 3. Generator accepts both string (legacy) and TextAst (new) input
 4. No regression in existing functionality
@@ -357,8 +288,6 @@ export class JsonParser {
 ### CardSetConfigKey.questions - Interview Bits
 
 #### Example 1.1: `[.interview]` - Basic Questions
-
-#### Bitmark
 ```bitmark
 [.interview]
 [@id:187612]
@@ -453,18 +382,6 @@ besprochen.
 
 ---
 
-#### Example 1.2: `[.interview-instruction-grouped]` - Same as `[.interview]`
-
-Uses the same `CardSetConfigKey.questions` configuration, so the same plain string issue applies.
-
----
-
-#### Example 1.3: `[.bot-interview]` - Same as `[.interview]`
-
-Uses the same `CardSetConfigKey.questions` configuration, so the same plain string issue applies.
-
----
-
 ### CardSetConfigKey.elements - Sequence Bits
 
 #### Example 2.1: `[.sequence]` - Elements Array
@@ -539,448 +456,9 @@ eine Maus.
 
 ---
 
-#### Example 2.2: `[.sequence-content]` - Same as `[.sequence]`
-
-Uses the same `CardSetConfigKey.elements` configuration, so the same plain string issue applies.
-
----
-
-### CardSetConfigKey.botActionResponses - Bot Action Bits
-
-#### Example 3.1: `[.bot-action-response]` - Response/Reaction/Feedback
-
-#### Bitmark
-```bitmark
-[.bot-action-response]
-[!Wusstest du, dass du einen **Teil der Kosten selbst bezahlen** musst?]
-
-Der Entscheid darüber liegt nicht bei der Versicherung, sondern ist **gesetzlich vorgeschrieben.**
-
-===
-[%A]
-[!Ja, das weiss ich]
-[@reaction:celebrate]
-👍 Cool!
-===
-[%B]
-[!Das war mir nicht bewusst]
-😅
-[@reaction:like]
-===
-```
-
-#### Current JSON (Plain Strings) ⚠️
-```json
-{
-  "type": "bot-action-response",
-  "instruction": [ /* TextAst - correctly formatted */ ],
-  "body": [ /* TextAst - correctly formatted */ ],
-  "responses": [
-    {
-      "response": "Ja, das weiss ich",        // ⚠️ PLAIN STRING
-      "reaction": "celebrate",                // ⚠️ PLAIN STRING
-      "feedback": "👍 Cool!",                 // ⚠️ PLAIN STRING
-      "item": [ /* TextAst */ ]
-    },
-    {
-      "response": "Das war mir nicht bewusst", // ⚠️ PLAIN STRING
-      "reaction": "like",                      // ⚠️ PLAIN STRING
-      "feedback": "😅",                        // ⚠️ PLAIN STRING
-      "item": [ /* TextAst */ ]
-    }
-  ]
-}
-```
-
-#### Target JSON (Always TextAst) ✅
-```json
-{
-  "type": "bot-action-response",
-  "instruction": [ /* TextAst - already correct */ ],
-  "body": [ /* TextAst - already correct */ ],
-  "responses": [
-    {
-      "response": [  // ✅ TextAst with bold formatting
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Ja, ",
-              "type": "text"
-            },
-            {
-              "marks": [{"type": "bold"}],
-              "text": "das weiss ich",
-              "type": "text"
-            }
-          ]
-        }
-      ],
-      "reaction": [  // ✅ TextAst (plain text)
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "celebrate",
-              "type": "text"
-            }
-          ]
-        }
-      ],
-      "feedback": [  // ✅ TextAst (plain text)
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "� Cool!",
-              "type": "text"
-            }
-          ]
-        }
-      ],
-      "item": [ /* TextAst */ ]
-    }
-  ]
-}
-```
-
-**Note**: All response, reaction, and feedback fields become TextAst, whether they contain formatting or not.
-
----
-
-#### Example 3.2: `[.bot-action-send]` - Same as `[.bot-action-response]`
-
-Uses the same `CardSetConfigKey.botActionResponses` configuration.
-
----
-
-#### Example 3.3: `[.bot-action-send-payment]` - Same as `[.bot-action-response]`
-
-Uses the same `CardSetConfigKey.botActionResponses` configuration.
-
----
-
-#### Example 3.4: `[.bot-action-show-image]` - Same as `[.bot-action-response]`
-
-Uses the same `CardSetConfigKey.botActionResponses` configuration.
-
----
-
-### CardSetConfigKey.matchPairs - Match Bits
-
-#### Example 4.1: `[.match]` - Pair Keys and Values
-
-#### Bitmark
-```bitmark
-[.match]
-[@id:213782]
-[!Ordnen Sie die Bedürfnisse zu.]
-
-A. Grundbedürfnisse
-B. Sicherheitsbedürfnisse
-===
-[#Aussage]
-==
-[#Bedürfnis]
-===
-Herr De Weck kauft Milch und Brot im Supermarkt.
-==
-A
-===
-Marcel Rossi geht samstags in sein Stammlokal.
-==
-C
-===
-```
-
-#### Current JSON (Plain Strings in values) ⚠️
-```json
-{
-  "type": "match",
-  "body": [ /* TextAst - correctly formatted */ ],
-  "heading": {
-    "forKeys": "Aussage",
-    "forValues": "Bedürfnis"
-  },
-  "pairs": [
-    {
-      "key": "Herr De Weck kauft Milch und Brot im Supermarkt.",  // ⚠️ PLAIN STRING
-      "values": ["A"],                                            // ⚠️ PLAIN STRING ARRAY
-      "item": [],
-      "hint": [],
-      "instruction": []
-    },
-    {
-      "key": "Marcel Rossi geht samstags in sein Stammlokal.",    // ⚠️ PLAIN STRING
-      "values": ["C"],                                            // ⚠️ PLAIN STRING ARRAY
-      "item": [],
-      "hint": [],
-      "instruction": []
-    }
-  ]
-}
-```
-
-#### Target JSON (Always TextAst) ✅
-```json
-{
-  "type": "match",
-  "body": [ /* TextAst - already correct */ ],
-  "heading": {
-    "forKeys": "Aussage",
-    "forValues": "Bedürfnis"
-  },
-  "pairs": [
-    {
-      "key": [  // ✅ TextAst with italic formatting
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Marcel Rossi geht ",
-              "type": "text"
-            },
-            {
-              "marks": [{"type": "italic"}],
-              "text": "samstags",
-              "type": "text"
-            },
-            {
-              "text": " in sein Stammlokal.",
-              "type": "text"
-            }
-          ]
-        }
-      ],
-      "values": [
-        [  // ✅ TextAst with bold formatting
-          {
-            "type": "paragraph",
-            "content": [
-              {
-                "marks": [{"type": "bold"}],
-                "text": "C",
-                "type": "text"
-              }
-            ]
-          }
-        ]
-      ],
-      "item": [],
-      "hint": [],
-      "instruction": []
-    }
-  ]
-}
-```
-
-**Note**: Plain text keys/values (e.g., "Herr De Weck kauft Milch...", "A") also become TextAst with the same structure (without marks).
-
----
-
-#### Example 4.2: `[.match-all]` - Same as `[.match]`
-
-Uses the same `CardSetConfigKey.matchPairs` configuration.
-
----
-
-#### Example 4.3: `[.match-reverse]` - Same as `[.match]`
-
-Uses the same `CardSetConfigKey.matchPairs` configuration.
-
----
-
-#### Example 4.4: `[.match-all-reverse]` - Same as `[.match]`
-
-Uses the same `CardSetConfigKey.matchPairs` configuration.
-
----
-
-#### Example 4.5: `[.match-solution-grouped]` - Same as `[.match]`
-
-Uses the same `CardSetConfigKey.matchPairs` configuration.
-
----
-
-### CardSetConfigKey.matchAudioPairs - Match Audio Bits
-
-#### Example 5.1: `[.match-audio]` - Pair Keys and Values (Same Issue)
-
-Uses similar structure to `[.match]` but with audio resources. The plain string issue for `key` and `values` properties is identical.
-
-**Bitmark Example:**
-```bitmark
-[.match-audio]
-===
-[#Song]
-==
-[#Artist]
-===
-[&audio:https://example.com/song1.mp3]
-==
-Artist Name
-===
-```
-
-**Current JSON:** `key` and `values` arrays contain plain strings
-
-**Target JSON:** `key` and `values` arrays always contain `TextAst` (even for plain text)
-
----
-
-### CardSetConfigKey.matchImagePairs - Match Picture Bits
-
-#### Example 6.1: `[.match-picture]` - Pair Keys and Values (Same Issue)
-
-Uses similar structure to `[.match]` but with image resources. The plain string issue for `key` and `values` properties is identical.
-
-**Bitmark Example:**
-```bitmark
-[.match-picture]
-===
-[#Animal]
-==
-[#Name]
-===
-[&image:https://example.com/cat.jpg]
-==
-Cat
-===
-```
-
-**Current JSON:** `key` and `values` arrays contain plain strings
-
-**Target JSON:** `key` and `values` arrays always contain `TextAst` (even for plain text)
-
----
-
-### CardSetConfigKey.matchMatrix - Match Matrix Bits
-
-#### Example 7.1: `[.match-matrix]` - Matrix Cell Keys and Values
-
-#### Bitmark
-```bitmark
-[.match-matrix]
-[@id:287966]
-[!Bring the german verbs into the correct tense.]
-===
-[#Verb]
-==
-[#Future, 1st Person, Singular]
-==
-[#Past, 3rd Person, Plural]
-===
-gehen
-==
-ich werde gehen
-==
-sie gingen
-===
-sprechen
-==
-ich werde **sprechen**
-==
-sie sprachen
-===
-```
-
-#### Current JSON (Plain Strings in Matrix) ⚠️
-```json
-{
-  "type": "match-matrix",
-  "instruction": [ /* TextAst - correctly formatted */ ],
-  "heading": {
-    "forKeys": "Verb",
-    "forValues": ["Future, 1st Person, Singular", "Past, 3rd Person, Plural"]
-  },
-  "matrix": [
-    {
-      "key": "gehen",  // ⚠️ PLAIN STRING
-      "cells": [
-        {
-          "values": ["ich werde gehen"],  // ⚠️ PLAIN STRING ARRAY
-          "item": []
-        },
-        {
-          "values": ["sie gingen"],  // ⚠️ PLAIN STRING ARRAY
-          "item": []
-        }
-      ]
-    },
-    {
-      "key": "sprechen",  // ⚠️ PLAIN STRING
-      "cells": [
-        {
-          "values": ["ich werde **sprechen**"],  // ⚠️ PLAIN STRING (no bold formatting)
-          "item": []
-        },
-        {
-          "values": ["sie sprachen"],  // ⚠️ PLAIN STRING
-          "item": []
-        }
-      ]
-    }
-  ]
-}
-```
-
-#### Target JSON (Always TextAst in Matrix) ✅
-```json
-{
-  "type": "match-matrix",
-  "instruction": [ /* TextAst - already correct */ ],
-  "heading": {
-    "forKeys": "Verb",
-    "forValues": ["Future, 1st Person, Singular", "Past, 3rd Person, Plural"]
-  },
-  "matrix": [
-    {
-      "key": [  // ✅ TextAst (plain text)
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "sprechen",
-              "type": "text"
-            }
-          ]
-        }
-      ],
-      "cells": [
-        {
-          "values": [
-            [  // ✅ TextAst with bold formatting
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "text": "ich werde ",
-                    "type": "text"
-                  },
-                  {
-                    "marks": [{"type": "bold"}],
-                    "text": "sprechen",
-                    "type": "text"
-                  }
-                ]
-              }
-            ]
-          ],
-          "item": []
-        }
-      ]
-    }
-  ]
-}
-```
-
-**Note**: All keys and values become TextAst, whether they contain formatting or not (e.g., "gehen", "ich werde gehen", "sie gingen").
-
----
-
 ### CardSetConfigKey.statements - True/False Bits
 
-#### Example 8.1: `[.true-false]` - Statement Text
+#### Example 3.1: `[.true-false]` - Statement Text
 
 #### Bitmark
 ```bitmark
@@ -1057,241 +535,11 @@ sie sprachen
 
 ---
 
-#### Example 8.2: `[.true-false-1]` - Same as `[.true-false]`
-
-Uses the same `CardSetConfigKey.statements` configuration.
-
----
-
-### CardSetConfigKey.quiz - Multiple Choice Bits
-
-#### Example 9.1: `[.multiple-choice]` - Choice Text
-
-#### Bitmark
-```bitmark
-[.multiple-choice]
-[@id:187003]
-===
-[!1. Were you invited to an interview?]
-[-no]
-[-rather **no**]
-[-rather yes]
-[+yes]
-===
-```
-
-#### Current JSON (Plain Strings) ⚠️
-```json
-{
-  "type": "multiple-choice",
-  "quizzes": [
-    {
-      "instruction": [ /* TextAst - correctly formatted */ ],
-      "choices": [
-        {
-          "choice": "no",  // ⚠️ PLAIN STRING
-          "isCorrect": false
-        },
-        {
-          "choice": "rather **no**",  // ⚠️ PLAIN STRING (no bold formatting)
-          "isCorrect": false
-        },
-        {
-          "choice": "rather yes",  // ⚠️ PLAIN STRING
-          "isCorrect": false
-        },
-        {
-          "choice": "yes",  // ⚠️ PLAIN STRING
-          "isCorrect": true
-        }
-      ]
-    }
-  ]
-}
-```
-
-#### Target JSON (Always TextAst) ✅
-```json
-{
-  "type": "multiple-choice",
-  "quizzes": [
-    {
-      "instruction": [ /* TextAst - already correct */ ],
-      "choices": [
-        {
-          "choice": [  // ✅ TextAst with bold formatting
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "rather ",
-                  "type": "text"
-                },
-                {
-                  "marks": [{"type": "bold"}],
-                  "text": "no",
-                  "type": "text"
-                }
-              ]
-            }
-          ],
-          "isCorrect": false
-        }
-      ]
-    }
-  ]
-}
-```
-
-**Note**: Plain text choices (e.g., "no", "rather yes", "yes") also become TextAst with the same structure (without marks).
-
----
-
-#### Example 9.2: `[.multiple-choice-text]` - Same as `[.multiple-choice]`
-
-Uses the same `CardSetConfigKey.quiz` configuration.
-
----
-
-#### Example 9.3: `[.multiple-response]` - Same as `[.multiple-choice]`
-
-Uses the same `CardSetConfigKey.quiz` configuration.
-
----
-
-#### Example 9.4: `[.multiple-response-text]` - Same as `[.multiple-choice]`
-
-Uses the same `CardSetConfigKey.quiz` configuration.
-
----
-
-### CardSetConfigKey.feedback - Feedback Bits
-
-#### Example 10.1: `[.feedback]` - Choice and Reason Text
-
-#### Bitmark
-```bitmark
-[.feedback]
-[@id:67915]
-[@reasonableNumOfChars:100]
-====
-[#Question]
---
-[#Reason]
-====
-[!I PREFER …]
-[+ Beer]
-[+ Wine]
---
-[!Why?]
-Please answer with **keywords**
-====
-```
-
-#### Current JSON (Mixed - Some Plain Strings) ⚠️
-```json
-{
-  "type": "feedback",
-  "heading": {
-    "forKeys": "Question",
-    "forValues": "Reason"
-  },
-  "feedbacks": [
-    {
-      "instruction": [ /* TextAst - correctly formatted */ ],
-      "choices": [
-        {
-          "choice": "Beer",  // ⚠️ PLAIN STRING
-          "requireReason": true
-        },
-        {
-          "choice": "Wine",  // ⚠️ PLAIN STRING
-          "requireReason": true
-        }
-      ],
-      "reason": {
-        "text": "Please answer with **keywords**",  // ⚠️ PLAIN STRING (no bold formatting)
-        "reasonableNumOfChars": 100,
-        "instruction": [ /* TextAst - correctly formatted */ ]
-      }
-    }
-  ]
-}
-```
-
-#### Target JSON (Always TextAst) ✅
-```json
-{
-  "type": "feedback",
-  "heading": {
-    "forKeys": "Question",
-    "forValues": "Reason"
-  },
-  "feedbacks": [
-    {
-      "instruction": [ /* TextAst - already correct */ ],
-      "choices": [
-        {
-          "choice": [  // ✅ TextAst (plain text)
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "Beer",
-                  "type": "text"
-                }
-              ]
-            }
-          ],
-          "requireReason": true
-        }
-      ],
-      "reason": {
-        "text": [  // ✅ TextAst with bold formatting
-          {
-            "type": "paragraph",
-            "content": [
-              {
-                "text": "Please answer with ",
-                "type": "text"
-              },
-              {
-                "marks": [{"type": "bold"}],
-                "text": "keywords",
-                "type": "text"
-              }
-            ]
-          }
-        ],
-        "reasonableNumOfChars": 100,
-        "instruction": [ /* TextAst - already correct */ ]
-      }
-    }
-  ]
-}
-```
-
-**Note**: All choices become TextAst, whether they contain formatting or not (e.g., "Beer", "Wine").
-
----
-
-#### Example 10.2: `[.learning-documentation-feedback]` - Same as `[.feedback]`
-
-Uses the same `CardSetConfigKey.feedback` configuration.
-
----
-
-#### Example 10.3: `[.hand-in-feedback-expert]` - Same as `[.feedback]`
-
-Uses the same `CardSetConfigKey.feedback` configuration.
-
----
-
 ### CardSetConfigKey.ingredients - Cooking Ingredient Bits
 
-#### Example 11.1: `[.cooking-ingredient]` - Ingredient Text
+#### Example 4.1: `[.cooking-ingredient]` - Ingredient Text
 
-**Bitmark Example:**
+#### Bitmark
 ```bitmark
 [.cooking-ingredient]
 ===
@@ -1304,11 +552,50 @@ Uses the same `CardSetConfigKey.feedback` configuration.
 ===
 ```
 
-**Current JSON:** The `ingredient` field contains a plain string from `cardBodyStr`
+#### Current JSON (Plain String) ⚠️
+```json
+{
+  "type": "cooking-ingredient",
+  "ingredients": [
+    {
+      "ingredient": "Flour",  // ⚠️ PLAIN STRING
+      "quantity": [/* select body */],
+      "unit": "g"
+    },
+    {
+      "ingredient": "Sugar",  // ⚠️ PLAIN STRING
+      "quantity": [/* select body */],
+      "unit": "g"
+    }
+  ]
+}
+```
 
-**Target JSON:** The `ingredient` field always contains `TextAst` (even for plain text) from `cardBody.body`
+#### Target JSON (Always TextAst) ✅
+```json
+{
+  "type": "cooking-ingredient",
+  "ingredients": [
+    {
+      "ingredient": [  // ✅ TextAst (plain text or with formatting)
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Flour",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "quantity": [/* select body */],
+      "unit": "g"
+    }
+  ]
+}
+```
 
-**Note**: This is partially mixed because the ingredient parsing also involves `select` body bits for quantity selection. The main issue is the ingredient name text itself.
+**Note**: Ingredient names become TextAst, enabling potential formatting like **Flour** or _Sugar_ if needed.
 
 ---
 
@@ -1320,17 +607,10 @@ Uses the same `CardSetConfigKey.feedback` configuration.
 |--------------|---------------|-------------------------------|
 | **questions** | `[.interview]`<br>`[.interview-instruction-grouped]`<br>`[.bot-interview]` | `QuestionJson.question` |
 | **elements** | `[.sequence]`<br>`[.sequence-content]` | `CardNode.elements[]` |
-| **botActionResponses** | `[.bot-action-send]`<br>`[.bot-action-send-payment]`<br>`[.bot-action-response]`<br>`[.bot-action-show-image]` | `BotResponseJson.response`<br>`BotResponseJson.reaction`<br>`BotResponseJson.feedback` |
-| **matchPairs** | `[.match]`<br>`[.match-all]`<br>`[.match-reverse]`<br>`[.match-all-reverse]`<br>`[.match-solution-grouped]` | `PairJson.key`<br>`PairJson.values[]` |
-| **matchAudioPairs** | `[.match-audio]` | `PairJson.key`<br>`PairJson.values[]` |
-| **matchImagePairs** | `[.match-picture]` | `PairJson.key`<br>`PairJson.values[]` |
-| **matchMatrix** | `[.match-matrix]` | `MatrixCellJson.key`<br>`MatrixCellJson.values[]` |
 | **statements** | `[.true-false]`<br>`[.true-false-1]` | `StatementJson.statement` |
-| **quiz** | `[.multiple-choice]`<br>`[.multiple-choice-text]`<br>`[.multiple-response]`<br>`[.multiple-response-text]` | `ChoiceJson.choice` |
-| **feedback** | `[.feedback]`<br>`[.learning-documentation-feedback]`<br>`[.hand-in-feedback-expert]` | `FeedbackChoiceJson.choice`<br>`FeedbackReasonJson.text` |
 | **ingredients** | `[.cooking-ingredient]` | `IngredientJson.ingredient` |
 
-**Total Affected Bits: 28 bit types**
+**Total Affected Bits: 8 bit types**
 
 ---
 
@@ -1339,14 +619,9 @@ Uses the same `CardSetConfigKey.feedback` configuration.
 | Property | Current Type | Target Type | Notes |
 |----------|--------------|-------------|-------|
 | `QuestionJson.question` | `string` | `TextAst` | **Always TextAst** - enables **bold**, _italic_, etc. in questions |
-| `BotResponseJson.response` | `string` | `TextAst` | **Always TextAst** - enables formatting in responses |
-| `BotResponseJson.reaction` | `string` | `TextAst` | **Always TextAst** - enables formatting in reactions |
-| `BotResponseJson.feedback` | `string` | `TextAst` | **Always TextAst** - enables formatting in feedback |
+| `StatementJson.statement` | `string` | `TextAst` | **Always TextAst** - enables formatting in statements |
+| `IngredientJson.ingredient` | `string` | `TextAst` | **Always TextAst** - enables formatting in ingredient names |
 | `CardNode.elements` | `string[]` | `TextAst[]` | **Always TextAst array** - enables formatting in sequence elements |
-| `PairJson.key` | `string` | `TextAst` | **Always TextAst** - enables formatting in match pair keys |
-| `PairJson.values` | `string[]` | `TextAst[]` | **Always TextAst array** - enables formatting in match pair values |
-| `MatrixCellJson.key` | `string` | `TextAst` | **Always TextAst** - enables formatting in matrix cell keys |
-| `MatrixCellJson.values` | `string[]` | `TextAst[]` | **Always TextAst array** - enables formatting in matrix cell values |
 
 **Important Notes**:
 - **Bitmark → JSON**: Parser **always** generates `TextAst`, even for plain text without formatting
