@@ -137,8 +137,8 @@
     "Richard Sewell (https://github.com/six5536)"
   ],
   "dependencies": {
-    "@types/fs-extra": "^11.0.4",
     "@ncoderz/superenum": "^0.2.5",
+    "@types/fs-extra": "^11.0.4",
     "fs-extra": "^11.3.0"
   },
   "devDependencies": {

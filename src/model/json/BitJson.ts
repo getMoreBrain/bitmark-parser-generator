@@ -258,6 +258,7 @@ export interface BitJson {
   pairs: PairJson[];
   matrix: MatrixJson[];
   table: TableJson;
+  tableExtended: TableExtendedJson;
   // DEPRECATED - REMOVE IN THE FUTURE
   // captionDefinitionList: CaptionDefinitionListJson;
   choices: ChoiceJson[];
@@ -486,8 +487,11 @@ export interface PronunciationTableJson {
 }
 
 export interface TableJson {
-  columns?: JsonText[];
-  data?: JsonText[][];
+  columns: JsonText[];
+  data: JsonText[][];
+}
+
+export interface TableExtendedJson {
   head?: TableSectionJson;
   body?: TableSectionJson;
   foot?: TableSectionJson;

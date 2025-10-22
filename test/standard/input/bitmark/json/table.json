@@ -153,6 +153,819 @@
       "type": "table",
       "format": "bitmark++",
       "bitLevel": 1,
+      "caption": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sample Quarterly Summary",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "columns": [
+          [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Region",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Area",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Q1",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Total",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ]
+        ],
+        "data": [
+          [
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Jan",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Feb",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Mar",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "West",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Coastal",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "10",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "12",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "11",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "33",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Inland",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "8",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "9",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "7",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "24",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "North",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "(all)",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "14",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "13",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "12",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "39",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "South",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "(all)",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "6",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "7",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "8",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "21",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Grand total",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ],
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "117",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Note: values are example numbers.",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          ]
+        ]
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": true,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "4.14.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0",
+      "warnings": [
+        {
+          "message": "[@tableRowSpan] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableRowSpan:2]",
+          "location": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 62
+            },
+            "end": {
+              "line": 5,
+              "column": 18,
+              "offset": 79
+            }
+          }
+        },
+        {
+          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableScope:col]",
+          "location": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 80
+            },
+            "end": {
+              "line": 6,
+              "column": 18,
+              "offset": 97
+            }
+          }
+        },
+        {
+          "message": "[@tableRowSpan] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableRowSpan:2]",
+          "location": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 108
+            },
+            "end": {
+              "line": 9,
+              "column": 18,
+              "offset": 125
+            }
+          }
+        },
+        {
+          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableScope:col]",
+          "location": {
+            "start": {
+              "line": 10,
+              "column": 1,
+              "offset": 126
+            },
+            "end": {
+              "line": 10,
+              "column": 18,
+              "offset": 143
+            }
+          }
+        },
+        {
+          "message": "[@tableColSpan] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableColSpan:3]",
+          "location": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 152
+            },
+            "end": {
+              "line": 13,
+              "column": 18,
+              "offset": 169
+            }
+          }
+        },
+        {
+          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableScope:colgroup]",
+          "location": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 170
+            },
+            "end": {
+              "line": 14,
+              "column": 23,
+              "offset": 192
+            }
+          }
+        },
+        {
+          "message": "[@tableRowSpan] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableRowSpan:2]",
+          "location": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 199
+            },
+            "end": {
+              "line": 17,
+              "column": 18,
+              "offset": 216
+            }
+          }
+        },
+        {
+          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableScope:col]",
+          "location": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 217
+            },
+            "end": {
+              "line": 18,
+              "column": 18,
+              "offset": 234
+            }
+          }
+        },
+        {
+          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableScope:col]",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 258
+            },
+            "end": {
+              "line": 22,
+              "column": 18,
+              "offset": 275
+            }
+          }
+        },
+        {
+          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableScope:col]",
+          "location": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 283
+            },
+            "end": {
+              "line": 25,
+              "column": 18,
+              "offset": 300
+            }
+          }
+        },
+        {
+          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableScope:col]",
+          "location": {
+            "start": {
+              "line": 28,
+              "column": 1,
+              "offset": 308
+            },
+            "end": {
+              "line": 28,
+              "column": 18,
+              "offset": 325
+            }
+          }
+        },
+        {
+          "message": "[@tableCellType] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableCellType:th]",
+          "location": {
+            "start": {
+              "line": 32,
+              "column": 1,
+              "offset": 336
+            },
+            "end": {
+              "line": 32,
+              "column": 20,
+              "offset": 355
+            }
+          }
+        },
+        {
+          "message": "[@tableRowSpan] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableRowSpan:2]",
+          "location": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 356
+            },
+            "end": {
+              "line": 33,
+              "column": 18,
+              "offset": 373
+            }
+          }
+        },
+        {
+          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableScope:row]",
+          "location": {
+            "start": {
+              "line": 34,
+              "column": 1,
+              "offset": 374
+            },
+            "end": {
+              "line": 34,
+              "column": 18,
+              "offset": 391
+            }
+          }
+        },
+        {
+          "message": "[@tableCellType] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableCellType:th]",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 472
+            },
+            "end": {
+              "line": 59,
+              "column": 20,
+              "offset": 491
+            }
+          }
+        },
+        {
+          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableScope:row]",
+          "location": {
+            "start": {
+              "line": 60,
+              "column": 1,
+              "offset": 492
+            },
+            "end": {
+              "line": 60,
+              "column": 18,
+              "offset": 509
+            }
+          }
+        },
+        {
+          "message": "[@tableCellType] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableCellType:th]",
+          "location": {
+            "start": {
+              "line": 74,
+              "column": 1,
+              "offset": 555
+            },
+            "end": {
+              "line": 74,
+              "column": 20,
+              "offset": 574
+            }
+          }
+        },
+        {
+          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableScope:row]",
+          "location": {
+            "start": {
+              "line": 75,
+              "column": 1,
+              "offset": 575
+            },
+            "end": {
+              "line": 75,
+              "column": 18,
+              "offset": 592
+            }
+          }
+        },
+        {
+          "message": "[@tableCellType] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableCellType:th]",
+          "location": {
+            "start": {
+              "line": 89,
+              "column": 1,
+              "offset": 646
+            },
+            "end": {
+              "line": 89,
+              "column": 20,
+              "offset": 665
+            }
+          }
+        },
+        {
+          "message": "[@tableColSpan] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableColSpan:5]",
+          "location": {
+            "start": {
+              "line": 90,
+              "column": 1,
+              "offset": 666
+            },
+            "end": {
+              "line": 90,
+              "column": 18,
+              "offset": 683
+            }
+          }
+        },
+        {
+          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableScope:row]",
+          "location": {
+            "start": {
+              "line": 91,
+              "column": 1,
+              "offset": 684
+            },
+            "end": {
+              "line": 91,
+              "column": 18,
+              "offset": 701
+            }
+          }
+        },
+        {
+          "message": "[@tableColSpan] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableColSpan:6]",
+          "location": {
+            "start": {
+              "line": 97,
+              "column": 1,
+              "offset": 738
+            },
+            "end": {
+              "line": 97,
+              "column": 18,
+              "offset": 755
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.table]\n[@caption:Sample Quarterly Summary]\n\n==== thead ====\n[@tableRowSpan:2]\n[@tableScope:col]\nRegion\n--\n[@tableRowSpan:2]\n[@tableScope:col]\nArea\n--\n[@tableColSpan:3]\n[@tableScope:colgroup]\nQ1\n--\n[@tableRowSpan:2]\n[@tableScope:col]\nTotal\n\n==== thead ====\n[@tableScope:col]\nJan\n--\n[@tableScope:col]\nFeb\n--\n[@tableScope:col]\nMar\n\n====\n[@tableCellType:th]\n[@tableRowSpan:2]\n[@tableScope:row]\nWest\n--\nCoastal\n--\n10\n--\n12\n--\n11\n--\n33\n\n====\nInland\n--\n8\n--\n9\n--\n7\n--\n24\n\n====\n[@tableCellType:th]\n[@tableScope:row]\nNorth\n--\n(all)\n--\n14\n--\n13\n--\n12\n--\n39\n\n====\n[@tableCellType:th]\n[@tableScope:row]\nSouth\n--\n(all)\n--\n6\n--\n7\n--\n8\n--\n21\n\n==== tfoot ====\n[@tableCellType:th]\n[@tableColSpan:5]\n[@tableScope:row]\nGrand total\n--\n117\n\n==== tfoot ====\n[@tableColSpan:6]\nNote: values are example numbers.\n\n===="
+  },
+  {
+    "bit": {
+      "type": "table",
+      "format": "bitmark++",
+      "bitLevel": 1,
       "tableSearch": false,
       "tableSort": false,
       "caption": [

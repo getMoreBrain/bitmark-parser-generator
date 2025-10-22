@@ -25,6 +25,7 @@ import {
   type ResponseJson,
   type ServingsJson,
   type StatementJson,
+  type TableExtendedJson,
   type TableJson,
   type TechnicalTermJson,
 } from '../json/BitJson.ts';
@@ -351,7 +352,7 @@ export interface CardNode {
   pairs?: PairJson[];
   matrix?: MatrixJson[];
   pronunciationTable?: PronunciationTableJson;
-  table?: TableJson;
+  table?: TableJson | TableExtendedJson;
   botResponses?: BotResponseJson[];
   cardBits?: Bit[];
   ingredients?: IngredientJson[];

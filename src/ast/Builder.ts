@@ -46,6 +46,7 @@ import {
   type ServingsJson,
   type StatementJson,
   type TableCellJson,
+  type TableExtendedJson,
   type TableJson,
   type TableRowJson,
   type TableSectionJson,
@@ -228,10 +229,6 @@ class Builder extends BaseBuilder {
       tableAutoWidth?: boolean;
       tableResizableColumns?: boolean;
       tableColumnMinWidth?: number;
-      tableCellType?: string;
-      tableRowSpan?: number;
-      tableColSpan?: number;
-      tableScope?: string;
       quizCountItems?: boolean;
       quizStrikethroughSolutions?: boolean;
       codeLineNumbers?: boolean;
@@ -368,7 +365,7 @@ class Builder extends BaseBuilder {
       pairs?: Partial<PairJson>[];
       matrix?: Partial<MatrixJson>[];
       pronunciationTable?: Partial<PronunciationTableJson>;
-      table?: Partial<TableJson>;
+      table?: Partial<TableJson | TableExtendedJson>;
       choices?: Partial<ChoiceJson>[];
       questions?: Partial<QuestionJson>[];
       botResponses?: Partial<BotResponseJson>[];
@@ -384,6 +381,9 @@ class Builder extends BaseBuilder {
     },
     options?: BuildBitOptions,
   ): Bit | undefined {
+    // Copy all data to a new object to avoid modifying the original data
+    data = structuredClone(data);
+
     const bitType = data.bitType;
     const bitConfig = Config.getBitConfig(bitType);
 
@@ -805,30 +805,6 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_tableColumnMinWidth,
         data.tableColumnMinWidth,
-        options,
-      ),
-      tableCellType: this.toAstProperty(
-        bitType,
-        ConfigKey.property_tableCellType,
-        data.tableCellType,
-        options,
-      ),
-      tableRowSpan: this.toAstProperty(
-        bitType,
-        ConfigKey.property_tableRowSpan,
-        data.tableRowSpan,
-        options,
-      ),
-      tableColSpan: this.toAstProperty(
-        bitType,
-        ConfigKey.property_tableColSpan,
-        data.tableColSpan,
-        options,
-      ),
-      tableScope: this.toAstProperty(
-        bitType,
-        ConfigKey.property_tableScope,
-        data.tableScope,
         options,
       ),
       quizCountItems: this.toAstProperty(
@@ -2128,33 +2104,35 @@ class Builder extends BaseBuilder {
   }
 
   /**
-   * Build table node
+   * Build table / table extended node
    *
    * @param data - data for the node
    * @returns
    */
   protected buildTable(
     context: BuildContext,
-    dataIn: Partial<TableJson> | undefined,
-  ): TableJson | undefined {
+    dataIn: Partial<TableJson | TableExtendedJson> | undefined,
+  ): TableJson | TableExtendedJson | undefined {
     if (!dataIn) return undefined;
 
-    const node: TableJson = {};
+    const node = normalizeTableFormat(context.bitType, dataIn as TableJson | TableExtendedJson);
+    const nodeTable = node as TableJson;
+    const nodeTableExtended = node as TableExtendedJson;
 
-    const normalized = normalizeTableFormat(dataIn as TableJson);
-
-    if (Array.isArray(dataIn.columns) && dataIn.columns.length > 0) {
-      node.columns = dataIn.columns.map((col) =>
+    // Parse standard table properties
+    if (Array.isArray(nodeTable.columns) && nodeTable.columns.length > 0) {
+      nodeTable.columns = nodeTable.columns.map((col) =>
         this.handleJsonText(context, TextLocation.tag, col),
       );
     }
 
-    if (Array.isArray(dataIn.data) && dataIn.data.length > 0) {
-      node.data = dataIn.data.map((row) =>
+    if (Array.isArray(nodeTable.data) && nodeTable.data.length > 0) {
+      nodeTable.data = nodeTable.data.map((row) =>
         (row || []).map((cell) => this.handleJsonText(context, TextLocation.tag, cell)),
       );
     }
 
+    // Parse extended table properties
     const buildSection = (section: TableSectionJson | undefined): TableSectionJson | undefined => {
       if (!section || !Array.isArray(section.rows)) return undefined;
 
@@ -2182,14 +2160,14 @@ class Builder extends BaseBuilder {
       };
     };
 
-    const head = buildSection(normalized.head);
-    if (head && head.rows?.length > 0) node.head = head;
+    const head = buildSection(nodeTableExtended.head);
+    if (head && head.rows?.length > 0) nodeTableExtended.head = head;
 
-    const body = buildSection(normalized.body);
-    if (body && body.rows?.length > 0) node.body = body;
+    const body = buildSection(nodeTableExtended.body);
+    if (body && body.rows?.length > 0) nodeTableExtended.body = body;
 
-    const foot = buildSection(normalized.foot);
-    if (foot && foot.rows?.length > 0) node.foot = foot;
+    const foot = buildSection(nodeTableExtended.foot);
+    if (foot && foot.rows?.length > 0) nodeTableExtended.foot = foot;
 
     // Remove Unset Optionals
     // ObjectUtils.removeUnwantedProperties(node, {
@@ -3325,7 +3303,7 @@ class Builder extends BaseBuilder {
       pairs?: Partial<PairJson>[];
       matrix?: Partial<MatrixJson>[];
       pronunciationTable?: Partial<PronunciationTableJson>;
-      table?: Partial<TableJson>;
+      table?: Partial<TableJson | TableExtendedJson>;
       botResponses?: Partial<BotResponseJson>[];
       ingredients?: Partial<IngredientJson>[];
       // DEPRECATED - TO BE REMOVED IN FUTURE
