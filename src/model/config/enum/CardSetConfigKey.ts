@@ -13,6 +13,7 @@ const CardSetConfigKey = superenum({
   matchImagePairs: 'matchImagePairs',
   matchMatrix: 'matchMatrix',
   table: 'table',
+  tableExtended: 'tableExtended',
   pronunciationTable: 'pronunciationTable',
   botActionResponses: 'botActionResponses',
   exampleBitList: 'exampleBitList',

@@ -211,7 +211,7 @@ CardSet_V2
   = value: (CardSetStart_V2 Cards_V2* CardSetEnd_V2) { return helper.handleCardSet(value[1].flat()); }
 
 CardSetStart_V2
-  = NL &("====" WNL) { helper.handleCardSetStart(); }
+  = (WNL / NL)+ &CardDividerLookahead_V2 { helper.handleCardSetStart(); }
 
 CardSetEnd_V2
   = (FooterDividerText? &WEOL) { helper.handleCardSetEnd(); }
@@ -220,7 +220,22 @@ Cards_V2
   = value: CardLineOrDivider_V2 { return helper.handleCards(value); }
 
 CardLineOrDivider_V2
-  = value: ("====" (WNL / WEOL) / "--" (WNL / WEOL) / "++" (WNL / WEOL) / CardLine_V2) { return helper.handleCardLineOrDivider(value, 2); }
+  = value: (CardDividerToken_V2 / CardSideDividerToken_V2 / CardVariantDividerToken_V2 / CardLine_V2) { return helper.handleCardLineOrDivider(value, 2); }
+
+CardDividerToken_V2
+  = "====" " " qualifier:Qualifier " " "====" (WNL / WEOL) { return ["====", qualifier]; }
+  / "====" (WNL / WEOL) { return ["===="]; }
+
+CardSideDividerToken_V2
+  = "--" " " qualifier:Qualifier " " "--" (WNL / WEOL) { return ["--", qualifier]; }
+  / "--" (WNL / WEOL) { return ["--"]; }
+
+CardVariantDividerToken_V2
+  = "++" " " qualifier:Qualifier " " "++" (WNL / WEOL) { return ["++", qualifier]; }
+  / "++" (WNL / WEOL) { return ["++"]; }
+
+CardDividerLookahead_V2
+  = "====" (" " Qualifier " " "====")? (WNL / WEOL)
 
 CardLine_V2
 //  = value: $(Line NL) { return helper.handleCardLine(value); }
@@ -231,7 +246,7 @@ CardSet_V1
   = value: (CardSetStart_V1 Cards_V1* CardSetEnd_V1) { return helper.handleCardSet(value[1].flat()); }
 
 CardSetStart_V1
-  = NL &("===" WNL) { helper.handleCardSetStart(); }
+  = (WNL / NL)+ &("===" WNL) { helper.handleCardSetStart(); }
 
 CardSetEnd_V1
   = (FooterDividerText? &WEOL) { helper.handleCardSetEnd(); }
@@ -244,6 +259,12 @@ CardLineOrDivider_V1
 
 CardLine_V1
  = !(FooterDividerText WEOL) value: $(Line NL / Char+ EOL) { return helper.handleCardLine(value); }
+
+Qualifier
+  = !("footer" / "text") value: QualifierName { return value; }
+
+QualifierName
+  = $([a-z] ([a-z0-9-])*)
 
 
 // // Legacy CardSet (NO AUTO CLOSE VERSION)

@@ -45,7 +45,11 @@ import {
   type ResponseJson,
   type ServingsJson,
   type StatementJson,
+  type TableCellJson,
+  type TableExtendedJson,
   type TableJson,
+  type TableRowJson,
+  type TableSectionJson,
   type TechnicalTermJson,
   type TextAndIconJson,
 } from '../model/json/BitJson.ts';
@@ -65,6 +69,7 @@ import {
 } from '../model/json/ResourceJson.ts';
 import { type ParserError } from '../model/parser/ParserError.ts';
 import { type ParserInfo } from '../model/parser/ParserInfo.ts';
+import { normalizeTableFormat } from '../parser/json/TableUtils.ts';
 import { ArrayUtils } from '../utils/ArrayUtils.ts';
 import { BitUtils } from '../utils/BitUtils.ts';
 import { BooleanUtils } from '../utils/BooleanUtils.ts';
@@ -286,6 +291,7 @@ class Builder extends BaseBuilder {
       maxTocChapterLevel?: number;
       sourceDocument?: string;
       internalPrintPdf?: string;
+      hasPrintRestriction?: boolean;
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
@@ -348,7 +354,7 @@ class Builder extends BaseBuilder {
       sampleSolution?: string;
       additionalSolutions?: string | string[];
       heading?: Partial<HeadingJson>;
-      elements?: string[];
+      elements?: JsonText[];
       flashcards?: Partial<FlashcardJson>[];
       definitions?: Partial<DefinitionListItemJson>[];
       legend?: Partial<DefinitionListItemJson>[];
@@ -359,7 +365,7 @@ class Builder extends BaseBuilder {
       pairs?: Partial<PairJson>[];
       matrix?: Partial<MatrixJson>[];
       pronunciationTable?: Partial<PronunciationTableJson>;
-      table?: Partial<TableJson>;
+      table?: Partial<TableJson | TableExtendedJson>;
       choices?: Partial<ChoiceJson>[];
       questions?: Partial<QuestionJson>[];
       botResponses?: Partial<BotResponseJson>[];
@@ -375,6 +381,9 @@ class Builder extends BaseBuilder {
     },
     options?: BuildBitOptions,
   ): Bit | undefined {
+    // Copy all data to a new object to avoid modifying the original data
+    data = structuredClone(data);
+
     const bitType = data.bitType;
     const bitConfig = Config.getBitConfig(bitType);
 
@@ -1057,6 +1066,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_internalPrintPdf,
         data.internalPrintPdf,
+        options,
+      ),
+      hasPrintRestriction: this.toAstProperty(
+        bitType,
+        ConfigKey.property_hasPrintRestriction,
+        data.hasPrintRestriction,
         options,
       ),
       tocResource: this.toAstProperty(
@@ -2089,26 +2104,70 @@ class Builder extends BaseBuilder {
   }
 
   /**
-   * Build table node
+   * Build table / table extended node
    *
    * @param data - data for the node
    * @returns
    */
   protected buildTable(
     context: BuildContext,
-    dataIn: Partial<TableJson> | undefined,
-  ): TableJson | undefined {
+    dataIn: Partial<TableJson | TableExtendedJson> | undefined,
+  ): TableJson | TableExtendedJson | undefined {
     if (!dataIn) return undefined;
 
-    // NOTE: Node order is important and is defined here
-    const node: TableJson = {
-      columns: (dataIn.columns || []).map((col) =>
+    const node = normalizeTableFormat(context.bitType, dataIn as TableJson | TableExtendedJson);
+    const nodeTable = node as TableJson;
+    const nodeTableExtended = node as TableExtendedJson;
+
+    // Parse standard table properties
+    if (Array.isArray(nodeTable.columns) && nodeTable.columns.length > 0) {
+      nodeTable.columns = nodeTable.columns.map((col) =>
         this.handleJsonText(context, TextLocation.tag, col),
-      ),
-      data: (dataIn.data || []).map((row) =>
+      );
+    }
+
+    if (Array.isArray(nodeTable.data) && nodeTable.data.length > 0) {
+      nodeTable.data = nodeTable.data.map((row) =>
         (row || []).map((cell) => this.handleJsonText(context, TextLocation.tag, cell)),
-      ),
+      );
+    }
+
+    // Parse extended table properties
+    const buildSection = (section: TableSectionJson | undefined): TableSectionJson | undefined => {
+      if (!section || !Array.isArray(section.rows)) return undefined;
+
+      const rows = section.rows.map((row: Partial<TableRowJson>) => {
+        const cells = (row.cells || []).map((cell: Partial<TableCellJson>) => {
+          const tableCell: TableCellJson = {
+            content: this.handleJsonText(context, TextLocation.tag, cell.content),
+          };
+
+          if (cell.title != null) tableCell.title = cell.title;
+          if (cell.rowspan != null) tableCell.rowspan = cell.rowspan;
+          if (cell.colspan != null) tableCell.colspan = cell.colspan;
+          if (cell.scope) tableCell.scope = cell.scope;
+
+          return tableCell;
+        });
+
+        return {
+          cells,
+        };
+      });
+
+      return {
+        rows,
+      };
     };
+
+    const head = buildSection(nodeTableExtended.head);
+    if (head && head.rows?.length > 0) nodeTableExtended.head = head;
+
+    const body = buildSection(nodeTableExtended.body);
+    if (body && body.rows?.length > 0) nodeTableExtended.body = body;
+
+    const foot = buildSection(nodeTableExtended.foot);
+    if (foot && foot.rows?.length > 0) nodeTableExtended.foot = foot;
 
     // Remove Unset Optionals
     // ObjectUtils.removeUnwantedProperties(node, {
@@ -2150,7 +2209,7 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: QuestionJson = {
-      question: data.question ?? '',
+      question: this.handleJsonText(context, TextLocation.body, data.question),
       partialAnswer: data.partialAnswer ?? '',
       sampleSolution: data.sampleSolution ?? '',
       additionalSolutions: (data.additionalSolutions ?? undefined) as string[],
@@ -2166,9 +2225,9 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      ignoreEmptyArrays: ['item', 'hint', 'instruction'],
+      ignoreEmptyArrays: ['question', 'item', 'hint', 'instruction'],
       ignoreUndefined: ['example'],
-      ignoreEmptyString: ['question', 'partialAnswer', 'sampleSolution'],
+      ignoreEmptyString: ['partialAnswer', 'sampleSolution'],
     });
 
     return node;
@@ -2917,7 +2976,7 @@ class Builder extends BaseBuilder {
 
     // NOTE: Node order is important and is defined here
     const node: StatementJson = {
-      statement: data.statement ?? '',
+      statement: this.handleJsonText(context, TextLocation.tag, data.statement),
       isCorrect: !!data.isCorrect,
       item: this.handleJsonText(context, TextLocation.tag, data.item),
       lead: this.handleJsonText(context, TextLocation.tag, data.lead),
@@ -2929,7 +2988,7 @@ class Builder extends BaseBuilder {
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
       ignoreAllFalse: true,
-      // ignoreAllEmptyArrays: true,
+      ignoreEmptyArrays: ['statement'],
       ignoreUndefined: ['example'],
     });
 
@@ -3233,7 +3292,7 @@ class Builder extends BaseBuilder {
       definitions?: Partial<DefinitionListItemJson>[];
       legend?: Partial<DefinitionListItemJson>[];
       questions?: Partial<QuestionJson>[];
-      elements?: string[];
+      elements?: JsonText[];
       statement?: Partial<StatementJson>;
       statements?: Partial<StatementJson>[];
       choices?: Partial<ChoiceJson>[];
@@ -3244,7 +3303,7 @@ class Builder extends BaseBuilder {
       pairs?: Partial<PairJson>[];
       matrix?: Partial<MatrixJson>[];
       pronunciationTable?: Partial<PronunciationTableJson>;
-      table?: Partial<TableJson>;
+      table?: Partial<TableJson | TableExtendedJson>;
       botResponses?: Partial<BotResponseJson>[];
       ingredients?: Partial<IngredientJson>[];
       // DEPRECATED - TO BE REMOVED IN FUTURE
@@ -3255,7 +3314,7 @@ class Builder extends BaseBuilder {
     const node: CardNode = {
       heading: this.buildHeading(context, data.heading),
       questions: this.buildQuestions(context, data.questions),
-      elements: data.elements,
+      elements: this.handleJsonText(context, TextLocation.body, data.elements),
       flashcards: this.buildFlashcards(context, data.flashcards),
       definitions: this.buildDefinitionList(context, data.definitions ?? data.legend),
       statement: this.buildStatement(context, data.statement),
@@ -3276,7 +3335,9 @@ class Builder extends BaseBuilder {
     };
 
     // Remove Unset Optionals
-    ObjectUtils.removeUnwantedProperties(node);
+    ObjectUtils.removeUnwantedProperties(node, {
+      ignoreEmptyObjects: ['table'],
+    });
 
     return Object.keys(node).length > 0 ? node : undefined;
   }

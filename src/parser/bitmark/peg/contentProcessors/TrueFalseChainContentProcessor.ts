@@ -192,7 +192,7 @@ function buildStatementsChoicesResponses(
 
         const statement: Partial<StatementJson> = {
           ...firstTrueFalse,
-          statement: firstTrueFalse.text,
+          statement: firstTrueFalse.textAst ?? [],
           ...tagsRest,
         };
         if (statement) statements.push(statement);

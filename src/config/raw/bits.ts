@@ -4501,6 +4501,12 @@ const BITS: _BitsConfig = {
     ],
     cardSet: CardSetConfigKey.table,
   },
+  [BitType.tableExtended]: {
+    since: '4.14.0',
+    baseBitType: BitType.table,
+    description: 'Extended table bit, used to create complex tables with all HTML table features',
+    cardSet: CardSetConfigKey.tableExtended,
+  },
   [BitType.tableAlt]: {
     since: '1.16.0',
     baseBitType: BitType.table,

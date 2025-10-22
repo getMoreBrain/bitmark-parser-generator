@@ -207,7 +207,7 @@ class JsonParser {
   }
 
   private processStatements(
-    statement?: string,
+    statement?: JsonText,
     isCorrect?: boolean,
     statements?: Partial<StatementJson>[],
     example?: ExampleJson,

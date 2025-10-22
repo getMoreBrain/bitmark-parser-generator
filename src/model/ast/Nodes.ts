@@ -25,6 +25,7 @@ import {
   type ResponseJson,
   type ServingsJson,
   type StatementJson,
+  type TableExtendedJson,
   type TableJson,
   type TechnicalTermJson,
 } from '../json/BitJson.ts';
@@ -156,6 +157,10 @@ export interface Bit {
   tableAutoWidth?: Property;
   tableResizableColumns?: Property;
   tableColumnMinWidth?: Property;
+  tableCellType?: Property;
+  tableRowSpan?: Property;
+  tableColSpan?: Property;
+  tableScope?: Property;
   quizCountItems?: Property;
   quizStrikethroughSolutions?: Property;
   codeLineNumbers?: Property;
@@ -219,6 +224,7 @@ export interface Bit {
   maxTocChapterLevel?: Property;
   sourceDocument?: Property;
   internalPrintPdf?: Property;
+  hasPrintRestriction?: Property;
   tocResource?: Property;
   tocContent?: Property;
   page?: Property;
@@ -346,7 +352,7 @@ export interface CardNode {
   pairs?: PairJson[];
   matrix?: MatrixJson[];
   pronunciationTable?: PronunciationTableJson;
-  table?: TableJson;
+  table?: TableJson | TableExtendedJson;
   botResponses?: BotResponseJson[];
   cardBits?: Bit[];
   ingredients?: IngredientJson[];

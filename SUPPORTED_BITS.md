@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 4.13.0
+Version: 4.14.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -566,6 +566,7 @@ survey-rating-display (since: 1.6.0)
 survey-rating-once (since: 1.6.0)
 table (since: 1.5.19)
 table-alt (since: 1.16.0)
+table-extended (since: 4.14.0)
 table-image (since: 1.5.15)
 table-image-alt (since: 1.16.0)
 take-picture (since: 1.3.0)

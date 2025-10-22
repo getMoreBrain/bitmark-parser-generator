@@ -685,6 +685,12 @@ const GROUPS: _GroupsConfig = {
         description: 'Url of the internal print PDF for the book',
         format: TagFormat.plainText,
       },
+      {
+        key: ConfigKey.property_hasPrintRestriction,
+        description: 'If true, the book has print restrictions',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
     ],
   },
   [ConfigKey.group_learningPathCommon]: {

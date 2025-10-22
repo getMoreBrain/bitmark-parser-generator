@@ -171,6 +171,7 @@ export interface BitJson {
   maxTocChapterLevel: number;
   sourceDocument: string;
   internalPrintPdf: string;
+  hasPrintRestriction: boolean;
   tocResource: string | string[];
   tocContent: string | string[];
   page: string;
@@ -244,7 +245,7 @@ export interface BitJson {
   additionalSolutions: string[];
   partialAnswer: string;
   elements: string[];
-  statement: string;
+  statement: JsonText;
   isCorrect: boolean;
   cards: FlashcardJson[];
   definitions: DefinitionListItemJson[];
@@ -257,6 +258,7 @@ export interface BitJson {
   pairs: PairJson[];
   matrix: MatrixJson[];
   table: TableJson;
+  tableExtended: TableExtendedJson;
   // DEPRECATED - REMOVE IN THE FUTURE
   // captionDefinitionList: CaptionDefinitionListJson;
   choices: ChoiceJson[];
@@ -336,7 +338,7 @@ export interface TextAndIconJson {
 }
 
 export interface StatementJson {
-  statement: string;
+  statement: JsonText;
   isCorrect: boolean;
   item: JsonText;
   lead: JsonText;
@@ -489,8 +491,30 @@ export interface TableJson {
   data: JsonText[][];
 }
 
+export interface TableExtendedJson {
+  head?: TableSectionJson;
+  body?: TableSectionJson;
+  foot?: TableSectionJson;
+}
+
+export interface TableSectionJson {
+  rows: TableRowJson[];
+}
+
+export interface TableRowJson {
+  cells: TableCellJson[];
+}
+
+export interface TableCellJson {
+  content: JsonText;
+  title?: boolean;
+  rowspan?: number;
+  colspan?: number;
+  scope?: 'row' | 'col' | 'rowgroup' | 'colgroup';
+}
+
 export interface QuestionJson {
-  question: string;
+  question: JsonText;
   partialAnswer: string;
   sampleSolution: string;
   additionalSolutions: string[];
