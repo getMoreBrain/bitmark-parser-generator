@@ -2434,11 +2434,14 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> elements -> elementsValue
 
-  protected enter_elementsValue(node: NodeInfo, _route: NodeInfo[]): void {
+  protected enter_elementsValue(node: NodeInfo, _route: NodeInfo[]): boolean {
     if (node.value) {
       this.writeNL();
       this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> body -> bodyValue -> gap -> solutions -> solution
@@ -2540,15 +2543,18 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> question
   // bitmarkAst -> bits -> bitsValue -> cardNode -> questions -> questionsValue -> question
 
-  protected enter_question(node: NodeInfo, route: NodeInfo[]): void {
+  protected enter_question(node: NodeInfo, route: NodeInfo[]): boolean {
     // Ignore responses that are not at the questionsValue level as they are handled elsewhere
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.questionsValue) return;
+    if (parent?.key !== NodeType.questionsValue) return true;
 
     if (node.value) {
       this.writeNL();
       this.writeTextOrValue(node.value, this.textFormat, TextLocation.body);
     }
+
+    // Stop traversal of this branch
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> flashcards -> flashcardsValue -> question
@@ -2620,6 +2626,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected leaf_zoomDisabled(node: NodeInfo, route: NodeInfo[]): void {
+    // if (this.isInlineImageTag(route)) return; // inline images render their own chain
+
     if (
       Config.isOfBitType(this.bitType, [
         BitType.imageSeparator,
