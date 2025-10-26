@@ -1869,5 +1869,108 @@
       ]
     },
     "bitmark": "[.interview:bitmark--]\n[@id:198267]\n[%Aufgabe 4][%Nutzungsänderung]\n\nDie Produktion AG wurde 2010 gegründet und hat zu diesem Zeitpunkt folgende zwei Liegenschaften erstellt:\n\n• Produktionsgebäude mit Lagerhalle, welches vollumfänglich für unternehmerische Tätigkeiten verwendet wird,\n• Verwaltungsgebäude, welches zu 50 % für die eigene Tätigkeit verwendet wird; die übrige Fläche – zwei Wohnungen – werden an Privatpersonen vermietet.\n\nDie Investitionen für die Liegenschaften beliefen sich 2010 auf folgende Werte inkl. 7,60 % MWST:\n\n• Produktionsgebäude                 CHF 4'842'000 (inkl. 7,60% MWST)\n• Verwaltungsgebäude inkl. Wohnungen CHF 5'380'000 (inkl. 7,60% MWST)\n• Landanteil für beide Gebäude       CHF 1'800'000\n\nIm Geschäftsjahr 2017 wurden infolge Wasserschadens das Verwaltungsgebäude saniert werden. Die Sanierungskosten haben sich auf 648'000 inkl. 8.0% MWST belaufen. Der Gebäudeversicherungswert hat zu diesem Zeitpunkt (vor Sanierung) CHF 6'000'000 betragen.\n\nNachdem die Gesellschaft in letzter Zeit massive Verluste erlitten hat, wurde vom Verwaltungsrat im Rahmen einer Sanierung beschlossen, die beiden Liegenschaften zu veräussern. Die Immo Invest AG ist bereit, die Grundstücke auf den 30. Juni 2021 wie folgt zu erwerben:\n\n• Produktionsgebäude: CHF 6'500'000 (inkl. Land CHF 1'000'000)\n• Verwaltungsgebäude: CHF 7'500'000 (inkl. Land CHF 1'400'000)\n\nDer öffentlich beurkundete Kaufvertrag wurde am 20. Juli 2021 unterzeichnet.\n\nZeigen Sie die mehrwertsteuerlichen Konsequenzen aus der Veräusserung der Grundstücke für jeder der drei folgenden Varianten auf:\n===\nVariante 1: Verkauf gemäss Art. 21 MWSTG\n===\nVariante 2: Verkauf mit Option gemäss Art. 22 MWSTG\n===\nVariante 3: Verkauf mittels Meldeverfahren gemäss Art. 38 MWSTG.\n==="
+  },
+  {
+    "bit": {
+      "type": "interview",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hello World!",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "alignment": "center",
+            "textAlign": "left",
+            "src": "https://docs.getmorebrain.com/20.png",
+            "alt": null,
+            "title": null,
+            "class": "center",
+            "zoomDisabled": true,
+            "width": 139
+          }
+        }
+      ],
+      "questions": [
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Card 1 with image",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            },
+            {
+              "type": "image",
+              "attrs": {
+                "alignment": "center",
+                "textAlign": "left",
+                "src": "https://docs.getmorebrain.com/20.png",
+                "alt": null,
+                "title": null,
+                "class": "center",
+                "zoomDisabled": true,
+                "width": 139
+              }
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Card 2",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "isExample": false,
+      "footer": []
+    },
+    "parser": {
+      "version": "4.14.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.interview]\nHello World!\n\n|image:https://docs.getmorebrain.com/20.png|width:139|\n\n====\nCard 1 with image\n|image:https://docs.getmorebrain.com/20.png|width:139|\n\n====\nCard 2"
   }
 ]
