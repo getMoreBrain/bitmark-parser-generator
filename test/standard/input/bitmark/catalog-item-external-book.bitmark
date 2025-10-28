@@ -1,0 +1,44 @@
+[.catalog-item-external-book]
+[@id:2001]
+[#JavaScript: The Definitive Guide]
+[##7th Edition - Comprehensive Reference]
+[@coverImage:https://example.com/images/js-definitive.jpg]
+[@customerProductShopLink:https://shop.example.com/books/javascript-definitive-7th]
+[@listPrice:$69.99]
+[@buttonCaption:Buy on Amazon]
+[@customerProductId:PROD-JS-DEF-7TH]
+The comprehensive reference guide to JavaScript, covering ES6+ features and modern development practices.
+
+
+[.catalog-item-external-book]
+[@id:2002]
+[#Clean Code]
+[@coverImage:https://example.com/images/clean-code.jpg]
+[@customerProductShopLink:https://shop.example.com/books/clean-code]
+[@listPrice:$44.99]
+[@customerProductId:PROD-CC-2024]
+A handbook of agile software craftsmanship.
+
+
+[.catalog-item-external-book]
+[@id:2003]
+[#Design Patterns]
+[##Elements of Reusable Object-Oriented Software]
+[@coverImage:https://example.com/images/design-patterns.jpg]
+[@customerProductShopLink:https://shop.example.com/books/design-patterns-classic]
+[@listPrice:$54.99]
+[@buttonCaption:View Details]
+[@customerProductId:PROD-DP-CLASSIC]
+The classic book on design patterns by the Gang of Four, essential reading for software engineers.
+
+
+[.catalog-item-external-book]
+[@id:2004]
+[#External Book Minimal]
+[@coverImage:https://example.com/images/external-minimal.jpg]
+[@customerProductShopLink:https://shop.example.com/books/minimal]
+[@listPrice:$29.99]
+[@buttonCaption:Buy Now]
+[@customerProductId:PROD-EXT-MIN-001]
+
+

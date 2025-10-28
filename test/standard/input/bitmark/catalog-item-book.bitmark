@@ -1,0 +1,44 @@
+[.catalog-item-book]
+[@id:1001]
+[#The Complete Guide to Modern Web Development]
+[##Master HTML, CSS, JavaScript, and React]
+[@coverImage:https://example.com/images/web-dev-book-cover.jpg]
+[@content2Buy:book-web-dev-2024]
+[@listPrice:$49.99]
+[@buttonCaption:Buy Now]
+[@customerProductId:PROD-WEB-2024-001]
+A comprehensive guide to modern web development covering all essential technologies and frameworks. Perfect for beginners and intermediate developers looking to level up their skills.
+
+
+[.catalog-item-book]
+[@id:1002]
+[#Learning Python Programming]
+[@coverImage:https://example.com/images/python-book.jpg]
+[@content2Buy:book-python-basics]
+[@listPrice:$39.99]
+[@customerProductId:PROD-PY-2024-002]
+Start your journey into Python programming with this beginner-friendly book.
+
+
+[.catalog-item-book]
+[@id:1003]
+[#Advanced Database Design]
+[##Mastering SQL and NoSQL]
+[@coverImage:https://example.com/images/database-book.jpg]
+[@content2Buy:book-database-advanced]
+[@listPrice:$59.99]
+[@buttonCaption:Add to Cart]
+[@customerProductId:PROD-DB-2024-003]
+Deep dive into database design patterns, optimization techniques, and best practices for both SQL and NoSQL databases.
+
+
+[.catalog-item-book]
+[@id:1004]
+[#Minimal Book Example]
+[@coverImage:https://example.com/images/minimal.jpg]
+[@content2Buy:book-minimal]
+[@listPrice:$19.99]
+[@buttonCaption:Purchase]
+[@customerProductId:PROD-MIN-001]
+
+

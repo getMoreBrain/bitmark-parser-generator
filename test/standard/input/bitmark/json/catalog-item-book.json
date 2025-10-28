@@ -1,0 +1,218 @@
+[
+  {
+    "bit": {
+      "type": "catalog-item-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "1001"
+      ],
+      "coverImage": "https://example.com/images/web-dev-book-cover.jpg",
+      "content2Buy": "book-web-dev-2024",
+      "listPrice": "$49.99",
+      "customerProductId": "PROD-WEB-2024-001",
+      "buttonCaption": "Buy Now",
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The Complete Guide to Modern Web Development",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "subtitle": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Master HTML, CSS, JavaScript, and React",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A comprehensive guide to modern web development covering all essential technologies and frameworks. Perfect for beginners and intermediate developers looking to level up their skills.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.catalog-item-book]\n[@id:1001]\n[#The Complete Guide to Modern Web Development]\n[##Master HTML, CSS, JavaScript, and React]\n[@coverImage:https://example.com/images/web-dev-book-cover.jpg]\n[@content2Buy:book-web-dev-2024]\n[@listPrice:$49.99]\n[@buttonCaption:Buy Now]\n[@customerProductId:PROD-WEB-2024-001]\nA comprehensive guide to modern web development covering all essential technologies and frameworks. Perfect for beginners and intermediate developers looking to level up their skills."
+  },
+  {
+    "bit": {
+      "type": "catalog-item-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "1002"
+      ],
+      "coverImage": "https://example.com/images/python-book.jpg",
+      "content2Buy": "book-python-basics",
+      "listPrice": "$39.99",
+      "customerProductId": "PROD-PY-2024-002",
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Learning Python Programming",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Start your journey into Python programming with this beginner-friendly book.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.catalog-item-book]\n[@id:1002]\n[#Learning Python Programming]\n[@coverImage:https://example.com/images/python-book.jpg]\n[@content2Buy:book-python-basics]\n[@listPrice:$39.99]\n[@customerProductId:PROD-PY-2024-002]\nStart your journey into Python programming with this beginner-friendly book."
+  },
+  {
+    "bit": {
+      "type": "catalog-item-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "1003"
+      ],
+      "coverImage": "https://example.com/images/database-book.jpg",
+      "content2Buy": "book-database-advanced",
+      "listPrice": "$59.99",
+      "customerProductId": "PROD-DB-2024-003",
+      "buttonCaption": "Add to Cart",
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Advanced Database Design",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "subtitle": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mastering SQL and NoSQL",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Deep dive into database design patterns, optimization techniques, and best practices for both SQL and NoSQL databases.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.catalog-item-book]\n[@id:1003]\n[#Advanced Database Design]\n[##Mastering SQL and NoSQL]\n[@coverImage:https://example.com/images/database-book.jpg]\n[@content2Buy:book-database-advanced]\n[@listPrice:$59.99]\n[@buttonCaption:Add to Cart]\n[@customerProductId:PROD-DB-2024-003]\nDeep dive into database design patterns, optimization techniques, and best practices for both SQL and NoSQL databases."
+  },
+  {
+    "bit": {
+      "type": "catalog-item-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "1004"
+      ],
+      "coverImage": "https://example.com/images/minimal.jpg",
+      "content2Buy": "book-minimal",
+      "listPrice": "$19.99",
+      "customerProductId": "PROD-MIN-001",
+      "buttonCaption": "Purchase",
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Minimal Book Example",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.catalog-item-book]\n[@id:1004]\n[#Minimal Book Example]\n[@coverImage:https://example.com/images/minimal.jpg]\n[@content2Buy:book-minimal]\n[@listPrice:$19.99]\n[@buttonCaption:Purchase]\n[@customerProductId:PROD-MIN-001]"
+  }
+]

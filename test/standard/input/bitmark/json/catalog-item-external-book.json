@@ -1,0 +1,218 @@
+[
+  {
+    "bit": {
+      "type": "catalog-item-external-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "2001"
+      ],
+      "coverImage": "https://example.com/images/js-definitive.jpg",
+      "listPrice": "$69.99",
+      "customerProductId": "PROD-JS-DEF-7TH",
+      "customerProductShopLink": "https://shop.example.com/books/javascript-definitive-7th",
+      "buttonCaption": "Buy on Amazon",
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "JavaScript: The Definitive Guide",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "subtitle": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "7th Edition - Comprehensive Reference",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The comprehensive reference guide to JavaScript, covering ES6+ features and modern development practices.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.catalog-item-external-book]\n[@id:2001]\n[#JavaScript: The Definitive Guide]\n[##7th Edition - Comprehensive Reference]\n[@coverImage:https://example.com/images/js-definitive.jpg]\n[@customerProductShopLink:https://shop.example.com/books/javascript-definitive-7th]\n[@listPrice:$69.99]\n[@buttonCaption:Buy on Amazon]\n[@customerProductId:PROD-JS-DEF-7TH]\nThe comprehensive reference guide to JavaScript, covering ES6+ features and modern development practices."
+  },
+  {
+    "bit": {
+      "type": "catalog-item-external-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "2002"
+      ],
+      "coverImage": "https://example.com/images/clean-code.jpg",
+      "listPrice": "$44.99",
+      "customerProductId": "PROD-CC-2024",
+      "customerProductShopLink": "https://shop.example.com/books/clean-code",
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Clean Code",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "A handbook of agile software craftsmanship.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.catalog-item-external-book]\n[@id:2002]\n[#Clean Code]\n[@coverImage:https://example.com/images/clean-code.jpg]\n[@customerProductShopLink:https://shop.example.com/books/clean-code]\n[@listPrice:$44.99]\n[@customerProductId:PROD-CC-2024]\nA handbook of agile software craftsmanship."
+  },
+  {
+    "bit": {
+      "type": "catalog-item-external-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "2003"
+      ],
+      "coverImage": "https://example.com/images/design-patterns.jpg",
+      "listPrice": "$54.99",
+      "customerProductId": "PROD-DP-CLASSIC",
+      "customerProductShopLink": "https://shop.example.com/books/design-patterns-classic",
+      "buttonCaption": "View Details",
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Design Patterns",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "subtitle": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Elements of Reusable Object-Oriented Software",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The classic book on design patterns by the Gang of Four, essential reading for software engineers.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.catalog-item-external-book]\n[@id:2003]\n[#Design Patterns]\n[##Elements of Reusable Object-Oriented Software]\n[@coverImage:https://example.com/images/design-patterns.jpg]\n[@customerProductShopLink:https://shop.example.com/books/design-patterns-classic]\n[@listPrice:$54.99]\n[@buttonCaption:View Details]\n[@customerProductId:PROD-DP-CLASSIC]\nThe classic book on design patterns by the Gang of Four, essential reading for software engineers."
+  },
+  {
+    "bit": {
+      "type": "catalog-item-external-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "2004"
+      ],
+      "coverImage": "https://example.com/images/external-minimal.jpg",
+      "listPrice": "$29.99",
+      "customerProductId": "PROD-EXT-MIN-001",
+      "customerProductShopLink": "https://shop.example.com/books/minimal",
+      "buttonCaption": "Buy Now",
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "External Book Minimal",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.catalog-item-external-book]\n[@id:2004]\n[#External Book Minimal]\n[@coverImage:https://example.com/images/external-minimal.jpg]\n[@customerProductShopLink:https://shop.example.com/books/minimal]\n[@listPrice:$29.99]\n[@buttonCaption:Buy Now]\n[@customerProductId:PROD-EXT-MIN-001]"
+  }
+]
