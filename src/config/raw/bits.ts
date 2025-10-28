@@ -2527,20 +2527,32 @@ const BITS: _BitsConfig = {
 
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.extractorImage]: {
+  [BitType.extractorImages]: {
     since: '4.3.0',
-    baseBitType: BitType.image,
-    description: 'Extractor embedded image bit, used for embedded images extracted from PDFs',
+    baseBitType: BitType._standard,
+    description: 'Extractor images bit, used for images extracted from PDFs',
+    tags: [
+      {
+        key: ConfigKey.group_resourceBitTags,
+        description:
+          'Resource bit tags for logo grave images, used to define additional properties',
+      },
+      {
+        // Image resource
 
+        key: ConfigKey.group_resourceImage,
+        description: 'Resource image tags for logo grave images, used to attach images',
+        minCount: 1,
+        maxCount: Count.infinity,
+      },
+    ],
+    resourceAttachmentAllowed: false,
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.extractorImageCollapsible]: {
+  [BitType.extractorImagesCollapsible]: {
     since: '4.3.0',
-    baseBitType: BitType.extractorImage,
-    description:
-      'Collapsible extractor embedded image bit, used for embedded images extracted from PDFs',
-
-    textFormatDefault: TextFormat.plainText,
+    baseBitType: BitType.extractorImages,
+    description: 'Collapsible extractor images bit, used for  images extracted from PDFs',
   },
   [BitType.extractorInformation]: {
     since: '3.8.0',

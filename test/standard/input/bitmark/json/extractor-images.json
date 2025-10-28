@@ -1,0 +1,269 @@
+[
+  {
+    "bit": {
+      "type": "extractor-images",
+      "format": "text",
+      "bitLevel": 1,
+      "id": ["304379"],
+      "backgroundWallpaper": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/background.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": true,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "images": [
+        {
+          "type": "image",
+          "image": {
+            "format": "gif",
+            "provider": "miro.medium.com",
+            "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": true,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": [],
+            "search": "testing **123**"
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "1.png",
+            "src": "https://1.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": true,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "2.png",
+            "src": "https://2.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": true,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "3.png",
+            "src": "https://3.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": true,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "4.png",
+            "src": "https://4.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": true,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "5.png",
+            "src": "https://5.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        }
+      ],
+      "body": ""
+    },
+    "parser": {
+      "version": "4.14.1",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0",
+      "warnings": [
+        {
+          "message": "[&backgroundWallpaper] is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[&backgroundWallpaper:https://miro.medium.com/background.png]",
+          "location": {
+            "start": {
+              "line": 3,
+              "column": 1,
+              "offset": 33
+            },
+            "end": {
+              "line": 3,
+              "column": 62,
+              "offset": 94
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.extractor-images]\n[@id:304379]\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@search:testing **123**]\n[&image:https://1.png][@zoomDisabled:true]\n[&image:https://2.png]\n[&image:https://3.png][@zoomDisabled]\n[&image:https://4.png]\n[&image:https://5.png][@zoomDisabled:false]"
+  },
+  {
+    "bit": {
+      "type": "extractor-images-collapsible",
+      "format": "text",
+      "bitLevel": 1,
+      "id": ["304379"],
+      "levelCEFRp": "levelCEFRp",
+      "levelCEFR": "levelCEFR",
+      "levelILR": "levelILR",
+      "levelACTFL": "levelACTFL",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "images": [
+        {
+          "type": "image",
+          "image": {
+            "format": "gif",
+            "provider": "miro.medium.com",
+            "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ$.gif",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": true,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "1.png",
+            "src": "https://1.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": true,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "2.png",
+            "src": "https://2.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": true,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "3.png",
+            "src": "https://3.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": true,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "4.png",
+            "src": "https://4.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": true,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "provider": "5.png",
+            "src": "https://5.png",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        }
+      ],
+      "body": ""
+    },
+    "parser": {
+      "version": "4.14.1",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.extractor-images-collapsible]\n[@id:304379]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ$.gif][@zoomDisabled]\n[&image:https://1.png][@zoomDisabled:true]\n[&image:https://2.png]\n[&image:https://3.png][@zoomDisabled]\n[&image:https://4.png]\n[&image:https://5.png][@zoomDisabled:false]"
+  }
+]
