@@ -467,6 +467,7 @@ class ResourceBuilder extends BaseBuilder {
         BitType.pageBanner,
         BitType.imagesLogoGrave,
         BitType.prototypeImages,
+        BitType.extractorImages,
       ])
     ) {
       zoomDisabledDefault = true;

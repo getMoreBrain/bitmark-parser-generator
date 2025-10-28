@@ -2634,6 +2634,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         BitType.pageBanner,
         BitType.imagesLogoGrave,
         BitType.prototypeImages,
+        BitType.extractorImages,
       ])
     ) {
       this.writeProperty('zoomDisabled', node.value, route, {
