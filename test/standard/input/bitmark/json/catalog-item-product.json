@@ -9,6 +9,8 @@
       ],
       "coverImage": "https://example.com/images/keyboard.jpg",
       "content2Buy": "prod-keyboard-rgb-2024",
+      "listPrice": "$129.99",
+      "customerProductId": "PROD-KB-RGB-001",
       "buttonCaption": "Add to Cart",
       "title": [
         {
@@ -70,6 +72,8 @@
       ],
       "coverImage": "https://example.com/images/mouse.jpg",
       "content2Buy": "prod-mouse-wireless",
+      "listPrice": "$39.99",
+      "customerProductId": "PROD-MOUSE-WL-002",
       "title": [
         {
           "type": "paragraph",
@@ -118,6 +122,8 @@
       ],
       "coverImage": "https://example.com/images/dock.jpg",
       "content2Buy": "prod-dock-usbc-14port",
+      "listPrice": "$89.99",
+      "customerProductId": "PROD-DOCK-14-003",
       "buttonCaption": "Buy Now",
       "title": [
         {
@@ -179,6 +185,8 @@
       ],
       "coverImage": "https://example.com/images/product-minimal.jpg",
       "content2Buy": "prod-minimal",
+      "listPrice": "$19.99",
+      "customerProductId": "PROD-MIN-004",
       "buttonCaption": "Purchase",
       "title": [
         {

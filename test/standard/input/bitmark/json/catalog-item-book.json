@@ -9,6 +9,8 @@
       ],
       "coverImage": "https://example.com/images/web-dev-book-cover.jpg",
       "content2Buy": "book-web-dev-2024",
+      "listPrice": "$49.99",
+      "customerProductId": "PROD-WEB-2024-001",
       "buttonCaption": "Buy Now",
       "title": [
         {
@@ -70,6 +72,8 @@
       ],
       "coverImage": "https://example.com/images/python-book.jpg",
       "content2Buy": "book-python-basics",
+      "listPrice": "$39.99",
+      "customerProductId": "PROD-PY-2024-002",
       "title": [
         {
           "type": "paragraph",
@@ -118,6 +122,8 @@
       ],
       "coverImage": "https://example.com/images/database-book.jpg",
       "content2Buy": "book-database-advanced",
+      "listPrice": "$59.99",
+      "customerProductId": "PROD-DB-2024-003",
       "buttonCaption": "Add to Cart",
       "title": [
         {
@@ -179,6 +185,8 @@
       ],
       "coverImage": "https://example.com/images/minimal.jpg",
       "content2Buy": "book-minimal",
+      "listPrice": "$19.99",
+      "customerProductId": "PROD-MIN-001",
       "buttonCaption": "Purchase",
       "title": [
         {

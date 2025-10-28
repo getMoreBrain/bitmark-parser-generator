@@ -8,6 +8,9 @@
         "2001"
       ],
       "coverImage": "https://example.com/images/js-definitive.jpg",
+      "listPrice": "$69.99",
+      "customerProductId": "PROD-JS-DEF-7TH",
+      "customerProductShopLink": "https://shop.example.com/books/javascript-definitive-7th",
       "buttonCaption": "Buy on Amazon",
       "title": [
         {
@@ -68,6 +71,9 @@
         "2002"
       ],
       "coverImage": "https://example.com/images/clean-code.jpg",
+      "listPrice": "$44.99",
+      "customerProductId": "PROD-CC-2024",
+      "customerProductShopLink": "https://shop.example.com/books/clean-code",
       "title": [
         {
           "type": "paragraph",
@@ -115,6 +121,9 @@
         "2003"
       ],
       "coverImage": "https://example.com/images/design-patterns.jpg",
+      "listPrice": "$54.99",
+      "customerProductId": "PROD-DP-CLASSIC",
+      "customerProductShopLink": "https://shop.example.com/books/design-patterns-classic",
       "buttonCaption": "View Details",
       "title": [
         {
@@ -175,6 +184,9 @@
         "2004"
       ],
       "coverImage": "https://example.com/images/external-minimal.jpg",
+      "listPrice": "$29.99",
+      "customerProductId": "PROD-EXT-MIN-001",
+      "customerProductShopLink": "https://shop.example.com/books/minimal",
       "buttonCaption": "Buy Now",
       "title": [
         {
