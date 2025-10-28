@@ -271,6 +271,9 @@ class Builder extends BaseBuilder {
       labelTrue?: string;
       labelFalse?: string;
       content2Buy?: string;
+      listPrice?: string;
+      customerProductId?: string;
+      customerProductShopLink?: string;
       mailingList?: string;
       buttonCaption?: string;
       callToActionUrl?: string;
@@ -961,6 +964,24 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_content2Buy,
         data.content2Buy,
+        options,
+      ),
+      listPrice: this.toAstProperty(
+        bitType,
+        ConfigKey.property_listPrice,
+        data.listPrice,
+        options,
+      ),
+      customerProductId: this.toAstProperty(
+        bitType,
+        ConfigKey.property_customerProductId,
+        data.customerProductId,
+        options,
+      ),
+      customerProductShopLink: this.toAstProperty(
+        bitType,
+        ConfigKey.property_customerProductShopLink,
+        data.customerProductShopLink,
         options,
       ),
       mailingList: this.toAstProperty(
