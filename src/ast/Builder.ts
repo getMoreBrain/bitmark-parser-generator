@@ -143,6 +143,7 @@ class Builder extends BaseBuilder {
       isEditable?: boolean;
       aiGenerated?: boolean;
       machineTranslated?: string;
+      spansPageBreak?: boolean;
       searchIndex?: string | string[];
       analyticsTag?: string | string[];
       categoryTag?: string | string[];
@@ -496,6 +497,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_machineTranslated,
         data.machineTranslated,
+        options,
+      ),
+      spansPageBreak: this.toAstProperty(
+        bitType,
+        ConfigKey.property_spansPageBreak,
+        data.spansPageBreak,
         options,
       ),
       searchIndex: this.toAstProperty(
