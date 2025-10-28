@@ -14,7 +14,7 @@ import type {
  */
 export function isTableBasicFormat(table: TableJson | TableExtendedJson): boolean {
   const t = table as TableJson & TableExtendedJson;
-  return !!(t.columns || t.data) && !(t.head || t.body || t.foot);
+  return !!(t.columns || t.data) && !(t.header || t.body || t.footer);
 }
 
 /**
@@ -24,7 +24,7 @@ export function isTableBasicFormat(table: TableJson | TableExtendedJson): boolea
  */
 export function isTableExtendedFormat(table: TableJson | TableExtendedJson): boolean {
   const t = table as TableJson & TableExtendedJson;
-  return !!(t.head || t.body || t.foot);
+  return !!(t.header || t.body || t.footer);
 }
 
 /**
@@ -35,7 +35,7 @@ export function isTableExtendedFormat(table: TableJson | TableExtendedJson): boo
 export function isMixedTableFormat(table: TableJson | TableExtendedJson): boolean {
   const t = table as TableJson & TableExtendedJson;
   const hasOld = !!(t.columns || t.data);
-  const hasNew = !!(t.head || t.body || t.foot);
+  const hasNew = !!(t.header || t.body || t.footer);
   return hasOld && hasNew;
 }
 
@@ -47,9 +47,9 @@ export function isMixedTableFormat(table: TableJson | TableExtendedJson): boolea
 export function convertBasicToExtendedTableFormat(table: TableJson): TableExtendedJson {
   const tableExtended: TableExtendedJson = {};
 
-  // Convert columns to thead
+  // Convert columns to table-header
   if (table.columns && table.columns.length > 0) {
-    tableExtended.head = {
+    tableExtended.header = {
       rows: [
         {
           cells: table.columns.map((col) => ({
@@ -61,7 +61,7 @@ export function convertBasicToExtendedTableFormat(table: TableJson): TableExtend
     };
   }
 
-  // Convert data to tbody
+  // Convert data to body
   if (table.data && table.data.length > 0) {
     tableExtended.body = {
       rows: table.data.map((row) => ({
@@ -76,7 +76,7 @@ export function convertBasicToExtendedTableFormat(table: TableJson): TableExtend
 }
 
 /**
- * Convert extended table format (head/body/foot) to basic format (columns/data)
+ * Convert extended table format (header/body/footer) to basic format (columns/data)
  * @param table - Table in extended format
  * @returns Table in basic format
  */
@@ -97,7 +97,7 @@ export function convertExtendedToBasicTableFormat(tableExtended: TableExtendedJs
 
   const dataRows: LegacyRow[] = [];
 
-  const headRows = tableExtended.head?.rows ?? [];
+  const headRows = tableExtended.header?.rows ?? [];
   if (headRows.length > 0) {
     const primaryHeader = extractRowCells(headRows[0]);
 
@@ -128,7 +128,7 @@ export function convertExtendedToBasicTableFormat(tableExtended: TableExtendedJs
   };
 
   appendSectionRows(tableExtended.body);
-  appendSectionRows(tableExtended.foot);
+  appendSectionRows(tableExtended.footer);
 
   if (dataRows.length > 0) {
     table.data = dataRows;
@@ -223,7 +223,7 @@ export function validateTable(table: TableJson | TableExtendedJson): string[] {
 
   // Check if table has any data
   const hasOld = !!(t.columns || t.data);
-  const hasNew = !!(t.head || t.body || t.foot);
+  const hasNew = !!(t.header || t.body || t.footer);
 
   if (!hasOld && !hasNew) {
     errors.push('Table must have either old format (columns/data) or new format (head/body/foot)');
@@ -231,8 +231,8 @@ export function validateTable(table: TableJson | TableExtendedJson): string[] {
   }
 
   // Validate new format sections
-  if (t.head) {
-    const headErrors = validateTableSection(t.head);
+  if (t.header) {
+    const headErrors = validateTableSection(t.header);
     headErrors.forEach((err) => errors.push(`head: ${err}`));
   }
 
@@ -241,8 +241,8 @@ export function validateTable(table: TableJson | TableExtendedJson): string[] {
     bodyErrors.forEach((err) => errors.push(`body: ${err}`));
   }
 
-  if (t.foot) {
-    const footErrors = validateTableSection(t.foot);
+  if (t.footer) {
+    const footErrors = validateTableSection(t.footer);
     footErrors.forEach((err) => errors.push(`foot: ${err}`));
   }
 

@@ -909,12 +909,12 @@ function parseTable(
   _bitType: BitTypeType,
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
-  type TableSectionKey = 'thead' | 'tbody' | 'tfoot';
+  type TableSectionKey = 'header' | 'body' | 'footer';
 
   const sectionRows: Record<TableSectionKey, TableRowJson[]> = {
-    thead: [],
-    tbody: [],
-    tfoot: [],
+    header: [],
+    body: [],
+    footer: [],
   };
 
   const getNormalizedQualifier = (
@@ -922,11 +922,11 @@ function parseTable(
   ): TableSectionKey | undefined => {
     if (!rawQualifier) return undefined;
     const normalized = rawQualifier.trim().toLowerCase();
-    if (normalized === 'thead' || normalized === 'tbody' || normalized === 'tfoot') {
-      return normalized;
-    }
+    if (normalized === 'table-header') return 'header';
+    if (normalized === 'table-body') return 'body';
+    if (normalized === 'table-footer') return 'footer';
 
-    context.addWarning(`Unknown table section qualifier '${rawQualifier}', defaulting to tbody.`);
+    context.addWarning(`Unknown table section qualifier '${rawQualifier}', defaulting to body.`);
     return undefined;
   };
 
@@ -970,7 +970,7 @@ function parseTable(
       );
     }
 
-    return section === 'tbody' ? 'td' : 'th';
+    return section === 'body' ? 'td' : 'th';
   };
 
   const normalizeSpan = (raw: unknown, kind: 'rowspan' | 'colspan'): number => {
@@ -1063,8 +1063,8 @@ function parseTable(
     const section: TableSectionKey = qualifier
       ? qualifier
       : isLegacyHeadingRow(card, cardIdx)
-        ? 'thead'
-        : 'tbody';
+        ? 'header'
+        : 'body';
 
     const cells: TableCellJson[] = [];
     for (const side of card.sides) {
@@ -1080,32 +1080,32 @@ function parseTable(
 
   const table: Partial<TableExtendedJson> = {};
 
-  const hasHeadRows = sectionRows.thead.length > 0;
-  const hasBodyRows = sectionRows.tbody.length > 0;
-  const hasFootRows = sectionRows.tfoot.length > 0;
+  const hasHeadRows = sectionRows.header.length > 0;
+  const hasBodyRows = sectionRows.body.length > 0;
+  const hasFootRows = sectionRows.footer.length > 0;
 
   if (hasHeadRows) {
-    table.head = {
-      rows: sectionRows.thead,
+    table.header = {
+      rows: sectionRows.header,
     };
   }
 
   if (hasBodyRows) {
     table.body = {
-      rows: sectionRows.tbody,
+      rows: sectionRows.body,
     };
   }
 
   if (hasFootRows) {
-    table.foot = {
-      rows: sectionRows.tfoot,
+    table.footer = {
+      rows: sectionRows.footer,
     };
   }
 
   if (!hasHeadRows && !hasBodyRows && !hasFootRows) {
-    table.head = { rows: [] };
+    table.header = { rows: [] };
     table.body = { rows: [] };
-    table.foot = { rows: [] };
+    table.footer = { rows: [] };
   }
 
   return { table };

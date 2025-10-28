@@ -8,7 +8,7 @@
 
 Add a new `[.table-extended]` bit to support full HTML table semantics including thead, tbody, tfoot, rowspan, colspan, scope, and cell types, while maintaining full backwards compatibility with the current table JSON format.
 
-The enhancement introduces **qualified card dividers** - a generic parser feature enabling special row types within card-like structures. For tables, qualifiers `thead`, `tbody`, and `tfoot` enable semantic table sections.
+The enhancement introduces **qualified card dividers** - a generic parser feature enabling special row types within card-like structures. For tables, qualifiers `table-header`, `table-body`, and `table-footer` enable semantic table sections.
 
 ## Goals
 
@@ -66,26 +66,26 @@ The enhancement introduces **qualified card dividers** - a generic parser featur
 
 | Qualifier | Description | HTML Equivalent |
 |-----------|-------------|-----------------|
-| `thead` | Table header section | `<thead>` |
-| `tbody` | Table body section (default) | `<tbody>` |
-| `tfoot` | Table footer section | `<tfoot>` |
+| `table-header` | Table header section | `<thead>` |
+| `table-body` | Table body section (default) | `<tbody>` |
+| `table-footer` | Table footer section | `<tfoot>` |
 
 #### 1.4 Parser Behavior
 
 ```
-==== thead ====     → Starts thead section
+==== table-header ====     → Starts table header section
 <content>
-====                → Continues current section (tbody by default)
+====                → Continues current section (table-body by default)
 <content>
-==== tfoot ====     → Starts tfoot section
+==== table-footer ====     → Starts table footer section
 <content>
 ====                → Ends table
 ```
 
 **Section Transitions:**
-- Multiple `thead` / `tbody` / `tfoot` qualifiers → Allowed, they are merged into blocks when adjacent.
-- Interleaved sections → Allowed (e.g., thead → tbody → thead → tbody)
-- No section qualifier → Defaults to tbody
+- Multiple `table-header` / `table-body` / `table-footer` qualifiers → Allowed, they are merged into blocks when adjacent.
+- Interleaved sections → Allowed (e.g., table-header → table-body → table-header → table-body)
+- No section qualifier → Defaults to table-body
 - Empty sections → Valid (creates empty array 'rows' in JSON)
 
 ---
@@ -96,7 +96,7 @@ Each cell can have properties defined via tags at the start of cell content:
 
 | Property | Tag | Type | Default | Description |
 |----------|-----|------|---------|-------------|
-| **Cell Type** | `@tableCellType` | `th` \| `td` | `td` (body), `th` (head/foot) | HTML cell element type |
+| **Cell Type** | `@tableCellType` | `th` \| `td` | `td` (body), `th` (header/footer) | HTML cell element type |
 | **Row Span** | `@tableRowSpan` | integer ≥ 1 | `1` | Number of rows spanned |
 | **Col Span** | `@tableColSpan` | integer ≥ 1 | `1` | Number of columns spanned |
 | **Scope** | `@tableScope` | `row` \| `col` \| `rowgroup` \| `colgroup` | undefined | Scope for header cells |
@@ -105,9 +105,9 @@ Each cell can have properties defined via tags at the start of cell content:
 
 | Section | Default Cell Type | Notes |
 |---------|-------------------|-------|
-| `thead` | `th` | Header cells |
-| `tbody` | `td` | Data cells |
-| `tfoot` | `th` | Footer cells (typically totals/notes) |
+| `table-header` | `th` | Header cells |
+| `table-body` | `td` | Data cells |
+| `table-footer` | `th` | Footer cells (typically totals/notes) |
 
 ---
 
@@ -122,9 +122,9 @@ interface TableJson {
   data?: JsonText[][];   // Old format: remaining rows as data
 
   // NEW: Semantic table structure
-  head?: TableSectionJson;
+  header?: TableSectionJson;
   body?: TableSectionJson;
-  foot?: TableSectionJson;
+  footer?: TableSectionJson;
 }
 
 interface TableSectionJson {
@@ -200,10 +200,10 @@ interface TableCellJson {
 
 **Parser (Bitmark → JSON):**
 - NEW bitmark (with qualifiers) → NEW JSON format only
-- OLD bitmark (no qualifiers) → NEW JSON format (tbody only)
+- OLD bitmark (no qualifiers) → NEW JSON format (table-body only)
 
 **Generator (JSON → Bitmark):**
-- NEW JSON format → NEW bitmark (with qualifiers if head/foot present)
+- NEW JSON format → NEW bitmark (with qualifiers if header/footer present)
 - OLD JSON format → NEW bitmark (auto-convert columns to thead)
 - Mixed format (both old and new) → NEW format takes precedence, old format ignored.
 
@@ -217,7 +217,7 @@ interface TableCellJson {
 [.table]
 [@caption:Sample Quarterly Summary]
 
-==== thead ====
+==== table-header ====
 [@tableRowSpan:2]
 [@tableScope:col]
 Region
@@ -234,7 +234,7 @@ Q1
 [@tableScope:col]
 Total
 
-==== thead ====
+==== table-header ====
 [@tableScope:col]
 Jan
 --
@@ -301,7 +301,7 @@ South
 --
 21
 
-==== tfoot ====
+==== table-footer ====
 [@tableCellType:th]
 [@tableColSpan:5]
 [@tableScope:row]
@@ -309,7 +309,7 @@ Grand total
 --
 117
 
-==== tfoot ====
+==== table-footer ====
 [@tableColSpan:6]
 Note: values are example numbers.
 
@@ -325,7 +325,7 @@ Note: values are example numbers.
   "bitLevel": 1,
   "caption": [{"type": "paragraph", "content": [{"text": "Sample Quarterly Summary", "type": "text"}], "attrs": {}}],
   "table": {
-    "head": {
+    "header": {
       "rows": [
         {
           "cells": [
@@ -432,7 +432,7 @@ Note: values are example numbers.
         }
       ]
     },
-    "foot": {
+    "footer": {
       "rows": [
         {
           "cells": [
@@ -532,11 +532,11 @@ Note: values are example numbers.
 #### 5.1 Parser Migration (Bitmark → JSON)
 
 - Only new format in AST
-- Has old [#title] format -> this row becomes `thead` / `td`
+- Has old [#title] format -> this row becomes `table-header` / `td`
 - Always output new format
 
 **Old Format Detection:**
-- Only `[#title]` support is necessary, and it can be supported in the new format as well. → Convert to `thead` / `td`
+- Only `[#title]` support is necessary, and it can be supported in the new format as well. → Convert to `table-header` / `td`
 - Therefore no special detection necessary
 
 #### 5.2 Generator Migration (JSON → Bitmark)
@@ -560,7 +560,7 @@ graph TD
 ```typescript
 function convertOldToNew(oldTable: OldTableJson): NewTableJson {
   return {
-    head: oldTable.columns ? {
+    header: oldTable.columns ? {
       rows: [{
         cells: oldTable.columns.map(col => ({
           content: col,
@@ -614,7 +614,7 @@ export interface CardData {
   cardSideIndex: number;
   cardVariantIndex: number;
   value: string;
-  qualifier?: string;  // NEW: 'thead' | 'tbody' | 'tfoot' | custom
+  qualifier?: string;  // NEW: 'table-header' | 'table-body' | 'table-footer' | custom
 }
 
 // NEW: Table cell AST
@@ -634,36 +634,36 @@ interface TableCell {
 ### 1. Empty Sections
 
 ```bitmark
-==== thead ====
+==== table-header ====
 ====
 ```
-→ Creates empty `head.rows[0].cells = []` in JSON
+→ Creates empty `header.rows[0].cells = []` in JSON
 
 ### 2. Multiple Qualifiers Same Section
 
 ```bitmark
-==== thead ====
+==== table-header ====
 Row 1
-==== thead ====
+==== table-header ====
 Row 2
 ====
 ```
-→ Creates `head.rows[0].cells = [{ "content": "Row 1" }]` in JSON
-→ Creates `head.rows[1].cells = [{ "content": "Row 2" }]` in JSON
+→ Creates `header.rows[0].cells = [{ "content": "Row 1" }]` in JSON
+→ Creates `header.rows[1].cells = [{ "content": "Row 2" }]` in JSON
 
 ### 3. Qualifier with Whitespace Variations
 
 ```bitmark
-====thead====       → Error: No spaces -> Parsed as body/card text
-====  thead  ====   → Error: Multiple spaces -> Parsed as body/card text
-==== thead====      → Error: Missing trailing space -> Parsed as body/card text
+====table-header====       → Error: No spaces -> Parsed as body/card text
+====  table-header  ====   → Error: Multiple spaces -> Parsed as body/card text
+==== table-header====      → Error: Missing trailing space -> Parsed as body/card text
 ```
 → Parser must enforce exactly 1 space before and after
 
 ### 4. Cell Spanning Across Sections
 
 ```bitmark
-==== thead ====
+==== table-header ====
 [@tableRowSpan:2]
 Header
 ====
@@ -682,7 +682,7 @@ Body Cell
 
 **Output (NEW Bitmark):**
 ```bitmark
-==== thead ====
+==== table-header ====
 A
 --
 B
@@ -700,7 +700,7 @@ B
 ### Unit Tests
 
 1. **Qualifier Parsing**
-   - Valid qualifiers (thead, tbody, tfoot)
+   - Valid qualifiers (table-header, table-body, table-footer)
    - Invalid qualifiers (warning)
    - Whitespace variations (errors)
    - Missing qualifiers (default behavior)
@@ -725,7 +725,7 @@ B
 
 2. **Complex Tables**
    - Multi-row headers (example table)
-   - Mixed cell types in tbody
+   - Mixed cell types in table-body
    - Empty sections
    - Maximum nesting depth
 
@@ -752,12 +752,12 @@ function parseTableWithSections(
   cardSet: ProcessedCardSet,
 ): BitSpecificCards {
   const sections: Map<string, TableRowJson[]> = new Map([
-    ['thead', []],
-    ['tbody', []],
-    ['tfoot', []]
+    ['table-header', []],
+    ['table-body', []],
+    ['table-footer', []]
   ]);
 
-  let currentSection = 'tbody'; // Default
+  let currentSection = 'table-body'; // Default
 
   for (const card of cardSet.cards) {
     const qualifier = card.qualifier;
@@ -776,9 +776,9 @@ function parseTableWithSections(
 
   return {
     table: {
-      head: sections.get('thead')!.length > 0 ? { rows: sections.get('thead')! } : undefined,
-      body: sections.get('tbody')!.length > 0 ? { rows: sections.get('tbody')! } : undefined,
-      foot: sections.get('tfoot')!.length > 0 ? { rows: sections.get('tfoot')! } : undefined,
+      head: sections.get('table-header')!.length > 0 ? { rows: sections.get('table-header')! } : undefined,
+      body: sections.get('table-body')!.length > 0 ? { rows: sections.get('table-body')! } : undefined,
+      foot: sections.get('table-footer')!.length > 0 ? { rows: sections.get('table-footer')! } : undefined,
     }
   };
 }
@@ -862,9 +862,9 @@ PlainTextDivider
 
 **Valid Qualified Dividers:**
 ```bitmark
-==== thead ====       ✓ V2 with qualifier
--- tbody --           ✓ Cell with qualifier
-++ tfoot ++           ✓ Alternative cell with qualifier
+==== table-header ====       ✓ V2 with qualifier
+-- table-body --           ✓ Cell with qualifier
+++ table-footer ++           ✓ Alternative cell with qualifier
 ====                  ✓ V2 without qualifier (default)
 --                    ✓ Cell without qualifier (default)
 ```
@@ -873,10 +873,10 @@ PlainTextDivider
 ```bitmark
 ==== footer ====      ✗ Reserved (footer divider)
 ==== text ====        ✗ Reserved (plain text divider)
-=== thead ===         ✗ V1 cannot have qualifiers
-====thead====         ✗ Missing required spaces
-==== thead====        ✗ Missing trailing space
-====  thead  ====     ✗ Multiple spaces not allowed
+=== table-header ===         ✗ V1 cannot have qualifiers
+====table-header====         ✗ Missing required spaces
+==== table-header====        ✗ Missing trailing space
+====  table-header  ====     ✗ Multiple spaces not allowed
 ```
 
 **Legacy Compatibility:**
@@ -917,7 +917,7 @@ Answer 1
 
 | Bit Type | Card Version | Qualifier Support | Notes |
 |----------|--------------|-------------------|-------|
-| `table` | V2 | **YES** (thead/tbody/tfoot) | Primary use case |
+| `table` | V2 | **YES** (table-header/table-body/table-footer) | Primary use case |
 | `pronunciation-table` | V2 | **NO** | Different structure, not applicable |
 | `interview` | V2 | **NO** | Not applicable to this bit type |
 | `flashcard` | V1/V2 | **NO** (V1), **FUTURE** (V2) | Could be extended in future |
@@ -957,7 +957,7 @@ function getValidQualifiersForBitType(bitType: BitTypeType): string[] {
     case BitType.standardTableNonNormative:
     case BitType.standardRemarkTableNormative:
     case BitType.standardRemarkTableNonNormative:
-      return ['thead', 'tbody', 'tfoot'];
+      return ['table-header', 'table-body', 'table-footer'];
 
     // Future: Other bits can define their own valid qualifiers
     // case BitType.article:
@@ -973,7 +973,7 @@ function getValidQualifiersForBitType(bitType: BitTypeType): string[] {
 
 ## Design Decisions
 
-### 1. Custom Qualifiers Beyond thead/tbody/tfoot
+### 1. Custom Qualifiers Beyond table-header/table-body/table-footer
 
 **Decision**: ✅ **APPROVED** - Allow but warn for unknown qualifiers
 
@@ -1046,6 +1046,6 @@ To include literal divider:
 
 - **Qualifier**: Keyword between card divider symbols specifying row/section type
 - **Cell Property**: Attribute of a table cell (rowspan, colspan, scope, type)
-- **Section**: Semantic grouping of table rows (thead, tbody, tfoot)
+- **Section**: Semantic grouping of table rows (table-header, table-body, table-footer)
 - **Legacy/OLD Format**: Original table JSON structure with `columns` and `data` arrays
-- **NEW Format**: Enhanced table JSON structure with `head`, `body`, `foot` sections
+- **NEW Format**: Enhanced table JSON structure with `header`, `body`, `footer` sections

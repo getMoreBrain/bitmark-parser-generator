@@ -6,7 +6,7 @@ import { convertExtendedToBasicTableFormat } from '../../../../src/parser/json/T
 describe('convertExtendedToBasicTableFormat', () => {
   it('converts extended format table with head, body, and foot sections', () => {
     const tableExtended: TableExtendedJson = {
-      head: {
+      header: {
         rows: [
           {
             cells: [
@@ -29,7 +29,7 @@ describe('convertExtendedToBasicTableFormat', () => {
           },
         ],
       },
-      foot: {
+      footer: {
         rows: [
           {
             cells: [{ content: 'Total' }, { content: '2' }],
@@ -69,9 +69,9 @@ describe('convertExtendedToBasicTableFormat', () => {
 
   it('ignores empty sections', () => {
     const tableExtended: TableExtendedJson = {
-      head: { rows: [] },
+      header: { rows: [] },
       body: { rows: [] },
-      foot: { rows: [] },
+      footer: { rows: [] },
     };
 
     const result = convertExtendedToBasicTableFormat(tableExtended);
