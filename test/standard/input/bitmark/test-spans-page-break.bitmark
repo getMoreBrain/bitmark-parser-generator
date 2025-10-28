@@ -1,0 +1,15 @@
+[.article:bitmark++]
+[@spansPageBreak:true]
+
+This is an article that spans across a page break.
+
+
+[.article:bitmark++]
+[@spansPageBreak:false]
+
+This article does not span a page break.
+
+
+[.article:bitmark++]
+
+This article has the default value (false) for spansPageBreak.
