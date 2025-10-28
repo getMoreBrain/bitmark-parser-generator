@@ -969,7 +969,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         }
         resourceJson = wrapper as ResourceJson;
       }
-    } else if (Config.isOfBitType(bitType, [BitType.imagesLogoGrave, BitType.prototypeImages])) {
+    } else if (
+      Config.isOfBitType(bitType, [
+        BitType.imagesLogoGrave,
+        BitType.prototypeImages,
+        BitType.extractorImages,
+      ])
+    ) {
       // The resource is a logo-grave  / prototpye-images resource
       const images: ImageResourceWrapperJson[] = [];
       for (const r of resources) {
@@ -1819,7 +1825,13 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       }
 
       // Special case for 'images-logos-grave' / 'prototype-images' / etc bits
-      if (Config.isOfBitType(bitType, [BitType.imagesLogoGrave, BitType.prototypeImages])) {
+      if (
+        Config.isOfBitType(bitType, [
+          BitType.imagesLogoGrave,
+          BitType.prototypeImages,
+          BitType.extractorImages,
+        ])
+      ) {
         if (bitType === BitType.imagesLogoGrave) {
           if (bitJson.logos == null) {
             bitJson.logos = [];

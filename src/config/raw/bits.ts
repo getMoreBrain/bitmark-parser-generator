@@ -219,6 +219,123 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.catalogItemBook]: {
+    since: '4.15.0',
+    baseBitType: BitType._standard,
+    description:
+      'Catalog item book bit, used to represent a book product in a catalog with cover and description',
+    tags: [
+      {
+        key: ConfigKey.tag_title,
+        description: 'Title and subtitle of the catalog item',
+        maxCount: 2,
+      },
+      {
+        key: ConfigKey.property_coverImage,
+        description: 'Cover image of the catalog item',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_content2Buy,
+        description: 'Content to buy identifier',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_listPrice,
+        description: 'List price of the catalog item',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_buttonCaption,
+        description: 'Caption for the buy button',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_customerProductId,
+        description: 'Customer-specific product identifier',
+        format: TagFormat.plainText,
+      },
+    ],
+    rootExampleType: ExampleType.string,
+  },
+  [BitType.catalogItemExternalBook]: {
+    since: '4.15.0',
+    baseBitType: BitType._standard,
+    description:
+      'Catalog item external book bit, used to represent an external book product in a catalog with link to external shop',
+    tags: [
+      {
+        key: ConfigKey.tag_title,
+        description: 'Title and subtitle of the catalog item',
+        maxCount: 2,
+      },
+      {
+        key: ConfigKey.property_coverImage,
+        description: 'Cover image of the catalog item',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_customerProductShopLink,
+        description: 'Link to external shop for the product',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_listPrice,
+        description: 'List price of the catalog item',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_buttonCaption,
+        description: 'Caption for the buy button',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_customerProductId,
+        description: 'Customer-specific product identifier',
+        format: TagFormat.plainText,
+      },
+    ],
+    rootExampleType: ExampleType.string,
+  },
+  [BitType.catalogItemProduct]: {
+    since: '4.15.0',
+    baseBitType: BitType._standard,
+    description:
+      'Catalog item product bit, used to represent a general product in a catalog with cover and description',
+    tags: [
+      {
+        key: ConfigKey.tag_title,
+        description: 'Title and subtitle of the catalog item',
+        maxCount: 2,
+      },
+      {
+        key: ConfigKey.property_coverImage,
+        description: 'Cover image of the catalog item',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_content2Buy,
+        description: 'Content to buy identifier',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_listPrice,
+        description: 'List price of the catalog item',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_buttonCaption,
+        description: 'Caption for the buy button',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_customerProductId,
+        description: 'Customer-specific product identifier',
+        format: TagFormat.plainText,
+      },
+    ],
+    rootExampleType: ExampleType.string,
+  },
   [BitType.callToAction]: {
     since: '1.15.0',
     baseBitType: BitType._standard,
@@ -2410,20 +2527,32 @@ const BITS: _BitsConfig = {
 
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.extractorImage]: {
+  [BitType.extractorImages]: {
     since: '4.3.0',
-    baseBitType: BitType.image,
-    description: 'Extractor embedded image bit, used for embedded images extracted from PDFs',
+    baseBitType: BitType._standard,
+    description: 'Extractor images bit, used for images extracted from PDFs',
+    tags: [
+      {
+        key: ConfigKey.group_resourceBitTags,
+        description:
+          'Resource bit tags for logo grave images, used to define additional properties',
+      },
+      {
+        // Image resource
 
+        key: ConfigKey.group_resourceImage,
+        description: 'Resource image tags for logo grave images, used to attach images',
+        minCount: 1,
+        maxCount: Count.infinity,
+      },
+    ],
+    resourceAttachmentAllowed: false,
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.extractorImageCollapsible]: {
+  [BitType.extractorImagesCollapsible]: {
     since: '4.3.0',
-    baseBitType: BitType.extractorImage,
-    description:
-      'Collapsible extractor embedded image bit, used for embedded images extracted from PDFs',
-
-    textFormatDefault: TextFormat.plainText,
+    baseBitType: BitType.extractorImages,
+    description: 'Collapsible extractor images bit, used for  images extracted from PDFs',
   },
   [BitType.extractorInformation]: {
     since: '3.8.0',

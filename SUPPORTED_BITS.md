@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 4.14.1
+Version: 4.15.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -115,6 +115,9 @@ bug (since: 1.3.0)
 bug-alt (since: 1.16.0)
 bug-collapsible (since: 1.21.0)
 button-copy-text (since: 1.4.3)
+catalog-item-book (since: 4.15.0)
+catalog-item-external-book (since: 4.15.0)
+catalog-item-product (since: 4.15.0)
 call-to-action (since: 1.15.0)
 call-to-action-book-now (since: 1.15.0)
 call-to-action-contact (since: 1.15.0)
@@ -236,8 +239,8 @@ example-list (since: 1.4.13)
 extractor-ai-chat (since: 3.19.0)
 extractor-block (since: 1.5.16)
 extractor-configuration (since: 1.7.1)
-extractor-image (since: 4.3.0)
-extractor-image-collapsible (since: 4.3.0)
+extractor-images (since: 4.3.0)
+extractor-images-collapsible (since: 4.3.0)
 extractor-information (since: 3.8.0)
 extractor-page (since: 1.5.17)
 extractor-page-collapsible (since: 1.30.0)

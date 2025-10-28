@@ -143,6 +143,7 @@ class Builder extends BaseBuilder {
       isEditable?: boolean;
       aiGenerated?: boolean;
       machineTranslated?: string;
+      spansPageBreak?: boolean;
       searchIndex?: string | string[];
       analyticsTag?: string | string[];
       categoryTag?: string | string[];
@@ -271,6 +272,9 @@ class Builder extends BaseBuilder {
       labelTrue?: string;
       labelFalse?: string;
       content2Buy?: string;
+      listPrice?: string;
+      customerProductId?: string;
+      customerProductShopLink?: string;
       mailingList?: string;
       buttonCaption?: string;
       callToActionUrl?: string;
@@ -493,6 +497,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_machineTranslated,
         data.machineTranslated,
+        options,
+      ),
+      spansPageBreak: this.toAstProperty(
+        bitType,
+        ConfigKey.property_spansPageBreak,
+        data.spansPageBreak,
         options,
       ),
       searchIndex: this.toAstProperty(
@@ -961,6 +971,19 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_content2Buy,
         data.content2Buy,
+        options,
+      ),
+      listPrice: this.toAstProperty(bitType, ConfigKey.property_listPrice, data.listPrice, options),
+      customerProductId: this.toAstProperty(
+        bitType,
+        ConfigKey.property_customerProductId,
+        data.customerProductId,
+        options,
+      ),
+      customerProductShopLink: this.toAstProperty(
+        bitType,
+        ConfigKey.property_customerProductShopLink,
+        data.customerProductShopLink,
         options,
       ),
       mailingList: this.toAstProperty(
@@ -2160,14 +2183,14 @@ class Builder extends BaseBuilder {
       };
     };
 
-    const head = buildSection(nodeTableExtended.head);
-    if (head && head.rows?.length > 0) nodeTableExtended.head = head;
+    const header = buildSection(nodeTableExtended.header);
+    if (header && header.rows?.length > 0) nodeTableExtended.header = header;
 
     const body = buildSection(nodeTableExtended.body);
     if (body && body.rows?.length > 0) nodeTableExtended.body = body;
 
-    const foot = buildSection(nodeTableExtended.foot);
-    if (foot && foot.rows?.length > 0) nodeTableExtended.foot = foot;
+    const footer = buildSection(nodeTableExtended.footer);
+    if (footer && footer.rows?.length > 0) nodeTableExtended.footer = footer;
 
     // Remove Unset Optionals
     // ObjectUtils.removeUnwantedProperties(node, {

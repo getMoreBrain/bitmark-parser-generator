@@ -71,6 +71,7 @@ export interface Bit {
   isEditable?: Property;
   aiGenerated?: Property;
   machineTranslated?: Property;
+  spansPageBreak?: Property;
   searchIndex?: Property;
   analyticsTag?: Property;
   categoryTag?: Property;
@@ -203,6 +204,9 @@ export interface Bit {
   labelTrue?: Property;
   labelFalse?: Property;
   content2Buy?: Property;
+  listPrice?: Property;
+  customerProductId?: Property;
+  customerProductShopLink?: Property;
   mailingList?: Property;
   buttonCaption?: Property;
   callToActionUrl?: Property;

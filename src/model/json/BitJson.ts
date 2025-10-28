@@ -29,6 +29,7 @@ export interface BitJson {
   isEditable: boolean;
   aiGenerated: boolean;
   machineTranslated: string;
+  spansPageBreak: boolean;
   searchIndex: string | string[];
   analyticsTag: string | string[];
   categoryTag: string | string[];
@@ -151,6 +152,9 @@ export interface BitJson {
   labelTrue: string;
   labelFalse: string;
   content2Buy: string;
+  listPrice: string;
+  customerProductId: string;
+  customerProductShopLink: string;
   mailingList: string;
   buttonCaption: string;
   callToActionUrl: string;
@@ -492,9 +496,9 @@ export interface TableJson {
 }
 
 export interface TableExtendedJson {
-  head?: TableSectionJson;
+  header?: TableSectionJson;
   body?: TableSectionJson;
-  foot?: TableSectionJson;
+  footer?: TableSectionJson;
 }
 
 export interface TableSectionJson {
