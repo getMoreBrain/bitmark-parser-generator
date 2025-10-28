@@ -265,6 +265,8 @@ Qualifier
 
 QualifierName
   = $([a-z] ([a-z0-9-])*)
+  // = ("table-header" / "table-body" / "table-footer")
+
 
 
 // // Legacy CardSet (NO AUTO CLOSE VERSION)

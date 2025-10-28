@@ -2160,14 +2160,14 @@ class Builder extends BaseBuilder {
       };
     };
 
-    const head = buildSection(nodeTableExtended.head);
-    if (head && head.rows?.length > 0) nodeTableExtended.head = head;
+    const header = buildSection(nodeTableExtended.header);
+    if (header && header.rows?.length > 0) nodeTableExtended.header = header;
 
     const body = buildSection(nodeTableExtended.body);
     if (body && body.rows?.length > 0) nodeTableExtended.body = body;
 
-    const foot = buildSection(nodeTableExtended.foot);
-    if (foot && foot.rows?.length > 0) nodeTableExtended.foot = foot;
+    const footer = buildSection(nodeTableExtended.footer);
+    if (footer && footer.rows?.length > 0) nodeTableExtended.footer = footer;
 
     // Remove Unset Optionals
     // ObjectUtils.removeUnwantedProperties(node, {

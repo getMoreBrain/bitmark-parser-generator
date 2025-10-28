@@ -27,7 +27,7 @@ mark@gmail.com
 [.table]
 [@caption:Sample Quarterly Summary]
 
-==== thead ====
+==== table-header ====
 [@tableRowSpan:2]
 [@tableScope:col]
 Region
@@ -44,7 +44,7 @@ Q1
 [@tableScope:col]
 Total
 
-==== thead ====
+==== table-header ====
 [@tableScope:col]
 Jan
 --
@@ -111,7 +111,7 @@ South
 --
 21
 
-==== tfoot ====
+==== table-footer ====
 [@tableCellType:th]
 [@tableColSpan:5]
 [@tableScope:row]
@@ -119,7 +119,7 @@ Grand total
 --
 117
 
-==== tfoot ====
+==== table-footer ====
 [@tableColSpan:6]
 Note: values are example numbers.
 

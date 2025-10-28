@@ -492,9 +492,9 @@ export interface TableJson {
 }
 
 export interface TableExtendedJson {
-  head?: TableSectionJson;
+  header?: TableSectionJson;
   body?: TableSectionJson;
-  foot?: TableSectionJson;
+  footer?: TableSectionJson;
 }
 
 export interface TableSectionJson {

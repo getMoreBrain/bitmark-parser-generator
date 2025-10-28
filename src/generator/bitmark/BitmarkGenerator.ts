@@ -73,7 +73,7 @@ import { StringUtils } from '../../utils/StringUtils.ts';
 import { AstWalkerGenerator } from '../AstWalkerGenerator.ts';
 import { type GenerateOptions, TextGenerator } from '../text/TextGenerator.ts';
 
-type TableSectionKey = 'thead' | 'tbody' | 'tfoot';
+type TableSectionKey = 'header' | 'body' | 'footer';
 
 const DEFAULT_OPTIONS: BitmarkOptions = {
   debugGenerationInline: false,
@@ -1559,9 +1559,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       qualifier?: string;
       section?: TableSectionJson;
     }> = [
-      { key: 'thead', qualifier: 'thead', section: normalized.head },
-      { key: 'tbody', qualifier: undefined, section: normalized.body },
-      { key: 'tfoot', qualifier: 'tfoot', section: normalized.foot },
+      { key: 'header', qualifier: 'table-header', section: normalized.header },
+      { key: 'body', qualifier: undefined, section: normalized.body },
+      { key: 'footer', qualifier: 'table-footer', section: normalized.footer },
     ];
 
     let rowCount = 0;
@@ -1597,7 +1597,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   private writeTableCell(cell: TableCellJson, section: TableSectionKey): void {
-    const defaultCellType = section === 'tbody' ? 'td' : 'th';
+    const defaultCellType = section === 'body' ? 'td' : 'th';
     const cellType = cell.title ? 'th' : 'td';
 
     if (cellType !== defaultCellType) {

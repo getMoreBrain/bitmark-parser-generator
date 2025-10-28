@@ -24,7 +24,7 @@
       "instruction": [],
       "body": [],
       "table": {
-        "head": {
+        "header": {
           "rows": [
             {
               "cells": [
@@ -501,7 +501,7 @@
             }
           ]
         },
-        "foot": {
+        "footer": {
           "rows": [
             {
               "cells": [
@@ -579,7 +579,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.table]\n[@caption:Sample Quarterly Summary]\n\n==== thead ====\n[@tableRowSpan:2]\n[@tableScope:col]\nRegion\n--\n[@tableRowSpan:2]\n[@tableScope:col]\nArea\n--\n[@tableColSpan:3]\n[@tableScope:colgroup]\nQ1\n--\n[@tableRowSpan:2]\n[@tableScope:col]\nTotal\n\n==== thead ====\n[@tableScope:col]\nJan\n--\n[@tableScope:col]\nFeb\n--\n[@tableScope:col]\nMar\n\n====\n[@tableCellType:th]\n[@tableRowSpan:2]\n[@tableScope:row]\nWest\n--\nCoastal\n--\n10\n--\n12\n--\n11\n--\n33\n\n====\nInland\n--\n8\n--\n9\n--\n7\n--\n24\n\n====\n[@tableCellType:th]\n[@tableScope:row]\nNorth\n--\n(all)\n--\n14\n--\n13\n--\n12\n--\n39\n\n====\n[@tableCellType:th]\n[@tableScope:row]\nSouth\n--\n(all)\n--\n6\n--\n7\n--\n8\n--\n21\n\n==== tfoot ====\n[@tableCellType:th]\n[@tableColSpan:5]\n[@tableScope:row]\nGrand total\n--\n117\n\n==== tfoot ====\n[@tableColSpan:6]\nNote: values are example numbers.\n\n===="
+    "bitmark": "[.table]\n[@caption:Sample Quarterly Summary]\n\n==== table-header ====\n[@tableRowSpan:2]\n[@tableScope:col]\nRegion\n--\n[@tableRowSpan:2]\n[@tableScope:col]\nArea\n--\n[@tableColSpan:3]\n[@tableScope:colgroup]\nQ1\n--\n[@tableRowSpan:2]\n[@tableScope:col]\nTotal\n\n==== table-header ====\n[@tableScope:col]\nJan\n--\n[@tableScope:col]\nFeb\n--\n[@tableScope:col]\nMar\n\n====\n[@tableCellType:th]\n[@tableRowSpan:2]\n[@tableScope:row]\nWest\n--\nCoastal\n--\n10\n--\n12\n--\n11\n--\n33\n\n====\nInland\n--\n8\n--\n9\n--\n7\n--\n24\n\n====\n[@tableCellType:th]\n[@tableScope:row]\nNorth\n--\n(all)\n--\n14\n--\n13\n--\n12\n--\n39\n\n====\n[@tableCellType:th]\n[@tableScope:row]\nSouth\n--\n(all)\n--\n6\n--\n7\n--\n8\n--\n21\n\n==== table-footer ====\n[@tableCellType:th]\n[@tableColSpan:5]\n[@tableScope:row]\nGrand total\n--\n117\n\n==== table-footer ====\n[@tableColSpan:6]\nNote: values are example numbers.\n\n===="
   },
   {
     "bit": {
@@ -599,7 +599,7 @@
       "instruction": [],
       "body": [],
       "table": {
-        "head": {
+        "header": {
           "rows": [
             {
               "cells": [
