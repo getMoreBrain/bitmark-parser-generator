@@ -58,7 +58,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_spansPageBreak,
         description: 'If true, the bit spans a page break',
         format: TagFormat.boolean,
-        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_searchIndex,

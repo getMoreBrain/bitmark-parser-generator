@@ -39,7 +39,7 @@ describe('spansPageBreak property', () => {
     const bpg = new BitmarkParserGenerator();
 
     const originalBitmark = '[.article]\n[@spansPageBreak:true]\n\nContent that spans a page break';
-    
+
     // Convert to JSON
     const json = bpg.convert(originalBitmark, {
       bitmarkVersion: BitmarkVersion.v2,
