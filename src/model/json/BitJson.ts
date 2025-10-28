@@ -151,6 +151,9 @@ export interface BitJson {
   labelTrue: string;
   labelFalse: string;
   content2Buy: string;
+  listPrice: string;
+  customerProductId: string;
+  customerProductShopLink: string;
   mailingList: string;
   buttonCaption: string;
   callToActionUrl: string;

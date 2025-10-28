@@ -966,12 +966,7 @@ class Builder extends BaseBuilder {
         data.content2Buy,
         options,
       ),
-      listPrice: this.toAstProperty(
-        bitType,
-        ConfigKey.property_listPrice,
-        data.listPrice,
-        options,
-      ),
+      listPrice: this.toAstProperty(bitType, ConfigKey.property_listPrice, data.listPrice, options),
       customerProductId: this.toAstProperty(
         bitType,
         ConfigKey.property_customerProductId,

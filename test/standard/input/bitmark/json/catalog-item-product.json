@@ -1,0 +1,210 @@
+[
+  {
+    "bit": {
+      "type": "catalog-item-product",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "3001"
+      ],
+      "coverImage": "https://example.com/images/keyboard.jpg",
+      "content2Buy": "prod-keyboard-rgb-2024",
+      "buttonCaption": "Add to Cart",
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Premium Mechanical Keyboard",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "subtitle": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "RGB Backlit Gaming Keyboard",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "High-quality mechanical keyboard with customizable RGB lighting, perfect for gaming and productivity.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.catalog-item-product]\n[@id:3001]\n[#Premium Mechanical Keyboard]\n[##RGB Backlit Gaming Keyboard]\n[@coverImage:https://example.com/images/keyboard.jpg]\n[@content2Buy:prod-keyboard-rgb-2024]\n[@listPrice:$129.99]\n[@buttonCaption:Add to Cart]\n[@customerProductId:PROD-KB-RGB-001]\nHigh-quality mechanical keyboard with customizable RGB lighting, perfect for gaming and productivity."
+  },
+  {
+    "bit": {
+      "type": "catalog-item-product",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "3002"
+      ],
+      "coverImage": "https://example.com/images/mouse.jpg",
+      "content2Buy": "prod-mouse-wireless",
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wireless Mouse",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Ergonomic wireless mouse with precision tracking.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.catalog-item-product]\n[@id:3002]\n[#Wireless Mouse]\n[@coverImage:https://example.com/images/mouse.jpg]\n[@content2Buy:prod-mouse-wireless]\n[@listPrice:$39.99]\n[@customerProductId:PROD-MOUSE-WL-002]\nErgonomic wireless mouse with precision tracking."
+  },
+  {
+    "bit": {
+      "type": "catalog-item-product",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "3003"
+      ],
+      "coverImage": "https://example.com/images/dock.jpg",
+      "content2Buy": "prod-dock-usbc-14port",
+      "buttonCaption": "Buy Now",
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "USB-C Docking Station",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "subtitle": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "14-in-1 Multi-Port Hub",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Complete docking solution with HDMI, DisplayPort, USB 3.0, Ethernet, SD card readers, and power delivery up to 100W.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.catalog-item-product]\n[@id:3003]\n[#USB-C Docking Station]\n[##14-in-1 Multi-Port Hub]\n[@coverImage:https://example.com/images/dock.jpg]\n[@content2Buy:prod-dock-usbc-14port]\n[@listPrice:$89.99]\n[@buttonCaption:Buy Now]\n[@customerProductId:PROD-DOCK-14-003]\nComplete docking solution with HDMI, DisplayPort, USB 3.0, Ethernet, SD card readers, and power delivery up to 100W."
+  },
+  {
+    "bit": {
+      "type": "catalog-item-product",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "3004"
+      ],
+      "coverImage": "https://example.com/images/product-minimal.jpg",
+      "content2Buy": "prod-minimal",
+      "buttonCaption": "Purchase",
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Product Minimal Example",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.catalog-item-product]\n[@id:3004]\n[#Product Minimal Example]\n[@coverImage:https://example.com/images/product-minimal.jpg]\n[@content2Buy:prod-minimal]\n[@listPrice:$19.99]\n[@buttonCaption:Purchase]\n[@customerProductId:PROD-MIN-004]"
+  }
+]

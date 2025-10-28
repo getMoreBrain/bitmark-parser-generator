@@ -203,6 +203,9 @@ export interface Bit {
   labelTrue?: Property;
   labelFalse?: Property;
   content2Buy?: Property;
+  listPrice?: Property;
+  customerProductId?: Property;
+  customerProductShopLink?: Property;
   mailingList?: Property;
   buttonCaption?: Property;
   callToActionUrl?: Property;

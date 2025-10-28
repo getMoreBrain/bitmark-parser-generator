@@ -222,15 +222,13 @@ const BITS: _BitsConfig = {
   [BitType.catalogItemBook]: {
     since: '4.15.0',
     baseBitType: BitType._standard,
-    description: 'Catalog item book bit, used to represent a book product in a catalog with cover and description',
+    description:
+      'Catalog item book bit, used to represent a book product in a catalog with cover and description',
     tags: [
       {
         key: ConfigKey.tag_title,
-        description: 'Title of the catalog item',
-      },
-      {
-        key: ConfigKey.tag_subtitle,
-        description: 'Subtitle of the catalog item',
+        description: 'Title and subtitle of the catalog item',
+        maxCount: 2,
       },
       {
         key: ConfigKey.property_coverImage,
@@ -263,15 +261,13 @@ const BITS: _BitsConfig = {
   [BitType.catalogItemExternalBook]: {
     since: '4.15.0',
     baseBitType: BitType._standard,
-    description: 'Catalog item external book bit, used to represent an external book product in a catalog with link to external shop',
+    description:
+      'Catalog item external book bit, used to represent an external book product in a catalog with link to external shop',
     tags: [
       {
         key: ConfigKey.tag_title,
-        description: 'Title of the catalog item',
-      },
-      {
-        key: ConfigKey.tag_subtitle,
-        description: 'Subtitle of the catalog item',
+        description: 'Title and subtitle of the catalog item',
+        maxCount: 2,
       },
       {
         key: ConfigKey.property_coverImage,
@@ -304,15 +300,13 @@ const BITS: _BitsConfig = {
   [BitType.catalogItemProduct]: {
     since: '4.15.0',
     baseBitType: BitType._standard,
-    description: 'Catalog item product bit, used to represent a general product in a catalog with cover and description',
+    description:
+      'Catalog item product bit, used to represent a general product in a catalog with cover and description',
     tags: [
       {
         key: ConfigKey.tag_title,
-        description: 'Title of the catalog item',
-      },
-      {
-        key: ConfigKey.tag_subtitle,
-        description: 'Subtitle of the catalog item',
+        description: 'Title and subtitle of the catalog item',
+        maxCount: 2,
       },
       {
         key: ConfigKey.property_coverImage,

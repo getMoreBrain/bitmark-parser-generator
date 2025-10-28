@@ -1,0 +1,44 @@
+[.catalog-item-product]
+[@id:3001]
+[#Premium Mechanical Keyboard]
+[##RGB Backlit Gaming Keyboard]
+[@coverImage:https://example.com/images/keyboard.jpg]
+[@content2Buy:prod-keyboard-rgb-2024]
+[@listPrice:$129.99]
+[@buttonCaption:Add to Cart]
+[@customerProductId:PROD-KB-RGB-001]
+High-quality mechanical keyboard with customizable RGB lighting, perfect for gaming and productivity.
+
+
+[.catalog-item-product]
+[@id:3002]
+[#Wireless Mouse]
+[@coverImage:https://example.com/images/mouse.jpg]
+[@content2Buy:prod-mouse-wireless]
+[@listPrice:$39.99]
+[@customerProductId:PROD-MOUSE-WL-002]
+Ergonomic wireless mouse with precision tracking.
+
+
+[.catalog-item-product]
+[@id:3003]
+[#USB-C Docking Station]
+[##14-in-1 Multi-Port Hub]
+[@coverImage:https://example.com/images/dock.jpg]
+[@content2Buy:prod-dock-usbc-14port]
+[@listPrice:$89.99]
+[@buttonCaption:Buy Now]
+[@customerProductId:PROD-DOCK-14-003]
+Complete docking solution with HDMI, DisplayPort, USB 3.0, Ethernet, SD card readers, and power delivery up to 100W.
+
+
+[.catalog-item-product]
+[@id:3004]
+[#Product Minimal Example]
+[@coverImage:https://example.com/images/product-minimal.jpg]
+[@content2Buy:prod-minimal]
+[@listPrice:$19.99]
+[@buttonCaption:Purchase]
+[@customerProductId:PROD-MIN-004]
+
+
