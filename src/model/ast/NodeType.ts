@@ -400,8 +400,6 @@ const NodeType = superenum({
   platformMessageBackgroundColorValue: 'platformMessageBackgroundColorValue',
   platformBackgroundImage: 'platformBackgroundImage',
   platformBackgroundImageValue: 'platformBackgroundImageValue',
-  coverImage: 'coverImage',
-  coverImageValue: 'coverImageValue',
   person: 'person',
   pointerLeft: 'pointerLeft',
   pointerLeftValue: 'pointerLeftValue',
