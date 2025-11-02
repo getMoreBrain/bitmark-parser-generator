@@ -7,6 +7,15 @@
 [@listPrice:$69.99]
 [@buttonCaption:Buy on Amazon]
 [@customerProductId:PROD-JS-DEF-7TH]
+[@currency:USD]
+[@ibookIsbn:978-1-491-95202-3]
+[@bookAuthor:David Flanagan]
+[@bookType:Technical Reference]
+[@bookLanguage:English]
+[@bookPublisher:O'Reilly Media]
+[@imageSource:https://example.com/source/js-definitive-images]
+[&image:https://example.com/preview/js-def-1.jpg]
+[&video:https://example.com/preview/js-def-intro.mp4]
 The comprehensive reference guide to JavaScript, covering ES6+ features and modern development practices.
 
 
@@ -17,6 +26,10 @@ The comprehensive reference guide to JavaScript, covering ES6+ features and mode
 [@customerProductShopLink:https://shop.example.com/books/clean-code]
 [@listPrice:$44.99]
 [@customerProductId:PROD-CC-2024]
+[@bookAuthor:Robert C. Martin]
+[@bookBindingType:Hardcover]
+[@bookPNumberOfPages:464]
+[@bookRating:4.8]
 A handbook of agile software craftsmanship.
 
 
@@ -29,6 +42,11 @@ A handbook of agile software craftsmanship.
 [@listPrice:$54.99]
 [@buttonCaption:View Details]
 [@customerProductId:PROD-DP-CLASSIC]
+[@bookSeriesTitle:Software Engineering Classics]
+[@bookSeriesId:SEC-001]
+[@bookSeriesNumber:1]
+[@gmbExternalShop:ClassicBooks]
+[@gmbExternalShopItems:amazon, oreilly, pearson]
 The classic book on design patterns by the Gang of Four, essential reading for software engineers.
 
 

@@ -4,9 +4,14 @@
       "type": "hand-in-submit",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["189522"],
+      "id": [
+        "189522"
+      ],
       "buttonCaption": "Click Me!",
-      "handInRequirement": ["This is a requirement", "You'd better do this as well!"],
+      "handInRequirement": [
+        "This is a requirement",
+        "You'd better do this as well!"
+      ],
       "handInInstruction": "Fill out ✍️ and hand in",
       "item": [],
       "lead": [],
@@ -49,7 +54,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -60,7 +65,9 @@
       "type": "hand-in-submit",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213729"],
+      "id": [
+        "213729"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -116,7 +123,7 @@
       "buttonCaption": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -127,7 +134,9 @@
       "type": "hand-in-submit",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213734"],
+      "id": [
+        "213734"
+      ],
       "buttonCaption": "Click Me!!!",
       "handInInstruction": "Fill out ✍️ and hand in!!",
       "item": [
@@ -169,7 +178,7 @@
       "handInRequirement": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -276,7 +285,9 @@
       "type": "hand-in-submit",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213737"],
+      "id": [
+        "213737"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -333,7 +344,7 @@
       "buttonCaption": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -378,7 +389,9 @@
       "type": "hand-in-submit",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["197943"],
+      "id": [
+        "197943"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -391,7 +404,7 @@
       "buttonCaption": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

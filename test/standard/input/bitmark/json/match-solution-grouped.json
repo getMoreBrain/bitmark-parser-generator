@@ -4,7 +4,9 @@
       "type": "match-solution-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213827"],
+      "id": [
+        "213827"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -33,7 +35,11 @@
           "attrs": {}
         }
       ],
-      "additionalSolutions": ["word1", "word2", "word3"],
+      "additionalSolutions": [
+        "word1",
+        "word2",
+        "word3"
+      ],
       "body": [],
       "heading": {
         "forKeys": "Ethischer Begriff",
@@ -48,7 +54,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["Nachhaltigkeit"]
+          "values": [
+            "Nachhaltigkeit"
+          ]
         },
         {
           "key": "Leitvorstellungen über erwünschenswertes Verhalten.",
@@ -58,7 +66,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["Werte"]
+          "values": [
+            "Werte"
+          ]
         },
         {
           "key": "Gesamtheit von Verhaltensregeln innerhalb einer Gesellschaft.",
@@ -68,7 +78,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["Moral"]
+          "values": [
+            "Moral"
+          ]
         },
         {
           "key": "Konkrete Verhaltensanweisungen zur Umsetzung ethischen Verhaltens.",
@@ -78,7 +90,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["Normen"]
+          "values": [
+            "Normen"
+          ]
         },
         {
           "key": "Untersucht und argumentiert für oder gegen Verhaltensregeln.",
@@ -88,13 +102,15 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["Ethik"]
+          "values": [
+            "Ethik"
+          ]
         }
       ],
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -139,7 +155,9 @@
       "type": "match-solution-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["265794"],
+      "id": [
+        "265794"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -178,7 +196,9 @@
               "attrs": {}
             }
           ],
-          "values": ["packen"]
+          "values": [
+            "packen"
+          ]
         },
         {
           "key": "in den Urlaub",
@@ -199,7 +219,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["fahren"]
+          "values": [
+            "fahren"
+          ]
         },
         {
           "key": "Geld",
@@ -220,7 +242,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["ausgeben"]
+          "values": [
+            "ausgeben"
+          ]
         },
         {
           "key": "über dem europäischen Durchschnitt",
@@ -241,7 +265,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["liegen"]
+          "values": [
+            "liegen"
+          ]
         },
         {
           "key": "mehr Inlandsreisen",
@@ -262,7 +288,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["planen"]
+          "values": [
+            "planen"
+          ]
         },
         {
           "key": "das angenehme Wetter",
@@ -283,7 +311,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["genießen", "nutzen"]
+          "values": [
+            "genießen",
+            "nutzen"
+          ]
         },
         {
           "key": "den Strandurlaub",
@@ -304,7 +335,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["bevorzugen"]
+          "values": [
+            "bevorzugen"
+          ]
         },
         {
           "key": "böse Überraschungen",
@@ -325,7 +358,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["erleben"]
+          "values": [
+            "erleben"
+          ]
         },
         {
           "key": "mobile Angebote",
@@ -346,7 +381,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["nutzen"]
+          "values": [
+            "nutzen"
+          ]
         },
         {
           "key": "sich über verschiede Angebote",
@@ -367,7 +404,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["informieren"]
+          "values": [
+            "informieren"
+          ]
         },
         {
           "key": "auf Serviceleistungen",
@@ -388,7 +427,9 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["achten"]
+          "values": [
+            "achten"
+          ]
         },
         {
           "key": "auf die Hotelbar Wert",
@@ -409,14 +450,16 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["legen"]
+          "values": [
+            "legen"
+          ]
         }
       ],
       "isExample": true,
       "heading": {}
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

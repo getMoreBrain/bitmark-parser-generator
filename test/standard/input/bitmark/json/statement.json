@@ -4,7 +4,9 @@
       "type": "statement",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["191210"],
+      "id": [
+        "191210"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -25,7 +27,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -36,7 +38,9 @@
       "type": "statement",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["191207"],
+      "id": [
+        "191207"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -74,7 +78,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

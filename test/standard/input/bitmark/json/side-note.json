@@ -4,7 +4,9 @@
       "type": "side-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["210103"],
+      "id": [
+        "210103"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -154,7 +156,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -165,7 +167,10 @@
       "type": "side-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -227,7 +232,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

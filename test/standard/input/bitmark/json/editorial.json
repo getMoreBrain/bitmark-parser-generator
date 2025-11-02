@@ -4,10 +4,21 @@
       "type": "editorial",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["342338"],
-      "analyticsTag": ["235", "geruyghoenhru"],
-      "categoryTag": ["monsters", "knights"],
-      "topicTag": ["almonds", "peanuts"],
+      "id": [
+        "342338"
+      ],
+      "analyticsTag": [
+        "235",
+        "geruyghoenhru"
+      ],
+      "categoryTag": [
+        "monsters",
+        "knights"
+      ],
+      "topicTag": [
+        "almonds",
+        "peanuts"
+      ],
       "altLangTag": "en",
       "feedbackEngine": "google",
       "feedbackType": "unknown",
@@ -43,7 +54,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

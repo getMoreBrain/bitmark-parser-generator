@@ -4,7 +4,9 @@
       "type": "cook-step",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["92375"],
+      "id": [
+        "92375"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -14,7 +16,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -25,7 +27,10 @@
       "type": "cook-step",
       "format": "bitmark++",
       "bitLevel": 1,
-      "reportTag": ["This report", "That report"],
+      "reportTag": [
+        "This report",
+        "That report"
+      ],
       "title": [
         {
           "type": "paragraph",
@@ -58,7 +63,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -101,7 +106,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -121,7 +126,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

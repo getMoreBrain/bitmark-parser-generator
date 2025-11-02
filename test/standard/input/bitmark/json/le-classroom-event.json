@@ -31,7 +31,7 @@
       "isInfoOnly": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -108,7 +108,7 @@
       "isInfoOnly": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -123,8 +123,12 @@
       "location": "Zug",
       "action": "Päsenz-Seminar",
       "duration": "28800s",
-      "layer": ["testingLayer"],
-      "layerRole": ["testingLayerRole"],
+      "layer": [
+        "testingLayer"
+      ],
+      "layerRole": [
+        "testingLayerRole"
+      ],
       "textReference": "foo\nbar\nbaz",
       "isTracked": true,
       "isInfoOnly": false,
@@ -148,7 +152,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -163,8 +167,14 @@
       "location": "Zug",
       "action": "Päsenz-Seminar",
       "duration": "28800s",
-      "layer": ["testingLayer1", "testingLayer2"],
-      "layerRole": ["testingLayerRole1", "testingLayerRole2"],
+      "layer": [
+        "testingLayer1",
+        "testingLayer2"
+      ],
+      "layerRole": [
+        "testingLayerRole1",
+        "testingLayerRole2"
+      ],
       "isTracked": true,
       "isInfoOnly": true,
       "item": [],
@@ -187,7 +197,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -268,7 +278,7 @@
       "isInfoOnly": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

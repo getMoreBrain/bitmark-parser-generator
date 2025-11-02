@@ -4,10 +4,16 @@
       "type": "article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151970"],
+      "id": [
+        "151970"
+      ],
       "lang": "en-UK",
-      "publisher": ["kpmg"],
-      "theme": ["grundzuege"],
+      "publisher": [
+        "kpmg"
+      ],
+      "theme": [
+        "grundzuege"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -138,42 +144,9 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
-      "warnings": [
-        {
-          "message": "[%] is included more than the required 4 time(s). The earlier ones will be ignored",
-          "text": "[%oneTooMany]",
-          "location": {
-            "start": {
-              "line": 6,
-              "column": 62,
-              "offset": 151
-            },
-            "end": {
-              "line": 6,
-              "column": 75,
-              "offset": 164
-            }
-          },
-          "original": {
-            "text": "[%marginNumber]",
-            "location": {
-              "start": {
-                "line": 6,
-                "column": 47,
-                "offset": 136
-              },
-              "end": {
-                "line": 6,
-                "column": 62,
-                "offset": 151
-              }
-            }
-          }
-        }
-      ]
+      "textParserVersion": "8.35.0"
     },
     "bitmark": "[.article-alt:bitmark++]\n[@id:151970]\n[@lang:en-UK]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
   },
@@ -182,7 +155,9 @@
       "type": "article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -224,7 +199,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -235,12 +210,12 @@
             "start": {
               "line": 14,
               "column": 1,
-              "offset": 257
+              "offset": 238
             },
             "end": {
               "line": 14,
               "column": 25,
-              "offset": 281
+              "offset": 262
             }
           }
         },
@@ -251,12 +226,12 @@
             "start": {
               "line": 14,
               "column": 1,
-              "offset": 257
+              "offset": 238
             },
             "end": {
               "line": 14,
               "column": 25,
-              "offset": 281
+              "offset": 262
             }
           }
         }
@@ -269,7 +244,9 @@
       "type": "article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151972"],
+      "id": [
+        "151972"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [
@@ -308,7 +285,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -319,7 +296,9 @@
       "type": "article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151973"],
+      "id": [
+        "151973"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -434,7 +413,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -445,12 +424,12 @@
             "start": {
               "line": 29,
               "column": 1,
-              "offset": 1310
+              "offset": 1291
             },
             "end": {
               "line": 29,
               "column": 25,
-              "offset": 1334
+              "offset": 1315
             }
           }
         },
@@ -461,12 +440,12 @@
             "start": {
               "line": 29,
               "column": 1,
-              "offset": 1310
+              "offset": 1291
             },
             "end": {
               "line": 29,
               "column": 25,
-              "offset": 1334
+              "offset": 1315
             }
           }
         }
@@ -479,7 +458,9 @@
       "type": "article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["239893"],
+      "id": [
+        "239893"
+      ],
       "item": [],
       "lead": [
         {
@@ -583,7 +564,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -594,12 +575,12 @@
             "start": {
               "line": 45,
               "column": 1,
-              "offset": 2482
+              "offset": 2444
             },
             "end": {
               "line": 45,
               "column": 31,
-              "offset": 2512
+              "offset": 2474
             }
           }
         },
@@ -610,12 +591,12 @@
             "start": {
               "line": 45,
               "column": 1,
-              "offset": 2482
+              "offset": 2444
             },
             "end": {
               "line": 45,
               "column": 31,
-              "offset": 2512
+              "offset": 2474
             }
           }
         }
@@ -628,7 +609,9 @@
       "type": "article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["191143"],
+      "id": [
+        "191143"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -654,7 +637,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -665,12 +648,12 @@
             "start": {
               "line": 55,
               "column": 1,
-              "offset": 3215
+              "offset": 3177
             },
             "end": {
               "line": 55,
               "column": 31,
-              "offset": 3245
+              "offset": 3207
             }
           }
         },
@@ -681,12 +664,12 @@
             "start": {
               "line": 55,
               "column": 1,
-              "offset": 3215
+              "offset": 3177
             },
             "end": {
               "line": 55,
               "column": 31,
-              "offset": 3245
+              "offset": 3207
             }
           }
         }
@@ -699,7 +682,9 @@
       "type": "article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["245285"],
+      "id": [
+        "245285"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -736,7 +721,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -747,12 +732,12 @@
             "start": {
               "line": 59,
               "column": 1,
-              "offset": 3387
+              "offset": 3349
             },
             "end": {
               "line": 59,
               "column": 31,
-              "offset": 3417
+              "offset": 3379
             }
           }
         },
@@ -763,12 +748,12 @@
             "start": {
               "line": 59,
               "column": 1,
-              "offset": 3387
+              "offset": 3349
             },
             "end": {
               "line": 59,
               "column": 31,
-              "offset": 3417
+              "offset": 3379
             }
           }
         }
@@ -781,7 +766,9 @@
       "type": "article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["162205"],
+      "id": [
+        "162205"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -819,7 +806,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -830,12 +817,12 @@
             "start": {
               "line": 63,
               "column": 1,
-              "offset": 3651
+              "offset": 3613
             },
             "end": {
               "line": 63,
               "column": 31,
-              "offset": 3681
+              "offset": 3643
             }
           }
         },
@@ -846,12 +833,12 @@
             "start": {
               "line": 63,
               "column": 1,
-              "offset": 3651
+              "offset": 3613
             },
             "end": {
               "line": 63,
               "column": 31,
-              "offset": 3681
+              "offset": 3643
             }
           }
         },
@@ -862,12 +849,12 @@
             "start": {
               "line": 63,
               "column": 1,
-              "offset": 3651
+              "offset": 3613
             },
             "end": {
               "line": 68,
               "column": 1,
-              "offset": 3882
+              "offset": 3844
             }
           }
         },
@@ -878,12 +865,12 @@
             "start": {
               "line": 63,
               "column": 1,
-              "offset": 3651
+              "offset": 3613
             },
             "end": {
               "line": 68,
               "column": 1,
-              "offset": 3882
+              "offset": 3844
             }
           }
         }
@@ -896,13 +883,31 @@
       "type": "article-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["5743563"],
-      "target": ["target1", "target2", "target3"],
-      "tag": ["green", "yellow", "red"],
-      "reductionTag": ["green", "yellow"],
+      "id": [
+        "5743563"
+      ],
+      "target": [
+        "target1",
+        "target2",
+        "target3"
+      ],
+      "tag": [
+        "green",
+        "yellow",
+        "red"
+      ],
+      "reductionTag": [
+        "green",
+        "yellow"
+      ],
       "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVEiJtZZPbBtFFMZ/M7ubXdtdb1xSFyeilBapySVU8h8OoFaooFSqiihIVIpQBKci6KEg9Q6H9kovIHoCIVQJJCKE1ENFjnAgcaSGC6rEnxBwA04Tx43t2FnvDAfjkNibxgHxnWb2e/u992bee7tCa00YFsffekFY+nUzFtjW0LrvjRXrCDIAaPLlW0nHL0SsZtVoaF98mLrx3pdhOqLtYPHChahZcYYO7KvPFxvRl5XPp1sN3adWiD1ZAqD6XYK1b/dvE5IWryTt2udLFedwc1+9kLp+vbbpoDh+6TklxBeAi9TL0taeWpdmZzQDry0AcO+jQ12RyohqqoYoo8RDwJrU+qXkjWtfi8Xxt58BdQuwQs9qC/afLwCw8tnQbqYAPsgxE1S6F3EAIXux2oQFKm0ihMsOF71dHYx+f3NND68ghCu1YIoePPQN1pGRABkJ6Bus96CutRZMydTl+TvuiRW1m3n0eDl0vRPcEysqdXn+jsQPsrHMquGeXEaY4Yk4wxWcY5V/9scqOMOVUFthatyTy8QyqwZ+kDURKoMWxNKr2EeqVKcTNOajqKoBgOE28U4tdQl5p5bwCw7BWquaZSzAPlwjlithJtp3pTImSqQRrb2Z8PHGigD4RZuNX6JYj6wj7O4TFLbCO/Mn/m8R+h6rYSUb3ekokRY6f/YukArN979jcW+V/S8g0eT/N3VN3kTqWbQ428m9/8k0P/1aIhF36PccEl6EhOcAUCrXKZXXWS3XKd2vc/TRBG9O5ELC17MmWubD2nKhUKZa26Ba2+D3P+4/MNCFwg59oWVeYhkzgN/JDR8deKBoD7Y+ljEjGZ0sosXVTvbc6RHirr2reNy1OXd6pJsQ+gqjk8VWFYmHrwBzW/n+uMPFiRwHB2I7ih8ciHFxIkd/3Omk5tCDV1t+2nNu5sxxpDFNx+huNhVT3/zMDz8usXC3ddaHBj1GHj/As08fwTS7Kt1HBTmyN29vdwAw+/wbwLVOJ3uAD1wi/dUH7Qei66PfyuRj4Ik9is+hglfbkbfR3cnZm7chlUWLdwmprtCohX4HUtlOcQjLYCu+fzGJH2QRKvP3UNz8bWk1qMxjGTOMThZ3kvgLI5AzFfo379UAAAAASUVORK5CYII=",
       "iconTag": "this is the icon tag",
-      "colorTag": ["green", "white", "purple", "orange"],
+      "colorTag": [
+        "green",
+        "white",
+        "purple",
+        "orange"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -966,7 +971,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -977,12 +982,12 @@
             "start": {
               "line": 69,
               "column": 1,
-              "offset": 3883
+              "offset": 3845
             },
             "end": {
               "line": 69,
               "column": 25,
-              "offset": 3907
+              "offset": 3869
             }
           }
         },
@@ -993,12 +998,12 @@
             "start": {
               "line": 69,
               "column": 1,
-              "offset": 3883
+              "offset": 3845
             },
             "end": {
               "line": 69,
               "column": 25,
-              "offset": 3907
+              "offset": 3869
             }
           }
         },
@@ -1009,12 +1014,12 @@
             "start": {
               "line": 82,
               "column": 1,
-              "offset": 4269
+              "offset": 4231
             },
             "end": {
               "line": 82,
               "column": 1319,
-              "offset": 5587
+              "offset": 5549
             }
           },
           "original": {
@@ -1023,12 +1028,12 @@
               "start": {
                 "line": 81,
                 "column": 1,
-                "offset": 4226
+                "offset": 4188
               },
               "end": {
                 "line": 81,
                 "column": 43,
-                "offset": 4268
+                "offset": 4230
               }
             }
           }
@@ -1040,12 +1045,12 @@
             "start": {
               "line": 83,
               "column": 30,
-              "offset": 5617
+              "offset": 5579
             },
             "end": {
               "line": 83,
               "column": 61,
-              "offset": 5648
+              "offset": 5610
             }
           },
           "original": {
@@ -1054,12 +1059,12 @@
               "start": {
                 "line": 83,
                 "column": 1,
-                "offset": 5588
+                "offset": 5550
               },
               "end": {
                 "line": 83,
                 "column": 30,
-                "offset": 5617
+                "offset": 5579
               }
             }
           }

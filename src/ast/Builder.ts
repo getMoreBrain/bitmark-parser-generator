@@ -202,6 +202,23 @@ class Builder extends BaseBuilder {
       processHandInLocation?: string;
       chatWithBook?: boolean;
       chatWithBookBrainKey?: string;
+      currency?: string;
+      ibookIsbn?: string;
+      bookAuthor?: string;
+      bookType?: string;
+      bookBindingType?: string;
+      bookPNumberOfPages?: string;
+      bookRating?: string;
+      bookSeriesTitle?: string;
+      bookSeriesId?: string;
+      bookSeriesNumber?: string;
+      bookLanguage?: string;
+      bookPublishingDate?: string;
+      bookPublisher?: string;
+      bookTranslator?: string;
+      bookOriginalTitle?: string;
+      gmbExternalShop?: string;
+      gmbExternalShopItems?: string | string[];
       action?: string;
       showInIndex?: boolean;
       refAuthor?: string | string[];
@@ -697,6 +714,98 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_chatWithBookBrainKey,
         data.chatWithBookBrainKey,
+        options,
+      ),
+      currency: this.toAstProperty(bitType, ConfigKey.property_currency, data.currency, options),
+      ibookIsbn: this.toAstProperty(
+        bitType,
+        ConfigKey.property_ibookIsbn,
+        data.ibookIsbn,
+        options,
+      ),
+      bookAuthor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookAuthor,
+        data.bookAuthor,
+        options,
+      ),
+      bookType: this.toAstProperty(bitType, ConfigKey.property_bookType, data.bookType, options),
+      bookBindingType: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookBindingType,
+        data.bookBindingType,
+        options,
+      ),
+      bookPNumberOfPages: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookPNumberOfPages,
+        data.bookPNumberOfPages,
+        options,
+      ),
+      bookRating: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookRating,
+        data.bookRating,
+        options,
+      ),
+      bookSeriesTitle: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookSeriesTitle,
+        data.bookSeriesTitle,
+        options,
+      ),
+      bookSeriesId: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookSeriesId,
+        data.bookSeriesId,
+        options,
+      ),
+      bookSeriesNumber: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookSeriesNumber,
+        data.bookSeriesNumber,
+        options,
+      ),
+      bookLanguage: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookLanguage,
+        data.bookLanguage,
+        options,
+      ),
+      bookPublishingDate: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookPublishingDate,
+        data.bookPublishingDate,
+        options,
+      ),
+      bookPublisher: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookPublisher,
+        data.bookPublisher,
+        options,
+      ),
+      bookTranslator: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookTranslator,
+        data.bookTranslator,
+        options,
+      ),
+      bookOriginalTitle: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookOriginalTitle,
+        data.bookOriginalTitle,
+        options,
+      ),
+      gmbExternalShop: this.toAstProperty(
+        bitType,
+        ConfigKey.property_gmbExternalShop,
+        data.gmbExternalShop,
+        options,
+      ),
+      gmbExternalShopItems: this.toAstProperty(
+        bitType,
+        ConfigKey.property_gmbExternalShopItems,
+        data.gmbExternalShopItems,
         options,
       ),
       action: this.toAstProperty(bitType, ConfigKey.property_action, data.action, options),

@@ -4,7 +4,9 @@
       "type": "example",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["210051"],
+      "id": [
+        "210051"
+      ],
       "item": [],
       "lead": [
         {
@@ -38,7 +40,7 @@
       "example": null
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -49,7 +51,9 @@
       "type": "example",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["208411"],
+      "id": [
+        "208411"
+      ],
       "item": [],
       "lead": [
         {
@@ -83,7 +87,7 @@
       "example": null
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -128,7 +132,9 @@
       "type": "example",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["208422"],
+      "id": [
+        "208422"
+      ],
       "item": [],
       "lead": [
         {
@@ -169,7 +175,7 @@
       "example": null
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -180,7 +186,9 @@
       "type": "example-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -214,7 +222,7 @@
       "example": null
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -259,7 +267,9 @@
       "type": "standard-example-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -293,7 +303,7 @@
       "example": null
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -338,7 +348,9 @@
       "type": "standard-example-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -372,7 +384,7 @@
       "example": null
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

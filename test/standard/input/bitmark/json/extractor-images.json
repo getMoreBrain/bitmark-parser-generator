@@ -4,7 +4,9 @@
       "type": "extractor-images",
       "format": "text",
       "bitLevel": 1,
-      "id": ["304379"],
+      "id": [
+        "304379"
+      ],
       "backgroundWallpaper": {
         "type": "image",
         "image": {
@@ -124,7 +126,7 @@
       "body": ""
     },
     "parser": {
-      "version": "4.14.1",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -153,7 +155,9 @@
       "type": "extractor-images-collapsible",
       "format": "text",
       "bitLevel": 1,
-      "id": ["304379"],
+      "id": [
+        "304379"
+      ],
       "levelCEFRp": "levelCEFRp",
       "levelCEFR": "levelCEFR",
       "levelILR": "levelILR",
@@ -260,7 +264,7 @@
       "body": ""
     },
     "parser": {
-      "version": "4.14.1",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

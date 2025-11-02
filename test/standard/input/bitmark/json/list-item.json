@@ -4,7 +4,10 @@
       "type": "list-item",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "listItemIndent": 3,
       "item": [],
       "lead": [],
@@ -67,7 +70,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -106,7 +109,7 @@
       "listItemIndent": 0
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -117,7 +120,9 @@
       "type": "standard-list-item",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -150,7 +155,7 @@
       "listItemIndent": 0
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -205,7 +210,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

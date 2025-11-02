@@ -12,6 +12,13 @@
       "customerProductId": "PROD-JS-DEF-7TH",
       "customerProductShopLink": "https://shop.example.com/books/javascript-definitive-7th",
       "buttonCaption": "Buy on Amazon",
+      "imageSource": {
+        "url": "https://example.com/source/js-definitive-images",
+        "mockupId": "",
+        "size": null,
+        "format": null,
+        "trim": null
+      },
       "title": [
         {
           "type": "paragraph",
@@ -42,6 +49,22 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "jpg",
+          "provider": "example.com",
+          "src": "https://example.com/preview/js-def-1.jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -58,9 +81,27 @@
     "parser": {
       "version": "4.15.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.35.0",
+      "warnings": [
+        {
+          "message": "[@mockupId:xxx] is missing from [@imageSource]",
+          "text": "[@imageSource:https://example.com/source/js-definitive-images]",
+          "location": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 514
+            },
+            "end": {
+              "line": 16,
+              "column": 63,
+              "offset": 576
+            }
+          }
+        }
+      ]
     },
-    "bitmark": "[.catalog-item-external-book]\n[@id:2001]\n[#JavaScript: The Definitive Guide]\n[##7th Edition - Comprehensive Reference]\n[@coverImage:https://example.com/images/js-definitive.jpg]\n[@customerProductShopLink:https://shop.example.com/books/javascript-definitive-7th]\n[@listPrice:$69.99]\n[@buttonCaption:Buy on Amazon]\n[@customerProductId:PROD-JS-DEF-7TH]\nThe comprehensive reference guide to JavaScript, covering ES6+ features and modern development practices."
+    "bitmark": "[.catalog-item-external-book]\n[@id:2001]\n[#JavaScript: The Definitive Guide]\n[##7th Edition - Comprehensive Reference]\n[@coverImage:https://example.com/images/js-definitive.jpg]\n[@customerProductShopLink:https://shop.example.com/books/javascript-definitive-7th]\n[@listPrice:$69.99]\n[@buttonCaption:Buy on Amazon]\n[@customerProductId:PROD-JS-DEF-7TH]\n[@currency:USD]\n[@ibookIsbn:978-1-491-95202-3]\n[@bookAuthor:David Flanagan]\n[@bookType:Technical Reference]\n[@bookLanguage:English]\n[@bookPublisher:O'Reilly Media]\n[@imageSource:https://example.com/source/js-definitive-images]\n[&image:https://example.com/preview/js-def-1.jpg]\n[&video:https://example.com/preview/js-def-intro.mp4]\nThe comprehensive reference guide to JavaScript, covering ES6+ features and modern development practices."
   },
   {
     "bit": {
@@ -110,7 +151,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.catalog-item-external-book]\n[@id:2002]\n[#Clean Code]\n[@coverImage:https://example.com/images/clean-code.jpg]\n[@customerProductShopLink:https://shop.example.com/books/clean-code]\n[@listPrice:$44.99]\n[@customerProductId:PROD-CC-2024]\nA handbook of agile software craftsmanship."
+    "bitmark": "[.catalog-item-external-book]\n[@id:2002]\n[#Clean Code]\n[@coverImage:https://example.com/images/clean-code.jpg]\n[@customerProductShopLink:https://shop.example.com/books/clean-code]\n[@listPrice:$44.99]\n[@customerProductId:PROD-CC-2024]\n[@bookAuthor:Robert C. Martin]\n[@bookBindingType:Hardcover]\n[@bookPNumberOfPages:464]\n[@bookRating:4.8]\nA handbook of agile software craftsmanship."
   },
   {
     "bit": {
@@ -173,7 +214,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.catalog-item-external-book]\n[@id:2003]\n[#Design Patterns]\n[##Elements of Reusable Object-Oriented Software]\n[@coverImage:https://example.com/images/design-patterns.jpg]\n[@customerProductShopLink:https://shop.example.com/books/design-patterns-classic]\n[@listPrice:$54.99]\n[@buttonCaption:View Details]\n[@customerProductId:PROD-DP-CLASSIC]\nThe classic book on design patterns by the Gang of Four, essential reading for software engineers."
+    "bitmark": "[.catalog-item-external-book]\n[@id:2003]\n[#Design Patterns]\n[##Elements of Reusable Object-Oriented Software]\n[@coverImage:https://example.com/images/design-patterns.jpg]\n[@customerProductShopLink:https://shop.example.com/books/design-patterns-classic]\n[@listPrice:$54.99]\n[@buttonCaption:View Details]\n[@customerProductId:PROD-DP-CLASSIC]\n[@bookSeriesTitle:Software Engineering Classics]\n[@bookSeriesId:SEC-001]\n[@bookSeriesNumber:1]\n[@gmbExternalShop:ClassicBooks]\n[@gmbExternalShopItems:amazon, oreilly, pearson]\nThe classic book on design patterns by the Gang of Four, essential reading for software engineers."
   },
   {
     "bit": {

@@ -7,6 +7,13 @@
 [@listPrice:$129.99]
 [@buttonCaption:Add to Cart]
 [@customerProductId:PROD-KB-RGB-001]
+[@currency:USD]
+[@bookType:Electronics]
+[@gmbExternalShop:TechGear]
+[@imageSource:https://example.com/source/keyboard-images]
+[&image:https://example.com/preview/keyboard-1.jpg]
+[&image:https://example.com/preview/keyboard-2.jpg]
+[&video:https://example.com/preview/keyboard-demo.mp4]
 High-quality mechanical keyboard with customizable RGB lighting, perfect for gaming and productivity.
 
 
@@ -17,6 +24,8 @@ High-quality mechanical keyboard with customizable RGB lighting, perfect for gam
 [@content2Buy:prod-mouse-wireless]
 [@listPrice:$39.99]
 [@customerProductId:PROD-MOUSE-WL-002]
+[@bookAuthor:ErgoTech]
+[@bookRating:4.3]
 Ergonomic wireless mouse with precision tracking.
 
 
@@ -29,6 +38,10 @@ Ergonomic wireless mouse with precision tracking.
 [@listPrice:$89.99]
 [@buttonCaption:Buy Now]
 [@customerProductId:PROD-DOCK-14-003]
+[@bookSeriesTitle:Ultimate Connectivity]
+[@bookSeriesId:UC-001]
+[@bookSeriesNumber:1]
+[@gmbExternalShopItems:amazon, newegg, bestbuy]
 Complete docking solution with HDMI, DisplayPort, USB 3.0, Ethernet, SD card readers, and power delivery up to 100W.
 
 

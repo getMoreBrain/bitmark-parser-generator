@@ -4,7 +4,9 @@
       "type": "table-image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["78954"],
+      "id": [
+        "78954"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -30,7 +32,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -41,7 +43,9 @@
       "type": "table-image-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["78954"],
+      "id": [
+        "78954"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -67,7 +71,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -78,7 +82,9 @@
       "type": "standard-table-image-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -104,7 +110,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -149,7 +155,9 @@
       "type": "standard-table-image-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151972"],
+      "id": [
+        "151972"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -175,7 +183,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -220,7 +228,9 @@
       "type": "standard-remark-table-image-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -246,7 +256,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -291,7 +301,9 @@
       "type": "standard-remark-table-image-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151972"],
+      "id": [
+        "151972"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -317,7 +329,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

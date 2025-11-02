@@ -4,7 +4,11 @@
       "type": "author-content-bit-generator",
       "format": "bitmark++",
       "bitLevel": 1,
-      "classification": ["Classification 1", "Classification 2", "Classification 3"],
+      "classification": [
+        "Classification 1",
+        "Classification 2",
+        "Classification 3"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -25,7 +29,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

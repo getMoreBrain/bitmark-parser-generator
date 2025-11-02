@@ -142,7 +142,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -601,7 +601,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.14.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -610,14 +610,14 @@
           "text": "[@tableRowSpan:2]",
           "location": {
             "start": {
-              "line": 5,
+              "line": 31,
               "column": 1,
-              "offset": 62
+              "offset": 351
             },
             "end": {
-              "line": 5,
+              "line": 31,
               "column": 18,
-              "offset": 79
+              "offset": 368
             }
           }
         },
@@ -626,14 +626,14 @@
           "text": "[@tableScope:col]",
           "location": {
             "start": {
-              "line": 6,
+              "line": 32,
               "column": 1,
-              "offset": 80
+              "offset": 369
             },
             "end": {
-              "line": 6,
+              "line": 32,
               "column": 18,
-              "offset": 97
+              "offset": 386
             }
           }
         },
@@ -642,14 +642,14 @@
           "text": "[@tableRowSpan:2]",
           "location": {
             "start": {
-              "line": 9,
+              "line": 35,
               "column": 1,
-              "offset": 108
+              "offset": 397
             },
             "end": {
-              "line": 9,
+              "line": 35,
               "column": 18,
-              "offset": 125
+              "offset": 414
             }
           }
         },
@@ -658,14 +658,14 @@
           "text": "[@tableScope:col]",
           "location": {
             "start": {
-              "line": 10,
+              "line": 36,
               "column": 1,
-              "offset": 126
+              "offset": 415
             },
             "end": {
-              "line": 10,
+              "line": 36,
               "column": 18,
-              "offset": 143
+              "offset": 432
             }
           }
         },
@@ -674,14 +674,14 @@
           "text": "[@tableColSpan:3]",
           "location": {
             "start": {
-              "line": 13,
+              "line": 39,
               "column": 1,
-              "offset": 152
+              "offset": 441
             },
             "end": {
-              "line": 13,
+              "line": 39,
               "column": 18,
-              "offset": 169
+              "offset": 458
             }
           }
         },
@@ -690,14 +690,14 @@
           "text": "[@tableScope:colgroup]",
           "location": {
             "start": {
-              "line": 14,
+              "line": 40,
               "column": 1,
-              "offset": 170
+              "offset": 459
             },
             "end": {
-              "line": 14,
+              "line": 40,
               "column": 23,
-              "offset": 192
+              "offset": 481
             }
           }
         },
@@ -706,14 +706,14 @@
           "text": "[@tableRowSpan:2]",
           "location": {
             "start": {
-              "line": 17,
+              "line": 43,
               "column": 1,
-              "offset": 199
+              "offset": 488
             },
             "end": {
-              "line": 17,
+              "line": 43,
               "column": 18,
-              "offset": 216
+              "offset": 505
             }
           }
         },
@@ -722,14 +722,14 @@
           "text": "[@tableScope:col]",
           "location": {
             "start": {
-              "line": 18,
+              "line": 44,
               "column": 1,
-              "offset": 217
+              "offset": 506
             },
             "end": {
-              "line": 18,
+              "line": 44,
               "column": 18,
-              "offset": 234
+              "offset": 523
             }
           }
         },
@@ -738,14 +738,14 @@
           "text": "[@tableScope:col]",
           "location": {
             "start": {
-              "line": 22,
+              "line": 48,
               "column": 1,
-              "offset": 258
+              "offset": 554
             },
             "end": {
-              "line": 22,
+              "line": 48,
               "column": 18,
-              "offset": 275
+              "offset": 571
             }
           }
         },
@@ -754,14 +754,14 @@
           "text": "[@tableScope:col]",
           "location": {
             "start": {
-              "line": 25,
+              "line": 51,
               "column": 1,
-              "offset": 283
+              "offset": 579
             },
             "end": {
-              "line": 25,
+              "line": 51,
               "column": 18,
-              "offset": 300
+              "offset": 596
             }
           }
         },
@@ -770,14 +770,14 @@
           "text": "[@tableScope:col]",
           "location": {
             "start": {
-              "line": 28,
+              "line": 54,
               "column": 1,
-              "offset": 308
+              "offset": 604
             },
             "end": {
-              "line": 28,
+              "line": 54,
               "column": 18,
-              "offset": 325
+              "offset": 621
             }
           }
         },
@@ -786,14 +786,14 @@
           "text": "[@tableCellType:th]",
           "location": {
             "start": {
-              "line": 32,
+              "line": 58,
               "column": 1,
-              "offset": 336
+              "offset": 632
             },
             "end": {
-              "line": 32,
+              "line": 58,
               "column": 20,
-              "offset": 355
+              "offset": 651
             }
           }
         },
@@ -802,46 +802,14 @@
           "text": "[@tableRowSpan:2]",
           "location": {
             "start": {
-              "line": 33,
-              "column": 1,
-              "offset": 356
-            },
-            "end": {
-              "line": 33,
-              "column": 18,
-              "offset": 373
-            }
-          }
-        },
-        {
-          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
-          "text": "[@tableScope:row]",
-          "location": {
-            "start": {
-              "line": 34,
-              "column": 1,
-              "offset": 374
-            },
-            "end": {
-              "line": 34,
-              "column": 18,
-              "offset": 391
-            }
-          }
-        },
-        {
-          "message": "[@tableCellType] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
-          "text": "[@tableCellType:th]",
-          "location": {
-            "start": {
               "line": 59,
               "column": 1,
-              "offset": 472
+              "offset": 652
             },
             "end": {
               "line": 59,
-              "column": 20,
-              "offset": 491
+              "column": 18,
+              "offset": 669
             }
           }
         },
@@ -852,12 +820,12 @@
             "start": {
               "line": 60,
               "column": 1,
-              "offset": 492
+              "offset": 670
             },
             "end": {
               "line": 60,
               "column": 18,
-              "offset": 509
+              "offset": 687
             }
           }
         },
@@ -866,14 +834,14 @@
           "text": "[@tableCellType:th]",
           "location": {
             "start": {
-              "line": 74,
+              "line": 85,
               "column": 1,
-              "offset": 555
+              "offset": 768
             },
             "end": {
-              "line": 74,
+              "line": 85,
               "column": 20,
-              "offset": 574
+              "offset": 787
             }
           }
         },
@@ -882,14 +850,14 @@
           "text": "[@tableScope:row]",
           "location": {
             "start": {
-              "line": 75,
+              "line": 86,
               "column": 1,
-              "offset": 575
+              "offset": 788
             },
             "end": {
-              "line": 75,
+              "line": 86,
               "column": 18,
-              "offset": 592
+              "offset": 805
             }
           }
         },
@@ -898,14 +866,46 @@
           "text": "[@tableCellType:th]",
           "location": {
             "start": {
-              "line": 89,
+              "line": 100,
               "column": 1,
-              "offset": 646
+              "offset": 851
             },
             "end": {
-              "line": 89,
+              "line": 100,
               "column": 20,
-              "offset": 665
+              "offset": 870
+            }
+          }
+        },
+        {
+          "message": "[@tableScope] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableScope:row]",
+          "location": {
+            "start": {
+              "line": 101,
+              "column": 1,
+              "offset": 871
+            },
+            "end": {
+              "line": 101,
+              "column": 18,
+              "offset": 888
+            }
+          }
+        },
+        {
+          "message": "[@tableCellType] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
+          "text": "[@tableCellType:th]",
+          "location": {
+            "start": {
+              "line": 115,
+              "column": 1,
+              "offset": 949
+            },
+            "end": {
+              "line": 115,
+              "column": 20,
+              "offset": 968
             }
           }
         },
@@ -914,14 +914,14 @@
           "text": "[@tableColSpan:5]",
           "location": {
             "start": {
-              "line": 90,
+              "line": 116,
               "column": 1,
-              "offset": 666
+              "offset": 969
             },
             "end": {
-              "line": 90,
+              "line": 116,
               "column": 18,
-              "offset": 683
+              "offset": 986
             }
           }
         },
@@ -930,14 +930,14 @@
           "text": "[@tableScope:row]",
           "location": {
             "start": {
-              "line": 91,
+              "line": 117,
               "column": 1,
-              "offset": 684
+              "offset": 987
             },
             "end": {
-              "line": 91,
+              "line": 117,
               "column": 18,
-              "offset": 701
+              "offset": 1004
             }
           }
         },
@@ -946,14 +946,14 @@
           "text": "[@tableColSpan:6]",
           "location": {
             "start": {
-              "line": 97,
+              "line": 123,
               "column": 1,
-              "offset": 738
+              "offset": 1048
             },
             "end": {
-              "line": 97,
+              "line": 123,
               "column": 18,
-              "offset": 755
+              "offset": 1065
             }
           }
         }
@@ -1116,7 +1116,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1277,7 +1277,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1295,10 +1295,7 @@
       "hint": [],
       "instruction": [],
       "body": [],
-      "table": {
-        "columns": [],
-        "data": []
-      },
+      "table": {},
       "tableFixedHeader": false,
       "tableHeaderWhitespaceNoWrap": true,
       "tableSearch": false,
@@ -1312,7 +1309,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1461,7 +1458,7 @@
       "tableResizableColumns": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1610,7 +1607,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1759,7 +1756,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1908,7 +1905,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -2057,7 +2054,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -2290,7 +2287,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -2308,10 +2305,7 @@
       "hint": [],
       "instruction": [],
       "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n  <to>Tove</to>\n  <from>Jani</from>\n  <heading>Reminder</heading>\n  <body>Don't forget me this weekend!</body>\n</note>",
-      "table": {
-        "columns": [],
-        "data": []
-      },
+      "table": {},
       "tableFixedHeader": false,
       "tableHeaderWhitespaceNoWrap": true,
       "tableSearch": false,
@@ -2325,7 +2319,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -2465,7 +2459,7 @@
       "tableHeaderWhitespaceNoWrap": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

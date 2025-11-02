@@ -4,7 +4,9 @@
       "type": "app-calculator-latex",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["51861"],
+      "id": [
+        "51861"
+      ],
       "formula": "\\\\left( x | y \\\\right)",
       "item": [],
       "lead": [],
@@ -15,7 +17,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
