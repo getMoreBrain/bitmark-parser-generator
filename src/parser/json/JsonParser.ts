@@ -28,6 +28,7 @@ import { StringUtils } from '../../utils/StringUtils.ts';
 interface TitleAndTitleString {
   titleString?: string;
   title?: JsonText;
+  authorTitle?: string;
 }
 
 interface ReferenceAndReferenceProperty {
@@ -340,6 +341,15 @@ class JsonParser {
         titleString: title as string,
         title: undefined,
       };
+
+    // For page-open-book and derived bits, map 'title' JSON key to 'authorTitle' property
+    if (Config.isOfBitType(bitType, [BitType.pageOpenBook, BitType.openBookChapter])) {
+      return {
+        titleString: undefined,
+        title: undefined,
+        authorTitle: title as string,
+      };
+    }
 
     return {
       titleString: undefined,

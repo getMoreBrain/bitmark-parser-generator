@@ -2726,7 +2726,8 @@ const BITS: _BitsConfig = {
   [BitType.openBookChapter]: {
     since: '4.16.0',
     baseBitType: BitType.pageOpenBook,
-    description: 'Open book chapter bit, derived from page-open-book, used to create chapter pages that open books',
+    description:
+      'Open book chapter bit, derived from page-open-book, used to create chapter pages that open books',
   },
   [BitType.pageOpenBookList]: {
     since: '2.1.0',
