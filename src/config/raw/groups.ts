@@ -1492,6 +1492,26 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_previewImages]: {
+    type: GroupConfigType.resource,
+    description: 'Array of preview images for catalog items',
+    tags: [
+      {
+        key: ConfigKey.group_resourceImage,
+        description: 'Preview image resource',
+      },
+    ],
+  },
+  [ConfigKey.group_previewVideos]: {
+    type: GroupConfigType.resource,
+    description: 'Array of preview videos for catalog items',
+    tags: [
+      {
+        key: ConfigKey.group_resourceVideo,
+        description: 'Preview video resource',
+      },
+    ],
+  },
 };
 
 export { GROUPS };
