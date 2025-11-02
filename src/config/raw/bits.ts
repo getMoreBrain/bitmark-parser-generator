@@ -2700,7 +2700,33 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_buttonCaption,
         description: 'Caption for the button, used to define the text displayed on the button',
       },
+      {
+        key: ConfigKey.property_authorFullName,
+        description: 'Full name of the author',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_authorPseudonym,
+        description: 'A pseudonym of the author, if any',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_authorTitle,
+        description: 'The title of the author, e.g. "Dr.", "Prof.", etc.',
+        jsonKey: 'title',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_authorJobTitle,
+        description: 'The job title of the author, e.g. "Software Engineer", "Professor", etc.',
+        format: TagFormat.plainText,
+      },
     ],
+  },
+  [BitType.openBookChapter]: {
+    since: '4.16.0',
+    baseBitType: BitType.pageOpenBook,
+    description: 'Open book chapter bit, derived from page-open-book, used to create chapter pages that open books',
   },
   [BitType.pageOpenBookList]: {
     since: '2.1.0',
