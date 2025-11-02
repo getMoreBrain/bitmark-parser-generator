@@ -299,6 +299,7 @@ class Builder extends BaseBuilder {
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
+      platformBrandTarget?: string;
       platformName?: string;
       platformIcon?: Partial<ImageResourceWrapperJson>;
       platformLogo?: Partial<ImageResourceWrapperJson>;
@@ -1110,6 +1111,12 @@ class Builder extends BaseBuilder {
         options,
       ),
       page: this.toAstProperty(bitType, ConfigKey.property_page, data.page, options),
+      platformBrandTarget: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformBrandTarget,
+        data.platformBrandTarget,
+        options,
+      ),
       platformName: this.toAstProperty(
         bitType,
         ConfigKey.property_platformName,

@@ -179,6 +179,7 @@ export interface BitJson {
   tocResource: string | string[];
   tocContent: string | string[];
   page: string;
+  platformBrandTarget: string;
   platformName: string;
   platformIcon: ImageResourceWrapperJson;
   platformLogo: ImageResourceWrapperJson;

@@ -1,0 +1,8 @@
+[.platform-brand-target]
+[@platformBrandTarget: light]
+
+[.platform-brand-target]
+[@platformBrandTarget: dark]
+
+[.platform-brand-target]
+[@platformBrandTarget: none]

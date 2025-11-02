@@ -4,8 +4,14 @@
       "type": "app-flashcards-learn",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
-      "flashcardSet": ["e-876z78z87og87g8zg", "e-8768768768768767"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
+      "flashcardSet": [
+        "e-876z78z87og87g8zg",
+        "e-8768768768768767"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -48,7 +54,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

@@ -129,6 +129,7 @@ const propertyKeys = {
   property_partner: '@partner', // Deprecated, replaced by person
   property_path: '@path',
   property_platformBackgroundColor: '@platformBackgroundColor',
+  property_platformBrandTarget: '@platformBrandTarget',
   property_platformButtonBackgroundColor: '@platformButtonBackgroundColor',
   property_platformButtonPrimaryColor: '@platformButtonPrimaryColor',
   property_platformMessageBackgroundColor: '@platformMessageBackgroundColor',

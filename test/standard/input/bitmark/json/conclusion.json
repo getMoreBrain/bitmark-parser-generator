@@ -4,7 +4,9 @@
       "type": "conclusion",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["342337"],
+      "id": [
+        "342337"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -32,7 +34,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -43,7 +45,9 @@
       "type": "conclusion-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -75,7 +79,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

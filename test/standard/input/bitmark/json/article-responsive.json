@@ -4,7 +4,9 @@
       "type": "article-responsive",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["210051"],
+      "id": [
+        "210051"
+      ],
       "imageFirst": true,
       "item": [],
       "lead": [
@@ -37,7 +39,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -48,7 +50,9 @@
       "type": "article-responsive",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -81,7 +85,7 @@
       "imageFirst": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -126,7 +130,9 @@
       "type": "article-responsive",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "imageFirst": false,
       "item": [],
       "lead": [],
@@ -159,7 +165,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -204,7 +210,9 @@
       "type": "article-responsive-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["210051"],
+      "id": [
+        "210051"
+      ],
       "imageFirst": true,
       "item": [],
       "lead": [
@@ -237,7 +245,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -248,7 +256,9 @@
       "type": "article-responsive-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -281,7 +291,7 @@
       "imageFirst": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -326,7 +336,9 @@
       "type": "article-responsive-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "imageFirst": false,
       "item": [],
       "lead": [],
@@ -359,7 +371,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

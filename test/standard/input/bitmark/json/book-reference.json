@@ -4,11 +4,17 @@
       "type": "book-reference",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135647"],
+      "id": [
+        "135647"
+      ],
       "lang": "en-US",
-      "refAuthor": ["Philippe Pointet"],
+      "refAuthor": [
+        "Philippe Pointet"
+      ],
       "refBookTitle": "How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning",
-      "refPublisher": ["kpmg"],
+      "refPublisher": [
+        "kpmg"
+      ],
       "citationStyle": "Stylish",
       "item": [],
       "lead": [],
@@ -20,7 +26,7 @@
       "refPublicationYear": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -31,11 +37,18 @@
       "type": "book-reference",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135647"],
+      "id": [
+        "135647"
+      ],
       "lang": "en-US",
-      "refAuthor": ["Philippe Pointet"],
+      "refAuthor": [
+        "Philippe Pointet"
+      ],
       "refBookTitle": "How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning",
-      "refPublisher": ["kpmg", "gmpk"],
+      "refPublisher": [
+        "kpmg",
+        "gmpk"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -46,7 +59,7 @@
       "refPublicationYear": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -57,11 +70,18 @@
       "type": "book-reference",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135647"],
+      "id": [
+        "135647"
+      ],
       "lang": "en-US",
-      "refAuthor": ["Philippe Pointet", "Someone Else"],
+      "refAuthor": [
+        "Philippe Pointet",
+        "Someone Else"
+      ],
       "refBookTitle": "How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning",
-      "refPublisher": ["kpmg"],
+      "refPublisher": [
+        "kpmg"
+      ],
       "refPublicationYear": "2025",
       "citationStyle": "Not so stylish",
       "item": [],
@@ -73,7 +93,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -148,7 +168,9 @@
       "type": "book-reference",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["135647"],
+      "id": [
+        "135647"
+      ],
       "lang": "en-US",
       "item": [],
       "lead": [],
@@ -163,7 +185,7 @@
       "refPublicationYear": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

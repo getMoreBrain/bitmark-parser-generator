@@ -434,6 +434,7 @@ const BitType = superenum({
   parameters: 'parameters',
   photo: 'photo',
   platform: 'platform',
+  platformBrandTarget: 'platform-brand-target',
   platformHeader: 'platform-header',
   platformMain: 'platform-main',
   platformMainButton: 'platform-main-button',

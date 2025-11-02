@@ -4,8 +4,12 @@
       "type": "page-product-list",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151970"],
-      "product": ["https://123.com"],
+      "id": [
+        "151970"
+      ],
+      "product": [
+        "https://123.com"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -16,7 +20,7 @@
       "slug": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -27,9 +31,14 @@
       "type": "page-product-list",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["304379"],
+      "id": [
+        "304379"
+      ],
       "slug": "testing-1234",
-      "product": ["https://123.com", "https://1234.com"],
+      "product": [
+        "https://123.com",
+        "https://1234.com"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -39,7 +48,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

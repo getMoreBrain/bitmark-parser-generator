@@ -4,7 +4,9 @@
       "type": "interview-instruction-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["92562"],
+      "id": [
+        "92562"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -420,7 +422,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.14.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -593,7 +595,9 @@
       "type": "interview-instruction-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["92562"],
+      "id": [
+        "92562"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -670,7 +674,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.14.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

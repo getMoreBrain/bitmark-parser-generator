@@ -4,7 +4,9 @@
       "type": "gap-text-instruction-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287822"],
+      "id": [
+        "287822"
+      ],
       "item": [],
       "lead": [
         {
@@ -33,7 +35,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["erfreut"],
+                "solutions": [
+                  "erfreut"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -72,7 +76,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["steht"],
+                "solutions": [
+                  "steht"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -106,7 +112,7 @@
       "quizStrikethroughSolutions": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -117,7 +123,9 @@
       "type": "gap-text-instruction-grouped",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["107938"],
+      "id": [
+        "107938"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -167,7 +175,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [""],
+                "solutions": [
+                  ""
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -198,7 +208,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": [""],
+                "solutions": [
+                  ""
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -229,7 +241,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Was"],
+                "solutions": [
+                  "Was"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -260,7 +274,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["Welche"],
+                "solutions": [
+                  "Welche"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -294,7 +310,7 @@
       "quizStrikethroughSolutions": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

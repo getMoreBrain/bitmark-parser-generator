@@ -4,7 +4,9 @@
       "type": "record-video",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["92374"],
+      "id": [
+        "92374"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -36,7 +38,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -56,7 +58,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

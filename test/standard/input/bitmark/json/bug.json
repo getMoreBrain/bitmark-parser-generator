@@ -4,19 +4,31 @@
       "type": "bug",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "groupTag": [
         {
           "name": "group A",
-          "tags": ["item 1", "", "item 2", "item 3"]
+          "tags": [
+            "item 1",
+            "",
+            "item 2",
+            "item 3"
+          ]
         },
         {
           "name": "",
-          "tags": [""]
+          "tags": [
+            ""
+          ]
         },
         {
           "name": "group B",
-          "tags": ["item B1"]
+          "tags": [
+            "item B1"
+          ]
         }
       ],
       "item": [],
@@ -80,7 +92,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -109,8 +121,13 @@
       "type": "bug-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
-      "searchIndex": ["Value1", "Value2"],
+      "id": [
+        "151971"
+      ],
+      "searchIndex": [
+        "Value1",
+        "Value2"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -224,7 +241,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
