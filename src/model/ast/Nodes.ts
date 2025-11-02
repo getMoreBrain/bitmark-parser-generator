@@ -247,6 +247,7 @@ export interface Bit {
   platformButtonBackgroundColor?: Property;
   platformMessageBackgroundColor?: Property;
   platformBackgroundImage?: ImageResourceWrapperJson;
+  coverImage?: ImageResourceWrapperJson;
   productId?: Property;
   product?: Property;
   productList?: Property;

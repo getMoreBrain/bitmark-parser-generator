@@ -314,6 +314,7 @@ class Builder extends BaseBuilder {
       platformButtonBackgroundColor?: string;
       platformMessageBackgroundColor?: string;
       platformBackgroundImage?: Partial<ImageResourceWrapperJson>;
+      coverImage?: string | string[] | Partial<ImageResourceWrapperJson>;
       productId?: string | string[];
       product?: string | string[];
       // productList?: string | string[];
@@ -639,12 +640,15 @@ class Builder extends BaseBuilder {
       subtype: this.toAstProperty(bitType, ConfigKey.property_subtype, data.subtype, options),
       bookAlias: this.toAstProperty(bitType, ConfigKey.property_bookAlias, data.bookAlias, options),
       bookDiff: this.toAstProperty(bitType, ConfigKey.property_bookDiff, data.bookDiff, options),
-      coverImage: this.toAstProperty(
-        bitType,
-        ConfigKey.property_coverImage,
-        data.coverImage,
-        options,
-      ),
+      coverImage:
+        typeof data.coverImage === 'string' || Array.isArray(data.coverImage)
+          ? this.toAstProperty(
+              bitType,
+              ConfigKey.property_coverImage,
+              data.coverImage,
+              options,
+            )
+          : this.toImageResource(context, data.coverImage),
       coverColor: this.toAstProperty(
         bitType,
         ConfigKey.property_coverColor,

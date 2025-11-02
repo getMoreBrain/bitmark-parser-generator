@@ -198,7 +198,8 @@ function resourceContentProcessor(
       configKey === ConfigKey.resource_imagePlaceholder ||
       configKey === ConfigKey.resource_platformIcon ||
       configKey === ConfigKey.resource_platformLogo ||
-      configKey === ConfigKey.resource_platformBackgroundImage
+      configKey === ConfigKey.resource_platformBackgroundImage ||
+      configKey === ConfigKey.resource_coverImage
     ) {
       if (target.propertyStyleResources) target.propertyStyleResources[resourceType] = resource;
     } else {

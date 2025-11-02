@@ -236,6 +236,16 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
+        key: ConfigKey.resource_coverImage,
+        description: 'Cover image of the catalog item',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the cover image resource',
+          },
+        ],
+      },
+      {
         key: ConfigKey.property_content2Buy,
         description: 'Content to buy identifier',
         format: TagFormat.plainText,
@@ -273,6 +283,16 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_coverImage,
         description: 'Cover image of the catalog item',
         format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.resource_coverImage,
+        description: 'Cover image of the catalog item',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the cover image resource',
+          },
+        ],
       },
       {
         key: ConfigKey.property_customerProductShopLink,
