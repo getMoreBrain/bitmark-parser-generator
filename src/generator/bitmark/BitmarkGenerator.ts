@@ -2052,14 +2052,19 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> coverImage
   protected enter_coverImage(node: NodeInfo, _route: NodeInfo[]): boolean {
-    const resource = node.value as ResourceJson;
-
-    // This is a resource, so handle it with the common code
-    this.writeNL();
-    this.writePropertyStyleResource(node.key, resource);
-
-    // Continue traversal
-    return true;
+    // Check if this is a resource (object with 'type' field) or a property (string/array)
+    const value = node.value;
+    
+    if (value && typeof value === 'object' && 'type' in value) {
+      // This is a resource, so handle it with the common code
+      const resource = value as ResourceJson;
+      this.writeNL();
+      this.writePropertyStyleResource(node.key, resource);
+      return true;
+    }
+    
+    // If it's a property (string/array), return false to use default property handling
+    return false;
   }
 
   protected exit_imagePlaceholder(_node: NodeInfo, _route: NodeInfo[]): void {

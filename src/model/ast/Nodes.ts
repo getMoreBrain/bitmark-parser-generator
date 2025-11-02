@@ -115,7 +115,7 @@ export interface Bit {
   subtype?: Property;
   bookAlias?: Property;
   bookDiff?: Property;
-  coverImage?: Property;
+  coverImage?: Property | ImageResourceWrapperJson;
   coverColor?: Property;
   publications?: Property;
   relatedBook?: Property;
@@ -247,7 +247,6 @@ export interface Bit {
   platformButtonBackgroundColor?: Property;
   platformMessageBackgroundColor?: Property;
   platformBackgroundImage?: ImageResourceWrapperJson;
-  coverImage?: ImageResourceWrapperJson;
   productId?: Property;
   product?: Property;
   productList?: Property;
