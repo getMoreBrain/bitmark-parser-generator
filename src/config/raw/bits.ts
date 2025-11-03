@@ -2713,7 +2713,6 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.property_authorTitle,
         description: 'The title of the author, e.g. "Dr.", "Prof.", etc.',
-        jsonKey: 'title',
         format: TagFormat.plainText,
       },
       {

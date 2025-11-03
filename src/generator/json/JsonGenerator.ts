@@ -1168,18 +1168,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           // Ignore any property that is not at the bit level as that will be handled by a different handler
           const parent = this.getParentNode(route);
           if (parent?.key !== NodeType.bitsValue) return;
-
-          // Get the bit type to lookup the property config for jsonKey
-          const bitType = this.getBitType(route);
-          const bitConfig = bitType ? Config.getBitConfig(bitType) : undefined;
-          const tagConfig = bitConfig
-            ? Config.getTagConfigForTag(bitConfig.tags, propertyConfigKey)
-            : undefined;
-          const jsonKey = tagConfig?.jsonKey ?? propertyTag;
+          // // Convert key as needed
+          // const jsonKey = propertyConfig.jsonKey ?? propertyConfig.tag;
+          // // Add the property
+          // this.addProperty(this.bitJson, jsonKey, value, { array: !propertyConfig.single });
 
           // Add the property
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (this.bitJson as any)[jsonKey] = value;
+          (this.bitJson as any)[propertyTag] = value;
         };
         // Bind this
         // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -9,7 +9,7 @@
       "slug": "testing-1234",
       "authorFullName": "John Doe",
       "authorPseudonym": "JD",
-      "title": "Dr.",
+      "authorTitle": "Dr.",
       "authorJobTitle": "Professor",
       "reference": "ch-5",
       "item": [
