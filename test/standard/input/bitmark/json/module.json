@@ -4,11 +4,18 @@
       "type": "module",
       "format": "bitmark++",
       "bitLevel": 1,
-      "ageRange": ["18", "120"],
+      "ageRange": [
+        "18",
+        "120"
+      ],
       "icon": "https://docs.getmorebrain.com/bit-books/ef/b1_1/student_book/unit_1/web-resources/images/icon_speaking_b1_v2.svg",
       "hasBookNavigation": false,
       "duration": "PT2H",
-      "productId": ["e-ef-b11_u1_l1", "e-ef-b11_u1_l12", "e-ef-b11_u1_l12"],
+      "productId": [
+        "e-ef-b11_u1_l1",
+        "e-ef-b11_u1_l12",
+        "e-ef-b11_u1_l12"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -67,7 +74,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -88,7 +95,7 @@
       "hasBookNavigation": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

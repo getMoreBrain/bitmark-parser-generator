@@ -147,6 +147,10 @@ export interface Bit {
   classification?: Property;
   availableClassifications?: Property;
   allowedBit?: Property;
+  authorFullName?: Property;
+  authorPseudonym?: Property;
+  authorTitle?: Property;
+  authorJobTitle?: Property;
   tableFixedHeader?: Property;
   tableHeaderWhitespaceNoWrap?: Property;
   tableSearch?: Property;
@@ -232,6 +236,7 @@ export interface Bit {
   tocResource?: Property;
   tocContent?: Property;
   page?: Property;
+  platformBrandTarget?: Property;
   platformName?: Property;
   platformIcon?: ImageResourceWrapperJson;
   platformLogo?: ImageResourceWrapperJson;

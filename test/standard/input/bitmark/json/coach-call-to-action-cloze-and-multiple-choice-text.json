@@ -4,7 +4,9 @@
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287842"],
+      "id": [
+        "287842"
+      ],
       "item": [],
       "lead": [
         {
@@ -33,7 +35,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["cloze"],
+                "solutions": [
+                  "cloze"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -246,7 +250,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -257,7 +261,9 @@
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287843"],
+      "id": [
+        "287843"
+      ],
       "item": [],
       "lead": [
         {
@@ -286,7 +292,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["cloze"],
+                "solutions": [
+                  "cloze"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -510,7 +518,7 @@
       "isExample": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -521,7 +529,9 @@
       "type": "coach-call-to-action-cloze-and-multiple-choice-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["287844"],
+      "id": [
+        "287844"
+      ],
       "item": [],
       "lead": [
         {
@@ -550,7 +560,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["cloze", "gap"],
+                "solutions": [
+                  "cloze",
+                  "gap"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -774,7 +787,7 @@
       "isExample": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

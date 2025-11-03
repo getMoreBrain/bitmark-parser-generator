@@ -13,6 +13,10 @@ const propertyKeys = {
   property_altLangTag: '@altLangTag',
   property_analyticsTag: '@analyticsTag',
   property_author: '@author',
+  property_authorFullName: '@authorFullName',
+  property_authorJobTitle: '@authorJobTitle',
+  property_authorPseudonym: '@authorPseudonym',
+  property_authorTitle: '@authorTitle',
   property_autoplay: '@autoplay',
   property_availableClassifications: '@availableClassifications',
   property_brandColor: '@brandColor',
@@ -129,6 +133,7 @@ const propertyKeys = {
   property_partner: '@partner', // Deprecated, replaced by person
   property_path: '@path',
   property_platformBackgroundColor: '@platformBackgroundColor',
+  property_platformBrandTarget: '@platformBrandTarget',
   property_platformButtonBackgroundColor: '@platformButtonBackgroundColor',
   property_platformButtonPrimaryColor: '@platformButtonPrimaryColor',
   property_platformMessageBackgroundColor: '@platformMessageBackgroundColor',

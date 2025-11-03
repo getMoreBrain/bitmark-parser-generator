@@ -1910,6 +1910,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.path == null) bitJson.path = '';
       }
 
+      // Special case for 'platform-brand-target' bits
+      if (Config.isOfBitType(bitType, BitType.platformBrandTarget)) {
+        if (bitJson.platformBrandTarget == null) bitJson.platformBrandTarget = 'none';
+      }
+
       // Remove top level example if it is not required
       if (isTopLevelExample) {
         if (bitJson.isExample == null) bitJson.isExample = false;

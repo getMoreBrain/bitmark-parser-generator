@@ -104,6 +104,10 @@ export interface BitJson {
   classification: string;
   availableClassifications: string | string[];
   allowedBit: string | string[];
+  authorFullName: string;
+  authorPseudonym: string;
+  authorTitle: string;
+  authorJobTitle: string;
   tableFixedHeader: boolean;
   tableHeaderWhitespaceNoWrap: boolean;
   tableSearch: boolean;
@@ -179,6 +183,7 @@ export interface BitJson {
   tocResource: string | string[];
   tocContent: string | string[];
   page: string;
+  platformBrandTarget: string;
   platformName: string;
   platformIcon: ImageResourceWrapperJson;
   platformLogo: ImageResourceWrapperJson;

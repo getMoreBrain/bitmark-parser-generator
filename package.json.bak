@@ -1,0 +1,173 @@
+{
+  "name": "@gmb/bitmark-parser-generator",
+  "version": "4.15.0",
+  "description": "A bitmark parser and generator using Peggy.js",
+  "author": "Get More Brain Ltd",
+  "license": "ISC",
+  "homepage": "https://github.com/getMoreBrain/bitmark-parser-generator#readme",
+  "type": "module",
+  "browser": "./dist/browser/bitmark-parser-generator.min.js",
+  "module": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "exports": {
+    "./browser/cjs": {
+      "browser": "./dist/browser/cjs/index.cjs",
+      "import": "./dist/browser/cjs/index.cjs",
+      "require": "./dist/browser/cjs/index.cjs"
+    },
+    "./browser/esm": {
+      "browser": "./dist/browser/esm/index.js",
+      "import": "./dist/browser/esm/index.js",
+      "require": "./dist/browser/esm/index.js"
+    },
+    "./browser": {
+      "browser": "./dist/browser/esm/index.js",
+      "import": "./dist/browser/esm/index.js",
+      "require": "./dist/browser/cjs/index.cjs"
+    },
+    "./cjs": {
+      "import": "./dist/index.cjs",
+      "require": "./dist/index.cjs"
+    },
+    "./esm": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "init": "node scripts/init.ts",
+    "start": "npm run start-parser",
+    "start-info": "node ./test/custom/dev/devInfo.ts",
+    "start-generate-config": "node ./test/custom/dev/devGenerateConfig.ts",
+    "start-parser": "node ./test/custom/dev/devParser.ts",
+    "start-generator": "node ./test/custom/dev/devGenerator.ts",
+    "start-prettify": "node ./test/custom/dev/devPrettify.ts",
+    "start-text-bitmark-body-parser": "node ./test/custom/dev/devTextBitmarkBodyParser.ts",
+    "start-text-bitmark-body-generator": "node ./test/custom/dev/devTextBitmarkBodyGenerator.ts",
+    "start-text-bitmark-tag-parser": "node ./test/custom/dev/devTextBitmarkTagParser.ts",
+    "start-text-bitmark-tag-generator": "node ./test/custom/dev/devTextBitmarkTagGenerator.ts",
+    "start-text-bitmark-body-breakscape": "node ./test/custom/dev/devTextBitmarkBodyBreakscape.ts",
+    "start-text-bitmark-body-unbreakscape": "node ./test/custom/dev/devTextBitmarkBodyUnbreakscape.ts",
+    "start-text-bitmark-tag-breakscape": "node ./test/custom/dev/devTextBitmarkTagBreakscape.ts",
+    "start-text-bitmark-tag-unbreakscape": "node ./test/custom/dev/devTextBitmarkTagUnbreakscape.ts",
+    "start-text-plain-body-breakscape": "node ./test/custom/dev/devTextPlainBodyBreakscape.ts",
+    "start-text-plain-body-unbreakscape": "node ./test/custom/dev/devTextPlainBodyUnbreakscape.ts",
+    "start-text-plain-tag-breakscape": "node ./test/custom/dev/devTextPlainTagBreakscape.ts",
+    "start-text-plain-tag-unbreakscape": "node ./test/custom/dev/devTextPlainTagUnbreakscape.ts",
+    "build": "npm run clean && npm run init && npm run build-grammar-bit && npm run build-grammar-text && npm run check && tsup && npm run build-browser && npm run build-supported-info",
+    "build-browser": "webpack -c ./webpack.config.cjs",
+    "build-doc": "typedoc",
+    "build-grammar-bit": "node ./scripts/grammar/bitmark/generate-bitmark-parser.ts --bit",
+    "build-grammar-bit-test": "BPG_ENV=development node ./scripts/grammar/bitmark/generate-bitmark-parser.ts --bit --test",
+    "build-grammar-text": "node ./scripts/grammar/text/generate-text-parser.ts",
+    "build-grammar-text-test": "BPG_ENV=development node ./scripts/grammar/text/generate-text-parser.ts --test",
+    "build-supported-info": "node ./scripts/generate-supported-bits-info.ts",
+    "test": "vitest run",
+    "test-watch": "vitest",
+    "test-ci": "vitest run",
+    "test-generator": "vitest run test/standard/bitmark-generator.test.ts",
+    "test-parser": "vitest run test/standard/bitmark-parser.test.ts",
+    "test-text-bitmark-body-parser": "vitest run test/standard/text-bitmark-body-parser.test.ts",
+    "test-text-bitmark-body-generator": "vitest run test/standard/text-bitmark-body-generator.test.ts",
+    "test-text-bitmark-tag-parser": "vitest run test/standard/text-bitmark-tag-parser.test.ts",
+    "test-text-bitmark-tag-generator": "vitest run test/standard/text-bitmark-tag-generator.test.ts",
+    "test-text-bitmark-body-breakscape": "vitest run test/standard/text-bitmark-body-breakscape.test.ts",
+    "test-text-bitmark-body-unbreakscape": "vitest run test/standard/text-bitmark-body-unbreakscape.test.ts",
+    "test-text-bitmark-tag-breakscape": "vitest run test/standard/text-bitmark-tag-breakscape.test.ts",
+    "test-text-bitmark-tag-unbreakscape": "vitest run test/standard/text-bitmark-tag-unbreakscape.test.ts",
+    "test-text-plain-body-breakscape": "vitest run test/standard/text-plain-body-breakscape.test.ts",
+    "test-text-plain-body-unbreakscape": "vitest run test/standard/text-plain-body-unbreakscape.test.ts",
+    "test-text-plain-tag-breakscape": "vitest run test/standard/text-plain-tag-breakscape.test.ts",
+    "test-text-plain-tag-unbreakscape": "vitest run test/standard/text-plain-tag-unbreakscape.test.ts",
+    "test-web-parser": "vitest run test/standard/web-parser.test.ts",
+    "test-web-generator": "vitest run test/standard/web-generator.test.ts",
+    "check": "npm run init && npm run typecheck && npm run lint",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "lint-fix": "eslint . --fix",
+    "regenerate-bitmark-test-json": "node ./test/custom/dev/devRegenerateBitmarkTestJson.ts",
+    "prepublishOnly": "npm run clean && npm run build && npm run test",
+    "clean": "node scripts/clean.ts",
+    "tsup": "tsup",
+    "tsc": "tsc",
+    "webpack": "webpack"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24.0.0",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "npm",
+      "version": "^11.0.0",
+      "onFail": "error"
+    }
+  },
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  },
+  "keywords": [
+    "bitmark"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getMoreBrain/bitmark-parser-generator.git"
+  },
+  "browserslist": {
+    "modern": [
+      "last 5 chrome versions",
+      "last 5 firefox versions"
+    ]
+  },
+  "jsdelivr": "dist/browser/bitmark-parser-generator.min.js",
+  "unpkg": "dist/browser/bitmark-parser-generator.min.js",
+  "contributors": [
+    "Richard Sewell (https://github.com/six5536)"
+  ],
+  "dependencies": {
+    "@ncoderz/superenum": "^0.2.5",
+    "@types/fs-extra": "^11.0.4",
+    "fs-extra": "^11.3.0"
+  },
+  "devDependencies": {
+    "@eslint/json": "^0.13.1",
+    "@eslint/markdown": "^7.1.0",
+    "@swc/core": "^1.13.2",
+    "@types/ungap__structured-clone": "^1.2.0",
+    "@types/webpack-bundle-analyzer": "^4.7.0",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "diff": "^8.0.1",
+    "eslint": "^9.30.1",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "jsdom": "^26.1.0",
+    "node-polyfill-webpack-plugin": "^4.1.0",
+    "os-browserify": "^0.3.0",
+    "peggy": "^5.0.5",
+    "prettier": "^3.6.2",
+    "terser-webpack-plugin": "^5.3.14",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.6",
+    "typedoc": "^0.28.1",
+    "typedoc-plugin-markdown": "^4.6.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.37.0",
+    "vitest": "^3.2.4",
+    "webpack": "^5.98.0",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^6.0.1"
+  }
+}

@@ -45,7 +45,7 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -89,7 +89,9 @@
       "type": "essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["245552"],
+      "id": [
+        "245552"
+      ],
       "item": [],
       "lead": [
         {
@@ -140,7 +142,7 @@
       "example": null
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -216,7 +218,9 @@
       "type": "essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["272740"],
+      "id": [
+        "272740"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -346,7 +350,7 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -357,7 +361,9 @@
       "type": "essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["152151"],
+      "id": [
+        "152151"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -810,7 +816,7 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -821,7 +827,9 @@
       "type": "essay",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["136476"],
+      "id": [
+        "136476"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -863,7 +871,7 @@
       "partialAnswer": ""
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

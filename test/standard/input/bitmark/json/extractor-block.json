@@ -12,7 +12,10 @@
       "height": 100,
       "index": 99,
       "classification": "paragraph",
-      "availableClassifications": ["test1", "test2"],
+      "availableClassifications": [
+        "test1",
+        "test2"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -38,7 +41,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

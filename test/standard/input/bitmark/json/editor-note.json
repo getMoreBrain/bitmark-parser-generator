@@ -4,7 +4,9 @@
       "type": "editor-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["210022"],
+      "id": [
+        "210022"
+      ],
       "item": [],
       "lead": [
         {
@@ -41,7 +43,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -52,7 +54,9 @@
       "type": "editor-note",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["210040"],
+      "id": [
+        "210040"
+      ],
       "item": [],
       "lead": [
         {
@@ -89,7 +93,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

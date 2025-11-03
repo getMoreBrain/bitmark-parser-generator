@@ -1,0 +1,74 @@
+[
+  {
+    "bit": {
+      "type": "open-book-chapter",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["342342"],
+      "book": "the_chapter_book",
+      "slug": "chapter-testing-5678",
+      "authorFullName": "Jane Smith",
+      "authorPseudonym": "JS",
+      "authorTitle": "Prof.",
+      "authorJobTitle": "Lead Researcher",
+      "reference": "ch-3",
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Publisher Name",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Chapter Type",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Chapter Title",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Open Chapter",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.10.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.open-book-chapter]\n[@id:342342]\n[@slug:chapter-testing-5678]\n[@book:the_chapter_book][►ch-3]\n[@authorFullName:Jane Smith]\n[@authorPseudonym:JS]\n[@authorTitle:Prof.]\n[@authorJobTitle:Lead Researcher]\n[%Publisher Name]\n[!Chapter Title]\n[?Chapter Type]\nOpen Chapter"
+  }
+]
