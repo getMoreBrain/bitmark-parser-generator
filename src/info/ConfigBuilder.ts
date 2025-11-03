@@ -45,7 +45,7 @@ class ConfigBuilder {
       const g2 = g as unknown as _GroupsConfig & { key: string };
       let k2 = k as string;
       if (k.startsWith('group_')) k2 = k2.substring(6);
-      k2 = /*'_' +*/ `group-${StringUtils.camelToKebab(k2)}`;
+      k2 = /*'_' +*/ StringUtils.camelToKebab(k2);
       g2.key = k2;
       groupConfigs.push(g2);
     }
@@ -74,7 +74,11 @@ class ConfigBuilder {
         const typeOrder = tagEntriesTypeOrder.indexOf(typeA) - tagEntriesTypeOrder.indexOf(typeB);
         return typeOrder;
       });
-      if (b.baseBitType) inherits.push(b.baseBitType);
+      if (b.baseBitType)
+        inherits.push({
+          type: 'bit',
+          name: b.baseBitType,
+        });
       for (const [_tagKey, tag] of tagEntries) {
         const tagName = tag.key as string;
         let format = '';
@@ -123,8 +127,11 @@ class ConfigBuilder {
         } else if (tagType === BitTagConfigKeyType.group) {
           let k = tag.key as string;
           if (k.startsWith('group_')) k = k.substring(6);
-          k = /*'_' +*/ `group-${StringUtils.camelToKebab(k)}`;
-          inherits.push(k);
+          k = /*'_' +*/ StringUtils.camelToKebab(k);
+          inherits.push({
+            type: 'group',
+            name: k,
+          });
           continue;
         }
         const t = {
@@ -176,7 +183,7 @@ class ConfigBuilder {
       for (const g of groupConfigs) {
         const inherits = [];
         const tags = [];
-        const groupKey = `group-${StringUtils.camelToKebab(g.key)}`;
+        const groupKey = StringUtils.camelToKebab(g.key);
         // if (groupKey == '_resourceImage') debugger;
         const tagEntriesTypeOrder = [
           BitTagConfigKeyType.tag,
@@ -245,8 +252,11 @@ class ConfigBuilder {
           } else if (tagType === BitTagConfigKeyType.group) {
             let k = tag.key as string;
             if (k.startsWith('group_')) k = k.substring(6);
-            k = /*'_' +*/ `group-${StringUtils.camelToKebab(k)}`;
-            inherits.push(k);
+            k = /*'_' +*/ StringUtils.camelToKebab(k);
+            inherits.push({
+              type: 'group',
+              name: k,
+            });
             continue;
           }
           const t = {
@@ -428,7 +438,10 @@ class ConfigBuilder {
           let k = tag.configKey as string;
           if (k.startsWith('group_')) k = k.substring(6);
           k = '_' + k;
-          inherits.push(k);
+          inherits.push({
+            type: 'group',
+            name: k,
+          });
           continue;
         }
         const t = {
