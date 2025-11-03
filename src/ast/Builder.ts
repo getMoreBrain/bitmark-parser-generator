@@ -219,6 +219,10 @@ class Builder extends BaseBuilder {
       classification?: string;
       availableClassifications?: string | string[];
       allowedBit?: string | string[];
+      authorFullName?: string;
+      authorPseudonym?: string;
+      authorTitle?: string;
+      authorJobTitle?: string;
       tableFixedHeader?: boolean;
       tableHeaderWhitespaceNoWrap?: boolean;
       tableSearch?: boolean;
@@ -754,6 +758,30 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_allowedBit,
         data.allowedBit,
+        options,
+      ),
+      authorFullName: this.toAstProperty(
+        bitType,
+        ConfigKey.property_authorFullName,
+        data.authorFullName,
+        options,
+      ),
+      authorPseudonym: this.toAstProperty(
+        bitType,
+        ConfigKey.property_authorPseudonym,
+        data.authorPseudonym,
+        options,
+      ),
+      authorTitle: this.toAstProperty(
+        bitType,
+        ConfigKey.property_authorTitle,
+        data.authorTitle,
+        options,
+      ),
+      authorJobTitle: this.toAstProperty(
+        bitType,
+        ConfigKey.property_authorJobTitle,
+        data.authorJobTitle,
         options,
       ),
       tableFixedHeader: this.toAstProperty(

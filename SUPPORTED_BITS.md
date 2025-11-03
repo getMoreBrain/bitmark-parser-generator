@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 4.15.0
+Version: 4.16.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -414,6 +414,7 @@ page-footer (since: 1.4.13)
 page-hero (since: 1.11.0)
 page-open-book (since: 1.5.10)
 page-open-book-list (since: 2.1.0)
+open-book-chapter (since: 4.16.0)
 page-person (since: 1.5.16)
 page-product (since: 1.4.17)
 page-product-list (since: 1.4.17)

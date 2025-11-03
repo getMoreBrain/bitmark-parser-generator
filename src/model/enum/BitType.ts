@@ -420,6 +420,7 @@ const BitType = superenum({
   pageHero: 'page-hero',
   pageOpenBook: 'page-open-book',
   pageOpenBookList: 'page-open-book-list',
+  openBookChapter: 'open-book-chapter',
   pagePerson: 'page-person',
   pageProduct: 'page-product',
   pageProductList: 'page-product-list',

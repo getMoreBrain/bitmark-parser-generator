@@ -104,6 +104,10 @@ export interface BitJson {
   classification: string;
   availableClassifications: string | string[];
   allowedBit: string | string[];
+  authorFullName: string;
+  authorPseudonym: string;
+  authorTitle: string;
+  authorJobTitle: string;
   tableFixedHeader: boolean;
   tableHeaderWhitespaceNoWrap: boolean;
   tableSearch: boolean;
