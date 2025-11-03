@@ -187,7 +187,7 @@ class Builder extends BaseBuilder {
       subtype?: string;
       bookAlias?: string | string[];
       bookDiff?: string;
-      coverImage?: string | string[];
+      coverImage?: string | string[] | Partial<ImageResourceWrapperJson>;
       coverColor?: string;
       publications?: string | string[];
       relatedBook?: string | string[];
@@ -314,7 +314,6 @@ class Builder extends BaseBuilder {
       platformButtonBackgroundColor?: string;
       platformMessageBackgroundColor?: string;
       platformBackgroundImage?: Partial<ImageResourceWrapperJson>;
-      coverImage?: string | string[] | Partial<ImageResourceWrapperJson>;
       productId?: string | string[];
       product?: string | string[];
       // productList?: string | string[];
@@ -645,7 +644,7 @@ class Builder extends BaseBuilder {
           ? this.toAstProperty(
               bitType,
               ConfigKey.property_coverImage,
-              data.coverImage,
+              ArrayUtils.asArray(data.coverImage),
               options,
             )
           : this.toImageResource(context, data.coverImage),

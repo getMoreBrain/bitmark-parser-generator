@@ -20,7 +20,9 @@
       "levelILR": "levelILR",
       "levelACTFL": "levelACTFL",
       "subtype": "draft-book",
-      "coverImage": "https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png",
+      "coverImage": [
+        "https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png"
+      ],
       "coverColor": "#F2F2F2",
       "relatedBook": ["n_9374th83h20", "g_F2F2F2"],
       "author": ["Philippe Pointet"],
@@ -68,7 +70,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -105,7 +107,7 @@
         }
       ]
     },
-    "bitmark": "[.book]\n[@id:135647]\n[@lang:en-US]\n[@language:de]\n[@language:en]\n[@language:jp]\n[@language:cn]\n[@publisher:kpmg]\n[@publisherName:KPMG]\n[@theme:grundzuege]\n[@spaceId:sl]\n[#How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[##Or, what the digitization of textbooks has to do with Schiller and power sockets]\n[@subtype:draft-book]\n[@author:Philippe Pointet]\n[@customerExternalId:a-bow-the-content-n_9374th83h20]\n[@externalId:e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc]\n[@kind:learning-path]\n[@coverImage:https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png]\n[@coverColor:#F2F2F2]\n[@hasMarkAsDone]\n[@isPublic]\n[@duration:PT2H]\n[@relatedBook:n_9374th83h20]\n[@relatedBook:g_F2F2F2]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]\n[@maxTocChapterLevel:5]\n[@processHandIn]\n[@chatWithBook]\n[@isEditable]\n[@chatWithBookBrainKey:12435]\n[@processHandInLocation:Hong Kong]"
+    "bitmark": "[.book]\n[@id:135647]\n[@lang:en-US]\n[@language:de]\n[@language:en]\n[@language:jp]\n[@language:cn]\n[@publisher:kpmg]\n[@publisherName:KPMG]\n[@theme:grundzuege]\n[@spaceId:sl]\n[#How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[##Or, what the digitization of textbooks has to do with Schiller and power sockets]\n[@subtype:draft-book]\n[@author:Philippe Pointet]\n[@customerExternalId:a-bow-the-content-n_9374th83h20]\n[@externalId:e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc]\n[@kind:learning-path]\n[@coverImage:https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png]\n[@coverColor:#F2F2F2]\n[@hasMarkAsDone]\n[@isPublic]\n[@duration:PT2H]\n[@relatedBook:n_9374th83h20]\n[@relatedBook:g_F2F2F2]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]\n[@maxTocChapterLevel:5]\n[@sourceDocument:http://example.com/source.pdf]\n[@internalPrintPdf:http://example.com/print.pdf]\n[@hasPrintRestriction:false]\n[@processHandIn]\n[@chatWithBook]\n[@isEditable]\n[@chatWithBookBrainKey:12435]\n[@processHandInLocation:Hong Kong]"
   },
   {
     "bit": {

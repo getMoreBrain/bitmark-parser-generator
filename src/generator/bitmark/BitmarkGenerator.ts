@@ -2054,7 +2054,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> coverImage (when it's a resource object or property array)
   protected enter_coverImage(node: NodeInfo, route: NodeInfo[]): boolean {
     const value = node.value;
-    
+
     // Check if this is a resource (object with 'type' field and not an array) or a property array
     if (value && typeof value === 'object' && !Array.isArray(value) && 'type' in value) {
       // This is a resource
@@ -2063,11 +2063,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // This is a resource, so handle it with the common code
       this.writeNL();
       this.writePropertyStyleResource(node.key, resource);
-      
+
       // Continue traversal
       return true;
     }
-    
+
     // If it's an array (property), handle it like a property
     if (Array.isArray(value)) {
       // This is a property array - use the standard property handling
@@ -2081,9 +2081,10 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (!bitType) return true;
 
       const config = Config.getBitConfig(bitType);
-      const propertyConfig = Config.getTagConfigForTag(config.tags, ConfigKey.property_coverImage) as
-        | PropertyTagConfig
-        | undefined;
+      const propertyConfig = Config.getTagConfigForTag(
+        config.tags,
+        ConfigKey.property_coverImage,
+      ) as PropertyTagConfig | undefined;
       if (!propertyConfig) return true;
 
       // Write the property
@@ -2096,7 +2097,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         ignoreTrue: propertyConfig.defaultValue === 'true',
       });
     }
-    
+
     // Continue traversal
     return true;
   }
