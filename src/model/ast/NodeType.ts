@@ -378,6 +378,8 @@ const NodeType = superenum({
   partialAnswerValue: 'partialAnswerValue',
   path: 'path',
   pathValue: 'pathValue',
+  platformBrandTarget: 'platformBrandTarget',
+  platformBrandTargetValue: 'platformBrandTargetValue',
   platformName: 'platformName',
   platformNameValue: 'platformNameValue',
   platformIcon: 'platformIcon',

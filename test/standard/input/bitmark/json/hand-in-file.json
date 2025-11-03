@@ -4,8 +4,13 @@
       "type": "hand-in-file",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["189522"],
-      "handInAcceptFileType": ["application/pdf", "image/tiff"],
+      "id": [
+        "189522"
+      ],
+      "handInAcceptFileType": [
+        "application/pdf",
+        "image/tiff"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -47,7 +52,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -58,7 +63,9 @@
       "type": "hand-in-file",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213729"],
+      "id": [
+        "213729"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -112,7 +119,7 @@
       "handInAcceptFileType": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -123,8 +130,12 @@
       "type": "hand-in-file",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213734"],
-      "handInAcceptFileType": ["image/tiff"],
+      "id": [
+        "213734"
+      ],
+      "handInAcceptFileType": [
+        "image/tiff"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -163,7 +174,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -208,7 +219,9 @@
       "type": "hand-in-file",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["213737"],
+      "id": [
+        "213737"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -263,7 +276,7 @@
       "handInAcceptFileType": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -308,7 +321,9 @@
       "type": "hand-in-file",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["197943"],
+      "id": [
+        "197943"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -319,7 +334,7 @@
       "handInAcceptFileType": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

@@ -13,7 +13,7 @@
       "body": "Article 1\n[?NOT a hint]\n[.article]\nArticle 1.1"
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -79,7 +79,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -110,7 +110,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -138,7 +138,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["solution", "problem"],
+                "solutions": [
+                  "solution",
+                  "problem"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -162,7 +165,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["different"],
+                "solutions": [
+                  "different"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -186,7 +191,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["sensitivity"],
+                "solutions": [
+                  "sensitivity"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -203,7 +210,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -234,7 +241,7 @@
       "body": "This is some code and here no ^ hats should be\nremoved or anything [^.bit] [^.silly^] like that^\n[^notabit]\nThe only thing that should be removed is\n[.notabit]\n[^.notabit]\n[^^.notabit]\nthe start of a new bit\n\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -262,7 +269,10 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["solu^tion", "problem"],
+                "solutions": [
+                  "solu^tion",
+                  "problem"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -283,7 +293,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -316,7 +326,7 @@
       }
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -347,7 +357,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "errors": [
@@ -376,7 +386,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -426,7 +438,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -437,7 +449,9 @@
       "type": "cloze",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -489,7 +503,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["gap"],
+                "solutions": [
+                  "gap"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -540,7 +556,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -551,7 +567,9 @@
       "type": "extractor-configuration",
       "format": "text",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -583,7 +601,7 @@
       "body": "[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -594,7 +612,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -664,7 +684,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -675,7 +695,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -765,7 +787,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -809,7 +831,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -859,7 +883,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -870,7 +894,9 @@
       "type": "cloze",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -922,7 +948,9 @@
             {
               "type": "gap",
               "attrs": {
-                "solutions": ["gap"],
+                "solutions": [
+                  "gap"
+                ],
                 "item": [],
                 "lead": [],
                 "hint": [],
@@ -973,7 +1001,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -984,7 +1012,9 @@
       "type": "extractor-configuration",
       "format": "text",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -1016,7 +1046,7 @@
       "body": "[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1027,7 +1057,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -1097,7 +1129,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1108,7 +1140,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -1219,7 +1253,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -1263,7 +1297,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["12345"],
+      "id": [
+        "12345"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -1316,7 +1352,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1393,7 +1429,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -1521,7 +1557,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -1586,7 +1622,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1695,7 +1731,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1765,7 +1801,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1832,7 +1868,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -1897,7 +1933,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1964,7 +2000,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -2029,7 +2065,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

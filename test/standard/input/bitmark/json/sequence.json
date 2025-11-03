@@ -4,7 +4,9 @@
       "type": "sequence",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285747"],
+      "id": [
+        "285747"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -88,7 +90,7 @@
       "example": true
     },
     "parser": {
-      "version": "4.14.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -99,7 +101,9 @@
       "type": "sequence",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285748"],
+      "id": [
+        "285748"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -183,7 +187,7 @@
       "example": true
     },
     "parser": {
-      "version": "4.14.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -194,7 +198,9 @@
       "type": "sequence",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285749"],
+      "id": [
+        "285749"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -374,7 +380,7 @@
       "example": null
     },
     "parser": {
-      "version": "4.14.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

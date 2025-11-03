@@ -4140,6 +4140,18 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.platformBrandTarget]: {
+    since: '4.15.0',
+    baseBitType: BitType._standard,
+    description: 'Platform brand target bit, used to define the brand target for publishing',
+    tags: [
+      {
+        key: ConfigKey.property_platformBrandTarget,
+        description: 'The platform brand target (typically "light", "dark" or "none")',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
   [BitType.platformHeader]: {
     since: '4.12.0',
     baseBitType: BitType._standard,

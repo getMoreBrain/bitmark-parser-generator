@@ -4,7 +4,9 @@
       "type": "match-all",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["92546"],
+      "id": [
+        "92546"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -82,7 +84,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["Unterbringung", "Übernachtung"]
+          "values": [
+            "Unterbringung",
+            "Übernachtung"
+          ]
         },
         {
           "key": "Herberge",
@@ -103,7 +108,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["Hotel", "Unterbringungsmöglichkeit"]
+          "values": [
+            "Hotel",
+            "Unterbringungsmöglichkeit"
+          ]
         },
         {
           "key": "übernachten",
@@ -124,7 +132,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["logieren", "residieren"]
+          "values": [
+            "logieren",
+            "residieren"
+          ]
         },
         {
           "key": "überwiegend",
@@ -145,7 +156,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["hauptsächlich", "weitgehend"]
+          "values": [
+            "hauptsächlich",
+            "weitgehend"
+          ]
         },
         {
           "key": "einen guten Ruf haben",
@@ -166,14 +180,17 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["einen guten Namen haben", "angesehen sein"]
+          "values": [
+            "einen guten Namen haben",
+            "angesehen sein"
+          ]
         }
       ],
       "isExample": false,
       "heading": {}
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -184,7 +201,9 @@
       "type": "match-all",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["324342"],
+      "id": [
+        "324342"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -244,7 +263,7 @@
       "heading": {}
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -340,7 +359,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["", ""]
+          "values": [
+            "",
+            ""
+          ]
         },
         {
           "key": "2. Wie kann man einen DVD-Spieler problemlos programmieren?__(die Anweisungen genau beachten)__",
@@ -350,7 +372,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["", ""]
+          "values": [
+            "",
+            ""
+          ]
         },
         {
           "key": "3. Wie kann man Opfer eines Internetangriffs werden?__(auf Anhänge oder Links in E-Mails unbekannter Herkunft klicken)__",
@@ -360,7 +385,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["", ""]
+          "values": [
+            "",
+            ""
+          ]
         },
         {
           "key": "4. Wie können kriminelle Hacker Geld von Banken erbeuten?__(Rechner einzelner Angestellter infizieren und sich so Zugang zu den internen Netzwerken verschaffen)__",
@@ -370,7 +398,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["", ""]
+          "values": [
+            "",
+            ""
+          ]
         },
         {
           "key": "5. Wie kann man sich vor Computerviren schützen?__(ein Antivirenprogramm benutzen)__",
@@ -380,7 +411,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["", ""]
+          "values": [
+            "",
+            ""
+          ]
         },
         {
           "key": "6. Wie können wir bessere Produkte anbieten?__(kreativer sein als die Konkurrenz)__",
@@ -390,14 +424,17 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["", ""]
+          "values": [
+            "",
+            ""
+          ]
         }
       ],
       "isExample": true,
       "heading": {}
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -704,7 +741,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["Unterbringung", "Übernachtung"]
+          "values": [
+            "Unterbringung",
+            "Übernachtung"
+          ]
         },
         {
           "key": "Herberge",
@@ -725,7 +765,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["Hotel", "Unterbringungsmöglichkeit"]
+          "values": [
+            "Hotel",
+            "Unterbringungsmöglichkeit"
+          ]
         },
         {
           "key": "übernachten",
@@ -746,7 +789,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["logieren", "residieren"]
+          "values": [
+            "logieren",
+            "residieren"
+          ]
         },
         {
           "key": "überwiegend",
@@ -767,7 +813,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["hauptsächlich", "weitgehend"]
+          "values": [
+            "hauptsächlich",
+            "weitgehend"
+          ]
         },
         {
           "key": "einen guten Ruf haben",
@@ -788,14 +837,17 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["einen guten Namen haben", "angesehen sein"]
+          "values": [
+            "einen guten Namen haben",
+            "angesehen sein"
+          ]
         }
       ],
       "isExample": false,
       "heading": {}
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -866,7 +918,9 @@
               "attrs": {}
             }
           ],
-          "values": ["Kannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir."]
+          "values": [
+            "Kannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir."
+          ]
         },
         {
           "key": "die Gäste – das Restaurant Milano – auf dem Stadtplan – zeigen",
@@ -911,7 +965,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["Kannst du der Firma Krüger das Angebot faxen?", "Ja, ich faxe es ihr."]
+          "values": [
+            "Kannst du der Firma Krüger das Angebot faxen?",
+            "Ja, ich faxe es ihr."
+          ]
         },
         {
           "key": "ich – die Hausarbeit – am Wochenende – abnehmen",
@@ -980,7 +1037,10 @@
           "isCaseSensitive": true,
           "isExample": false,
           "example": null,
-          "values": ["Kannst du mir dein Auto schenken?", "Nein, ich schenke es dir nicht."]
+          "values": [
+            "Kannst du mir dein Auto schenken?",
+            "Nein, ich schenke es dir nicht."
+          ]
         },
         {
           "key": "wir – zwei Flaschen Mineralwasser – mitbringen",
@@ -1011,7 +1071,7 @@
       "heading": {}
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

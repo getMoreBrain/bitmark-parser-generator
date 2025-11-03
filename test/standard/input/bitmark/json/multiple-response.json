@@ -4,7 +4,9 @@
       "type": "multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["291969"],
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -22,7 +24,11 @@
           "attrs": {}
         }
       ],
-      "additionalSolutions": ["word1", "word2", "word3"],
+      "additionalSolutions": [
+        "word1",
+        "word2",
+        "word3"
+      ],
       "body": [],
       "quizzes": [
         {
@@ -83,7 +89,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -128,7 +134,9 @@
       "type": "multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["291969"],
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -206,7 +214,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -283,7 +291,9 @@
       "type": "multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["291969"],
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -361,7 +371,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -406,7 +416,9 @@
       "type": "multiple-response",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["291969"],
+      "id": [
+        "291969"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -484,7 +496,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -610,7 +622,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -720,7 +732,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -830,7 +842,7 @@
       "footer": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

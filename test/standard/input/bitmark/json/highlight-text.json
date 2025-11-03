@@ -4,7 +4,9 @@
       "type": "highlight-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285686"],
+      "id": [
+        "285686"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -139,7 +141,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -150,7 +152,9 @@
       "type": "highlight-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285687"],
+      "id": [
+        "285687"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -285,7 +289,7 @@
       "isExample": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -296,7 +300,9 @@
       "type": "highlight-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285688"],
+      "id": [
+        "285688"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -431,7 +437,7 @@
       "isExample": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -442,7 +448,9 @@
       "type": "highlight-text",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["285689"],
+      "id": [
+        "285689"
+      ],
       "item": [
         {
           "type": "paragraph",
@@ -577,7 +585,7 @@
       "isExample": true
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

@@ -4,7 +4,9 @@
       "type": "video-embed",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["301454"],
+      "id": [
+        "301454"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -41,7 +43,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -52,7 +54,9 @@
       "type": "video-embed",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["300497"],
+      "id": [
+        "300497"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -89,7 +93,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -134,7 +138,9 @@
       "type": "video-embed",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["301460"],
+      "id": [
+        "301460"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -171,7 +177,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.15.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
