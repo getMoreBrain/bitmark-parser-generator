@@ -31,7 +31,7 @@ const propertyKeys = {
   property_chatWithBook: '@chatWithBook',
   property_chatWithBookBrainKey: '@chatWithBookBrainKey',
   property_currency: '@currency',
-  property_ibookIsbn: '@ibookIsbn',
+  property_bookIsbn: '@bookIsbn',
   property_bookAuthor: '@bookAuthor',
   property_bookType: '@bookType',
   property_bookBindingType: '@bookBindingType',

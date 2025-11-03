@@ -261,7 +261,7 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
-        key: ConfigKey.property_ibookIsbn,
+        key: ConfigKey.property_bookIsbn,
         description: 'ISBN for iBook version',
         format: TagFormat.plainText,
       },
@@ -398,7 +398,7 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
-        key: ConfigKey.property_ibookIsbn,
+        key: ConfigKey.property_bookIsbn,
         description: 'ISBN for iBook version',
         format: TagFormat.plainText,
       },
@@ -535,7 +535,7 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
-        key: ConfigKey.property_ibookIsbn,
+        key: ConfigKey.property_bookIsbn,
         description: 'ISBN for iBook version',
         format: TagFormat.plainText,
       },

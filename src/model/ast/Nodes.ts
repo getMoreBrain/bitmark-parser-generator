@@ -131,7 +131,7 @@ export interface Bit {
   chatWithBook?: Property;
   chatWithBookBrainKey?: Property;
   currency?: Property;
-  ibookIsbn?: Property;
+  bookIsbn?: Property;
   bookAuthor?: Property;
   bookType?: Property;
   bookBindingType?: Property;

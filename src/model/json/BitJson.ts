@@ -88,7 +88,7 @@ export interface BitJson {
   chatWithBook: boolean;
   chatWithBookBrainKey: string;
   currency: string;
-  ibookIsbn: string;
+  bookIsbn: string;
   bookAuthor: string;
   bookType: string;
   bookBindingType: string;

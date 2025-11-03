@@ -203,7 +203,7 @@ class Builder extends BaseBuilder {
       chatWithBook?: boolean;
       chatWithBookBrainKey?: string;
       currency?: string;
-      ibookIsbn?: string;
+      bookIsbn?: string;
       bookAuthor?: string;
       bookType?: string;
       bookBindingType?: string;
@@ -717,12 +717,7 @@ class Builder extends BaseBuilder {
         options,
       ),
       currency: this.toAstProperty(bitType, ConfigKey.property_currency, data.currency, options),
-      ibookIsbn: this.toAstProperty(
-        bitType,
-        ConfigKey.property_ibookIsbn,
-        data.ibookIsbn,
-        options,
-      ),
+      bookIsbn: this.toAstProperty(bitType, ConfigKey.property_bookIsbn, data.bookIsbn, options),
       bookAuthor: this.toAstProperty(
         bitType,
         ConfigKey.property_bookAuthor,
