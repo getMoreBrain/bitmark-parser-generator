@@ -115,7 +115,7 @@ export interface Bit {
   subtype?: Property;
   bookAlias?: Property;
   bookDiff?: Property;
-  coverImage?: Property;
+  coverImage?: Property | ImageResourceWrapperJson;
   coverColor?: Property;
   publications?: Property;
   relatedBook?: Property;

@@ -187,7 +187,7 @@ class Builder extends BaseBuilder {
       subtype?: string;
       bookAlias?: string | string[];
       bookDiff?: string;
-      coverImage?: string | string[];
+      coverImage?: string | string[] | Partial<ImageResourceWrapperJson>;
       coverColor?: string;
       publications?: string | string[];
       relatedBook?: string | string[];
@@ -644,12 +644,15 @@ class Builder extends BaseBuilder {
       subtype: this.toAstProperty(bitType, ConfigKey.property_subtype, data.subtype, options),
       bookAlias: this.toAstProperty(bitType, ConfigKey.property_bookAlias, data.bookAlias, options),
       bookDiff: this.toAstProperty(bitType, ConfigKey.property_bookDiff, data.bookDiff, options),
-      coverImage: this.toAstProperty(
-        bitType,
-        ConfigKey.property_coverImage,
-        data.coverImage,
-        options,
-      ),
+      coverImage:
+        typeof data.coverImage === 'string' || Array.isArray(data.coverImage)
+          ? this.toAstProperty(
+              bitType,
+              ConfigKey.property_coverImage,
+              ArrayUtils.asArray(data.coverImage),
+              options,
+            )
+          : this.toImageResource(context, data.coverImage),
       coverColor: this.toAstProperty(
         bitType,
         ConfigKey.property_coverColor,

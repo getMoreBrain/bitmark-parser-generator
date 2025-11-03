@@ -915,6 +915,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
+  // bitmarkAst -> bits -> bitsValue -> coverImage
+
+  protected enter_coverImage(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.bitsValue, {
+      array: Array.isArray(node.value),
+    });
+  }
+
   // bitmarkAst -> bits -> bitsValue -> resources
 
   protected enter_resources(node: NodeInfo, route: NodeInfo[]): boolean {
