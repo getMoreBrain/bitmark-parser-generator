@@ -45,7 +45,7 @@ class ConfigBuilder {
       const g2 = g as unknown as _GroupsConfig & { key: string };
       let k2 = k as string;
       if (k.startsWith('group_')) k2 = k2.substring(6);
-      k2 = /*'_' +*/ StringUtils.camelToKebab(k2);
+      k2 = /*'_' +*/ `group-${StringUtils.camelToKebab(k2)}`;
       g2.key = k2;
       groupConfigs.push(g2);
     }
@@ -123,7 +123,7 @@ class ConfigBuilder {
         } else if (tagType === BitTagConfigKeyType.group) {
           let k = tag.key as string;
           if (k.startsWith('group_')) k = k.substring(6);
-          k = '_' + k;
+          k = /*'_' +*/ `group-${StringUtils.camelToKebab(k)}`;
           inherits.push(k);
           continue;
         }
@@ -176,7 +176,7 @@ class ConfigBuilder {
       for (const g of groupConfigs) {
         const inherits = [];
         const tags = [];
-        const groupKey = StringUtils.camelToKebab(g.key);
+        const groupKey = `group-${StringUtils.camelToKebab(g.key)}`;
         // if (groupKey == '_resourceImage') debugger;
         const tagEntriesTypeOrder = [
           BitTagConfigKeyType.tag,
@@ -245,7 +245,7 @@ class ConfigBuilder {
           } else if (tagType === BitTagConfigKeyType.group) {
             let k = tag.key as string;
             if (k.startsWith('group_')) k = k.substring(6);
-            k = /*'_' +*/ StringUtils.camelToKebab(k);
+            k = /*'_' +*/ `group-${StringUtils.camelToKebab(k)}`;
             inherits.push(k);
             continue;
           }
