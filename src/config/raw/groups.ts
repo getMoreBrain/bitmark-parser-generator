@@ -1502,6 +1502,38 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_previewImages]: {
+    type: GroupConfigType.resource,
+    description: 'Array of preview images for catalog items',
+    tags: [
+      {
+        key: ConfigKey.resource_previewImage,
+        description: 'The preview image resource',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the image resource',
+          },
+        ],
+      },
+    ],
+  },
+  [ConfigKey.group_previewVideos]: {
+    type: GroupConfigType.resource,
+    description: 'Array of preview videos for catalog items',
+    tags: [
+      {
+        key: ConfigKey.resource_previewVideo,
+        description: 'The preview video resource',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the image resource',
+          },
+        ],
+      },
+    ],
+  },
 };
 
 export { GROUPS };

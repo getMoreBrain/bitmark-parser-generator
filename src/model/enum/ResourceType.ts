@@ -38,6 +38,8 @@ const ResourceType = superenum({
   platformIcon: 'platformIcon',
   platformLogo: 'platformLogo',
   platformBackgroundImage: 'platformBackgroundImage',
+  previewImage: 'previewImage',
+  previewVideo: 'previewVideo',
   coverImage: 'coverImage',
 });
 

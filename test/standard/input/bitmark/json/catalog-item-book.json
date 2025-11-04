@@ -4,14 +4,25 @@
       "type": "catalog-item-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "1001"
-      ],
+      "id": ["1001"],
       "coverImage": "https://example.com/images/web-dev-book-cover.jpg",
+      "currency": "USD",
+      "bookAuthor": "John Developer",
+      "bookType": "Educational",
+      "bookLanguage": "English",
+      "bookPublishingDate": "2024-01-15",
+      "bookPublisher": "Tech Press",
       "content2Buy": "book-web-dev-2024",
       "listPrice": "$49.99",
       "customerProductId": "PROD-WEB-2024-001",
       "buttonCaption": "Buy Now",
+      "imageSource": {
+        "url": "https://example.com/source/web-dev-images",
+        "mockupId": "",
+        "size": null,
+        "format": null,
+        "trim": null
+      },
       "title": [
         {
           "type": "paragraph",
@@ -42,6 +53,72 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "previewImage": [
+        {
+          "type": "image",
+          "image": {
+            "format": "jpg",
+            "provider": "example.com",
+            "src": "https://example.com/preview/keyboard-preview-1.jpg",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "format": "jpg",
+            "provider": "example.com",
+            "src": "https://example.com/preview/keyboard-preview-2.jpg",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        }
+      ],
+      "previewVideo": [
+        {
+          "type": "video",
+          "video": {
+            "format": "mp4",
+            "provider": "example.com",
+            "src": "https://example.com/preview/keyboard-demo.mp4",
+            "width": null,
+            "height": null,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        }
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "jpg",
+          "provider": "example.com",
+          "src": "https://example.com/preview/web-dev-1.jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
       "body": [
         {
           "type": "paragraph",
@@ -58,21 +135,89 @@
     "parser": {
       "version": "4.15.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.35.0",
+      "warnings": [
+        {
+          "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
+          "text": "[&image:https://example.com/preview/web-dev-1.jpg]",
+          "location": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 516
+            },
+            "end": {
+              "line": 17,
+              "column": 51,
+              "offset": 566
+            }
+          }
+        },
+        {
+          "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
+          "text": "[&image:https://example.com/preview/web-dev-2.jpg]",
+          "location": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 567
+            },
+            "end": {
+              "line": 18,
+              "column": 51,
+              "offset": 617
+            }
+          },
+          "original": {
+            "text": "[&image:https://example.com/preview/web-dev-1.jpg]",
+            "location": {
+              "start": {
+                "line": 17,
+                "column": 1,
+                "offset": 516
+              },
+              "end": {
+                "line": 17,
+                "column": 51,
+                "offset": 566
+              }
+            }
+          }
+        },
+        {
+          "message": "[@mockupId:xxx] is missing from [@imageSource]",
+          "text": "[@imageSource:https://example.com/source/web-dev-images]",
+          "location": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 459
+            },
+            "end": {
+              "line": 16,
+              "column": 57,
+              "offset": 515
+            }
+          }
+        }
+      ]
     },
-    "bitmark": "[.catalog-item-book]\n[@id:1001]\n[#The Complete Guide to Modern Web Development]\n[##Master HTML, CSS, JavaScript, and React]\n[@coverImage:https://example.com/images/web-dev-book-cover.jpg]\n[@content2Buy:book-web-dev-2024]\n[@listPrice:$49.99]\n[@buttonCaption:Buy Now]\n[@customerProductId:PROD-WEB-2024-001]\nA comprehensive guide to modern web development covering all essential technologies and frameworks. Perfect for beginners and intermediate developers looking to level up their skills."
+    "bitmark": "[.catalog-item-book]\n[@id:1001]\n[#The Complete Guide to Modern Web Development]\n[##Master HTML, CSS, JavaScript, and React]\n[@coverImage:https://example.com/images/web-dev-book-cover.jpg]\n[@content2Buy:book-web-dev-2024]\n[@listPrice:$49.99]\n[@buttonCaption:Buy Now]\n[@customerProductId:PROD-WEB-2024-001]\n[@currency:USD]\n[@bookAuthor:John Developer]\n[@bookType:Educational]\n[@bookLanguage:English]\n[@bookPublisher:Tech Press]\n[@bookPublishingDate:2024-01-15]\n[@imageSource:https://example.com/source/web-dev-images]\n[&image:https://example.com/preview/web-dev-1.jpg]\n[&image:https://example.com/preview/web-dev-2.jpg]\n[&previewImage:https://example.com/preview/keyboard-preview-1.jpg]\n[&previewImage:https://example.com/preview/keyboard-preview-2.jpg]\n[&previewVideo:https://example.com/preview/keyboard-demo.mp4]\nA comprehensive guide to modern web development covering all essential technologies and frameworks. Perfect for beginners and intermediate developers looking to level up their skills."
   },
   {
     "bit": {
       "type": "catalog-item-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "1002"
-      ],
+      "id": ["1002"],
       "coverImage": "https://example.com/images/python-book.jpg",
       "content2Buy": "book-python-basics",
       "listPrice": "$39.99",
+      "bookAuthor": "Jane Pythonista",
+      "bookRating": "4.5",
+      "bookBindingType": "Paperback",
+      "bookIsbn": "978-1-234567-89-0",
+      "bookNumberOfPages": "350",
       "customerProductId": "PROD-PY-2024-002",
       "title": [
         {
@@ -110,20 +255,25 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.catalog-item-book]\n[@id:1002]\n[#Learning Python Programming]\n[@coverImage:https://example.com/images/python-book.jpg]\n[@content2Buy:book-python-basics]\n[@listPrice:$39.99]\n[@customerProductId:PROD-PY-2024-002]\nStart your journey into Python programming with this beginner-friendly book."
+    "bitmark": "[.catalog-item-book]\n[@id:1002]\n[#Learning Python Programming]\n[@coverImage:https://example.com/images/python-book.jpg]\n[@content2Buy:book-python-basics]\n[@listPrice:$39.99]\n[@customerProductId:PROD-PY-2024-002]\n[@bookIsbn:978-1-234567-89-0]\n[@bookAuthor:Jane Pythonista]\n[@bookBindingType:Paperback]\n[@bookNumberOfPages:350]\n[@bookRating:4.5]\nStart your journey into Python programming with this beginner-friendly book."
   },
   {
     "bit": {
       "type": "catalog-item-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "1003"
-      ],
+      "id": ["1003"],
       "coverImage": "https://example.com/images/database-book.jpg",
       "content2Buy": "book-database-advanced",
+      "bookOriginalTitle": "Diseño Avanzado de Bases de Datos",
       "listPrice": "$59.99",
+      "bookTranslator": "Maria Translator",
       "customerProductId": "PROD-DB-2024-003",
+      "bookSeriesId": "DMS-001",
+      "bookSeriesNumber": "3",
+      "bookSeriesTitle": "Database Mastery Series",
+      "gmbExternalShop": "TechBooks",
+      "gmbExternalShopItems": ["amazon", "barnes-noble", "bookshop"],
       "buttonCaption": "Add to Cart",
       "title": [
         {
@@ -173,16 +323,14 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.catalog-item-book]\n[@id:1003]\n[#Advanced Database Design]\n[##Mastering SQL and NoSQL]\n[@coverImage:https://example.com/images/database-book.jpg]\n[@content2Buy:book-database-advanced]\n[@listPrice:$59.99]\n[@buttonCaption:Add to Cart]\n[@customerProductId:PROD-DB-2024-003]\nDeep dive into database design patterns, optimization techniques, and best practices for both SQL and NoSQL databases."
+    "bitmark": "[.catalog-item-book]\n[@id:1003]\n[#Advanced Database Design]\n[##Mastering SQL and NoSQL]\n[@coverImage:https://example.com/images/database-book.jpg]\n[@content2Buy:book-database-advanced]\n[@listPrice:$59.99]\n[@buttonCaption:Add to Cart]\n[@customerProductId:PROD-DB-2024-003]\n[@bookSeriesTitle:Database Mastery Series]\n[@bookSeriesId:DMS-001]\n[@bookSeriesNumber:3]\n[@bookTranslator:Maria Translator]\n[@bookOriginalTitle:Diseño Avanzado de Bases de Datos]\n[@gmbExternalShop:TechBooks]\n[@gmbExternalShopItems:amazon, barnes-noble, bookshop]\nDeep dive into database design patterns, optimization techniques, and best practices for both SQL and NoSQL databases."
   },
   {
     "bit": {
       "type": "catalog-item-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "1004"
-      ],
+      "id": ["1004"],
       "coverImage": "https://example.com/images/minimal.jpg",
       "content2Buy": "book-minimal",
       "listPrice": "$19.99",

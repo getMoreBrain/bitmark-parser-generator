@@ -32,6 +32,8 @@ const resourceKeys = {
   resource_platformLogo: '&platformLogo',
   resource_backgroundWallpaper: '&backgroundWallpaper',
   resource_imagePlaceholder: '&imagePlaceholder',
+  resource_previewImage: '&previewImage',
+  resource_previewVideo: '&previewVideo',
   resource_coverImage: '&coverImage',
 } as const;
 

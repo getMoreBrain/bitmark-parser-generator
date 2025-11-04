@@ -155,7 +155,7 @@ export interface BitContentProcessorResult {
   title?: { titleAst: TextAst; titleString: string }[];
   // title?: TextAst[];
   // subtitle?: BreakscapedString;
-  propertyStyleResources?: { [key: string]: ResourceJson };
+  propertyStyleResources?: { [key: string]: ResourceJson | ResourceJson[] };
   resources?: ResourceJson[];
   itemLead?: TextAst[];
   item?: JsonText;
