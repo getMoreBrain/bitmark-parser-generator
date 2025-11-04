@@ -4,6 +4,7 @@ import {
   type AudioResourceWrapperJson,
   type ImageResourceWrapperJson,
   type ResourceJson,
+  type VideoResourceWrapperJson,
 } from './ResourceJson.ts';
 
 export interface BitJson {
@@ -87,6 +88,23 @@ export interface BitJson {
   processHandInLocation: string;
   chatWithBook: boolean;
   chatWithBookBrainKey: string;
+  currency: string;
+  bookIsbn: string;
+  bookAuthor: string;
+  bookType: string;
+  bookBindingType: string;
+  bookNumberOfPages: string;
+  bookRating: string;
+  bookSeriesTitle: string;
+  bookSeriesId: string;
+  bookSeriesNumber: string;
+  bookLanguage: string;
+  bookPublishingDate: string;
+  bookPublisher: string;
+  bookTranslator: string;
+  bookOriginalTitle: string;
+  gmbExternalShop: string;
+  gmbExternalShopItems: string | string[];
   action: string;
   showInIndex: boolean;
   refAuthor: string | string[];
@@ -104,6 +122,10 @@ export interface BitJson {
   classification: string;
   availableClassifications: string | string[];
   allowedBit: string | string[];
+  authorFullName: string;
+  authorPseudonym: string;
+  authorTitle: string;
+  authorJobTitle: string;
   tableFixedHeader: boolean;
   tableHeaderWhitespaceNoWrap: boolean;
   tableSearch: boolean;
@@ -179,6 +201,7 @@ export interface BitJson {
   tocResource: string | string[];
   tocContent: string | string[];
   page: string;
+  platformBrandTarget: string;
   platformName: string;
   platformIcon: ImageResourceWrapperJson;
   platformLogo: ImageResourceWrapperJson;
@@ -239,6 +262,9 @@ export interface BitJson {
   };
 
   imagePlaceholder: ImageResourceWrapperJson;
+  previewImage: ImageResourceWrapperJson[];
+  previewVideo: VideoResourceWrapperJson[];
+
   resource: ResourceJson;
   logos: ImageResourceWrapperJson[];
   images: ImageResourceWrapperJson[];

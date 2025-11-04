@@ -74,7 +74,11 @@ class ConfigBuilder {
         const typeOrder = tagEntriesTypeOrder.indexOf(typeA) - tagEntriesTypeOrder.indexOf(typeB);
         return typeOrder;
       });
-      if (b.baseBitType) inherits.push(b.baseBitType);
+      if (b.baseBitType)
+        inherits.push({
+          type: 'bit',
+          name: b.baseBitType,
+        });
       for (const [_tagKey, tag] of tagEntries) {
         const tagName = tag.key as string;
         let format = '';
@@ -123,8 +127,11 @@ class ConfigBuilder {
         } else if (tagType === BitTagConfigKeyType.group) {
           let k = tag.key as string;
           if (k.startsWith('group_')) k = k.substring(6);
-          k = '_' + k;
-          inherits.push(k);
+          k = /*'_' +*/ StringUtils.camelToKebab(k);
+          inherits.push({
+            type: 'group',
+            name: k,
+          });
           continue;
         }
         const t = {
@@ -246,7 +253,10 @@ class ConfigBuilder {
             let k = tag.key as string;
             if (k.startsWith('group_')) k = k.substring(6);
             k = /*'_' +*/ StringUtils.camelToKebab(k);
-            inherits.push(k);
+            inherits.push({
+              type: 'group',
+              name: k,
+            });
             continue;
           }
           const t = {
@@ -428,7 +438,10 @@ class ConfigBuilder {
           let k = tag.configKey as string;
           if (k.startsWith('group_')) k = k.substring(6);
           k = '_' + k;
-          inherits.push(k);
+          inherits.push({
+            type: 'group',
+            name: k,
+          });
           continue;
         }
         const t = {

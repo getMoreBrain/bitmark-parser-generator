@@ -350,7 +350,8 @@ class BitmarkPegParserValidator {
           resourceKey === ConfigKey.resource_imagePlaceholder ||
           resourceKey === ConfigKey.resource_platformIcon ||
           resourceKey === ConfigKey.resource_platformLogo ||
-          resourceKey === ConfigKey.resource_platformBackgroundImage
+          resourceKey === ConfigKey.resource_platformBackgroundImage ||
+          resourceKey === ConfigKey.resource_coverImage
         ) {
           tagData = validTypeKeys.get(resourceKey);
           if (tagData) {

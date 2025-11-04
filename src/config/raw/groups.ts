@@ -642,6 +642,16 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.resource_coverImage,
+        description: 'The cover image of the book',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the cover image resource',
+          },
+        ],
+      },
+      {
         key: ConfigKey.property_coverColor,
         description: 'The cover color of the book',
         format: TagFormat.plainText,
@@ -1489,6 +1499,38 @@ const GROUPS: _GroupsConfig = {
         description: 'The landscape image resource',
         maxCount: 1,
         minCount: 1,
+      },
+    ],
+  },
+  [ConfigKey.group_previewImages]: {
+    type: GroupConfigType.resource,
+    description: 'Array of preview images for catalog items',
+    tags: [
+      {
+        key: ConfigKey.resource_previewImage,
+        description: 'The preview image resource',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the image resource',
+          },
+        ],
+      },
+    ],
+  },
+  [ConfigKey.group_previewVideos]: {
+    type: GroupConfigType.resource,
+    description: 'Array of preview videos for catalog items',
+    tags: [
+      {
+        key: ConfigKey.resource_previewVideo,
+        description: 'The preview video resource',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the image resource',
+          },
+        ],
       },
     ],
   },

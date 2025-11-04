@@ -198,9 +198,23 @@ function resourceContentProcessor(
       configKey === ConfigKey.resource_imagePlaceholder ||
       configKey === ConfigKey.resource_platformIcon ||
       configKey === ConfigKey.resource_platformLogo ||
-      configKey === ConfigKey.resource_platformBackgroundImage
+      configKey === ConfigKey.resource_platformBackgroundImage ||
+      configKey === ConfigKey.resource_previewImage ||
+      configKey === ConfigKey.resource_previewVideo ||
+      configKey === ConfigKey.resource_coverImage
     ) {
-      if (target.propertyStyleResources) target.propertyStyleResources[resourceType] = resource;
+      if (target.propertyStyleResources) {
+        if (target.propertyStyleResources[resourceType]) {
+          if (!Array.isArray(target.propertyStyleResources[resourceType])) {
+            target.propertyStyleResources[resourceType] = [
+              target.propertyStyleResources[resourceType] as ResourceJson,
+            ];
+          }
+          (target.propertyStyleResources[resourceType] as ResourceJson[]).push(resource);
+        } else {
+          target.propertyStyleResources[resourceType] = resource;
+        }
+      }
     } else {
       resources.push(resource);
     }

@@ -66,6 +66,7 @@ import {
   type AudioResourceWrapperJson,
   type ImageResourceWrapperJson,
   type ResourceJson,
+  type VideoResourceWrapperJson,
 } from '../model/json/ResourceJson.ts';
 import { type ParserError } from '../model/parser/ParserError.ts';
 import { type ParserInfo } from '../model/parser/ParserInfo.ts';
@@ -187,7 +188,7 @@ class Builder extends BaseBuilder {
       subtype?: string;
       bookAlias?: string | string[];
       bookDiff?: string;
-      coverImage?: string | string[];
+      coverImage?: string | string[] | Partial<ImageResourceWrapperJson>;
       coverColor?: string;
       publications?: string | string[];
       relatedBook?: string | string[];
@@ -202,6 +203,23 @@ class Builder extends BaseBuilder {
       processHandInLocation?: string;
       chatWithBook?: boolean;
       chatWithBookBrainKey?: string;
+      currency?: string;
+      bookIsbn?: string;
+      bookAuthor?: string;
+      bookType?: string;
+      bookBindingType?: string;
+      bookNumberOfPages?: string;
+      bookRating?: string;
+      bookSeriesTitle?: string;
+      bookSeriesId?: string;
+      bookSeriesNumber?: string;
+      bookLanguage?: string;
+      bookPublishingDate?: string;
+      bookPublisher?: string;
+      bookTranslator?: string;
+      bookOriginalTitle?: string;
+      gmbExternalShop?: string;
+      gmbExternalShopItems?: string | string[];
       action?: string;
       showInIndex?: boolean;
       refAuthor?: string | string[];
@@ -219,6 +237,10 @@ class Builder extends BaseBuilder {
       classification?: string;
       availableClassifications?: string | string[];
       allowedBit?: string | string[];
+      authorFullName?: string;
+      authorPseudonym?: string;
+      authorTitle?: string;
+      authorJobTitle?: string;
       tableFixedHeader?: boolean;
       tableHeaderWhitespaceNoWrap?: boolean;
       tableSearch?: boolean;
@@ -299,6 +321,7 @@ class Builder extends BaseBuilder {
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
+      platformBrandTarget?: string;
       platformName?: string;
       platformIcon?: Partial<ImageResourceWrapperJson>;
       platformLogo?: Partial<ImageResourceWrapperJson>;
@@ -352,6 +375,8 @@ class Builder extends BaseBuilder {
       };
 
       markConfig?: Partial<MarkConfigJson>[];
+      previewImage?: Partial<ImageResourceWrapperJson> | Partial<ImageResourceWrapperJson>[];
+      previewVideo?: Partial<VideoResourceWrapperJson> | Partial<VideoResourceWrapperJson>[];
       imagePlaceholder?: Partial<ImageResourceWrapperJson>;
       resources?: Partial<ResourceJson> | Partial<ResourceJson>[];
       body?: Partial<Body>;
@@ -639,12 +664,15 @@ class Builder extends BaseBuilder {
       subtype: this.toAstProperty(bitType, ConfigKey.property_subtype, data.subtype, options),
       bookAlias: this.toAstProperty(bitType, ConfigKey.property_bookAlias, data.bookAlias, options),
       bookDiff: this.toAstProperty(bitType, ConfigKey.property_bookDiff, data.bookDiff, options),
-      coverImage: this.toAstProperty(
-        bitType,
-        ConfigKey.property_coverImage,
-        data.coverImage,
-        options,
-      ),
+      coverImage:
+        typeof data.coverImage === 'string' || Array.isArray(data.coverImage)
+          ? this.toAstProperty(
+              bitType,
+              ConfigKey.property_coverImage,
+              ArrayUtils.asArray(data.coverImage),
+              options,
+            )
+          : this.toImageResource(context, data.coverImage),
       coverColor: this.toAstProperty(
         bitType,
         ConfigKey.property_coverColor,
@@ -697,6 +725,93 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_chatWithBookBrainKey,
         data.chatWithBookBrainKey,
+        options,
+      ),
+      currency: this.toAstProperty(bitType, ConfigKey.property_currency, data.currency, options),
+      bookIsbn: this.toAstProperty(bitType, ConfigKey.property_bookIsbn, data.bookIsbn, options),
+      bookAuthor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookAuthor,
+        data.bookAuthor,
+        options,
+      ),
+      bookType: this.toAstProperty(bitType, ConfigKey.property_bookType, data.bookType, options),
+      bookBindingType: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookBindingType,
+        data.bookBindingType,
+        options,
+      ),
+      bookNumberOfPages: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookNumberOfPages,
+        data.bookNumberOfPages,
+        options,
+      ),
+      bookRating: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookRating,
+        data.bookRating,
+        options,
+      ),
+      bookSeriesTitle: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookSeriesTitle,
+        data.bookSeriesTitle,
+        options,
+      ),
+      bookSeriesId: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookSeriesId,
+        data.bookSeriesId,
+        options,
+      ),
+      bookSeriesNumber: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookSeriesNumber,
+        data.bookSeriesNumber,
+        options,
+      ),
+      bookLanguage: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookLanguage,
+        data.bookLanguage,
+        options,
+      ),
+      bookPublishingDate: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookPublishingDate,
+        data.bookPublishingDate,
+        options,
+      ),
+      bookPublisher: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookPublisher,
+        data.bookPublisher,
+        options,
+      ),
+      bookTranslator: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookTranslator,
+        data.bookTranslator,
+        options,
+      ),
+      bookOriginalTitle: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bookOriginalTitle,
+        data.bookOriginalTitle,
+        options,
+      ),
+      gmbExternalShop: this.toAstProperty(
+        bitType,
+        ConfigKey.property_gmbExternalShop,
+        data.gmbExternalShop,
+        options,
+      ),
+      gmbExternalShopItems: this.toAstProperty(
+        bitType,
+        ConfigKey.property_gmbExternalShopItems,
+        data.gmbExternalShopItems,
         options,
       ),
       action: this.toAstProperty(bitType, ConfigKey.property_action, data.action, options),
@@ -754,6 +869,30 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_allowedBit,
         data.allowedBit,
+        options,
+      ),
+      authorFullName: this.toAstProperty(
+        bitType,
+        ConfigKey.property_authorFullName,
+        data.authorFullName,
+        options,
+      ),
+      authorPseudonym: this.toAstProperty(
+        bitType,
+        ConfigKey.property_authorPseudonym,
+        data.authorPseudonym,
+        options,
+      ),
+      authorTitle: this.toAstProperty(
+        bitType,
+        ConfigKey.property_authorTitle,
+        data.authorTitle,
+        options,
+      ),
+      authorJobTitle: this.toAstProperty(
+        bitType,
+        ConfigKey.property_authorJobTitle,
+        data.authorJobTitle,
         options,
       ),
       tableFixedHeader: this.toAstProperty(
@@ -1110,6 +1249,12 @@ class Builder extends BaseBuilder {
         options,
       ),
       page: this.toAstProperty(bitType, ConfigKey.property_page, data.page, options),
+      platformBrandTarget: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformBrandTarget,
+        data.platformBrandTarget,
+        options,
+      ),
       platformName: this.toAstProperty(
         bitType,
         ConfigKey.property_platformName,
@@ -1287,6 +1432,8 @@ class Builder extends BaseBuilder {
 
       // Person
 
+      previewImage: this.toImageResources(context, data.previewImage),
+      previewVideo: this.toVideoResources(context, data.previewVideo),
       imagePlaceholder: this.toImageResource(context, data.imagePlaceholder),
       resources: ArrayUtils.asArray(
         this.resourceBuilder.resourceFromResourceJson(context, data.resources),
@@ -3302,6 +3449,48 @@ class Builder extends BaseBuilder {
     return ArrayUtils.asSingle(
       this.resourceBuilder.resourceFromResourceDataJson(context, ResourceType.image, data?.image),
     ) as ImageResourceWrapperJson;
+  }
+
+  protected toImageResources(
+    context: BuildContext,
+    data: Partial<ImageResourceWrapperJson> | Partial<ImageResourceWrapperJson>[] | undefined,
+  ): ImageResourceWrapperJson[] {
+    const arr = ArrayUtils.asArray(data);
+
+    const results: ImageResourceWrapperJson[] = [];
+    if (arr && arr.length > 0) {
+      for (const item of arr) {
+        const res = this.resourceBuilder.resourceFromResourceDataJson(
+          context,
+          ResourceType.image,
+          item.image,
+        );
+        results.push(res as ImageResourceWrapperJson);
+      }
+    }
+
+    return results;
+  }
+
+  protected toVideoResources(
+    context: BuildContext,
+    data: Partial<VideoResourceWrapperJson> | Partial<VideoResourceWrapperJson>[] | undefined,
+  ): VideoResourceWrapperJson[] {
+    const arr = ArrayUtils.asArray(data);
+
+    const results: VideoResourceWrapperJson[] = [];
+    if (arr && arr.length > 0) {
+      for (const item of arr) {
+        const res = this.resourceBuilder.resourceFromResourceDataJson(
+          context,
+          ResourceType.video,
+          item.video,
+        );
+        results.push(res as VideoResourceWrapperJson);
+      }
+    }
+
+    return results;
   }
 
   //

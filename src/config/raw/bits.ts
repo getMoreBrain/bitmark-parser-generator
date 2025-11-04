@@ -236,6 +236,16 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
+        key: ConfigKey.resource_coverImage,
+        description: 'Cover image of the catalog item',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the cover image resource',
+          },
+        ],
+      },
+      {
         key: ConfigKey.property_content2Buy,
         description: 'Content to buy identifier',
         format: TagFormat.plainText,
@@ -254,6 +264,106 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_customerProductId,
         description: 'Customer-specific product identifier',
         format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_currency,
+        description: 'Currency for the catalog item',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookIsbn,
+        description: 'ISBN for iBook version',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookAuthor,
+        description: 'Author of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookType,
+        description: 'Type of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookBindingType,
+        description: 'Binding type of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookNumberOfPages,
+        description: 'Number of pages in the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookRating,
+        description: 'Rating of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookSeriesTitle,
+        description: 'Title of the book series',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookSeriesId,
+        description: 'ID of the book series',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookSeriesNumber,
+        description: 'Number in the book series',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookLanguage,
+        description: 'Language of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookPublishingDate,
+        description: 'Publishing date of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookPublisher,
+        description: 'Publisher of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookTranslator,
+        description: 'Translator of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookOriginalTitle,
+        description: 'Original title of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_gmbExternalShop,
+        description: 'External shop identifier',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_gmbExternalShopItems,
+        description: 'Array of external shop items',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
+        key: ConfigKey.group_imageSource,
+        description: 'Image source chain',
+      },
+      {
+        key: ConfigKey.group_previewImages,
+        description: 'Array of preview images for the catalog item',
+        maxCount: Count.infinity,
+      },
+      {
+        key: ConfigKey.group_previewVideos,
+        description: 'Array of preview videos for the catalog item',
+        maxCount: Count.infinity,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -275,6 +385,16 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
+        key: ConfigKey.resource_coverImage,
+        description: 'Cover image of the catalog item',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the cover image resource',
+          },
+        ],
+      },
+      {
         key: ConfigKey.property_customerProductShopLink,
         description: 'Link to external shop for the product',
         format: TagFormat.plainText,
@@ -293,6 +413,106 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_customerProductId,
         description: 'Customer-specific product identifier',
         format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_currency,
+        description: 'Currency for the catalog item',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookIsbn,
+        description: 'ISBN for iBook version',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookAuthor,
+        description: 'Author of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookType,
+        description: 'Type of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookBindingType,
+        description: 'Binding type of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookNumberOfPages,
+        description: 'Number of pages in the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookRating,
+        description: 'Rating of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookSeriesTitle,
+        description: 'Title of the book series',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookSeriesId,
+        description: 'ID of the book series',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookSeriesNumber,
+        description: 'Number in the book series',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookLanguage,
+        description: 'Language of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookPublishingDate,
+        description: 'Publishing date of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookPublisher,
+        description: 'Publisher of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookTranslator,
+        description: 'Translator of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookOriginalTitle,
+        description: 'Original title of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_gmbExternalShop,
+        description: 'External shop identifier',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_gmbExternalShopItems,
+        description: 'Array of external shop items',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
+        key: ConfigKey.group_imageSource,
+        description: 'Image source chain',
+      },
+      {
+        key: ConfigKey.group_previewImages,
+        description: 'Array of preview images for the catalog item',
+        maxCount: Count.infinity,
+      },
+      {
+        key: ConfigKey.group_previewVideos,
+        description: 'Array of preview videos for the catalog item',
+        maxCount: Count.infinity,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -332,6 +552,106 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_customerProductId,
         description: 'Customer-specific product identifier',
         format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_currency,
+        description: 'Currency for the catalog item',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookIsbn,
+        description: 'ISBN for iBook version',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookAuthor,
+        description: 'Author of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookType,
+        description: 'Type of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookBindingType,
+        description: 'Binding type of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookNumberOfPages,
+        description: 'Number of pages in the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookRating,
+        description: 'Rating of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookSeriesTitle,
+        description: 'Title of the book series',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookSeriesId,
+        description: 'ID of the book series',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookSeriesNumber,
+        description: 'Number in the book series',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookLanguage,
+        description: 'Language of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookPublishingDate,
+        description: 'Publishing date of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookPublisher,
+        description: 'Publisher of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookTranslator,
+        description: 'Translator of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_bookOriginalTitle,
+        description: 'Original title of the book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_gmbExternalShop,
+        description: 'External shop identifier',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_gmbExternalShopItems,
+        description: 'Array of external shop items',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
+        key: ConfigKey.group_imageSource,
+        description: 'Image source chain',
+      },
+      {
+        key: ConfigKey.group_previewImages,
+        description: 'Array of preview images for the catalog item',
+        maxCount: Count.infinity,
+      },
+      {
+        key: ConfigKey.group_previewVideos,
+        description: 'Array of preview videos for the catalog item',
+        maxCount: Count.infinity,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -2700,7 +3020,33 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_buttonCaption,
         description: 'Caption for the button, used to define the text displayed on the button',
       },
+      {
+        key: ConfigKey.property_authorFullName,
+        description: 'Full name of the author',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_authorPseudonym,
+        description: 'A pseudonym of the author, if any',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_authorTitle,
+        description: 'The title of the author, e.g. "Dr.", "Prof.", etc.',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_authorJobTitle,
+        description: 'The job title of the author, e.g. "Software Engineer", "Professor", etc.',
+        format: TagFormat.plainText,
+      },
     ],
+  },
+  [BitType.openBookChapter]: {
+    since: '4.16.0',
+    baseBitType: BitType.pageOpenBook,
+    description:
+      'Open book chapter bit, derived from page-open-book, used to create chapter pages that open books',
   },
   [BitType.pageOpenBookList]: {
     since: '2.1.0',
@@ -4111,6 +4457,18 @@ const BITS: _BitsConfig = {
           },
         ],
         maxCount: 1,
+      },
+    ],
+  },
+  [BitType.platformBrandTarget]: {
+    since: '4.15.0',
+    baseBitType: BitType._standard,
+    description: 'Platform brand target bit, used to define the brand target for publishing',
+    tags: [
+      {
+        key: ConfigKey.property_platformBrandTarget,
+        description: 'The platform brand target (typically "light", "dark" or "none")',
+        format: TagFormat.plainText,
       },
     ],
   },

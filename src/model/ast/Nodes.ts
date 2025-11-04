@@ -30,7 +30,11 @@ import {
   type TechnicalTermJson,
 } from '../json/BitJson.ts';
 import { type BodyBitJson, type BodyBitsJson } from '../json/BodyBitJson.ts';
-import { type ImageResourceWrapperJson, type ResourceJson } from '../json/ResourceJson.ts';
+import {
+  type ImageResourceWrapperJson,
+  type ResourceJson,
+  type VideoResourceWrapperJson,
+} from '../json/ResourceJson.ts';
 import { type ParserError } from '../parser/ParserError.ts';
 import { type ParserInfo } from '../parser/ParserInfo.ts';
 import { type JsonText, type TextAst } from './TextNodes.ts';
@@ -115,7 +119,7 @@ export interface Bit {
   subtype?: Property;
   bookAlias?: Property;
   bookDiff?: Property;
-  coverImage?: Property;
+  coverImage?: Property | ImageResourceWrapperJson;
   coverColor?: Property;
   publications?: Property;
   relatedBook?: Property;
@@ -130,6 +134,23 @@ export interface Bit {
   processHandInLocation?: Property;
   chatWithBook?: Property;
   chatWithBookBrainKey?: Property;
+  currency?: Property;
+  bookIsbn?: Property;
+  bookAuthor?: Property;
+  bookType?: Property;
+  bookBindingType?: Property;
+  bookNumberOfPages?: Property;
+  bookRating?: Property;
+  bookSeriesTitle?: Property;
+  bookSeriesId?: Property;
+  bookSeriesNumber?: Property;
+  bookLanguage?: Property;
+  bookPublishingDate?: Property;
+  bookPublisher?: Property;
+  bookTranslator?: Property;
+  bookOriginalTitle?: Property;
+  gmbExternalShop?: Property;
+  gmbExternalShopItems?: Property;
   action?: Property;
   showInIndex?: Property;
   refAuthor?: Property;
@@ -147,6 +168,10 @@ export interface Bit {
   classification?: Property;
   availableClassifications?: Property;
   allowedBit?: Property;
+  authorFullName?: Property;
+  authorPseudonym?: Property;
+  authorTitle?: Property;
+  authorJobTitle?: Property;
   tableFixedHeader?: Property;
   tableHeaderWhitespaceNoWrap?: Property;
   tableSearch?: Property;
@@ -232,6 +257,7 @@ export interface Bit {
   tocResource?: Property;
   tocContent?: Property;
   page?: Property;
+  platformBrandTarget?: Property;
   platformName?: Property;
   platformIcon?: ImageResourceWrapperJson;
   platformLogo?: ImageResourceWrapperJson;
@@ -281,6 +307,8 @@ export interface Bit {
   example?: ExampleJson;
   imageSource?: ImageSourceJson;
   person?: PersonJson;
+  previewImage?: ImageResourceWrapperJson[];
+  previewVideo?: VideoResourceWrapperJson[];
   imagePlaceholder?: ImageResourceWrapperJson;
   resources?: ResourceJson[];
   body?: Body;

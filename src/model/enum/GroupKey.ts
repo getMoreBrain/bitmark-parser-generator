@@ -46,6 +46,8 @@ const groupKeys = {
   group_resourceDocumentDownload: 'group_resourceDocumentDownload',
   group_resourceAppLink: 'group_resourceAppLink',
   group_resourceWebsiteLink: 'group_resourceWebsiteLink',
+  group_previewImages: 'group_previewImages',
+  group_previewVideos: 'group_previewVideos',
 } as const;
 
 const GroupKey = superenum(groupKeys);
