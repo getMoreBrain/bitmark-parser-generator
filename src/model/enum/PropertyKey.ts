@@ -204,6 +204,7 @@ const propertyKeys = {
   property_scormSource: '@scormSource',
   property_search: '@search',
   property_searchIndex: '@searchIndex',
+  property_selected: '@selected',
   property_servings: '@servings',
   property_showInIndex: '@showInIndex',
   property_showSubtitles: '@showSubtitles',

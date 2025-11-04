@@ -159,6 +159,7 @@ export interface BaseResourceJson {
   caption: JsonText;
   search: string;
   srcAlt: string[];
+  selected: boolean;
 }
 
 export interface ImageResourceJson extends BaseResourceJson {

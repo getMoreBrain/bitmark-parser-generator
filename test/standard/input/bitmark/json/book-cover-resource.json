@@ -4,7 +4,9 @@
       "type": "book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["book-resource-123"],
+      "id": [
+        "book-resource-123"
+      ],
       "coverImage": {
         "type": "image",
         "image": {
@@ -18,7 +20,8 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": []
+          "caption": [],
+          "selected": false
         }
       },
       "title": [
@@ -49,7 +52,7 @@
       "chatWithBookBrainKey": ""
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -60,7 +63,9 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["article-123"],
+      "id": [
+        "article-123"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -81,7 +86,7 @@
       ]
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
