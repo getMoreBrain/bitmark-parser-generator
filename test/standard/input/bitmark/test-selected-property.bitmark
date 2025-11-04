@@ -1,0 +1,7 @@
+[.image]
+[@id:test-selected]
+[&image:https://example.com/test-image.png]
+
+[.video]
+[@id:test-selected-video]
+[&video:https://example.com/test-video.mp4]
