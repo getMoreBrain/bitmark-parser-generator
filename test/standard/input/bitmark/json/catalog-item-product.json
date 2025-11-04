@@ -4,14 +4,16 @@
       "type": "catalog-item-product",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["3001"],
+      "id": [
+        "3001"
+      ],
       "coverImage": "https://example.com/images/keyboard.jpg",
       "currency": "USD",
       "bookType": "Electronics",
+      "gmbExternalShop": "TechGear",
       "content2Buy": "prod-keyboard-rgb-2024",
       "listPrice": "$129.99",
       "customerProductId": "PROD-KB-RGB-001",
-      "gmbExternalShop": "TechGear",
       "buttonCaption": "Add to Cart",
       "imageSource": {
         "url": "https://example.com/source/keyboard-images",
@@ -64,7 +66,8 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": []
+            "caption": [],
+            "selected": false
           }
         },
         {
@@ -80,7 +83,8 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": []
+            "caption": [],
+            "selected": false
           }
         }
       ],
@@ -96,7 +100,8 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": []
+            "caption": [],
+            "selected": false
           }
         }
       ],
@@ -113,7 +118,8 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": []
+          "caption": [],
+          "selected": false
         }
       },
       "body": [
@@ -130,7 +136,7 @@
       ]
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -182,6 +188,22 @@
           }
         },
         {
+          "message": "[&video] is included more than the required 0 time(s). Did you forget the '&video' in the bit header?",
+          "text": "[&video:https://example.com/preview/keyboard-demo.mp4]",
+          "location": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 507
+            },
+            "end": {
+              "line": 16,
+              "column": 55,
+              "offset": 561
+            }
+          }
+        },
+        {
           "message": "[@mockupId:xxx] is missing from [@imageSource]",
           "text": "[@imageSource:https://example.com/source/keyboard-images]",
           "location": {
@@ -199,20 +221,22 @@
         }
       ]
     },
-    "bitmark": "[.catalog-item-product]\n[@id:3001]\n[#Premium Mechanical Keyboard]\n[##RGB Backlit Gaming Keyboard]\n[@coverImage:https://example.com/images/keyboard.jpg]\n[@content2Buy:prod-keyboard-rgb-2024]\n[@listPrice:$129.99]\n[@buttonCaption:Add to Cart]\n[@customerProductId:PROD-KB-RGB-001]\n[@currency:USD]\n[@bookType:Electronics]\n[@gmbExternalShop:TechGear]\n[@imageSource:https://example.com/source/keyboard-images]\n[&image:https://example.com/preview/keyboard-1.jpg]\n[&image:https://example.com/preview/keyboard-2.jpg]\n[&previewImage:https://example.com/preview/keyboard-preview-1.jpg]\n[&previewImage:https://example.com/preview/keyboard-preview-2.jpg]\n[&previewVideo:https://example.com/preview/keyboard-demo.mp4]\nHigh-quality mechanical keyboard with customizable RGB lighting, perfect for gaming and productivity."
+    "bitmark": "[.catalog-item-product]\n[@id:3001]\n[#Premium Mechanical Keyboard]\n[##RGB Backlit Gaming Keyboard]\n[@coverImage:https://example.com/images/keyboard.jpg]\n[@content2Buy:prod-keyboard-rgb-2024]\n[@listPrice:$129.99]\n[@buttonCaption:Add to Cart]\n[@customerProductId:PROD-KB-RGB-001]\n[@currency:USD]\n[@bookType:Electronics]\n[@gmbExternalShop:TechGear]\n[@imageSource:https://example.com/source/keyboard-images]\n[&image:https://example.com/preview/keyboard-1.jpg]\n[&image:https://example.com/preview/keyboard-2.jpg]\n[&video:https://example.com/preview/keyboard-demo.mp4]\n[&previewImage:https://example.com/preview/keyboard-preview-1.jpg]\n[&previewImage:https://example.com/preview/keyboard-preview-2.jpg]\n[&previewVideo:https://example.com/preview/keyboard-demo.mp4]\nHigh-quality mechanical keyboard with customizable RGB lighting, perfect for gaming and productivity."
   },
   {
     "bit": {
       "type": "catalog-item-product",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["3002"],
+      "id": [
+        "3002"
+      ],
       "coverImage": "https://example.com/images/mouse.jpg",
+      "bookAuthor": "ErgoTech",
+      "bookRating": "4.3",
       "content2Buy": "prod-mouse-wireless",
       "listPrice": "$39.99",
       "customerProductId": "PROD-MOUSE-WL-002",
-      "bookAuthor": "ErgoTech",
-      "bookRating": "4.3",
       "title": [
         {
           "type": "paragraph",
@@ -245,7 +269,7 @@
       ]
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -256,16 +280,22 @@
       "type": "catalog-item-product",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["3003"],
+      "id": [
+        "3003"
+      ],
       "coverImage": "https://example.com/images/dock.jpg",
-      "content2Buy": "prod-dock-usbc-14port",
-      "listPrice": "$89.99",
       "bookSeriesTitle": "Ultimate Connectivity",
       "bookSeriesId": "UC-001",
       "bookSeriesNumber": "1",
+      "gmbExternalShopItems": [
+        "amazon",
+        "newegg",
+        "bestbuy"
+      ],
+      "content2Buy": "prod-dock-usbc-14port",
+      "listPrice": "$89.99",
       "customerProductId": "PROD-DOCK-14-003",
       "buttonCaption": "Buy Now",
-      "gmbExternalShopItems": ["amazon", "newegg", "bestbuy"],
       "title": [
         {
           "type": "paragraph",
@@ -310,18 +340,20 @@
       ]
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.catalog-item-product]\n[@id:3003]\n[#USB-C Docking Station]\n[##14-in-1 Multi-Port Hub]\n[@coverImage:https://example.com/images/dock.jpg]\n[@content2Buy:prod-dock-usbc-14port]\n[@listPrice:$89.99]\n[@buttonCaption:Buy Now]\n[@customerProductId:PROD-DOCK-14-003]\n[@bookSeriesTitle:Ultimate Connectivity]\n[@bookSeriesId:UC-001]\n[@bookSeriesNumber:1]\n[@gmbExternalShopItems:amazon, newegg, bestbuy]\nComplete docking solution with HDMI, DisplayPort, USB 3.0, Ethernet, SD card readers, and power delivery up to 100W."
+    "bitmark": "[.catalog-item-product]\n[@id:3003]\n[#USB-C Docking Station]\n[##14-in-1 Multi-Port Hub]\n[@coverImage:https://example.com/images/dock.jpg]\n[@content2Buy:prod-dock-usbc-14port]\n[@listPrice:$89.99]\n[@buttonCaption:Buy Now]\n[@customerProductId:PROD-DOCK-14-003]\n[@bookSeriesTitle:Ultimate Connectivity]\n[@bookSeriesId:UC-001]\n[@bookSeriesNumber:1]\n[@gmbExternalShopItems:amazon]\n[@gmbExternalShopItems:newegg]\n[@gmbExternalShopItems:bestbuy]\nComplete docking solution with HDMI, DisplayPort, USB 3.0, Ethernet, SD card readers, and power delivery up to 100W."
   },
   {
     "bit": {
       "type": "catalog-item-product",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["3004"],
+      "id": [
+        "3004"
+      ],
       "coverImage": "https://example.com/images/product-minimal.jpg",
       "content2Buy": "prod-minimal",
       "listPrice": "$19.99",
@@ -348,7 +380,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
