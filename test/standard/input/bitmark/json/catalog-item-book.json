@@ -4,7 +4,9 @@
       "type": "catalog-item-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["1001"],
+      "id": [
+        "1001"
+      ],
       "coverImage": "https://example.com/images/web-dev-book-cover.jpg",
       "currency": "USD",
       "bookAuthor": "John Developer",
@@ -67,7 +69,8 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": []
+            "caption": [],
+            "selected": false
           }
         },
         {
@@ -83,7 +86,8 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": []
+            "caption": [],
+            "selected": false
           }
         }
       ],
@@ -99,7 +103,8 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": []
+            "caption": [],
+            "selected": false
           }
         }
       ],
@@ -116,7 +121,8 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": []
+          "caption": [],
+          "selected": false
         }
       },
       "body": [
@@ -133,7 +139,7 @@
       ]
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -209,15 +215,17 @@
       "type": "catalog-item-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["1002"],
+      "id": [
+        "1002"
+      ],
       "coverImage": "https://example.com/images/python-book.jpg",
+      "bookIsbn": "978-1-234567-89-0",
+      "bookAuthor": "Jane Pythonista",
+      "bookBindingType": "Paperback",
+      "bookNumberOfPages": "350",
+      "bookRating": "4.5",
       "content2Buy": "book-python-basics",
       "listPrice": "$39.99",
-      "bookAuthor": "Jane Pythonista",
-      "bookRating": "4.5",
-      "bookBindingType": "Paperback",
-      "bookIsbn": "978-1-234567-89-0",
-      "bookNumberOfPages": "350",
       "customerProductId": "PROD-PY-2024-002",
       "title": [
         {
@@ -251,7 +259,7 @@
       ]
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -262,18 +270,24 @@
       "type": "catalog-item-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["1003"],
+      "id": [
+        "1003"
+      ],
       "coverImage": "https://example.com/images/database-book.jpg",
-      "content2Buy": "book-database-advanced",
-      "bookOriginalTitle": "Diseño Avanzado de Bases de Datos",
-      "listPrice": "$59.99",
-      "bookTranslator": "Maria Translator",
-      "customerProductId": "PROD-DB-2024-003",
+      "bookSeriesTitle": "Database Mastery Series",
       "bookSeriesId": "DMS-001",
       "bookSeriesNumber": "3",
-      "bookSeriesTitle": "Database Mastery Series",
+      "bookTranslator": "Maria Translator",
+      "bookOriginalTitle": "Diseño Avanzado de Bases de Datos",
       "gmbExternalShop": "TechBooks",
-      "gmbExternalShopItems": ["amazon", "barnes-noble", "bookshop"],
+      "gmbExternalShopItems": [
+        "amazon",
+        "barnes-noble",
+        "bookshop"
+      ],
+      "content2Buy": "book-database-advanced",
+      "listPrice": "$59.99",
+      "customerProductId": "PROD-DB-2024-003",
       "buttonCaption": "Add to Cart",
       "title": [
         {
@@ -319,18 +333,20 @@
       ]
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.catalog-item-book]\n[@id:1003]\n[#Advanced Database Design]\n[##Mastering SQL and NoSQL]\n[@coverImage:https://example.com/images/database-book.jpg]\n[@content2Buy:book-database-advanced]\n[@listPrice:$59.99]\n[@buttonCaption:Add to Cart]\n[@customerProductId:PROD-DB-2024-003]\n[@bookSeriesTitle:Database Mastery Series]\n[@bookSeriesId:DMS-001]\n[@bookSeriesNumber:3]\n[@bookTranslator:Maria Translator]\n[@bookOriginalTitle:Diseño Avanzado de Bases de Datos]\n[@gmbExternalShop:TechBooks]\n[@gmbExternalShopItems:amazon, barnes-noble, bookshop]\nDeep dive into database design patterns, optimization techniques, and best practices for both SQL and NoSQL databases."
+    "bitmark": "[.catalog-item-book]\n[@id:1003]\n[#Advanced Database Design]\n[##Mastering SQL and NoSQL]\n[@coverImage:https://example.com/images/database-book.jpg]\n[@content2Buy:book-database-advanced]\n[@listPrice:$59.99]\n[@buttonCaption:Add to Cart]\n[@customerProductId:PROD-DB-2024-003]\n[@bookSeriesTitle:Database Mastery Series]\n[@bookSeriesId:DMS-001]\n[@bookSeriesNumber:3]\n[@bookTranslator:Maria Translator]\n[@bookOriginalTitle:Diseño Avanzado de Bases de Datos]\n[@gmbExternalShop:TechBooks]\n[@gmbExternalShopItems:amazon]\n[@gmbExternalShopItems:barnes-noble]\n[@gmbExternalShopItems:bookshop]\nDeep dive into database design patterns, optimization techniques, and best practices for both SQL and NoSQL databases."
   },
   {
     "bit": {
       "type": "catalog-item-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["1004"],
+      "id": [
+        "1004"
+      ],
       "coverImage": "https://example.com/images/minimal.jpg",
       "content2Buy": "book-minimal",
       "listPrice": "$19.99",
@@ -357,7 +373,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

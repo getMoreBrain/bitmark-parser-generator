@@ -2810,6 +2810,16 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     });
   }
 
+  protected leaf_selected(node: NodeInfo, route: NodeInfo[]): void {
+    if (node.value == null) return;
+
+    this.writeNL_IfNotChain(route);
+    this.writeProperty('selected', node.value, route, {
+      format: TagFormat.boolean,
+      ignoreFalse: true,
+    });
+  }
+
   // bitmarkAst -> bits -> bitsValue -> resource -> ...
   // bitmarkAst -> bits -> bitsValue -> resource -> posterImage -> ...
   // bitmarkAst -> bits -> bitsValue -> resource -> thumbnails -> thumbnailsValue -> ...

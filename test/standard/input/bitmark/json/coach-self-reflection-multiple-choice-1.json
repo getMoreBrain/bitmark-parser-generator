@@ -48,7 +48,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -112,7 +112,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -185,7 +185,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -256,7 +256,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -361,7 +361,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -457,7 +457,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -556,7 +556,8 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": []
+          "caption": [],
+          "selected": false
         }
       },
       "body": [],
@@ -601,7 +602,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -659,7 +660,8 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": []
+          "caption": [],
+          "selected": false
         }
       },
       "body": [],
@@ -695,7 +697,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -760,7 +762,8 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": []
+          "caption": [],
+          "selected": false
         }
       },
       "body": [],
@@ -787,7 +790,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -871,7 +874,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -989,7 +992,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -1089,7 +1092,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1171,7 +1174,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1266,7 +1269,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -1348,7 +1351,7 @@
       "isExample": true
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -1464,7 +1467,7 @@
       "isExample": true
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -1580,7 +1583,7 @@
       "isExample": true
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

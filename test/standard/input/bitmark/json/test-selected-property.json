@@ -1,0 +1,80 @@
+[
+  {
+    "bit": {
+      "type": "image",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "test-selected"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "example.com",
+          "src": "https://example.com/test-image.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "body": []
+    },
+    "parser": {
+      "version": "4.16.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.image]\n[@id:test-selected]\n[&image:https://example.com/test-image.png]"
+  },
+  {
+    "bit": {
+      "type": "video",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "test-selected-video"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "video",
+        "video": {
+          "format": "mp4",
+          "provider": "example.com",
+          "src": "https://example.com/test-video.mp4",
+          "width": null,
+          "height": null,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "body": []
+    },
+    "parser": {
+      "version": "4.16.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.video]\n[@id:test-selected-video]\n[&video:https://example.com/test-video.mp4]"
+  }
+]
