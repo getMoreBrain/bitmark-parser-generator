@@ -29,6 +29,10 @@ class ConfigBuilder {
 
     const bitConfigs: (_BitConfig & { bitType: BitTypeType })[] = [];
     const groupConfigs: (_GroupsConfig & { key: string })[] = [];
+
+    const bitGroupConfigKeys: BitTypeType[] = [];
+    const bitGroupConfigs: (_BitConfig & { bitType: BitTypeType })[] = [];
+
     for (const bt of BitType.values()) {
       const bitType = Config.getBitType(bt);
       const _bitConfig: _BitConfig & { bitType: BitTypeType } = BITS[bitType] as _BitConfig & {
@@ -55,10 +59,150 @@ class ConfigBuilder {
     fs.ensureDirSync(outputFolderBits);
     fs.ensureDirSync(outputFolderGroups);
     const fileWrites: Promise<void>[] = [];
+
+    const keyToJsonKey = (key: string, tagNameChain: string[]): string => {
+      let jsonKey = key;
+
+      if (key === '%') {
+        jsonKey = 'item_todo';
+      } else if (key === '!') {
+        jsonKey = 'instruction';
+      } else if (key === '?') {
+        jsonKey = 'hint';
+      } else if (key === '#') {
+        jsonKey = 'title';
+      } else if (key === '##') {
+        jsonKey = 'subTitle';
+      } else if (key === '▼') {
+        jsonKey = 'anchor';
+      } else if (key === '►') {
+        jsonKey = 'reference';
+      } else if (key === '$') {
+        jsonKey = 'sampleSolution';
+        // } else if (key === '&') {
+        //   jsonKey = 'Resource';
+      } else if (key === '+') {
+        jsonKey = 'true_todo';
+      } else if (key === '-') {
+        jsonKey = 'false_todo';
+      } else if (key === '_') {
+        jsonKey = 'gap_todo';
+      } else if (key === '=') {
+        jsonKey = 'mark_todo';
+      } else if (key.startsWith('@')) {
+        jsonKey = key.substring(1);
+      } else if (key.startsWith('&')) {
+        jsonKey = key.substring(1);
+      }
+
+      // if (jsonKey.startsWith('group_')) {
+      //   jsonKey = jsonKey.substring(6);
+      // }
+      // jsonKey = StringUtils.camelToKebab(jsonKey);
+
+      const thisChain = [...tagNameChain, jsonKey];
+      jsonKey = thisChain.join('.');
+
+      return jsonKey;
+    };
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const processTagEntries = (tag: any, tagNameChain: string[]): any[] => {
+      const tags: unknown[] = [];
+      let tagName = tag.key as string;
+      const jsonKey = keyToJsonKey(tagName, tagNameChain);
+      // if (tagName == '&image') debugger;
+      const tagType = typeFromConfigKey(tag.key);
+      let format = '';
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      let chain: any = undefined;
+      if (tagType === BitTagConfigKeyType.tag) {
+        // const resolvedTag = TAGS[tag.configKey];
+        // tagName = resolvedTag.tag;
+        tagName = tag.key;
+        // if (tagName === '%') {
+        //   chain = {
+        //     key: '%',
+        //     format,
+        //     min: tag.minCount,
+        //     max: tag.maxCount,
+        //     description: 'Lead',
+        //     chain: {
+        //       key: '%',
+        //       format,
+        //       min: tag.minCount,
+        //       max: tag.maxCount,
+        //       description: 'Page number',
+        //       chain: {
+        //         key: '%',
+        //         format,
+        //         min: tag.minCount,
+        //         max: tag.maxCount,
+        //         description: 'Margin number',
+        //       },
+        //     },
+        //   };
+        // }
+        format = 'bitmark--';
+      } else if (tagType === BitTagConfigKeyType.property) {
+        // const resolvedProperty = PROPERTIES[tag.configKey];
+        // tagName = resolvedProperty.tag;
+        tagName = tag.key;
+        // const property = resolvedProperty as PropertyTagConfig;
+        // format
+        if (tag.format === TagFormat.plainText) {
+          format = 'string';
+        } else if (tag.format === TagFormat.boolean) {
+          format = 'bool';
+        } else if (tag.format === TagFormat.bitmarkText) {
+          format = 'bitmark';
+        } else if (tag.format === TagFormat.number) {
+          format = 'number';
+        }
+      } else if (tagType === BitTagConfigKeyType.resource) {
+        format = 'string';
+      } else if (tagType === BitTagConfigKeyType.group) {
+        let k = tag.key as string;
+        if (k.startsWith('group_')) k = k.substring(6);
+        k = /*'_' +*/ StringUtils.camelToKebab(k);
+        tags.push({
+          type: 'group',
+          key: k,
+        });
+        return tags;
+      }
+
+      // Process chain
+      if (Array.isArray(tag.chain) && tag.chain.length > 0) {
+        const chainTags: unknown[] = [];
+        for (const [_tagKey, chainTag] of tag.chain.entries()) {
+          chainTags.push(...processTagEntries(chainTag, [...tagNameChain, jsonKey]));
+        }
+        chain = chainTags;
+      }
+
+      const t = {
+        type: 'tag',
+        key: tagName,
+        jsonKey,
+        format,
+        default: null,
+        alwaysInclude: false,
+        min: tag.minCount == null ? 0 : tag.minCount,
+        max: tag.maxCount == null ? 1 : tag.maxCount,
+        description: tag.description ?? '',
+        tags: chain,
+        // raw: {
+        //   ...tag,
+        // },
+      };
+      tags.push(t);
+      return tags;
+    };
+
     // BitConfigs
     for (const b of bitConfigs) {
-      const inherits = [];
-      const tags = [];
+      const tags: unknown[] = [];
       const tagEntriesTypeOrder = [
         BitTagConfigKeyType.tag,
         BitTagConfigKeyType.property,
@@ -74,81 +218,17 @@ class ConfigBuilder {
         const typeOrder = tagEntriesTypeOrder.indexOf(typeA) - tagEntriesTypeOrder.indexOf(typeB);
         return typeOrder;
       });
-      if (b.baseBitType)
-        inherits.push({
-          type: 'bit',
-          name: b.baseBitType,
+      if (b.baseBitType) {
+        tags.push({
+          type: 'group',
+          key: `group-${b.baseBitType}`,
         });
-      for (const [_tagKey, tag] of tagEntries) {
-        const tagName = tag.key as string;
-        let format = '';
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        let chain: any = undefined;
-        const tagType = typeFromConfigKey(tag.key);
-        if (tagType === BitTagConfigKeyType.tag) {
-          if (tagName === '%') {
-            chain = {
-              key: '%',
-              format,
-              min: tag.minCount,
-              max: tag.maxCount,
-              description: 'Lead',
-              chain: {
-                key: '%',
-                format,
-                min: tag.minCount,
-                max: tag.maxCount,
-                description: 'Page number',
-                chain: {
-                  key: '%',
-                  format,
-                  min: tag.minCount,
-                  max: tag.maxCount,
-                  description: 'Margin number',
-                },
-              },
-            };
-          }
-          format = 'bitmark--';
-        } else if (tagType === BitTagConfigKeyType.property) {
-          // const resolvedProperty = Config.getTagConfigForTag(b.tags, tagKey);
-          // const property = resolvedProperty as PropertyTagConfig;
-          // format
-          if (tag.format === TagFormat.plainText) {
-            format = 'string';
-          } else if (tag.format === TagFormat.boolean) {
-            format = 'bool';
-          } else if (tag.format === TagFormat.bitmarkText) {
-            format = 'bitmark';
-          } else if (tag.format === TagFormat.number) {
-            format = 'number';
-          }
-        } else if (tagType === BitTagConfigKeyType.resource) {
-        } else if (tagType === BitTagConfigKeyType.group) {
-          let k = tag.key as string;
-          if (k.startsWith('group_')) k = k.substring(6);
-          k = /*'_' +*/ StringUtils.camelToKebab(k);
-          inherits.push({
-            type: 'group',
-            name: k,
-          });
-          continue;
-        }
-        const t = {
-          key: tagName,
-          format,
-          default: null,
-          alwaysInclude: false,
-          min: tag.minCount == null ? 0 : tag.minCount,
-          max: tag.maxCount == null ? 1 : tag.maxCount,
-          description: tag.description ?? '',
-          chain,
-          // raw: {
-          //   ...tag,
-          // },
-        };
-        tags.push(t);
+        bitGroupConfigKeys.push(b.baseBitType);
       }
+      for (const [_tagKey, tag] of tagEntries) {
+        tags.push(...processTagEntries(tag, []));
+      }
+
       const bitJson = {
         name: b.bitType,
         description: b.description ?? '',
@@ -166,7 +246,6 @@ class ConfigBuilder {
         footerAllowed: b.footerAllowed ?? true,
         footerRequired: b.footerRequired ?? false,
         resourceAttachmentAllowed: b.resourceAttachmentAllowed ?? true,
-        inherits,
         tags,
       };
       const output = path.join(outputFolderBits, `${b.bitType}.jsonc`);
@@ -178,11 +257,23 @@ class ConfigBuilder {
       //   console.log(`BitType: ${bitType} => ${bitType2}`);
       // }
     }
+
+    // Convert bits that are depended on to groups
+    for (const bt of bitGroupConfigKeys) {
+      const bitType = Config.getBitType(bt);
+      const _bitConfig: _BitConfig & { bitType: BitTypeType } = BITS[bitType] as _BitConfig & {
+        bitType: BitTypeType;
+      };
+      if (_bitConfig) {
+        _bitConfig.bitType = bitType;
+        bitGroupConfigs.push(_bitConfig);
+      }
+    }
+
     // GroupConfigs
     const writeGroupConfigs = (groupConfigs: (_GroupsConfig & { key: string })[]) => {
       for (const g of groupConfigs) {
-        const inherits = [];
-        const tags = [];
+        const tags: unknown[] = [];
         const groupKey = StringUtils.camelToKebab(g.key);
         // if (groupKey == '_resourceImage') debugger;
         const tagEntriesTypeOrder = [
@@ -199,80 +290,7 @@ class ConfigBuilder {
           return typeOrder;
         });
         for (const [_tagKey, tag] of tagEntries) {
-          let tagName = tag.key as string;
-          const tagType = typeFromConfigKey(tag.key);
-          let format = '';
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          let chain: any = undefined;
-          if (tagType === BitTagConfigKeyType.tag) {
-            // const resolvedTag = TAGS[tag.configKey];
-            // tagName = resolvedTag.tag;
-            tagName = tag.name;
-            if (tagName === '%') {
-              chain = {
-                key: '%',
-                format,
-                min: tag.minCount,
-                max: tag.maxCount,
-                description: 'Lead',
-                chain: {
-                  key: '%',
-                  format,
-                  min: tag.minCount,
-                  max: tag.maxCount,
-                  description: 'Page number',
-                  chain: {
-                    key: '%',
-                    format,
-                    min: tag.minCount,
-                    max: tag.maxCount,
-                    description: 'Margin number',
-                  },
-                },
-              };
-            }
-            format = 'bitmark--';
-          } else if (tagType === BitTagConfigKeyType.property) {
-            // const resolvedProperty = PROPERTIES[tag.configKey];
-            // tagName = resolvedProperty.tag;
-            tagName = tag.key;
-            // const property = resolvedProperty as PropertyTagConfig;
-            // format
-            if (tag.format === TagFormat.plainText) {
-              format = 'string';
-            } else if (tag.format === TagFormat.boolean) {
-              format = 'bool';
-            } else if (tag.format === TagFormat.bitmarkText) {
-              format = 'bitmark';
-            } else if (tag.format === TagFormat.number) {
-              format = 'number';
-            }
-          } else if (tagType === BitTagConfigKeyType.resource) {
-            format = 'string';
-          } else if (tagType === BitTagConfigKeyType.group) {
-            let k = tag.key as string;
-            if (k.startsWith('group_')) k = k.substring(6);
-            k = /*'_' +*/ StringUtils.camelToKebab(k);
-            inherits.push({
-              type: 'group',
-              name: k,
-            });
-            continue;
-          }
-          const t = {
-            key: tagName,
-            format,
-            default: null,
-            alwaysInclude: false,
-            min: tag.minCount == null ? 0 : tag.minCount,
-            max: tag.maxCount == null ? 1 : tag.maxCount,
-            description: tag.description ?? '',
-            chain,
-            // raw: {
-            //   ...tag,
-            // },
-          };
-          tags.push(t);
+          tags.push(...processTagEntries(tag, []));
         }
         const bitJson = {
           name: groupKey,
@@ -285,7 +303,6 @@ class ConfigBuilder {
               changes: ['Initial version'],
             },
           ],
-          inherits,
           tags,
           // cards: [
           //   {
@@ -322,8 +339,59 @@ class ConfigBuilder {
       }
     };
     writeGroupConfigs(groupConfigs);
+
+    // Bits as GroupConfigs
+    const writeBitsAsGroupConfigs = (
+      bitsAsGroupConfigs: (_BitConfig & { bitType: BitTypeType })[],
+    ) => {
+      for (const b of bitsAsGroupConfigs) {
+        const groupKey = `group-${b.bitType}`;
+        const tags: unknown[] = [];
+        const tagEntriesTypeOrder = [
+          BitTagConfigKeyType.tag,
+          BitTagConfigKeyType.property,
+          BitTagConfigKeyType.resource,
+          BitTagConfigKeyType.group,
+          BitTagConfigKeyType.unknown,
+        ];
+        const tagEntries = Object.entries(b.tags ?? []).sort((a, b) => {
+          const tagA = a[1];
+          const tagB = b[1];
+          const typeA = typeFromConfigKey(tagA.key);
+          const typeB = typeFromConfigKey(tagB.key);
+          const typeOrder = tagEntriesTypeOrder.indexOf(typeA) - tagEntriesTypeOrder.indexOf(typeB);
+          return typeOrder;
+        });
+        for (const [_tagKey, tag] of tagEntries) {
+          tags.push(...processTagEntries(tag, []));
+        }
+        const bitJson = {
+          name: groupKey,
+          description: b.description ?? '',
+          since: 'UNKNOWN',
+          deprecated: b.deprecated,
+          history: [
+            {
+              version: 'UNKNOWN',
+              changes: ['Initial version'],
+            },
+          ],
+          tags,
+        };
+        const output = path.join(outputFolderGroups, `${groupKey}.jsonc`);
+        const str = JSON.stringify(bitJson, null, 2);
+        fs.writeFileSync(output, str);
+        // const bitType = b.bitType;
+        // const bitType2 = Config.getBitType(bitType);
+        // if (bitType !== bitType2) {
+        //   console.log(`BitType: ${bitType} => ${bitType2}`);
+        // }
+      }
+    };
+    writeBitsAsGroupConfigs(bitGroupConfigs);
   }
 
+  // Build flat bit configs
   public buildFlat(options?: GenerateConfigOptions): void {
     const opts: GenerateConfigOptions = Object.assign({}, options);
     const bitConfigs: BitConfig[] = [];
@@ -338,9 +406,99 @@ class ConfigBuilder {
     const outputFolderBits = path.join(outputFolder, 'bits_flat');
     fs.ensureDirSync(outputFolderBits);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const processTagEntries = (tag: any): any[] => {
+      const tags: unknown[] = [];
+      let tagName = tag.key as string;
+      // if (tagName == '&image') debugger;
+      const tagType = typeFromConfigKey(tag.key);
+      let format = '';
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      let chain: any = undefined;
+      if (tagType === BitTagConfigKeyType.tag) {
+        // const resolvedTag = TAGS[tag.configKey];
+        // tagName = resolvedTag.tag;
+        tagName = tag.name;
+        // if (tagName === '%') {
+        //   chain = {
+        //     key: '%',
+        //     format,
+        //     min: tag.minCount,
+        //     max: tag.maxCount,
+        //     description: 'Lead',
+        //     chain: {
+        //       key: '%',
+        //       format,
+        //       min: tag.minCount,
+        //       max: tag.maxCount,
+        //       description: 'Page number',
+        //       chain: {
+        //         key: '%',
+        //         format,
+        //         min: tag.minCount,
+        //         max: tag.maxCount,
+        //         description: 'Margin number',
+        //       },
+        //     },
+        //   };
+        // }
+        format = 'bitmark--';
+      } else if (tagType === BitTagConfigKeyType.property) {
+        // const resolvedProperty = PROPERTIES[tag.configKey];
+        // tagName = resolvedProperty.tag;
+        tagName = tag.key;
+        // const property = resolvedProperty as PropertyTagConfig;
+        // format
+        if (tag.format === TagFormat.plainText) {
+          format = 'string';
+        } else if (tag.format === TagFormat.boolean) {
+          format = 'bool';
+        } else if (tag.format === TagFormat.bitmarkText) {
+          format = 'bitmark';
+        } else if (tag.format === TagFormat.number) {
+          format = 'number';
+        }
+      } else if (tagType === BitTagConfigKeyType.resource) {
+        format = 'string';
+      } else if (tagType === BitTagConfigKeyType.group) {
+        let k = tag.key as string;
+        if (k.startsWith('group_')) k = k.substring(6);
+        k = /*'_' +*/ StringUtils.camelToKebab(k);
+        tags.push({
+          type: 'group',
+          key: k,
+        });
+        return tags;
+      }
+
+      // Process chain
+      if (Array.isArray(tag.chain) && tag.chain.length > 0) {
+        const chainTags: unknown[] = [];
+        for (const [_tagKey, chainTag] of tag.chain.entries()) {
+          chainTags.push(...processTagEntries(chainTag));
+        }
+        chain = chainTags;
+      }
+
+      const t = {
+        key: tagName,
+        format,
+        default: null,
+        alwaysInclude: false,
+        min: tag.minCount == null ? 0 : tag.minCount,
+        max: tag.maxCount == null ? 1 : tag.maxCount,
+        description: tag.description ?? '',
+        chain,
+        // raw: {
+        //   ...tag,
+        // },
+      };
+      tags.push(t);
+      return tags;
+    };
+
     // BitConfigs
     for (const b of bitConfigs) {
-      const inherits = [];
       const tags = [];
       const tagEntriesTypeOrder = [
         BitTagConfigKeyType.tag,
@@ -359,105 +517,106 @@ class ConfigBuilder {
         return typeOrder;
       });
 
-      for (const [tagKey, tag] of tagEntries) {
-        let tagName = tagKey;
-        let tagKeyPrefix = '';
-        let format = '';
-        let description = '';
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        let chain: any = undefined;
-        if (tag.type === BitTagConfigKeyType.tag) {
-          tagName = tag.tag;
-          if (tagName === '%') {
-            description = 'Item';
-            chain = {
-              key: '%',
-              format,
-              min: tag.minCount,
-              max: tag.maxCount,
-              description: 'Lead',
-              chain: {
-                key: '%',
-                format,
-                min: tag.minCount,
-                max: tag.maxCount,
-                description: 'Page number',
-                chain: {
-                  key: '%',
-                  format,
-                  min: tag.minCount,
-                  max: tag.maxCount,
-                  description: 'Margin number',
-                },
-              },
-            };
-          } else if (tagName === '!') {
-            description = 'Instruction';
-          } else if (tagName === '?') {
-            description = 'Hint';
-          } else if (tagName === '#') {
-            description = 'Title';
-          } else if (tagName === '##') {
-            description = 'Sub-title';
-          } else if (tagName === '▼') {
-            description = 'Anchor';
-          } else if (tagName === '►') {
-            description = 'Reference';
-          } else if (tagName === '$') {
-            description = 'Sample solution';
-          } else if (tagName === '&') {
-            description = 'Resource';
-          } else if (tagName === '+') {
-            description = 'True statement';
-          } else if (tagName === '-') {
-            description = 'False statement';
-          } else if (tagName === '_') {
-            description = 'Gap';
-          } else if (tagName === '=') {
-            description = 'Mark';
-          }
-          format = 'bitmark--';
-        } else if (tag.type === BitTagConfigKeyType.property) {
-          tagName = tag.tag;
-          tagKeyPrefix = '@';
-          const property = tag as PropertyTagConfig;
-          // format
-          if (property.format === TagFormat.plainText) {
-            format = 'string';
-          } else if (property.format === TagFormat.boolean) {
-            format = 'bool';
-          } else if (property.format === TagFormat.bitmarkText) {
-            format = 'bitmark';
-          } else if (property.format === TagFormat.number) {
-            format = 'number';
-          }
-        } else if (tag.type === BitTagConfigKeyType.resource) {
-          tagKeyPrefix = '&';
-        } else if (tag.type === BitTagConfigKeyType.group) {
-          tagKeyPrefix = '@';
-          let k = tag.configKey as string;
-          if (k.startsWith('group_')) k = k.substring(6);
-          k = '_' + k;
-          inherits.push({
-            type: 'group',
-            name: k,
-          });
-          continue;
-        }
-        const t = {
-          key: tagKeyPrefix + tagName,
-          format,
-          default: null,
-          alwaysInclude: false,
-          min: tag.minCount == null ? 0 : tag.minCount,
-          max: tag.maxCount == null ? 1 : tag.maxCount,
-          description,
-          chain,
-          // raw: {
-          //   ...tag,
-          // },
-        };
-        tags.push(t);
+      for (const [_tagKey, tag] of tagEntries) {
+        // let tagName = tagKey;
+        // let tagKeyPrefix = '';
+        // let format = '';
+        // let description = '';
+        // // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        // let chain: any = undefined;
+        // if (tag.type === BitTagConfigKeyType.tag) {
+        //   tagName = tag.tag;
+        //   if (tagName === '%') {
+        //     description = 'Item';
+        //     chain = {
+        //       key: '%',
+        //       format,
+        //       min: tag.minCount,
+        //       max: tag.maxCount,
+        //       description: 'Lead',
+        //       chain: {
+        //         key: '%',
+        //         format,
+        //         min: tag.minCount,
+        //         max: tag.maxCount,
+        //         description: 'Page number',
+        //         chain: {
+        //           key: '%',
+        //           format,
+        //           min: tag.minCount,
+        //           max: tag.maxCount,
+        //           description: 'Margin number',
+        //         },
+        //       },
+        //     };
+        //   } else if (tagName === '!') {
+        //     description = 'Instruction';
+        //   } else if (tagName === '?') {
+        //     description = 'Hint';
+        //   } else if (tagName === '#') {
+        //     description = 'Title';
+        //   } else if (tagName === '##') {
+        //     description = 'Sub-title';
+        //   } else if (tagName === '▼') {
+        //     description = 'Anchor';
+        //   } else if (tagName === '►') {
+        //     description = 'Reference';
+        //   } else if (tagName === '$') {
+        //     description = 'Sample solution';
+        //   } else if (tagName === '&') {
+        //     description = 'Resource';
+        //   } else if (tagName === '+') {
+        //     description = 'True statement';
+        //   } else if (tagName === '-') {
+        //     description = 'False statement';
+        //   } else if (tagName === '_') {
+        //     description = 'Gap';
+        //   } else if (tagName === '=') {
+        //     description = 'Mark';
+        //   }
+        //   format = 'bitmark--';
+        // } else if (tag.type === BitTagConfigKeyType.property) {
+        //   tagName = tag.tag;
+        //   tagKeyPrefix = '@';
+        //   const property = tag as PropertyTagConfig;
+        //   // format
+        //   if (property.format === TagFormat.plainText) {
+        //     format = 'string';
+        //   } else if (property.format === TagFormat.boolean) {
+        //     format = 'bool';
+        //   } else if (property.format === TagFormat.bitmarkText) {
+        //     format = 'bitmark';
+        //   } else if (property.format === TagFormat.number) {
+        //     format = 'number';
+        //   }
+        // } else if (tag.type === BitTagConfigKeyType.resource) {
+        //   tagKeyPrefix = '&';
+        // } else if (tag.type === BitTagConfigKeyType.group) {
+        //   tagKeyPrefix = '@';
+        //   let k = tag.configKey as string;
+        //   if (k.startsWith('group_')) k = k.substring(6);
+        //   k = '_' + k;
+        //   inherits.push({
+        //     type: 'group',
+        //     name: k,
+        //   });
+        //   continue;
+        // }
+        // const t = {
+        //   key: tagKeyPrefix + tagName,
+        //   format,
+        //   default: null,
+        //   alwaysInclude: false,
+        //   min: tag.minCount == null ? 0 : tag.minCount,
+        //   max: tag.maxCount == null ? 1 : tag.maxCount,
+        //   description,
+        //   chain,
+        //   // raw: {
+        //   //   ...tag,
+        //   // },
+        // };
+        // tags.push(t);
+        tags.push(...processTagEntries(tag));
       }
       const bitJson = {
         name: b.bitType,
