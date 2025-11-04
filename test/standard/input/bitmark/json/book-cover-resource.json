@@ -1,0 +1,90 @@
+[
+  {
+    "bit": {
+      "type": "book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["book-resource-123"],
+      "coverImage": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitmark.cloud",
+          "src": "https://docs.bitmark.cloud/bit-books/test/cover-resource.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": []
+        }
+      },
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Book with Resource CoverImage",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "maxTocChapterLevel": -1,
+      "hasPrintRestriction": true,
+      "hasMarkAsDone": false,
+      "processHandIn": false,
+      "isPublic": false,
+      "chatWithBook": false,
+      "chatWithBookBrainKey": ""
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.book]\n[@id:book-resource-123]\n[#Book with Resource CoverImage]\n[&coverImage:https://docs.bitmark.cloud/bit-books/test/cover-resource.png]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["article-123"],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This book uses a resource for the cover image instead of a property.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "4.15.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.article:bitmark++]\n[@id:article-123]\nThis book uses a resource for the cover image instead of a property."
+  }
+]

@@ -927,6 +927,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
+  // bitmarkAst -> bits -> bitsValue -> coverImage
+
+  protected enter_coverImage(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.standardHandler(node, route, NodeType.bitsValue, {
+      array: Array.isArray(node.value),
+    });
+  }
+
   // bitmarkAst -> bits -> bitsValue -> resources
 
   protected enter_resources(node: NodeInfo, route: NodeInfo[]): boolean {
@@ -1920,6 +1928,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Special case for 'platform-path' bits
       if (Config.isOfBitType(bitType, BitType.platformPath)) {
         if (bitJson.path == null) bitJson.path = '';
+      }
+
+      // Special case for 'platform-brand-target' bits
+      if (Config.isOfBitType(bitType, BitType.platformBrandTarget)) {
+        if (bitJson.platformBrandTarget == null) bitJson.platformBrandTarget = 'none';
       }
 
       // Remove top level example if it is not required

@@ -236,6 +236,16 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
+        key: ConfigKey.resource_coverImage,
+        description: 'Cover image of the catalog item',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the cover image resource',
+          },
+        ],
+      },
+      {
         key: ConfigKey.property_content2Buy,
         description: 'Content to buy identifier',
         format: TagFormat.plainText,
@@ -373,6 +383,16 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_coverImage,
         description: 'Cover image of the catalog item',
         format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.resource_coverImage,
+        description: 'Cover image of the catalog item',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the cover image resource',
+          },
+        ],
       },
       {
         key: ConfigKey.property_customerProductShopLink,
@@ -3000,7 +3020,33 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_buttonCaption,
         description: 'Caption for the button, used to define the text displayed on the button',
       },
+      {
+        key: ConfigKey.property_authorFullName,
+        description: 'Full name of the author',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_authorPseudonym,
+        description: 'A pseudonym of the author, if any',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_authorTitle,
+        description: 'The title of the author, e.g. "Dr.", "Prof.", etc.',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_authorJobTitle,
+        description: 'The job title of the author, e.g. "Software Engineer", "Professor", etc.',
+        format: TagFormat.plainText,
+      },
     ],
+  },
+  [BitType.openBookChapter]: {
+    since: '4.16.0',
+    baseBitType: BitType.pageOpenBook,
+    description:
+      'Open book chapter bit, derived from page-open-book, used to create chapter pages that open books',
   },
   [BitType.pageOpenBookList]: {
     since: '2.1.0',
@@ -4411,6 +4457,18 @@ const BITS: _BitsConfig = {
           },
         ],
         maxCount: 1,
+      },
+    ],
+  },
+  [BitType.platformBrandTarget]: {
+    since: '4.15.0',
+    baseBitType: BitType._standard,
+    description: 'Platform brand target bit, used to define the brand target for publishing',
+    tags: [
+      {
+        key: ConfigKey.property_platformBrandTarget,
+        description: 'The platform brand target (typically "light", "dark" or "none")',
+        format: TagFormat.plainText,
       },
     ],
   },

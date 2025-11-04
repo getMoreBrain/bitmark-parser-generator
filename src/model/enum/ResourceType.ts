@@ -40,6 +40,7 @@ const ResourceType = superenum({
   platformBackgroundImage: 'platformBackgroundImage',
   previewImage: 'previewImage',
   previewVideo: 'previewVideo',
+  coverImage: 'coverImage',
 });
 
 export type ResourceTypeType = EnumType<typeof ResourceType>;

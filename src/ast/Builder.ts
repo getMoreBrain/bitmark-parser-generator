@@ -188,7 +188,7 @@ class Builder extends BaseBuilder {
       subtype?: string;
       bookAlias?: string | string[];
       bookDiff?: string;
-      coverImage?: string | string[];
+      coverImage?: string | string[] | Partial<ImageResourceWrapperJson>;
       coverColor?: string;
       publications?: string | string[];
       relatedBook?: string | string[];
@@ -237,6 +237,10 @@ class Builder extends BaseBuilder {
       classification?: string;
       availableClassifications?: string | string[];
       allowedBit?: string | string[];
+      authorFullName?: string;
+      authorPseudonym?: string;
+      authorTitle?: string;
+      authorJobTitle?: string;
       tableFixedHeader?: boolean;
       tableHeaderWhitespaceNoWrap?: boolean;
       tableSearch?: boolean;
@@ -317,6 +321,7 @@ class Builder extends BaseBuilder {
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
+      platformBrandTarget?: string;
       platformName?: string;
       platformIcon?: Partial<ImageResourceWrapperJson>;
       platformLogo?: Partial<ImageResourceWrapperJson>;
@@ -659,12 +664,15 @@ class Builder extends BaseBuilder {
       subtype: this.toAstProperty(bitType, ConfigKey.property_subtype, data.subtype, options),
       bookAlias: this.toAstProperty(bitType, ConfigKey.property_bookAlias, data.bookAlias, options),
       bookDiff: this.toAstProperty(bitType, ConfigKey.property_bookDiff, data.bookDiff, options),
-      coverImage: this.toAstProperty(
-        bitType,
-        ConfigKey.property_coverImage,
-        data.coverImage,
-        options,
-      ),
+      coverImage:
+        typeof data.coverImage === 'string' || Array.isArray(data.coverImage)
+          ? this.toAstProperty(
+              bitType,
+              ConfigKey.property_coverImage,
+              ArrayUtils.asArray(data.coverImage),
+              options,
+            )
+          : this.toImageResource(context, data.coverImage),
       coverColor: this.toAstProperty(
         bitType,
         ConfigKey.property_coverColor,
@@ -861,6 +869,30 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_allowedBit,
         data.allowedBit,
+        options,
+      ),
+      authorFullName: this.toAstProperty(
+        bitType,
+        ConfigKey.property_authorFullName,
+        data.authorFullName,
+        options,
+      ),
+      authorPseudonym: this.toAstProperty(
+        bitType,
+        ConfigKey.property_authorPseudonym,
+        data.authorPseudonym,
+        options,
+      ),
+      authorTitle: this.toAstProperty(
+        bitType,
+        ConfigKey.property_authorTitle,
+        data.authorTitle,
+        options,
+      ),
+      authorJobTitle: this.toAstProperty(
+        bitType,
+        ConfigKey.property_authorJobTitle,
+        data.authorJobTitle,
         options,
       ),
       tableFixedHeader: this.toAstProperty(
@@ -1217,6 +1249,12 @@ class Builder extends BaseBuilder {
         options,
       ),
       page: this.toAstProperty(bitType, ConfigKey.property_page, data.page, options),
+      platformBrandTarget: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformBrandTarget,
+        data.platformBrandTarget,
+        options,
+      ),
       platformName: this.toAstProperty(
         bitType,
         ConfigKey.property_platformName,

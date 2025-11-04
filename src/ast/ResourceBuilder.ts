@@ -305,6 +305,7 @@ class ResourceBuilder extends BaseBuilder {
       case ResourceType.platformLogo:
       case ResourceType.platformBackgroundImage:
       case ResourceType.previewImage:
+      case ResourceType.coverImage:
         node = this.imageResource(context, finalData, type);
         break;
 

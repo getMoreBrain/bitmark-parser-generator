@@ -642,6 +642,16 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.resource_coverImage,
+        description: 'The cover image of the book',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the cover image resource',
+          },
+        ],
+      },
+      {
         key: ConfigKey.property_coverColor,
         description: 'The cover color of the book',
         format: TagFormat.plainText,

@@ -34,6 +34,7 @@ const resourceKeys = {
   resource_imagePlaceholder: '&imagePlaceholder',
   resource_previewImage: '&previewImage',
   resource_previewVideo: '&previewVideo',
+  resource_coverImage: '&coverImage',
 } as const;
 
 const ResourceKey = superenum(resourceKeys);
