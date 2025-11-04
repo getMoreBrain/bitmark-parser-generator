@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
+
 import { BitmarkParserGenerator } from '../../src/BitmarkParserGenerator.ts';
 
 describe('selected property tests', () => {
@@ -35,6 +36,7 @@ describe('selected property tests', () => {
     ]);
 
     const result = bpg.convert(jsonInput, { outputFormat: 'json' }) as unknown[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const resultBit = result[0] as any;
     expect(resultBit.bit.resource.image.selected).toBe(true);
   });
@@ -68,6 +70,7 @@ describe('selected property tests', () => {
     ]);
 
     const result = bpg.convert(jsonInput, { outputFormat: 'json' }) as unknown[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const resultBit = result[0] as any;
     expect(resultBit.bit.resource.video.selected).toBe(false);
   });
@@ -98,6 +101,7 @@ describe('selected property tests', () => {
     ]);
 
     const result = bpg.convert(jsonInput, { outputFormat: 'json' }) as unknown[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const resultBit = result[0] as any;
     expect(resultBit.bit.resource.audio.selected).toBe(false);
   });
@@ -134,11 +138,12 @@ describe('selected property tests', () => {
 
     // Convert JSON to Bitmark
     const bitmark = bpg.convert(jsonInput, { outputFormat: 'bitmark' }) as string;
-    
+
     // Convert Bitmark back to JSON
     const result = bpg.convert(bitmark, { outputFormat: 'json' }) as unknown[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const resultBit = result[0] as any;
-    
+
     // The selected property should not be in bitmark syntax, so it will default to false
     // This is expected behavior since the grammar doesn't support parsing 'selected'
     expect(resultBit.bit.resource.image.selected).toBe(false);
