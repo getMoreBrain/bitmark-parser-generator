@@ -299,7 +299,7 @@ class JsonParser {
 
     if (resource) nodes.push(resource);
 
-    if (Config.isOfBitType(bitType, [BitType.prototypeImages, BitType.extractorImages])) {
+    if (Config.isOfBitType(bitType, [BitType.prototypeImages, BitType.extractorImage])) {
       // Add the logo images
       if (Array.isArray(images)) {
         for (const image of images) {

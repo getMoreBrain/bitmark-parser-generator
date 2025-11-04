@@ -1,7 +1,7 @@
 [
   {
     "bit": {
-      "type": "extractor-images",
+      "type": "extractor-image",
       "format": "text",
       "bitLevel": 1,
       "id": [
@@ -148,11 +148,11 @@
         }
       ]
     },
-    "bitmark": "[.extractor-images]\n[@id:304379]\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@search:testing **123**]\n[&image:https://1.png][@zoomDisabled:true]\n[&image:https://2.png]\n[&image:https://3.png][@zoomDisabled]\n[&image:https://4.png]\n[&image:https://5.png][@zoomDisabled:false]"
+    "bitmark": "[.extractor-image]\n[@id:304379]\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@search:testing **123**]\n[&image:https://1.png][@zoomDisabled:true]\n[&image:https://2.png]\n[&image:https://3.png][@zoomDisabled]\n[&image:https://4.png]\n[&image:https://5.png][@zoomDisabled:false]"
   },
   {
     "bit": {
-      "type": "extractor-images-collapsible",
+      "type": "extractor-image-collapsible",
       "format": "text",
       "bitLevel": 1,
       "id": [
@@ -268,6 +268,6 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.extractor-images-collapsible]\n[@id:304379]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ$.gif][@zoomDisabled]\n[&image:https://1.png][@zoomDisabled:true]\n[&image:https://2.png]\n[&image:https://3.png][@zoomDisabled]\n[&image:https://4.png]\n[&image:https://5.png][@zoomDisabled:false]"
+    "bitmark": "[.extractor-image-collapsible]\n[@id:304379]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ$.gif][@zoomDisabled]\n[&image:https://1.png][@zoomDisabled:true]\n[&image:https://2.png]\n[&image:https://3.png][@zoomDisabled]\n[&image:https://4.png]\n[&image:https://5.png][@zoomDisabled:false]"
   }
 ]
