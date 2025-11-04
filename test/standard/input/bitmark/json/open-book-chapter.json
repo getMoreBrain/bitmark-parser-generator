@@ -4,7 +4,9 @@
       "type": "open-book-chapter",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["342342"],
+      "id": [
+        "342342"
+      ],
       "book": "the_chapter_book",
       "slug": "chapter-testing-5678",
       "authorFullName": "Jane Smith",
@@ -65,7 +67,7 @@
       ]
     },
     "parser": {
-      "version": "4.10.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },

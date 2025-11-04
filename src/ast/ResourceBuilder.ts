@@ -200,6 +200,7 @@ class ResourceBuilder extends BaseBuilder {
       copyright: data.copyright,
       showInIndex: data.showInIndex,
       search: data.search,
+      selected: data.selected,
     });
 
     return node;
@@ -255,6 +256,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
     //
   ): ResourceJson | undefined {
@@ -441,6 +443,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
     __typeAlias?: ResourceTypeType,
   ): ImageResourceWrapperJson | undefined {
@@ -460,6 +463,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex,
       caption,
       search,
+      selected,
     } = data;
     const { bitType } = context;
     let zoomDisabledDefault = false;
@@ -499,12 +503,13 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.image, {
-      ignoreFalse: ['zoomDisabled', 'showInIndex'],
+      ignoreFalse: ['zoomDisabled', 'showInIndex', 'selected'],
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
       ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
@@ -539,6 +544,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): ImageLinkResourceWrapperJson | undefined {
     const {
@@ -557,6 +563,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex,
       caption,
       search,
+      selected,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -583,12 +590,13 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node.imageLink, {
-      ignoreFalse: ['zoomDisabled', 'showInIndex'],
+      ignoreFalse: ['zoomDisabled', 'showInIndex', 'selected'],
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
       ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
@@ -618,6 +626,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): AudioResourceWrapperJson | undefined {
     const {
@@ -631,6 +640,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex,
       caption,
       search,
+      selected,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -651,6 +661,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -658,7 +669,7 @@ class ResourceBuilder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node.audio, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['src', 'alt', 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -685,6 +696,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): AudioEmbedResourceWrapperJson | undefined {
     const {
@@ -698,6 +710,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex,
       caption,
       search,
+      selected,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -718,6 +731,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -725,7 +739,7 @@ class ResourceBuilder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node.audioEmbed, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['src', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -752,6 +766,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): AudioLinkResourceWrapperJson | undefined {
     const {
@@ -765,6 +780,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex,
       caption,
       search,
+      selected,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -786,6 +802,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -826,6 +843,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): VideoResourceWrapperJson | undefined {
     const {
@@ -846,6 +864,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex,
       caption,
       search,
+      selected,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -871,6 +890,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
         // Have sub-chains so must be at end of chain
         posterImage: (posterImage ?? undefined) as ImageResourceJson,
         thumbnails: (thumbnails ?? undefined) as ImageResourceJson[],
@@ -882,7 +902,7 @@ class ResourceBuilder extends BaseBuilder {
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
       ignoreEmptyString: ['src', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -916,6 +936,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): VideoEmbedResourceWrapperJson | undefined {
     const {
@@ -936,6 +957,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex,
       caption,
       search,
+      selected,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -964,6 +986,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -972,7 +995,7 @@ class ResourceBuilder extends BaseBuilder {
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
       ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1006,6 +1029,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): VideoLinkResourceWrapperJson | undefined {
     const {
@@ -1026,6 +1050,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex,
       caption,
       search,
+      selected,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1054,6 +1079,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -1062,7 +1088,7 @@ class ResourceBuilder extends BaseBuilder {
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
       ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1120,6 +1146,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): StillImageFilmEmbedResourceWrapperJson | undefined {
     const {
@@ -1140,6 +1167,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex,
       caption,
       search,
+      selected,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1168,6 +1196,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -1176,7 +1205,7 @@ class ResourceBuilder extends BaseBuilder {
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
       ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1210,6 +1239,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): StillImageFilmLinkResourceWrapperJson | undefined {
     const {
@@ -1230,6 +1260,7 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex,
       caption,
       search,
+      selected,
     } = data;
 
     // NOTE: Node order is important and is defined here
@@ -1258,6 +1289,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -1266,7 +1298,7 @@ class ResourceBuilder extends BaseBuilder {
       ignoreEmptyArrays: ['caption'],
       ignoreUndefined: ['width', 'height'],
       ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1290,9 +1322,10 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): ArticleResourceWrapperJson | undefined {
-    const { value, srcAlt, license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, license, copyright, showInIndex, caption, search, selected } = data;
 
     // NOTE: Node order is important and is defined here
     const node: ArticleResourceWrapperJson = {
@@ -1309,6 +1342,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -1316,6 +1350,7 @@ class ResourceBuilder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node.article, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['body', 'alt', 'license', 'copyright'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1339,9 +1374,10 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): DocumentResourceWrapperJson | undefined {
-    const { value, srcAlt, license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, license, copyright, showInIndex, caption, search, selected } = data;
 
     // NOTE: Node order is important and is defined here
     const node: DocumentResourceWrapperJson = {
@@ -1358,6 +1394,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -1365,7 +1402,7 @@ class ResourceBuilder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node.document, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1389,9 +1426,10 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): DocumentEmbedResourceWrapperJson | undefined {
-    const { value, srcAlt, license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, license, copyright, showInIndex, caption, search, selected } = data;
 
     // NOTE: Node order is important and is defined here
     const node: DocumentEmbedResourceWrapperJson = {
@@ -1408,6 +1446,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -1415,7 +1454,7 @@ class ResourceBuilder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node.documentEmbed, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1439,9 +1478,10 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): DocumentLinkResourceWrapperJson | undefined {
-    const { value, srcAlt, license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, license, copyright, showInIndex, caption, search, selected } = data;
 
     // NOTE: Node order is important and is defined here
     const node: DocumentLinkResourceWrapperJson = {
@@ -1458,6 +1498,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -1465,7 +1506,7 @@ class ResourceBuilder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node.documentLink, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1489,9 +1530,10 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): DocumentDownloadResourceWrapperJson | undefined {
-    const { value, srcAlt, license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, license, copyright, showInIndex, caption, search, selected } = data;
 
     // NOTE: Node order is important and is defined here
     const node: DocumentDownloadResourceWrapperJson = {
@@ -1508,6 +1550,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -1515,7 +1558,7 @@ class ResourceBuilder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node.documentDownload, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1538,9 +1581,10 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): AppLinkResourceWrapperJson | undefined {
-    const { value, srcAlt, license, copyright, showInIndex, caption, search } = data;
+    const { value, srcAlt, license, copyright, showInIndex, caption, search, selected } = data;
 
     // NOTE: Node order is important and is defined here
     const node: AppLinkResourceWrapperJson = {
@@ -1558,6 +1602,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -1565,7 +1610,7 @@ class ResourceBuilder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node.appLink, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['url', /*'alt',*/ 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible
@@ -1589,9 +1634,19 @@ class ResourceBuilder extends BaseBuilder {
       showInIndex?: boolean;
       caption?: TextAst;
       search?: string;
+      selected?: boolean;
     },
   ): WebsiteLinkResourceWrapperJson | undefined {
-    const { value, srcAlt, /*siteName,*/ license, copyright, showInIndex, caption, search } = data;
+    const {
+      value,
+      srcAlt,
+      /*siteName,*/ license,
+      copyright,
+      showInIndex,
+      caption,
+      search,
+      selected,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: WebsiteLinkResourceWrapperJson = {
@@ -1609,6 +1664,7 @@ class ResourceBuilder extends BaseBuilder {
         showInIndex: showInIndex ?? false,
         caption: this.handleJsonText(context, TextLocation.tag, caption),
         search: (search ?? undefined) as string,
+        selected: selected ?? false,
       },
     };
 
@@ -1616,7 +1672,7 @@ class ResourceBuilder extends BaseBuilder {
     ObjectUtils.removeUnwantedProperties(node.websiteLink, {
       ignoreEmptyArrays: ['caption'],
       ignoreEmptyString: ['url', 'alt', 'license', 'copyright'],
-      ignoreFalse: ['showInIndex'],
+      ignoreFalse: ['showInIndex', 'selected'],
     });
 
     // Validate and correct invalid bits as much as possible

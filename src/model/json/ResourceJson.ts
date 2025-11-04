@@ -158,6 +158,7 @@ export interface BaseResourceJson {
   showInIndex: boolean;
   caption: JsonText;
   search: string;
+  selected: boolean;
   srcAlt: string[];
 }
 

@@ -4,14 +4,16 @@
       "type": "catalog-item-external-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["2001"],
+      "id": [
+        "2001"
+      ],
       "coverImage": "https://example.com/images/js-definitive.jpg",
       "currency": "USD",
+      "bookIsbn": "978-1-491-95202-3",
       "bookAuthor": "David Flanagan",
       "bookType": "Technical Reference",
       "bookLanguage": "English",
       "bookPublisher": "O'Reilly Media",
-      "bookIsbn": "978-1-491-95202-3",
       "listPrice": "$69.99",
       "customerProductId": "PROD-JS-DEF-7TH",
       "customerProductShopLink": "https://shop.example.com/books/javascript-definitive-7th",
@@ -67,7 +69,8 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": []
+            "caption": [],
+            "selected": false
           }
         },
         {
@@ -83,7 +86,8 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": []
+            "caption": [],
+            "selected": false
           }
         }
       ],
@@ -99,7 +103,8 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": []
+            "caption": [],
+            "selected": false
           }
         },
         {
@@ -113,7 +118,8 @@
             "license": "",
             "copyright": "",
             "showInIndex": false,
-            "caption": []
+            "caption": [],
+            "selected": false
           }
         }
       ],
@@ -130,7 +136,8 @@
           "license": "",
           "copyright": "",
           "showInIndex": false,
-          "caption": []
+          "caption": [],
+          "selected": false
         }
       },
       "body": [
@@ -147,7 +154,7 @@
       ]
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -192,13 +199,15 @@
       "type": "catalog-item-external-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["2002"],
+      "id": [
+        "2002"
+      ],
       "coverImage": "https://example.com/images/clean-code.jpg",
-      "listPrice": "$44.99",
       "bookAuthor": "Robert C. Martin",
-      "bookRating": "4.8",
       "bookBindingType": "Hardcover",
       "bookNumberOfPages": "464",
+      "bookRating": "4.8",
+      "listPrice": "$44.99",
       "customerProductId": "PROD-CC-2024",
       "customerProductShopLink": "https://shop.example.com/books/clean-code",
       "title": [
@@ -233,7 +242,7 @@
       ]
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -244,16 +253,20 @@
       "type": "catalog-item-external-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["2003"],
+      "id": [
+        "2003"
+      ],
       "coverImage": "https://example.com/images/design-patterns.jpg",
+      "bookSeriesTitle": "Software Engineering Classics",
+      "bookSeriesId": "SEC-001",
+      "bookSeriesNumber": "1",
+      "gmbExternalShop": "ClassicBooks",
+      "gmbExternalShopItems": [
+        "amazon, oreilly, pearson"
+      ],
       "listPrice": "$54.99",
       "customerProductId": "PROD-DP-CLASSIC",
       "customerProductShopLink": "https://shop.example.com/books/design-patterns-classic",
-      "bookSeriesId": "SEC-001",
-      "bookSeriesNumber": "1",
-      "bookSeriesTitle": "Software Engineering Classics",
-      "gmbExternalShop": "ClassicBooks",
-      "gmbExternalShopItems": ["amazon, oreilly, pearson"],
       "buttonCaption": "View Details",
       "title": [
         {
@@ -299,7 +312,7 @@
       ]
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -310,7 +323,9 @@
       "type": "catalog-item-external-book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["2004"],
+      "id": [
+        "2004"
+      ],
       "coverImage": "https://example.com/images/external-minimal.jpg",
       "listPrice": "$29.99",
       "customerProductId": "PROD-EXT-MIN-001",
@@ -337,7 +352,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.15.0",
+      "version": "4.16.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
