@@ -4,9 +4,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "backgroundWallpaper": {
         "type": "image",
         "image": {
@@ -62,9 +60,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "levelCEFRp": "levelCEFRp",
       "levelCEFR": "levelCEFR",
       "levelILR": "levelILR",
@@ -106,9 +102,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -146,9 +140,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -186,9 +178,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -226,15 +216,9 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
-      "publisher": [
-        "kpmg"
-      ],
-      "theme": [
-        "grundzuege"
-      ],
+      "id": ["304379"],
+      "publisher": ["kpmg"],
+      "theme": ["grundzuege"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -272,9 +256,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -287,10 +269,7 @@
           "format": "gif",
           "provider": "miro.medium.com",
           "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLG,zzOzBQ.gif",
-          "srcAlt": [
-            "https://miro.gif",
-            "https://miro2.gif"
-          ],
+          "srcAlt": ["https://miro.gif", "https://miro2.gif"],
           "width": null,
           "height": null,
           "alt": "",
@@ -316,9 +295,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -356,9 +333,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -413,9 +388,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -470,9 +443,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -520,9 +491,7 @@
       "type": "image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "304379"
-      ],
+      "id": ["304379"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -748,5 +717,153 @@
       "textParserVersion": "8.35.0"
     },
     "bitmark": "[.image:bitmark++]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\nMein Vater zum Beispiel hat drei Studiengänge absolviert, danach vierzig Jahre in einem Betrieb gearbeitet, der Schiffsausrüstungen produzierte, aber viel Spaß hat es ihm nicht gemacht. Nur im Wald fühlte er sich richtig glücklich. In Moskau widmete er seine ganze Freizeit dem Sammeln von ==Birkensaft==(@note:Saft der Birke (eines Baumes)). Viele sowjetische Bürger gingen damals auf die Suche nach ausgefallenen Lebensmitteln und Getränken. Sie vertrauten der Natur mehr als den staatlichen ==Versorgungseinrichtungen==(@note:Geschäften). Der Wald ==bescherte==(@noteschenkte) ihnen Pilze, Beeren, Kräuter und nicht zuletzt Birkensaft.\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
+  },
+  {
+    "bit": {
+      "type": "image",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "body": []
+    },
+    "parser": {
+      "version": "4.16.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.image]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]"
+  },
+  {
+    "bit": {
+      "type": "image",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": true
+        }
+      },
+      "body": []
+    },
+    "parser": {
+      "version": "4.16.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.image]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@selected]"
+  },
+  {
+    "bit": {
+      "type": "image",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": true
+        }
+      },
+      "body": []
+    },
+    "parser": {
+      "version": "4.16.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.image]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@selected:true]"
+  },
+  {
+    "bit": {
+      "type": "image",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "body": []
+    },
+    "parser": {
+      "version": "4.16.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.35.0"
+    },
+    "bitmark": "[.image]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@selected:false]"
   }
 ]
