@@ -304,6 +304,7 @@ class ResourceBuilder extends BaseBuilder {
       case ResourceType.platformIcon:
       case ResourceType.platformLogo:
       case ResourceType.platformBackgroundImage:
+      case ResourceType.previewImage:
         node = this.imageResource(context, finalData, type);
         break;
 
@@ -342,6 +343,7 @@ class ResourceBuilder extends BaseBuilder {
         break;
 
       case ResourceType.video:
+      case ResourceType.previewVideo:
         node = this.videoResource(context, finalData);
         break;
 

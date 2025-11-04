@@ -4,6 +4,7 @@ import {
   type AudioResourceWrapperJson,
   type ImageResourceWrapperJson,
   type ResourceJson,
+  type VideoResourceWrapperJson,
 } from './ResourceJson.ts';
 
 export interface BitJson {
@@ -92,7 +93,7 @@ export interface BitJson {
   bookAuthor: string;
   bookType: string;
   bookBindingType: string;
-  bookPNumberOfPages: string;
+  bookNumberOfPages: string;
   bookRating: string;
   bookSeriesTitle: string;
   bookSeriesId: string;
@@ -256,6 +257,9 @@ export interface BitJson {
   };
 
   imagePlaceholder: ImageResourceWrapperJson;
+  previewImage: ImageResourceWrapperJson[];
+  previewVideo: VideoResourceWrapperJson[];
+
   resource: ResourceJson;
   logos: ImageResourceWrapperJson[];
   images: ImageResourceWrapperJson[];

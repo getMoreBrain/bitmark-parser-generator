@@ -30,7 +30,11 @@ import {
   type TechnicalTermJson,
 } from '../json/BitJson.ts';
 import { type BodyBitJson, type BodyBitsJson } from '../json/BodyBitJson.ts';
-import { type ImageResourceWrapperJson, type ResourceJson } from '../json/ResourceJson.ts';
+import {
+  type ImageResourceWrapperJson,
+  type ResourceJson,
+  type VideoResourceWrapperJson,
+} from '../json/ResourceJson.ts';
 import { type ParserError } from '../parser/ParserError.ts';
 import { type ParserInfo } from '../parser/ParserInfo.ts';
 import { type JsonText, type TextAst } from './TextNodes.ts';
@@ -135,7 +139,7 @@ export interface Bit {
   bookAuthor?: Property;
   bookType?: Property;
   bookBindingType?: Property;
-  bookPNumberOfPages?: Property;
+  bookNumberOfPages?: Property;
   bookRating?: Property;
   bookSeriesTitle?: Property;
   bookSeriesId?: Property;
@@ -298,6 +302,8 @@ export interface Bit {
   example?: ExampleJson;
   imageSource?: ImageSourceJson;
   person?: PersonJson;
+  previewImage?: ImageResourceWrapperJson[];
+  previewVideo?: VideoResourceWrapperJson[];
   imagePlaceholder?: ImageResourceWrapperJson;
   resources?: ResourceJson[];
   body?: Body;

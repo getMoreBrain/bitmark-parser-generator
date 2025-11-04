@@ -35,7 +35,7 @@ const propertyKeys = {
   property_bookAuthor: '@bookAuthor',
   property_bookType: '@bookType',
   property_bookBindingType: '@bookBindingType',
-  property_bookPNumberOfPages: '@bookPNumberOfPages',
+  property_bookNumberOfPages: '@bookNumberOfPages',
   property_bookRating: '@bookRating',
   property_bookSeriesTitle: '@bookSeriesTitle',
   property_bookSeriesId: '@bookSeriesId',

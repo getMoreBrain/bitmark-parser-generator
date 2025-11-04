@@ -14,6 +14,9 @@
 [&image:https://example.com/preview/keyboard-1.jpg]
 [&image:https://example.com/preview/keyboard-2.jpg]
 [&video:https://example.com/preview/keyboard-demo.mp4]
+[&previewImage:https://example.com/preview/keyboard-preview-1.jpg]
+[&previewImage:https://example.com/preview/keyboard-preview-2.jpg]
+[&previewVideo:https://example.com/preview/keyboard-demo.mp4]
 High-quality mechanical keyboard with customizable RGB lighting, perfect for gaming and productivity.
 
 
@@ -41,7 +44,9 @@ Ergonomic wireless mouse with precision tracking.
 [@bookSeriesTitle:Ultimate Connectivity]
 [@bookSeriesId:UC-001]
 [@bookSeriesNumber:1]
-[@gmbExternalShopItems:amazon, newegg, bestbuy]
+[@gmbExternalShopItems:amazon]
+[@gmbExternalShopItems:newegg]
+[@gmbExternalShopItems:bestbuy]
 Complete docking solution with HDMI, DisplayPort, USB 3.0, Ethernet, SD card readers, and power delivery up to 100W.
 
 

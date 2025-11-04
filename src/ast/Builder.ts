@@ -66,6 +66,7 @@ import {
   type AudioResourceWrapperJson,
   type ImageResourceWrapperJson,
   type ResourceJson,
+  type VideoResourceWrapperJson,
 } from '../model/json/ResourceJson.ts';
 import { type ParserError } from '../model/parser/ParserError.ts';
 import { type ParserInfo } from '../model/parser/ParserInfo.ts';
@@ -207,7 +208,7 @@ class Builder extends BaseBuilder {
       bookAuthor?: string;
       bookType?: string;
       bookBindingType?: string;
-      bookPNumberOfPages?: string;
+      bookNumberOfPages?: string;
       bookRating?: string;
       bookSeriesTitle?: string;
       bookSeriesId?: string;
@@ -369,6 +370,8 @@ class Builder extends BaseBuilder {
       };
 
       markConfig?: Partial<MarkConfigJson>[];
+      previewImage?: Partial<ImageResourceWrapperJson> | Partial<ImageResourceWrapperJson>[];
+      previewVideo?: Partial<VideoResourceWrapperJson> | Partial<VideoResourceWrapperJson>[];
       imagePlaceholder?: Partial<ImageResourceWrapperJson>;
       resources?: Partial<ResourceJson> | Partial<ResourceJson>[];
       body?: Partial<Body>;
@@ -731,10 +734,10 @@ class Builder extends BaseBuilder {
         data.bookBindingType,
         options,
       ),
-      bookPNumberOfPages: this.toAstProperty(
+      bookNumberOfPages: this.toAstProperty(
         bitType,
-        ConfigKey.property_bookPNumberOfPages,
-        data.bookPNumberOfPages,
+        ConfigKey.property_bookNumberOfPages,
+        data.bookNumberOfPages,
         options,
       ),
       bookRating: this.toAstProperty(
@@ -1391,6 +1394,8 @@ class Builder extends BaseBuilder {
 
       // Person
 
+      previewImage: this.toImageResources(context, data.previewImage),
+      previewVideo: this.toVideoResources(context, data.previewVideo),
       imagePlaceholder: this.toImageResource(context, data.imagePlaceholder),
       resources: ArrayUtils.asArray(
         this.resourceBuilder.resourceFromResourceJson(context, data.resources),
@@ -3406,6 +3411,48 @@ class Builder extends BaseBuilder {
     return ArrayUtils.asSingle(
       this.resourceBuilder.resourceFromResourceDataJson(context, ResourceType.image, data?.image),
     ) as ImageResourceWrapperJson;
+  }
+
+  protected toImageResources(
+    context: BuildContext,
+    data: Partial<ImageResourceWrapperJson> | Partial<ImageResourceWrapperJson>[] | undefined,
+  ): ImageResourceWrapperJson[] {
+    const arr = ArrayUtils.asArray(data);
+
+    const results: ImageResourceWrapperJson[] = [];
+    if (arr && arr.length > 0) {
+      for (const item of arr) {
+        const res = this.resourceBuilder.resourceFromResourceDataJson(
+          context,
+          ResourceType.image,
+          item.image,
+        );
+        results.push(res as ImageResourceWrapperJson);
+      }
+    }
+
+    return results;
+  }
+
+  protected toVideoResources(
+    context: BuildContext,
+    data: Partial<VideoResourceWrapperJson> | Partial<VideoResourceWrapperJson>[] | undefined,
+  ): VideoResourceWrapperJson[] {
+    const arr = ArrayUtils.asArray(data);
+
+    const results: VideoResourceWrapperJson[] = [];
+    if (arr && arr.length > 0) {
+      for (const item of arr) {
+        const res = this.resourceBuilder.resourceFromResourceDataJson(
+          context,
+          ResourceType.video,
+          item.video,
+        );
+        results.push(res as VideoResourceWrapperJson);
+      }
+    }
+
+    return results;
   }
 
   //

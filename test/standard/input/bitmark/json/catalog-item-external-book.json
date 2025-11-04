@@ -6,6 +6,12 @@
       "bitLevel": 1,
       "id": ["2001"],
       "coverImage": "https://example.com/images/js-definitive.jpg",
+      "currency": "USD",
+      "bookAuthor": "David Flanagan",
+      "bookType": "Technical Reference",
+      "bookLanguage": "English",
+      "bookPublisher": "O'Reilly Media",
+      "bookIsbn": "978-1-491-95202-3",
       "listPrice": "$69.99",
       "customerProductId": "PROD-JS-DEF-7TH",
       "customerProductShopLink": "https://shop.example.com/books/javascript-definitive-7th",
@@ -47,6 +53,70 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
+      "previewImage": [
+        {
+          "type": "image",
+          "image": {
+            "format": "jpg",
+            "provider": "example.com",
+            "src": "https://example.com/preview/keyboard-preview-1.jpg",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "image",
+          "image": {
+            "format": "jpg",
+            "provider": "example.com",
+            "src": "https://example.com/preview/keyboard-preview-2.jpg",
+            "width": null,
+            "height": null,
+            "alt": "",
+            "zoomDisabled": false,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        }
+      ],
+      "previewVideo": [
+        {
+          "type": "video",
+          "video": {
+            "format": "mp4",
+            "provider": "example.com",
+            "src": "https://example.com/preview/keyboard-demo.mp4",
+            "width": null,
+            "height": null,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        },
+        {
+          "type": "video",
+          "video": {
+            "format": "mp4",
+            "provider": "example.com",
+            "src": "https://example.com/preview/js-def-intro.mp4",
+            "width": null,
+            "height": null,
+            "license": "",
+            "copyright": "",
+            "showInIndex": false,
+            "caption": []
+          }
+        }
+      ],
       "resource": {
         "type": "image",
         "image": {
@@ -82,24 +152,40 @@
       "textParserVersion": "8.35.0",
       "warnings": [
         {
+          "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
+          "text": "[&image:https://example.com/preview/js-def-1.jpg]",
+          "location": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 576
+            },
+            "end": {
+              "line": 17,
+              "column": 50,
+              "offset": 625
+            }
+          }
+        },
+        {
           "message": "[@mockupId:xxx] is missing from [@imageSource]",
           "text": "[@imageSource:https://example.com/source/js-definitive-images]",
           "location": {
             "start": {
               "line": 16,
               "column": 1,
-              "offset": 514
+              "offset": 513
             },
             "end": {
               "line": 16,
               "column": 63,
-              "offset": 576
+              "offset": 575
             }
           }
         }
       ]
     },
-    "bitmark": "[.catalog-item-external-book]\n[@id:2001]\n[#JavaScript: The Definitive Guide]\n[##7th Edition - Comprehensive Reference]\n[@coverImage:https://example.com/images/js-definitive.jpg]\n[@customerProductShopLink:https://shop.example.com/books/javascript-definitive-7th]\n[@listPrice:$69.99]\n[@buttonCaption:Buy on Amazon]\n[@customerProductId:PROD-JS-DEF-7TH]\n[@currency:USD]\n[@bookIsbn:978-1-491-95202-3]\n[@bookAuthor:David Flanagan]\n[@bookType:Technical Reference]\n[@bookLanguage:English]\n[@bookPublisher:O'Reilly Media]\n[@imageSource:https://example.com/source/js-definitive-images]\n[&image:https://example.com/preview/js-def-1.jpg]\n[&video:https://example.com/preview/js-def-intro.mp4]\nThe comprehensive reference guide to JavaScript, covering ES6+ features and modern development practices."
+    "bitmark": "[.catalog-item-external-book]\n[@id:2001]\n[#JavaScript: The Definitive Guide]\n[##7th Edition - Comprehensive Reference]\n[@coverImage:https://example.com/images/js-definitive.jpg]\n[@customerProductShopLink:https://shop.example.com/books/javascript-definitive-7th]\n[@listPrice:$69.99]\n[@buttonCaption:Buy on Amazon]\n[@customerProductId:PROD-JS-DEF-7TH]\n[@currency:USD]\n[@bookIsbn:978-1-491-95202-3]\n[@bookAuthor:David Flanagan]\n[@bookType:Technical Reference]\n[@bookLanguage:English]\n[@bookPublisher:O'Reilly Media]\n[@imageSource:https://example.com/source/js-definitive-images]\n[&image:https://example.com/preview/js-def-1.jpg]\n[&previewImage:https://example.com/preview/keyboard-preview-1.jpg]\n[&previewImage:https://example.com/preview/keyboard-preview-2.jpg]\n[&previewVideo:https://example.com/preview/keyboard-demo.mp4]\n[&previewVideo:https://example.com/preview/js-def-intro.mp4]\nThe comprehensive reference guide to JavaScript, covering ES6+ features and modern development practices."
   },
   {
     "bit": {
@@ -109,6 +195,10 @@
       "id": ["2002"],
       "coverImage": "https://example.com/images/clean-code.jpg",
       "listPrice": "$44.99",
+      "bookAuthor": "Robert C. Martin",
+      "bookRating": "4.8",
+      "bookBindingType": "Hardcover",
+      "bookNumberOfPages": "464",
       "customerProductId": "PROD-CC-2024",
       "customerProductShopLink": "https://shop.example.com/books/clean-code",
       "title": [
@@ -147,7 +237,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.catalog-item-external-book]\n[@id:2002]\n[#Clean Code]\n[@coverImage:https://example.com/images/clean-code.jpg]\n[@customerProductShopLink:https://shop.example.com/books/clean-code]\n[@listPrice:$44.99]\n[@customerProductId:PROD-CC-2024]\n[@bookAuthor:Robert C. Martin]\n[@bookBindingType:Hardcover]\n[@bookPNumberOfPages:464]\n[@bookRating:4.8]\nA handbook of agile software craftsmanship."
+    "bitmark": "[.catalog-item-external-book]\n[@id:2002]\n[#Clean Code]\n[@coverImage:https://example.com/images/clean-code.jpg]\n[@customerProductShopLink:https://shop.example.com/books/clean-code]\n[@listPrice:$44.99]\n[@customerProductId:PROD-CC-2024]\n[@bookAuthor:Robert C. Martin]\n[@bookBindingType:Hardcover]\n[@bookNumberOfPages:464]\n[@bookRating:4.8]\nA handbook of agile software craftsmanship."
   },
   {
     "bit": {
@@ -159,6 +249,11 @@
       "listPrice": "$54.99",
       "customerProductId": "PROD-DP-CLASSIC",
       "customerProductShopLink": "https://shop.example.com/books/design-patterns-classic",
+      "bookSeriesId": "SEC-001",
+      "bookSeriesNumber": "1",
+      "bookSeriesTitle": "Software Engineering Classics",
+      "gmbExternalShop": "ClassicBooks",
+      "gmbExternalShopItems": ["amazon, oreilly, pearson"],
       "buttonCaption": "View Details",
       "title": [
         {

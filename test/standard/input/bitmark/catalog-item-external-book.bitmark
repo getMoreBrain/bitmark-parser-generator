@@ -15,7 +15,10 @@
 [@bookPublisher:O'Reilly Media]
 [@imageSource:https://example.com/source/js-definitive-images]
 [&image:https://example.com/preview/js-def-1.jpg]
-[&video:https://example.com/preview/js-def-intro.mp4]
+[&previewImage:https://example.com/preview/keyboard-preview-1.jpg]
+[&previewImage:https://example.com/preview/keyboard-preview-2.jpg]
+[&previewVideo:https://example.com/preview/keyboard-demo.mp4]
+[&previewVideo:https://example.com/preview/js-def-intro.mp4]
 The comprehensive reference guide to JavaScript, covering ES6+ features and modern development practices.
 
 
@@ -28,7 +31,7 @@ The comprehensive reference guide to JavaScript, covering ES6+ features and mode
 [@customerProductId:PROD-CC-2024]
 [@bookAuthor:Robert C. Martin]
 [@bookBindingType:Hardcover]
-[@bookPNumberOfPages:464]
+[@bookNumberOfPages:464]
 [@bookRating:4.8]
 A handbook of agile software craftsmanship.
 

@@ -16,7 +16,9 @@
 [@imageSource:https://example.com/source/web-dev-images]
 [&image:https://example.com/preview/web-dev-1.jpg]
 [&image:https://example.com/preview/web-dev-2.jpg]
-[&video:https://example.com/preview/web-dev-intro.mp4]
+[&previewImage:https://example.com/preview/keyboard-preview-1.jpg]
+[&previewImage:https://example.com/preview/keyboard-preview-2.jpg]
+[&previewVideo:https://example.com/preview/keyboard-demo.mp4]
 A comprehensive guide to modern web development covering all essential technologies and frameworks. Perfect for beginners and intermediate developers looking to level up their skills.
 
 
@@ -30,7 +32,7 @@ A comprehensive guide to modern web development covering all essential technolog
 [@bookIsbn:978-1-234567-89-0]
 [@bookAuthor:Jane Pythonista]
 [@bookBindingType:Paperback]
-[@bookPNumberOfPages:350]
+[@bookNumberOfPages:350]
 [@bookRating:4.5]
 Start your journey into Python programming with this beginner-friendly book.
 
@@ -50,7 +52,9 @@ Start your journey into Python programming with this beginner-friendly book.
 [@bookTranslator:Maria Translator]
 [@bookOriginalTitle:Diseño Avanzado de Bases de Datos]
 [@gmbExternalShop:TechBooks]
-[@gmbExternalShopItems:amazon, barnes-noble, bookshop]
+[@gmbExternalShopItems:amazon]
+[@gmbExternalShopItems:barnes-noble]
+[@gmbExternalShopItems:bookshop]
 Deep dive into database design patterns, optimization techniques, and best practices for both SQL and NoSQL databases.
 
 

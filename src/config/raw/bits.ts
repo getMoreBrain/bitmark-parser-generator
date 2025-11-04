@@ -281,7 +281,7 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
-        key: ConfigKey.property_bookPNumberOfPages,
+        key: ConfigKey.property_bookNumberOfPages,
         description: 'Number of pages in the book',
         format: TagFormat.plainText,
       },
@@ -348,10 +348,12 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.group_previewImages,
         description: 'Array of preview images for the catalog item',
+        maxCount: Count.infinity,
       },
       {
         key: ConfigKey.group_previewVideos,
         description: 'Array of preview videos for the catalog item',
+        maxCount: Count.infinity,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -418,7 +420,7 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
-        key: ConfigKey.property_bookPNumberOfPages,
+        key: ConfigKey.property_bookNumberOfPages,
         description: 'Number of pages in the book',
         format: TagFormat.plainText,
       },
@@ -485,10 +487,12 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.group_previewImages,
         description: 'Array of preview images for the catalog item',
+        maxCount: Count.infinity,
       },
       {
         key: ConfigKey.group_previewVideos,
         description: 'Array of preview videos for the catalog item',
+        maxCount: Count.infinity,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -555,7 +559,7 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
-        key: ConfigKey.property_bookPNumberOfPages,
+        key: ConfigKey.property_bookNumberOfPages,
         description: 'Number of pages in the book',
         format: TagFormat.plainText,
       },
@@ -622,10 +626,12 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.group_previewImages,
         description: 'Array of preview images for the catalog item',
+        maxCount: Count.infinity,
       },
       {
         key: ConfigKey.group_previewVideos,
         description: 'Array of preview videos for the catalog item',
+        maxCount: Count.infinity,
       },
     ],
     rootExampleType: ExampleType.string,
