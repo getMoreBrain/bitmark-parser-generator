@@ -8,7 +8,6 @@ import { GROUPS } from '../config/raw/groups.ts';
 import type { _BitConfig, _GroupsConfig } from '../model/config/_Config.ts';
 import type { BitConfig } from '../model/config/BitConfig.ts';
 import { typeFromConfigKey } from '../model/config/enum/ConfigKey.ts';
-import type { PropertyTagConfig } from '../model/config/PropertyTagConfig.ts';
 import { BitTagConfigKeyType } from '../model/enum/BitTagConfigKeyType.ts';
 import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
 import { TagFormat } from '../model/enum/TagFormat.ts';
