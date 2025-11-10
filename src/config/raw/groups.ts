@@ -927,6 +927,12 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.plainText,
       },
       {
+        key: ConfigKey.property_selected,
+        description: 'If true, the resource is selected',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
+      {
         key: ConfigKey.property_srcAlt,
         description: 'An alternative source for the resource',
         format: TagFormat.plainText,

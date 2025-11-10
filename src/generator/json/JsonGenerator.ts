@@ -993,7 +993,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       Config.isOfBitType(bitType, [
         BitType.imagesLogoGrave,
         BitType.prototypeImages,
-        BitType.extractorImages,
+        BitType.extractorImage,
       ])
     ) {
       // The resource is a logo-grave  / prototpye-images resource
@@ -1849,7 +1849,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         Config.isOfBitType(bitType, [
           BitType.imagesLogoGrave,
           BitType.prototypeImages,
-          BitType.extractorImages,
+          BitType.extractorImage,
         ])
       ) {
         if (bitType === BitType.imagesLogoGrave) {

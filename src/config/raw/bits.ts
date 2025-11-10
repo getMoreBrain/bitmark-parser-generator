@@ -2847,7 +2847,7 @@ const BITS: _BitsConfig = {
 
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.extractorImages]: {
+  [BitType.extractorImage]: {
     since: '4.3.0',
     baseBitType: BitType._standard,
     description: 'Extractor images bit, used for images extracted from PDFs',
@@ -2869,9 +2869,9 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: false,
     textFormatDefault: TextFormat.plainText,
   },
-  [BitType.extractorImagesCollapsible]: {
+  [BitType.extractorImageCollapsible]: {
     since: '4.3.0',
-    baseBitType: BitType.extractorImages,
+    baseBitType: BitType.extractorImage,
     description: 'Collapsible extractor images bit, used for  images extracted from PDFs',
   },
   [BitType.extractorInformation]: {

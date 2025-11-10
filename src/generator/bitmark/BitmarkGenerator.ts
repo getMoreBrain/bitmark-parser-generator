@@ -2741,7 +2741,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         BitType.pageBanner,
         BitType.imagesLogoGrave,
         BitType.prototypeImages,
-        BitType.extractorImages,
+        BitType.extractorImage,
       ])
     ) {
       this.writeProperty('zoomDisabled', node.value, route, {
@@ -2807,6 +2807,16 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeNL_IfNotChain(route);
     this.writeProperty('search', value, route, {
       format: TagFormat.plainText,
+    });
+  }
+
+  protected leaf_selected(node: NodeInfo, route: NodeInfo[]): void {
+    if (node.value == null) return;
+
+    this.writeNL_IfNotChain(route);
+    this.writeProperty('selected', node.value, route, {
+      format: TagFormat.boolean,
+      ignoreFalse: true,
     });
   }
 

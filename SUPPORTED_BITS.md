@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 4.16.0
+Version: 4.16.1
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -239,8 +239,8 @@ example-list (since: 1.4.13)
 extractor-ai-chat (since: 3.19.0)
 extractor-block (since: 1.5.16)
 extractor-configuration (since: 1.7.1)
-extractor-images (since: 4.3.0)
-extractor-images-collapsible (since: 4.3.0)
+extractor-image (since: 4.3.0)
+extractor-image-collapsible (since: 4.3.0)
 extractor-information (since: 3.8.0)
 extractor-page (since: 1.5.17)
 extractor-page-collapsible (since: 1.30.0)

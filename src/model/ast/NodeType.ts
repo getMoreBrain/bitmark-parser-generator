@@ -541,6 +541,7 @@ const NodeType = superenum({
   searchValue: 'searchValue',
   section: 'section',
   select: 'select',
+  selected: 'selected',
   servings: 'servings',
   servingsValue: 'servingsValue',
   showInIndex: 'showInIndex',
