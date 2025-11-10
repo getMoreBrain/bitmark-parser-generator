@@ -314,6 +314,7 @@
           "selected": false
         }
       },
+      "platformBorderColor": "#bac2c4",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -327,6 +328,6 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.platform-section-chat]\n[@platformPrimaryColor: white]\n[@platformSecondaryColor: white]\n[@platformScrollbarColor: white]\n[@platformMessageBackgroundColor: white]\n[@platformBackgroundColor: white]\n[&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]"
+    "bitmark": "[.platform-section-chat]\n[@platformPrimaryColor: white]\n[@platformSecondaryColor: white]\n[@platformScrollbarColor: white]\n[@platformMessageBackgroundColor: white]\n[@platformBackgroundColor: white]\n[&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]\n[@platformBorderColor: #bac2c4]"
   }
 ]

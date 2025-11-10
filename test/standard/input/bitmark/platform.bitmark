@@ -64,3 +64,4 @@
 [@platformMessageBackgroundColor: white]
 [@platformBackgroundColor: white]
 [&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]
+[@platformBorderColor: #bac2c4]
