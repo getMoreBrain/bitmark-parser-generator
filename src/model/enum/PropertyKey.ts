@@ -150,6 +150,7 @@ const propertyKeys = {
   property_partner: '@partner', // Deprecated, replaced by person
   property_path: '@path',
   property_platformBackgroundColor: '@platformBackgroundColor',
+  property_platformBorderColor: '@platformBorderColor',
   property_platformBrandTarget: '@platformBrandTarget',
   property_platformButtonBackgroundColor: '@platformButtonBackgroundColor',
   property_platformButtonPrimaryColor: '@platformButtonPrimaryColor',
@@ -160,6 +161,8 @@ const propertyKeys = {
   property_platformScrollbarColor: '@platformScrollbarColor',
   property_platformSecondaryColor: '@platformSecondaryColor',
   property_platformSelectionColor: '@platformSelectionColor',
+  property_platformSelectionTextColor: '@platformSelectionTextColor',
+  property_platformBaseLayerColor: '@platformBaseLayerColor',
   property_platformSeparatorColor: '@platformSeparatorColor',
   property_platformTextSelectionColor: '@platformTextSelectionColor',
   property_person: '@person',

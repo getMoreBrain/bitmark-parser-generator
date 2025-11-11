@@ -337,6 +337,9 @@ class Builder extends BaseBuilder {
       platformButtonBackgroundColor?: string;
       platformMessageBackgroundColor?: string;
       platformBackgroundImage?: Partial<ImageResourceWrapperJson>;
+      platformBorderColor?: string;
+      platformSelectionTextColor?: string;
+      platformBaseLayerColor?: string;
       productId?: string | string[];
       product?: string | string[];
       // productList?: string | string[];
@@ -1330,6 +1333,24 @@ class Builder extends BaseBuilder {
         options,
       ),
       platformBackgroundImage: this.toImageResource(context, data.platformBackgroundImage),
+      platformBorderColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformBorderColor,
+        data.platformBorderColor,
+        options,
+      ),
+      platformSelectionTextColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformSelectionTextColor,
+        data.platformSelectionTextColor,
+        options,
+      ),
+      platformBaseLayerColor: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformBaseLayerColor,
+        data.platformBaseLayerColor,
+        options,
+      ),
       productId: this.toAstProperty(bitType, ConfigKey.property_productId, data.productId, options),
       product: this.toAstProperty(bitType, ConfigKey.property_product, data.product, options),
       // productList: this.toAstProperty(
