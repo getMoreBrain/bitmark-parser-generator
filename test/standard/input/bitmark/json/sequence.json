@@ -90,7 +90,7 @@
       "example": true
     },
     "parser": {
-      "version": "4.16.0",
+      "version": "4.17.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -187,7 +187,7 @@
       "example": true
     },
     "parser": {
-      "version": "4.16.0",
+      "version": "4.17.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -380,7 +380,7 @@
       "example": null
     },
     "parser": {
-      "version": "4.16.0",
+      "version": "4.17.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [

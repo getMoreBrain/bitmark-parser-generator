@@ -858,10 +858,14 @@ const GROUPS: _GroupsConfig = {
         description: 'The platform border color',
         format: TagFormat.plainText,
       },
-
       {
         key: ConfigKey.property_platformSelectionTextColor,
         description: 'The platform selection text color',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBaseLayerColor,
+        description: 'The platform base layer color',
         format: TagFormat.plainText,
       },
     ],

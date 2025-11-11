@@ -219,6 +219,7 @@ export interface BitJson {
   platformBackgroundImage: ImageResourceWrapperJson;
   platformBorderColor: string;
   platformSelectionTextColor: string;
+  platformBaseLayerColor: string;
   productId: string | string[];
   product: string;
   productVideo: string;

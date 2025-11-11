@@ -431,6 +431,8 @@ const NodeType = superenum({
   platformBorderColorValue: 'platformBorderColorValue',
   platformSelectionTextColor: 'platformSelectionTextColor',
   platformSelectionTextColorValue: 'platformSelectionTextColorValue',
+  platformBaseLayerColor: 'platformBaseLayerColor',
+  platformBaseLayerColorValue: 'platformBaseLayerColorValue',
   person: 'person',
   pointerLeft: 'pointerLeft',
   pointerLeftValue: 'pointerLeftValue',
