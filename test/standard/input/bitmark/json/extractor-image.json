@@ -133,7 +133,7 @@
       "body": ""
     },
     "parser": {
-      "version": "4.16.0",
+      "version": "4.17.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "warnings": [
@@ -144,12 +144,12 @@
             "start": {
               "line": 3,
               "column": 1,
-              "offset": 33
+              "offset": 32
             },
             "end": {
               "line": 3,
               "column": 62,
-              "offset": 94
+              "offset": 93
             }
           }
         }
@@ -277,7 +277,7 @@
       "body": ""
     },
     "parser": {
-      "version": "4.16.0",
+      "version": "4.17.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
