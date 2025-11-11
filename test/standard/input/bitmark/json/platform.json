@@ -315,6 +315,7 @@
         }
       },
       "platformBorderColor": "#bac2c4",
+      "platformSelectionTextColor": "#56b746",
       "item": [],
       "lead": [],
       "pageNumber": [],

@@ -161,6 +161,7 @@ const propertyKeys = {
   property_platformScrollbarColor: '@platformScrollbarColor',
   property_platformSecondaryColor: '@platformSecondaryColor',
   property_platformSelectionColor: '@platformSelectionColor',
+  property_platformSelectionTextColor: '@platformSelectionTextColor',
   property_platformSeparatorColor: '@platformSeparatorColor',
   property_platformTextSelectionColor: '@platformTextSelectionColor',
   property_person: '@person',

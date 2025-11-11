@@ -65,3 +65,4 @@
 [@platformBackgroundColor: white]
 [&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]
 [@platformBorderColor: #bac2c4]
+[@platformSelectionTextColor: #56b746]
