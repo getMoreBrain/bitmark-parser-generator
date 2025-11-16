@@ -220,6 +220,10 @@ export interface BitJson {
   platformBorderColor: string;
   platformSelectionTextColor: string;
   platformBaseLayerColor: string;
+  platformMargin: string;
+  platformBorderRadius: string;
+  platformSelectionBorderRadius: string;
+  platformNeedsShadow: boolean;
   productId: string | string[];
   product: string;
   productVideo: string;

@@ -340,6 +340,10 @@ class Builder extends BaseBuilder {
       platformBorderColor?: string;
       platformSelectionTextColor?: string;
       platformBaseLayerColor?: string;
+      platformMargin?: string;
+      platformBorderRadius?: string;
+      platformSelectionBorderRadius?: string;
+      platformNeedsShadow?: boolean;
       productId?: string | string[];
       product?: string | string[];
       // productList?: string | string[];
@@ -1349,6 +1353,30 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_platformBaseLayerColor,
         data.platformBaseLayerColor,
+        options,
+      ),
+      platformMargin: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformMargin,
+        data.platformMargin,
+        options,
+      ),
+      platformBorderRadius: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformBorderRadius,
+        data.platformBorderRadius,
+        options,
+      ),
+      platformSelectionBorderRadius: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformSelectionBorderRadius,
+        data.platformSelectionBorderRadius,
+        options,
+      ),
+      platformNeedsShadow: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformNeedsShadow,
+        data.platformNeedsShadow,
         options,
       ),
       productId: this.toAstProperty(bitType, ConfigKey.property_productId, data.productId, options),

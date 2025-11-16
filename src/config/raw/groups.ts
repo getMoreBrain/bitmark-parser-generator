@@ -868,6 +868,26 @@ const GROUPS: _GroupsConfig = {
         description: 'The platform base layer color',
         format: TagFormat.plainText,
       },
+      {
+        key: ConfigKey.property_platformMargin,
+        description: 'The platform margin',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformBorderRadius,
+        description: 'The platform border radius',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformSelectionBorderRadius,
+        description: 'The platform selection border radius',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_platformNeedsShadow,
+        description: 'If true, the platform needs shadow',
+        format: TagFormat.boolean,
+      },
     ],
   },
   [ConfigKey.group_quizCommon]: {
