@@ -276,6 +276,10 @@ export interface Bit {
   platformBorderColor?: Property;
   platformSelectionTextColor?: Property;
   platformBaseLayerColor?: Property;
+  platformMargin?: Property;
+  platformBorderRadius?: Property;
+  platformSelectionBorderRadius?: Property;
+  platformNeedsShadow?: Property;
   productId?: Property;
   product?: Property;
   productList?: Property;
