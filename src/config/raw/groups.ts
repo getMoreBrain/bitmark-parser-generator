@@ -794,9 +794,9 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
-  [ConfigKey.group_platformColorsCommon]: {
+  [ConfigKey.group_platformStylesCommon]: {
     type: GroupConfigType.standard,
-    description: 'Common platform colors',
+    description: 'Common platform styles',
     tags: [
       {
         key: ConfigKey.property_platformPrimaryColor,
