@@ -4458,6 +4458,10 @@ const BITS: _BitsConfig = {
         ],
         maxCount: 1,
       },
+      {
+        key: ConfigKey.group_platformStylesCommon,
+        description: 'Common platform styles',
+      },
     ],
   },
   [BitType.platformBrandTarget]: {
