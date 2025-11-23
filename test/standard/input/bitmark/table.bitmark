@@ -1,6 +1,6 @@
 [.table]
 [@tableFixedHeader:true]
-[@tableHeaderWhitespaceNoWrap:false]
+[@tableHeaderWhitespaceNoWrap]
 [@tableSearch:true]
 [@tableSort:true]
 [@tablePagination:true]
