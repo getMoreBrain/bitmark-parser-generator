@@ -44,6 +44,35 @@
           "selected": false
         }
       },
+      "platformPrimaryColor": "white",
+      "platformSecondaryColor": "white",
+      "platformBackgroundColor": "white",
+      "platformScrollbarColor": "white",
+      "platformMessageBackgroundColor": "white",
+      "platformBackgroundImage": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "sobrado.getmorebrain.com",
+          "src": "https://sobrado.getmorebrain.com/sobrado_bg.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "platformBorderColor": "#bac2c4",
+      "platformSelectionTextColor": "#56b746",
+      "platformBaseLayerColor": "#f0f0f0",
+      "platformMargin": "10px",
+      "platformBorderRadius": "5px",
+      "platformSelectionBorderRadius": "3px",
+      "platformNeedsShadow": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -55,9 +84,27 @@
     "parser": {
       "version": "4.17.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.35.0",
+      "warnings": [
+        {
+          "message": "[&platformBackgroundImage] is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]",
+          "location": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 276
+            },
+            "end": {
+              "line": 9,
+              "column": 76,
+              "offset": 351
+            }
+          }
+        }
+      ]
     },
-    "bitmark": "[.platform]\n[@platformName: Sobrado]\n[&platformIcon: https://sobrado.getmorebrain.com/sobrado_icon.png]"
+    "bitmark": "[.platform]\n[@platformName: Sobrado]\n[&platformIcon: https://sobrado.getmorebrain.com/sobrado_icon.png]\n[@platformPrimaryColor: white]\n[@platformSecondaryColor: white]\n[@platformScrollbarColor: white]\n[@platformMessageBackgroundColor: white]\n[@platformBackgroundColor: white]\n[&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]\n[@platformBorderColor: #bac2c4]\n[@platformSelectionTextColor: #56b746]\n[@platformBaseLayerColor: #f0f0f0]\n[@platformMargin: 10px]\n[@platformBorderRadius: 5px]\n[@platformSelectionBorderRadius: 3px]\n[@platformNeedsShadow: true]"
   },
   {
     "bit": {

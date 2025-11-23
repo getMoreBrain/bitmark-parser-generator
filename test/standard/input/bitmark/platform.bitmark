@@ -6,6 +6,21 @@
 [.platform]
 [@platformName: Sobrado]
 [&platformIcon: https://sobrado.getmorebrain.com/sobrado_icon.png]
+[@platformPrimaryColor: white]
+[@platformSecondaryColor: white]
+[@platformScrollbarColor: white]
+[@platformMessageBackgroundColor: white]
+[@platformBackgroundColor: white]
+[&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]
+[@platformBorderColor: #bac2c4]
+[@platformSelectionTextColor: #56b746]
+[@platformBaseLayerColor: #f0f0f0]
+[@platformMargin: 10px]
+[@platformBorderRadius: 5px]
+[@platformSelectionBorderRadius: 3px]
+[@platformNeedsShadow: true]
+
+
 
 [.platform-header]
 [&platformLogo: https://sobrado.getmorebrain.com/sobrado_logo.png]
