@@ -4458,6 +4458,10 @@ const BITS: _BitsConfig = {
         ],
         maxCount: 1,
       },
+      {
+        key: ConfigKey.group_platformStylesCommon,
+        description: 'Common platform styles',
+      },
     ],
   },
   [BitType.platformBrandTarget]: {
@@ -4934,6 +4938,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_tableHeaderWhitespaceNoWrap,
         description: 'No wrap for table header whitespace, used to prevent header text wrapping',
         format: TagFormat.boolean,
+        // defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tableSearch,
@@ -4967,7 +4972,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_tableWhitespaceNoWrap,
         description: 'No wrap for table whitespace, used to prevent text wrapping in table cells',
         format: TagFormat.boolean,
-        // defaultValue: 'true',
+        // defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tableAutoWidth,
