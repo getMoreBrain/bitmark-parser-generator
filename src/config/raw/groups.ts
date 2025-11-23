@@ -871,17 +871,17 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_platformMargin,
         description: 'The platform margin',
-        format: TagFormat.plainText,
+        format: TagFormat.number,
       },
       {
         key: ConfigKey.property_platformBorderRadius,
         description: 'The platform border radius',
-        format: TagFormat.plainText,
+        format: TagFormat.number,
       },
       {
         key: ConfigKey.property_platformSelectionBorderRadius,
         description: 'The platform selection border radius',
-        format: TagFormat.plainText,
+        format: TagFormat.number,
       },
       {
         key: ConfigKey.property_platformNeedsShadow,
