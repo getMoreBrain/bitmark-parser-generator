@@ -41,7 +41,7 @@
       }
     },
     "parser": {
-      "version": "4.17.0",
+      "version": "4.18.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -75,7 +75,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.17.0",
+      "version": "4.18.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "errors": [
@@ -156,7 +156,7 @@
       }
     },
     "parser": {
-      "version": "4.17.0",
+      "version": "4.18.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -204,7 +204,7 @@
       }
     },
     "parser": {
-      "version": "4.17.0",
+      "version": "4.18.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
@@ -249,7 +249,7 @@
       "body": []
     },
     "parser": {
-      "version": "4.17.0",
+      "version": "4.18.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0",
       "errors": [
