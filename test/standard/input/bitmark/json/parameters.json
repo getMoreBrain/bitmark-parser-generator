@@ -293,7 +293,7 @@
         ]
       },
       "tableFixedHeader": false,
-      "tableHeaderWhitespaceNoWrap": true,
+      "tableHeaderWhitespaceNoWrap": false,
       "tablePagination": false,
       "tablePaginationLimit": 0,
       "tableHeight": 0,
@@ -460,7 +460,7 @@
           ]
         ]
       },
-      "tableHeaderWhitespaceNoWrap": true,
+      "tableHeaderWhitespaceNoWrap": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -484,7 +484,7 @@
       "body": [],
       "table": {},
       "tableFixedHeader": false,
-      "tableHeaderWhitespaceNoWrap": true,
+      "tableHeaderWhitespaceNoWrap": false,
       "tableSearch": false,
       "tableSort": false,
       "tablePagination": false,

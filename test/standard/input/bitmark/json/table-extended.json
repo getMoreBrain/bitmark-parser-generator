@@ -563,7 +563,7 @@
         }
       },
       "tableFixedHeader": false,
-      "tableHeaderWhitespaceNoWrap": true,
+      "tableHeaderWhitespaceNoWrap": false,
       "tableSearch": false,
       "tableSort": false,
       "tablePagination": false,

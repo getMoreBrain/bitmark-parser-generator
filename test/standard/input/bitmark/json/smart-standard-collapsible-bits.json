@@ -4,9 +4,7 @@
       "type": "smart-standard-article-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -83,9 +81,7 @@
       "type": "smart-standard-article-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -162,9 +158,7 @@
       "type": "smart-standard-example-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -243,9 +237,7 @@
       "type": "smart-standard-example-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -570,9 +562,7 @@
       "type": "smart-standard-list-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -649,9 +639,7 @@
       "type": "smart-standard-list-item-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -750,9 +738,7 @@
       "type": "smart-standard-note-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -829,9 +815,7 @@
       "type": "smart-standard-note-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -908,9 +892,7 @@
       "type": "smart-standard-remark-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -987,9 +969,7 @@
       "type": "smart-standard-remark-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1066,9 +1046,7 @@
       "type": "smart-standard-table-image-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1140,9 +1118,7 @@
       "type": "smart-standard-table-image-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151972"
-      ],
+      "id": ["151972"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1214,9 +1190,7 @@
       "type": "smart-standard-remark-table-image-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1288,9 +1262,7 @@
       "type": "smart-standard-remark-table-image-non-normative-collapsible",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151972"
-      ],
+      "id": ["151972"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1491,7 +1463,7 @@
           ]
         ]
       },
-      "tableHeaderWhitespaceNoWrap": true,
+      "tableHeaderWhitespaceNoWrap": false,
       "tablePaginationLimit": 0,
       "tableHeight": 0,
       "tableWhitespaceNoWrap": false,
@@ -1640,7 +1612,7 @@
           ]
         ]
       },
-      "tableHeaderWhitespaceNoWrap": true,
+      "tableHeaderWhitespaceNoWrap": false,
       "tablePaginationLimit": 0,
       "tableHeight": 0,
       "tableWhitespaceNoWrap": false,
@@ -1789,7 +1761,7 @@
           ]
         ]
       },
-      "tableHeaderWhitespaceNoWrap": true,
+      "tableHeaderWhitespaceNoWrap": false,
       "tablePaginationLimit": 0,
       "tableHeight": 0,
       "tableWhitespaceNoWrap": false,
@@ -1938,7 +1910,7 @@
           ]
         ]
       },
-      "tableHeaderWhitespaceNoWrap": true,
+      "tableHeaderWhitespaceNoWrap": false,
       "tablePaginationLimit": 0,
       "tableHeight": 0,
       "tableWhitespaceNoWrap": false,

@@ -1752,7 +1752,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         //
         // if (bitJson.content2Buy == null) bitJson.content2Buy = '';
         if (bitJson.tableFixedHeader == null) bitJson.tableFixedHeader = false;
-        if (bitJson.tableHeaderWhitespaceNoWrap == null) bitJson.tableHeaderWhitespaceNoWrap = true;
+        if (bitJson.tableHeaderWhitespaceNoWrap == null) {
+          bitJson.tableHeaderWhitespaceNoWrap = false;
+        }
         if (bitJson.tableSearch == null) bitJson.tableSearch = false;
         if (bitJson.tableSort == null) bitJson.tableSort = false;
         if (bitJson.tablePagination == null) bitJson.tablePagination = false;
