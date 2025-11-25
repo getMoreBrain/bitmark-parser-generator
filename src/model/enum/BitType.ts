@@ -392,6 +392,7 @@ const BitType = superenum({
   multipleResponse: 'multiple-response',
   multipleResponse1: 'multiple-response-1',
   newspaperArticle: 'newspaper-article',
+  nonProductionPrototypeIframe: 'non-production-prototype-iframe',
   note: 'note',
   noteAi: 'note-ai',
   noteAlt: 'note-alt',

@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 4.19.0
+Version: 4.20.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -386,6 +386,7 @@ multiple-choice-text (since: 1.3.0)
 multiple-response (since: 1.3.0)
 multiple-response-1 (since: 1.3.0)
 newspaper-article (since: 1.3.0)
+non-production-prototype-iframe (since: 4.20.0)
 note (since: 1.3.0)
 note-ai (since: 1.3.0)
 note-alt (since: 1.16.0)
