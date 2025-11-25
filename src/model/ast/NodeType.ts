@@ -266,6 +266,8 @@ const NodeType = superenum({
   iconValue: 'iconValue',
   id: 'id',
   idValue: 'idValue',
+  iframeSrc: 'iframeSrc',
+  iframeName: 'iframeName',
   image: 'image',
   imageFirst: 'imageFirst',
   imageFirstValue: 'imageFirstValue',

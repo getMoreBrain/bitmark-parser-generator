@@ -5685,6 +5685,22 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: false,
   },
+  [BitType.nonProductionPrototypeIframe]: {
+    since: '4.20.0',
+    baseBitType: BitType._standard,
+    description: 'A non-production prototype iframe bit, used to embed prototype iframes',
+    tags: [
+      {
+        key: ConfigKey.property_iframeSrc,
+        description: 'Iframe source URL, used to define the source of the iframe',
+      },
+      {
+        key: ConfigKey.property_iframeName,
+        description: 'Iframe name, used to define the name of the iframe',
+        minCount: 1,
+      },
+    ],
+  },
 };
 
 export { BITS };
