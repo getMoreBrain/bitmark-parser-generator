@@ -48,6 +48,8 @@ export interface BitJson {
   releaseVersion: string;
   releaseKind: string;
   releaseDate: string;
+  iframeSrc: string;
+  iframeName: string;
   ageRange: number | number[];
   lang: string;
   language: string | string[];

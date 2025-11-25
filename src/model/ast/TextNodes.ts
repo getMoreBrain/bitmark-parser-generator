@@ -86,7 +86,7 @@ export interface CodeBlockTextNode extends TextNode {
 
 export interface LatexTextNode extends TextNode {
   type: 'latex';
-  attrs?: LatexTextNodeAttibutes;
+  attrs?: LatexTextNodeAttributes;
 }
 
 export interface ListTextNode extends TextNode {
@@ -121,7 +121,7 @@ export interface CodeBlockTextNodeAttributes extends TextNodeAttibutes {
   language: string;
 }
 
-export interface LatexTextNodeAttibutes extends TextNodeAttibutes {
+export interface LatexTextNodeAttributes extends TextNodeAttibutes {
   formula: string;
 }
 

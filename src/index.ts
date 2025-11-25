@@ -15,6 +15,8 @@ export { BitmarkVersion } from './model/enum/BitmarkVersion.ts';
 export { BitType } from './model/enum/BitType.ts';
 export { BodyTextFormat } from './model/enum/BodyTextFormat.ts';
 export { CardSetVersion } from './model/enum/CardSetVersion.ts';
+export { TextMarkType } from './model/enum/TextMarkType.ts';
+export { TextNodeType } from './model/enum/TextNodeType.ts';
 export { InfoFormat } from './model/info/enum/InfoFormat.ts';
 export { InfoType } from './model/info/enum/InfoType.ts';
 export { BitmarkParser } from './parser/bitmark/BitmarkParser.ts';
@@ -89,13 +91,49 @@ export type {
   Property,
 } from './model/ast/Nodes.ts';
 export type { NodeTypeType } from './model/ast/NodeType.ts';
-export type { JsonText as Text, TextAst } from './model/ast/TextNodes.ts';
+export type {
+  CodeBlockTextNode,
+  CodeBlockTextNodeAttributes,
+  CommentMark,
+  ExtRefMark,
+  ExtRefMarkAttibutes,
+  FootnoteAttibutes,
+  FootnoteMark,
+  HeadingTextNode,
+  HeadingTextNodeAttributes,
+  ImageInlineTextNode,
+  ImageTextNode,
+  ImageTextNodeAttributes,
+  LatexTextNode,
+  LatexTextNodeAttributes,
+  LinkMark,
+  LinkMarkAttibutes,
+  ListTextNode,
+  ListTextNodeAttributes,
+  MediaAttributes,
+  RefMark,
+  RefMarkAttibutes,
+  SectionTextNode,
+  SymbolMark,
+  TaskItemTextNode,
+  TaskItemTextNodeAttributes,
+  JsonText as Text,
+  TextAst,
+  TextMark,
+  TextMarkAttibutes,
+  TextNode,
+  TextNodeAttibutes,
+  XRefMark,
+  XRefMarkAttibutes,
+} from './model/ast/TextNodes.ts';
 export type { BitmarkParserTypeType } from './model/enum/BitmarkParserType.ts';
 export type { BitmarkVersionType } from './model/enum/BitmarkVersion.ts';
 export type { BitTypeType } from './model/enum/BitType.ts';
 export type { BodyTextFormatType } from './model/enum/BodyTextFormat.ts';
 export type { CardSetVersionType } from './model/enum/CardSetVersion.ts';
 export type { ResourceTypeType } from './model/enum/ResourceType.ts';
+export type { TextMarkTypeType } from './model/enum/TextMarkType.ts';
+export type { TextNodeTypeType } from './model/enum/TextNodeType.ts';
 export type { InfoFormatType } from './model/info/enum/InfoFormat.ts';
 export type { InfoTypeType } from './model/info/enum/InfoType.ts';
 export type {

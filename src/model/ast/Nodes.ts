@@ -94,6 +94,8 @@ export interface Bit {
   releaseVersion?: Property;
   releaseKind?: Property;
   releaseDate?: Property;
+  iframeSrc?: Property;
+  iframeName?: Property;
   ageRange?: Property;
   lang?: Property;
   language?: Property;

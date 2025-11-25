@@ -103,6 +103,8 @@ const propertyKeys = {
   property_icon: '@icon',
   property_iconTag: '@iconTag',
   property_id: '@id',
+  property_iframeSrc: '@iframeSrc',
+  property_iframeName: '@iframeName',
   property_imageFirst: '@imageFirst',
   property_imageSource: '@imageSource',
   property_index: '@index',

@@ -163,6 +163,8 @@ class Builder extends BaseBuilder {
       releaseVersion?: string;
       releaseKind?: string;
       releaseDate?: string;
+      iframeSrc?: string;
+      iframeName?: string;
       ageRange?: number | number[];
       lang?: string;
       language?: string | string[];
@@ -608,6 +610,13 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_releaseDate,
         data.releaseDate,
+        options,
+      ),
+      iframeSrc: this.toAstProperty(bitType, ConfigKey.property_iframeSrc, data.iframeSrc, options),
+      iframeName: this.toAstProperty(
+        bitType,
+        ConfigKey.property_iframeName,
+        data.iframeName,
         options,
       ),
       book: this.buildBooks(context, data.book),
