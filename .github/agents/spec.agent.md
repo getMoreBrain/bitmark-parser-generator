@@ -1,6 +1,6 @@
 ---
 description: "Create or modify project specifications."
-tools: ['edit', 'search', 'new', 'runCommands', 'runTasks', 'filesystem/create_directory', 'filesystem/directory_tree', 'filesystem/get_file_info', 'filesystem/list_allowed_directories', 'filesystem/list_directory', 'filesystem/list_directory_with_sizes', 'filesystem/move_file', 'filesystem/read_media_file', 'filesystem/read_multiple_files', 'filesystem/read_text_file', 'filesystem/search_files', 'filesystem/write_file', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo', 'extensions', 'todos']
+tools: ['runCommands', 'runTasks', 'filesystem/create_directory', 'filesystem/directory_tree', 'filesystem/get_file_info', 'filesystem/list_allowed_directories', 'filesystem/list_directory', 'filesystem/list_directory_with_sizes', 'filesystem/move_file', 'filesystem/read_media_file', 'filesystem/read_multiple_files', 'filesystem/read_text_file', 'filesystem/search_files', 'filesystem/write_file', 'edit', 'search', 'new', 'extensions', 'todos', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo']
 ---
 
 # Spec mode instructions

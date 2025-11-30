@@ -5,6 +5,9 @@
   "author": "Get More Brain Ltd",
   "license": "ISC",
   "homepage": "https://github.com/getMoreBrain/bitmark-parser-generator#readme",
+  "bin": {
+    "bitmark-parser": "bin/run"
+  },
   "type": "module",
   "browser": "./dist/browser/bitmark-parser-generator.min.js",
   "module": "./dist/index.js",
