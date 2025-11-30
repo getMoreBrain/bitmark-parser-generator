@@ -720,6 +720,13 @@ class BitmarkPegParserProcessor {
       if (l > 2) result.pageNumber = result.itemLead[2];
       if (l > 3) result.marginNumber = result.itemLead[l - 1];
     }
+    if (result.__itemLeadString) {
+      const l = result.__itemLeadString.length;
+      if (l > 0) result.__itemString = result.__itemLeadString[0];
+      if (l > 1) result.__leadString = result.__itemLeadString[1];
+      if (l > 2) result.__pageNumberString = result.__itemLeadString[2];
+      if (l > 3) result.__marginNumberString = result.__itemLeadString[l - 1];
+    }
 
     // Validate and build the body (trimmed)
     if (inBit) {

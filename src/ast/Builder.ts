@@ -1917,16 +1917,16 @@ class Builder extends BaseBuilder {
       response: data.response ?? '',
       reaction: data.reaction ?? '',
       feedback: data.feedback ?? '',
-      item: this.handleJsonText(context, TextLocation.tag, data.item),
+      item: data.item ?? '',
       lead: this.handleJsonText(context, TextLocation.tag, data.lead),
       hint: this.handleJsonText(context, TextLocation.tag, data.hint),
     };
 
     // Remove Unset Optionals
     ObjectUtils.removeUnwantedProperties(node, {
-      ignoreEmptyString: ['response', 'reaction', 'feedback'],
+      ignoreEmptyString: ['response', 'reaction', 'feedback', 'item'],
       ignoreAllFalse: true,
-      ignoreEmptyArrays: ['item'],
+      ignoreEmptyArrays: [],
       ignoreUndefined: ['example'],
     });
 
