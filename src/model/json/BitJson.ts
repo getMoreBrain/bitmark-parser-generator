@@ -573,7 +573,7 @@ export interface BotResponseJson {
   response: string;
   reaction: string;
   feedback: string;
-  item: JsonText;
+  item: string;
   lead: JsonText;
   hint: JsonText;
 }

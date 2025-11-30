@@ -158,11 +158,15 @@ export interface BitContentProcessorResult {
   propertyStyleResources?: { [key: string]: ResourceJson | ResourceJson[] };
   resources?: ResourceJson[];
   itemLead?: TextAst[];
+  __itemLeadString?: (string | undefined)[];
   item?: JsonText;
-  itemString?: string;
+  __itemString?: string;
   lead?: TextAst;
+  __leadString?: string;
   pageNumber?: TextAst;
+  __pageNumberString?: string;
   marginNumber?: TextAst;
+  __marginNumberString?: string;
   instruction?: TextAst;
   __instructionString?: string;
   hint?: TextAst;

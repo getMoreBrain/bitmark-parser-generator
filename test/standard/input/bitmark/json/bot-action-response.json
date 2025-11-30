@@ -60,35 +60,13 @@
           "response": "Ja, das weiss ich",
           "reaction": "celebrate",
           "feedback": "👍 Cool!",
-          "item": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "A",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ]
+          "item": "A"
         },
         {
           "response": "Das war mir nicht bewusst",
           "reaction": "like",
           "feedback": "😅",
-          "item": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "B",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ]
+          "item": "B"
         }
       ]
     },
@@ -151,7 +129,7 @@
           "response": "Okay",
           "reaction": "insightful",
           "feedback": "|image:http://memes.com/funny.gif|",
-          "item": []
+          "item": ""
         }
       ],
       "footer": [
@@ -235,69 +213,25 @@
           "response": "👍 Cool! Ja, das weiss ich",
           "reaction": "celebrate",
           "feedback": "👍 Cool!",
-          "item": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "A",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ]
+          "item": "A"
         },
         {
           "response": "👍 Cool n groovy!",
           "reaction": "like",
           "feedback": "👍 Cool n groovy!",
-          "item": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "B",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ]
+          "item": "B"
         },
         {
           "response": "Das war mir nicht bewusst",
           "reaction": "like",
           "feedback": "👍 Cool n groovy n farout!",
-          "item": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "C",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ]
+          "item": "C"
         },
         {
           "response": "",
           "reaction": "like",
           "feedback": "👍 Cool n groovy n good!",
-          "item": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "D",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ]
+          "item": "D"
         }
       ]
     },
@@ -325,35 +259,13 @@
           "response": "Ja, das weiss ich",
           "reaction": "celebrate",
           "feedback": "👍 Cool!",
-          "item": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "A",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ]
+          "item": "A"
         },
         {
           "response": "Das war mir nicht bewusst",
           "reaction": "like",
           "feedback": "😅",
-          "item": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "text": "B",
-                  "type": "text"
-                }
-              ],
-              "attrs": {}
-            }
-          ]
+          "item": "B"
         }
       ],
       "footer": [

@@ -1,5 +1,7 @@
+import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
 import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
 import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
+import { TextFormat } from '../../../../model/enum/TextFormat.ts';
 import { TextLocation } from '../../../../model/enum/TextLocation.ts';
 import { StringUtils } from '../../../../utils/StringUtils.ts';
 import { TextParser } from '../../../text/TextParser.ts';
@@ -30,5 +32,13 @@ function itemLeadTagContentProcessor(
     location: TextLocation.tag,
   });
   target.itemLead.push(text);
+
+  if (!target.__itemLeadString) target.__itemLeadString = [];
+  target.__itemLeadString.push(
+    Breakscape.unbreakscape(trimmedStringValue, {
+      format: TextFormat.bitmarkText,
+      location: TextLocation.tag,
+    }),
+  );
 }
 export { itemLeadTagContentProcessor };

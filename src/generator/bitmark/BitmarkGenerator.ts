@@ -1954,6 +1954,18 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeCardSetCardDivider();
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses -> botResponsesValue -> item
+
+  protected leaf_item(node: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.botResponsesValue) return;
+
+    this.writeNL();
+    this.writeOPC();
+    this.writeTextOrValue(node.value, TextFormat.plainText, TextLocation.tag);
+    this.writeCL();
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses -> botResponsesValue -> response
 
   protected leaf_response(node: NodeInfo, route: NodeInfo[]): void {

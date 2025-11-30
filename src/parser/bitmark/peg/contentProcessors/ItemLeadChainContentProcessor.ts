@@ -47,6 +47,7 @@ function buildItemLead(
 
   // Set the lead item from the chain
   target.itemLead = chainTags.itemLead;
+  target.__itemLeadString = chainTags.__itemLeadString;
 }
 
 export { itemLeadChainContentProcessor };
