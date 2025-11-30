@@ -1,5 +1,4 @@
 #!/usr/bin/env node
 
-import { cli } from '@getmorebrain/bitmark-extractor-ai';
-
-cli();
+// Production entry point - runs compiled CLI code
+import('../dist/cli/main.js').then((m) => m.cli());

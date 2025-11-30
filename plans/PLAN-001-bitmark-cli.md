@@ -760,7 +760,7 @@ Implementation is complete when:
 2. Development mode works: `./bin/dev <command>` runs CLI via tsx without building
 3. Production mode works: `./bin/run <command>` runs CLI from compiled code in `dist/`
 4. All five commands (convert, convertText, breakscape, unbreakscape, info) work with exact help text
-5. Version displays as `Bitmark CLI v4.19.0 (bitmark-parser-generator v4.19.0)`
+5. Version displays as `bitmark-parser-generator v4.20.0`
 6. Stdin, string literals, and file inputs all work
 7. File output with append/overwrite works
 8. Tests pass covering all commands
@@ -799,7 +799,7 @@ Add similar tests for convertText, breakscape, unbreakscape, and info commands.
 
 Before considering implementation complete:
 - [ ] All help text matches specification exactly (including typos like "ouput")
-- [ ] Version output: `Bitmark CLI v4.19.0 (bitmark-parser-generator v4.19.0)`
+- [ ] Version output: `bitmark-parser-generator v<version from package.json>`
 - [ ] All commands accept stdin when INPUT omitted
 - [ ] All commands support file input and literal string input
 - [ ] File output respects append/overwrite modes
@@ -824,8 +824,6 @@ Before considering implementation complete:
 ### Q4: Help Text Typos
 **Decision**: If spec contains typos (e.g., "ouput"), reproduce exactly to match specification. Can be fixed in future if spec is updated.
 
-### Q5: Version Number Discrepancy
-**Decision**: Use v4.19.0 as specified in requirements, even though package.json shows 4.20.0. Hardcode in `version.ts` to ensure compliance with spec.
 
 ## References
 
@@ -840,9 +838,9 @@ Before considering implementation complete:
 ## Success Criteria
 
 Implementation is complete when:
-1. CLI runs as `bitmark` command after `npm install -g` or `npm link`
+1. CLI runs as `bitmark-parser` command after `npm install -g` or `npm link`
 2. All five commands (convert, convertText, breakscape, unbreakscape, info) work with exact help text
-3. Version displays as `Bitmark CLI v4.19.0 (bitmark-parser-generator v4.19.0)`
+3. Version displays as `bitmark-parser-generator v4.20.0`
 4. Stdin, string literals, and file inputs all work
 5. File output with append/overwrite works
 6. Tests pass covering all commands

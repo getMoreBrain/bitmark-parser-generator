@@ -46,6 +46,7 @@ export default defineConfig([
     splitting: false,
     treeshake: false,
     clean: true,
+    external: [], // Bundle all dependencies
     // The banner code below is useful when createRequire is needed in ESM.
     // However, using 'import.meta.url' will break bundle builds (e.g. using esbuild) because it will not be defined.
     // banner: ({ format }) => {
@@ -105,5 +106,23 @@ export default defineConfig([
     //   // (otherwise the strip comments are removed or moved by esbuild)
     //   options.legalComments = 'inline';
     // },
+  },
+  // CLI build (ESM only, Node-only)
+  {
+    entry: ['src/cli/main.ts'],
+    format: ['esm'],
+    target: 'node20',
+    outDir: 'dist/cli',
+    shims: true,
+    dts: false,
+    sourcemap: true,
+    minify: false,
+    splitting: false,
+    treeshake: true,
+    clean: true,
+    external: ['commander', 'fs-extra'], // Don't bundle CLI deps
+    outExtension: () => ({
+      js: '.js',
+    }),
   },
 ]);
