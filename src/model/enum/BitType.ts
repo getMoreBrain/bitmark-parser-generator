@@ -610,6 +610,7 @@ const BitType = superenum({
   vendorJupyterCellRaw: 'vendor-jupyter-cell-raw',
   vendorJupyterIpynb: 'vendor-jupyter-ipynb',
   vendorJupyterOutput: 'vendor-jupyter-output',
+  vendorLearndashEmbed: 'vendor-learndash-embed',
   vendorPadletEmbed: 'vendor-padlet-embed',
   vendorStripePricingTable: 'vendor-stripe-pricing-table',
   vendorStripePricingTableExternal: 'vendor-stripe-pricing-table-external',
