@@ -11,7 +11,7 @@ const CLI_PATH = path.resolve(__dirname, '../../bin/dev');
 describe('help and version', () => {
   it('shows help with --help flag', async () => {
     const { stdout } = await execa('node', [CLI_PATH, '--help']);
-    expect(stdout).toContain('Bitmark parser command line interface');
+    expect(stdout).toContain('Convert to and from bitmark formats.');
     expect(stdout).toContain('convert');
     expect(stdout).toContain('convertText');
     expect(stdout).toContain('breakscape');
@@ -21,7 +21,7 @@ describe('help and version', () => {
 
   it('shows help with help command', async () => {
     const { stdout } = await execa('node', [CLI_PATH, 'help']);
-    expect(stdout).toContain('Bitmark parser command line interface');
+    expect(stdout).toContain('Convert to and from bitmark formats.');
     expect(stdout).toContain('convert');
   });
 

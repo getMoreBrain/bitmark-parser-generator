@@ -41,7 +41,7 @@ From old oclif-based implementation (provided in user request):
 ```
 Usage: bitmark-parser [options] [command]
 
-Bitmark parser command line interface
+Convert to and from bitmark formats.
 
 Options:
   -h, --help                      display help for command
@@ -59,7 +59,7 @@ Commands:
 ```
 Usage: bitmark-parser [options] [command]
 
-Bitmark parser command line interface
+Convert to and from bitmark formats.
 
 Options:
   -v, --version                   Display version
