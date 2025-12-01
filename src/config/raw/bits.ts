@@ -5693,11 +5693,11 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.property_iframeSrc,
         description: 'Iframe source URL, used to define the source of the iframe',
+        minCount: 1,
       },
       {
         key: ConfigKey.property_iframeName,
         description: 'Iframe name, used to define the name of the iframe',
-        minCount: 1,
       },
     ],
   },

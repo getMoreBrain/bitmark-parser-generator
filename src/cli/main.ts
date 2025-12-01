@@ -38,7 +38,7 @@ async function asyncInit(): Promise<void> {
 
   program
     .name('bitmark-parser')
-    .description('Bitmark parser command line interface')
+    .description('Convert to and from bitmark formats.')
     .helpOption('-h, --help', 'Display help for command')
     .action(() => {
       program.outputHelp();
