@@ -5701,6 +5701,11 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.vendorLearndashEmbed]: {
+    since: '5.0.0',
+    baseBitType: BitType.nonProductionPrototypeIframe,
+    description: 'Learndash embed bit, used to embed Learndash content in an iframe',
+  },
 };
 
 export { BITS };
