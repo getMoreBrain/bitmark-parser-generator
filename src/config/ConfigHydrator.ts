@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { type _AbstractTagConfig, type _CardVariantConfig } from '../model/config/_Config.ts';
 import { CardSetConfig } from '../model/config/CardSetConfig.ts';
 import { CardVariantConfig } from '../model/config/CardVariantConfig.ts';
@@ -85,9 +87,9 @@ class ConfigHydrator {
 
   private hydrateTagConfig(_tag: _AbstractTagConfig): TagsConfigWithInfo {
     const { key: _configKey, maxCount, minCount, chain: _chain, deprecated } = _tag;
-    const configKey = ConfigKey.fromValue(_configKey) || ConfigKey._unknown;
+    const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No tag key found for config key '${configKey}'`);
-    const tag = Tag.fromValue(configKey);
+    const tag = Enum(Tag).fromValue(configKey);
     if (!tag) throw new Error(`No tag found for tag config key '${configKey}'`);
 
     let chain: TagsConfig | undefined;
@@ -123,7 +125,7 @@ class ConfigHydrator {
       defaultValue,
       jsonKey,
     } = _tag;
-    const configKey = ConfigKey.fromValue(_configKey) || ConfigKey._unknown;
+    const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No property key found for config key '${configKey}'`);
     const tag = _configKey.substring(1); // Remove the '@' prefix from the config key
 
@@ -154,7 +156,7 @@ class ConfigHydrator {
 
   private hydrateResourceTagConfig(_tag: _AbstractTagConfig): TagsConfigWithInfo {
     const { key: _configKey, maxCount, minCount, chain: _chain, deprecated, jsonKey } = _tag;
-    const configKey = ConfigKey.fromValue(_configKey) || ConfigKey._unknown;
+    const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No resource key found for config key '${configKey}'`);
     const tag = _configKey.substring(1); // Remove the '&' prefix from the config key
 
@@ -183,7 +185,7 @@ class ConfigHydrator {
 
   private hydrateTagGroupConfig(_tag: _AbstractTagConfig): TagsConfigWithInfo {
     const { key: _configKey } = _tag;
-    const configKey = ConfigKey.fromValue(_configKey) || ConfigKey._unknown;
+    const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No group key found for config key '${configKey}'`);
     const _groupConfig = GROUPS[configKey];
     if (!_groupConfig) throw new Error(`No config found for group config key '${_configKey}'`);

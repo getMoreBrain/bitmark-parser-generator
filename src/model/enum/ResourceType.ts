@@ -1,9 +1,9 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
 import { StringUtils } from '../../utils/StringUtils.ts';
 import type { ConfigKeyType } from '../config/enum/ConfigKey.ts';
 
-const ResourceType = superenum({
+const ResourceType = {
   unknown: 'unknown',
 
   image: 'image',
@@ -41,7 +41,7 @@ const ResourceType = superenum({
   previewImage: 'previewImage',
   previewVideo: 'previewVideo',
   coverImage: 'coverImage',
-});
+} as const;
 
 export type ResourceTypeType = EnumType<typeof ResourceType>;
 

@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { ResourceBuilder } from '../../../../ast/ResourceBuilder.ts';
 import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
 import { Config } from '../../../../config/Config.ts';
@@ -41,7 +43,7 @@ function buildResources(
   const filteredResources: ResourceJson[] = [];
   const excessResources: ResourceJson[] = [];
 
-  const validatedResourceTypeAttachemnt = ResourceType.fromValue(resourceTypeAttachment);
+  const validatedResourceTypeAttachemnt = Enum(ResourceType).fromValue(resourceTypeAttachment);
 
   // Get the bit configuration for the bit
   const resourcesConfig = Config.getBitResourcesConfig(bitType, validatedResourceTypeAttachemnt);
@@ -110,9 +112,10 @@ function resourceContentProcessor(
 
   if (!resources) return;
 
-  const configKey = ConfigKey.fromValue(key);
+  const configKey = Enum(ConfigKey).fromValue(key);
   if (!configKey) return;
-  const resourceType = ResourceType.fromKey(configKey.replace(/^&/, '')) ?? ResourceType.unknown;
+  const resourceType =
+    Enum(ResourceType).fromKey(configKey.replace(/^&/, '')) ?? ResourceType.unknown;
 
   // Parse the resource chain
   const resourceConfig = Config.getTagConfigForTag(tagsConfig, configKey);

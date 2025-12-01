@@ -1,13 +1,13 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
 /**
  * Type of group config
  */
-const GroupConfigType = superenum({
+const GroupConfigType = {
   standard: 'standard', // Any ordinary group
   resource: 'resource', // A resource group
   comboResource: 'comboResource', // A combo resource group
-});
+} as const;
 
 export type GroupConfigTypeType = EnumType<typeof GroupConfigType>;
 

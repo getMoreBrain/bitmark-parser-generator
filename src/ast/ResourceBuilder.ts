@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Breakscape } from '../breakscaping/Breakscape.ts';
 import { Config } from '../config/Config.ts';
 import { type TextAst } from '../model/ast/TextNodes.ts';
@@ -65,15 +67,15 @@ class ResourceBuilder extends BaseBuilder {
 
     for (const thisResource of resource) {
       // Validate we have a valid resource type
-      let type = ResourceType.fromValue(thisResource.type);
+      let type = Enum(ResourceType).fromValue(thisResource.type);
       if (!type) return undefined;
 
       // Get the resource key
-      const resourceKey = ResourceType.keyFromValue(type);
+      const resourceKey = Enum(ResourceType).keyFromValue(type);
       if (!resourceKey) return undefined;
 
       // Override original type with type alias if present
-      const __typeAlias = ResourceType.fromValue(thisResource.__typeAlias);
+      const __typeAlias = Enum(ResourceType).fromValue(thisResource.__typeAlias);
       type = __typeAlias ?? type;
 
       let data: ResourceDataJson | undefined;
@@ -125,7 +127,7 @@ class ResourceBuilder extends BaseBuilder {
     data: Partial<ResourceDataJson> | undefined,
   ): ResourceJson | undefined {
     if (!data) return undefined;
-    type = ResourceType.fromValue(type) as ResourceTypeType;
+    type = Enum(ResourceType).fromValue(type) as ResourceTypeType;
     if (!type) return undefined;
 
     const dataAsString: string | undefined = StringUtils.isString(data)

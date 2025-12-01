@@ -7,7 +7,7 @@
  *
  */
 
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
 import { type BreakscapedString } from '../../../model/ast/BreakscapedString.ts';
 import {
@@ -267,7 +267,7 @@ export interface TypeKeyValue<T = unknown> extends ParserData {
   chain?: BitContent[];
 }
 
-const TypeKey = superenum({
+const TypeKey = {
   // Bit header
   TextFormat: 'TextFormat',
   ResourceType: 'ResourceType',
@@ -308,15 +308,15 @@ const TypeKey = superenum({
   // Dividers
   PlainTextDivider: 'PlainTextDivider',
   FooterDivider: 'FooterDivider',
-});
+} as const;
 
 export type TypeKeyType = EnumType<typeof TypeKey>;
 
-const ContentDepth = superenum({
+const ContentDepth = {
   Bit: 'Bit',
   Card: 'Card',
   Chain: 'Chain',
-});
+} as const;
 
 export type ContentDepthType = EnumType<typeof ContentDepth>;
 

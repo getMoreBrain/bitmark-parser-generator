@@ -1,4 +1,4 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { Enum, type EnumType } from '@ncoderz/superenum';
 
 import { Ast } from './ast/Ast.ts';
 import { Config } from './config/Config.ts';
@@ -308,7 +308,7 @@ export interface UnbreakscapeOptions {
 /**
  * Input type enumeration
  */
-const Input = superenum({
+const Input = {
   /**
    * Input is as a string
    */
@@ -318,14 +318,14 @@ const Input = superenum({
    * Input is as a file path
    */
   file: 'file',
-});
+} as const;
 
 export type InputType = EnumType<typeof Input>;
 
 /**
  * Output type enumeration
  */
-const Output = superenum({
+const Output = {
   /**
    * Output bitmark string
    */
@@ -340,7 +340,7 @@ const Output = superenum({
    * Output AST as a plain JS object, or a file
    */
   ast: 'ast',
-});
+} as const;
 
 export type OutputType = EnumType<typeof Output>;
 
@@ -882,7 +882,7 @@ class BitmarkParserGenerator {
     const fileOptions = Object.assign({}, opts.fileOptions);
     const jsonOptions = Object.assign({}, opts.jsonOptions);
     const textFormat: TextFormatType =
-      TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
+      Enum(TextFormat).fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
@@ -965,7 +965,7 @@ class BitmarkParserGenerator {
     const opts: BreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
     const textFormat: TextFormatType =
-      TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
+      Enum(TextFormat).fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: string = input as string;
@@ -1031,7 +1031,7 @@ class BitmarkParserGenerator {
     const opts: UnbreakscapeOptions = Object.assign({}, options);
     const fileOptions = Object.assign({}, opts.fileOptions);
     const textFormat: TextFormatType =
-      TextFormat.fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
+      Enum(TextFormat).fromValue(opts.textFormat) ?? TextFormat.bitmarkText;
     const textLocation = opts.textLocation ?? TextLocation.body;
 
     let inStr: BreakscapedString = input as BreakscapedString;

@@ -12,7 +12,8 @@
     "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "skipLibCheck": true
   },
   "include": ["**/*.ts"],
   "exclude": [

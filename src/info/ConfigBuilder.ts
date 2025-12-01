@@ -1,5 +1,6 @@
 import path from 'node:path';
 
+import { Enum } from '@ncoderz/superenum';
 import fs from 'fs-extra';
 
 import { Config } from '../config/Config.ts';
@@ -32,7 +33,7 @@ class ConfigBuilder {
     const bitGroupConfigKeys: BitTypeType[] = [];
     const bitGroupConfigs: (_BitConfig & { bitType: BitTypeType })[] = [];
 
-    for (const bt of BitType.values()) {
+    for (const bt of Enum(BitType).values()) {
       const bitType = Config.getBitType(bt);
       const _bitConfig: _BitConfig & { bitType: BitTypeType } = BITS[bitType] as _BitConfig & {
         bitType: BitTypeType;
@@ -395,7 +396,7 @@ class ConfigBuilder {
     const opts: GenerateConfigOptions = Object.assign({}, options);
     const bitConfigs: BitConfig[] = [];
 
-    for (const bt of BitType.values()) {
+    for (const bt of Enum(BitType).values()) {
       const bitType = Config.getBitType(bt);
       const bitConfig = Config.getBitConfig(bitType);
       if (bitConfig) bitConfigs.push(bitConfig);

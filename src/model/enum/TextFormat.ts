@@ -1,6 +1,6 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
-const TextFormat = superenum({
+const TextFormat = {
   // plain text
   plainText: 'text',
   latex: 'latex', // LaTeX code, alias for text
@@ -10,7 +10,7 @@ const TextFormat = superenum({
   // bitmarkText
   // bitmarkText in the body is bitmark++ and bitmarkText in a tag is bitmark+
   bitmarkText: 'bitmark++',
-});
+} as const;
 
 export type TextFormatType = EnumType<typeof TextFormat>;
 

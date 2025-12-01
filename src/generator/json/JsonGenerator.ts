@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Ast, type NodeInfo } from '../../ast/Ast.ts';
 import { type Writer } from '../../ast/writer/Writer.ts';
 import { Breakscape } from '../../breakscaping/Breakscape.ts';
@@ -194,7 +196,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.bodyBitCallback = this.bodyBitCallback.bind(this);
 
     this.bitmarkVersion =
-      BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
+      Enum(BitmarkVersion).fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.textParserVersion = this.textParser.version();
     this.options = {
       ...DEFAULT_OPTIONS,
@@ -728,7 +730,9 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     for (const node of nodes) {
       if (
         node.type !== BodyBitType.text &&
-        BodyBitType.values().includes(node.type as BodyBitTypeType)
+        Enum(BodyBitType)
+          .values()
+          .includes(node.type as BodyBitTypeType)
       ) {
         const bodyBit = node as unknown as BodyBitJson;
         bodyBit.attrs = {} as Record<string, unknown>;
@@ -1167,7 +1171,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     //   (this as any)[funcName] = (this as any)[funcName].bind(this);
     // }
 
-    for (const propertyConfigKey of PropertyKey.values()) {
+    for (const propertyConfigKey of Enum(PropertyKey).values()) {
       const propertyTag = configKeyToPropertyType(propertyConfigKey);
 
       const funcNames = [`enter_${propertyTag}`, `leaf_${propertyTag}`];
@@ -1351,7 +1355,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       for (const node of route) {
         if (node.key === NodeType.bitsValue) {
           const n = node.value as Bit;
-          return TextFormat.fromValue(n?.textFormat) ?? bitConfig.textFormatDefault;
+          return Enum(TextFormat).fromValue(n?.textFormat) ?? bitConfig.textFormatDefault;
         }
       }
     }

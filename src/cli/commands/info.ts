@@ -1,3 +1,4 @@
+import { Enum } from '@ncoderz/superenum';
 import { Argument, Command, InvalidArgumentError, Option } from 'commander';
 
 import {
@@ -69,10 +70,10 @@ export function createInfoCommand(): Command {
     .action(async (info, options) => {
       try {
         const prettify = options.pretty ? (options.indent ?? 2) : undefined;
-        const outputFormat = InfoFormat.fromValue(options.format) ?? InfoFormat.text;
+        const outputFormat = Enum(InfoFormat).fromValue(options.format) ?? InfoFormat.text;
 
         // Determine info type based on arguments and flags
-        let type = InfoType.fromValue(info) ?? InfoType.list;
+        let type = Enum(InfoType).fromValue(info) ?? InfoType.list;
         if (type === InfoType.list) {
           if (options.all) type = InfoType.all;
           else if (options.deprecated) type = InfoType.deprecated;

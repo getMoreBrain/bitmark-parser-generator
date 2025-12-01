@@ -1,3 +1,4 @@
+import { Enum } from '@ncoderz/superenum';
 import { Command, InvalidArgumentError, Option } from 'commander';
 
 import { BitmarkParserGenerator, BodyTextFormat } from '../../index.ts';
@@ -45,7 +46,7 @@ export function createConvertTextCommand(): Command {
 
         // Bitmark tool text conversion
         const result = bpg.convertText(dataIn, {
-          textFormat: BodyTextFormat.fromValue(options.textFormat),
+          textFormat: Enum(BodyTextFormat).fromValue(options.textFormat),
           jsonOptions: {
             prettify,
           },

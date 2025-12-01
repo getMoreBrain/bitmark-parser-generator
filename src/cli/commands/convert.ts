@@ -1,3 +1,4 @@
+import { Enum } from '@ncoderz/superenum';
 import { Command, InvalidArgumentError, Option } from 'commander';
 
 import {
@@ -110,9 +111,9 @@ export function createConvertCommand(): Command {
         } else {
           // Use Peggy parser via BitmarkParserGenerator
           result = bpg.convert(dataIn, {
-            bitmarkVersion: BitmarkVersion.fromValue(options.version),
-            bitmarkParserType: BitmarkParserType.fromValue(options.parser),
-            outputFormat: Output.fromValue(options.format),
+            bitmarkVersion: Enum(BitmarkVersion).fromValue(options.version),
+            bitmarkParserType: Enum(BitmarkParserType).fromValue(options.parser),
+            outputFormat: Enum(Output).fromValue(options.format),
             jsonOptions: {
               enableWarnings: options.warnings,
               prettify,
@@ -122,7 +123,7 @@ export function createConvertCommand(): Command {
             bitmarkOptions: {
               explicitTextFormat: options.explicitTextFormat,
               spacesAroundValues,
-              cardSetVersion: CardSetVersion.fromValue(options.cardSetVersion),
+              cardSetVersion: Enum(CardSetVersion).fromValue(options.cardSetVersion),
             },
           });
         }

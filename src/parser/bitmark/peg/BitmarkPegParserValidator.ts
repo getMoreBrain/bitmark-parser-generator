@@ -7,6 +7,8 @@
  *
  */
 
+import { Enum } from '@ncoderz/superenum';
+
 import { Config } from '../../../config/Config.ts';
 import { type BreakscapedString } from '../../../model/ast/BreakscapedString.ts';
 import { type Body, type BodyPart } from '../../../model/ast/Nodes.ts';
@@ -326,7 +328,7 @@ class BitmarkPegParserValidator {
       if (!content) continue;
 
       const { type, key } = content as TypeKeyValue;
-      let typeKey = TypeKey.fromValue(type);
+      let typeKey = Enum(TypeKey).fromValue(type);
       if (!typeKey) continue; // Should not happen
 
       // Build the final valid type key which is the key for property / resources
@@ -944,7 +946,7 @@ class BitmarkPegParserValidator {
         res.set(v.configKey, tagValidationData);
       } else {
         // Take advantage of the same naming convention (dangerous - should be improved)
-        const typeKey = TypeKey.fromValue(v.tag);
+        const typeKey = Enum(TypeKey).fromValue(v.tag);
         if (typeKey) {
           res.set(typeKey, tagValidationData);
         }

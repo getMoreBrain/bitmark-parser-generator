@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { type _BitConfig, type _PropertiesConfig } from '../model/config/_Config.ts';
 import { BitConfig } from '../model/config/BitConfig.ts';
 import type { CardVariantConfig } from '../model/config/CardVariantConfig.ts';
@@ -44,7 +46,7 @@ class Config {
    */
   public getBitType(bitType: BitTypeType | string | undefined): BitTypeType {
     if (bitType?.startsWith('|')) bitType = bitType.substring(1);
-    return BitType.fromValue(bitType) ?? BitType._error;
+    return Enum(BitType).fromValue(bitType) ?? BitType._error;
   }
 
   /**

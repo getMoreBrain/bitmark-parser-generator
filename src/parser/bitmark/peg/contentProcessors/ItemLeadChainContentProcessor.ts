@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Config } from '../../../../config/Config.ts';
 import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
 import { Tag } from '../../../../model/enum/Tag.ts';
@@ -34,7 +36,7 @@ function buildItemLead(
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('item lead content', content);
 
   // Process the chain (lead)
-  const itemLeadConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
+  const itemLeadConfig = Config.getTagConfigForTag(tagsConfig, Enum(Tag).fromValue(content.type));
   const chainContent = [content, ...(content.chain ?? [])];
 
   const chainTags = context.bitContentProcessor(
