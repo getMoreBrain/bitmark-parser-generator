@@ -2,23 +2,17 @@ import { execa } from 'execa';
 import fs from 'fs-extra';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { afterAll, beforeAll, describe, expect, it } from 'vitest';
+import { describe, expect, it } from 'vitest';
+
+import { cliTmpDir } from './setup/tmpDirRef.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const CLI_PATH = path.resolve(__dirname, '../../bin/dev');
-const TMP_DIR = path.resolve(__dirname, '../../.tmp-test');
+const TMP_DIR = cliTmpDir;
 
 describe('breakscape command', () => {
-  beforeAll(async () => {
-    await fs.ensureDir(TMP_DIR);
-  });
-
-  afterAll(async () => {
-    await fs.remove(TMP_DIR);
-  });
-
   it('escapes bitmark syntax characters', async () => {
     const { stdout } = await execa('node', [CLI_PATH, 'breakscape', '[.article] Test']);
     expect(stdout.trim()).toBe('[^.article] Test');
