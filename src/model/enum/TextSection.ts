@@ -1,6 +1,6 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
-const TextSection = superenum({
+const TextSection = {
   unknown: '',
   note: 'note',
   remark: 'remark',
@@ -11,7 +11,7 @@ const TextSection = superenum({
   danger: 'danger',
   example: 'example',
   sideNote: 'side-note',
-});
+} as const;
 
 export type TextSectionType = EnumType<typeof TextSection>;
 

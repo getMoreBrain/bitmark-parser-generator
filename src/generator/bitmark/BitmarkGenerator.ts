@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Ast, type NodeInfo } from '../../ast/Ast.ts';
 import { StringWriter } from '../../ast/writer/StringWriter.ts';
 import { type Writer } from '../../ast/writer/Writer.ts';
@@ -209,7 +211,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Set options
     this.bitmarkVersion =
-      BitmarkVersion.fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
+      Enum(BitmarkVersion).fromValue(options?.bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.options = {
       ...DEFAULT_OPTIONS,
       ...options?.bitmarkOptions,
@@ -1017,7 +1019,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     // console.log('bodyBitCallback', bodyBit, index, route);
 
     // Walk the body bit AST
-    const nodeType = NodeType.fromValue(bodyBit.type) ?? NodeType.bodyBit;
+    const nodeType = Enum(NodeType).fromValue(bodyBit.type) ?? NodeType.bodyBit;
     this.ast.walk(bodyBit, nodeType, this, undefined);
 
     return ''; // Return empty string as we are writing to the writer
@@ -1954,6 +1956,18 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     this.writeCardSetCardDivider();
   }
 
+  // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses -> botResponsesValue -> item
+
+  protected leaf_item(node: NodeInfo, route: NodeInfo[]): void {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.botResponsesValue) return;
+
+    this.writeNL();
+    this.writeOPC();
+    this.writeTextOrValue(node.value, TextFormat.plainText, TextLocation.tag);
+    this.writeCL();
+  }
+
   // bitmarkAst -> bits -> bitsValue -> cardNode -> botResponses -> botResponsesValue -> response
 
   protected leaf_response(node: NodeInfo, route: NodeInfo[]): void {
@@ -2874,9 +2888,9 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    */
 
   protected generateResourceHandlers() {
-    for (const tag of ResourceType.keys()) {
+    for (const tag of Enum(ResourceType).keys()) {
       // skip unknown
-      if (tag === ResourceType.keyFromValue(ResourceType.unknown)) continue;
+      if (tag === Enum(ResourceType).keyFromValue(ResourceType.unknown)) continue;
 
       const enterFuncName = `enter_${tag}`;
 
@@ -2896,8 +2910,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (parent?.key !== NodeType.resourcesValue) return true;
 
         // Get the resource alias
-        const alias = ResourceType.fromValue(parent.value.__typeAlias);
-        const type = alias ?? ResourceType.fromValue(parent.value.type);
+        const alias = Enum(ResourceType).fromValue(parent?.value.__typeAlias);
+        const type = alias ?? Enum(ResourceType).fromValue(parent?.value.type);
         if (!type) return false;
 
         // url / src / href / app
@@ -2964,7 +2978,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
    */
 
   protected generatePropertyHandlers() {
-    for (const propertyConfigKey of PropertyKey.values()) {
+    for (const propertyConfigKey of Enum(PropertyKey).values()) {
       const propertyTag = configKeyToPropertyType(propertyConfigKey);
 
       const funcNames = [`enter_${propertyTag}`, `leaf_${propertyTag}`];
@@ -3478,7 +3492,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     deprecated_writeAsProperty = false,
   ): boolean | void {
     if (key && resource) {
-      const resourceTag = ResourceType.keyFromValue(resource.type) ?? '';
+      const resourceTag = Enum(ResourceType).keyFromValue(resource.type) ?? '';
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const resourceData = (resource as any)[resourceTag];
       const src = resourceData
@@ -3601,7 +3615,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   }
 
   protected isWriteTextFormat(bitsValue: string, textFormatDefault: TextFormatType): boolean {
-    const isDefault = TextFormat.fromValue(bitsValue) === textFormatDefault;
+    const isDefault = Enum(TextFormat).fromValue(bitsValue) === textFormatDefault;
     const writeFormat = !isDefault || this.options.explicitTextFormat;
     return !!writeFormat;
   }

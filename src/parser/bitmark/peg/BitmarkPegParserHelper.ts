@@ -2,7 +2,7 @@
  * BitmarkPegParserProcessor.ts
  * RA Sewell
  *
- * (c) 2023 Get More Brain AG
+ * (c) 2023-25 Get More Brain AG
  * All rights reserved.
  *
  *
@@ -17,6 +17,8 @@
  */
 
 import '../../../config/Config.ts';
+
+import { Enum } from '@ncoderz/superenum';
 
 import { Breakscape } from '../../../breakscaping/Breakscape.ts';
 import { type BreakscapedString } from '../../../model/ast/BreakscapedString.ts';
@@ -175,7 +177,7 @@ class BitmarkPegParserHelper {
 
     return {
       type,
-      key: Tag.fromValue(type),
+      key: Enum(Tag).fromValue(type),
       value,
       parser: {
         text: this.parserText(),
@@ -646,7 +648,7 @@ class BitmarkPegParserHelper {
     const { type } = value as TypeValue;
 
     if (!validType) {
-      return !!TypeKey.fromValue(type as TypeKeyType);
+      return !!Enum(TypeKey).fromValue(type as TypeKeyType);
     }
     if (Array.isArray(validType)) {
       return validType.indexOf(type as TypeKeyType) >= 0;

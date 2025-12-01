@@ -1,6 +1,6 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
-const Environment = superenum({
+const Environment = {
   unknown: '',
   node: 'node',
   chrome: 'chrome',
@@ -8,7 +8,7 @@ const Environment = superenum({
   firefox: 'firefox',
   edge: 'edge',
   ie: 'ie',
-});
+} as const;
 
 export type EnvironmentType = EnumType<typeof Environment>;
 

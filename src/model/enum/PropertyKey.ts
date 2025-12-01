@@ -1,4 +1,4 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
 const propertyKeys = {
   property_action: '@action',
@@ -271,7 +271,7 @@ const propertyKeys = {
   property_zoomDisabled: '@zoomDisabled',
 } as const;
 
-const PropertyKey = superenum(propertyKeys);
+const PropertyKey = propertyKeys;
 
 export type PropertyKeyType = EnumType<typeof PropertyKey>;
 

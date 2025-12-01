@@ -1121,13 +1121,20 @@ function parseBotActionResponses(
   for (const card of cardSet.cards) {
     for (const side of card.sides) {
       for (const content of side.variants) {
-        const { __instructionString, reaction, cardBodyStr: feedback, ...tags } = content.data;
+        const {
+          __instructionString,
+          __itemString,
+          reaction,
+          cardBodyStr: feedback,
+          ...tags
+        } = content.data;
 
         const botResponse: Partial<BotResponseJson> = {
           response: __instructionString ?? Breakscape.EMPTY_STRING,
           reaction: reaction ?? Breakscape.EMPTY_STRING,
           feedback: feedback ?? Breakscape.EMPTY_STRING,
           ...tags,
+          item: __itemString ?? Breakscape.EMPTY_STRING,
         };
         if (botResponse) botResponses.push(botResponse);
       }

@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
 import { Config } from '../../../../config/Config.ts';
 import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
@@ -59,7 +61,7 @@ function buildImageSource(
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('imageSource content', content);
 
   const { key: tag } = content as TypeKeyValue;
-  const imageSourceConfig = Config.getTagConfigForTag(tagsConfig, ConfigKey.fromValue(tag));
+  const imageSourceConfig = Config.getTagConfigForTag(tagsConfig, Enum(ConfigKey).fromValue(tag));
 
   const tags = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, [content]);
   const chainTags = context.bitContentProcessor(

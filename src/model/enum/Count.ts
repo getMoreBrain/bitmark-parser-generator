@@ -1,8 +1,8 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
-const Count = superenum({
+const Count = {
   infinity: 'infinity',
-});
+} as const;
 
 export type CountType = EnumType<typeof Count> | number;
 

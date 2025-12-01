@@ -1,4 +1,4 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
 const groupKeys = {
   group_standardAllBits: 'group_standardAllBits',
@@ -50,7 +50,7 @@ const groupKeys = {
   group_previewVideos: 'group_previewVideos',
 } as const;
 
-const GroupKey = superenum(groupKeys);
+const GroupKey = groupKeys;
 
 export type GroupKeyType = EnumType<typeof GroupKey>;
 

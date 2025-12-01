@@ -62,6 +62,8 @@
  *   and in BitmarkPegParserHelper.ts
  */
 
+import { Enum } from '@ncoderz/superenum';
+
 import { Builder } from '../../../ast/Builder.ts';
 import { Breakscape } from '../../../breakscaping/Breakscape.ts';
 import { Config } from '../../../config/Config.ts';
@@ -376,7 +378,7 @@ class BitmarkPegParserProcessor {
     }
 
     // Text format
-    let textFormat = TextFormat.fromValue(textFormatAndResourceType.textFormat);
+    let textFormat = Enum(TextFormat).fromValue(textFormatAndResourceType.textFormat);
     const isInvalidTextFormat = textFormatAndResourceType.textFormat && !textFormat;
     if (isInvalidTextFormat) {
       this.addWarning(
@@ -385,7 +387,7 @@ class BitmarkPegParserProcessor {
     }
 
     // Deprecated warning for bitmark--
-    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(
+    const deprecatedTextFormat = Enum(DeprecatedTextFormat).fromValue(
       textFormatAndResourceType.textFormat,
     );
     if (deprecatedTextFormat) {
@@ -398,7 +400,7 @@ class BitmarkPegParserProcessor {
     textFormat = textFormat ?? bitConfig.textFormatDefault;
 
     // Resource type
-    const resourceType = ResourceType.fromValue(textFormatAndResourceType.resourceType);
+    const resourceType = Enum(ResourceType).fromValue(textFormatAndResourceType.resourceType);
     if (textFormatAndResourceType.resourceType && !resourceType) {
       this.addWarning(
         `Invalid resource type '${textFormatAndResourceType.resourceType}', it will be ignored`,
@@ -719,6 +721,13 @@ class BitmarkPegParserProcessor {
       if (l > 1) result.lead = result.itemLead[1];
       if (l > 2) result.pageNumber = result.itemLead[2];
       if (l > 3) result.marginNumber = result.itemLead[l - 1];
+    }
+    if (result.__itemLeadString) {
+      const l = result.__itemLeadString.length;
+      if (l > 0) result.__itemString = result.__itemLeadString[0];
+      if (l > 1) result.__leadString = result.__itemLeadString[1];
+      if (l > 2) result.__pageNumberString = result.__itemLeadString[2];
+      if (l > 3) result.__marginNumberString = result.__itemLeadString[l - 1];
     }
 
     // Validate and build the body (trimmed)

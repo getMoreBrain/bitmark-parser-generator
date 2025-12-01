@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
 import { Config } from '../../../../config/Config.ts';
 import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
@@ -45,7 +47,7 @@ function propertyContentProcessor(
   const isChain = contentDepth === BitContentLevel.Chain;
 
   // Get the property config for the tag (if it exists)
-  const propertyConfig = Config.getTagConfigForTag(tagsConfig, PropertyKey.fromValue(keyIn));
+  const propertyConfig = Config.getTagConfigForTag(tagsConfig, Enum(PropertyKey).fromValue(keyIn));
   const configKey = propertyConfig ? propertyConfig.configKey : undefined;
   let property = configKeyToPropertyType(keyIn);
 

@@ -1,4 +1,4 @@
-import { type EnumType } from '@ncoderz/superenum';
+import { Enum, type EnumType } from '@ncoderz/superenum';
 
 import { Ast, type NodeInfo } from '../../ast/Ast.ts';
 import { Breakscape } from '../../breakscaping/Breakscape.ts';
@@ -223,7 +223,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   constructor(bitmarkVersion?: BitmarkVersionType, options?: TextOptions) {
     super();
 
-    this.bitmarkVersion = BitmarkVersion.fromValue(bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
+    this.bitmarkVersion = Enum(BitmarkVersion).fromValue(bitmarkVersion) ?? DEFAULT_BITMARK_VERSION;
     this.options = {
       ...DEFAULT_OPTIONS,
       ...options,

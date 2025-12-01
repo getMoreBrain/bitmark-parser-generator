@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Config } from '../../../../config/Config.ts';
 import { type BodyPart } from '../../../../model/ast/Nodes.ts';
 import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
@@ -37,7 +39,7 @@ function buildGap(
 ): Partial<GapJson> | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('gap content', content);
 
-  const gapConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
+  const gapConfig = Config.getTagConfigForTag(tagsConfig, Enum(Tag).fromValue(content.type));
 
   const chainContent = [content, ...(content.chain ?? [])];
 

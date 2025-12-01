@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { init } from '../init/init.ts';
 import { type BitmarkAst, type Node } from '../model/ast/Nodes.ts';
 import { NodeType, type NodeTypeType } from '../model/ast/NodeType.ts';
@@ -289,7 +291,7 @@ class Ast {
     }
 
     // return astKey;
-    return NodeType.fromKey(astKey) || (`unknown(${astKey})` as NodeTypeType);
+    return Enum(NodeType).fromKey(astKey) || (`unknown(${astKey})` as NodeTypeType);
     // return AstNodeType.fromKey(astKey) || AstNodeType.unknown;
   }
 

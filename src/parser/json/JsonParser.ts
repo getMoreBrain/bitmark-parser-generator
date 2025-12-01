@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Builder } from '../../ast/Builder.ts';
 import { Config } from '../../config/Config.ts';
 import {
@@ -170,8 +172,8 @@ class JsonParser {
     const bitConfig = Config.getBitConfig(bitType);
 
     // Text Format
-    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(bit.format);
-    let _textFormat = TextFormat.fromValue(bit.format) ?? bitConfig.textFormatDefault;
+    const deprecatedTextFormat = Enum(DeprecatedTextFormat).fromValue(bit.format);
+    let _textFormat = Enum(TextFormat).fromValue(bit.format) ?? bitConfig.textFormatDefault;
     if (deprecatedTextFormat === DeprecatedTextFormat.bitmarkMinusMinus) {
       _textFormat = TextFormat.bitmarkText;
     }
@@ -282,7 +284,7 @@ class JsonParser {
 
   private getResourceType(resource?: ResourceJson): ResourceTypeType | undefined {
     if (resource) {
-      const resourceKey = ResourceType.fromValue(resource.type);
+      const resourceKey = Enum(ResourceType).fromValue(resource.type);
       return resourceKey;
     }
 

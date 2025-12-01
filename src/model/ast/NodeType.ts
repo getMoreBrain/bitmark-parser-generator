@@ -1,4 +1,4 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
 /**
  * Defines the type of a node in the AST.
@@ -8,7 +8,7 @@ import { type EnumType, superenum } from '@ncoderz/superenum';
  *
  * @enum
  */
-const NodeType = superenum({
+const NodeType = {
   unknown: 'unknown', // unknown
 
   __isDefaultExample: '__isDefaultExample',
@@ -684,7 +684,7 @@ const NodeType = superenum({
   y: 'y',
   yValue: 'yValue',
   zoomDisabled: 'zoomDisabled',
-});
+} as const;
 
 export type NodeTypeType = EnumType<typeof NodeType>;
 

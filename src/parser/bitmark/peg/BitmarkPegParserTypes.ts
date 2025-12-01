@@ -7,7 +7,7 @@
  *
  */
 
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
 import { type BreakscapedString } from '../../../model/ast/BreakscapedString.ts';
 import {
@@ -158,11 +158,15 @@ export interface BitContentProcessorResult {
   propertyStyleResources?: { [key: string]: ResourceJson | ResourceJson[] };
   resources?: ResourceJson[];
   itemLead?: TextAst[];
+  __itemLeadString?: (string | undefined)[];
   item?: JsonText;
-  itemString?: string;
+  __itemString?: string;
   lead?: TextAst;
+  __leadString?: string;
   pageNumber?: TextAst;
+  __pageNumberString?: string;
   marginNumber?: TextAst;
+  __marginNumberString?: string;
   instruction?: TextAst;
   __instructionString?: string;
   hint?: TextAst;
@@ -263,7 +267,7 @@ export interface TypeKeyValue<T = unknown> extends ParserData {
   chain?: BitContent[];
 }
 
-const TypeKey = superenum({
+const TypeKey = {
   // Bit header
   TextFormat: 'TextFormat',
   ResourceType: 'ResourceType',
@@ -304,15 +308,15 @@ const TypeKey = superenum({
   // Dividers
   PlainTextDivider: 'PlainTextDivider',
   FooterDivider: 'FooterDivider',
-});
+} as const;
 
 export type TypeKeyType = EnumType<typeof TypeKey>;
 
-const ContentDepth = superenum({
+const ContentDepth = {
   Bit: 'Bit',
   Card: 'Card',
   Chain: 'Chain',
-});
+} as const;
 
 export type ContentDepthType = EnumType<typeof ContentDepth>;
 

@@ -1,6 +1,6 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
-const TextNodeType = superenum({
+const TextNodeType = {
   // Text
   text: 'text',
 
@@ -31,7 +31,7 @@ const TextNodeType = superenum({
   select: 'select',
   highlight: 'highlight',
   mark: 'mark',
-});
+} as const;
 
 export type TextNodeTypeType = EnumType<typeof TextNodeType>;
 

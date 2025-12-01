@@ -1,4 +1,4 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
 const tags = {
   tag_title: '#',
@@ -16,7 +16,7 @@ const tags = {
   tag_resource: '&',
 } as const;
 
-const Tag = superenum(tags);
+const Tag = tags;
 
 export type TagType = EnumType<typeof Tag>;
 
