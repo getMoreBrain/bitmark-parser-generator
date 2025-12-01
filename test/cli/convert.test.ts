@@ -157,4 +157,50 @@ describe('convert command', () => {
     const result = JSON.parse(stdout);
     expect(result[0].bit.type).toBe('cloze');
   });
+
+  // Additional thorough output validation tests
+  it('converts JSON string back to bitmark format', async () => {
+    const { stdout } = await execa('node', [
+      CLI_PATH,
+      'convert',
+      '[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark++", "bitLevel": 1, "body": "Hello World" }}]',
+    ]);
+    expect(stdout.replace(/\n/g, '')).toBe('[.article]Hello World');
+  });
+
+  it('validates complete bit structure in JSON output', async () => {
+    const { stdout } = await execa('node', [CLI_PATH, 'convert', '[.article] Hello World']);
+    const result = JSON.parse(stdout);
+    expect(result[0].bit).toHaveProperty('type', 'article');
+    expect(result[0].bit).toHaveProperty('format', 'bitmark++');
+    expect(result[0].bit).toHaveProperty('bitLevel', 1);
+    expect(result[0]).toHaveProperty('bitmark');
+    expect(result[0].bitmark).toContain('[.article]');
+    expect(result[0].bitmark).toContain('Hello World');
+  });
+
+  it('validates Peggy parser with version 2 includes all bit fields', async () => {
+    const { stdout } = await execa('node', [
+      CLI_PATH,
+      'convert',
+      '-v',
+      '2',
+      '[.article] Hello World',
+    ]);
+    expect(stdout).toContain('"bit":{"type":"article","format":"bitmark++","bitLevel":1');
+    expect(stdout).toContain('"item":');
+    expect(stdout).toContain('"lead":');
+    expect(stdout).toContain('"pageNumber":');
+    expect(stdout).toContain('"marginNumber":');
+    expect(stdout).toContain('"hint":');
+    expect(stdout).toContain('"instruction":');
+  });
+
+  it('validates parser metadata is included in output', async () => {
+    const { stdout } = await execa('node', [CLI_PATH, 'convert', '[.article] Test']);
+    const result = JSON.parse(stdout);
+    expect(result[0]).toHaveProperty('parser');
+    expect(result[0].parser).toHaveProperty('version');
+    expect(result[0].parser).toHaveProperty('bitmarkVersion');
+  });
 });

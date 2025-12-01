@@ -102,4 +102,21 @@ describe('convertText command', () => {
     expect(stdout).toContain('First');
     expect(stdout).toContain('Second');
   });
+
+  // Additional thorough validation tests
+  it('validates exact JSON structure for text to JSON conversion', async () => {
+    const { stdout } = await execa('node', [CLI_PATH, 'convertText', 'Hello World']);
+    expect(stdout).toContain(
+      '[{"type":"paragraph","content":[{"text":"Hello World","type":"text"}],"attrs":{}}]',
+    );
+  });
+
+  it('validates exact text output for JSON to text conversion', async () => {
+    const { stdout } = await execa('node', [
+      CLI_PATH,
+      'convertText',
+      '[{"type":"paragraph","content":[{"text":"Hello World","type":"text"}],"attrs":{}}]',
+    ]);
+    expect(stdout.replace(/\n/g, '')).toBe('Hello World');
+  });
 });

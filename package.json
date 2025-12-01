@@ -142,6 +142,7 @@
   "dependencies": {
     "@ncoderz/superenum": "^0.2.5",
     "@types/fs-extra": "^11.0.4",
+    "commander": "^12.1.0",
     "fs-extra": "^11.3.0"
   },
   "devDependencies": {

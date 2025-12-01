@@ -1,6 +1,6 @@
 import process from 'node:process';
 
-import { Command } from 'commander';
+import { Command, Help, Option } from 'commander';
 
 import { createBreakscapeCommand } from './commands/breakscape.ts';
 import { createConvertCommand } from './commands/convert.ts';
@@ -9,25 +9,38 @@ import { createInfoCommand } from './commands/info.ts';
 import { createUnbreakscapeCommand } from './commands/unbreakscape.ts';
 import { FULL_VERSION } from './utils/version.ts';
 
+function handleGlobalVersionFlag(argv: string[]): boolean {
+  for (let i = 0; i < argv.length; i += 1) {
+    const arg = argv[i];
+    if (arg === '-v' || arg === '--version') {
+      const next = argv[i + 1];
+      const isStandaloneFlag = next == null || next.startsWith('-');
+      if (isStandaloneFlag) {
+        console.log(FULL_VERSION);
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
 function init(): void {
   // Synchronous initialization if needed
 }
 
 async function asyncInit(): Promise<void> {
+  if (handleGlobalVersionFlag(process.argv.slice(2))) {
+    return;
+  }
+
   const program = new Command();
+  const rootVersionOption = new Option('-v, --version', 'Display version');
 
-  program.name('bitmark-parser').description('Bitmark parser command line interface');
-
-  // Default command to handle version when no subcommand is given
   program
-    .command('version', { isDefault: true, hidden: true })
-    .option('-v, --version', 'output the version number')
-    .action((options) => {
-      if (options.version) {
-        console.log(FULL_VERSION);
-        process.exit(0);
-      }
-      // If no -v flag, show help instead
+    .name('bitmark-parser')
+    .description('Bitmark parser command line interface')
+    .helpOption('-h, --help', 'Display help for command')
+    .action(() => {
       program.outputHelp();
     });
 
@@ -37,6 +50,13 @@ async function asyncInit(): Promise<void> {
   program.addCommand(createBreakscapeCommand());
   program.addCommand(createUnbreakscapeCommand());
   program.addCommand(createInfoCommand());
+
+  program
+    .command('version')
+    .description('Display version')
+    .action(() => {
+      console.log(FULL_VERSION);
+    });
 
   // Add help command
   program
@@ -49,6 +69,13 @@ async function asyncInit(): Promise<void> {
   // Custom help formatting
   program.configureHelp({
     sortSubcommands: false, // Keep command order as defined
+    visibleOptions(command) {
+      const options = Help.prototype.visibleOptions.call(this, command);
+      if (command === program) {
+        return [rootVersionOption, ...options];
+      }
+      return options;
+    },
   });
 
   await program.parseAsync(process.argv);

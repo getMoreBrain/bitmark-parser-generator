@@ -1,4 +1,4 @@
-import { Command } from 'commander';
+import { Command, InvalidArgumentError, Option } from 'commander';
 
 import {
   BitmarkParserGenerator,
@@ -8,6 +8,28 @@ import {
   Output,
 } from '../../index.ts';
 import { formatJson, readInput, writeOutput } from '../utils/io.ts';
+import { enumChoices } from '../utils/options.ts';
+
+const BITMARK_VERSION_CHOICES = enumChoices(BitmarkVersion);
+const OUTPUT_FORMAT_CHOICES = enumChoices(Output);
+const CARD_SET_VERSION_CHOICES = enumChoices(CardSetVersion);
+const PARSER_CHOICES = Array.from(new Set([...enumChoices(BitmarkParserType), 'antlr']));
+
+function parseInteger(value: string, label: string): number {
+  const parsed = Number.parseInt(value, 10);
+  if (Number.isNaN(parsed)) {
+    throw new InvalidArgumentError(`${label} must be an integer.`);
+  }
+  return parsed;
+}
+
+function parseNonNegativeInteger(value: string, label: string): number {
+  const parsed = parseInteger(value, label);
+  if (parsed < 0) {
+    throw new InvalidArgumentError(`${label} must be zero or greater.`);
+  }
+  return parsed;
+}
 
 export function createConvertCommand(): Command {
   const bpg = new BitmarkParserGenerator();
@@ -18,18 +40,24 @@ export function createConvertCommand(): Command {
       '[input]',
       'file to read, or bitmark or json string. If not specified, input will be from <stdin>',
     )
-    .option('-v, --version <version>', 'version of bitmark to use (default: latest)', (v) =>
-      parseInt(v),
+    .addOption(
+      new Option('-v, --version <version>', 'version of bitmark to use (default: latest)')
+        .choices([...BITMARK_VERSION_CHOICES])
+        .argParser((value) => parseInteger(value, 'Version')),
     )
-    .option(
-      '-f, --format <format>',
-      'output format. If not specified, bitmark is converted to JSON, and JSON / AST is converted to bitmark',
+    .addOption(
+      new Option(
+        '-f, --format <format>',
+        'output format. If not specified, bitmark is converted to JSON, and JSON / AST is converted to bitmark',
+      ).choices([...OUTPUT_FORMAT_CHOICES]),
     )
     .option('-w, --warnings', 'enable warnings in the output')
     .option('-a, --append', 'append to the output file (default is to overwrite)')
     .option('-o, --output <file>', 'output file. If not specified, output will be to <stdout>')
     .option('-p, --pretty', 'prettify the JSON output with indent')
-    .option('--indent <indent>', 'prettify indent (default:2)', (v) => parseInt(v))
+    .option('--indent <indent>', 'prettify indent (default: 2 when --pretty is set)', (v) =>
+      parseInteger(v, 'Indent'),
+    )
     .option(
       '--plainText',
       'output text as plain text rather than JSON (default: set by bitmark version)',
@@ -42,14 +70,21 @@ export function createConvertCommand(): Command {
     .option(
       '--spacesAroundValues <value>',
       'number of spaces around values in bitmark (default: 1)',
-      (v) => parseInt(v),
+      (v) => parseNonNegativeInteger(v, 'spacesAroundValues'),
     )
-    .option(
-      '--cardSetVersion <version>',
-      'version of card set to use in bitmark (default: set by bitmark version)',
-      (v) => parseInt(v),
+    .addOption(
+      new Option(
+        '--cardSetVersion <version>',
+        'version of card set to use in bitmark (default: set by bitmark version)',
+      )
+        .choices([...CARD_SET_VERSION_CHOICES])
+        .argParser((value) => parseInteger(value, 'cardSetVersion')),
     )
-    .option('--parser <parser>', 'parser to use', 'peggy')
+    .addOption(
+      new Option('--parser <parser>', 'parser to use')
+        .choices([...PARSER_CHOICES])
+        .default('peggy'),
+    )
     .action(async (input, options) => {
       try {
         const dataIn = await readInput(input);
@@ -67,12 +102,6 @@ export function createConvertCommand(): Command {
             const { parse: antlrParse } = await import('bitmark-grammar');
             const jsonStr = antlrParse(dataIn);
             result = JSON.parse(jsonStr);
-
-            if (options.output) {
-              const jsonPrettyStr = formatJson(result, options.pretty, options.indent);
-              await writeOutput(jsonPrettyStr, options.output, options.append);
-              return;
-            }
           } catch (_err) {
             throw new Error(
               'ANTLR parser not available. Install bitmark-grammar package or use --parser=peggy',
@@ -83,11 +112,7 @@ export function createConvertCommand(): Command {
           result = bpg.convert(dataIn, {
             bitmarkVersion: BitmarkVersion.fromValue(options.version),
             bitmarkParserType: BitmarkParserType.fromValue(options.parser),
-            outputFile: options.output,
             outputFormat: Output.fromValue(options.format),
-            fileOptions: {
-              append: options.append,
-            },
             jsonOptions: {
               enableWarnings: options.warnings,
               prettify,
@@ -102,18 +127,31 @@ export function createConvertCommand(): Command {
           });
         }
 
-        // Output to stdout if no file specified
-        if (!options.output) {
-          if (typeof result !== 'string') {
-            result = formatJson(result, options.pretty, options.indent);
-          }
-          console.log(result);
+        let outputValue: string | unknown = result ?? '';
+        if (typeof outputValue !== 'string') {
+          outputValue = formatJson(outputValue, options.pretty, options.indent);
         }
+
+        await writeOutput(outputValue, options.output, options.append);
       } catch (error) {
         console.error('Error:', error instanceof Error ? error.message : String(error));
         process.exit(1);
       }
-    });
+    })
+    .addHelpText(
+      'after',
+      `
+Examples:
+  $ bitmark-parser convert '[.article] Hello World'
+
+  $ bitmark-parser convert '[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark++", "body": "Hello World" }}]'
+
+  $ bitmark-parser convert input.json -o output.bitmark
+
+  $ bitmark-parser convert input.bitmark -o output.json
+
+  $ bitmark-parser convert -f ast input.json -o output.ast.json`,
+    );
 
   return cmd;
 }

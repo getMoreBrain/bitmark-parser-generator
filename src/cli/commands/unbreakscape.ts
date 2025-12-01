@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 
 import { BitmarkParserGenerator } from '../../index.ts';
-import { readInput } from '../utils/io.ts';
+import { readInput, writeOutput } from '../utils/io.ts';
 
 export function createUnbreakscapeCommand(): Command {
   const bpg = new BitmarkParserGenerator();
@@ -16,21 +16,21 @@ export function createUnbreakscapeCommand(): Command {
         const dataIn = await readInput(input);
 
         // Bitmark tool unbreakscape
-        const result = bpg.unbreakscapeText(dataIn, {
-          outputFile: options.output,
-          fileOptions: {
-            append: options.append,
-          },
-        });
-
-        if (!options.output) {
-          console.log(result);
-        }
+        const result = bpg.unbreakscapeText(dataIn);
+        await writeOutput(result ?? '', options.output, options.append);
       } catch (error) {
         console.error('Error:', error instanceof Error ? error.message : String(error));
         process.exit(1);
       }
-    });
+    })
+    .addHelpText(
+      'after',
+      `
+Examples:
+  $ bitmark-parser unbreakscape '[^.article] Hello World'
+
+  $ bitmark-parser unbreakscape input.txt -o output.txt`,
+    );
 
   return cmd;
 }

@@ -1,7 +1,22 @@
-import { Command } from 'commander';
+import { Command, InvalidArgumentError, Option } from 'commander';
 
 import { BitmarkParserGenerator, BodyTextFormat } from '../../index.ts';
-import { formatJson, readInput } from '../utils/io.ts';
+import { formatJson, readInput, writeOutput } from '../utils/io.ts';
+import { enumChoices } from '../utils/options.ts';
+
+const TEXT_FORMAT_CHOICES = (() => {
+  const choices = enumChoices(BodyTextFormat);
+  const preferred = BodyTextFormat.bitmarkPlusPlus;
+  return [preferred, ...choices.filter((choice) => choice !== preferred)];
+})();
+
+function parseInteger(value: string): number {
+  const parsed = Number.parseInt(value, 10);
+  if (Number.isNaN(parsed)) {
+    throw new InvalidArgumentError('Indent must be an integer.');
+  }
+  return parsed;
+}
 
 export function createConvertTextCommand(): Command {
   const bpg = new BitmarkParserGenerator();
@@ -12,11 +27,17 @@ export function createConvertTextCommand(): Command {
       '[input]',
       'file to read, or text or json string. If not specified, input will be from <stdin>',
     )
-    .option('-f, --textFormat <format>', 'conversion format', 'bitmark++')
+    .addOption(
+      new Option('-f, --textFormat <format>', 'conversion format')
+        .choices([...TEXT_FORMAT_CHOICES])
+        .default(BodyTextFormat.bitmarkPlusPlus),
+    )
     .option('-a, --append', 'append to the output file (default is to overwrite)')
     .option('-o, --output <file>', 'output file. If not specified, output will be to <stdout>')
     .option('-p, --pretty', 'prettify the JSON output with indent')
-    .option('--indent <indent>', 'prettify indent (default:2)', (v) => parseInt(v))
+    .option('--indent <indent>', 'prettify indent (default: 2 when --pretty is set)', (v) =>
+      parseInteger(v),
+    )
     .action(async (input, options) => {
       try {
         const dataIn = await readInput(input);
@@ -25,28 +46,34 @@ export function createConvertTextCommand(): Command {
         // Bitmark tool text conversion
         const result = bpg.convertText(dataIn, {
           textFormat: BodyTextFormat.fromValue(options.textFormat),
-          outputFile: options.output,
-          fileOptions: {
-            append: options.append,
-          },
           jsonOptions: {
             prettify,
           },
         });
 
-        if (!options.output) {
-          if (typeof result !== 'string') {
-            const output = formatJson(result, options.pretty, options.indent);
-            console.log(output);
-          } else {
-            console.log(result);
-          }
+        let outputValue: string | unknown = result ?? '';
+        if (typeof outputValue !== 'string') {
+          outputValue = formatJson(outputValue, options.pretty, options.indent);
         }
+
+        await writeOutput(outputValue, options.output, options.append);
       } catch (error) {
         console.error('Error:', error instanceof Error ? error.message : String(error));
         process.exit(1);
       }
-    });
+    })
+    .addHelpText(
+      'after',
+      `
+Examples:
+  $ bitmark-parser convertText 'Hello World'
+
+  $ bitmark-parser convertText '[{"type":"paragraph","content":[{"text":"Hello World","type":"text"}],"attrs":{}}]'
+
+  $ bitmark-parser convertText input.json -o output.txt
+
+  $ bitmark-parser convertText input.txt -o output.json`,
+    );
 
   return cmd;
 }
