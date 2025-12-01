@@ -1,6 +1,6 @@
 ---
 description: "Write code and run tests."
-tools: ["runCommands", "runTasks", "edit", "search", "new", "playwright/*", "filesystem/create_directory", "filesystem/directory_tree", "filesystem/get_file_info", "filesystem/list_allowed_directories", "filesystem/list_directory", "filesystem/list_directory_with_sizes", "filesystem/move_file", "filesystem/search_files", "extensions", "usages", "vscodeAPI", "problems", "changes", "testFailure", "openSimpleBrowser", "fetch", "githubRepo", "todos"]
+tools: ['runCommands', 'runTasks', 'filesystem/create_directory', 'filesystem/directory_tree', 'filesystem/get_file_info', 'filesystem/list_allowed_directories', 'filesystem/list_directory', 'filesystem/list_directory_with_sizes', 'filesystem/move_file', 'filesystem/search_files', 'edit', 'search', 'new', 'extensions', 'todos', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo']
 ---
 
 # Code mode instructions

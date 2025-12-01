@@ -1,6 +1,6 @@
 ---
 description: "Validate project code meets specifications."
-tools: ["edit", "search", "new", "runCommands", "runTasks", "usages", "vscodeAPI", "problems", "changes", "testFailure", "openSimpleBrowser", "fetch", "githubRepo", "extensions", "create_directory", "directory_tree", "get_file_info", "list_allowed_directories", "list_directory", "list_directory_with_sizes", "move_file", "search_files"]
+tools: ['runCommands', 'runTasks', 'filesystem/create_directory', 'filesystem/directory_tree', 'filesystem/get_file_info', 'filesystem/list_allowed_directories', 'filesystem/list_directory', 'filesystem/list_directory_with_sizes', 'filesystem/move_file', 'filesystem/search_files', 'edit', 'search', 'new', 'extensions', 'todos', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo']
 ---
 
 # Validator mode instructions

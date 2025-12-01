@@ -1,6 +1,6 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
-const BitType = superenum({
+const BitType = {
   _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error
   _comment: '_comment', // Used to indicate a bit is commented out
   _standard: '_standard', // Not to be used as a bit, but as a base for other bit types
@@ -628,7 +628,7 @@ const BitType = superenum({
   warningCollapsible: 'warning-collapsible',
   websiteLink: 'website-link',
   workbookArticle: 'workbook-article',
-});
+} as const;
 
 export type BitTypeType = EnumType<typeof BitType>;
 

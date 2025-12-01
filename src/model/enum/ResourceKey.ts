@@ -1,4 +1,4 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
 const resourceKeys = {
   resource_image: '&image',
@@ -37,7 +37,7 @@ const resourceKeys = {
   resource_coverImage: '&coverImage',
 } as const;
 
-const ResourceKey = superenum(resourceKeys);
+const ResourceKey = resourceKeys;
 
 export type ResourceKeyType = EnumType<typeof ResourceKey>;
 

@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Config } from '../../../../config/Config.ts';
 import { type BodyPart } from '../../../../model/ast/Nodes.ts';
 import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
@@ -43,7 +45,7 @@ function buildMark(
 ): Partial<MarkJson> | undefined {
   if (context.DEBUG_CHAIN_CONTENT) context.debugPrint('mark content', content);
 
-  const markConfig = Config.getTagConfigForTag(tagsConfig, Tag.fromValue(content.type));
+  const markConfig = Config.getTagConfigForTag(tagsConfig, Enum(Tag).fromValue(content.type));
 
   const tags = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, [content]);
   const chainTags = context.bitContentProcessor(

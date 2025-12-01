@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Breakscape } from '../breakscaping/Breakscape.ts';
 import { Config } from '../config/Config.ts';
 import { type BreakscapedString } from '../model/ast/BreakscapedString.ts';
@@ -426,8 +428,8 @@ class Builder extends BaseBuilder {
     const bitConfig = Config.getBitConfig(bitType);
 
     // Text Format (accepts deprecated values, and converts them to the new format)
-    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(data.textFormat);
-    let textFormat = TextFormat.fromValue(data.textFormat) ?? bitConfig.textFormatDefault;
+    const deprecatedTextFormat = Enum(DeprecatedTextFormat).fromValue(data.textFormat);
+    let textFormat = Enum(TextFormat).fromValue(data.textFormat) ?? bitConfig.textFormatDefault;
     if (deprecatedTextFormat === DeprecatedTextFormat.bitmarkMinusMinus) {
       textFormat = TextFormat.bitmarkText;
     }
@@ -463,7 +465,7 @@ class Builder extends BaseBuilder {
       bitType,
       bitLevel: data.bitLevel,
       textFormat,
-      resourceType: ResourceType.fromValue(data.resourceType),
+      resourceType: Enum(ResourceType).fromValue(data.resourceType),
       isCommented: data.isCommented,
 
       // Properties

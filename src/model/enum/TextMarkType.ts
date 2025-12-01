@@ -1,6 +1,6 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
-const TextMarkType = superenum({
+const TextMarkType = {
   // Styles
   bold: 'bold',
   light: 'light',
@@ -49,7 +49,7 @@ const TextMarkType = superenum({
   duration: 'duration',
   color: 'color',
   comment: 'comment',
-});
+} as const;
 
 export type TextMarkTypeType = EnumType<typeof TextMarkType>;
 

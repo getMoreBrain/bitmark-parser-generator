@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Breakscape } from '../../../../breakscaping/Breakscape.ts';
 import { Config } from '../../../../config/Config.ts';
 import { type BreakscapedString } from '../../../../model/ast/BreakscapedString.ts';
@@ -31,7 +33,7 @@ function markConfigChainContentProcessor(
 
   if (!markConfig) return;
 
-  const markTagConfig = Config.getTagConfigForTag(tagsConfig, ConfigKey.fromValue(tag));
+  const markTagConfig = Config.getTagConfigForTag(tagsConfig, Enum(ConfigKey).fromValue(tag));
 
   const { mark: _ignoreMark, ...tags } = context.bitContentProcessor(
     BitContentLevel.Chain,

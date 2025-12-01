@@ -62,6 +62,8 @@
  *   and in BitmarkPegParserHelper.ts
  */
 
+import { Enum } from '@ncoderz/superenum';
+
 import { Builder } from '../../../ast/Builder.ts';
 import { Breakscape } from '../../../breakscaping/Breakscape.ts';
 import { Config } from '../../../config/Config.ts';
@@ -376,7 +378,7 @@ class BitmarkPegParserProcessor {
     }
 
     // Text format
-    let textFormat = TextFormat.fromValue(textFormatAndResourceType.textFormat);
+    let textFormat = Enum(TextFormat).fromValue(textFormatAndResourceType.textFormat);
     const isInvalidTextFormat = textFormatAndResourceType.textFormat && !textFormat;
     if (isInvalidTextFormat) {
       this.addWarning(
@@ -385,7 +387,7 @@ class BitmarkPegParserProcessor {
     }
 
     // Deprecated warning for bitmark--
-    const deprecatedTextFormat = DeprecatedTextFormat.fromValue(
+    const deprecatedTextFormat = Enum(DeprecatedTextFormat).fromValue(
       textFormatAndResourceType.textFormat,
     );
     if (deprecatedTextFormat) {
@@ -398,7 +400,7 @@ class BitmarkPegParserProcessor {
     textFormat = textFormat ?? bitConfig.textFormatDefault;
 
     // Resource type
-    const resourceType = ResourceType.fromValue(textFormatAndResourceType.resourceType);
+    const resourceType = Enum(ResourceType).fromValue(textFormatAndResourceType.resourceType);
     if (textFormatAndResourceType.resourceType && !resourceType) {
       this.addWarning(
         `Invalid resource type '${textFormatAndResourceType.resourceType}', it will be ignored`,

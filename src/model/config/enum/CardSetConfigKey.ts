@@ -1,6 +1,6 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
-const CardSetConfigKey = superenum({
+const CardSetConfigKey = {
   flashcard: 'flashcard',
   definitionList: 'definitionList',
   elements: 'elements',
@@ -22,7 +22,7 @@ const CardSetConfigKey = superenum({
   // DEPRECATED - TO BE REMOVED IN THE FUTURE
   // captionDefinitionsList: 'captionDefinitionsList',
   bookReferenceList: 'bookReferenceList',
-});
+} as const;
 
 export type CardSetConfigKeyType = EnumType<typeof CardSetConfigKey>;
 

@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+// Production entry point - runs compiled CLI code
+import('../dist/cli/main.js').then((m) => m.cli());

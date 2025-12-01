@@ -1,9 +1,9 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
-const BitmarkVersion = superenum({
+const BitmarkVersion = {
   v2: 2,
   v3: 3,
-});
+} as const;
 
 export type BitmarkVersionType = EnumType<typeof BitmarkVersion>;
 

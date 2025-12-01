@@ -1,4 +1,4 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { type EnumType } from '@ncoderz/superenum';
 
 const BodyBitTypeRaw = {
   text: 'text',
@@ -8,7 +8,7 @@ const BodyBitTypeRaw = {
   highlight: 'highlight',
 } as const;
 
-const BodyBitType = superenum(BodyBitTypeRaw);
+const BodyBitType = BodyBitTypeRaw;
 
 export type BodyBitTypeKeys = keyof typeof BodyBitTypeRaw;
 export type BodyBitTypeType = EnumType<typeof BodyBitType>;

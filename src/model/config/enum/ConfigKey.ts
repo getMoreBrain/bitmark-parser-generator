@@ -1,4 +1,4 @@
-import { type EnumType, superenum } from '@ncoderz/superenum';
+import { Enum, type EnumType } from '@ncoderz/superenum';
 
 import {
   BitTagConfigKeyType,
@@ -20,7 +20,7 @@ import { tags } from '../../enum/Tag.ts';
  * - Tags: <none>
  *
  */
-const ConfigKey = superenum({
+const ConfigKey = {
   // Internal
   _unknown: '_unknown',
 
@@ -35,7 +35,7 @@ const ConfigKey = superenum({
 
   // Groups
   ...groupKeys,
-});
+} as const;
 
 export type ConfigKeyType = EnumType<typeof ConfigKey>;
 
@@ -54,7 +54,7 @@ function configKeyToPropertyType(configKey: string): string {
 }
 
 function configKeyToResourceType(configKey: string): ResourceTypeType {
-  return ResourceType.fromKey(configKey.replace(/^&/, '')) as ResourceTypeType;
+  return Enum(ResourceType).fromKey(configKey.replace(/^&/, '')) as ResourceTypeType;
 }
 
 export { ConfigKey, configKeyToPropertyType, configKeyToResourceType, typeFromConfigKey };

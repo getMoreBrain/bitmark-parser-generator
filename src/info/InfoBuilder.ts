@@ -1,3 +1,5 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Config } from '../config/Config.ts';
 import { BitConfig } from '../model/config/BitConfig.ts';
 import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
@@ -20,7 +22,7 @@ class InfoBuilder {
     const includeDeprecated = options?.includeDeprecated ?? false;
     const supportedBits: SupportedBit[] = [];
 
-    for (const bt of BitType.values()) {
+    for (const bt of Enum(BitType).values()) {
       if (bt === BitType._error || bt === BitType._comment) continue;
 
       const bitType = Config.getBitType(bt);
@@ -48,7 +50,7 @@ class InfoBuilder {
   public getSupportedBitConfigs(): BitConfig[] {
     const res: BitConfig[] = [];
 
-    for (const bt of BitType.values()) {
+    for (const bt of Enum(BitType).values()) {
       if (bt === BitType._error || bt === BitType._comment) continue;
 
       const bitType = Config.getBitType(bt);

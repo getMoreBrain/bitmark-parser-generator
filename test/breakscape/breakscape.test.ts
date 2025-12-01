@@ -1,3 +1,4 @@
+import { Enum } from '@ncoderz/superenum';
 import { describe, expect, it } from 'vitest';
 
 import { Breakscape } from '../../src/breakscaping/BreakscapeRegex.ts';
@@ -810,8 +811,8 @@ describe(`Breakscape`, () => {
   type TypeKey = (typeof types)[number];
 
   types.forEach((type: TypeKey) => {
-    const textFormat = BodyTextFormat.fromKey(type.split('_')[0]) as BodyTextFormatType;
-    const textLocation = TextLocation.fromKey(type.split('_')[1]) as TextLocationType;
+    const textFormat = Enum(BodyTextFormat).fromKey(type.split('_')[0]) as BodyTextFormatType;
+    const textLocation = Enum(TextLocation).fromKey(type.split('_')[1]) as TextLocationType;
 
     // Standard tests
     describe(`[${textFormat}, ${textLocation}]`, () => {

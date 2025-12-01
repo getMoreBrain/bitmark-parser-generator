@@ -1,6 +1,6 @@
 ---
 description: "Create or modify project architecture."
-tools: ["edit", "search", "new", "runCommands", "runTasks", "usages", "vscodeAPI", "problems", "changes", "testFailure", "openSimpleBrowser", "fetch", "githubRepo", "extensions", "create_directory", "directory_tree", "get_file_info", "list_allowed_directories", "list_directory", "list_directory_with_sizes", "move_file", "search_files"]
+tools: ['runCommands', 'runTasks', 'filesystem/create_directory', 'filesystem/directory_tree', 'filesystem/get_file_info', 'filesystem/list_allowed_directories', 'filesystem/list_directory', 'filesystem/list_directory_with_sizes', 'filesystem/move_file', 'filesystem/search_files', 'edit', 'search', 'new', 'extensions', 'todos', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo']
 ---
 
 # Architecture mode instructions
@@ -35,6 +35,7 @@ You are in architecture mode. Your task is to help the user architect the projec
   - Layers / Subsystems: Sub-headings for each layer / sub-system, with brief description of each concentrating on high-level architecture rules
   - Interactions: diagrams / brief descriptions of how the layers and sub-systems interact
   - Rules: List of rules about performance, scaling, maintainability, security, testing. Keep rules very concise.
+  - Developer Commands: List of commands to start development environment, run tests, lint code etc.
 
 ## IMPORTANT RULES:
 
