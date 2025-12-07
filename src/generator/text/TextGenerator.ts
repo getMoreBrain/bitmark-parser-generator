@@ -125,6 +125,7 @@ const INLINE_MARK_TYPES: TextMarkTypeType[] = [
   TextMarkType.timer,
   TextMarkType.duration,
   TextMarkType.color,
+  TextMarkType.colorPicker,
   TextMarkType.comment,
 ];
 
@@ -1192,6 +1193,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         if (
           (k === 'language' && v !== 'plain text') ||
           k === 'color' ||
+          k === 'propertyRef' ||
           k === 'name' ||
           k === 'duration'
         ) {
