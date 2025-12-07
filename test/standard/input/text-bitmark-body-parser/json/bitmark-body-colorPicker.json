@@ -1,0 +1,243 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Intro text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": "highlightOrange"
+            }
+          }
+        ],
+        "text": "Color picker text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": "highlightYellow"
+            }
+          }
+        ],
+        "text": "Color picker text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": "highlightGreen"
+            }
+          }
+        ],
+        "text": "Color picker text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": "highlightBlue"
+            }
+          }
+        ],
+        "text": "Color picker text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": "highlightPurple"
+            }
+          }
+        ],
+        "text": "Color picker text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": "highlightPink"
+            }
+          }
+        ],
+        "text": "Color picker text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": "highlightBrown"
+            }
+          }
+        ],
+        "text": "Color picker text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": "highlightBlack"
+            }
+          }
+        ],
+        "text": "Color picker text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": "highlightWhite"
+            }
+          }
+        ],
+        "text": "Color picker text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "color",
+            "attrs": {
+              "color": "yellow"
+            }
+          },
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": "highlightGray"
+            }
+          }
+        ],
+        "text": "Color picker text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": "bad"
+            }
+          }
+        ],
+        "text": "Color picker text",
+        "type": "text"
+      },
+      {
+        "text": " there you don't go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "==Color picker text==|bad:1234| there you don't go",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

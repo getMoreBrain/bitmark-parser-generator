@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.35.0"
+const VERSION = "8.37.3"
 
 //Parser peggy.js
 
@@ -675,6 +675,7 @@ AttrChainItem
   / 'timer:' str: $((!BlockTag char)*) BlockTag {return { type: 'timer', attrs: { name: str.trim() } }}
   / 'duration:' str: $('P' $((!BlockTag char)*)) BlockTag {return { type: 'duration', attrs: { duration: str } }}
   / 'color:' color: Color BlockTag {return { type: 'color', attrs: { color } }}
+  / 'colorPicker:' str: $((!BlockTag char)*) BlockTag {return { type: 'colorPicker', attrs: { propertyRef: str.trim() } }}
   / style: AlternativeStyleTags BlockTag {return { type: style }}
   / '#' str: $((!BlockTag char)*) BlockTag {return { type: "comment", comment: str }}
  // / p: $((!(BlockTag / ':') word)*) ':' ' '? v: $((!BlockTag char)*) BlockTag { return { [p]: v } }
@@ -697,6 +698,16 @@ AlternativeStyleTags
   = 'bold'
   / 'italic'
   / 'light'
+  / 'highlightOrange'
+  / 'highlightYellow'
+  / 'highlightGreen'
+  / 'highlightBlue'
+  / 'highlightPurple'
+  / 'highlightPink'
+  / 'highlightBrown'
+  / 'highlightBlack'
+  / 'highlightWhite'
+  / 'highlightGray'
   / 'highlight'
   / 'strike'
   / 'subscript'
