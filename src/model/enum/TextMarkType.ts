@@ -48,6 +48,7 @@ const TextMarkType = {
   timer: 'timer',
   duration: 'duration',
   color: 'color',
+  colorPicker: 'colorPicker',
   comment: 'comment',
 } as const;
 

@@ -1,0 +1,16 @@
+Intro text
+
+==Color picker text==|colorPicker:highlightOrange| there you go
+==Color picker text==|colorPicker:highlightYellow| there you go
+==Color picker text==|colorPicker:highlightGreen| there you go
+==Color picker text==|colorPicker:highlightBlue| there you go
+==Color picker text==|colorPicker:highlightPurple| there you go
+==Color picker text==|colorPicker:highlightPink| there you go
+==Color picker text==|colorPicker:highlightBrown| there you go
+==Color picker text==|colorPicker:highlightBlack| there you go
+==Color picker text==|colorPicker:highlightWhite| there you go
+==Color picker text==|color:yellow|colorPicker:highlightGray| there you go
+
+==Color picker text==|colorPicker:bad| there you don't go
+
+==Color picker text==|bad:1234| there you don't go
