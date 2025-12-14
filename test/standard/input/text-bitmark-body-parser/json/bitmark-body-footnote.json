@@ -283,6 +283,69 @@
       {
         "text": " with empty footnote*",
         "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "footnote",
+            "attrs": {
+              "content": [
+                {
+                  "text": "with ",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "text": "bold",
+                  "type": "text"
+                },
+                {
+                  "text": " and a ",
+                  "type": "text"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "http://link.com",
+                        "target": "_blank"
+                      }
+                    }
+                  ],
+                  "text": "link.com",
+                  "type": "text"
+                },
+                {
+                  "text": " and a",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          {
+            "type": "ref",
+            "attrs": {
+              "reference": "reference"
+            }
+          }
+        ],
+        "text": "Some text",
+        "type": "text"
+      },
+      {
+        "text": " with nothing else",
+        "type": "text"
       }
     ],
     "attrs": {}

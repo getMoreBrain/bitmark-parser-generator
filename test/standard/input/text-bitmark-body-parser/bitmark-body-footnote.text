@@ -13,3 +13,5 @@
 	text==|footnote*:this is **a** footnote* with a http://link.com/link included| on the previous text
 
 ==Some text==|footnote*:| with empty footnote*
+
+==Some text==|footnote:with **bold** and a http://link.com and a |►reference| with nothing else
