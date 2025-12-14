@@ -96,9 +96,9 @@
       "isInfoOnly": false
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Resource type [&website-link] is specified in the bit header, but no extra resource is allowed for this bit.",
@@ -208,9 +208,9 @@
       "isInfoOnly": false
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "[&websiteLink] is included more than the required 0 time(s). Did you forget the '&websiteLink' in the bit header?",

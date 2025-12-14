@@ -23,9 +23,9 @@
       "body": ""
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.vendor-padlet-embed]\n[@id:342346]\n[@padletId:2c7rc1zj8jdo25ed]\n[@bubbleTag:Tag 1]\n[@bubbleTag:]\n[@bubbleTag:Tag 2]\n[@bubbleTag:**Tag 3**]"
   }

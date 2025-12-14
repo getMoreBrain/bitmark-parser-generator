@@ -28,9 +28,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.internal-link]\n[@id:192356]\n[!Überprüfe deine Antwort nach dem Lesen:]\n[►Ref_Starbucks]"
   },
@@ -63,9 +63,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.internal-link]\n[@id:192374]\n[!Überprüfe deine Antwort nach dem Lesen:]\n[►Ref_Emmi]"
   },
@@ -98,9 +98,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.internal-link]\n[@id:192383]\n[!Überprüfe deine Antwort nach dem Lesen:]\n[►Ref_Globus]"
   }

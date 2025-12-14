@@ -32,9 +32,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-1]\n[@id:135649]\n[##It’s complicated]"
   },
@@ -71,9 +71,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-2]\n[@id:135651]\n[##So Hedge Therefore, Who Join Forever]"
   },
@@ -110,9 +110,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-3]\n[@id:135653]\n[##The plug problem]"
   },
@@ -149,9 +149,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-4]\n[@id:135655]\n[##In principle, the solution would be simple, but…]"
   },
@@ -188,9 +188,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-5]\n[@id:135657]\n[##Existing e-learning standards (AICC, SCORM etc.) do not meet today’s requirements]"
   },
@@ -227,9 +227,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-6]\n[@id:135659]\n[##bitmark — the freely accessible content-first standard for interactive learning content]"
   },
@@ -266,9 +266,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-7]\n[@id:135661]\n[###Suitable for all learning content]"
   },
@@ -305,9 +305,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-8]\n[@id:135663]\n[###Uncompromisingly “content-first”]"
   },
@@ -344,9 +344,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-9]\n[@id:135665]\n[###Openness of the standard prevents “lock-in” effects]"
   },
@@ -383,9 +383,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-10]\n[@id:135667]\n[###Digital transformation of learning]"
   },
@@ -422,9 +422,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-11]\n[@id:135669]\n[##Democratization of learning]"
   },
@@ -461,9 +461,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-12]\n[@id:135671]\n[##The “bitmark Association”]"
   },
@@ -500,9 +500,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[▼ch-13]\n[@id:135673]\n[##Useful links:]"
   },
@@ -523,9 +523,9 @@
       "level": 1
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]"
   },
@@ -546,9 +546,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[#]"
   },
@@ -569,9 +569,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[##]"
   },
@@ -592,9 +592,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[###]"
   },
@@ -615,9 +615,9 @@
       "progress": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter]\n[####]"
   }

@@ -16,9 +16,9 @@
       "body": "\\left. C = \\left( \\left( X , \\mathrm { X } \\right) , \\left( G , \\mathrm { G } \\right) , P , D , A , N \\right) \\right) ,\n[.formula:bitmark--] part of formula above"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.formula]\n[@id:1]\n\n\\left. C = \\left( \\left( X , \\mathrm { X } \\right) , \\left( G , \\mathrm { G } \\right) , P , D , A , N \\right) \\right) ,\n[^.formula:bitmark--] part of formula above"
   },
@@ -39,9 +39,9 @@
       "body": "C = \\left( X , G , P , D , A , N \\right)"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.formula:latex]\n[@id:2]\n\nC = \\left( X , G , P , D , A , N \\right)"
   },
@@ -62,9 +62,9 @@
       "body": "C _ { i } = \\left( X _ { i } , G _ { i } , P _ { i } , D _ { i } , A _ { i } , N _ { i } \\right) , i = 1 , 2 , 3 .\n[!part of formula above]\n[.formula:bitmark--] part of formula above"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.formula]\n[@id:3]\n\nC _ { i } = \\left( X _ { i } , G _ { i } , P _ { i } , D _ { i } , A _ { i } , N _ { i } \\right) , i = 1 , 2 , 3 .\n[!part of formula above]\n[^.formula:bitmark--] part of formula above"
   },
@@ -85,9 +85,9 @@
       "body": "P _ { 1 } = P _ { 1 2 } \\otimes P _ { 1 3 } : \\left( G _ { 2 } \\times G _ { 3 } \\right) \\times \\mathrm { X } _ { 1 } \\rightarrow \\left[ 0 , 1 \\right] ,"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.formula]\n[@id:4]\n\n$$$$\nP _ { 1 } = P _ { 1 2 } \\otimes P _ { 1 3 } : \\left( G _ { 2 } \\times G _ { 3 } \\right) \\times \\mathrm { X } _ { 1 } \\rightarrow \\left[ 0 , 1 \\right] ,"
   },
@@ -108,9 +108,9 @@
       "body": "[!part of formula below]\n\\mathrm { X } _ { 1 } = \\sigma \\left( \\mathrm { X } _ { 1 2 } \\times \\mathrm { X } _ { 1 3 } \\right) ,"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.formula]\n[@id:5]\n\n$$$$\n[!part of formula below]\n\\mathrm { X } _ { 1 } = \\sigma \\left( \\mathrm { X } _ { 1 2 } \\times \\mathrm { X } _ { 1 3 } \\right) ,"
   },
@@ -131,9 +131,9 @@
       "body": "All part of formula, as this text starts it\n$$$$\n[!part of formula below]\n\\mathrm { X } _ { 1 } = \\sigma \\left( \\mathrm { X } _ { 1 2 } \\times \\mathrm { X } _ { 1 3 } \\right) ,"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.formula]\n[@id:5]\n\nAll part of formula, as this text starts it\n$$$$\n[!part of formula below]\n\\mathrm { X } _ { 1 } = \\sigma \\left( \\mathrm { X } _ { 1 2 } \\times \\mathrm { X } _ { 1 3 } \\right) ,"
   },
@@ -154,9 +154,9 @@
       "body": "All part of formula, as this text starts it\n$$$$\n[!part of formula below]\n\\mathrm { X } _ { 1 } = \\sigma \\left( \\mathrm { X } _ { 1 2 } \\times \\mathrm { X } _ { 1 3 } \\right) ,"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.article:latex]\n[@id:5]\n\nAll part of formula, as this text starts it\n$$$$\n[!part of formula below]\n\\mathrm { X } _ { 1 } = \\sigma \\left( \\mathrm { X } _ { 1 2 } \\times \\mathrm { X } _ { 1 3 } \\right) ,"
   },
@@ -174,9 +174,9 @@
       "body": "C = \\left( X , G , P , D , A , N \\right)"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.smart-standard-formula]\nC = \\left( X , G , P , D , A , N \\right)"
   },
@@ -194,9 +194,9 @@
       "body": "C = \\left( X , G , P , D , A , N \\right)"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.smart-standard-formula-non-normative]\nC = \\left( X , G , P , D , A , N \\right)"
   },
@@ -214,9 +214,9 @@
       "body": "C = \\left( X , G , P , D , A , N \\right)"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.smart-standard-formula-normative]\nC = \\left( X , G , P , D , A , N \\right)"
   },
@@ -234,9 +234,9 @@
       "body": "C = \\left( X , G , P , D , A , N \\right)"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.smart-standard-remark-formula]\nC = \\left( X , G , P , D , A , N \\right)"
   },
@@ -254,9 +254,9 @@
       "body": "C = \\left( X , G , P , D , A , N \\right)"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.smart-standard-remark-formula-non-normative]\nC = \\left( X , G , P , D , A , N \\right)"
   },
@@ -274,9 +274,9 @@
       "body": "C = \\left( X , G , P , D , A , N \\right)"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.smart-standard-remark-formula-normative]\nC = \\left( X , G , P , D , A , N \\right)"
   },
@@ -366,9 +366,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.article:bitmark++]\n[!Start **[text^]**\n==p = 100 \\times \\left(1 - \\sqrt[n^]{\\frac{RW}{AK}}\\right)==|latex|\nend^]]\n\nStart **[text^]**\n==p = 100 \\times \\left(1 - \\sqrt[n^]{\\frac{RW}{AK}}\\right)==|latex|\nend^]"
   },
@@ -458,9 +458,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",

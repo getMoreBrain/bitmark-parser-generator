@@ -34,9 +34,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.chapter-subject-matter]\n[@id:342336]\nChapter subject matter\nIt's exactly the same as an .article."
   }

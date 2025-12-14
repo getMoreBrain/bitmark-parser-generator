@@ -38,9 +38,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.featured]\n[@id:342339]\n[@customerId:themightyboosh]\n[@reportTag:This is a report at https://www.reports.com/report-1]\nFeatured\nIt's exactly the same as an .article."
   }

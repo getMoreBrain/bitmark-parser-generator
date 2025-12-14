@@ -33,9 +33,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.image]\n[@id:test-selected]\n[&image:https://example.com/test-image.png]"
   },
@@ -71,9 +71,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.video]\n[@id:test-selected-video]\n[&video:https://example.com/test-video.mp4]"
   }

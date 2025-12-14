@@ -15,9 +15,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.19.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.non-production-prototype-iframe:bitmark++]\n[@iframeSrc: https://iframe.com/iframe.html ]\n[@iframeName: groupA ]"
   },
@@ -35,12 +35,12 @@
       "body": []
     },
     "parser": {
-      "version": "4.19.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
-          "message": "[@iframeName] is required at least 1 time(s)",
+          "message": "[@iframeSrc] is required at least 1 time(s)",
           "text": "[.non-production-prototype-iframe]\n",
           "location": {
             "start": {
@@ -75,9 +75,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.19.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "[@iframeSrc] is included more than the required 1 time(s). The earlier ones will be ignored",

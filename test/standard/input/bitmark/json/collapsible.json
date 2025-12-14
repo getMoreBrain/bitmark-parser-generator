@@ -146,9 +146,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.collapsible:bitmark++]\n[@id:151970]\n[@machineTranslated: © Google 2024]\n[@translationOf:https://example.com/original-bit-id]\n[@lang:en-UK]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
   },
@@ -202,9 +202,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.side-note-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -258,9 +258,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.info-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -314,9 +314,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.remark-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -370,9 +370,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.warning-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -426,9 +426,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.danger-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -482,9 +482,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.note-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -538,9 +538,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.example-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -594,9 +594,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.hint-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   },
@@ -650,9 +650,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.bug-collapsible]\n[@id:151970]\n[!instruction]\n[?hint]\nExample text"
   }

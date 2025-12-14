@@ -58,9 +58,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.survey-rating]\n[@id:93061]\n[%D2]\n[@ratingLevelStart:0][@label:NOT AT ALL LIKELY]\n[@ratingLevelEnd:10][@label:EXTREMLY LIKELY]\n[@ratingLevelSelected:3]"
   },
@@ -98,9 +98,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.survey-rating]\n[@id:93062]\n[%D2]\n[@ratingLevelStart:0]\n[@ratingLevelEnd:wrong]\n[@ratingLevelSelected:wrong]"
   },
@@ -127,9 +127,9 @@
       }
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.survey-rating]\n[@id:93063]"
   },
@@ -214,9 +214,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.survey-rating]\n[@id:93061]\n[%D2]\n[@ratingLevelStart:-10][@label:NOT **AT** ALL LIKELY]\n[@ratingLevelEnd:10][@label:EXTREMLY !!LIKELY!!]\n[@ratingLevelSelected:0]"
   }
