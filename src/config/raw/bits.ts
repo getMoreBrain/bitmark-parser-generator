@@ -5402,20 +5402,9 @@ const BITS: _BitsConfig = {
     textFormatDefault: TextFormat.json,
   },
   [BitType.vendorDatadogDashboard]: {
-    since: '5.1.0',
-    baseBitType: BitType._standard,
+    since: '5.2.0',
+    baseBitType: BitType.nonProductionPrototypeIframe,
     description: 'A Datadog dashboard bit, used to embed Datadog dashboards',
-    tags: [
-      {
-        key: ConfigKey.property_iframeSrc,
-        description: 'Iframe source URL, used to define the source of the iframe',
-        minCount: 1,
-      },
-      {
-        key: ConfigKey.property_iframeName,
-        description: 'Iframe name, used to define the name of the iframe',
-      },
-    ],
   },
   [BitType.vendorDatadogDashboardEmbed]: {
     since: '3.12.0',
