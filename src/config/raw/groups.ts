@@ -55,6 +55,11 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.plainText,
       },
       {
+        key: ConfigKey.property_translationOf,
+        description: 'Translation source reference',
+        format: TagFormat.plainText,
+      },
+      {
         key: ConfigKey.property_spansPageBreak,
         description: 'If true, the bit spans a page break',
         format: TagFormat.boolean,

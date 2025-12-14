@@ -9,6 +9,7 @@
       ],
       "sourceRL": "123",
       "machineTranslated": "© Google 2024",
+      "translationOf": "original-article-bit",
       "lang": "en-UK",
       "publisher": [
         "kpmg"
@@ -150,7 +151,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.article:bitmark++]\n[@id::5__5:32^]**fg^e!!--``test^]]\n[@machineTranslated: © Google 2024]\n[@lang:en-UK]\n[@sourceRL:123]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
+    "bitmark": "[.article:bitmark++]\n[@id::5__5:32^]**fg^e!!--``test^]]\n[@machineTranslated: © Google 2024]\n[@translationOf:original-article-bit]\n[@lang:en-UK]\n[@sourceRL:123]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
   },
   {
     "bit": {
@@ -233,14 +234,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 16,
+              "line": 17,
               "column": 1,
-              "offset": 308
+              "offset": 346
             },
             "end": {
-              "line": 16,
+              "line": 17,
               "column": 21,
-              "offset": 328
+              "offset": 366
             }
           }
         },
@@ -249,14 +250,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 16,
+              "line": 17,
               "column": 1,
-              "offset": 308
+              "offset": 346
             },
             "end": {
-              "line": 16,
+              "line": 17,
               "column": 21,
-              "offset": 328
+              "offset": 366
             }
           }
         }
@@ -447,14 +448,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 33,
+              "line": 34,
               "column": 1,
-              "offset": 1522
+              "offset": 1560
             },
             "end": {
-              "line": 33,
+              "line": 34,
               "column": 21,
-              "offset": 1542
+              "offset": 1580
             }
           }
         },
@@ -463,14 +464,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 33,
+              "line": 34,
               "column": 1,
-              "offset": 1522
+              "offset": 1560
             },
             "end": {
-              "line": 33,
+              "line": 34,
               "column": 21,
-              "offset": 1542
+              "offset": 1580
             }
           }
         }
@@ -599,14 +600,14 @@
           "text": "[.article:bitmark--&image]",
           "location": {
             "start": {
-              "line": 49,
+              "line": 50,
               "column": 1,
-              "offset": 2671
+              "offset": 2709
             },
             "end": {
-              "line": 49,
+              "line": 50,
               "column": 27,
-              "offset": 2697
+              "offset": 2735
             }
           }
         },
@@ -615,14 +616,14 @@
           "text": "[.article:bitmark--&image]",
           "location": {
             "start": {
-              "line": 49,
+              "line": 50,
               "column": 1,
-              "offset": 2671
+              "offset": 2709
             },
             "end": {
-              "line": 49,
+              "line": 50,
               "column": 27,
-              "offset": 2697
+              "offset": 2735
             }
           }
         }
@@ -673,14 +674,14 @@
           "text": "[.article:bitmark--&image]",
           "location": {
             "start": {
-              "line": 59,
+              "line": 60,
               "column": 1,
-              "offset": 3400
+              "offset": 3438
             },
             "end": {
-              "line": 59,
+              "line": 60,
               "column": 27,
-              "offset": 3426
+              "offset": 3464
             }
           }
         },
@@ -689,14 +690,14 @@
           "text": "[.article:bitmark--&image]",
           "location": {
             "start": {
-              "line": 59,
+              "line": 60,
               "column": 1,
-              "offset": 3400
+              "offset": 3438
             },
             "end": {
-              "line": 59,
+              "line": 60,
               "column": 27,
-              "offset": 3426
+              "offset": 3464
             }
           }
         }
@@ -758,14 +759,14 @@
           "text": "[.article:bitmark--&image]",
           "location": {
             "start": {
-              "line": 63,
+              "line": 64,
               "column": 1,
-              "offset": 3568
+              "offset": 3606
             },
             "end": {
-              "line": 63,
+              "line": 64,
               "column": 27,
-              "offset": 3594
+              "offset": 3632
             }
           }
         },
@@ -774,14 +775,14 @@
           "text": "[.article:bitmark--&image]",
           "location": {
             "start": {
-              "line": 63,
+              "line": 64,
               "column": 1,
-              "offset": 3568
+              "offset": 3606
             },
             "end": {
-              "line": 63,
+              "line": 64,
               "column": 27,
-              "offset": 3594
+              "offset": 3632
             }
           }
         }
@@ -843,14 +844,14 @@
           "text": "[.article:bitmark--&image]",
           "location": {
             "start": {
-              "line": 67,
+              "line": 68,
               "column": 1,
-              "offset": 3828
+              "offset": 3866
             },
             "end": {
-              "line": 67,
+              "line": 68,
               "column": 27,
-              "offset": 3854
+              "offset": 3892
             }
           }
         },
@@ -859,14 +860,14 @@
           "text": "[.article:bitmark--&image]",
           "location": {
             "start": {
-              "line": 67,
+              "line": 68,
               "column": 1,
-              "offset": 3828
+              "offset": 3866
             },
             "end": {
-              "line": 67,
+              "line": 68,
               "column": 27,
-              "offset": 3854
+              "offset": 3892
             }
           }
         },
@@ -875,14 +876,14 @@
           "text": "[.article:bitmark--&image]\n[@id:162205]\n**Abb. 3: UV-Index und empfohlene Schutzmassnahmen**\n|image:https://docs.bitmark.cloud/bit-books/careum/gesundheitsfoerderung/web-resources/images/careum_gesundheitsfoerderung_8_v2.png|\n\n",
           "location": {
             "start": {
-              "line": 67,
+              "line": 68,
               "column": 1,
-              "offset": 3828
+              "offset": 3866
             },
             "end": {
-              "line": 72,
+              "line": 73,
               "column": 1,
-              "offset": 4055
+              "offset": 4093
             }
           }
         },
@@ -891,14 +892,14 @@
           "text": "[.article:bitmark--&image]\n[@id:162205]\n**Abb. 3: UV-Index und empfohlene Schutzmassnahmen**\n|image:https://docs.bitmark.cloud/bit-books/careum/gesundheitsfoerderung/web-resources/images/careum_gesundheitsfoerderung_8_v2.png|\n\n",
           "location": {
             "start": {
-              "line": 67,
+              "line": 68,
               "column": 1,
-              "offset": 3828
+              "offset": 3866
             },
             "end": {
-              "line": 72,
+              "line": 73,
               "column": 1,
-              "offset": 4055
+              "offset": 4093
             }
           }
         }
@@ -1008,14 +1009,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 73,
+              "line": 74,
               "column": 1,
-              "offset": 4056
+              "offset": 4094
             },
             "end": {
-              "line": 73,
+              "line": 74,
               "column": 21,
-              "offset": 4076
+              "offset": 4114
             }
           }
         },
@@ -1024,14 +1025,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 73,
+              "line": 74,
               "column": 1,
-              "offset": 4056
+              "offset": 4094
             },
             "end": {
-              "line": 73,
+              "line": 74,
               "column": 21,
-              "offset": 4076
+              "offset": 4114
             }
           }
         },
@@ -1040,28 +1041,28 @@
           "text": "[@icon:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVEiJtZZPbBtFFMZ/M7ubXdtdb1xSFyeilBapySVU8h8OoFaooFSqiihIVIpQBKci6KEg9Q6H9kovIHoCIVQJJCKE1ENFjnAgcaSGC6rEnxBwA04Tx43t2FnvDAfjkNibxgHxnWb2e/u992bee7tCa00YFsffekFY+nUzFtjW0LrvjRXrCDIAaPLlW0nHL0SsZtVoaF98mLrx3pdhOqLtYPHChahZcYYO7KvPFxvRl5XPp1sN3adWiD1ZAqD6XYK1b/dvE5IWryTt2udLFedwc1+9kLp+vbbpoDh+6TklxBeAi9TL0taeWpdmZzQDry0AcO+jQ12RyohqqoYoo8RDwJrU+qXkjWtfi8Xxt58BdQuwQs9qC/afLwCw8tnQbqYAPsgxE1S6F3EAIXux2oQFKm0ihMsOF71dHYx+f3NND68ghCu1YIoePPQN1pGRABkJ6Bus96CutRZMydTl+TvuiRW1m3n0eDl0vRPcEysqdXn+jsQPsrHMquGeXEaY4Yk4wxWcY5V/9scqOMOVUFthatyTy8QyqwZ+kDURKoMWxNKr2EeqVKcTNOajqKoBgOE28U4tdQl5p5bwCw7BWquaZSzAPlwjlithJtp3pTImSqQRrb2Z8PHGigD4RZuNX6JYj6wj7O4TFLbCO/Mn/m8R+h6rYSUb3ekokRY6f/YukArN979jcW+V/S8g0eT/N3VN3kTqWbQ428m9/8k0P/1aIhF36PccEl6EhOcAUCrXKZXXWS3XKd2vc/TRBG9O5ELC17MmWubD2nKhUKZa26Ba2+D3P+4/MNCFwg59oWVeYhkzgN/JDR8deKBoD7Y+ljEjGZ0sosXVTvbc6RHirr2reNy1OXd6pJsQ+gqjk8VWFYmHrwBzW/n+uMPFiRwHB2I7ih8ciHFxIkd/3Omk5tCDV1t+2nNu5sxxpDFNx+huNhVT3/zMDz8usXC3ddaHBj1GHj/As08fwTS7Kt1HBTmyN29vdwAw+/wbwLVOJ3uAD1wi/dUH7Qei66PfyuRj4Ik9is+hglfbkbfR3cnZm7chlUWLdwmprtCohX4HUtlOcQjLYCu+fzGJH2QRKvP3UNz8bWk1qMxjGTOMThZ3kvgLI5AzFfo379UAAAAASUVORK5CYII=]",
           "location": {
             "start": {
-              "line": 86,
+              "line": 87,
               "column": 1,
-              "offset": 4434
+              "offset": 4472
             },
             "end": {
-              "line": 86,
+              "line": 87,
               "column": 1319,
-              "offset": 5752
+              "offset": 5790
             }
           },
           "original": {
             "text": "[@icon:http://willbe.overridden/image.png]",
             "location": {
               "start": {
-                "line": 85,
+                "line": 86,
                 "column": 1,
-                "offset": 4391
+                "offset": 4429
               },
               "end": {
-                "line": 85,
+                "line": 86,
                 "column": 43,
-                "offset": 4433
+                "offset": 4471
               }
             }
           }
@@ -1071,28 +1072,28 @@
           "text": "[@iconTag:this is the icon tag]",
           "location": {
             "start": {
-              "line": 87,
+              "line": 88,
               "column": 30,
-              "offset": 5782
+              "offset": 5820
             },
             "end": {
-              "line": 87,
+              "line": 88,
               "column": 61,
-              "offset": 5813
+              "offset": 5851
             }
           },
           "original": {
             "text": "[@iconTag:will be overridden]",
             "location": {
               "start": {
-                "line": 87,
+                "line": 88,
                 "column": 1,
-                "offset": 5753
+                "offset": 5791
               },
               "end": {
-                "line": 87,
+                "line": 88,
                 "column": 30,
-                "offset": 5782
+                "offset": 5820
               }
             }
           }
@@ -1194,14 +1195,14 @@
           "text": "[.article:bitmark++]\n\nThis is an article with inline latex\n\nInline ==\\\\left( x | y \\\\right)==|latex| text\nInline == \\\\left( x | y \\\\right) ==|latex| text\n\n==\n\\\\left( x | y \\\\right)\n==|latex|\n\nLatex blocks are now separate bits!\n\n\n",
           "location": {
             "start": {
-              "line": 91,
+              "line": 92,
               "column": 1,
-              "offset": 5852
+              "offset": 5890
             },
             "end": {
-              "line": 105,
+              "line": 106,
               "column": 1,
-              "offset": 6082
+              "offset": 6120
             }
           }
         }
@@ -1257,14 +1258,14 @@
           "text": "[.standard-article-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 106,
+              "line": 107,
               "column": 1,
-              "offset": 6083
+              "offset": 6121
             },
             "end": {
-              "line": 106,
+              "line": 107,
               "column": 40,
-              "offset": 6122
+              "offset": 6160
             }
           }
         },
@@ -1273,14 +1274,14 @@
           "text": "[.standard-article-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 106,
+              "line": 107,
               "column": 1,
-              "offset": 6083
+              "offset": 6121
             },
             "end": {
-              "line": 106,
+              "line": 107,
               "column": 40,
-              "offset": 6122
+              "offset": 6160
             }
           }
         }
@@ -1336,14 +1337,14 @@
           "text": "[.standard-article-non-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 113,
+              "line": 114,
               "column": 1,
-              "offset": 6179
+              "offset": 6217
             },
             "end": {
-              "line": 113,
+              "line": 114,
               "column": 44,
-              "offset": 6222
+              "offset": 6260
             }
           }
         },
@@ -1352,14 +1353,14 @@
           "text": "[.standard-article-non-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 113,
+              "line": 114,
               "column": 1,
-              "offset": 6179
+              "offset": 6217
             },
             "end": {
-              "line": 113,
+              "line": 114,
               "column": 44,
-              "offset": 6222
+              "offset": 6260
             }
           }
         }

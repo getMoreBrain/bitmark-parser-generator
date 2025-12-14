@@ -357,6 +357,8 @@ const NodeType = {
   locationValue: 'locationValue',
   machineTranslated: 'machineTranslated',
   machineTranslatedValue: 'machineTranslatedValue',
+  translationOf: 'translationOf',
+  translationOfValue: 'translationOfValue',
   spansPageBreak: 'spansPageBreak',
   spansPageBreakValue: 'spansPageBreakValue',
   mailingList: 'mailingList',

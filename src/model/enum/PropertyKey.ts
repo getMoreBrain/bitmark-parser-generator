@@ -138,6 +138,7 @@ const propertyKeys = {
   property_listItemIndent: '@listItemIndent',
   property_location: '@location',
   property_machineTranslated: '@machineTranslated',
+  property_translationOf: '@translationOf',
   property_spansPageBreak: '@spansPageBreak',
   property_mailingList: '@mailingList',
   property_mark: '@mark',
