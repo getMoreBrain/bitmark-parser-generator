@@ -17,9 +17,9 @@
       "body": "bitmark.print(\"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")\nbitmark.console.log(\"This is a [_gap text].\") >> Creates a .console-log bit\nbitmark.create(\"note\", \"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")"
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.app-bitmark-from-editor]\n[@id:342341]\n[@maxCreatedBits:100]\n\nbitmark.print(\"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")\nbitmark.console.log(\"This is a [_gap text].\") >> Creates a .console-log bit\nbitmark.create(\"note\", \"[.cloze]\\nThis is a [_gap text].\\n[.cloze]\\nThis is another [_gap text].\")"
   }

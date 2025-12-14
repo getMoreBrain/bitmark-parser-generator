@@ -51,9 +51,9 @@
       "heading": {}
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.match-audio]\n[@id:285729]\n[%26][%match-audio]\n[Listen to the audio and name the animal you are hearing.]\n===\n[&audio:https://cdn.bitmark.cloud/publishers/3/books/26363/miau.mp3]\n==\ncat\n==="
   }

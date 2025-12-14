@@ -322,6 +322,7 @@ class Builder extends BaseBuilder {
       sourceDocument?: string;
       internalPrintPdf?: string;
       hasPrintRestriction?: boolean;
+      enforceUpdateOverUserInput?: boolean;
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
@@ -1252,6 +1253,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_hasPrintRestriction,
         data.hasPrintRestriction,
+        options,
+      ),
+      enforceUpdateOverUserInput: this.toAstProperty(
+        bitType,
+        ConfigKey.property_enforceUpdateOverUserInput,
+        data.enforceUpdateOverUserInput,
         options,
       ),
       tocResource: this.toAstProperty(

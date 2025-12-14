@@ -50,9 +50,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -110,9 +110,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-wrap]\n[@id:197915]\n[@allowedBit:test][@allowedBit:.test2]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -167,9 +167,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-nowrap]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -224,9 +224,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-nowrap-stretch]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -284,9 +284,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-group]\n[@id:197915]\n[@allowedBit:test][@allowedBit:test2]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -341,9 +341,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-folder]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -398,9 +398,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-carousel]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -455,9 +455,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-cards]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -512,9 +512,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-grid]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -569,9 +569,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-stack]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -626,9 +626,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-slides]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -683,9 +683,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-gallery]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -740,9 +740,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-scroller]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -797,9 +797,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-tabs]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -854,9 +854,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-accordion-tabs]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -911,9 +911,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-folder-all]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -968,9 +968,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-bits-2]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -1025,9 +1025,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-cook-recipe]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -1082,9 +1082,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-news-article]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   },
@@ -1139,9 +1139,9 @@
       "allowedBit": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.container-preview]\n[@id:197915]\n[%1]\nDie X-AG hat den Status einer Holdinggesellschaft. Sie wurde von der Gewinnsteuer nicht erfasst. Laut Jahresrechnung ist das ausgewiesene Eigenkapital CHF 400. Gemäss Aktienbewertung nach KS 28 wurde der Unternehmenswert auf CHF 900 festgelegt. Dieser Wert wurde mittels Feststellungsverfügung mitgeteilt und ist nun in Rechtskraft erwachsen.\n[!Was sind die Steuerlichen Folgen, wenn die X-AG die folgenden Gewinne realisiert?]"
   }

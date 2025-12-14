@@ -110,9 +110,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -459,9 +459,9 @@
       "heading": {}
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.match-solution-grouped]\n[@id:265794]\n===\n[%1]die Koffer\n==\npacken[@example]\n===\n[%2]in den Urlaub\n==\nfahren\n===\n[%3]Geld\n==\nausgeben\n===\n[%4]über dem europäischen Durchschnitt\n==\nliegen\n===\n[%5]mehr Inlandsreisen\n==\nplanen\n===\n[%6]das angenehme Wetter\n==\ngenießen\n--\nnutzen\n===\n[%7]den Strandurlaub\n==\nbevorzugen\n===\n[%8]böse Überraschungen\n==\nerleben\n===\n[%9]mobile Angebote\n==\nnutzen\n===\n[%10]sich über verschiede Angebote\n==\ninformieren\n===\n[%11]auf Serviceleistungen\n==\nachten\n===\n[%12]auf die Hotelbar Wert\n==\nlegen\n==="
   }

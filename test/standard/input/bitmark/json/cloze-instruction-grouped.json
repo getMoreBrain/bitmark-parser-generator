@@ -115,9 +115,9 @@
       "isExample": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.cloze-instruction-grouped]\n[@id:287822]\n[@quizCountItems:true]\n[@quizStrikethroughSolutions:true]\n[%][%cloze-instruction-grouped]\n[@additionalSolutions: canvas]\nDer Fußball [_erfreut][!erfreuen][@example] sich nicht nur in Deutschland besonderer Beliebtheit, er [_steht][!stehen] auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ..."
   },
@@ -320,9 +320,9 @@
       "quizStrikethroughSolutions": false
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.cloze-instruction-grouped]\n[@id:107938]\n[%5]\n[!In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.\nWelches Fragewort passt? Wähl aus.\nWähl die Wörter in der richtigen Reihenfolge aus.]\n[@additionalSolutions: canvas]\n[@additionalSolutions: texture]\n[@additionalSolutions: figurative]\n[@additionalSolutions: abstract]\n[@additionalSolutions: contrast]\n[_Woher][!woher] kommen Sie?\n[_Wo][!wo] wohnen Sie?\n[_Was][!was] studieren Sie?\n[_Welche][!welche] Sprachen sprechen Sie?"
   },
@@ -591,9 +591,9 @@
       "isExample": false
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.cloze-instruction-grouped]\n[@id: 1779156 ]\n[@feedbackType: 2-step ]\n[@icon: https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/icons/a2_icon.svg ]\n[@quizCountItems: true ]\n[@quizStrikethroughSolutions: false ]\n[@revealSolutions: false ]\n[% 5 ]\n[! IM BÜRO. Ergänzen Sie die Verben. ]\n==1.==|bold|\n==a==|imageInline:https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/images/bck1.png| Frau Schweiker, haben Sie einen Moment Zeit? Ich [_ möchte ][! möchten ] gerne über die Präsentation sprechen.\n\n==a==|imageInline:https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/images/bck1.png| Das tut mir leid. Jetzt [_ kann ][! können ] ich nicht. [_ Können ][! können ] wir einen Termin in der nächsten Woche machen?\n\n\n==a==|imageInline:https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/images/bck1.png| Leider nicht. Nächste Woche [_ kann ][! können ] ich nicht. Ich habe Urlaub. Meine Frau und ich [_ wollen ][! wollen ] nach Rom fahren."
   }

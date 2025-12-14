@@ -154,9 +154,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
@@ -242,9 +242,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.catalog-item-external-book]\n[@id:2002]\n[#Clean Code]\n[@coverImage:https://example.com/images/clean-code.jpg]\n[@customerProductShopLink:https://shop.example.com/books/clean-code]\n[@listPrice:$44.99]\n[@customerProductId:PROD-CC-2024]\n[@bookAuthor:Robert C. Martin]\n[@bookBindingType:Hardcover]\n[@bookNumberOfPages:464]\n[@bookRating:4.8]\nA handbook of agile software craftsmanship."
   },
@@ -312,9 +312,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.catalog-item-external-book]\n[@id:2003]\n[#Design Patterns]\n[##Elements of Reusable Object-Oriented Software]\n[@coverImage:https://example.com/images/design-patterns.jpg]\n[@customerProductShopLink:https://shop.example.com/books/design-patterns-classic]\n[@listPrice:$54.99]\n[@buttonCaption:View Details]\n[@customerProductId:PROD-DP-CLASSIC]\n[@bookSeriesTitle:Software Engineering Classics]\n[@bookSeriesId:SEC-001]\n[@bookSeriesNumber:1]\n[@gmbExternalShop:ClassicBooks]\n[@gmbExternalShopItems:amazon, oreilly, pearson]\nThe classic book on design patterns by the Gang of Four, essential reading for software engineers."
   },
@@ -352,9 +352,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.catalog-item-external-book]\n[@id:2004]\n[#External Book Minimal]\n[@coverImage:https://example.com/images/external-minimal.jpg]\n[@customerProductShopLink:https://shop.example.com/books/minimal]\n[@listPrice:$29.99]\n[@buttonCaption:Buy Now]\n[@customerProductId:PROD-EXT-MIN-001]"
   }

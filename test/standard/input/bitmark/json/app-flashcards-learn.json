@@ -54,9 +54,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.app-flashcards-learn:bitmark++]\n[@ageRange:18][@ageRange:120]\n[@flashcardSet:e-876z78z87og87g8zg]\n[@flashcardSet:e-8768768768768767]\n\n**Some bold text,**\nfollowed by some plain text. cloze open close cloze1 book.\n\nSome more text."
   }

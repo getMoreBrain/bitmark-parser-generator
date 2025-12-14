@@ -200,6 +200,7 @@ export interface BitJson {
   sourceDocument: string;
   internalPrintPdf: string;
   hasPrintRestriction: boolean;
+  enforceUpdateOverUserInput: boolean;
   tocResource: string | string[];
   tocContent: string | string[];
   page: string;

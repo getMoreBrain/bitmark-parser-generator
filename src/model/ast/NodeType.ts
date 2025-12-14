@@ -289,6 +289,8 @@ const NodeType = {
   internalPrintPdfValue: 'internalPrintPdfValue',
   hasPrintRestriction: 'hasPrintRestriction',
   hasPrintRestrictionValue: 'hasPrintRestrictionValue',
+  enforceUpdateOverUserInput: 'enforceUpdateOverUserInput',
+  enforceUpdateOverUserInputValue: 'enforceUpdateOverUserInputValue',
   isCaseSensitive: 'isCaseSensitive',
   isCommented: 'isCommented',
   isCorrect: 'isCorrect',

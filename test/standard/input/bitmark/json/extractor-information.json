@@ -28,9 +28,9 @@
       }
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.extractor-information]\n[@id:5673456]\n==== text ====\n{\n  \"version\": \"1.2.3\",\n  \"input\": {\n    \"pdf\": \"pdf-filename.pdf\",\n    \"config\": \"config-filename.toml\",\n    \"feedback\": \"feedback-filename.pdf\"\n  },\n  \"output\": {\n    \"bitmark\": \"bitmark-filename.bitmark\",\n    \"info\": \"info-filename.txt\",\n    \"visualization\": \"visualization-filename.pdf\"\n  }\n}"
   }

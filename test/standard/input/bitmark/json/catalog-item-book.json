@@ -139,9 +139,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
@@ -259,9 +259,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.catalog-item-book]\n[@id:1002]\n[#Learning Python Programming]\n[@coverImage:https://example.com/images/python-book.jpg]\n[@content2Buy:book-python-basics]\n[@listPrice:$39.99]\n[@customerProductId:PROD-PY-2024-002]\n[@bookIsbn:978-1-234567-89-0]\n[@bookAuthor:Jane Pythonista]\n[@bookBindingType:Paperback]\n[@bookNumberOfPages:350]\n[@bookRating:4.5]\nStart your journey into Python programming with this beginner-friendly book."
   },
@@ -333,9 +333,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.catalog-item-book]\n[@id:1003]\n[#Advanced Database Design]\n[##Mastering SQL and NoSQL]\n[@coverImage:https://example.com/images/database-book.jpg]\n[@content2Buy:book-database-advanced]\n[@listPrice:$59.99]\n[@buttonCaption:Add to Cart]\n[@customerProductId:PROD-DB-2024-003]\n[@bookSeriesTitle:Database Mastery Series]\n[@bookSeriesId:DMS-001]\n[@bookSeriesNumber:3]\n[@bookTranslator:Maria Translator]\n[@bookOriginalTitle:Diseño Avanzado de Bases de Datos]\n[@gmbExternalShop:TechBooks]\n[@gmbExternalShopItems:amazon]\n[@gmbExternalShopItems:barnes-noble]\n[@gmbExternalShopItems:bookshop]\nDeep dive into database design patterns, optimization techniques, and best practices for both SQL and NoSQL databases."
   },
@@ -373,9 +373,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.catalog-item-book]\n[@id:1004]\n[#Minimal Book Example]\n[@coverImage:https://example.com/images/minimal.jpg]\n[@content2Buy:book-minimal]\n[@listPrice:$19.99]\n[@buttonCaption:Purchase]\n[@customerProductId:PROD-MIN-001]"
   }
