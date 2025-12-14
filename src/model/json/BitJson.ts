@@ -30,6 +30,7 @@ export interface BitJson {
   isEditable: boolean;
   aiGenerated: boolean;
   machineTranslated: string;
+  translationOf: string;
   spansPageBreak: boolean;
   searchIndex: string | string[];
   analyticsTag: string | string[];
@@ -200,6 +201,7 @@ export interface BitJson {
   sourceDocument: string;
   internalPrintPdf: string;
   hasPrintRestriction: boolean;
+  enforceUpdateOverUserInput: boolean;
   tocResource: string | string[];
   tocContent: string | string[];
   page: string;

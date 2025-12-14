@@ -595,6 +595,7 @@ const BitType = {
   trueFalse: 'true-false',
   trueFalse1: 'true-false-1',
   vendorAmcharts5Chart: 'vendor-amcharts-5-chart',
+  vendorDatadogDashboard: 'vendor-datadog-dashboard',
   vendorDatadogDashboardEmbed: 'vendor-datadog-dashboard-embed',
   vendorFormbricksEmbed: 'vendor-formbricks-embed',
   vendorFormbricksLink: 'vendor-formbricks-link',

@@ -75,6 +75,7 @@ export interface Bit {
   isEditable?: Property;
   aiGenerated?: Property;
   machineTranslated?: Property;
+  translationOf?: Property;
   spansPageBreak?: Property;
   searchIndex?: Property;
   analyticsTag?: Property;
@@ -256,6 +257,7 @@ export interface Bit {
   sourceDocument?: Property;
   internalPrintPdf?: Property;
   hasPrintRestriction?: Property;
+  enforceUpdateOverUserInput?: Property;
   tocResource?: Property;
   tocContent?: Property;
   page?: Property;

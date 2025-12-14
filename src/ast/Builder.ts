@@ -146,6 +146,7 @@ class Builder extends BaseBuilder {
       isEditable?: boolean;
       aiGenerated?: boolean;
       machineTranslated?: string;
+      translationOf?: string;
       spansPageBreak?: boolean;
       searchIndex?: string | string[];
       analyticsTag?: string | string[];
@@ -322,6 +323,7 @@ class Builder extends BaseBuilder {
       sourceDocument?: string;
       internalPrintPdf?: string;
       hasPrintRestriction?: boolean;
+      enforceUpdateOverUserInput?: boolean;
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
@@ -533,6 +535,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_machineTranslated,
         data.machineTranslated,
+        options,
+      ),
+      translationOf: this.toAstProperty(
+        bitType,
+        ConfigKey.property_translationOf,
+        data.translationOf,
         options,
       ),
       spansPageBreak: this.toAstProperty(
@@ -1252,6 +1260,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_hasPrintRestriction,
         data.hasPrintRestriction,
+        options,
+      ),
+      enforceUpdateOverUserInput: this.toAstProperty(
+        bitType,
+        ConfigKey.property_enforceUpdateOverUserInput,
+        data.enforceUpdateOverUserInput,
         options,
       ),
       tocResource: this.toAstProperty(

@@ -5401,6 +5401,11 @@ const BITS: _BitsConfig = {
 
     textFormatDefault: TextFormat.json,
   },
+  [BitType.vendorDatadogDashboard]: {
+    since: '5.2.0',
+    baseBitType: BitType.nonProductionPrototypeIframe,
+    description: 'A Datadog dashboard bit, used to embed Datadog dashboards',
+  },
   [BitType.vendorDatadogDashboardEmbed]: {
     since: '3.12.0',
     baseBitType: BitType.code,

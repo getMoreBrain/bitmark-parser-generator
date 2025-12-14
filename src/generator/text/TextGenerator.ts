@@ -162,6 +162,7 @@ export interface TextOptions {
 export type GenerateOptions = {
   plainTextDividerAllowed?: boolean;
   noBreakscaping?: boolean;
+  forceInline?: boolean;
 };
 
 const Stage = {
@@ -179,13 +180,18 @@ interface MediaAttributeOptions {
   ignoreAttributes?: Set<string>;
 }
 
+interface TextOptionsInternal extends TextOptions {
+  isInternal?: boolean;
+}
+
 /**
  * Generate text from a bitmark text AST
  */
 class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   protected ast = new Ast();
   private bitmarkVersion: BitmarkVersionType;
-  private options: TextOptions;
+  private options: TextOptionsInternal;
+  private internalTextGenerator: TextGenerator | null = null;
 
   // State
   private generateOptions: GenerateOptions = {};
@@ -202,6 +208,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   private exitedCodeBlock = false;
   private inBulletList = false;
   private inInline = false;
+  private markDepth = 0;
   private textDepth = 0;
   private placeholderIndex = 0;
   private placeholders: BodyBitsJson = {};
@@ -243,6 +250,16 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.between = this.between.bind(this);
     this.exit = this.exit.bind(this);
     this.leaf = this.leaf.bind(this);
+
+    // Create internal text generator for parsing nested bitmark text.
+    // Only create if this is not already an internal generator
+    if (!this.options.isInternal) {
+      this.internalTextGenerator = new TextGenerator(bitmarkVersion, {
+        ...this.options,
+        writeCallback: undefined,
+        isInternal: true,
+      } as TextOptionsInternal);
+    }
   }
 
   /**
@@ -337,6 +354,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.exitedCodeBlock = false;
     this.inBulletList = false;
     this.inInline = false;
+    this.markDepth = 0;
     this.textDepth = 0;
     this.placeholderIndex = 0;
     this.placeholders = {};
@@ -417,9 +435,21 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     return this.handleExitNode(node.value, route);
   }
 
+  // * -> marks
+
+  protected enter_marks(_node: NodeInfo, _route: NodeInfo[]): void | false {
+    this.markDepth++;
+  }
+
+  protected exit_marks(_node: NodeInfo, _route: NodeInfo[]): void | false {
+    this.markDepth--;
+  }
+
   // END NODE HANDLERS
 
   protected handleEnterNode(node: TextNode, route: NodeInfo[]): void | false {
+    if (this.markDepth > 0) return; // All marks are handled by themselves
+
     this.handleEnterNodePreTextCheck(node, route);
 
     this.handleIndent(node);
@@ -434,7 +464,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         this.writeHardBreak(node);
         break;
 
-      case TextNodeType.text:
+      case TextNodeType.text: {
         this.writeMarks(node, Stage.enter);
         this.writeText(node);
         this.writeMarks(node, Stage.between);
@@ -443,6 +473,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         }
         this.textDepth++;
         break;
+      }
 
       case TextNodeType.heading:
         this.writeHeading(node as HeadingTextNode);
@@ -514,6 +545,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   }
 
   protected handleExitNode(node: TextNode, _route: NodeInfo[]): void | false {
+    if (this.markDepth > 0) return; // All marks are handled by themselves
+
     switch (node.type) {
       case TextNodeType.text:
         this.textDepth--;
@@ -921,10 +954,11 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    * @param node the text node
    * @param start true if starting (before) the text, false if ending (after) the text
    */
-  protected writeMarks(node: TextNode, stage: StageType): void {
+  protected writeMarks(node: TextNode, stage: StageType): void | false {
     if (node.marks) {
       // If this is a mark within inline text, or a heading, only inline marks are allowed
-      const forceSingleMark = !!(this.inInline || this.inHeading);
+      const forceSingleMark =
+        this.generateOptions.forceInline || !!(this.inInline || this.inHeading);
 
       // If node has marks, it cannot be a pre-text node
       this.thisNodeIsPreText = false;
@@ -1251,14 +1285,42 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.write(s);
   }
 
-  protected writeFootnoteMark(_mark: FootnoteMark) {
+  protected writeFootnoteMark(mark: FootnoteMark) {
     const s = `footnote:`;
     this.write(s);
+
+    // Write the footnote content
+    const text =
+      this.internalTextGenerator?.generateSync(
+        mark.attrs?.content as TextNode[],
+        this.textFormat,
+        this.textLocation,
+        {
+          ...this.generateOptions,
+          forceInline: true,
+        },
+      ) ?? '';
+
+    this.write(text);
   }
 
-  protected writeFootnoteStarMark(_mark: FootnoteMark) {
+  protected writeFootnoteStarMark(mark: FootnoteMark) {
     const s = `footnote*:`;
     this.write(s);
+
+    // Write the footnote star content
+    const text =
+      this.internalTextGenerator?.generateSync(
+        mark.attrs?.content as TextNode[],
+        this.textFormat,
+        this.textLocation,
+        {
+          ...this.generateOptions,
+          forceInline: true,
+        },
+      ) ?? '';
+
+    this.write(text);
   }
 
   protected writeSymbolMark(mark: SymbolMark) {

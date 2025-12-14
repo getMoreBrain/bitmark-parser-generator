@@ -55,6 +55,11 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.plainText,
       },
       {
+        key: ConfigKey.property_translationOf,
+        description: 'Translation source reference',
+        format: TagFormat.plainText,
+      },
+      {
         key: ConfigKey.property_spansPageBreak,
         description: 'If true, the bit spans a page break',
         format: TagFormat.boolean,
@@ -705,6 +710,12 @@ const GROUPS: _GroupsConfig = {
         description: 'If true, the book has print restrictions',
         format: TagFormat.boolean,
         defaultValue: 'true',
+      },
+      {
+        key: ConfigKey.property_enforceUpdateOverUserInput,
+        description: 'If true, prioritize new content over legacy content from the instance API',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
       },
     ],
   },
