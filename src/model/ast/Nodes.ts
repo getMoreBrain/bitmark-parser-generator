@@ -75,6 +75,7 @@ export interface Bit {
   isEditable?: Property;
   aiGenerated?: Property;
   machineTranslated?: Property;
+  translationOf?: Property;
   spansPageBreak?: Property;
   searchIndex?: Property;
   analyticsTag?: Property;

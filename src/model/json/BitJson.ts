@@ -30,6 +30,7 @@ export interface BitJson {
   isEditable: boolean;
   aiGenerated: boolean;
   machineTranslated: string;
+  translationOf: string;
   spansPageBreak: boolean;
   searchIndex: string | string[];
   analyticsTag: string | string[];

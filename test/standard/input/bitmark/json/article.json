@@ -9,6 +9,7 @@
       ],
       "sourceRL": "123",
       "machineTranslated": "© Google 2024",
+      "translationOf": "original-article-bit",
       "lang": "en-UK",
       "publisher": [
         "kpmg"
@@ -150,7 +151,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.35.0"
     },
-    "bitmark": "[.article:bitmark++]\n[@id::5__5:32^]**fg^e!!--``test^]]\n[@machineTranslated: © Google 2024]\n[@lang:en-UK]\n[@sourceRL:123]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
+    "bitmark": "[.article:bitmark++]\n[@id::5__5:32^]**fg^e!!--``test^]]\n[@machineTranslated: © Google 2024]\n[@translationOf:original-article-bit]\n[@lang:en-UK]\n[@sourceRL:123]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
   },
   {
     "bit": {
