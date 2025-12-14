@@ -53,9 +53,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.info:bitmark++]\n[@id:287895]\n**Assignment** is very close to an ==article==|link:https://docs.bitmark.cloud/quizzes/#article|. The difference is, that this is a \"quiz\" and therefore has an instruction property. The distinction is important for display, sharing, ..."
   },
@@ -92,9 +92,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -171,9 +171,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",

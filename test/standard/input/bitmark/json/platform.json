@@ -15,9 +15,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.brand-color]\n[@brandColor: #e95a0c]\n[@brandColorName: Vibrant Orange]"
   },
@@ -82,29 +82,29 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "[&platformBackgroundImage] is not valid here (incorrectly chained?). It will be ignored",
           "text": "[&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]",
           "location": {
             "start": {
-              "line": 9,
+              "line": 14,
               "column": 1,
-              "offset": 276
+              "offset": 350
             },
             "end": {
-              "line": 9,
+              "line": 14,
               "column": 76,
-              "offset": 351
+              "offset": 425
             }
           }
         }
       ]
     },
-    "bitmark": "[.platform]\n[@platformName: Sobrado]\n[&platformIcon: https://sobrado.getmorebrain.com/sobrado_icon.png]\n[@platformPrimaryColor: white]\n[@platformSecondaryColor: white]\n[@platformScrollbarColor: white]\n[@platformMessageBackgroundColor: white]\n[@platformBackgroundColor: white]\n[&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]\n[@platformBorderColor: #bac2c4]\n[@platformSelectionTextColor: #56b746]\n[@platformBaseLayerColor: #f0f0f0]\n[@platformMargin: 10px]\n[@platformBorderRadius: 5px]\n[@platformSelectionBorderRadius: 3px]\n[@platformNeedsShadow: true]"
+    "bitmark": "[.platform]\n[@platformName: Sobrado]\n[&platformIcon: https://sobrado.getmorebrain.com/sobrado_icon.png]\n[@platformPrimaryColor: white]\n[@platformSecondaryColor: white]\n[@platformScrollbarColor: white]\n[@platformMessageBackgroundColor: white]\n[@platformBackgroundColor: white]\n[&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]\n[@platformBorderColor: #bac2c4]\n[@platformSelectionTextColor: #56b746]\n[@platformBaseLayerColor: #f0f0f0]\n[@platformMargin: 10]\n[@platformBorderRadius: 5]\n[@platformSelectionBorderRadius: 3]\n[@platformNeedsShadow: true]"
   },
   {
     "bit": {
@@ -139,9 +139,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.platform-header]\n[&platformLogo: https://sobrado.getmorebrain.com/sobrado_logo.png]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: #19333B]"
   },
@@ -161,9 +161,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.platform-system-icon]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: green]"
   },
@@ -187,9 +187,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.platform-main]\n[@platformPrimaryColor: white]\n[@platformSecondaryColor: white]\n[@platformScrollbarColor: white]\n[@platformSelectionColor: orange]\n[@platformSeparatorColor: orange]\n[@platformBackgroundColor: white]"
   },
@@ -209,9 +209,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.platform-main-button]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: white]"
   },
@@ -233,9 +233,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.platform-main-input]\n[@platformPlaceholderColor: gray]\n[@platformTextSelectionColor: orange]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: green]"
   },
@@ -257,9 +257,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.platform-section-header]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: #19333B]\n[@platformButtonPrimaryColor: white]\n[@platformButtonBackgroundColor: white]"
   },
@@ -282,9 +282,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.platform-section]\n[@platformPrimaryColor: white]\n[@platformSecondaryColor: white]\n[@platformScrollbarColor: white]\n[@platformSelectionColor: orange]\n[@platformBackgroundColor: white]"
   },
@@ -304,9 +304,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.platform-section-button]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: white]"
   },
@@ -328,9 +328,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.platform-section-input]\n[@platformPlaceholderColor: gray]\n[@platformTextSelectionColor: orange]\n[@platformPrimaryColor: white]\n[@platformBackgroundColor: green]"
   },
@@ -377,9 +377,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.platform-section-chat]\n[@platformPrimaryColor: white]\n[@platformSecondaryColor: white]\n[@platformScrollbarColor: white]\n[@platformMessageBackgroundColor: white]\n[@platformBackgroundColor: white]\n[&platformBackgroundImage: https://sobrado.getmorebrain.com/sobrado_bg.png]\n[@platformBorderColor: #bac2c4]\n[@platformSelectionTextColor: #56b746]\n[@platformBaseLayerColor: #f0f0f0]\n[@platformMargin: 10]\n[@platformBorderRadius: 5]\n[@platformSelectionBorderRadius: 3]\n[@platformNeedsShadow: true]"
   }

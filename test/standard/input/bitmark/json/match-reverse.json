@@ -106,9 +106,9 @@
       "heading": {}
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.match-reverse]\n[@id:287869]\n[@additionalSolutions: word1 ]\n[@additionalSolutions: word2 ]\n[@additionalSolutions: word3 ]\n[%][%match-reverse]\n[!Wie heißen die passenden Nomen?]\n===\nTier\n==\ndas[@example]\n===\nKuh\n==\ndie\n===\nLöwe\n==\ndie\n===\nSchmetterling\n==\nder\n==="
   }

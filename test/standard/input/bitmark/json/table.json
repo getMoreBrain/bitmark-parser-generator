@@ -142,11 +142,11 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.table]\n[@tableFixedHeader:true]\n[@tableHeaderWhitespaceNoWrap:false]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+    "bitmark": "[.table]\n[@tableFixedHeader:true]\n[@tableHeaderWhitespaceNoWrap]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
   {
     "bit": {
@@ -601,9 +601,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "[@tableRowSpan] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
@@ -612,12 +612,12 @@
             "start": {
               "line": 31,
               "column": 1,
-              "offset": 351
+              "offset": 345
             },
             "end": {
               "line": 31,
               "column": 18,
-              "offset": 368
+              "offset": 362
             }
           }
         },
@@ -628,12 +628,12 @@
             "start": {
               "line": 32,
               "column": 1,
-              "offset": 369
+              "offset": 363
             },
             "end": {
               "line": 32,
               "column": 18,
-              "offset": 386
+              "offset": 380
             }
           }
         },
@@ -644,12 +644,12 @@
             "start": {
               "line": 35,
               "column": 1,
-              "offset": 397
+              "offset": 391
             },
             "end": {
               "line": 35,
               "column": 18,
-              "offset": 414
+              "offset": 408
             }
           }
         },
@@ -660,12 +660,12 @@
             "start": {
               "line": 36,
               "column": 1,
-              "offset": 415
+              "offset": 409
             },
             "end": {
               "line": 36,
               "column": 18,
-              "offset": 432
+              "offset": 426
             }
           }
         },
@@ -676,12 +676,12 @@
             "start": {
               "line": 39,
               "column": 1,
-              "offset": 441
+              "offset": 435
             },
             "end": {
               "line": 39,
               "column": 18,
-              "offset": 458
+              "offset": 452
             }
           }
         },
@@ -692,12 +692,12 @@
             "start": {
               "line": 40,
               "column": 1,
-              "offset": 459
+              "offset": 453
             },
             "end": {
               "line": 40,
               "column": 23,
-              "offset": 481
+              "offset": 475
             }
           }
         },
@@ -708,12 +708,12 @@
             "start": {
               "line": 43,
               "column": 1,
-              "offset": 488
+              "offset": 482
             },
             "end": {
               "line": 43,
               "column": 18,
-              "offset": 505
+              "offset": 499
             }
           }
         },
@@ -724,12 +724,12 @@
             "start": {
               "line": 44,
               "column": 1,
-              "offset": 506
+              "offset": 500
             },
             "end": {
               "line": 44,
               "column": 18,
-              "offset": 523
+              "offset": 517
             }
           }
         },
@@ -740,12 +740,12 @@
             "start": {
               "line": 48,
               "column": 1,
-              "offset": 554
+              "offset": 548
             },
             "end": {
               "line": 48,
               "column": 18,
-              "offset": 571
+              "offset": 565
             }
           }
         },
@@ -756,12 +756,12 @@
             "start": {
               "line": 51,
               "column": 1,
-              "offset": 579
+              "offset": 573
             },
             "end": {
               "line": 51,
               "column": 18,
-              "offset": 596
+              "offset": 590
             }
           }
         },
@@ -772,12 +772,12 @@
             "start": {
               "line": 54,
               "column": 1,
-              "offset": 604
+              "offset": 598
             },
             "end": {
               "line": 54,
               "column": 18,
-              "offset": 621
+              "offset": 615
             }
           }
         },
@@ -788,12 +788,12 @@
             "start": {
               "line": 58,
               "column": 1,
-              "offset": 632
+              "offset": 626
             },
             "end": {
               "line": 58,
               "column": 20,
-              "offset": 651
+              "offset": 645
             }
           }
         },
@@ -804,12 +804,12 @@
             "start": {
               "line": 59,
               "column": 1,
-              "offset": 652
+              "offset": 646
             },
             "end": {
               "line": 59,
               "column": 18,
-              "offset": 669
+              "offset": 663
             }
           }
         },
@@ -820,12 +820,12 @@
             "start": {
               "line": 60,
               "column": 1,
-              "offset": 670
+              "offset": 664
             },
             "end": {
               "line": 60,
               "column": 18,
-              "offset": 687
+              "offset": 681
             }
           }
         },
@@ -836,12 +836,12 @@
             "start": {
               "line": 85,
               "column": 1,
-              "offset": 768
+              "offset": 762
             },
             "end": {
               "line": 85,
               "column": 20,
-              "offset": 787
+              "offset": 781
             }
           }
         },
@@ -852,12 +852,12 @@
             "start": {
               "line": 86,
               "column": 1,
-              "offset": 788
+              "offset": 782
             },
             "end": {
               "line": 86,
               "column": 18,
-              "offset": 805
+              "offset": 799
             }
           }
         },
@@ -868,12 +868,12 @@
             "start": {
               "line": 100,
               "column": 1,
-              "offset": 851
+              "offset": 845
             },
             "end": {
               "line": 100,
               "column": 20,
-              "offset": 870
+              "offset": 864
             }
           }
         },
@@ -884,12 +884,12 @@
             "start": {
               "line": 101,
               "column": 1,
-              "offset": 871
+              "offset": 865
             },
             "end": {
               "line": 101,
               "column": 18,
-              "offset": 888
+              "offset": 882
             }
           }
         },
@@ -900,12 +900,12 @@
             "start": {
               "line": 115,
               "column": 1,
-              "offset": 949
+              "offset": 943
             },
             "end": {
               "line": 115,
               "column": 20,
-              "offset": 968
+              "offset": 962
             }
           }
         },
@@ -916,12 +916,12 @@
             "start": {
               "line": 116,
               "column": 1,
-              "offset": 969
+              "offset": 963
             },
             "end": {
               "line": 116,
               "column": 18,
-              "offset": 986
+              "offset": 980
             }
           }
         },
@@ -932,12 +932,12 @@
             "start": {
               "line": 117,
               "column": 1,
-              "offset": 987
+              "offset": 981
             },
             "end": {
               "line": 117,
               "column": 18,
-              "offset": 1004
+              "offset": 998
             }
           }
         },
@@ -948,12 +948,12 @@
             "start": {
               "line": 123,
               "column": 1,
-              "offset": 1048
+              "offset": 1042
             },
             "end": {
               "line": 123,
               "column": 18,
-              "offset": 1065
+              "offset": 1059
             }
           }
         }
@@ -1116,9 +1116,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.table]\n[@tableSearch:false]\n[@tableSort:false]\n[@caption:This is the table caption]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -1277,9 +1277,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.table]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n[@tablePaginationLimit:42]\n[@tableHeight:99]\n[@tableWhitespaceNoWrap:false]\n[@tableAutoWidth:false]\n[@tableResizableColumns:true]\n[@caption: This is the caption ]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -1309,9 +1309,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.table]"
   },
@@ -1458,9 +1458,9 @@
       "tableResizableColumns": false
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.table-alt]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n[@tableColumnMinWidth:200]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -1607,9 +1607,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.standard-table-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -1756,9 +1756,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.standard-table-non-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -1905,9 +1905,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.standard-remark-table-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -2054,9 +2054,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.standard-remark-table-non-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -2287,9 +2287,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.table:bitmark++]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\n**John**\n--\njohn@example.com\n--\n(353) __01__ 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc.\n\n===="
   },
@@ -2319,9 +2319,9 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.table:xml]\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n  <to>Tove</to>\n  <from>Jani</from>\n  <heading>Reminder</heading>\n  <body>Don't forget me this weekend!</body>\n</note>"
   },
@@ -2459,9 +2459,9 @@
       "tableHeaderWhitespaceNoWrap": false
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.table:bitmark++]\n[@tableFixedHeader:false]\n[@tableSearch:false]\n[@tableSort:false]\n[@tablePagination:false]\n[@tablePaginationLimit:0]\n[@tableHeight:0]\n[@tableWhitespaceNoWrap:true]\n[@tableAutoWidth:true]\n[@tableResizableColumns:false]\n[@tableColumnMinWidth:0]\n\n\n\n====\n[#Fleischstück]\n--\n[#Schnittarten]\n--\n[#Klassische Gartechniken]\n====\n**Stotzen**\n==cuisseaud==|notranslate|\n==hindquarter==|notranslate|\n\n--\nganz\n\n--\nBraten, Glasieren"
   }

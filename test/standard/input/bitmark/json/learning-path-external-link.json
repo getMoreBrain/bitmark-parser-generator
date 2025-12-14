@@ -49,9 +49,9 @@
       "isInfoOnly": false
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.learning-path-external-link&image]\n[@id:255679]\n[&image:https://docs.bitmark.cloud/bit-books/careum/fachfrau_fachmann_gesundheit/web-resources/images/classtime_logo.png]\n[!Classtime]\n[@action:HK E.1 Infektionslehre]\n[@externalLink:https://www.classtime.com/code/MPYJ4R/27657c8e-e368-452b-881c-d3b0a6a53fba]\n[@externalLinkText:Link zum Online Test]"
   }

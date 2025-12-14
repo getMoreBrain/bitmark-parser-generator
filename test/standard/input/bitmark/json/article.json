@@ -146,9 +146,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.article:bitmark++]\n[@id::5__5:32^]**fg^e!!--``test^]]\n[@machineTranslated: © Google 2024]\n[@lang:en-UK]\n[@sourceRL:123]\n[@publisher:kpmg]\n[@theme:grundzuege]\n[%item][%lead][%pageNumber][%marginNumber][%oneTooMany]\n\nintern und extern\n• Leitbild\n• transparente Kommunikation\n• marktübliche Vergütung\n• etc."
   },
@@ -224,9 +224,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -310,9 +310,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.article:bitmark++]\n[@id:151972]\n[%][%][%pageNumber]\n\n|example:Beispiel\nGoogle ist seit Jahren weltweit einer der attraktivsten Arbeitgeber. Man liest von Wäscheservice, Fitness-Centers oder Abenteuerrutschbahnen, welche die Mitarbeitenden gratis nutzen können. Es wäre nicht zielführend, im eigenen Unternehmen eine Abenteuerrutschbahn aufzustellen, ohne Nutzen und Auswirkungen zu hinterfragen."
   },
@@ -438,9 +438,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -590,9 +590,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -664,9 +664,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -749,9 +749,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -834,9 +834,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -999,9 +999,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -1185,9 +1185,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Bit 'article' might contain a mistake: \n==\n",
@@ -1248,9 +1248,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -1327,9 +1327,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",

@@ -434,9 +434,9 @@
       }
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.pronunciation-table]\n[!Diphthongs]\n====\n[#ɪə]\n**ea**r\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#eɪ]\nc**a**ke\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n====\n[#ʊə]\n**eu**ro\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#ɔɪ]\nc**oi**n\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#əʊ]\nb**oa**t\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n====\n[#eə]\nch**ai**r\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#aɪ]\n**i**ce\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n--\n[#aʊ]\nc**ow**\n[&audio:https://https://pronunciation.ef.com/uk/reference/assets/uk-phoneme-i%cb%90.mp3]\n===="
   },
@@ -457,9 +457,9 @@
       }
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.pronunciation-table]"
   }

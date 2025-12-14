@@ -27,9 +27,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.separator]\n[@id:92375]\nThis is a separator"
   },
@@ -47,9 +47,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.separator]"
   },
@@ -92,9 +92,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",

@@ -45,6 +45,7 @@
       "body": [],
       "maxTocChapterLevel": -1,
       "hasPrintRestriction": true,
+      "enforceUpdateOverUserInput": false,
       "hasMarkAsDone": false,
       "processHandIn": false,
       "isPublic": false,
@@ -52,9 +53,9 @@
       "chatWithBookBrainKey": ""
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.book]\n[@id:book-resource-123]\n[#Book with Resource CoverImage]\n[&coverImage:https://docs.bitmark.cloud/bit-books/test/cover-resource.png]"
   },
@@ -86,9 +87,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.article:bitmark++]\n[@id:article-123]\nThis book uses a resource for the cover image instead of a property."
   }

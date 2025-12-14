@@ -706,6 +706,12 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.boolean,
         defaultValue: 'true',
       },
+      {
+        key: ConfigKey.property_enforceUpdateOverUserInput,
+        description: 'If true, prioritize new content over legacy content from the instance API',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
     ],
   },
   [ConfigKey.group_learningPathCommon]: {

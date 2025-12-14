@@ -28,9 +28,9 @@
       "slug": ""
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.page-subscribe]\n[@id:190596]\n[!Welche Bedeutung hat Arbeit für Sie?]"
   },
@@ -63,9 +63,9 @@
       "slug": ""
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.page-subscribe]\n[@id:190597]\n[!Wo sehen Sie die Chancen und Gefahren „moderner“ Arbeit?]"
   },
@@ -98,9 +98,9 @@
       "slug": ""
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.page-subscribe]\n[@id:190598]\n[!Ist Feelgood Management ein „Luxusproblem“?]"
   },
@@ -144,9 +144,9 @@
       "slug": ""
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.page-subscribe]\n[@id:191144]\n[%1][%Verstehen „Design Challenge“]"
   },
@@ -190,9 +190,9 @@
       "slug": ""
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.page-subscribe]\n[@id:191145]\n[%2][%Beobachten / befragen]"
   },
@@ -236,9 +236,9 @@
       "slug": ""
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.page-subscribe]\n[@id:191146]\n[%3][%Sichtweisen definieren / zusammen tragen „How might we“]"
   },
@@ -282,9 +282,9 @@
       "slug": ""
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.page-subscribe]\n[@id:191147]\n[%4][%Ideen finden]"
   },
@@ -328,9 +328,9 @@
       "slug": ""
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.page-subscribe]\n[@id:191148]\n[%5][%Prototypen entwickeln]"
   },
@@ -376,9 +376,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.page-subscribe]\n[@id:191149]\n[@slug:testing-1234]\n[%6][%Testen]\n[@buttonCaption:OK!]\n[@mailingList:gmb@getmorebrain.com;bmg@getmorebrain.com]"
   }

@@ -59,9 +59,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -296,9 +296,9 @@
       ]
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.q-and-a:bitmark++&image]\n[@id:1920727]\n[%Übung 1][%][%19][%Nasty ^ ^^ =^=]\n[!**Rechnungswesen als modellhafte Abbildung der betrieblichen Realität**\nDie:\n|image:https://ex__am==ple.com/im**age.png|@width:650|\n\nWelcher Verein wurde deutscher Meister?]\n[&image:https://ex__am==ple.com/im**age.png]\n\nSie haben keinen Schimmer?\n==This is a link==|link:https://ex__am==ple.com/im**age.png|\n\n\nhttps://ex__am==ple.com/im**age.png\n\n[?customerId:https://ex__am==ple.com/im**age.png]"
   }

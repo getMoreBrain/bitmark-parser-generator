@@ -27,9 +27,9 @@
       "body": []
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.page-open-book-list]\n[@id:342341]\n[@book:the_book_id][►ch-5]\n[@book:the_other_book_id][►ch-6]\n\n[@buttonCaption: Open ]"
   }

@@ -59,6 +59,7 @@
       "instruction": [],
       "body": [],
       "hasPrintRestriction": true,
+      "enforceUpdateOverUserInput": false,
       "hasMarkAsDone": false,
       "processHandIn": false,
       "isPublic": false,
@@ -66,9 +67,9 @@
       "chatWithBookBrainKey": ""
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "[@bookDiff] is included more than the required 1 time(s). The earlier ones will be ignored",
@@ -119,6 +120,7 @@
       "body": [],
       "maxTocChapterLevel": -1,
       "hasPrintRestriction": true,
+      "enforceUpdateOverUserInput": false,
       "hasMarkAsDone": false,
       "processHandIn": false,
       "isPublic": false,
@@ -126,9 +128,9 @@
       "chatWithBookBrainKey": ""
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.book-diff]"
   }

@@ -190,9 +190,9 @@
       "heading": {}
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.match-all:bitmark++]\n[@id:92546]\n[%B2b]\n[!Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.]\n\n|remark\nhauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe\n\n\n===\n[%1]Beherbergung\n==\nUnterbringung\n--\nÜbernachtung\n===\n[%2]Herberge\n==\nHotel\n--\nUnterbringungsmöglichkeit\n===\n[%3]übernachten\n==\nlogieren\n--\nresidieren\n===\n[%4]überwiegend\n==\nhauptsächlich\n--\nweitgehend\n===\n[%5]einen guten Ruf haben\n==\neinen guten Namen haben\n--\nangesehen sein\n==="
   },
@@ -263,9 +263,9 @@
       "heading": {}
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.match-all]\n[@id:324342]\n[%item][%Lead]\n[!Instruction]\n===\nHe will fix your laptop for you.\n==\nYour laptop will be fixed by him.\n--\nYour laptop will be fixed for you by him.\n==="
   },
@@ -434,9 +434,9 @@
       "heading": {}
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0",
+      "textParserVersion": "8.37.3",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -847,9 +847,9 @@
       "heading": {}
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.match-all:bitmark++]\n[%B2b ]\n[!Textarbeit\n\nWortschatz: Suchen Sie jeweils zwei Synonyme. Achtung: Nicht alle vorgegebenen Wörter können verwendet werden.]\n\n\nhauptsächlich ◇ der kleinste Teil ◇ Ausstattung ◇ Unterbringung ◇ Hotel ◇ logieren ◇ weitgehend ◇ residieren ◇ angesehen sein ◇ Unterbringungsmöglichkeit ◇ einen guten Namen haben ◇ nicht akzeptiert werden ◇ essen ◇ Bürogebäude ◇ Übernachtung ◇ Kneipe\n\n\n===\n[%1]Beherbergung\n==\nUnterbringung\n--\nÜbernachtung\n===\n[%2]Herberge\n==\nHotel\n--\nUnterbringungsmöglichkeit\n===\n[%3]übernachten\n==\nlogieren\n--\nresidieren\n===\n[%4]überwiegend\n==\nhauptsächlich\n--\nweitgehend\n===\n[%5]einen guten Ruf haben\n==\neinen guten Namen haben\n--\nangesehen sein\n==="
   },
@@ -1071,9 +1071,9 @@
       "heading": {}
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.match-all]\n[%C11]\n[!Bilden Sie Fragen und antworten Sie wie im Beispiel.]\n\nKannst Du ...?\n\n===\n◇ ich – dein Bleistift – mal – leihen[@example]\n==\nKannst du mir mal deinen Bleistift leihen? Ja, ich leihe ihn dir.\n===\n[%1]die Gäste – das Restaurant Milano – auf dem Stadtplan – zeigen\n==\nKannst du den Gästen auf dem Stadtplan das Restaurant „Milano“ zeigen?\n--\nJa, ich zeige es ihnen.\n===\n[%2]die Firma Krüger – das Angebot – faxen\n==\nKannst du der Firma Krüger das Angebot faxen?\n--\nJa, ich faxe es ihr.\n===\n[%3]ich – die Hausarbeit – am Wochenende – abnehmen\n==\nKannst du mir am Wochenende die Hausarbeit abnehmen?\n--\nJa, ich nehme sie dir ab.\n===\n[%4]der Chef – das Protokoll der Sitzung – heute noch – geben\n==\nKannst du dem Chef heute noch das Protokoll der Sitzung geben?\n--\nJa, ich gebe es ihm.\n===\n[%5]ich – dein Auto – schenken\n==\nKannst du mir dein Auto schenken?\n--\nNein, ich schenke es dir nicht.\n===\n[%6]wir – zwei Flaschen Mineralwasser – mitbringen\n==\nKannst du uns zwei Flaschen Mineralwasser mitbringen?\n--\nJa, ich bringe sie euch mit.\n==="
   }

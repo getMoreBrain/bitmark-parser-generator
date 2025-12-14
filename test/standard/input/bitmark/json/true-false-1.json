@@ -53,9 +53,9 @@
       "example": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.true-false-1]\n[@id:285736]\n[%28][%true-false-1]\n[@example]\n[+Ein Elefant ist grösser als eine Maus.]"
   },
@@ -113,9 +113,9 @@
       "example": true
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.true-false-1]\n[@id:285736]\n[%28][%true-false-1]\n[+Ein Elefant ist grösser als eine Maus.][@example]"
   },
@@ -173,9 +173,9 @@
       "example": false
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.true-false-1]\n[@id:285736]\n[%28][%true-false-1]\n[+Ein Elefant ist grösser als eine Maus.][@example:false]"
   },
@@ -233,9 +233,9 @@
       "example": false
     },
     "parser": {
-      "version": "4.18.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.35.0"
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.true-false-1]\n[@id:285736]\n[%28][%true-false-1]\n[@example:false]\n[+Ein Elefant ist grösser als eine Maus.]"
   }
