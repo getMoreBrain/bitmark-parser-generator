@@ -5227,23 +5227,9 @@ const BITS: _BitsConfig = {
     description: 'Footnote bit, used to create footnotes in articles or books',
   },
   [BitType.formFreeText]: {
-    since: '1.3.0',
-    baseBitType: BitType._standard,
+    since: '5.3.0',
+    baseBitType: BitType.interview,
     description: 'Form free text bit, used to create free text forms in articles or books',
-    quizBit: true,
-    tags: [
-      {
-        key: ConfigKey.group_quizCommon,
-        description: 'Common quiz tags for form free text',
-      },
-      {
-        key: ConfigKey.property_reasonableNumOfChars,
-        description:
-          'Reasonable number of characters for the form free text, used to limit input size',
-        format: TagFormat.number,
-      },
-    ],
-    cardSet: CardSetConfigKey.questions,
   },
   [BitType.groupBorn]: {
     since: '1.3.0',
@@ -5308,44 +5294,16 @@ const BITS: _BitsConfig = {
     ],
   },
   [BitType.handInFreeText]: {
-    since: '1.3.0',
-    baseBitType: BitType._standard,
+    since: '5.3.0',
+    baseBitType: BitType.interview,
     description:
       'Hand in free text bit, used to create free text submission sections in articles or books',
-    quizBit: true,
-    tags: [
-      {
-        key: ConfigKey.group_quizCommon,
-        description: 'Common quiz tags for hand in free text',
-      },
-      {
-        key: ConfigKey.property_reasonableNumOfChars,
-        description:
-          'Reasonable number of characters for the hand in free text, used to limit input size',
-        format: TagFormat.number,
-      },
-    ],
-    cardSet: CardSetConfigKey.questions,
   },
   [BitType.handInFreeTextExpert]: {
-    since: '1.3.0',
-    baseBitType: BitType._standard,
+    since: '5.3.0',
+    baseBitType: BitType.interview,
     description:
       'Hand in free text expert bit, used to create free text expert submission sections in articles or books',
-    quizBit: true,
-    tags: [
-      {
-        key: ConfigKey.group_quizCommon,
-        description: 'Common quiz tags for hand in free text expert',
-      },
-      {
-        key: ConfigKey.property_reasonableNumOfChars,
-        description:
-          'Reasonable number of characters for the hand in free text expert, used to limit input size',
-        format: TagFormat.number,
-      },
-    ],
-    cardSet: CardSetConfigKey.questions,
   },
   [BitType.handInLocation]: {
     since: '1.5.15',

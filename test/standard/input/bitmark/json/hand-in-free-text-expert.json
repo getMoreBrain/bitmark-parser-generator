@@ -52,10 +52,12 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "footer": []
     },
     "parser": {
-      "version": "5.2.0",
+      "version": "5.3.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -143,10 +145,12 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "footer": []
     },
     "parser": {
-      "version": "5.2.0",
+      "version": "5.3.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -282,10 +286,12 @@
           "isExample": false,
           "example": null
         }
-      ]
+      ],
+      "isExample": false,
+      "footer": []
     },
     "parser": {
-      "version": "5.2.0",
+      "version": "5.3.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
