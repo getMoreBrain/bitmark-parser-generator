@@ -1,6 +1,6 @@
 ## Prerequisites
 
-- Please read /specs/ARCHITECTURE.md now.
+- Read /specs/ARCHITECTURE.md now.
 
 ## AI Tools
 
