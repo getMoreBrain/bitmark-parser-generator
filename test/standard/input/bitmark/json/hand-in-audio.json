@@ -48,7 +48,7 @@
       ]
     },
     "parser": {
-      "version": "5.2.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -114,7 +114,7 @@
       ]
     },
     "parser": {
-      "version": "5.2.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -166,7 +166,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.2.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -267,7 +267,7 @@
       ]
     },
     "parser": {
-      "version": "5.2.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -324,7 +324,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.2.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
