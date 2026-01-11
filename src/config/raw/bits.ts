@@ -4493,6 +4493,11 @@ const BITS: _BitsConfig = {
         maxCount: 1,
       },
       {
+        key: ConfigKey.property_platformLogoMaxHeight,
+        description: 'Maximum height for the platform logo',
+        format: TagFormat.number,
+      },
+      {
         key: ConfigKey.group_platformStylesCommon,
         description: 'Common platform styles',
       },

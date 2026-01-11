@@ -24,6 +24,7 @@
 
 [.platform-header]
 [&platformLogo: https://sobrado.getmorebrain.com/sobrado_logo.png]
+[@platformLogoMaxHeight: 40]
 [@platformPrimaryColor: white]
 [@platformBackgroundColor: #19333B]
 

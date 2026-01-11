@@ -331,6 +331,7 @@ class Builder extends BaseBuilder {
       platformName?: string;
       platformIcon?: Partial<ImageResourceWrapperJson>;
       platformLogo?: Partial<ImageResourceWrapperJson>;
+      platformLogoMaxHeight?: number;
       platformPrimaryColor?: string;
       platformSecondaryColor?: string;
       platformBackgroundColor?: string;
@@ -1295,6 +1296,12 @@ class Builder extends BaseBuilder {
       ),
       platformIcon: this.toImageResource(context, data.platformIcon),
       platformLogo: this.toImageResource(context, data.platformLogo),
+      platformLogoMaxHeight: this.toAstProperty(
+        bitType,
+        ConfigKey.property_platformLogoMaxHeight,
+        data.platformLogoMaxHeight,
+        options,
+      ),
       platformPrimaryColor: this.toAstProperty(
         bitType,
         ConfigKey.property_platformPrimaryColor,
