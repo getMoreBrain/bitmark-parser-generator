@@ -142,7 +142,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -601,7 +601,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -1116,7 +1116,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1277,7 +1277,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1309,7 +1309,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1458,7 +1458,7 @@
       "tableResizableColumns": false
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1607,7 +1607,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1756,7 +1756,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1905,7 +1905,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2054,7 +2054,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2287,7 +2287,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2319,7 +2319,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2459,7 +2459,7 @@
       "tableHeaderWhitespaceNoWrap": false
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },

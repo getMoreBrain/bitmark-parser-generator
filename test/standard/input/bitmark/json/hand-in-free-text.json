@@ -1,0 +1,1016 @@
+[
+  {
+    "bit": {
+      "type": "hand-in-free-text",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "198779"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Erklären Sie den Begriff „Steuerüberwälzung\".",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [],
+      "questions": [
+        {
+          "question": [],
+          "partialAnswer": "",
+          "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.",
+          "additionalSolutions": [
+            "Additional solution 1",
+            "Additional solution 2",
+            "Additional solution 3"
+          ],
+          "reasonableNumOfChars": 101,
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": [],
+          "partialAnswer": "",
+          "sampleSolution": "Some other text **2**.",
+          "reasonableNumOfChars": 20,
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": [],
+          "partialAnswer": "",
+          "sampleSolution": "Some other text again.",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": [],
+          "partialAnswer": "This is a **partialAnswer** 2",
+          "sampleSolution": "Some other text again.",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.hand-in-free-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 2,
+              "column": 31,
+              "offset": 31
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.hand-in-free-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 2,
+              "column": 31,
+              "offset": 31
+            }
+          }
+        },
+        {
+          "message": "[@sampleSolution] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[@sampleSolution:Some other text **2**.]",
+          "location": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 480
+            },
+            "end": {
+              "line": 16,
+              "column": 41,
+              "offset": 520
+            }
+          },
+          "original": {
+            "text": "[@sampleSolution:Some other text.]",
+            "location": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 445
+              },
+              "end": {
+                "line": 15,
+                "column": 35,
+                "offset": 479
+              }
+            }
+          }
+        },
+        {
+          "message": "[@partialAnswer] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[@partialAnswer:This is a **partialAnswer** 2]",
+          "location": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 656
+            },
+            "end": {
+              "line": 22,
+              "column": 47,
+              "offset": 702
+            }
+          },
+          "original": {
+            "text": "[@partialAnswer:This is a **partialAnswer**]",
+            "location": {
+              "start": {
+                "line": 21,
+                "column": 1,
+                "offset": 611
+              },
+              "end": {
+                "line": 21,
+                "column": 45,
+                "offset": 655
+              }
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.hand-in-free-text:bitmark--]\n[@id:198779]\n[@reasonableNumOfChars:100]\n[%1]\n[!Erklären Sie den Begriff „Steuerüberwälzung\".]\n===\n[@reasonableNumOfChars:101]\n[@sampleSolution:Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]\n[@additionalSolutions:Additional solution 1]\n[@additionalSolutions:Additional solution 2]\n[@additionalSolutions:Additional solution 3]\n===\n[@reasonableNumOfChars:20]\n[@sampleSolution:Some other text.]\n[@sampleSolution:Some other text **2**.]\n===\n[@sampleSolution:Some other text again.]\n===\n[@sampleSolution:Some other text again.]\n[@partialAnswer:This is a **partialAnswer**]\n[@partialAnswer:This is a **partialAnswer** 2]\n==="
+  },
+  {
+    "bit": {
+      "type": "hand-in-free-text",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "136528"
+      ],
+      "bubbleTag": [
+        "Tag 1",
+        "",
+        "Tag 2",
+        "**Tag 3**"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "3a",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wählen Sie eine Person auf den Fotos in Aufgabe 2. Schreiben Sie einen kurzen Text in Ihrer Rolle und beantworten Sie die Fragen.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Warum bist du hier? Wie fühlst du dich? Was denkst du gerade?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "questions": [
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Nothing here",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.hand-in-free-text:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 26,
+              "column": 1,
+              "offset": 709
+            },
+            "end": {
+              "line": 26,
+              "column": 37,
+              "offset": 745
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.hand-in-free-text:bitmark--&image]",
+          "location": {
+            "start": {
+              "line": 26,
+              "column": 1,
+              "offset": 709
+            },
+            "end": {
+              "line": 26,
+              "column": 37,
+              "offset": 745
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.hand-in-free-text:bitmark--&image]\n[@id:136528]\n[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]\n[%3a]\n[@bubbleTag:Tag 1]\n[@bubbleTag:]\n[@bubbleTag:Tag 2]\n[@bubbleTag:**Tag 3**]\n[!Wählen Sie eine Person auf den Fotos in Aufgabe 2. Schreiben Sie einen kurzen Text in Ihrer Rolle und beantworten Sie die Fragen.]\nWarum bist du hier? Wie fühlst du dich? Was denkst du gerade?\n===\nNothing here\n==="
+  },
+  {
+    "bit": {
+      "type": "hand-in-free-text",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "198779"
+      ],
+      "extractorTag": [
+        "Tag 1",
+        "Tag 2"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Erklären Sie den Begriff „Steuerüberwälzung\".",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [],
+      "questions": [
+        {
+          "question": [],
+          "partialAnswer": "",
+          "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.hand-in-free-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 43,
+              "column": 1,
+              "offset": 1158
+            },
+            "end": {
+              "line": 43,
+              "column": 31,
+              "offset": 1188
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.hand-in-free-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 43,
+              "column": 1,
+              "offset": 1158
+            },
+            "end": {
+              "line": 43,
+              "column": 31,
+              "offset": 1188
+            }
+          }
+        },
+        {
+          "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
+          "text": "[$Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]",
+          "location": {
+            "start": {
+              "line": 50,
+              "column": 1,
+              "offset": 1304
+            },
+            "end": {
+              "line": 50,
+              "column": 105,
+              "offset": 1408
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.hand-in-free-text:bitmark--]\n[@id:198779]\n[@extractorTag:Tag 1]\n[@extractorTag:Tag 2]\n[%1]\n[!Erklären Sie den Begriff „Steuerüberwälzung\".]\n===\n[$Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]\n==="
+  },
+  {
+    "bit": {
+      "type": "hand-in-free-text",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "198781"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "3",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Mit welchen Steuern (bspw. Einkommenssteuer, Vermögenssteuer, Mehrwertsteuer, Erbschaftssteuer usw.) sind die einzelnen Ereignisse konfrontiert?",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Anton erhält von seinen Eltern (Variante: von seinem Onkel, seiner Tante) einen Erbvorbezug (Variante: eine Schenkung) von Fr. 200'000. Er macht sich nach seiner abgeschlossenen Ausbildung als Finanzplaner selbständig.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "questions": [
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Ereignis Steuern",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "Erbvorbezug, Schenkung Eltern\nIn vielen Kantonen schenkungssteuerfrei für Nachkommen. Nach Erhalt Einkommens-und Vermögenssteuer.",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
+          "text": "[$Erbvorbezug, Schenkung Eltern\nIn vielen Kantonen schenkungssteuerfrei für Nachkommen. Nach Erhalt Einkommens-und Vermögenssteuer.]",
+          "location": {
+            "start": {
+              "line": 62,
+              "column": 1,
+              "offset": 1853
+            },
+            "end": {
+              "line": 63,
+              "column": 101,
+              "offset": 1985
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.hand-in-free-text:bitmark++]\n[@id:198781]\n[%3]\n[!Mit welchen Steuern (bspw. Einkommenssteuer, Vermögenssteuer, Mehrwertsteuer, Erbschaftssteuer usw.) sind die einzelnen Ereignisse konfrontiert?]\n\nAnton erhält von seinen Eltern (Variante: von seinem Onkel, seiner Tante) einen Erbvorbezug (Variante: eine Schenkung) von Fr. 200'000. Er macht sich nach seiner abgeschlossenen Ausbildung als Finanzplaner selbständig.\n===\nEreignis Steuern\n\n[$Erbvorbezug, Schenkung Eltern\nIn vielen Kantonen schenkungssteuerfrei für Nachkommen. Nach Erhalt Einkommens-und Vermögenssteuer.]\n==="
+  },
+  {
+    "bit": {
+      "type": "hand-in-free-text",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "198782"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Geben Sie eine Definition für öffentliche Abgaben und für Steuern.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [],
+      "questions": [
+        {
+          "question": [],
+          "partialAnswer": "",
+          "sampleSolution": "Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.hand-in-free-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 66,
+              "column": 1,
+              "offset": 1991
+            },
+            "end": {
+              "line": 66,
+              "column": 31,
+              "offset": 2021
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.hand-in-free-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 66,
+              "column": 1,
+              "offset": 1991
+            },
+            "end": {
+              "line": 66,
+              "column": 31,
+              "offset": 2021
+            }
+          }
+        },
+        {
+          "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
+          "text": "[$Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.]",
+          "location": {
+            "start": {
+              "line": 71,
+              "column": 1,
+              "offset": 2114
+            },
+            "end": {
+              "line": 71,
+              "column": 168,
+              "offset": 2281
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.hand-in-free-text:bitmark--]\n[@id:198782]\n[%4]\n[!Geben Sie eine Definition für öffentliche Abgaben und für Steuern.]\n===\n[$Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.]\n==="
+  },
+  {
+    "bit": {
+      "type": "hand-in-free-text",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "187612"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "12",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Datum / Unterschriften",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [],
+      "questions": [
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Dieser Bildungsbericht wurde am",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "besprochen.",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "text": "Unterschrift der verantwortlichen Berufsbildnerin / des verantwortlichen Berufsbildners:",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "text": "Unterschrift der lernenden Person:",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "text": "Visum des gesetzlichen Vertreters / der gesetzlichen Vertreterin:",
+                  "type": "text"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "text": "Datum:",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Unterschrift:",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.hand-in-free-text]\n[@id:187612]\n[%12]\n[!Datum / Unterschriften]\n===\nDieser Bildungsbericht wurde am\n===\nbesprochen.\n**Unterschrift der verantwortlichen Berufsbildnerin / des verantwortlichen Berufsbildners:**\n===\n**Unterschrift der lernenden Person:**\n===\n**Visum des gesetzlichen Vertreters / der gesetzlichen Vertreterin:**\nDatum:\n===\nUnterschrift:\n==="
+  },
+  {
+    "bit": {
+      "type": "hand-in-free-text",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "136484"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "9",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die beiden U-förmigen Teile A und B, die aus je 7 Würfeln bestehen, werden zu einer Gesamtfigur zusammengesetzt, wie es angegeben ist.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitmark.cloud",
+          "src": "https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/mathe_2019/web-resources/images/aufnahmepruefung3.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "body": [],
+      "questions": [
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Von wie vielen Würfeln der Gesamtfigur sind genau drei Seitenflächen (Quadrate) sichtbar?",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "a",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Wie viele Quadrate der Figur A werden beim Zusammenfügen mit der Figur B verdeckt?",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "b",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Wie viele Quadrate der Gesamtfigur sind von aussen sichtbar?",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "c",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Auf der Gesamtfigur wandert man entlang von Würfelkanten vom Punkt P auf A zum Punkt Q auf B. Wie lange ist eine solcher Weg mindestens?",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "d",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.hand-in-free-text&image]\n[@id:136484]\n[%9]\n[&image:https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/mathe_2019/web-resources/images/aufnahmepruefung3.png]\n[!Die beiden U-förmigen Teile A und B, die aus je 7 Würfeln bestehen, werden zu einer Gesamtfigur zusammengesetzt, wie es angegeben ist.]\n\n===\n[%a] Von wie vielen Würfeln der Gesamtfigur sind genau drei Seitenflächen (Quadrate) sichtbar?\n===\n[%b] Wie viele Quadrate der Figur A werden beim Zusammenfügen mit der Figur B verdeckt?\n===\n[%c] Wie viele Quadrate der Gesamtfigur sind von aussen sichtbar?\n===\n[%d] Auf der Gesamtfigur wandert man entlang von Würfelkanten vom Punkt P auf A zum Punkt Q auf B. Wie lange ist eine solcher Weg mindestens?\n==="
+  }
+]
