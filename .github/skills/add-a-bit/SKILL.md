@@ -11,4 +11,5 @@ To add a bit, follow this process, considering possible deviations as required:
    - The bit will all relevant tags and properties
    - The bit with various edge cases of tags and properties
    - The bit with no tags or properties, only the header
+   - Do NOT update the `parser.version` in all standard tests
 - Ensure all tests pass
