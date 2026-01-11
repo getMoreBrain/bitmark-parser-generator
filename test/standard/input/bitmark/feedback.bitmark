@@ -86,3 +86,14 @@ Please answer in keywords
 [- Bier]
 [- Wein]
 ====
+
+
+[.hand-in-feedback-expert]
+[@id:test-chained-instruction]
+====
+[! Question ]
+[- A Choice with chained instruction ][!Instruction for A]
+[+ B Choice without chained instruction ]
+--
+Reason text
+====

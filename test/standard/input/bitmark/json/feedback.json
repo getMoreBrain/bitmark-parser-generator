@@ -52,8 +52,8 @@
               "item": [],
               "hint": [],
               "instruction": [],
-              "isExample": true,
-              "example": true
+              "isExample": false,
+              "example": null
             },
             {
               "choice": "Wein",
@@ -178,7 +178,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -254,8 +254,8 @@
               "item": [],
               "hint": [],
               "instruction": [],
-              "isExample": true,
-              "example": true
+              "isExample": false,
+              "example": null
             }
           ],
           "reason": {
@@ -329,27 +329,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
-      "warnings": [
-        {
-          "message": "[@reasonableNumOfChars] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
-          "text": "[@reasonableNumOfChars:300]",
-          "location": {
-            "start": {
-              "line": 39,
-              "column": 1,
-              "offset": 439
-            },
-            "end": {
-              "line": 39,
-              "column": 28,
-              "offset": 466
-            }
-          }
-        }
-      ]
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.feedback]\n[@id:64574]\n[@reasonableNumOfChars:50]\n====\n[!ICH BEVORZUGE …]\n[%1.][%other]\n[+ Bier]\n[+ Wein][@example]\n[@reasonableNumOfChars:300]\n--\n[!Why?]\nPlease answer in keywords\n====\n[!ICH HASSE …]\n[%1I.]\n[- Bier]\n[- Wein]\n===="
   },
@@ -423,8 +405,8 @@
               "item": [],
               "hint": [],
               "instruction": [],
-              "isExample": true,
-              "example": true
+              "isExample": false,
+              "example": null
             }
           ],
           "reason": {
@@ -498,27 +480,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
-      "warnings": [
-        {
-          "message": "[@reasonableNumOfChars] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
-          "text": "[@reasonableNumOfChars:300]",
-          "location": {
-            "start": {
-              "line": 59,
-              "column": 1,
-              "offset": 688
-            },
-            "end": {
-              "line": 59,
-              "column": 28,
-              "offset": 715
-            }
-          }
-        }
-      ]
+      "textParserVersion": "8.37.3"
     },
     "bitmark": "[.hand-in-feedback-expert]\n[@id:64574]\n[@reasonableNumOfChars:50]\n====\n[!ICH BEVORZUGE …]\n[%1.][%other]\n[+ Bier]\n[+ Wein][@example]\n[@reasonableNumOfChars:300]\n--\n[!Why?]\nPlease answer in keywords\n====\n[!ICH HASSE …]\n[%1I.]\n[- Bier]\n[- Wein]\n===="
   },
@@ -592,8 +556,8 @@
               "item": [],
               "hint": [],
               "instruction": [],
-              "isExample": true,
-              "example": true
+              "isExample": false,
+              "example": null
             }
           ],
           "reason": {
@@ -667,28 +631,90 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.2.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
-      "warnings": [
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.hand-in-feedback-self]\n[@id:64574]\n[@reasonableNumOfChars:50]\n====\n[!ICH BEVORZUGE …]\n[%1.][%other]\n[+ Bier]\n[+ Wein][@example]\n[@reasonableNumOfChars:300]\n--\n[!Why?]\nPlease answer in keywords\n====\n[!ICH HASSE …]\n[%1I.]\n[- Bier]\n[- Wein]\n===="
+  },
+  {
+    "bit": {
+      "type": "hand-in-feedback-expert",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "test-chained-instruction"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "feedbacks": [
         {
-          "message": "[@reasonableNumOfChars] is an unknown property. It can be excluded from the output using the 'excludeUnknownProperties' flag",
-          "text": "[@reasonableNumOfChars:300]",
-          "location": {
-            "start": {
-              "line": 79,
-              "column": 1,
-              "offset": 935
-            },
-            "end": {
-              "line": 79,
-              "column": 28,
-              "offset": 962
+          "item": [],
+          "hint": [],
+          "instruction": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Question",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
             }
+          ],
+          "choices": [
+            {
+              "choice": "A Choice with chained instruction",
+              "requireReason": false,
+              "item": [],
+              "hint": [],
+              "instruction": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Instruction for A",
+                      "type": "text"
+                    }
+                  ],
+                  "attrs": {}
+                }
+              ],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "B Choice without chained instruction",
+              "requireReason": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            }
+          ],
+          "reason": {
+            "text": "Reason text",
+            "item": [],
+            "hint": [],
+            "instruction": [],
+            "isExample": false,
+            "example": null
           }
         }
       ]
     },
-    "bitmark": "[.hand-in-feedback-self]\n[@id:64574]\n[@reasonableNumOfChars:50]\n====\n[!ICH BEVORZUGE …]\n[%1.][%other]\n[+ Bier]\n[+ Wein][@example]\n[@reasonableNumOfChars:300]\n--\n[!Why?]\nPlease answer in keywords\n====\n[!ICH HASSE …]\n[%1I.]\n[- Bier]\n[- Wein]\n===="
+    "parser": {
+      "version": "5.2.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.hand-in-feedback-expert]\n[@id:test-chained-instruction]\n====\n[! Question ]\n[- A Choice with chained instruction ][!Instruction for A]\n[+ B Choice without chained instruction ]\n--\nReason text\n===="
   }
 ]
