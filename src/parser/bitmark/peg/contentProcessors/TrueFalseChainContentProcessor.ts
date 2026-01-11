@@ -1,8 +1,11 @@
+import { Enum } from '@ncoderz/superenum';
+
 import { Config } from '../../../../config/Config.ts';
 import { type BodyPart } from '../../../../model/ast/Nodes.ts';
 import { type TagsConfig } from '../../../../model/config/TagsConfig.ts';
 import { BitType } from '../../../../model/enum/BitType.ts';
 import { BodyBitType } from '../../../../model/enum/BodyBitType.ts';
+import { Tag } from '../../../../model/enum/Tag.ts';
 import {
   type ChoiceJson,
   type ResponseJson,
@@ -35,7 +38,23 @@ function trueFalseChainContentProcessor(
   bodyParts: BodyPart[],
 ): void {
   if (contentDepth === BitContentLevel.Chain) {
+    // When processing at Chain level, we need to handle chained tags (like instructions)
+    // Get the tag config for this true/false tag
+    const tagConfig = Config.getTagConfigForTag(tagsConfig, Enum(Tag).fromValue(content.type));
+
+    // Process the main content to extract the trueFalse value
     trueFalseTagContentProcessor(context, BitContentLevel.Chain, content, target);
+
+    // Process the chained content to extract chained tags (instruction, hint, etc.)
+    const chainTags = context.bitContentProcessor(
+      BitContentLevel.Chain,
+      tagConfig?.chain,
+      content.chain,
+    );
+
+    // Merge the chained tags into the target (not into the trueFalse value)
+    // This allows instruction, hint, etc. to be returned separately
+    Object.assign(target, chainTags);
   } else {
     buildTrueFalse(context, contentDepth, tagsConfig, content, target, bodyParts);
   }

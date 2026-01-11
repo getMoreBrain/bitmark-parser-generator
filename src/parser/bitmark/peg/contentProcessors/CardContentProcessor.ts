@@ -460,10 +460,14 @@ function parseFeedback(
             for (const tf of choiceTags) {
               const { __isDefaultExample, example, ...tfTags } = tf;
 
+              // Extract only the properties that should be in a FeedbackChoiceJson
               const choice: Partial<FeedbackChoiceJson> = {
                 choice: tfTags.choice,
                 requireReason: tfTags.isCorrect,
-                __isDefaultExample,
+                item: tfTags.item ?? [],
+                hint: tfTags.hint ?? [],
+                instruction: tfTags.instruction ?? [],
+                isExample: __isDefaultExample,
                 example,
               };
               choices.push(choice);
