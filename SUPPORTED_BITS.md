@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.2.0
+Version: 5.3.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -260,6 +260,7 @@ flashcard (since: 1.3.0)
 flashcard-1 (since: 1.3.0)
 focus-image (since: 1.3.0)
 foot-note (since: 1.3.0)
+form-free-text (since: 5.3.0)
 formula (since: 1.35.0)
 gap-text (since: 1.5.15)
 gap-text-instruction-grouped (since: 1.5.15)
@@ -272,6 +273,8 @@ hand-in-document (since: 1.5.15)
 hand-in-feedback-expert (since: 3.30.0)
 hand-in-feedback-self (since: 3.30.0)
 hand-in-file (since: 3.2.0)
+hand-in-free-text (since: 5.3.0)
+hand-in-free-text-expert (since: 5.3.0)
 hand-in-location (since: 1.5.15)
 hand-in-photo (since: 1.5.15)
 hand-in-scan (since: 1.5.15)

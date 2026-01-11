@@ -5226,6 +5226,11 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     description: 'Footnote bit, used to create footnotes in articles or books',
   },
+  [BitType.formFreeText]: {
+    since: '5.3.0',
+    baseBitType: BitType.interview,
+    description: 'Form free text bit, used to create free text forms in articles or books',
+  },
   [BitType.groupBorn]: {
     since: '1.3.0',
     baseBitType: BitType._standard,
@@ -5287,6 +5292,18 @@ const BITS: _BitsConfig = {
         maxCount: Count.infinity,
       },
     ],
+  },
+  [BitType.handInFreeText]: {
+    since: '5.3.0',
+    baseBitType: BitType.interview,
+    description:
+      'Hand in free text bit, used to create free text submission sections in articles or books',
+  },
+  [BitType.handInFreeTextExpert]: {
+    since: '5.3.0',
+    baseBitType: BitType.interview,
+    description:
+      'Hand in free text expert bit, used to create free text expert submission sections in articles or books',
   },
   [BitType.handInLocation]: {
     since: '1.5.15',
