@@ -164,10 +164,10 @@ jobs:
           - Use commits to fill in gaps or for changes without PRs
           - Re-write from a user's perspective, avoiding developer jargon
           - Keep descriptions concise but informative
-          - Ensure proper escaping, for instance, wrap code elements in backticks (e.g. `@property`)
+          - Ensure proper escaping, for instance, wrap code elements in backticks (e.g. \`@property\`)
           - Only include template categories that have changes
-          - Include issue numbers e.g. '#123'
-          - Include PR numbers e.g. '#466'
+          - Include issue numbers e.g. #123
+          - Include PR numbers e.g. #466
           - Ignore AI agents in the contributor list
           - Output ONLY the release notes markdown following the <template> below, nothing else
 
@@ -203,7 +203,8 @@ jobs:
           fi
 
           # 4. Parse Response
-          RELEASE_NOTES=$(jq -r '.content[0].text // empty' response.json)
+          # When extended thinking is enabled, .content[0] is the thinking block and .content[1] is the text
+          RELEASE_NOTES=$(jq -r '.content[] | select(.type == "text") | .text' response.json)
 
           if [ -z "$RELEASE_NOTES" ]; then
             echo "::error::Failed to parse release notes (response was empty or invalid structure)"
