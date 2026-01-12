@@ -148,6 +148,86 @@
   },
   {
     "bit": {
+      "type": "platform-header",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformLogo": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "example.com",
+          "src": "https://example.com/logo2.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "platformLogoMaxHeight": 60,
+      "platformPrimaryColor": "black",
+      "platformBackgroundColor": "#FFFFFF",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.platform-header]\n[&platformLogo: https://example.com/logo2.png]\n[@platformLogoMaxHeight: 60]\n[@platformPrimaryColor: black]\n[@platformBackgroundColor: #FFFFFF]"
+  },
+  {
+    "bit": {
+      "type": "platform-header",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "platformLogo": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "example.com",
+          "src": "https://example.com/logo3.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "platformPrimaryColor": "blue",
+      "platformBackgroundColor": "#CCCCCC",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "platformLogoMaxHeight": 40
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.platform-header]\n[&platformLogo: https://example.com/logo3.png]\n[@platformPrimaryColor: blue]\n[@platformBackgroundColor: #CCCCCC]"
+  },
+  {
+    "bit": {
       "type": "platform-system-icon",
       "format": "bitmark++",
       "bitLevel": 1,

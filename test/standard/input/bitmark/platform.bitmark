@@ -28,6 +28,17 @@
 [@platformPrimaryColor: white]
 [@platformBackgroundColor: #19333B]
 
+[.platform-header]
+[&platformLogo: https://example.com/logo2.png]
+[@platformLogoMaxHeight: 60]
+[@platformPrimaryColor: black]
+[@platformBackgroundColor: #FFFFFF]
+
+[.platform-header]
+[&platformLogo: https://example.com/logo3.png]
+[@platformPrimaryColor: blue]
+[@platformBackgroundColor: #CCCCCC]
+
 [.platform-system-icon]
 [@platformPrimaryColor: white]
 [@platformBackgroundColor: green]
