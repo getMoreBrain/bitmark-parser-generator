@@ -452,6 +452,7 @@ const BitType = {
   platformSectionInput: 'platform-section-input',
   platformSystemIcon: 'platform-system-icon',
   preparationNote: 'preparation-note',
+  printPageBreak: 'print-page-break',
   pronunciationTable: 'pronunciation-table',
   prototypeImages: 'prototype-images',
   qAndA: 'q-and-a',
