@@ -1,0 +1,145 @@
+# .github/workflows/release.yml
+name: Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Get version from package.json
+        id: pkg
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Invalid version format: $VERSION (expected X.X.X)"
+            exit 1
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "tag=v$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Check if tag already exists
+        run: |
+          if git rev-parse "v${{ steps.pkg.outputs.version }}" >/dev/null 2>&1; then
+            echo "::error::Tag v${{ steps.pkg.outputs.version }} already exists!"
+            exit 1
+          fi
+
+      - name: Get previous tag and date
+        id: prev_tag
+        run: |
+          PREV_TAG=$(git tag -l "v[0-9]*.[0-9]*.[0-9]*" --sort=-v:refname | head -n 1)
+          echo "tag=$PREV_TAG" >> $GITHUB_OUTPUT
+          if [ -n "$PREV_TAG" ]; then
+            PREV_DATE=$(git log -1 --format=%aI "$PREV_TAG")
+            echo "date=$PREV_DATE" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Get merged PRs since last release
+        id: prs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -n "${{ steps.prev_tag.outputs.date }}" ]; then
+            PRS=$(gh pr list \
+              --state merged \
+              --base main \
+              --search "merged:>${{ steps.prev_tag.outputs.date }}" \
+              --json number,title,labels,author \
+              --jq '.[] | "- PR #\(.number): \(.title) (@\(.author.login)) [labels: \([.labels[].name] | join(", "))]"')
+          else
+            PRS=$(gh pr list \
+              --state merged \
+              --base main \
+              --limit 30 \
+              --json number,title,labels,author \
+              --jq '.[] | "- PR #\(.number): \(.title) (@\(.author.login)) [labels: \([.labels[].name] | join(", "))]"')
+          fi
+          echo "list<<EOF" >> $GITHUB_OUTPUT
+          echo "$PRS" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Get commits since last release
+        id: commits
+        run: |
+          if [ -n "${{ steps.prev_tag.outputs.tag }}" ]; then
+            COMMITS=$(git log ${{ steps.prev_tag.outputs.tag }}..HEAD --pretty=format:"- %s (%h)" --no-merges)
+          else
+            COMMITS=$(git log --pretty=format:"- %s (%h)" --no-merges -30)
+          fi
+          echo "log<<EOF" >> $GITHUB_OUTPUT
+          echo "$COMMITS" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Generate release notes with Claude
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Generate release notes for version ${{ steps.pkg.outputs.tag }} of @gmb/bitmark-parser-generator (A bitmark parser and generator library using Peggy.js).
+
+            ## Merged Pull Requests:
+            ${{ steps.prs.outputs.list }}
+
+            ## Commits:
+            ${{ steps.commits.outputs.log }}
+
+            ## Instructions:
+            - Use PR titles and labels as the PRIMARY source - they are more descriptive
+            - Use commits to fill in gaps or for changes without PRs
+            - Re-write from a user's perspective, avoiding developer jargon
+            - Keep descriptions concise but informative
+            - Ensure proper escaping, for instance, wrap code elements in backticks (e.g. `@property`)
+            - Only include categories that have changes
+            - Include issue numbers as links, e.g. "{full url}/issues/123"
+            - Include PR numbers as links, e.g. "{full url}/pull/466"
+            - Output ONLY the release notes markdown following the <template> below, nothing else
+
+
+            <template>
+            [1-2 sentence summary of this release]
+
+            ## ✨ New Features
+            - [Feature description] (Issue #issue, PR #PR)
+
+            ## 🐛 Bug Fixes
+            - [Fix description] (Issue #issue, PR #PR)
+
+            ## 📚 Documentation
+            - [Documentation change] (Issue #issue, PR #PR)
+
+            ## 🔧 Maintenance
+            - [Maintenance item] (Issue #issue, PR #PR)
+
+            **Contributors**: {list of GitHub usernames of contributors, e.g. @user1, @user2}
+            **Full Changelog**: {project url}/compare/${{ steps.prev_tag.outputs.tag }}...${{ steps.pkg.outputs.tag }}
+            </template>
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.pkg.outputs.tag }}
+          name: ${{ steps.pkg.outputs.tag }}
+          body: ${{ steps.claude.outputs.result }}
+          draft: true
