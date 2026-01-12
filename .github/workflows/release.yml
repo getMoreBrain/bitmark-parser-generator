@@ -98,53 +98,94 @@ jobs:
 
       - name: Generate release notes with Claude
         id: claude
-        uses: anthropics/claude-code-action@v1
-        with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          prompt: |
-            Generate release notes for version ${{ steps.pkg.outputs.tag }} of @gmb/bitmark-parser-generator (A bitmark parser and generator library using Peggy.js).
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # FIX: Pass data as env vars to prevent script injection
+          TAG_NAME: ${{ steps.pkg.outputs.tag }}
+          PR_LIST: ${{ steps.prs.outputs.list }}
+          COMMIT_LOG: ${{ steps.commits.outputs.log }}
+          PREV_TAG: ${{ steps.prev_tag.outputs.tag }}
+        run: |
+          # 1. Construct Prompt using Environment Variables (Safer)
+          # We use a variable for the template to keep the prompt construction clean
+          TEMPLATE=$(cat <<'TEMPLATE_END'
+          [1-2 sentence summary of this release]
 
-            ## Merged Pull Requests:
-            ${{ steps.prs.outputs.list }}
+          ## ✨ New Features
+          - [Feature description] (Issue #issue, PR #PR)
 
-            ## Commits:
-            ${{ steps.commits.outputs.log }}
+          ## 🐛 Bug Fixes
+          - [Fix description] (Issue #issue, PR #PR)
 
-            ## Instructions:
-            - Use PR titles and labels as the PRIMARY source - they are more descriptive
-            - Use commits to fill in gaps or for changes without PRs
-            - Re-write from a user's perspective, avoiding developer jargon
-            - Keep descriptions concise but informative
-            - Ensure proper escaping, for instance, wrap code elements in backticks (e.g. `@property`)
-            - Only include categories that have changes
-            - Include issue numbers as links, e.g. "{full url}/issues/123"
-            - Include PR numbers as links, e.g. "{full url}/pull/466"
-            - Output ONLY the release notes markdown following the <template> below, nothing else
+          ## 📚 Documentation
+          - [Documentation change] (Issue #issue, PR #PR)
 
+          ## 🔧 Maintenance
+          - [Maintenance item] (Issue #issue, PR #PR)
 
-            <template>
-            [1-2 sentence summary of this release]
+          **Contributors**: {list of GitHub usernames}
+          **Full Changelog**: {project url}/compare/PREV_TAG...TAG_NAME
+          TEMPLATE_END
+          )
 
-            ## ✨ New Features
-            - [Feature description] (Issue #issue, PR #PR)
+          # Replace placeholders in template
+          TEMPLATE="${TEMPLATE//PREV_TAG/$PREV_TAG}"
+          TEMPLATE="${TEMPLATE//TAG_NAME/$TAG_NAME}"
 
-            ## 🐛 Bug Fixes
-            - [Fix description] (Issue #issue, PR #PR)
+          # Construct the full prompt text safely
+          PROMPT="Generate release notes for version $TAG_NAME of @gmb/bitmark-parser-generator.
 
-            ## 📚 Documentation
-            - [Documentation change] (Issue #issue, PR #PR)
+          ## Merged Pull Requests:
+          $PR_LIST
 
-            ## 🔧 Maintenance
-            - [Maintenance item] (Issue #issue, PR #PR)
+          ## Commits:
+          $COMMIT_LOG
 
-            **Contributors**: {list of GitHub usernames of contributors, e.g. @user1, @user2}
-            **Full Changelog**: {project url}/compare/${{ steps.prev_tag.outputs.tag }}...${{ steps.pkg.outputs.tag }}
-            </template>
+          ## Instructions:
+          - Use PR titles/labels as primary source
+          - Re-write from user perspective
+          - Output ONLY the release notes markdown following this template:
+
+          $TEMPLATE"
+
+          # 2. JSON Escape
+          ESCAPED_PROMPT=$(echo "$PROMPT" | jq -Rs .)
+
+          # 3. Call Claude API (Fail fast on error)
+          RESPONSE=$(curl -s -f https://api.anthropic.com/v1/messages \
+            -H "Content-Type: application/json" \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -d "{
+              \"model\": \"claude-3-5-sonnet-latest\",
+              \"max_tokens\": 8192,
+              \"messages\": [{
+                \"role\": \"user\",
+                \"content\": $ESCAPED_PROMPT
+              }]
+            }") || { echo "::error::API request failed"; exit 1; }
+
+          # 4. Parse Response
+          RELEASE_NOTES=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
+
+          if [ -z "$RELEASE_NOTES" ]; then
+            echo "::error::Failed to parse release notes"
+            exit 1
+          fi
+
+          # 5. FIX: Use Random Delimiter for GitHub Output
+          # This prevents "EOF" inside the notes from breaking the workflow
+          DELIMITER=$(openssl rand -hex 8)
+
+          echo "notes<<$DELIMITER" >> $GITHUB_OUTPUT
+          echo "$RELEASE_NOTES" >> $GITHUB_OUTPUT
+          echo "$DELIMITER" >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.pkg.outputs.tag }}
           name: ${{ steps.pkg.outputs.tag }}
-          body: ${{ steps.claude.outputs.result }}
+          # FIX 1: Updated to match the ID from the previous step (.notes instead of .result)
+          body: ${{ steps.claude.outputs.notes }}
           draft: true
