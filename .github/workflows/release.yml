@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   id-token: write # Required for OIDC to NPM
   pull-requests: read
 
@@ -29,12 +29,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: Test
-        run: npm test
 
       - name: Get version from package.json
         id: pkg
@@ -220,16 +214,27 @@ jobs:
           echo "$RELEASE_NOTES" >> $GITHUB_OUTPUT
           echo "$DELIMITER" >> $GITHUB_OUTPUT
 
+      - name: Publish
+        run: npm publish --access public
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.pkg.outputs.tag }}
           name: ${{ steps.pkg.outputs.tag }}
           body: ${{ steps.claude.outputs.notes }}
-          draft: true
+          draft: false
 
-  publish:
-    needs: release
-    if: github.ref == 'refs/heads/main'
-    uses: ./.github/workflows/publish-npm.yml
-    secrets: inherit
+      - name: Trigger bitmark API pipeline
+        env:
+          CIRCLE_TOKEN: ${{ secrets.CIRCLE_TOKEN }}
+        run: |
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -H "Circle-Token: $CIRCLE_TOKEN" \
+            https://circleci.com/api/v2/project/github/getMoreBrain/bitbook-api/pipeline
+
+      - name: Purge jsdelivr cache
+        run: |
+          curl -X GET \
+            https://purge.jsdelivr.net/npm/@gmb/bitmark-parser-generator@latest/dist/browser/bitmark-parser-generator.min.js
