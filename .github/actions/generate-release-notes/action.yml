@@ -1,0 +1,138 @@
+# Composite action to generate release notes using Claude AI
+name: Generate Release Notes
+description: Generates release notes using Claude API with extended thinking
+
+inputs:
+  anthropic-api-key:
+    description: 'Anthropic API key for Claude'
+    required: true
+  tag-name:
+    description: 'The new tag/version name (e.g., v5.3.0)'
+    required: true
+  previous-tag:
+    description: 'Previous release tag for changelog link'
+    required: false
+    default: ''
+  pr-list:
+    description: 'Formatted list of PRs'
+    required: true
+  commit-log:
+    description: 'Formatted commit log'
+    required: true
+  repository-url:
+    description: 'Full repository URL (e.g., https://github.com/org/repo)'
+    required: true
+
+outputs:
+  notes:
+    description: 'Generated release notes in markdown'
+    value: ${{ steps.claude.outputs.notes }}
+
+runs:
+  using: composite
+  steps:
+    - name: Generate release notes with Claude
+      id: claude
+      shell: bash
+      env:
+        ANTHROPIC_API_KEY: ${{ inputs.anthropic-api-key }}
+        TAG_NAME: ${{ inputs.tag-name }}
+        PR_LIST: ${{ inputs.pr-list }}
+        COMMIT_LOG: ${{ inputs.commit-log }}
+        PREV_TAG: ${{ inputs.previous-tag }}
+        REPO_URL: ${{ inputs.repository-url }}
+      run: |
+        # 1. Construct Prompt using Environment Variables
+        TEMPLATE=$(cat <<'TEMPLATE_END'
+        [1-2 sentence summary of this release]
+
+        ## New Features
+        - [Feature description] (Issue #issue, PR #PR)
+
+        ## Bug Fixes
+        - [Fix description] (Issue #issue, PR #PR)
+
+        ## Documentation
+        - [Documentation change] (Issue #issue, PR #PR)
+
+        ## Maintenance
+        - [Maintenance item] (Issue #issue, PR #PR)
+
+        **Contributors**: {list of GitHub usernames, excluding AI agents. e.g. @username}
+
+        **Full Changelog**: REPO_URL/compare/PREV_TAG...TAG_NAME
+        TEMPLATE_END
+        )
+
+        TEMPLATE="${TEMPLATE//PREV_TAG/$PREV_TAG}"
+        TEMPLATE="${TEMPLATE//TAG_NAME/$TAG_NAME}"
+        TEMPLATE="${TEMPLATE//REPO_URL/$REPO_URL}"
+
+        PROMPT="Generate release notes for version $TAG_NAME of @gmb/bitmark-parser-generator.
+
+        ## Merged Pull Requests:
+        $PR_LIST
+
+        ## Commits:
+        $COMMIT_LOG
+
+        ## Instructions:
+        - Write notes in markdown format
+        - Do not include a 'Release Notes' header, or the project name or version number in the notes
+        - Use PR titles and labels as the PRIMARY source
+        - Use commits to fill in gaps or for changes without PRs
+        - Re-write from a user's perspective, avoiding developer jargon
+        - Keep descriptions concise but informative
+        - Ensure proper escaping, for instance, wrap code elements in backticks (e.g. \`@property\`)
+        - Only include template categories that have changes
+        - Include full GitHub URLs for issues e.g. https://github.com/org/repo/issues/123
+        - Include full GitHub URLs for PRs e.g. https://github.com/org/repo/pull/466
+        - Ignore AI agents in the contributor list
+        - Output ONLY the release notes markdown following the <template> below, nothing else
+
+        <template>
+        $TEMPLATE
+        </template>"
+
+        # 2. Create JSON Payload safely using jq
+        jq -n \
+          --arg content "$PROMPT" \
+          --arg model "claude-sonnet-4-5" \
+          '{
+            model: $model,
+            max_tokens: 12288,
+            thinking: { type: "enabled", budget_tokens: 8192 },
+            messages: [{role: "user", content: $content}]
+          }' > payload.json
+
+        # 3. Call Claude API with timeouts
+        HTTP_CODE=$(curl -s -w "%{http_code}" -o response.json \
+          --connect-timeout 30 \
+          --max-time 120 \
+          -H "Content-Type: application/json" \
+          -H "x-api-key: $ANTHROPIC_API_KEY" \
+          -H "anthropic-version: 2023-06-01" \
+          -d @payload.json \
+          https://api.anthropic.com/v1/messages)
+
+        if [ "$HTTP_CODE" != "200" ]; then
+          echo "::error::API request failed with status $HTTP_CODE"
+          cat response.json
+          exit 1
+        fi
+
+        # 4. Parse Response
+        # When extended thinking is enabled, .content[0] is the thinking block and .content[1] is the text
+        RELEASE_NOTES=$(jq -r '.content[] | select(.type == "text") | .text' response.json)
+
+        if [ -z "$RELEASE_NOTES" ]; then
+          echo "::error::Failed to parse release notes (response was empty or invalid structure)"
+          cat response.json
+          exit 1
+        fi
+
+        # 5. Output with random delimiter
+        DELIMITER=$(openssl rand -hex 8)
+        echo "notes<<$DELIMITER" >> $GITHUB_OUTPUT
+        echo "$RELEASE_NOTES" >> $GITHUB_OUTPUT
+        echo "$DELIMITER" >> $GITHUB_OUTPUT

@@ -2451,6 +2451,11 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
     ],
+  [BitType.printPageBreak]: {
+    since: '5.4.0',
+    baseBitType: BitType.separator,
+    description:
+      'Print page break bit, used to create page breaks for printing in articles or books',
   },
   [BitType.releaseNotesSummary]: {
     since: '1.3.0',

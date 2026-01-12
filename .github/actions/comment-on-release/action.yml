@@ -1,0 +1,79 @@
+# Composite action to comment on PRs and issues when a release is published
+name: Comment on Release
+description: Posts release comments on PRs and linked issues
+
+inputs:
+  github-token:
+    description: 'GitHub token for API access'
+    required: true
+  tag-name:
+    description: 'The release tag name (e.g., v5.3.0)'
+    required: true
+  pr-urls:
+    description: 'Newline-separated PR URLs to comment on'
+    required: false
+    default: ''
+  linked-issue-urls:
+    description: 'Newline-separated linked issue URLs from PRs'
+    required: false
+    default: ''
+  commit-issue-urls:
+    description: 'Newline-separated issue URLs from commits'
+    required: false
+    default: ''
+
+runs:
+  using: composite
+  steps:
+    - name: Comment on PRs and Issues
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        TAG_NAME: ${{ inputs.tag-name }}
+        PR_URLS: ${{ inputs.pr-urls }}
+        LINKED_ISSUE_URLS: ${{ inputs.linked-issue-urls }}
+        COMMIT_ISSUE_URLS: ${{ inputs.commit-issue-urls }}
+      run: |
+        RELEASE_URL="https://github.com/$GITHUB_REPOSITORY/releases/tag/$TAG_NAME"
+        COMMENT_BODY="🎉 Released in [$TAG_NAME]($RELEASE_URL)"
+
+        # Collect all unique URLs to comment on
+        declare -A URLS_TO_COMMENT
+
+        # 1. Add PR URLs
+        for URL in $PR_URLS; do
+          [ -n "$URL" ] && URLS_TO_COMMENT["$URL"]=1
+        done
+
+        # 2. Add linked issue URLs from PRs
+        for URL in $LINKED_ISSUE_URLS; do
+          [ -n "$URL" ] && URLS_TO_COMMENT["$URL"]=1
+        done
+
+        # 3. Add issue URLs from commits
+        for URL in $COMMIT_ISSUE_URLS; do
+          [ -n "$URL" ] && URLS_TO_COMMENT["$URL"]=1
+        done
+
+        # Post comments in parallel
+        echo "Commenting on ${#URLS_TO_COMMENT[@]} items..."
+
+        comment_on_url() {
+          local URL="$1"
+          local BODY="$2"
+          echo "Commenting on: $URL"
+          if [[ "$URL" == */pull/* ]]; then
+            gh pr comment "$URL" --body "$BODY" || echo "::warning::Failed to comment on $URL"
+          else
+            gh issue comment "$URL" --body "$BODY" || echo "::warning::Failed to comment on $URL (may lack permissions for cross-repo)"
+          fi
+        }
+        export -f comment_on_url
+        export GH_TOKEN
+
+        # Run comments in parallel with max 5 concurrent jobs
+        for URL in "${!URLS_TO_COMMENT[@]}"; do
+          echo "$URL"
+        done | xargs -P 5 -I {} bash -c 'comment_on_url "{}" "'"$COMMENT_BODY"'"'
+
+        echo "Done commenting on PRs and Issues"

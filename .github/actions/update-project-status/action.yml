@@ -1,0 +1,170 @@
+# Composite action to update GitHub Project status for issues
+name: Update Project Status
+description: Updates issue status in GitHub Projects V2
+
+inputs:
+  github-token:
+    description: 'GitHub token with project scope'
+    required: true
+  org-name:
+    description: 'GitHub organization name'
+    required: true
+  project-number:
+    description: 'GitHub Project number'
+    required: true
+  target-status:
+    description: 'Target status to set (e.g., "Testing on Cosmic 🥂")'
+    required: true
+  linked-issue-urls:
+    description: 'Newline-separated linked issue URLs from PRs'
+    required: false
+    default: ''
+  commit-issue-urls:
+    description: 'Newline-separated issue URLs from commits'
+    required: false
+    default: ''
+
+runs:
+  using: composite
+  steps:
+    - name: Update issue status in project
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        ORG_NAME: ${{ inputs.org-name }}
+        PROJECT_NUMBER: ${{ inputs.project-number }}
+        TARGET_STATUS: ${{ inputs.target-status }}
+        LINKED_ISSUE_URLS: ${{ inputs.linked-issue-urls }}
+        COMMIT_ISSUE_URLS: ${{ inputs.commit-issue-urls }}
+      run: |
+        # Collect all unique issue URLs
+        ALL_ISSUE_URLS=""
+        for URL in $LINKED_ISSUE_URLS; do
+          [ -n "$URL" ] && ALL_ISSUE_URLS="$ALL_ISSUE_URLS
+        $URL"
+        done
+        for URL in $COMMIT_ISSUE_URLS; do
+          [ -n "$URL" ] && ALL_ISSUE_URLS="$ALL_ISSUE_URLS
+        $URL"
+        done
+        ISSUE_URLS=$(echo "$ALL_ISSUE_URLS" | grep -v '^$' | sort -u || true)
+
+        if [ -z "$ISSUE_URLS" ]; then
+          echo "No issues to update"
+          exit 0
+        fi
+
+        echo "Updating status to '$TARGET_STATUS' for issues..."
+
+        # Step 1: Get project and field information
+        PROJECT_QUERY='
+        query($org: String!, $projectNum: Int!) {
+          organization(login: $org) {
+            projectV2(number: $projectNum) {
+              id
+              title
+              field(name: "Status") {
+                ... on ProjectV2SingleSelectField {
+                  id
+                  options { id name }
+                }
+              }
+            }
+          }
+        }'
+
+        PROJECT_DATA=$(gh api graphql \
+          -f query="$PROJECT_QUERY" \
+          -f org="$ORG_NAME" \
+          -F projectNum="$PROJECT_NUMBER" 2>&1) || {
+          echo "::warning::Failed to fetch project data - skipping status update"
+          exit 0
+        }
+
+        PROJECT_ID=$(echo "$PROJECT_DATA" | jq -r '.data.organization.projectV2.id')
+        FIELD_ID=$(echo "$PROJECT_DATA" | jq -r '.data.organization.projectV2.field.id')
+        OPTION_ID=$(echo "$PROJECT_DATA" | jq -r --arg status "$TARGET_STATUS" \
+          '.data.organization.projectV2.field.options[] | select(.name == $status) | .id')
+
+        if [ -z "$OPTION_ID" ] || [ "$OPTION_ID" = "null" ]; then
+          echo "::warning::Could not find status option '$TARGET_STATUS' - skipping status update"
+          exit 0
+        fi
+
+        echo "Project ID: $PROJECT_ID"
+        echo "Field ID: $FIELD_ID"
+        echo "Option ID: $OPTION_ID"
+
+        # Step 2: Process each issue
+        ISSUE_QUERY='
+        query($owner: String!, $repo: String!, $num: Int!) {
+          repository(owner: $owner, name: $repo) {
+            issue(number: $num) {
+              projectItems(first: 20) {
+                nodes { id project { id } }
+              }
+            }
+          }
+        }'
+
+        UPDATE_MUTATION='
+        mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: String!) {
+          updateProjectV2ItemFieldValue(input: {
+            projectId: $projectId
+            itemId: $itemId
+            fieldId: $fieldId
+            value: { singleSelectOptionId: $optionId }
+          }) { projectV2Item { id } }
+        }'
+
+        echo "$ISSUE_URLS" | while read -r URL; do
+          [ -z "$URL" ] && continue
+
+          # Parse URL: https://github.com/{owner}/{repo}/issues/{number}
+          if [[ "$URL" =~ ^https://github.com/([^/]+)/([^/]+)/issues/([0-9]+)$ ]]; then
+            REPO_OWNER="${BASH_REMATCH[1]}"
+            REPO_NAME="${BASH_REMATCH[2]}"
+            ISSUE_NUM="${BASH_REMATCH[3]}"
+          else
+            echo "::warning::Could not parse URL: $URL"
+            continue
+          fi
+
+          echo "Processing: $REPO_OWNER/$REPO_NAME#$ISSUE_NUM"
+
+          # Get issue's project items
+          ISSUE_DATA=$(gh api graphql \
+            -f query="$ISSUE_QUERY" \
+            -f owner="$REPO_OWNER" \
+            -f repo="$REPO_NAME" \
+            -F num="$ISSUE_NUM" 2>/dev/null) || {
+            echo "::warning::Failed to fetch issue data for $URL"
+            continue
+          }
+
+          # Find the project item ID
+          ITEM_ID=$(echo "$ISSUE_DATA" | jq -r --arg pid "$PROJECT_ID" \
+            '.data.repository.issue.projectItems.nodes[] | select(.project.id == $pid) | .id')
+
+          if [ -z "$ITEM_ID" ] || [ "$ITEM_ID" = "null" ]; then
+            echo "  Issue not in project - skipping"
+            continue
+          fi
+
+          # Update the status
+          RESULT=$(gh api graphql \
+            -f query="$UPDATE_MUTATION" \
+            -f projectId="$PROJECT_ID" \
+            -f itemId="$ITEM_ID" \
+            -f fieldId="$FIELD_ID" \
+            -f optionId="$OPTION_ID" 2>&1) || true
+
+          if echo "$RESULT" | jq -e '.errors' > /dev/null 2>&1; then
+            ERROR_MSG=$(echo "$RESULT" | jq -r '.errors[0].message')
+            echo "::warning::Failed to update $URL: $ERROR_MSG"
+          else
+            echo "  ✓ Updated status to '$TARGET_STATUS'"
+          fi
+        done
+
+        echo "Done updating issue statuses"

@@ -454,6 +454,7 @@ const BitType = {
   preparationNote: 'preparation-note',
   printThisBook: 'print-this-book',
   printThisChapter: 'print-this-chapter',
+  printPageBreak: 'print-page-break',
   pronunciationTable: 'pronunciation-table',
   prototypeImages: 'prototype-images',
   qAndA: 'q-and-a',

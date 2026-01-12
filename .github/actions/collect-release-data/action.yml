@@ -1,0 +1,127 @@
+# Composite action to collect PR and commit data for release notes
+name: Collect Release Data
+description: Collects merged PRs and commits since the last release tag
+
+inputs:
+  previous-tag:
+    description: 'Previous release tag (e.g., v5.2.0)'
+    required: false
+    default: ''
+  previous-date:
+    description: 'Date of the previous release (ISO format)'
+    required: false
+    default: ''
+  github-token:
+    description: 'GitHub token for API access'
+    required: true
+
+outputs:
+  pr-list:
+    description: 'Formatted list of PRs for release notes'
+    value: ${{ steps.prs.outputs.list }}
+  pr-urls:
+    description: 'Newline-separated PR URLs'
+    value: ${{ steps.prs.outputs.urls }}
+  linked-issue-urls:
+    description: 'Newline-separated linked issue URLs from PRs'
+    value: ${{ steps.prs.outputs.linked_issue_urls }}
+  commit-log:
+    description: 'Formatted commit log for release notes'
+    value: ${{ steps.commits.outputs.log }}
+  commit-issue-urls:
+    description: 'Newline-separated issue URLs from commits'
+    value: ${{ steps.commits.outputs.issue_urls }}
+
+runs:
+  using: composite
+  steps:
+    - name: Get merged PRs since last release
+      id: prs
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        PREV_DATE: ${{ inputs.previous-date }}
+      run: |
+        if [ -n "$PREV_DATE" ]; then
+          PR_DATA=$(gh pr list \
+            --state merged \
+            --base main \
+            --search "merged:>$PREV_DATE" \
+            --json number,title,labels,author,closingIssuesReferences)
+        else
+          PR_DATA=$(gh pr list \
+            --state merged \
+            --base main \
+            --limit 30 \
+            --json number,title,labels,author,closingIssuesReferences)
+        fi
+
+        # Format for Claude prompt
+        PRS=$(echo "$PR_DATA" | jq -r '.[] | "- PR #\(.number): \(.title) (@\(.author.login)) [labels: \([.labels[].name] | join(", "))]"')
+        echo "list<<EOF" >> $GITHUB_OUTPUT
+        echo "$PRS" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+
+        # Extract PR URLs for commenting (use full URLs for consistency)
+        PR_URLS=$(echo "$PR_DATA" | jq -r '.[].number' | while read NUM; do echo "https://github.com/$GITHUB_REPOSITORY/pull/$NUM"; done)
+        echo "urls<<EOF" >> $GITHUB_OUTPUT
+        echo "$PR_URLS" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+
+        # Extract linked issue URLs for commenting (use full URLs to support cross-repo issues)
+        LINKED_ISSUE_URLS=$(echo "$PR_DATA" | jq -r '.[].closingIssuesReferences[].url // empty' | sort -u)
+        echo "linked_issue_urls<<EOF" >> $GITHUB_OUTPUT
+        echo "$LINKED_ISSUE_URLS" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+
+    - name: Get commits since last release
+      id: commits
+      shell: bash
+      env:
+        PREV_TAG: ${{ inputs.previous-tag }}
+      run: |
+        if [ -n "$PREV_TAG" ]; then
+          COMMITS=$(git log $PREV_TAG..HEAD --pretty=format:"- %s (%h)" --no-merges)
+        else
+          COMMITS=$(git log --pretty=format:"- %s (%h)" --no-merges -30)
+        fi
+        echo "log<<EOF" >> $GITHUB_OUTPUT
+        echo "$COMMITS" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+
+        # Extract issue references from commit messages for commenting
+        if [ -n "$PREV_TAG" ]; then
+          COMMIT_MESSAGES=$(git log $PREV_TAG..HEAD --pretty=format:"%s %b")
+        else
+          COMMIT_MESSAGES=$(git log --pretty=format:"%s %b" -30)
+        fi
+
+        # Collect all issue URLs from commits (full URLs, cross-repo refs, and local refs)
+        ALL_ISSUE_URLS=""
+
+        # 1. Extract full GitHub issue URLs directly
+        FULL_URLS=$(echo "$COMMIT_MESSAGES" | grep -oE 'https://github.com/[^/]+/[^/]+/issues/[0-9]+' | sort -u || true)
+        ALL_ISSUE_URLS="$FULL_URLS"
+
+        # 2. Convert cross-repo refs (org/repo#123) to full URLs
+        CROSS_REFS=$(echo "$COMMIT_MESSAGES" | grep -oE '[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+#[0-9]+' | sort -u || true)
+        for REF in $CROSS_REFS; do
+          REPO_PART="${REF%#*}"
+          ISSUE_NUM="${REF##*#}"
+          ALL_ISSUE_URLS="$ALL_ISSUE_URLS
+        https://github.com/${REPO_PART}/issues/${ISSUE_NUM}"
+        done
+
+        # 3. Convert local refs (#123) to full URLs for this repo
+        # Use word boundary to avoid matching cross-repo refs
+        LOCAL_REFS=$(echo "$COMMIT_MESSAGES" | grep -oE '(^|[^/])#[0-9]+' | grep -oE '#[0-9]+' | tr -d '#' | sort -u || true)
+        for ISSUE_NUM in $LOCAL_REFS; do
+          ALL_ISSUE_URLS="$ALL_ISSUE_URLS
+        https://github.com/${GITHUB_REPOSITORY}/issues/${ISSUE_NUM}"
+        done
+
+        # Output deduplicated URLs
+        ISSUE_URLS=$(echo "$ALL_ISSUE_URLS" | grep -v '^$' | sort -u || true)
+        echo "issue_urls<<EOF" >> $GITHUB_OUTPUT
+        echo "$ISSUE_URLS" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT

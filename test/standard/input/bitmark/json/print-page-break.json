@@ -1,0 +1,56 @@
+[
+  {
+    "bit": {
+      "type": "print-page-break",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "12345"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a print page break",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.print-page-break]\n[@id:12345]\nThis is a print page break"
+  },
+  {
+    "bit": {
+      "type": "print-page-break",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.print-page-break]"
+  }
+]
