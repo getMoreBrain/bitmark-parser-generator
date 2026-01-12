@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.3.0
+Version: 5.3.2
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -446,6 +446,9 @@ platform-section-header (since: 4.12.0)
 platform-section-input (since: 4.12.0)
 platform-system-icon (since: 4.12.0)
 preparation-note (since: 1.3.0)
+print-this-book (since: 5.4.0)
+print-this-chapter (since: 5.4.0)
+print-page-break (since: 5.4.0)
 pronunciation-table (since: 3.1.0)
 prototype-images (since: 1.6.1)
 q-and-a (since: 3.5.0)

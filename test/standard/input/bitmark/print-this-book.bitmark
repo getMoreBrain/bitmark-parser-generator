@@ -1,0 +1,16 @@
+[.print-this-book]
+[@id:print-book-001]
+[!.print-this-book]
+[@buttonCaption:Print Entire Book]
+This is the body text for the print-this-book bit.
+
+[.print-this-book]
+[@id:print-book-002]
+[!.print-this-book]
+[@buttonCaption:Print **Entire** Book]
+Body text with **bold** and ==italic== formatting.
+
+[.print-this-book]
+[@id:print-book-003]
+[!.print-this-book]
+Simple print book bit without button caption.
