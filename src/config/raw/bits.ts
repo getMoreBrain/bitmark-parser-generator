@@ -2451,6 +2451,7 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
     ],
+  },
   [BitType.printPageBreak]: {
     since: '5.4.0',
     baseBitType: BitType.separator,
