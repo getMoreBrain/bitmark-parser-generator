@@ -115,14 +115,12 @@ jobs:
         id: claude
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          # FIX: Pass data as env vars to prevent script injection
           TAG_NAME: ${{ steps.pkg.outputs.tag }}
           PR_LIST: ${{ steps.prs.outputs.list }}
           COMMIT_LOG: ${{ steps.commits.outputs.log }}
           PREV_TAG: ${{ steps.prev_tag.outputs.tag }}
         run: |
-          # 1. Construct Prompt using Environment Variables (Safer)
-          # We use a variable for the template to keep the prompt construction clean
+          # 1. Construct Prompt using Environment Variables
           TEMPLATE=$(cat <<'TEMPLATE_END'
           [1-2 sentence summary of this release]
 
@@ -143,11 +141,9 @@ jobs:
           TEMPLATE_END
           )
 
-          # Replace placeholders in template
           TEMPLATE="${TEMPLATE//PREV_TAG/$PREV_TAG}"
           TEMPLATE="${TEMPLATE//TAG_NAME/$TAG_NAME}"
 
-          # Construct the full prompt text safely
           PROMPT="Generate release notes for version $TAG_NAME of @gmb/bitmark-parser-generator.
 
           ## Merged Pull Requests:
@@ -163,35 +159,43 @@ jobs:
 
           $TEMPLATE"
 
-          # 2. JSON Escape
-          ESCAPED_PROMPT=$(echo "$PROMPT" | jq -Rs .)
+          # 2. Create JSON Payload safely using jq
+          # This avoids all bash escaping issues by letting jq handle the structure
+          jq -n \
+            --arg content "$PROMPT" \
+            --arg model "claude-sonnet-4-5" \
+            '{
+              model: $model,
+              max_tokens: 8192,
+              messages: [{role: "user", content: $content}]
+            }' > payload.json
 
-          # 3. Call Claude API (Fail fast on error)
-          RESPONSE=$(curl -s -f https://api.anthropic.com/v1/messages \
+          # 3. Call Claude API
+          # We remove -f and capture the HTTP status code to debug errors
+          HTTP_CODE=$(curl -s -w "%{http_code}" -o response.json \
             -H "Content-Type: application/json" \
             -H "x-api-key: $ANTHROPIC_API_KEY" \
             -H "anthropic-version: 2023-06-01" \
-            -d "{
-              \"model\": \"claude-3-5-sonnet-latest\",
-              \"max_tokens\": 8192,
-              \"messages\": [{
-                \"role\": \"user\",
-                \"content\": $ESCAPED_PROMPT
-              }]
-            }") || { echo "::error::API request failed"; exit 1; }
+            -d @payload.json \
+            https://api.anthropic.com/v1/messages)
 
-          # 4. Parse Response
-          RELEASE_NOTES=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
-
-          if [ -z "$RELEASE_NOTES" ]; then
-            echo "::error::Failed to parse release notes"
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "::error::API request failed with status $HTTP_CODE"
+            cat response.json
             exit 1
           fi
 
-          # 5. FIX: Use Random Delimiter for GitHub Output
-          # This prevents "EOF" inside the notes from breaking the workflow
-          DELIMITER=$(openssl rand -hex 8)
+          # 4. Parse Response
+          RELEASE_NOTES=$(jq -r '.content[0].text // empty' response.json)
 
+          if [ -z "$RELEASE_NOTES" ]; then
+            echo "::error::Failed to parse release notes (response was empty or invalid structure)"
+            cat response.json
+            exit 1
+          fi
+
+          # 5. Output with random delimiter
+          DELIMITER=$(openssl rand -hex 8)
           echo "notes<<$DELIMITER" >> $GITHUB_OUTPUT
           echo "$RELEASE_NOTES" >> $GITHUB_OUTPUT
           echo "$DELIMITER" >> $GITHUB_OUTPUT
