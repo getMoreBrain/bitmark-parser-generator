@@ -2428,6 +2428,30 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     description: 'Preparation note bit, used to provide preparation notes in articles or books',
   },
+  [BitType.printThisBook]: {
+    since: '5.4.0',
+    baseBitType: BitType._standard,
+    description: 'Print this book bit, used to create a button that prints the entire book',
+    tags: [
+      {
+        key: ConfigKey.property_buttonCaption,
+        description: 'The caption of the print button',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [BitType.printThisChapter]: {
+    since: '5.4.0',
+    baseBitType: BitType._standard,
+    description: 'Print this chapter bit, used to create a button that prints the current chapter',
+    tags: [
+      {
+        key: ConfigKey.property_buttonCaption,
+        description: 'The caption of the print button',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
   [BitType.releaseNotesSummary]: {
     since: '1.3.0',
     baseBitType: BitType.article,

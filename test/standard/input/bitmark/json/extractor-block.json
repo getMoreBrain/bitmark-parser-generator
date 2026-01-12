@@ -42,7 +42,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.3.2",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },

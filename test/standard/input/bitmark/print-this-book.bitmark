@@ -1,0 +1,5 @@
+[.print-this-book]
+[@id:print-book-001]
+[!.print-this-book]
+[@buttonCaption:Print Entire Book]
+This is the body text for the print-this-book bit.
