@@ -2428,6 +2428,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     description: 'Preparation note bit, used to provide preparation notes in articles or books',
   },
+  [BitType.printPageBreak]: {
+    since: '5.4.0',
+    baseBitType: BitType.separator,
+    description:
+      'Print page break bit, used to create page breaks for printing in articles or books',
+  },
   [BitType.releaseNotesSummary]: {
     since: '1.3.0',
     baseBitType: BitType.article,
