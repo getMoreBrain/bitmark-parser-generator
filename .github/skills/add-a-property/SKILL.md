@@ -12,4 +12,5 @@ To add a property to a bit, follow this process, considering possible deviations
    - Bits with the property
    - Bits with various edge cases of the property
    - Bits without the property (how default is handled in JSON)
+   - Do NOT update the `parser.version` in all standard tests
 - Ensure all tests pass

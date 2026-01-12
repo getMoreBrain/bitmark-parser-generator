@@ -1,0 +1,106 @@
+
+[.hand-in-free-text:bitmark--]
+[@id:198779]
+[@reasonableNumOfChars:100]
+[%1]
+[!Erklären Sie den Begriff „Steuerüberwälzung".]
+===
+[@reasonableNumOfChars:101]
+[@sampleSolution:Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]
+[@additionalSolutions:Additional solution 1]
+[@additionalSolutions:Additional solution 2]
+[@additionalSolutions:Additional solution 3]
+===
+[@reasonableNumOfChars:20]
+[@sampleSolution:Some other text.]
+[@sampleSolution:Some other text **2**.]
+===
+[@sampleSolution:Some other text again.]
+===
+[@sampleSolution:Some other text again.]
+[@partialAnswer:This is a **partialAnswer**]
+[@partialAnswer:This is a **partialAnswer** 2]
+===
+
+
+[.hand-in-free-text:bitmark--&image]
+[@id:136528]
+[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]
+[%3a]
+[@bubbleTag:Tag 1]
+[@bubbleTag:]
+[@bubbleTag:Tag 2]
+[@bubbleTag:**Tag 3**]
+[!Wählen Sie eine Person auf den Fotos in Aufgabe 2. Schreiben Sie einen kurzen Text in Ihrer Rolle und beantworten Sie die Fragen.]
+Warum bist du hier? Wie fühlst du dich? Was denkst du gerade?
+===
+Nothing here
+===
+
+
+
+
+[.hand-in-free-text:bitmark--]
+[@id:198779]
+[@extractorTag:Tag 1]
+[@extractorTag:Tag 2]
+[%1]
+[!Erklären Sie den Begriff „Steuerüberwälzung".]
+===
+[$Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]
+===
+
+[.hand-in-free-text:bitmark++]
+[@id:198781]
+[%3]
+[!Mit welchen Steuern (bspw. Einkommenssteuer, Vermögenssteuer, Mehrwertsteuer, Erbschaftssteuer usw.) sind die einzelnen Ereignisse konfrontiert?]
+
+Anton erhält von seinen Eltern (Variante: von seinem Onkel, seiner Tante) einen Erbvorbezug (Variante: eine Schenkung) von Fr. 200'000. Er macht sich nach seiner abgeschlossenen Ausbildung als Finanzplaner selbständig.
+===
+Ereignis Steuern
+
+[$Erbvorbezug, Schenkung Eltern
+In vielen Kantonen schenkungssteuerfrei für Nachkommen. Nach Erhalt Einkommens-und Vermögenssteuer.]
+===
+
+[.hand-in-free-text:bitmark--]
+[@id:198782]
+[%4]
+[!Geben Sie eine Definition für öffentliche Abgaben und für Steuern.]
+===
+[$Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.]
+===
+
+[.hand-in-free-text]
+[@id:187612]
+[%12]
+[!Datum / Unterschriften]
+===
+Dieser Bildungsbericht wurde am
+===
+besprochen.
+**Unterschrift der verantwortlichen Berufsbildnerin / des verantwortlichen Berufsbildners:**
+===
+**Unterschrift der lernenden Person:**
+===
+**Visum des gesetzlichen Vertreters / der gesetzlichen Vertreterin:**
+Datum:
+===
+Unterschrift:
+===
+
+[.hand-in-free-text&image]
+[@id:136484]
+[%9]
+[&image:https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/mathe_2019/web-resources/images/aufnahmepruefung3.png]
+[!Die beiden U-förmigen Teile A und B, die aus je 7 Würfeln bestehen, werden zu einer Gesamtfigur zusammengesetzt, wie es angegeben ist.]
+
+===
+[%a] Von wie vielen Würfeln der Gesamtfigur sind genau drei Seitenflächen (Quadrate) sichtbar?
+===
+[%b] Wie viele Quadrate der Figur A werden beim Zusammenfügen mit der Figur B verdeckt?
+===
+[%c] Wie viele Quadrate der Gesamtfigur sind von aussen sichtbar?
+===
+[%d] Auf der Gesamtfigur wandert man entlang von Würfelkanten vom Punkt P auf A zum Punkt Q auf B. Wie lange ist eine solcher Weg mindestens?
+===

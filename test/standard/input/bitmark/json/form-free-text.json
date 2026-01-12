@@ -1,0 +1,300 @@
+[
+  {
+    "bit": {
+      "type": "form-free-text",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "198779"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Erklären Sie den Begriff „Steuerüberwälzung\".",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [],
+      "questions": [
+        {
+          "question": [],
+          "partialAnswer": "",
+          "sampleSolution": "Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.",
+          "additionalSolutions": [
+            "Additional solution 1",
+            "Additional solution 2"
+          ],
+          "reasonableNumOfChars": 101,
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "isExample": false,
+      "footer": []
+    },
+    "parser": {
+      "version": "5.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.form-free-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 2,
+              "column": 28,
+              "offset": 28
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.form-free-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 2,
+              "column": 28,
+              "offset": 28
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.form-free-text:bitmark--]\n[@id:198779]\n[@reasonableNumOfChars:100]\n[%1]\n[!Erklären Sie den Begriff „Steuerüberwälzung\".]\n===\n[@reasonableNumOfChars:101]\n[@sampleSolution:Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]\n[@additionalSolutions:Additional solution 1]\n[@additionalSolutions:Additional solution 2]\n==="
+  },
+  {
+    "bit": {
+      "type": "form-free-text",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "198782"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "2",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Geben Sie eine Definition für öffentliche Abgaben und für Steuern.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [],
+      "questions": [
+        {
+          "question": [],
+          "partialAnswer": "",
+          "sampleSolution": "Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "isExample": false,
+      "footer": []
+    },
+    "parser": {
+      "version": "5.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
+          "text": "[.form-free-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 371
+            },
+            "end": {
+              "line": 14,
+              "column": 28,
+              "offset": 398
+            }
+          }
+        },
+        {
+          "message": "bitmark-- text format is deprecated. Bit will be parsed as 'bitmark++'",
+          "text": "[.form-free-text:bitmark--]",
+          "location": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 371
+            },
+            "end": {
+              "line": 14,
+              "column": 28,
+              "offset": 398
+            }
+          }
+        },
+        {
+          "message": "[$...] tag is deprecated, use [@sampleSolution:...] instead",
+          "text": "[$Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.]",
+          "location": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 491
+            },
+            "end": {
+              "line": 19,
+              "column": 168,
+              "offset": 658
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.form-free-text:bitmark--]\n[@id:198782]\n[%2]\n[!Geben Sie eine Definition für öffentliche Abgaben und für Steuern.]\n===\n[$Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.]\n==="
+  },
+  {
+    "bit": {
+      "type": "form-free-text",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "187612"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "3",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Datum / Unterschriften",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [],
+      "questions": [
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "Dieser Bildungsbericht wurde am",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        },
+        {
+          "question": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "text": "besprochen.",
+                  "type": "text"
+                }
+              ],
+              "attrs": {}
+            }
+          ],
+          "partialAnswer": "",
+          "sampleSolution": "",
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "isExample": false,
+      "footer": []
+    },
+    "parser": {
+      "version": "5.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.form-free-text]\n[@id:187612]\n[%3]\n[!Datum / Unterschriften]\n===\nDieser Bildungsbericht wurde am\n===\nbesprochen.\n==="
+  }
+]
