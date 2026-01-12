@@ -226,7 +226,7 @@ jobs:
           tag_name: ${{ steps.pkg.outputs.tag }}
           name: ${{ steps.pkg.outputs.tag }}
           body: ${{ steps.claude.outputs.notes }}
-          draft: false
+          draft: true
 
   publish:
     needs: release

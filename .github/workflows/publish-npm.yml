@@ -32,7 +32,25 @@ jobs:
       - name: Publish
         env:
           NPM_CONFIG_PROVENANCE: true
+          NPM_TOKEN: ""
+          NODE_AUTH_TOKEN: ""
         run: npm publish --provenance --access public
+
+      - name: Get version from package.json
+        id: pkg
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Invalid version format: $VERSION (expected X.X.X)"
+            exit 1
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "tag=v$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Mark as Released (creates vX.X.X tag in Git)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release edit ${{ steps.pkg.outputs.tag }} --draft=false --repo ${{ github.repository }}
 
       - name: Trigger bitmark API pipeline
         env:
