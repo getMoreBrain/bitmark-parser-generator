@@ -39,10 +39,114 @@
       ]
     },
     "parser": {
-      "version": "5.3.2",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
     "bitmark": "[.print-this-book]\n[@id:print-book-001]\n[!.print-this-book]\n[@buttonCaption:Print Entire Book]\nThis is the body text for the print-this-book bit."
+  },
+  {
+    "bit": {
+      "type": "print-this-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "print-book-002"
+      ],
+      "buttonCaption": "Print **Entire** Book",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ".print-this-book",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Body text with ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "bold",
+              "type": "text"
+            },
+            {
+              "text": " and ==italic== formatting.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.print-this-book]\n[@id:print-book-002]\n[!.print-this-book]\n[@buttonCaption:Print **Entire** Book]\nBody text with **bold** and ==italic== formatting."
+  },
+  {
+    "bit": {
+      "type": "print-this-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "print-book-003"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ".print-this-book",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Simple print book bit without button caption.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.print-this-book]\n[@id:print-book-003]\n[!.print-this-book]\nSimple print book bit without button caption."
   }
 ]
