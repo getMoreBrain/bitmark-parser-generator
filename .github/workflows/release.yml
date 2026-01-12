@@ -8,14 +8,24 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   id-token: write # Required for OIDC to NPM
   pull-requests: read
 
 jobs:
+  branch-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure release runs on main
+        run: |
+          if [ "${GITHUB_REF}" != "refs/heads/main" ]; then
+            echo "::error::Release workflow can only run from main (got ${GITHUB_REF})"
+            exit 1
+          fi
+
   release:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    needs: branch-guard
     steps:
       - uses: actions/checkout@v4
         with:
