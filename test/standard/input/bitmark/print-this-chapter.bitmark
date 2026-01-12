@@ -1,0 +1,16 @@
+[.print-this-chapter]
+[@id:print-chapter-001]
+[!.print-this-chapter]
+[@buttonCaption:Print This Chapter]
+This is the body text for the print-this-chapter bit.
+
+[.print-this-chapter]
+[@id:print-chapter-002]
+[!.print-this-chapter]
+[@buttonCaption:Print **This** Chapter]
+Body text with **bold** and ==italic== formatting.
+
+[.print-this-chapter]
+[@id:print-chapter-003]
+[!.print-this-chapter]
+Simple print chapter bit without button caption.

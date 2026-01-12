@@ -1,0 +1,152 @@
+[
+  {
+    "bit": {
+      "type": "print-this-chapter",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "print-chapter-001"
+      ],
+      "buttonCaption": "Print This Chapter",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ".print-this-chapter",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is the body text for the print-this-chapter bit.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.print-this-chapter]\n[@id:print-chapter-001]\n[!.print-this-chapter]\n[@buttonCaption:Print This Chapter]\nThis is the body text for the print-this-chapter bit."
+  },
+  {
+    "bit": {
+      "type": "print-this-chapter",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "print-chapter-002"
+      ],
+      "buttonCaption": "Print **This** Chapter",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ".print-this-chapter",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Body text with ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "bold",
+              "type": "text"
+            },
+            {
+              "text": " and ==italic== formatting.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.print-this-chapter]\n[@id:print-chapter-002]\n[!.print-this-chapter]\n[@buttonCaption:Print **This** Chapter]\nBody text with **bold** and ==italic== formatting."
+  },
+  {
+    "bit": {
+      "type": "print-this-chapter",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "print-chapter-003"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": ".print-this-chapter",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Simple print chapter bit without button caption.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.print-this-chapter]\n[@id:print-chapter-003]\n[!.print-this-chapter]\nSimple print chapter bit without button caption."
+  }
+]
