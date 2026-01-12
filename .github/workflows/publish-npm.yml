@@ -29,21 +29,29 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Ensure release exists (with retry)
+      - name: Resolve draft release (GH API, retry)
+        id: release_ref
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG=$(node -p "require('./package.json').version")
-          TAG="v$TAG"
+          VERSION=$(node -p "require('./package.json').version")
+          NAME="v$VERSION"
+          OWNER_REPO="${{ github.repository }}"
           for i in 1 2 3 4 5; do
-            if gh release view "$TAG" --repo "${{ github.repository }}"; then
-              echo "tag=$TAG" >> $GITHUB_OUTPUT
+            RELEASE_ID=$(gh api \
+              repos/$OWNER_REPO/releases \
+              --paginate \
+              --jq "map(select(.draft == true and (.name == \"${NAME}\" or .tag_name == \"${NAME}\")))[0].id" \
+              --method GET 2>/dev/null)
+            if [ -n "$RELEASE_ID" ]; then
+              echo "release_id=$RELEASE_ID" >> $GITHUB_OUTPUT
+              echo "release_tag=$NAME" >> $GITHUB_OUTPUT
               exit 0
             fi
-            echo "Release $TAG not visible yet, retry $i/5" >&2
+            echo "Draft release ${NAME} not visible yet, retry $i/5" >&2
             sleep 5
           done
-          echo "Release $TAG not found after retries" >&2
+          echo "Draft release ${NAME} not found after retries" >&2
           exit 1
 
       - name: Publish
@@ -63,7 +71,11 @@ jobs:
       - name: Mark as Released (creates vX.X.X tag in Git)
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release edit ${{ steps.pkg.outputs.tag }} --draft=false --repo ${{ github.repository }}
+        run: |
+          gh api \
+            repos/${{ github.repository }}/releases/${{ steps.release_ref.outputs.release_id }} \
+            -X PATCH \
+            -F draft=false
 
       - name: Trigger bitmark API pipeline
         env:
