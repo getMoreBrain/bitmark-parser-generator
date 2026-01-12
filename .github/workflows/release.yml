@@ -1,4 +1,7 @@
 # .github/workflows/release.yml
+# This workflow will build, test, generate release notes using Claude, then trigger the publish a new release to NPM
+# Once Github Actions support AI generated release notes natively, we can replace the Claude step
+
 name: Release
 
 on:
@@ -163,8 +166,8 @@ jobs:
           - Keep descriptions concise but informative
           - Ensure proper escaping, for instance, wrap code elements in backticks (e.g. `@property`)
           - Only include template categories that have changes
-          - Include issue numbers e.g. "#123"
-          - Include PR numbers e.g. "#466"
+          - Include issue numbers e.g. '#123'
+          - Include PR numbers e.g. '#466'
           - Ignore AI agents in the contributor list
           - Output ONLY the release notes markdown following the <template> below, nothing else
 
