@@ -30,8 +30,23 @@ class ConfigBuilder {
     const bitConfigs: (_BitConfig & { bitType: BitTypeType })[] = [];
     const groupConfigs: (_GroupsConfig & { key: string })[] = [];
 
-    const bitGroupConfigKeys: BitTypeType[] = [];
+    const bitGroupConfigKeys: Set<BitTypeType> = new Set();
     const bitGroupConfigs: (_BitConfig & { bitType: BitTypeType })[] = [];
+
+    // First pass: collect all bits that are inherited from (walk full chains)
+    for (const bt of Enum(BitType).values()) {
+      const bitType = Config.getBitType(bt);
+      const _bitConfig = BITS[bitType] as _BitConfig;
+      if (_bitConfig?.baseBitType) {
+        // Walk up the inheritance chain and add all ancestors
+        let currentBitType: BitTypeType | undefined = _bitConfig.baseBitType;
+        while (currentBitType) {
+          bitGroupConfigKeys.add(currentBitType);
+          const parentConfig = BITS[currentBitType] as _BitConfig;
+          currentBitType = parentConfig?.baseBitType;
+        }
+      }
+    }
 
     for (const bt of Enum(BitType).values()) {
       const bitType = Config.getBitType(bt);
@@ -58,7 +73,27 @@ class ConfigBuilder {
     const outputFolderGroups = path.join(outputFolder, 'partials');
     fs.ensureDirSync(outputFolderBits);
     fs.ensureDirSync(outputFolderGroups);
+
+    // Clean up existing config files
+    const bitsFiles = fs.readdirSync(outputFolderBits).filter((f) => f.endsWith('.jsonc'));
+    for (const file of bitsFiles) {
+      fs.removeSync(path.join(outputFolderBits, file));
+    }
+    const partialsFiles = fs.readdirSync(outputFolderGroups).filter((f) => f.endsWith('.jsonc'));
+    for (const file of partialsFiles) {
+      fs.removeSync(path.join(outputFolderGroups, file));
+    }
     const fileWrites: Promise<void>[] = [];
+
+    // Helper to resolve group references through squash map (handles chained squashing)
+    const resolveGroupReferences = (groupKey: string): string[] => {
+      if (squashedGroups.has(groupKey)) {
+        const replacements = squashedGroups.get(groupKey)!;
+        // Recursively resolve in case of chained squashing
+        return replacements.flatMap((r) => resolveGroupReferences(r));
+      }
+      return [groupKey];
+    };
 
     const keyToJsonKey = (key: string, tagNameChain: string[]): string => {
       let jsonKey = key;
@@ -165,10 +200,14 @@ class ConfigBuilder {
         let k = tag.key as string;
         if (k.startsWith('group_')) k = k.substring(6);
         k = /*'_' +*/ StringUtils.camelToKebab(k);
-        tags.push({
-          type: 'group',
-          key: k,
-        });
+        // Resolve group references through squash map
+        const resolvedGroups = resolveGroupReferences(k);
+        for (const groupKey of resolvedGroups) {
+          tags.push({
+            type: 'group',
+            key: groupKey,
+          });
+        }
         return tags;
       }
 
@@ -200,8 +239,58 @@ class ConfigBuilder {
       return tags;
     };
 
+    // Convert bits that are depended on to groups (must happen before writing bit configs)
+    for (const bt of bitGroupConfigKeys) {
+      const bitType = Config.getBitType(bt);
+      const _bitConfig: _BitConfig & { bitType: BitTypeType } = BITS[bitType] as _BitConfig & {
+        bitType: BitTypeType;
+      };
+      if (_bitConfig) {
+        _bitConfig.bitType = bitType;
+        // Avoid duplicates
+        if (!bitGroupConfigs.some((c) => c.bitType === bitType)) {
+          bitGroupConfigs.push(_bitConfig);
+        }
+      }
+    }
+
+    // Calculate which bit-groups should be squashed (only contain group references, no actual tags)
+    // Maps: groupKey -> array of replacement group keys
+    const squashedGroups: Map<string, string[]> = new Map();
+
+    for (const b of bitGroupConfigs) {
+      const groupKey = `group-${b.bitType}`;
+      const processedTags: unknown[] = [];
+
+      // Process this bit's own tags (not parent)
+      for (const [, tag] of Object.entries(b.tags ?? [])) {
+        processedTags.push(...processTagEntries(tag, []));
+      }
+
+      // Check if all processed tags are group references
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const allAreGroups = processedTags.every((t: any) => t.type === 'group');
+
+      if (allAreGroups && processedTags.length > 0) {
+        // This group should be squashed - collect all its group references
+        const replacements: string[] = [];
+        if (b.baseBitType) {
+          // Note: We'll resolve this later through resolveGroupReferences recursion
+          replacements.push(`group-${b.baseBitType}`);
+        }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        for (const t of processedTags as any[]) {
+          replacements.push(t.key);
+        }
+        squashedGroups.set(groupKey, replacements);
+      }
+    }
+
     // BitConfigs
     for (const b of bitConfigs) {
+      // Get the resolved bit config with inherited properties
+      const resolvedBitConfig = Config.getBitConfig(b.bitType);
+
       const tags: unknown[] = [];
       const tagEntriesTypeOrder = [
         BitTagConfigKeyType.tag,
@@ -218,34 +307,52 @@ class ConfigBuilder {
         const typeOrder = tagEntriesTypeOrder.indexOf(typeA) - tagEntriesTypeOrder.indexOf(typeB);
         return typeOrder;
       });
-      if (b.baseBitType) {
-        tags.push({
-          type: 'group',
-          key: `group-${b.baseBitType}`,
-        });
-        bitGroupConfigKeys.push(b.baseBitType);
-      }
-      for (const [_tagKey, tag] of tagEntries) {
-        tags.push(...processTagEntries(tag, []));
+      const isInheritedFrom = bitGroupConfigKeys.has(b.bitType);
+
+      if (isInheritedFrom) {
+        // This bit is inherited from, so its tags are in group-<bitType>
+        // The bit config only references its own group (resolved through squash map)
+        const resolvedGroups = resolveGroupReferences(`group-${b.bitType}`);
+        for (const groupKey of resolvedGroups) {
+          tags.push({
+            type: 'group',
+            key: groupKey,
+          });
+        }
+      } else {
+        // This is a leaf bit - include parent group reference + own tags
+        if (b.baseBitType) {
+          const resolvedGroups = resolveGroupReferences(`group-${b.baseBitType}`);
+          for (const groupKey of resolvedGroups) {
+            tags.push({
+              type: 'group',
+              key: groupKey,
+            });
+          }
+        }
+        for (const [_tagKey, tag] of tagEntries) {
+          tags.push(...processTagEntries(tag, []));
+        }
       }
 
+      // Use resolved values from BitConfig (with inheritance applied)
       const bitJson = {
         name: b.bitType,
         description: b.description ?? '',
-        since: b.since,
-        deprecated: b.deprecated,
+        since: resolvedBitConfig.since,
+        deprecated: resolvedBitConfig.deprecated,
         history: [
           {
-            version: b.since,
+            version: resolvedBitConfig.since,
             changes: ['Initial version'],
           },
         ],
-        format: b.textFormatDefault ?? 'bitmark--',
-        bodyAllowed: b.bodyAllowed ?? true,
-        bodyRequired: b.bodyRequired ?? false,
-        footerAllowed: b.footerAllowed ?? true,
-        footerRequired: b.footerRequired ?? false,
-        resourceAttachmentAllowed: b.resourceAttachmentAllowed ?? true,
+        format: resolvedBitConfig.textFormatDefault ?? 'bitmark--',
+        bodyAllowed: resolvedBitConfig.bodyAllowed ?? true,
+        bodyRequired: resolvedBitConfig.bodyRequired ?? false,
+        footerAllowed: resolvedBitConfig.footerAllowed ?? true,
+        footerRequired: resolvedBitConfig.footerRequired ?? false,
+        resourceAttachmentAllowed: resolvedBitConfig.resourceAttachmentAllowed ?? true,
         tags,
       };
       const output = path.join(outputFolderBits, `${b.bitType}.jsonc`);
@@ -256,18 +363,6 @@ class ConfigBuilder {
       // if (bitType !== bitType2) {
       //   console.log(`BitType: ${bitType} => ${bitType2}`);
       // }
-    }
-
-    // Convert bits that are depended on to groups
-    for (const bt of bitGroupConfigKeys) {
-      const bitType = Config.getBitType(bt);
-      const _bitConfig: _BitConfig & { bitType: BitTypeType } = BITS[bitType] as _BitConfig & {
-        bitType: BitTypeType;
-      };
-      if (_bitConfig) {
-        _bitConfig.bitType = bitType;
-        bitGroupConfigs.push(_bitConfig);
-      }
     }
 
     // GroupConfigs
@@ -346,7 +441,25 @@ class ConfigBuilder {
     ) => {
       for (const b of bitsAsGroupConfigs) {
         const groupKey = `group-${b.bitType}`;
+
+        // Skip squashed groups - they won't be written as files
+        if (squashedGroups.has(groupKey)) {
+          continue;
+        }
+
         const tags: unknown[] = [];
+
+        // Add reference to parent group if this bit has a baseBitType (resolved through squash map)
+        if (b.baseBitType) {
+          const resolvedGroups = resolveGroupReferences(`group-${b.baseBitType}`);
+          for (const gk of resolvedGroups) {
+            tags.push({
+              type: 'group',
+              key: gk,
+            });
+          }
+        }
+
         const tagEntriesTypeOrder = [
           BitTagConfigKeyType.tag,
           BitTagConfigKeyType.property,
@@ -389,6 +502,101 @@ class ConfigBuilder {
       }
     };
     writeBitsAsGroupConfigs(bitGroupConfigs);
+
+    // Wait for all async file writes to complete, then validate
+    Promise.all(fileWrites)
+      .then(() => {
+        // Validate the config tree after all files are written
+        const validationErrors = this.validateConfigTree(outputFolder);
+        if (validationErrors.length > 0) {
+          console.error('\n⚠️  Config tree validation errors:');
+          for (const error of validationErrors) {
+            console.error(`  - ${error}`);
+          }
+          throw new Error(`Config tree validation failed with ${validationErrors.length} error(s)`);
+        } else {
+          console.log('✅ Config tree validation passed');
+        }
+      })
+      .catch((err) => {
+        console.error('Error during config build or validation:', err);
+        throw err;
+      });
+  }
+
+  /**
+   * Validate the config tree for missing group references
+   * @param outputFolder - The folder containing the config files
+   * @returns Array of validation errors, empty if valid
+   */
+  private validateConfigTree(outputFolder: string): string[] {
+    const errors: string[] = [];
+    const outputFolderBits = path.join(outputFolder, 'bits');
+    const outputFolderGroups = path.join(outputFolder, 'partials');
+
+    // Read all group files to build a set of available groups
+    const availableGroups = new Set<string>();
+    if (fs.existsSync(outputFolderGroups)) {
+      const groupFiles = fs.readdirSync(outputFolderGroups).filter((f) => f.endsWith('.jsonc'));
+      for (const file of groupFiles) {
+        const groupName = file.replace('.jsonc', '');
+        availableGroups.add(groupName);
+      }
+    }
+
+    // Helper to recursively check tags for group references
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const checkTags = (tags: any[], filePath: string, lineOffset: number): void => {
+      for (let i = 0; i < tags.length; i++) {
+        const tag = tags[i];
+        if (tag.type === 'group') {
+          if (!availableGroups.has(tag.key)) {
+            const line = lineOffset + i + 1; // Approximate line number
+            errors.push(`Missing group reference '${tag.key}' in ${filePath}:${line}`);
+          }
+        }
+        // Recursively check nested tags
+        if (tag.tags && Array.isArray(tag.tags)) {
+          checkTags(tag.tags, filePath, lineOffset + i + 1);
+        }
+      }
+    };
+
+    // Check all bit config files
+    if (fs.existsSync(outputFolderBits)) {
+      const bitFiles = fs.readdirSync(outputFolderBits).filter((f) => f.endsWith('.jsonc'));
+      for (const file of bitFiles) {
+        const filePath = path.join(outputFolderBits, file);
+        try {
+          const content = fs.readFileSync(filePath, 'utf-8');
+          const config = JSON.parse(content);
+          if (config.tags && Array.isArray(config.tags)) {
+            checkTags(config.tags, `bits/${file}`, 15); // Approximate line offset for tags array
+          }
+        } catch (err) {
+          errors.push(`Failed to parse ${file}: ${err}`);
+        }
+      }
+    }
+
+    // Check all group config files
+    if (fs.existsSync(outputFolderGroups)) {
+      const groupFiles = fs.readdirSync(outputFolderGroups).filter((f) => f.endsWith('.jsonc'));
+      for (const file of groupFiles) {
+        const filePath = path.join(outputFolderGroups, file);
+        try {
+          const content = fs.readFileSync(filePath, 'utf-8');
+          const config = JSON.parse(content);
+          if (config.tags && Array.isArray(config.tags)) {
+            checkTags(config.tags, `partials/${file}`, 15); // Approximate line offset for tags array
+          }
+        } catch (err) {
+          errors.push(`Failed to parse ${file}: ${err}`);
+        }
+      }
+    }
+
+    return errors;
   }
 
   // Build flat bit configs
@@ -405,6 +613,12 @@ class ConfigBuilder {
     const outputFolder = opts.outputDir ?? 'assets/config';
     const outputFolderBits = path.join(outputFolder, 'bits_flat');
     fs.ensureDirSync(outputFolderBits);
+
+    // Clean up existing config files
+    const existingFiles = fs.readdirSync(outputFolderBits).filter((f) => f.endsWith('.jsonc'));
+    for (const file of existingFiles) {
+      fs.removeSync(path.join(outputFolderBits, file));
+    }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const processTagEntries = (tag: any): any[] => {

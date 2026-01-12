@@ -463,6 +463,9 @@ function parseFeedback(
               const choice: Partial<FeedbackChoiceJson> = {
                 choice: tfTags.choice,
                 requireReason: tfTags.isCorrect,
+                item: tfTags.item,
+                lead: tfTags.lead,
+                instruction: tfTags.instruction,
                 __isDefaultExample,
                 example,
               };

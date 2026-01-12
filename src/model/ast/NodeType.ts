@@ -409,6 +409,8 @@ const NodeType = {
   platformIconValue: 'platformIconValue',
   platformLogo: 'platformLogo',
   platformLogoValue: 'platformLogoValue',
+  platformLogoMaxHeight: 'platformLogoMaxHeight',
+  platformLogoMaxHeightValue: 'platformLogoMaxHeightValue',
   platformPrimaryColor: 'platformPrimaryColor',
   platformPrimaryColorValue: 'platformPrimaryColorValue',
   platformSecondaryColor: 'platformSecondaryColor',

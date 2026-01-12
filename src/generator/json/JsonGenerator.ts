@@ -1942,6 +1942,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.platformBrandTarget == null) bitJson.platformBrandTarget = 'none';
       }
 
+      // Special case for 'platform-header' bits
+      if (Config.isOfBitType(bitType, BitType.platformHeader)) {
+        if (bitJson.platformLogoMaxHeight == null) bitJson.platformLogoMaxHeight = 40;
+      }
+
       // Remove top level example if it is not required
       if (isTopLevelExample) {
         if (bitJson.isExample == null) bitJson.isExample = false;

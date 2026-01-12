@@ -209,6 +209,7 @@ export interface BitJson {
   platformName: string;
   platformIcon: ImageResourceWrapperJson;
   platformLogo: ImageResourceWrapperJson;
+  platformLogoMaxHeight: number;
   platformPrimaryColor: string;
   platformSecondaryColor: string;
   platformBackgroundColor: string;

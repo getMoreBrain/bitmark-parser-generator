@@ -170,6 +170,7 @@ const propertyKeys = {
   property_platformMargin: '@platformMargin',
   property_platformBorderRadius: '@platformBorderRadius',
   property_platformSelectionBorderRadius: '@platformSelectionBorderRadius',
+  property_platformLogoMaxHeight: '@platformLogoMaxHeight',
   property_platformNeedsShadow: '@platformNeedsShadow',
   property_platformSeparatorColor: '@platformSeparatorColor',
   property_platformTextSelectionColor: '@platformTextSelectionColor',

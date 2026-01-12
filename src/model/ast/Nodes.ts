@@ -265,6 +265,7 @@ export interface Bit {
   platformName?: Property;
   platformIcon?: ImageResourceWrapperJson;
   platformLogo?: ImageResourceWrapperJson;
+  platformLogoMaxHeight?: Property;
   platformPrimaryColor?: Property;
   platformSecondaryColor?: Property;
   platformBackgroundColor?: Property;
