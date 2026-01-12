@@ -30,10 +30,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run build
+      - name: Build
         run: npm run build
 
-      - name: Run tests
+      - name: Test
         run: npm test
 
       - name: Get version from package.json
@@ -226,28 +226,10 @@ jobs:
           tag_name: ${{ steps.pkg.outputs.tag }}
           name: ${{ steps.pkg.outputs.tag }}
           body: ${{ steps.claude.outputs.notes }}
-          draft: true
+          draft: false
 
-      - name: Publish to NPM
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Mark as Released (creates vX.X.X tag in Git)
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh release edit ${{ steps.pkg.outputs.tag }} --draft=false --repo ${{ github.repository }}
-
-      - name: Trigger bitmark API pipeline
-        env:
-          CIRCLE_TOKEN: ${{ secrets.CIRCLE_TOKEN }}
-        run: |
-          curl -X POST \
-            -H "Content-Type: application/json" \
-            -H "Circle-Token: $CIRCLE_TOKEN" \
-            https://circleci.com/api/v2/project/github/getMoreBrain/bitbook-api/pipeline
-
-      - name: Purge jsdelivr cache
-        run: |
-          curl -X GET \
-            https://purge.jsdelivr.net/npm/@gmb/bitmark-parser-generator@latest/dist/browser/bitmark-parser-generator.min.js
+  publish:
+    needs: release
+    if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/publish-npm.yml
+    secrets: inherit

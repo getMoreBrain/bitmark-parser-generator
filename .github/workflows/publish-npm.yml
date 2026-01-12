@@ -4,6 +4,10 @@
 name: Publish to NPM
 
 on:
+  workflow_call:
+    secrets:
+      CIRCLE_TOKEN:
+        required: true
   release:
     types: [published]
 jobs:
@@ -26,9 +30,9 @@ jobs:
         run: npm ci
 
       - name: Publish
-        run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
+        run: npm publish --provenance --access public
 
       - name: Trigger bitmark API pipeline
         env:
