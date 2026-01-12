@@ -141,6 +141,7 @@ jobs:
           - [Maintenance item] (Issue #issue, PR #PR)
 
           **Contributors**: {list of GitHub usernames, excluding AI agents. e.g. @username}
+
           **Full Changelog**: REPO_URL/compare/PREV_TAG...TAG_NAME
           TEMPLATE_END
           )
@@ -223,6 +224,5 @@ jobs:
         with:
           tag_name: ${{ steps.pkg.outputs.tag }}
           name: ${{ steps.pkg.outputs.tag }}
-          # FIX 1: Updated to match the ID from the previous step (.notes instead of .result)
           body: ${{ steps.claude.outputs.notes }}
-          draft: true
+          draft: false
