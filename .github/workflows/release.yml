@@ -9,7 +9,6 @@ on:
 
 permissions:
   contents: write
-  id-token: write # Required for OIDC to NPM
   pull-requests: read
 
 jobs:

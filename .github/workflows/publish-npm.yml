@@ -30,11 +30,7 @@ jobs:
         run: npm ci
 
       - name: Publish
-        env:
-          NPM_CONFIG_PROVENANCE: true
-          NPM_TOKEN: ""
-          NODE_AUTH_TOKEN: ""
-        run: npm publish --provenance --access public
+        run: npm publish --access public
 
       - name: Get version from package.json
         id: pkg
