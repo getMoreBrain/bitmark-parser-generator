@@ -52,12 +52,27 @@ jobs:
 
       - name: Get previous tag and date
         id: prev_tag
+        env:
+          # PASS THE VERSION HERE so it is available as $CURRENT_VERSION
+          CURRENT_VERSION: ${{ steps.pkg.outputs.version }}
         run: |
           PREV_TAG=$(git tag -l "v[0-9]*.[0-9]*.[0-9]*" --sort=-v:refname | head -n 1)
           echo "tag=$PREV_TAG" >> $GITHUB_OUTPUT
+
           if [ -n "$PREV_TAG" ]; then
             PREV_DATE=$(git log -1 --format=%aI "$PREV_TAG")
             echo "date=$PREV_DATE" >> $GITHUB_OUTPUT
+
+            # --- VERSION COMPARISON CHECK ---
+            CLEAN_PREV=${PREV_TAG#v}
+
+            # Sort versions; if CURRENT_VERSION is not the last (highest), fail.
+            HIGHEST=$(printf "%s\n%s" "$CURRENT_VERSION" "$CLEAN_PREV" | sort -V | tail -n 1)
+
+            if [ "$CURRENT_VERSION" != "$HIGHEST" ] || [ "$CURRENT_VERSION" == "$CLEAN_PREV" ]; then
+               echo "::error::New version $CURRENT_VERSION must be greater than previous version $CLEAN_PREV"
+               exit 1
+            fi
           fi
 
       - name: Get merged PRs since last release
