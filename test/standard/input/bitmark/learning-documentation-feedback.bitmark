@@ -30,7 +30,7 @@ Please answer in keywords
 [!ICH BEVORZUGE …]
 [%1.][%other]
 [+ Bier]
-[+ Wein]
+[+ Wein][! Lukas ]
 [@reasonableNumOfChars:300]
 --
 [!Why?]
@@ -38,6 +38,6 @@ Please answer in keywords
 ====
 [!ICH HASSE …]
 [%1I.]
-[- Bier]
+[- Bier][% joe ]
 [- Wein]
 ====
