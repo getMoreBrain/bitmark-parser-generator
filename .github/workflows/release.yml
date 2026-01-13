@@ -102,6 +102,7 @@ jobs:
           pr-list: ${{ steps.release_data.outputs.pr-list }}
           commit-log: ${{ steps.release_data.outputs.commit-log }}
           repository-url: "https://github.com/${{ github.repository }}"
+          contributors: ${{ steps.release_data.outputs.contributors }}
 
       # Upload debug artifacts on failure
       - name: Upload Claude API artifacts for debugging

@@ -31,6 +31,9 @@ outputs:
   commit-issue-urls:
     description: 'Newline-separated issue URLs from commits'
     value: ${{ steps.commits.outputs.issue_urls }}
+  contributors:
+    description: 'Space-separated list of unique contributor usernames'
+    value: ${{ steps.contributors.outputs.list }}
 
 runs:
   using: composite
@@ -153,3 +156,68 @@ runs:
         echo "issue_urls<<EOF" >> $GITHUB_OUTPUT
         echo "$ISSUE_URLS" >> $GITHUB_OUTPUT
         echo "EOF" >> $GITHUB_OUTPUT
+
+    - name: Collect contributors from PRs and Issues
+      id: contributors
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        PREV_DATE: ${{ inputs.previous-date }}
+        PR_DATA_JSON: ${{ steps.prs.outputs.list }}
+        LINKED_ISSUE_URLS: ${{ steps.prs.outputs.linked_issue_urls }}
+        COMMIT_ISSUE_URLS: ${{ steps.commits.outputs.issue_urls }}
+      run: |
+        # Collect PR authors
+        if [ -n "$PREV_DATE" ]; then
+          PR_AUTHORS=$(gh pr list \
+            --state merged \
+            --base main \
+            --search "merged:>$PREV_DATE" \
+            --json author \
+            --jq '.[].author.login')
+        else
+          PR_AUTHORS=$(gh pr list \
+            --state merged \
+            --base main \
+            --limit 30 \
+            --json author \
+            --jq '.[].author.login')
+        fi
+
+        # Collect issue authors from linked issues
+        ALL_CONTRIBUTORS="$PR_AUTHORS"
+
+        # Fetch authors from linked issues
+        for ISSUE_URL in $LINKED_ISSUE_URLS $COMMIT_ISSUE_URLS; do
+          if [[ "$ISSUE_URL" =~ https://github.com/([^/]+)/([^/]+)/issues/([0-9]+) ]]; then
+            OWNER="${BASH_REMATCH[1]}"
+            REPO="${BASH_REMATCH[2]}"
+            ISSUE_NUM="${BASH_REMATCH[3]}"
+
+            # Fetch issue author using GraphQL (handles cross-repo)
+            ISSUE_AUTHOR=$(gh api graphql -f query="
+              query {
+                repository(owner: \"$OWNER\", name: \"$REPO\") {
+                  issue(number: $ISSUE_NUM) {
+                    author { login }
+                  }
+                }
+              }" --jq '.data.repository.issue.author.login' 2>/dev/null || echo "")
+
+            if [ -n "$ISSUE_AUTHOR" ] && [ "$ISSUE_AUTHOR" != "null" ]; then
+              ALL_CONTRIBUTORS="$ALL_CONTRIBUTORS
+        $ISSUE_AUTHOR"
+            fi
+          fi
+        done
+
+        # Deduplicate, filter out bots/AI agents, and format as space-separated list
+        CONTRIBUTORS=$(echo "$ALL_CONTRIBUTORS" | \
+          grep -v '^$' | \
+          sort -u | \
+          grep -viE '(bot|\[bot\]|dependabot|github-actions|renovate)' || true)
+
+        # Convert to space-separated for easier use
+        CONTRIBUTORS_LIST=$(echo "$CONTRIBUTORS" | tr '\n' ' ' | sed 's/ $//')
+
+        echo "list=$CONTRIBUTORS_LIST" >> $GITHUB_OUTPUT

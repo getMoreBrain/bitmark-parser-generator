@@ -22,6 +22,10 @@ inputs:
   repository-url:
     description: 'Full repository URL (e.g., https://github.com/org/repo)'
     required: true
+  contributors:
+    description: 'Space-separated list of contributor usernames'
+    required: false
+    default: ''
 
 outputs:
   notes:
@@ -41,6 +45,7 @@ runs:
         COMMIT_LOG: ${{ inputs.commit-log }}
         PREV_TAG: ${{ inputs.previous-tag }}
         REPO_URL: ${{ inputs.repository-url }}
+        CONTRIBUTORS: ${{ inputs.contributors }}
       run: |
         # 1. Construct Prompt using Environment Variables
         TEMPLATE=$(cat <<'TEMPLATE_END'
@@ -58,7 +63,7 @@ runs:
         ## Maintenance
         - [Maintenance item] (Issue #issue, PR #PR)
 
-        **Contributors**: {list of GitHub usernames, excluding AI agents. e.g. @username}
+        **Contributors**: {list of GitHub usernames with @ prefix from the Contributors list above, e.g. @username1, @username2. Exclude AI agents!}
 
         **Full Changelog**: REPO_URL/compare/PREV_TAG...TAG_NAME
         TEMPLATE_END
@@ -75,6 +80,9 @@ runs:
 
         ## Commits:
         $COMMIT_LOG
+
+        ## Contributors (from PRs and Issues):
+        $CONTRIBUTORS
 
         ## Instructions:
         - Write notes in markdown format
