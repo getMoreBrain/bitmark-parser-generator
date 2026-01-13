@@ -78,6 +78,7 @@ runs:
       id: commits
       shell: bash
       env:
+        GH_TOKEN: ${{ inputs.github-token }}
         PREV_TAG: ${{ inputs.previous-tag }}
       run: |
         if [ -n "$PREV_TAG" ]; then
@@ -112,13 +113,40 @@ runs:
         https://github.com/${REPO_PART}/issues/${ISSUE_NUM}"
         done
 
-        # 3. Convert local refs (#123) to full URLs for this repo
+        # 3. Extract local refs (#123) and resolve via GraphQL to determine PR vs Issue
         # Use word boundary to avoid matching cross-repo refs
         LOCAL_REFS=$(echo "$COMMIT_MESSAGES" | grep -oE '(^|[^/])#[0-9]+' | grep -oE '#[0-9]+' | tr -d '#' | sort -u || true)
-        for ISSUE_NUM in $LOCAL_REFS; do
-          ALL_ISSUE_URLS="$ALL_ISSUE_URLS
-        https://github.com/${GITHUB_REPOSITORY}/issues/${ISSUE_NUM}"
-        done
+
+        if [ -n "$LOCAL_REFS" ]; then
+          # Build GraphQL query to resolve all numbers in a single API call
+          REPO_OWNER="${GITHUB_REPOSITORY%/*}"
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+
+          QUERY="{ repository(owner: \"$REPO_OWNER\", name: \"$REPO_NAME\") {"
+          for NUM in $LOCAL_REFS; do
+            QUERY="$QUERY n$NUM: issueOrPullRequest(number: $NUM) { __typename }"
+          done
+          QUERY="$QUERY }}"
+
+          # Execute GraphQL query and parse results
+          # Note: API may return partial data with errors for invalid numbers, so we capture stdout
+          # and use empty object as fallback only if no output at all
+          RESULT=$(gh api graphql -f query="$QUERY" 2>/dev/null)
+          if [ -z "$RESULT" ]; then
+            RESULT='{"data":{"repository":{}}}'
+          fi
+
+          # For each local ref, check if it's an Issue (not a PR) and add to URLs
+          for NUM in $LOCAL_REFS; do
+            TYPE=$(echo "$RESULT" | jq -r ".data.repository.n$NUM.__typename // \"null\"")
+            if [ "$TYPE" = "Issue" ]; then
+              ALL_ISSUE_URLS="$ALL_ISSUE_URLS
+        https://github.com/${GITHUB_REPOSITORY}/issues/${NUM}"
+            fi
+            # PRs are ignored (already captured in pr-urls)
+            # Invalid/non-existent numbers return null and are discarded
+          done
+        fi
 
         # Output deduplicated URLs
         ISSUE_URLS=$(echo "$ALL_ISSUE_URLS" | grep -v '^$' | sort -u || true)

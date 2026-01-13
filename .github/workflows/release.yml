@@ -82,13 +82,14 @@ jobs:
           fi
 
       # Composite action: Collect PR and commit data
+      # Uses GMB_PROJECT_TOKEN to access cross-repo linked issues (e.g., cosmic issues)
       - name: Collect release data
         id: release_data
         uses: ./.github/actions/collect-release-data
         with:
           previous-tag: ${{ steps.prev_tag.outputs.tag }}
           previous-date: ${{ steps.prev_tag.outputs.date }}
-          github-token: ${{ github.token }}
+          github-token: ${{ secrets.GMB_PROJECT_TOKEN }}
 
       # Composite action: Generate release notes with Claude
       - name: Generate release notes
@@ -125,11 +126,12 @@ jobs:
           draft: false
 
       # Composite action: Comment on PRs and issues
+      # Uses GMB_PROJECT_TOKEN to comment on cross-repo issues (e.g., cosmic issues)
       - name: Comment on PRs and Issues
         continue-on-error: true
         uses: ./.github/actions/comment-on-release
         with:
-          github-token: ${{ github.token }}
+          github-token: ${{ secrets.GMB_PROJECT_TOKEN }}
           tag-name: ${{ steps.pkg.outputs.tag }}
           pr-urls: ${{ steps.release_data.outputs.pr-urls }}
           linked-issue-urls: ${{ steps.release_data.outputs.linked-issue-urls }}
