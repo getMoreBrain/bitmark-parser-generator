@@ -31,3 +31,11 @@
 ## Validation & Testing
 - Regenerate config exports (npm run start-generate-config) and ensure validation passes with new card-set references.
 - Spot-check bits that declare cardSet (e.g., flashcard) to confirm card->side->variant nesting and tag resolution.
+
+## Progress
+- [x] Schema: single `card` -> `sides[]` -> `variants[]`, repeatCount on variants
+- [x] Export card data in `bits` configs with tag/group handling
+- [x] Export card data in `bits_flat` configs
+- [x] Extend validation to cover card tags/groups
+- [x] Regenerate configs and verify outputs
+- [x] Spot-check exports (multiple-choice, book-reference-list, flashcard) and inventory carded bits (25 files)
