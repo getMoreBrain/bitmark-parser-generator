@@ -1790,6 +1790,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           BitType.pageFooter,
           BitType.pageOpenBook,
           BitType.pagePerson,
+          BitType.printBook,
           BitType.pageProduct,
           BitType.pageProductList,
           BitType.pageProductVideo,

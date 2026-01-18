@@ -3072,6 +3072,39 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.printBook]: {
+    since: '5.4.0',
+    baseBitType: BitType.article,
+    description: 'Print book bit, used to create pages that open books in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_slug,
+        description: 'Slug for the book, used to identify the book in the system',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_book,
+        description: 'Book reference for the page, used to link to a specific book',
+        format: TagFormat.plainText,
+        chain: [
+          {
+            key: ConfigKey.tag_reference,
+            description: 'Reference tag for the book, used to link to the book in the system',
+            maxCount: 2,
+          },
+        ],
+      },
+      {
+        /* Allow incorrectly chained reference tag */
+        key: ConfigKey.tag_reference,
+        description: 'Reference tag for the book, used to link to the book in the system',
+      },
+      {
+        key: ConfigKey.property_buttonCaption,
+        description: 'Caption for the button, used to define the text displayed on the button',
+      },
+    ],
+  },
   [BitType.openBookChapter]: {
     since: '4.16.0',
     baseBitType: BitType.pageOpenBook,
