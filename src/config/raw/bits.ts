@@ -3075,7 +3075,8 @@ const BITS: _BitsConfig = {
   [BitType.printBook]: {
     since: '5.4.0',
     baseBitType: BitType.article,
-    description: 'Print book bit, used to create pages that open books in articles or books',
+    description:
+      'Print book bit, used to create pages that open books without author information in articles or books',
     tags: [
       {
         key: ConfigKey.property_slug,
