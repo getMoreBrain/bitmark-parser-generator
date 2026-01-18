@@ -3073,7 +3073,7 @@ const BITS: _BitsConfig = {
     ],
   },
   [BitType.printBook]: {
-    since: '5.4.0',
+    since: '5.5.0',
     baseBitType: BitType.article,
     description:
       'Print book bit, used to create pages that open books without author information in articles or books',

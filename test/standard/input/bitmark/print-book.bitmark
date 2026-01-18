@@ -2,3 +2,16 @@
 [@id:904321]
 [@book:the_book_id][►ch-1][►ch-2]
 Print the book
+
+
+[.print-book]
+[@id:904322]
+[@slug:print-book-chapter]
+[@book:another_book][►ch-9]
+[@buttonCaption:Print Book]
+
+
+[.print-book]
+[@id:904323]
+[@book:third_book][►ch-4]
+Open chapter
