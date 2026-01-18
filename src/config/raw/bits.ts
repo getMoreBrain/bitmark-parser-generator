@@ -2450,6 +2450,12 @@ const BITS: _BitsConfig = {
         description: 'The caption of the print button',
         format: TagFormat.plainText,
       },
+      {
+        key: ConfigKey.property_printParentChapterLevel,
+        description: 'The parent chapter level to print',
+        format: TagFormat.number,
+        defaultValue: '-1',
+      },
     ],
   },
   [BitType.printPageBreak]: {

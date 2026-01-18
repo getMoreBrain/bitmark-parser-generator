@@ -149,6 +149,7 @@ const propertyKeys = {
   property_mute: '@mute',
   property_padletId: '@padletId',
   property_page: '@page',
+  property_printParentChapterLevel: '@printParentChapterLevel',
   property_pageNo: '@pageNo',
   property_partialAnswer: '@partialAnswer',
   property_partner: '@partner', // Deprecated, replaced by person

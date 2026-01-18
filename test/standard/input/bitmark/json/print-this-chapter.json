@@ -8,6 +8,7 @@
         "print-chapter-001"
       ],
       "buttonCaption": "Print This Chapter",
+      "printParentChapterLevel": 2,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -43,7 +44,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.print-this-chapter]\n[@id:print-chapter-001]\n[!.print-this-chapter]\n[@buttonCaption:Print This Chapter]\nThis is the body text for the print-this-chapter bit."
+    "bitmark": "[.print-this-chapter]\n[@id:print-chapter-001]\n[!.print-this-chapter]\n[@buttonCaption:Print This Chapter]\n[@printParentChapterLevel:2]\nThis is the body text for the print-this-chapter bit."
   },
   {
     "bit": {
@@ -54,6 +55,7 @@
         "print-chapter-002"
       ],
       "buttonCaption": "Print **This** Chapter",
+      "printParentChapterLevel": -1,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -112,6 +114,7 @@
       "id": [
         "print-chapter-003"
       ],
+      "printParentChapterLevel": -1,
       "item": [],
       "lead": [],
       "pageNumber": [],

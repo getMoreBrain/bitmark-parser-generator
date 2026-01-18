@@ -393,6 +393,8 @@ const NodeType = {
   pageNumber: 'pageNumber',
   pageNumberValue: 'pageNumberValue',
   pageValue: 'pageValue',
+  printParentChapterLevel: 'printParentChapterLevel',
+  printParentChapterLevelValue: 'printParentChapterLevelValue',
   pairs: 'pairs',
   pairsValue: 'pairsValue',
   parent: 'parent',

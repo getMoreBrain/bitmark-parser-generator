@@ -1818,6 +1818,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.tocContent == null) bitJson.tocContent = [];
       }
 
+      // Special case for 'print-this-chapter' bits
+      if (Config.isOfBitType(bitType, BitType.printThisChapter)) {
+        if (bitJson.printParentChapterLevel == null) bitJson.printParentChapterLevel = -1;
+      }
+
       // Special case for 'book' bits
       if (Config.isOfBitType(bitType, BitType.book)) {
         if (bitJson.maxTocChapterLevel == null) bitJson.maxTocChapterLevel = -1;
