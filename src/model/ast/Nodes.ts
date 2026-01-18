@@ -262,6 +262,7 @@ export interface Bit {
   tocResource?: Property;
   tocContent?: Property;
   page?: Property;
+  printParentChapterLevel?: Property;
   platformBrandTarget?: Property;
   platformName?: Property;
   platformIcon?: ImageResourceWrapperJson;

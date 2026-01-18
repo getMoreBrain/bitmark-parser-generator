@@ -2,6 +2,7 @@
 [@id:print-chapter-001]
 [!.print-this-chapter]
 [@buttonCaption:Print This Chapter]
+[@printParentChapterLevel:2]
 This is the body text for the print-this-chapter bit.
 
 [.print-this-chapter]

@@ -328,6 +328,7 @@ class Builder extends BaseBuilder {
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
+      printParentChapterLevel?: number;
       platformBrandTarget?: string;
       platformName?: string;
       platformIcon?: Partial<ImageResourceWrapperJson>;
@@ -1289,6 +1290,12 @@ class Builder extends BaseBuilder {
         options,
       ),
       page: this.toAstProperty(bitType, ConfigKey.property_page, data.page, options),
+      printParentChapterLevel: this.toAstProperty(
+        bitType,
+        ConfigKey.property_printParentChapterLevel,
+        data.printParentChapterLevel,
+        options,
+      ),
       platformBrandTarget: this.toAstProperty(
         bitType,
         ConfigKey.property_platformBrandTarget,
