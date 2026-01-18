@@ -424,6 +424,7 @@ const BitType = {
   pageHero: 'page-hero',
   pageOpenBook: 'page-open-book',
   pageOpenBookList: 'page-open-book-list',
+  printBook: 'print-book',
   openBookChapter: 'open-book-chapter',
   pagePerson: 'page-person',
   pageProduct: 'page-product',

@@ -1,0 +1,104 @@
+[
+  {
+    "bit": {
+      "type": "print-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "904321"
+      ],
+      "book": "the_book_id",
+      "reference": "ch-1",
+      "referenceEnd": "ch-2",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Print the book",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "slug": ""
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.print-book]\n[@id:904321]\n[@book:the_book_id][►ch-1][►ch-2]\nPrint the book"
+  },
+  {
+    "bit": {
+      "type": "print-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "904322"
+      ],
+      "book": "another_book",
+      "slug": "print-book-chapter",
+      "buttonCaption": "Print Book",
+      "reference": "ch-9",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.print-book]\n[@id:904322]\n[@slug:print-book-chapter]\n[@book:another_book][►ch-9]\n[@buttonCaption:Print Book]"
+  },
+  {
+    "bit": {
+      "type": "print-book",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "904323"
+      ],
+      "book": "third_book",
+      "reference": "ch-4",
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Open chapter",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "slug": ""
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.print-book]\n[@id:904323]\n[@book:third_book][►ch-4]\nOpen chapter"
+  }
+]
