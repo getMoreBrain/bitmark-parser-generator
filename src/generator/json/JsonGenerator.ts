@@ -1790,6 +1790,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           BitType.pageFooter,
           BitType.pageOpenBook,
           BitType.pagePerson,
+          BitType.printBook,
           BitType.pageProduct,
           BitType.pageProductList,
           BitType.pageProductVideo,
@@ -1816,6 +1817,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Special case for 'toc-content' bits
       if (Config.isOfBitType(bitType, BitType.tocContent)) {
         if (bitJson.tocContent == null) bitJson.tocContent = [];
+      }
+
+      // Special case for 'print-this-chapter' bits
+      if (Config.isOfBitType(bitType, BitType.printThisChapter)) {
+        if (bitJson.printParentChapterLevel == null) bitJson.printParentChapterLevel = -1;
       }
 
       // Special case for 'book' bits

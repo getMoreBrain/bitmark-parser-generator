@@ -198,10 +198,12 @@ export interface BitJson {
   maxCreatedBits: number;
   maxDisplayLevel: number;
   maxTocChapterLevel: number;
+  printParentChapterLevel: number;
   sourceDocument: string;
   internalPrintPdf: string;
   hasPrintRestriction: boolean;
   enforceUpdateOverUserInput: boolean;
+  extractorExtractionTimestamp: string[];
   tocResource: string | string[];
   tocContent: string | string[];
   page: string;

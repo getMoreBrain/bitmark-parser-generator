@@ -112,6 +112,7 @@ const propertyKeys = {
   property_internalPrintPdf: '@internalPrintPdf',
   property_hasPrintRestriction: '@hasPrintRestriction',
   property_enforceUpdateOverUserInput: '@enforceUpdateOverUserInput',
+  property_extractorExtractionTimestamp: '@extractorExtractionTimestamp',
   property_isCaseSensitive: '@isCaseSensitive',
   property_isInfoOnly: '@isInfoOnly',
   property_isPublic: '@isPublic',
@@ -149,6 +150,7 @@ const propertyKeys = {
   property_mute: '@mute',
   property_padletId: '@padletId',
   property_page: '@page',
+  property_printParentChapterLevel: '@printParentChapterLevel',
   property_pageNo: '@pageNo',
   property_partialAnswer: '@partialAnswer',
   property_partner: '@partner', // Deprecated, replaced by person

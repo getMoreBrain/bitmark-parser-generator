@@ -324,9 +324,11 @@ class Builder extends BaseBuilder {
       internalPrintPdf?: string;
       hasPrintRestriction?: boolean;
       enforceUpdateOverUserInput?: boolean;
+      extractorExtractionTimestamp?: string[];
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
+      printParentChapterLevel?: number;
       platformBrandTarget?: string;
       platformName?: string;
       platformIcon?: Partial<ImageResourceWrapperJson>;
@@ -1269,6 +1271,12 @@ class Builder extends BaseBuilder {
         data.enforceUpdateOverUserInput,
         options,
       ),
+      extractorExtractionTimestamp: this.toAstProperty(
+        bitType,
+        ConfigKey.property_extractorExtractionTimestamp,
+        data.extractorExtractionTimestamp,
+        options,
+      ),
       tocResource: this.toAstProperty(
         bitType,
         ConfigKey.property_tocResource,
@@ -1282,6 +1290,12 @@ class Builder extends BaseBuilder {
         options,
       ),
       page: this.toAstProperty(bitType, ConfigKey.property_page, data.page, options),
+      printParentChapterLevel: this.toAstProperty(
+        bitType,
+        ConfigKey.property_printParentChapterLevel,
+        data.printParentChapterLevel,
+        options,
+      ),
       platformBrandTarget: this.toAstProperty(
         bitType,
         ConfigKey.property_platformBrandTarget,

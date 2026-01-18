@@ -5,6 +5,7 @@ import fs from 'fs-extra';
 
 import { Config } from '../config/Config.ts';
 import { BITS } from '../config/raw/bits.ts';
+import { CARDS } from '../config/raw/cardSets.ts';
 import { GROUPS } from '../config/raw/groups.ts';
 import type { _BitConfig, _GroupsConfig } from '../model/config/_Config.ts';
 import type { BitConfig } from '../model/config/BitConfig.ts';
@@ -20,6 +21,8 @@ import { StringUtils } from '../utils/StringUtils.ts';
 export interface GenerateConfigOptions {
   outputDir?: string;
 }
+
+const normalizeCardKey = (cardSetKey: string): string => StringUtils.camelToKebab(cardSetKey);
 
 class ConfigBuilder {
   public build(options?: GenerateConfigOptions): void {
@@ -71,8 +74,10 @@ class ConfigBuilder {
     const outputFolder = opts.outputDir ?? 'assets/config';
     const outputFolderBits = path.join(outputFolder, 'bits');
     const outputFolderGroups = path.join(outputFolder, 'partials');
+    const outputFolderCards = path.join(outputFolder, 'cards');
     fs.ensureDirSync(outputFolderBits);
     fs.ensureDirSync(outputFolderGroups);
+    fs.ensureDirSync(outputFolderCards);
 
     // Clean up existing config files
     const bitsFiles = fs.readdirSync(outputFolderBits).filter((f) => f.endsWith('.jsonc'));
@@ -83,7 +88,18 @@ class ConfigBuilder {
     for (const file of partialsFiles) {
       fs.removeSync(path.join(outputFolderGroups, file));
     }
+    const cardsFiles = fs.readdirSync(outputFolderCards).filter((f) => f.endsWith('.jsonc'));
+    for (const file of cardsFiles) {
+      fs.removeSync(path.join(outputFolderCards, file));
+    }
     const fileWrites: Promise<void>[] = [];
+    const tagEntriesTypeOrder = [
+      BitTagConfigKeyType.tag,
+      BitTagConfigKeyType.property,
+      BitTagConfigKeyType.resource,
+      BitTagConfigKeyType.group,
+      BitTagConfigKeyType.unknown,
+    ];
 
     // Helper to resolve group references through squash map (handles chained squashing)
     const resolveGroupReferences = (groupKey: string): string[] => {
@@ -239,6 +255,47 @@ class ConfigBuilder {
       return tags;
     };
 
+    const serializeCardSet = (
+      cardSetKey: string,
+    ): { key: string; sides: { variants: unknown[] }[] } | undefined => {
+      const cardSetConfig = CARDS[cardSetKey];
+      if (!cardSetConfig) return undefined;
+      const normalizedKey = normalizeCardKey(cardSetKey);
+
+      const sides = cardSetConfig.variants.map((variantList) => {
+        const variants = variantList.map((variant) => {
+          const variantTags: unknown[] = [];
+          const variantTagEntries = Object.entries(variant.tags ?? []).sort((a, b) => {
+            const tagA = a[1];
+            const tagB = b[1];
+            const typeA = typeFromConfigKey(tagA.key);
+            const typeB = typeFromConfigKey(tagB.key);
+            const typeOrder =
+              tagEntriesTypeOrder.indexOf(typeA) - tagEntriesTypeOrder.indexOf(typeB);
+            return typeOrder;
+          });
+
+          for (const [, variantTag] of variantTagEntries) {
+            variantTags.push(...processTagEntries(variantTag, []));
+          }
+
+          return {
+            tags: variantTags,
+            repeatCount: variant.repeatCount ?? 1,
+            bodyAllowed: variant.bodyAllowed ?? true,
+            bodyRequired: variant.bodyRequired ?? false,
+          };
+        });
+
+        return { variants };
+      });
+
+      return {
+        key: normalizedKey,
+        sides,
+      };
+    };
+
     // Convert bits that are depended on to groups (must happen before writing bit configs)
     for (const bt of bitGroupConfigKeys) {
       const bitType = Config.getBitType(bt);
@@ -292,13 +349,6 @@ class ConfigBuilder {
       const resolvedBitConfig = Config.getBitConfig(b.bitType);
 
       const tags: unknown[] = [];
-      const tagEntriesTypeOrder = [
-        BitTagConfigKeyType.tag,
-        BitTagConfigKeyType.property,
-        BitTagConfigKeyType.resource,
-        BitTagConfigKeyType.group,
-        BitTagConfigKeyType.unknown,
-      ];
       const tagEntries = Object.entries(b.tags ?? []).sort((a, b) => {
         const tagA = a[1];
         const tagB = b[1];
@@ -335,6 +385,11 @@ class ConfigBuilder {
         }
       }
 
+      let cardRef: string | undefined;
+      if (b.cardSet && CARDS[b.cardSet]) {
+        cardRef = normalizeCardKey(b.cardSet as string);
+      }
+
       // Use resolved values from BitConfig (with inheritance applied)
       const bitJson = {
         name: b.bitType,
@@ -354,6 +409,7 @@ class ConfigBuilder {
         footerRequired: resolvedBitConfig.footerRequired ?? false,
         resourceAttachmentAllowed: resolvedBitConfig.resourceAttachmentAllowed ?? true,
         tags,
+        ...(cardRef ? { card: cardRef } : {}),
       };
       const output = path.join(outputFolderBits, `${b.bitType}.jsonc`);
       const str = JSON.stringify(bitJson, null, 2);
@@ -435,6 +491,16 @@ class ConfigBuilder {
     };
     writeGroupConfigs(groupConfigs);
 
+    const writeCardConfigs = () => {
+      for (const cardSetKey of Object.keys(CARDS)) {
+        const cardJson = serializeCardSet(cardSetKey);
+        if (!cardJson) continue;
+        const output = path.join(outputFolderCards, `${cardJson.key}.jsonc`);
+        const str = JSON.stringify(cardJson, null, 2);
+        fileWrites.push(fs.writeFile(output, str));
+      }
+    };
+
     // Bits as GroupConfigs
     const writeBitsAsGroupConfigs = (
       bitsAsGroupConfigs: (_BitConfig & { bitType: BitTypeType })[],
@@ -460,13 +526,6 @@ class ConfigBuilder {
           }
         }
 
-        const tagEntriesTypeOrder = [
-          BitTagConfigKeyType.tag,
-          BitTagConfigKeyType.property,
-          BitTagConfigKeyType.resource,
-          BitTagConfigKeyType.group,
-          BitTagConfigKeyType.unknown,
-        ];
         const tagEntries = Object.entries(b.tags ?? []).sort((a, b) => {
           const tagA = a[1];
           const tagB = b[1];
@@ -503,6 +562,8 @@ class ConfigBuilder {
     };
     writeBitsAsGroupConfigs(bitGroupConfigs);
 
+    writeCardConfigs();
+
     // Wait for all async file writes to complete, then validate
     Promise.all(fileWrites)
       .then(() => {
@@ -533,6 +594,7 @@ class ConfigBuilder {
     const errors: string[] = [];
     const outputFolderBits = path.join(outputFolder, 'bits');
     const outputFolderGroups = path.join(outputFolder, 'partials');
+    const outputFolderCards = path.join(outputFolder, 'cards');
 
     // Read all group files to build a set of available groups
     const availableGroups = new Set<string>();
@@ -544,19 +606,27 @@ class ConfigBuilder {
       }
     }
 
+    const availableCards = new Set<string>();
+    const cardFiles = fs.existsSync(outputFolderCards)
+      ? fs.readdirSync(outputFolderCards).filter((f) => f.endsWith('.jsonc'))
+      : [];
+    for (const file of cardFiles) {
+      const cardName = file.replace('.jsonc', '');
+      availableCards.add(cardName);
+    }
+
     // Helper to recursively check tags for group references
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const checkTags = (tags: any[], filePath: string, lineOffset: number): void => {
+    const checkTags = (tags: unknown[], filePath: string, lineOffset: number): void => {
       for (let i = 0; i < tags.length; i++) {
-        const tag = tags[i];
-        if (tag.type === 'group') {
+        const tag = tags[i] as { type?: string; key?: string; tags?: unknown[] };
+        if (tag?.type === 'group' && tag.key) {
           if (!availableGroups.has(tag.key)) {
             const line = lineOffset + i + 1; // Approximate line number
             errors.push(`Missing group reference '${tag.key}' in ${filePath}:${line}`);
           }
         }
         // Recursively check nested tags
-        if (tag.tags && Array.isArray(tag.tags)) {
+        if (Array.isArray(tag?.tags)) {
           checkTags(tag.tags, filePath, lineOffset + i + 1);
         }
       }
@@ -572,6 +642,27 @@ class ConfigBuilder {
           const config = JSON.parse(content);
           if (config.tags && Array.isArray(config.tags)) {
             checkTags(config.tags, `bits/${file}`, 15); // Approximate line offset for tags array
+          }
+          if (typeof config.card === 'string') {
+            if (!availableCards.has(config.card)) {
+              errors.push(`Missing card file '${config.card}' referenced in bits/${file}`);
+            }
+          } else if (config.card?.sides && Array.isArray(config.card.sides)) {
+            config.card.sides.forEach((side: unknown, sideIdx: number) => {
+              const variants = (side as { variants?: unknown[] }).variants;
+              if (Array.isArray(variants)) {
+                variants.forEach((variant: unknown, variantIdx: number) => {
+                  const variantTags = (variant as { tags?: unknown[] }).tags;
+                  if (Array.isArray(variantTags)) {
+                    checkTags(
+                      variantTags,
+                      `bits/${file} (card side ${sideIdx}, variant ${variantIdx})`,
+                      15,
+                    );
+                  }
+                });
+              }
+            });
           }
         } catch (err) {
           errors.push(`Failed to parse ${file}: ${err}`);
@@ -592,6 +683,39 @@ class ConfigBuilder {
           }
         } catch (err) {
           errors.push(`Failed to parse ${file}: ${err}`);
+        }
+      }
+    }
+
+    if (cardFiles.length > 0) {
+      for (const file of cardFiles) {
+        const filePath = path.join(outputFolderCards, file);
+        try {
+          const content = fs.readFileSync(filePath, 'utf-8');
+          const config = JSON.parse(content);
+          const expectedKey = file.replace('.jsonc', '');
+          if (config.key && config.key !== expectedKey) {
+            errors.push(`Card key mismatch in cards/${file}: expected '${expectedKey}'`);
+          }
+          if (Array.isArray(config.sides)) {
+            config.sides.forEach((side: unknown, sideIdx: number) => {
+              const variants = (side as { variants?: unknown[] }).variants;
+              if (Array.isArray(variants)) {
+                variants.forEach((variant: unknown, variantIdx: number) => {
+                  const variantTags = (variant as { tags?: unknown[] }).tags;
+                  if (Array.isArray(variantTags)) {
+                    checkTags(
+                      variantTags,
+                      `cards/${file} (side ${sideIdx}, variant ${variantIdx})`,
+                      10,
+                    );
+                  }
+                });
+              }
+            });
+          }
+        } catch (err) {
+          errors.push(`Failed to parse cards/${file}: ${err}`);
         }
       }
     }
@@ -832,6 +956,12 @@ class ConfigBuilder {
         // tags.push(t);
         tags.push(...processTagEntries(tag));
       }
+
+      let cardRef: string | undefined;
+      const cardSetKey = b.cardSet?.configKey;
+      if (cardSetKey && CARDS[cardSetKey]) {
+        cardRef = normalizeCardKey(cardSetKey);
+      }
       const bitJson = {
         name: b.bitType,
         description: '',
@@ -850,6 +980,7 @@ class ConfigBuilder {
         footerRequired: b.footerRequired ?? false,
         resourceAttachmentAllowed: b.resourceAttachmentAllowed ?? true,
         tags,
+        ...(cardRef ? { card: cardRef } : {}),
       };
       const output = path.join(outputFolderBits, `${b.bitType}.jsonc`);
       const str = JSON.stringify(bitJson, null, 2);
