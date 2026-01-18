@@ -16,6 +16,9 @@ permissions:
 jobs:
   branch-guard:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: Ensure release runs on main
         run: |
@@ -27,6 +30,10 @@ jobs:
   release:
     runs-on: ubuntu-latest
     needs: branch-guard
+    defaults:
+      run:
+        shell: bash
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -100,6 +107,7 @@ jobs:
           tag-name: ${{ steps.pkg.outputs.tag }}
           previous-tag: ${{ steps.prev_tag.outputs.tag }}
           pr-list: ${{ steps.release_data.outputs.pr-list }}
+          issue-list: ${{ steps.release_data.outputs.issue-list }}
           commit-log: ${{ steps.release_data.outputs.commit-log }}
           repository-url: "https://github.com/${{ github.repository }}"
           contributors: ${{ steps.release_data.outputs.contributors }}

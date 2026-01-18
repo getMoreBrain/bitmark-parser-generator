@@ -16,6 +16,10 @@ inputs:
   pr-list:
     description: 'Formatted list of PRs'
     required: true
+  issue-list:
+    description: 'Formatted list of issues'
+    required: false
+    default: ''
   commit-log:
     description: 'Formatted commit log'
     required: true
@@ -42,6 +46,7 @@ runs:
         ANTHROPIC_API_KEY: ${{ inputs.anthropic-api-key }}
         TAG_NAME: ${{ inputs.tag-name }}
         PR_LIST: ${{ inputs.pr-list }}
+        ISSUE_LIST: ${{ inputs.issue-list }}
         COMMIT_LOG: ${{ inputs.commit-log }}
         PREV_TAG: ${{ inputs.previous-tag }}
         REPO_URL: ${{ inputs.repository-url }}
@@ -77,6 +82,9 @@ runs:
 
         ## Merged Pull Requests:
         $PR_LIST
+
+        ## Issues:
+        $ISSUE_LIST
 
         ## Commits:
         $COMMIT_LOG

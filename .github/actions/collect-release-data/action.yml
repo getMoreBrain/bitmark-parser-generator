@@ -31,6 +31,9 @@ outputs:
   commit-issue-urls:
     description: 'Newline-separated issue URLs from commits'
     value: ${{ steps.commits.outputs.issue_urls }}
+  issue-list:
+    description: 'Formatted list of issues for release notes'
+    value: ${{ steps.issues.outputs.list }}
   contributors:
     description: 'Space-separated list of unique contributor usernames'
     value: ${{ steps.contributors.outputs.list }}
@@ -155,6 +158,32 @@ runs:
         ISSUE_URLS=$(echo "$ALL_ISSUE_URLS" | grep -v '^$' | sort -u || true)
         echo "issue_urls<<EOF" >> $GITHUB_OUTPUT
         echo "$ISSUE_URLS" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+
+    - name: Format issue list for release notes
+      id: issues
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        LINKED_ISSUE_URLS: ${{ steps.prs.outputs.linked_issue_urls }}
+        COMMIT_ISSUE_URLS: ${{ steps.commits.outputs.issue_urls }}
+      run: |
+        # Combine and deduplicate issue URLs
+        ALL_ISSUE_URLS=$(printf "%s\n%s\n" "$LINKED_ISSUE_URLS" "$COMMIT_ISSUE_URLS" | grep -v '^$' | sort -u || true)
+
+        ISSUE_LIST=""
+        for ISSUE_URL in $ALL_ISSUE_URLS; do
+          TITLE=$(gh api "$ISSUE_URL" --jq '.title' 2>/dev/null || echo "")
+          if [ -n "$TITLE" ] && [ "$TITLE" != "null" ]; then
+            ISSUE_LIST="$ISSUE_LIST\n- $TITLE (Issue $ISSUE_URL)"
+          else
+            ISSUE_LIST="$ISSUE_LIST\n- Issue $ISSUE_URL"
+          fi
+        done
+
+        ISSUE_LIST=$(echo "$ISSUE_LIST" | sed '/^$/d')
+        echo "list<<EOF" >> $GITHUB_OUTPUT
+        echo "$ISSUE_LIST" >> $GITHUB_OUTPUT
         echo "EOF" >> $GITHUB_OUTPUT
 
     - name: Collect contributors from PRs and Issues
