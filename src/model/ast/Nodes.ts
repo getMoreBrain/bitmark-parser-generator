@@ -258,6 +258,7 @@ export interface Bit {
   internalPrintPdf?: Property;
   hasPrintRestriction?: Property;
   enforceUpdateOverUserInput?: Property;
+  extractorExtractionTimestamp?: Property;
   tocResource?: Property;
   tocContent?: Property;
   page?: Property;

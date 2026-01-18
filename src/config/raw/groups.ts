@@ -717,6 +717,12 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.boolean,
         defaultValue: 'false',
       },
+      {
+        key: ConfigKey.property_extractorExtractionTimestamp,
+        description: 'Extraction timestamps for book conversion',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
     ],
   },
   [ConfigKey.group_learningPathCommon]: {

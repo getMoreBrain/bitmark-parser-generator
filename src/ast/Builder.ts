@@ -324,6 +324,7 @@ class Builder extends BaseBuilder {
       internalPrintPdf?: string;
       hasPrintRestriction?: boolean;
       enforceUpdateOverUserInput?: boolean;
+      extractorExtractionTimestamp?: string[];
       tocResource?: string | string[];
       tocContent?: string | string[];
       page?: string | string[];
@@ -1267,6 +1268,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_enforceUpdateOverUserInput,
         data.enforceUpdateOverUserInput,
+        options,
+      ),
+      extractorExtractionTimestamp: this.toAstProperty(
+        bitType,
+        ConfigKey.property_extractorExtractionTimestamp,
+        data.extractorExtractionTimestamp,
         options,
       ),
       tocResource: this.toAstProperty(

@@ -112,6 +112,7 @@ const propertyKeys = {
   property_internalPrintPdf: '@internalPrintPdf',
   property_hasPrintRestriction: '@hasPrintRestriction',
   property_enforceUpdateOverUserInput: '@enforceUpdateOverUserInput',
+  property_extractorExtractionTimestamp: '@extractorExtractionTimestamp',
   property_isCaseSensitive: '@isCaseSensitive',
   property_isInfoOnly: '@isInfoOnly',
   property_isPublic: '@isPublic',
