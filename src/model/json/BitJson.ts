@@ -202,6 +202,7 @@ export interface BitJson {
   internalPrintPdf: string;
   hasPrintRestriction: boolean;
   enforceUpdateOverUserInput: boolean;
+  extractorExtractionTimestamp: string[];
   tocResource: string | string[];
   tocContent: string | string[];
   page: string;

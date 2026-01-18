@@ -291,6 +291,8 @@ const NodeType = {
   hasPrintRestrictionValue: 'hasPrintRestrictionValue',
   enforceUpdateOverUserInput: 'enforceUpdateOverUserInput',
   enforceUpdateOverUserInputValue: 'enforceUpdateOverUserInputValue',
+  extractorExtractionTimestamp: 'extractorExtractionTimestamp',
+  extractorExtractionTimestampValue: 'extractorExtractionTimestampValue',
   isCaseSensitive: 'isCaseSensitive',
   isCommented: 'isCommented',
   isCorrect: 'isCorrect',
