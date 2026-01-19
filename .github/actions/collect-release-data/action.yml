@@ -137,7 +137,7 @@ runs:
           # Execute GraphQL query and parse results
           # Note: API may return partial data with errors for invalid numbers, so we capture stdout
           # and use empty object as fallback only if no output at all
-          RESULT=$(gh api graphql -f query="$QUERY" 2>/dev/null)
+          RESULT=$(gh api graphql -f query="$QUERY" 2>/dev/null || true)
           if [ -z "$RESULT" ]; then
             RESULT='{"data":{"repository":{}}}'
           fi
@@ -231,9 +231,9 @@ runs:
                     author { login }
                   }
                 }
-              }" --jq '.data.repository.issue.author.login' 2>/dev/null || echo "")
+              }" --jq '.data.repository.issue.author.login' 2>/dev/null || true)
 
-            if [ -n "$ISSUE_AUTHOR" ] && [ "$ISSUE_AUTHOR" != "null" ]; then
+            if [ -n "$ISSUE_AUTHOR" ] && [ "$ISSUE_AUTHOR" != "null" ] && [ "$ISSUE_AUTHOR" != "true" ]; then
               ALL_CONTRIBUTORS="$ALL_CONTRIBUTORS
         $ISSUE_AUTHOR"
             fi
