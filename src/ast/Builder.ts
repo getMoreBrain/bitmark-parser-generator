@@ -1260,12 +1260,6 @@ class Builder extends BaseBuilder {
         data.internalPrintPdf,
         options,
       ),
-      allowPrint: this.toAstProperty(
-        bitType,
-        ConfigKey.property_allowPrint,
-        data.allowPrint,
-        options,
-      ),
       hasPrintRestriction: this.toAstProperty(
         bitType,
         ConfigKey.property_hasPrintRestriction,
