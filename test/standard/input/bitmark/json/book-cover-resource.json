@@ -50,8 +50,7 @@
       "processHandIn": false,
       "isPublic": false,
       "chatWithBook": false,
-      "chatWithBookBrainKey": "",
-      "allowPrint": false
+      "chatWithBookBrainKey": ""
     },
     "parser": {
       "version": "5.1.0",
