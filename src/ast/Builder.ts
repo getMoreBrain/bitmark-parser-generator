@@ -322,6 +322,7 @@ class Builder extends BaseBuilder {
       maxTocChapterLevel?: number;
       sourceDocument?: string;
       internalPrintPdf?: string;
+      allowPrint?: boolean;
       hasPrintRestriction?: boolean;
       enforceUpdateOverUserInput?: boolean;
       extractorExtractionTimestamp?: string[];
@@ -1259,6 +1260,12 @@ class Builder extends BaseBuilder {
         data.internalPrintPdf,
         options,
       ),
+      allowPrint: this.toAstProperty(
+        bitType,
+        ConfigKey.property_allowPrint,
+        data.allowPrint,
+        options,
+      ),
       hasPrintRestriction: this.toAstProperty(
         bitType,
         ConfigKey.property_hasPrintRestriction,
@@ -1290,6 +1297,12 @@ class Builder extends BaseBuilder {
         options,
       ),
       page: this.toAstProperty(bitType, ConfigKey.property_page, data.page, options),
+      allowPrint: this.toAstProperty(
+        bitType,
+        ConfigKey.property_allowPrint,
+        data.allowPrint,
+        options,
+      ),
       printParentChapterLevel: this.toAstProperty(
         bitType,
         ConfigKey.property_printParentChapterLevel,
