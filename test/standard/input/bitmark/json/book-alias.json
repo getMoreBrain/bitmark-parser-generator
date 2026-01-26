@@ -67,7 +67,8 @@
       "processHandIn": false,
       "isPublic": false,
       "chatWithBook": false,
-      "chatWithBookBrainKey": ""
+      "chatWithBookBrainKey": "",
+      "allowPrint": false
     },
     "parser": {
       "version": "5.1.0",
@@ -95,7 +96,8 @@
       "processHandIn": false,
       "isPublic": false,
       "chatWithBook": false,
-      "chatWithBookBrainKey": ""
+      "chatWithBookBrainKey": "",
+      "allowPrint": false
     },
     "parser": {
       "version": "5.1.0",
