@@ -8,6 +8,7 @@ const propertyKeys = {
   property_ageRange: '@ageRange',
   property_aiGenerated: '@aiGenerated',
   property_allowedBit: '@allowedBit',
+  property_allowPrint: '@allowPrint',
   property_allowSubtitles: '@allowSubtitles',
   property_alt: '@alt',
   property_altLangTag: '@altLangTag',

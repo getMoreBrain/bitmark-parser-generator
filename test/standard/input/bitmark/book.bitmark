@@ -31,6 +31,7 @@
 [@maxTocChapterLevel:5]
 [@sourceDocument:http://example.com/source.pdf]
 [@internalPrintPdf:http://example.com/print.pdf]
+[@allowPrint:true]
 [@hasPrintRestriction:false]
 [@processHandIn]
 [@chatWithBook]
