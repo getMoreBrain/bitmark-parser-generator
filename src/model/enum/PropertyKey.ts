@@ -258,6 +258,7 @@ const propertyKeys = {
   property_technicalTerm: '@technicalTerm',
   property_textReference: '@textReference',
   property_theme: '@theme',
+  property_rtl: '@rtl',
   property_thumbImage: '@thumbImage',
   property_title: '@title',
   property_toc: '@toc',

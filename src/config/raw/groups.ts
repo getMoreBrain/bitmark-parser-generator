@@ -168,6 +168,12 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_rtl,
+        description: 'If true, the book is right-to-left',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
+      {
         key: ConfigKey.property_target,
         description: 'The target(s) for the bit',
         format: TagFormat.plainText,
