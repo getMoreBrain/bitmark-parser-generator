@@ -34,6 +34,8 @@ const NodeType = {
   alignment: 'alignment',
   allowedBit: 'allowedBit',
   allowedBitValue: 'allowedBitValue',
+  allowPrint: 'allowPrint',
+  allowPrintValue: 'allowPrintValue',
   alt: 'alt',
   alternativeAnswers: 'alternativeAnswers',
   alternativeAnswersValue: 'alternativeAnswersValue',
