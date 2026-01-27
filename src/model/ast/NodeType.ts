@@ -651,6 +651,8 @@ const NodeType = {
   textsValue: 'textsValue',
   theme: 'theme',
   themeValue: 'themeValue',
+  rtl: 'rtl',
+  rtlValue: 'rtlValue',
   thumbImage: 'thumbImage',
   thumbImageValue: 'thumbImageValue',
   thumbnails: 'thumbnails',

@@ -30,6 +30,7 @@
       "theme": [
         "grundzuege"
       ],
+      "rtl": true,
       "levelCEFRp": "levelCEFRp",
       "levelCEFR": "levelCEFR",
       "levelILR": "levelILR",
