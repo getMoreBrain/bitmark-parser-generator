@@ -198,6 +198,7 @@ export interface BitJson {
   maxCreatedBits: number;
   maxDisplayLevel: number;
   maxTocChapterLevel: number;
+  allowPrint: boolean;
   printParentChapterLevel: number;
   sourceDocument: string;
   internalPrintPdf: string;

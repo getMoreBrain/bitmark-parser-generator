@@ -262,6 +262,8 @@ export interface Bit {
   tocResource?: Property;
   tocContent?: Property;
   page?: Property;
+  allowPrint?: Property;
+  allowPrintValue?: Property;
   printParentChapterLevel?: Property;
   platformBrandTarget?: Property;
   platformName?: Property;

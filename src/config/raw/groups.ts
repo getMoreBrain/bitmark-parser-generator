@@ -706,6 +706,12 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.plainText,
       },
       {
+        key: ConfigKey.property_allowPrint,
+        description: 'If true, the book allows printing',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
+      {
         key: ConfigKey.property_hasPrintRestriction,
         description: 'If true, the book has print restrictions',
         format: TagFormat.boolean,
