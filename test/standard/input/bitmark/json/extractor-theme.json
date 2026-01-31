@@ -1,0 +1,27 @@
+[
+  {
+    "bit": {
+      "type": "extractor-theme",
+      "format": "json",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": {
+        "colors": {
+          "primary": "#000000",
+          "secondary": "#ffffff"
+        }
+      }
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.extractor-theme]\n==== text ====\n{\n  \"colors\": {\n    \"primary\": \"#000000\",\n    \"secondary\": \"#ffffff\"\n  }\n}"
+  }
+]
