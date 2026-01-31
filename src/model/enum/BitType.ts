@@ -259,6 +259,7 @@ const BitType = {
   extractorPageWithBlocks: 'extractor-page-with-blocks',
   extractorPageWithBlocksCollapsible: 'extractor-page-with-blocks-collapsible',
   extractorRepeatedText: 'extractor-repeated-text',
+  extractorTheme: 'extractor-theme',
   featured: 'featured',
   feedback: 'feedback',
   figure: 'figure',
