@@ -1,0 +1,161 @@
+[
+  {
+    "bit": {
+      "type": "review-error",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "210023"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Review Error",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a review error note.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resolved": false,
+      "resolvedDate": "",
+      "resolvedBy": ""
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.review-error]\n[@id:210023]\n[%][%**Review Error**]\n\nThis is a review error note."
+  },
+  {
+    "bit": {
+      "type": "review-error-ai",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "210024"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "AI Review Error",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is an AI review error note.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resolved": false,
+      "resolvedDate": "",
+      "resolvedBy": ""
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.review-error-ai]\n[@id:210024]\n[%][%**AI Review Error**]\n\nThis is an AI review error note."
+  },
+  {
+    "bit": {
+      "type": "review-error-translation",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "210025"
+      ],
+      "item": [],
+      "lead": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "Translation Error",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a translation error note.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resolved": false,
+      "resolvedDate": "",
+      "resolvedBy": ""
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.review-error-translation]\n[@id:210025]\n[%][%**Translation Error**]\n\nThis is a translation error note."
+  }
+]

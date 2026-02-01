@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.6.0
+Version: 5.7.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -468,6 +468,9 @@ remark-collapsible (since: 1.21.0)
 review-approved-note (since: 1.3.0)
 review-author-note (since: 1.3.0)
 review-customer-note (since: 3.5.0)
+review-error (since: 5.7.1)
+review-error-ai (since: 5.7.1)
+review-error-translation (since: 5.7.1)
 review-note (since: 1.3.0)
 review-request-for-review-note (since: 1.3.0)
 review-reviewer-note (since: 1.3.0)

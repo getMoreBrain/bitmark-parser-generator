@@ -1,0 +1,20 @@
+
+[.review-error]
+[@id:210023]
+[%][%**Review Error**]
+
+This is a review error note.
+
+
+[.review-error-ai]
+[@id:210024]
+[%][%**AI Review Error**]
+
+This is an AI review error note.
+
+
+[.review-error-translation]
+[@id:210025]
+[%][%**Translation Error**]
+
+This is a translation error note.
