@@ -625,6 +625,18 @@ const GROUPS: _GroupsConfig = {
         defaultValue: 'false',
       },
       {
+        key: ConfigKey.property_needsValidation,
+        description: 'If true, the bit needs validation',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
+      {
+        key: ConfigKey.property_validationDate,
+        description: 'The date when the bit was validated',
+        format: TagFormat.trimmedString,
+        defaultValue: '',
+      },
+      {
         key: ConfigKey.property_chatWithBook,
         description: 'If true, the user can chat about the book with an AI assistant',
         format: TagFormat.boolean,

@@ -144,6 +144,8 @@ class Builder extends BaseBuilder {
       isTemplate?: boolean;
       isTemplateStripTheme?: boolean;
       isEditable?: boolean;
+      needsValidation?: boolean;
+      validationDate?: string;
       aiGenerated?: boolean;
       machineTranslated?: string;
       translationOf?: string;
@@ -528,6 +530,18 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_isEditable,
         data.isEditable,
+        options,
+      ),
+      needsValidation: this.toAstProperty(
+        bitType,
+        ConfigKey.property_needsValidation,
+        data.needsValidation,
+        options,
+      ),
+      validationDate: this.toAstProperty(
+        bitType,
+        ConfigKey.property_validationDate,
+        data.validationDate,
         options,
       ),
       aiGenerated: this.toAstProperty(
