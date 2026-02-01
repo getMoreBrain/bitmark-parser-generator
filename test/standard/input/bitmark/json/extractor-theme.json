@@ -1,0 +1,39 @@
+[
+  {
+    "bit": {
+      "type": "extractor-theme",
+      "format": "json",
+      "bitLevel": 1,
+      "id": [
+        "1234567"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": {
+        "colors": {
+          "primary": "#FF5733",
+          "secondary": "#33FF57",
+          "background": "#FFFFFF"
+        },
+        "fonts": {
+          "heading": "Arial",
+          "body": "Times New Roman"
+        },
+        "spacing": {
+          "margin": "20px",
+          "padding": "10px"
+        }
+      }
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.extractor-theme]\n[@id:1234567]\n==== text ====\n{\n  \"colors\": {\n    \"primary\": \"#FF5733\",\n    \"secondary\": \"#33FF57\",\n    \"background\": \"#FFFFFF\"\n  },\n  \"fonts\": {\n    \"heading\": \"Arial\",\n    \"body\": \"Times New Roman\"\n  },\n  \"spacing\": {\n    \"margin\": \"20px\",\n    \"padding\": \"10px\"\n  }\n}"
+  }
+]

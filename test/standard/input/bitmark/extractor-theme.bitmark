@@ -1,0 +1,19 @@
+[.extractor-theme]
+[@id:1234567]
+==== text ====
+{
+  "colors": {
+    "primary": "#FF5733",
+    "secondary": "#33FF57",
+    "background": "#FFFFFF"
+  },
+  "fonts": {
+    "heading": "Arial",
+    "body": "Times New Roman"
+  },
+  "spacing": {
+    "margin": "20px",
+    "padding": "10px"
+  }
+}
+

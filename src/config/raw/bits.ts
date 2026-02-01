@@ -2992,6 +2992,14 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     description: 'Extractor repeated text bit, used to define repeated text in extractor pages',
   },
+  [BitType.extractorTheme]: {
+    since: '5.3.0',
+    baseBitType: BitType._standard,
+    description:
+      'Extractor theme bit, used to provide design extraction JSON for branding tools',
+
+    textFormatDefault: TextFormat.json,
+  },
   [BitType.extractorPageNumber]: {
     since: '1.5.21',
     baseBitType: BitType.article,
