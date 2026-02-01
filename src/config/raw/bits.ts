@@ -2995,8 +2995,7 @@ const BITS: _BitsConfig = {
   [BitType.extractorTheme]: {
     since: '5.3.0',
     baseBitType: BitType._standard,
-    description:
-      'Extractor theme bit, used to provide design extraction JSON for branding tools',
+    description: 'Extractor theme bit, used to provide design extraction JSON for branding tools',
 
     textFormatDefault: TextFormat.json,
   },

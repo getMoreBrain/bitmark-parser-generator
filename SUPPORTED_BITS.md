@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.6.0
+Version: 5.7.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -253,6 +253,7 @@ extractor-page-number-collapsible (since: 1.30.0)
 extractor-page-with-blocks (since: 1.5.21)
 extractor-page-with-blocks-collapsible (since: 1.30.0)
 extractor-repeated-text (since: 1.5.21)
+extractor-theme (since: 5.3.0)
 featured (since: 1.3.0)
 feedback (since: 3.13.0)
 figure (since: 1.3.0)
