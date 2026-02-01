@@ -2918,6 +2918,13 @@ const BITS: _BitsConfig = {
 
     textFormatDefault: TextFormat.json,
   },
+  [BitType.extractorTheme]: {
+    since: '5.7.0',
+    baseBitType: BitType._standard,
+    description: 'Extractor theme bit, used to store design/theme JSON extracted from documents',
+
+    textFormatDefault: TextFormat.json,
+  },
   [BitType.extractorAiChat]: {
     since: '3.19.0',
     baseBitType: BitType._standard,
