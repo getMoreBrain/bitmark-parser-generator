@@ -63,6 +63,7 @@
         "2026-01-18T20:05:03Z",
         "2026-01-19T08:30:00Z"
       ],
+      "allowPrint": true,
       "title": [
         {
           "type": "paragraph",
@@ -93,11 +94,10 @@
       "marginNumber": [],
       "hint": [],
       "instruction": [],
-      "body": [],
-      "allowPrint": true
+      "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -106,35 +106,35 @@
           "text": "[@levelCEFRp:levelCEFRp]",
           "location": {
             "start": {
-              "line": 27,
+              "line": 28,
               "column": 1,
-              "offset": 807
+              "offset": 819
             },
             "end": {
-              "line": 27,
+              "line": 28,
               "column": 25,
-              "offset": 831
+              "offset": 843
             }
           },
           "original": {
             "text": "[@levelCEFRp:levelCEFRp]",
             "location": {
               "start": {
-                "line": 26,
+                "line": 27,
                 "column": 1,
-                "offset": 782
+                "offset": 794
               },
               "end": {
-                "line": 26,
+                "line": 27,
                 "column": 25,
-                "offset": 806
+                "offset": 818
               }
             }
           }
         }
       ]
     },
-    "bitmark": "[.book]\n[@id:135647]\n[@lang:en-US]\n[@language:de]\n[@language:en]\n[@language:jp]\n[@language:cn]\n[@publisher:kpmg]\n[@publisherName:KPMG]\n[@theme:grundzuege]\n[@spaceId:sl]\n[#How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[##Or, what the digitization of textbooks has to do with Schiller and power sockets]\n[@subtype:draft-book]\n[@author:Philippe Pointet]\n[@customerExternalId:a-bow-the-content-n_9374th83h20]\n[@externalId:e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc]\n[@kind:learning-path]\n[@coverImage:https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png]\n[@coverColor:#F2F2F2]\n[@hasMarkAsDone]\n[@isPublic]\n[@duration:PT2H]\n[@relatedBook:n_9374th83h20]\n[@relatedBook:g_F2F2F2]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]\n[@maxTocChapterLevel:5]\n[@sourceDocument:http://example.com/source.pdf]\n[@internalPrintPdf:http://example.com/print.pdf]\n[@allowPrint:true]\n[@hasPrintRestriction:false]\n[@processHandIn]\n[@chatWithBook]\n[@isEditable]\n[@chatWithBookBrainKey:12435]\n[@processHandInLocation:Hong Kong]\n[@enforceUpdateOverUserInput]\n[@extractorExtractionTimestamp:2026-01-18T20:05:03Z]\n[@extractorExtractionTimestamp:2026-01-19T08:30:00Z]"
+    "bitmark": "[.book]\n[@id:135647]\n[@lang:en-US]\n[@language:de]\n[@language:en]\n[@language:jp]\n[@language:cn]\n[@publisher:kpmg]\n[@publisherName:KPMG]\n[@theme:grundzuege]\n[@rtl:true]\n[@spaceId:sl]\n[#How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[##Or, what the digitization of textbooks has to do with Schiller and power sockets]\n[@subtype:draft-book]\n[@author:Philippe Pointet]\n[@customerExternalId:a-bow-the-content-n_9374th83h20]\n[@externalId:e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc]\n[@kind:learning-path]\n[@coverImage:https://docs.bitmark.cloud/bit-books/gmb/bitmark_artikel/web-resources/images/what.png]\n[@coverColor:#F2F2F2]\n[@hasMarkAsDone]\n[@isPublic]\n[@duration:PT2H]\n[@relatedBook:n_9374th83h20]\n[@relatedBook:g_F2F2F2]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFRp:levelCEFRp]\n[@levelCEFR:levelCEFR]\n[@levelILR:levelILR]\n[@levelACTFL:levelACTFL]\n[@maxTocChapterLevel:5]\n[@sourceDocument:http://example.com/source.pdf]\n[@internalPrintPdf:http://example.com/print.pdf]\n[@allowPrint:true]\n[@hasPrintRestriction:false]\n[@processHandIn]\n[@chatWithBook]\n[@isEditable]\n[@chatWithBookBrainKey:12435]\n[@processHandInLocation:Hong Kong]\n[@enforceUpdateOverUserInput]\n[@extractorExtractionTimestamp:2026-01-18T20:05:03Z]\n[@extractorExtractionTimestamp:2026-01-19T08:30:00Z]"
   },
   {
     "bit": {
@@ -206,7 +206,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -245,7 +245,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -299,7 +299,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -308,14 +308,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 57,
+              "line": 61,
               "column": 1,
-              "offset": 1876
+              "offset": 2013
             },
             "end": {
-              "line": 57,
+              "line": 61,
               "column": 21,
-              "offset": 1896
+              "offset": 2033
             }
           }
         },
@@ -324,14 +324,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 57,
+              "line": 61,
               "column": 1,
-              "offset": 1876
+              "offset": 2013
             },
             "end": {
-              "line": 57,
+              "line": 61,
               "column": 21,
-              "offset": 1896
+              "offset": 2033
             }
           }
         }
@@ -377,7 +377,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -411,7 +411,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -420,14 +420,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 72,
+              "line": 76,
               "column": 1,
-              "offset": 3557
+              "offset": 3694
             },
             "end": {
-              "line": 72,
+              "line": 76,
               "column": 21,
-              "offset": 3577
+              "offset": 3714
             }
           }
         },
@@ -436,14 +436,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 72,
+              "line": 76,
               "column": 1,
-              "offset": 3557
+              "offset": 3694
             },
             "end": {
-              "line": 72,
+              "line": 76,
               "column": 21,
-              "offset": 3577
+              "offset": 3714
             }
           }
         }
@@ -484,7 +484,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -567,7 +567,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -606,7 +606,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -650,7 +650,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -659,14 +659,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 96,
+              "line": 100,
               "column": 1,
-              "offset": 5454
+              "offset": 5591
             },
             "end": {
-              "line": 96,
+              "line": 100,
               "column": 21,
-              "offset": 5474
+              "offset": 5611
             }
           }
         },
@@ -675,14 +675,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 96,
+              "line": 100,
               "column": 1,
-              "offset": 5454
+              "offset": 5591
             },
             "end": {
-              "line": 96,
+              "line": 100,
               "column": 21,
-              "offset": 5474
+              "offset": 5611
             }
           }
         }
@@ -723,7 +723,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -787,7 +787,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -796,14 +796,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 107,
+              "line": 111,
               "column": 1,
-              "offset": 6688
+              "offset": 6825
             },
             "end": {
-              "line": 107,
+              "line": 111,
               "column": 21,
-              "offset": 6708
+              "offset": 6845
             }
           }
         },
@@ -812,14 +812,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 107,
+              "line": 111,
               "column": 1,
-              "offset": 6688
+              "offset": 6825
             },
             "end": {
-              "line": 107,
+              "line": 111,
               "column": 21,
-              "offset": 6708
+              "offset": 6845
             }
           }
         }
@@ -860,7 +860,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1040,7 +1040,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1079,7 +1079,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1255,7 +1255,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1294,7 +1294,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1338,7 +1338,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -1347,14 +1347,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 148,
+              "line": 152,
               "column": 1,
-              "offset": 10961
+              "offset": 11098
             },
             "end": {
-              "line": 148,
+              "line": 152,
               "column": 21,
-              "offset": 10981
+              "offset": 11118
             }
           }
         },
@@ -1363,14 +1363,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 148,
+              "line": 152,
               "column": 1,
-              "offset": 10961
+              "offset": 11098
             },
             "end": {
-              "line": 148,
+              "line": 152,
               "column": 21,
-              "offset": 10981
+              "offset": 11118
             }
           }
         }
@@ -1411,7 +1411,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1462,7 +1462,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1501,7 +1501,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1623,7 +1623,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1662,7 +1662,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1696,7 +1696,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -1705,14 +1705,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 181,
+              "line": 185,
               "column": 1,
-              "offset": 12929
+              "offset": 13066
             },
             "end": {
-              "line": 181,
+              "line": 185,
               "column": 21,
-              "offset": 12949
+              "offset": 13086
             }
           }
         },
@@ -1721,14 +1721,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 181,
+              "line": 185,
               "column": 1,
-              "offset": 12929
+              "offset": 13066
             },
             "end": {
-              "line": 181,
+              "line": 185,
               "column": 21,
-              "offset": 12949
+              "offset": 13086
             }
           }
         }
@@ -1769,7 +1769,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1813,7 +1813,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -1822,14 +1822,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 190,
+              "line": 194,
               "column": 1,
-              "offset": 13281
+              "offset": 13418
             },
             "end": {
-              "line": 190,
+              "line": 194,
               "column": 21,
-              "offset": 13301
+              "offset": 13438
             }
           }
         },
@@ -1838,14 +1838,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 190,
+              "line": 194,
               "column": 1,
-              "offset": 13281
+              "offset": 13418
             },
             "end": {
-              "line": 190,
+              "line": 194,
               "column": 21,
-              "offset": 13301
+              "offset": 13438
             }
           }
         }
@@ -1886,7 +1886,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1992,7 +1992,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2031,7 +2031,7 @@
       "progress": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2132,7 +2132,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -2141,14 +2141,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 214,
+              "line": 218,
               "column": 1,
-              "offset": 14849
+              "offset": 14986
             },
             "end": {
-              "line": 214,
+              "line": 218,
               "column": 21,
-              "offset": 14869
+              "offset": 15006
             }
           }
         },
@@ -2157,14 +2157,14 @@
           "text": "[.article:bitmark--]",
           "location": {
             "start": {
-              "line": 214,
+              "line": 218,
               "column": 1,
-              "offset": 14849
+              "offset": 14986
             },
             "end": {
-              "line": 214,
+              "line": 218,
               "column": 21,
-              "offset": 14869
+              "offset": 15006
             }
           }
         }
@@ -2211,7 +2211,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2256,7 +2256,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2301,7 +2301,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2346,7 +2346,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2381,7 +2381,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2426,7 +2426,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2471,7 +2471,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2516,7 +2516,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2561,7 +2561,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2606,7 +2606,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2651,7 +2651,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2696,7 +2696,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2741,7 +2741,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2786,7 +2786,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2831,7 +2831,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2876,7 +2876,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2921,7 +2921,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2966,7 +2966,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3011,7 +3011,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3056,7 +3056,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3101,7 +3101,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3146,7 +3146,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3191,7 +3191,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3236,7 +3236,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3281,7 +3281,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3326,7 +3326,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3371,7 +3371,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3416,7 +3416,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3461,7 +3461,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3506,7 +3506,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -3551,7 +3551,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },

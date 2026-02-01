@@ -17,10 +17,10 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.toc-chapter]\n[@id:92374]\n[@maxDisplayLevel:99]"
+    "bitmark": "[.toc-chapter]\n[@id:92374]\n[@maxDisplayLevel:99][@validationDate:2024-01-15]"
   }
 ]

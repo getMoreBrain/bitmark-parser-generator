@@ -4,7 +4,9 @@
       "type": "learning-documentation-feedback",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["67915"],
+      "id": [
+        "67915"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -150,7 +152,7 @@
       ]
     },
     "parser": {
-      "version": "5.2.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -161,7 +163,9 @@
       "type": "learning-documentation-feedback",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["64574"],
+      "id": [
+        "64574"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -321,7 +325,7 @@
       ]
     },
     "parser": {
-      "version": "5.2.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [

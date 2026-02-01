@@ -16,11 +16,11 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.toc]\n[@id:92374]"
+    "bitmark": "[.toc][@needsValidation:true][@validationDate:2024-03-20]\n[@id:92374]"
   },
   {
     "bit": {
@@ -36,7 +36,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },

@@ -52,7 +52,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -119,7 +119,7 @@
       "handInAcceptFileType": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -174,7 +174,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -276,7 +276,7 @@
       "handInAcceptFileType": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -334,7 +334,7 @@
       "handInAcceptFileType": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },

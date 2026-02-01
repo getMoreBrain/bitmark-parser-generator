@@ -44,17 +44,17 @@
       "instruction": [],
       "body": [],
       "maxTocChapterLevel": -1,
+      "allowPrint": false,
       "hasPrintRestriction": true,
       "enforceUpdateOverUserInput": false,
       "hasMarkAsDone": false,
       "processHandIn": false,
       "isPublic": false,
       "chatWithBook": false,
-      "chatWithBookBrainKey": "",
-      "allowPrint": false
+      "chatWithBookBrainKey": ""
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -88,7 +88,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.7.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },

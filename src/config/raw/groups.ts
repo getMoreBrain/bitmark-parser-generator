@@ -45,6 +45,24 @@ const GROUPS: _GroupsConfig = {
         defaultValue: 'false',
       },
       {
+        key: ConfigKey.property_isEditable,
+        description: 'If true, the bit is editable',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
+      {
+        key: ConfigKey.property_needsValidation,
+        description: 'If true, the bit needs validation',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
+      {
+        key: ConfigKey.property_validationDate,
+        description: 'The date when the bit was validated',
+        format: TagFormat.plainText,
+        defaultValue: '',
+      },
+      {
         key: ConfigKey.property_aiGenerated,
         description: 'If true, the bit is AI-generated',
         format: TagFormat.boolean,
@@ -617,24 +635,6 @@ const GROUPS: _GroupsConfig = {
         description: 'If true, the book is a template strip theme',
         format: TagFormat.boolean,
         defaultValue: 'false',
-      },
-      {
-        key: ConfigKey.property_isEditable,
-        description: 'If true, the book is editable',
-        format: TagFormat.boolean,
-        defaultValue: 'false',
-      },
-      {
-        key: ConfigKey.property_needsValidation,
-        description: 'If true, the bit needs validation',
-        format: TagFormat.boolean,
-        defaultValue: 'false',
-      },
-      {
-        key: ConfigKey.property_validationDate,
-        description: 'The date when the bit was validated',
-        format: TagFormat.trimmedString,
-        defaultValue: '',
       },
       {
         key: ConfigKey.property_chatWithBook,
