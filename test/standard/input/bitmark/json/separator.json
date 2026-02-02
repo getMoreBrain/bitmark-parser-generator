@@ -4,9 +4,8 @@
       "type": "separator",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "92375"
-      ],
+      "id": ["92375"],
+      "needsValidation": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -27,11 +26,11 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.3.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.separator]\n[@id:92375]\nThis is a separator"
+    "bitmark": "[.separator]\n[@id:92375]\n[@needsValidation]\nThis is a separator"
   },
   {
     "bit": {
@@ -47,7 +46,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.3.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -58,9 +57,8 @@
       "type": "separator-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
+      "validationDate": "2024-07-15T14:32:18Z",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -92,7 +90,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.3.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -101,14 +99,14 @@
           "text": "[.separator-alt:bitmark--]",
           "location": {
             "start": {
-              "line": 11,
+              "line": 12,
               "column": 1,
-              "offset": 64
+              "offset": 83
             },
             "end": {
-              "line": 11,
+              "line": 12,
               "column": 27,
-              "offset": 90
+              "offset": 109
             }
           }
         },
@@ -117,19 +115,19 @@
           "text": "[.separator-alt:bitmark--]",
           "location": {
             "start": {
-              "line": 11,
+              "line": 12,
               "column": 1,
-              "offset": 64
+              "offset": 83
             },
             "end": {
-              "line": 11,
+              "line": 12,
               "column": 27,
-              "offset": 90
+              "offset": 109
             }
           }
         }
       ]
     },
-    "bitmark": "[.separator-alt:bitmark--]\n[@id:151971]\n[%][%][%][%][%marginNumber]\n\nThe bit content"
+    "bitmark": "[.separator-alt:bitmark--]\n[@id:151971]\n[@validationDate:2024-07-15T14:32:18Z]\n[%][%][%][%][%marginNumber]\n\nThe bit content"
   }
 ]

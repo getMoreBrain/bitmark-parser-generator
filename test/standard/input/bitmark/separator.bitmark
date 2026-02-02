@@ -1,5 +1,6 @@
 [.separator]
 [@id:92375]
+[@needsValidation]
 This is a separator
 
 
@@ -10,6 +11,7 @@ This is a separator
 
 [.separator-alt:bitmark--]
 [@id:151971]
+[@validationDate:2024-07-15T14:32:18Z]
 [%][%][%][%][%marginNumber]
 
 The bit content
