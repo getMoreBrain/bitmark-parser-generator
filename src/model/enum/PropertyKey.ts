@@ -81,6 +81,8 @@ const propertyKeys = {
   property_disableFeedback: '@disableFeedback',
   property_duration: '@duration',
   property_isEditable: '@isEditable',
+  property_needsValidation: '@needsValidation',
+  property_validationDate: '@validationDate',
   property_emphasis: '@emphasis',
   property_example: '@example',
   property_externalId: '@externalId',

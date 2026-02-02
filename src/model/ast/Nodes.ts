@@ -73,6 +73,8 @@ export interface Bit {
   isTemplate?: Property;
   isTemplateStripTheme?: Property;
   isEditable?: Property;
+  needsValidation?: Property;
+  validationDate?: Property;
   aiGenerated?: Property;
   machineTranslated?: Property;
   translationOf?: Property;

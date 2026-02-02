@@ -2918,6 +2918,13 @@ const BITS: _BitsConfig = {
 
     textFormatDefault: TextFormat.json,
   },
+  [BitType.extractorTheme]: {
+    since: '5.7.0',
+    baseBitType: BitType._standard,
+    description: 'Extractor theme bit, used to store design/theme JSON extracted from documents',
+
+    textFormatDefault: TextFormat.json,
+  },
   [BitType.extractorAiChat]: {
     since: '3.19.0',
     baseBitType: BitType._standard,
@@ -4765,6 +4772,22 @@ const BITS: _BitsConfig = {
     since: '3.5.0',
     baseBitType: BitType.reviewNote,
     description: 'Customer review note bit, used to create customer notes in reviews',
+  },
+  [BitType.reviewError]: {
+    since: '5.8.0',
+    baseBitType: BitType.reviewNote,
+    description: 'Review error note bit, used to create error notes in reviews',
+  },
+  [BitType.reviewErrorAi]: {
+    since: '5.8.0',
+    baseBitType: BitType.reviewNote,
+    description: 'Review error AI note bit, used to create AI error notes in reviews',
+  },
+  [BitType.reviewErrorTranslation]: {
+    since: '5.8.0',
+    baseBitType: BitType.reviewNote,
+    description:
+      'Review error translation note bit, used to create translation error notes in reviews',
   },
   [BitType.reviewReviewerNote]: {
     since: '1.3.0',
