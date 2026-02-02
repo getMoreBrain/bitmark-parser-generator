@@ -1,0 +1,53 @@
+
+[.review-error]
+[@id:210023]
+[%][%**Review Error**]
+
+This is a review error note.
+
+
+[.review-error:bitmark++]
+[@id:210024]
+[%][%**Review Error with Properties**]
+[@resolved:true]
+[@resolvedDate:2024-01-15]
+[@resolvedBy:John Doe]
+
+
+This is a review error note with all properties set.
+
+
+[.review-error-ai]
+[@id:210025]
+[%][%**AI Review Error**]
+
+This is an AI review error note.
+
+
+[.review-error-ai:bitmark++]
+[@id:210026]
+[%][%**AI Review Error with Properties**]
+[@resolved:true]
+[@resolvedDate:2024-02-20]
+[@resolvedBy:AI System]
+
+
+This is an AI review error note with all properties set.
+
+
+[.review-error-translation]
+[@id:210027]
+[%][%**Translation Error**]
+
+This is a translation error note.
+
+
+[.review-error-translation:bitmark++]
+[@id:210028]
+[%][%**Translation Error with Properties**]
+[@resolved:true]
+[@resolvedDate:2024-03-10]
+[@resolvedBy:Translator Team]
+
+
+This is a translation error note with all properties set.

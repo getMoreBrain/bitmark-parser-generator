@@ -4773,6 +4773,22 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.reviewNote,
     description: 'Customer review note bit, used to create customer notes in reviews',
   },
+  [BitType.reviewError]: {
+    since: '5.8.0',
+    baseBitType: BitType.reviewNote,
+    description: 'Review error note bit, used to create error notes in reviews',
+  },
+  [BitType.reviewErrorAi]: {
+    since: '5.8.0',
+    baseBitType: BitType.reviewNote,
+    description: 'Review error AI note bit, used to create AI error notes in reviews',
+  },
+  [BitType.reviewErrorTranslation]: {
+    since: '5.8.0',
+    baseBitType: BitType.reviewNote,
+    description:
+      'Review error translation note bit, used to create translation error notes in reviews',
+  },
   [BitType.reviewReviewerNote]: {
     since: '1.3.0',
     baseBitType: BitType.reviewNote,
