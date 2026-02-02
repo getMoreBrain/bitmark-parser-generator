@@ -28,6 +28,8 @@ export interface BitJson {
   isTemplate: boolean;
   isTemplateStripTheme: boolean;
   isEditable: boolean;
+  needsValidation: boolean;
+  validationDate: string;
   aiGenerated: boolean;
   machineTranslated: string;
   translationOf: string;
