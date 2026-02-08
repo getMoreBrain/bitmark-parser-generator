@@ -129,6 +129,7 @@ export interface Bit {
   coverColor?: Property;
   publications?: Property;
   relatedBook?: Property;
+  translationOfBook?: Property;
   author?: Property;
   subject?: Property;
   date?: Property;

@@ -706,7 +706,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_translationOfBook,
         description: 'External Id of the translated book',
-        format: TagFormat.trimmedString,
+        format: TagFormat.plainText,
       },
       {
         key: ConfigKey.property_duration,
