@@ -200,6 +200,7 @@ class Builder extends BaseBuilder {
       coverColor?: string;
       publications?: string | string[];
       relatedBook?: string | string[];
+      translationOfBook?: string;
       author?: string | string[];
       subject?: string | string[];
       date?: string;
@@ -735,6 +736,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_relatedBook,
         data.relatedBook,
+        options,
+      ),
+      translationOfBook: this.toAstProperty(
+        bitType,
+        ConfigKey.property_translationOfBook,
+        data.translationOfBook,
         options,
       ),
       author: this.toAstProperty(bitType, ConfigKey.property_author, data.author, options),

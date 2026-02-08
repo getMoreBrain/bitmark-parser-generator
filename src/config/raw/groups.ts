@@ -704,6 +704,11 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_translationOfBook,
+        description: 'External Id of the translated book',
+        format: TagFormat.trimmedString,
+      },
+      {
         key: ConfigKey.property_duration,
         description: 'The duration of the book',
         format: TagFormat.plainText,
