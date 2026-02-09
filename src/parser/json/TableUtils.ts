@@ -265,7 +265,9 @@ export function normalizeTableFormat(
     delete t.data;
   }
 
-  const isExtended = Config.isOfBitType(bitType, BitType.tableExtended);
+  const isExtended =
+    Config.isOfBitType(bitType, BitType.tableExtended) ||
+    Config.isOfBitType(bitType, BitType.tableImage);
 
   // If old format only, but .table-extended bit, convert to new
   if (isExtended && isTableBasicFormat(table)) {
