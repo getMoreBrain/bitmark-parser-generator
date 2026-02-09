@@ -94,8 +94,7 @@
       "hint": [],
       "instruction": [],
       "body": [],
-      "allowPrint": true,
-      "allowPrintEnforceSpaceConfiguration": false
+      "allowPrint": true
     },
     "parser": {
       "version": "5.1.0",

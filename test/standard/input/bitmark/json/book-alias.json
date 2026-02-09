@@ -68,8 +68,7 @@
       "isPublic": false,
       "chatWithBook": false,
       "chatWithBookBrainKey": "",
-      "allowPrint": false,
-      "allowPrintEnforceSpaceConfiguration": false
+      "allowPrint": false
     },
     "parser": {
       "version": "5.1.0",
@@ -98,8 +97,7 @@
       "isPublic": false,
       "chatWithBook": false,
       "chatWithBookBrainKey": "",
-      "allowPrint": false,
-      "allowPrintEnforceSpaceConfiguration": false
+      "allowPrint": false
     },
     "parser": {
       "version": "5.1.0",
