@@ -40,6 +40,8 @@ import {
   type ListItemJson,
   type MarkConfigJson,
   type StatementJson,
+  type TableExtendedJson,
+  type TableJson,
 } from '../../model/json/BitJson.ts';
 import { type BitWrapperJson } from '../../model/json/BitWrapperJson.ts';
 import { type BodyBitJson } from '../../model/json/BodyBitJson.ts';
@@ -1752,7 +1754,10 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         //
       }
 
-      if (Config.isOfBitType(bitType, BitType.table)) {
+      if (
+        Config.isOfBitType(bitType, BitType.table) &&
+        !Config.isOfBitType(bitType, BitType.tableImage)
+      ) {
         //
         // if (bitJson.content2Buy == null) bitJson.content2Buy = '';
         if (bitJson.tableFixedHeader == null) bitJson.tableFixedHeader = false;
@@ -1769,6 +1774,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.tableResizableColumns == null) bitJson.tableResizableColumns = false;
         if (bitJson.tableColumnMinWidth == null) bitJson.tableColumnMinWidth = 0;
         //
+      }
+      if (Config.isOfBitType(bitType, BitType.tableImage)) {
+        if (this.tableIsEmpty(bitJson.table)) {
+          delete bitJson.table;
+        }
       }
 
       if (Config.isOfBitType(bitType, BitType.bookReference)) {
@@ -1971,6 +1981,26 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     return bitJson;
+  }
+
+  protected tableIsEmpty(table: TableJson | TableExtendedJson | undefined): boolean {
+    if (!table) return true;
+    if (Object.keys(table).length === 0) return true;
+    const tableStandard = table as TableJson;
+    if (tableStandard.columns?.length === 0 && tableStandard.data?.length) {
+      return true;
+    }
+
+    const tableExtended = table as TableExtendedJson;
+    if (
+      tableExtended.header?.rows.length === 0 &&
+      tableExtended.body?.rows.length === 0 &&
+      tableExtended.footer?.rows.length === 0
+    ) {
+      return true;
+    }
+
+    return false;
   }
 
   /**
