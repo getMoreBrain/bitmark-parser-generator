@@ -129,6 +129,7 @@ export interface Bit {
   coverColor?: Property;
   publications?: Property;
   relatedBook?: Property;
+  translationOfBook?: Property;
   author?: Property;
   subject?: Property;
   date?: Property;
@@ -266,6 +267,7 @@ export interface Bit {
   tocContent?: Property;
   page?: Property;
   allowPrint?: Property;
+  allowPrintEnforceSpaceConfiguration?: Property;
   allowPrintValue?: Property;
   printParentChapterLevel?: Property;
   platformBrandTarget?: Property;

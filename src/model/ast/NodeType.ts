@@ -531,6 +531,8 @@ const NodeType = {
   refPublisher: 'refPublisher',
   relatedBook: 'relatedBook',
   relatedBookValue: 'relatedBookValue',
+  translationOfBook: 'translationOfBook',
+  translationOfBookValue: 'translationOfBookValue',
   releaseDate: 'releaseDate',
   releaseDateValue: 'releaseDateValue',
   releaseKind: 'releaseKind',

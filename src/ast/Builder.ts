@@ -200,6 +200,7 @@ class Builder extends BaseBuilder {
       coverColor?: string;
       publications?: string | string[];
       relatedBook?: string | string[];
+      translationOfBook?: string;
       author?: string | string[];
       subject?: string | string[];
       date?: string;
@@ -326,6 +327,7 @@ class Builder extends BaseBuilder {
       sourceDocument?: string;
       internalPrintPdf?: string;
       allowPrint?: boolean;
+      allowPrintEnforceSpaceConfiguration?: boolean;
       hasPrintRestriction?: boolean;
       enforceUpdateOverUserInput?: boolean;
       extractorExtractionTimestamp?: string[];
@@ -735,6 +737,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_relatedBook,
         data.relatedBook,
+        options,
+      ),
+      translationOfBook: this.toAstProperty(
+        bitType,
+        ConfigKey.property_translationOfBook,
+        data.translationOfBook,
         options,
       ),
       author: this.toAstProperty(bitType, ConfigKey.property_author, data.author, options),
@@ -1311,6 +1319,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_allowPrint,
         data.allowPrint,
+        options,
+      ),
+      allowPrintEnforceSpaceConfiguration: this.toAstProperty(
+        bitType,
+        ConfigKey.property_allowPrintEnforceSpaceConfiguration,
+        data.allowPrintEnforceSpaceConfiguration,
         options,
       ),
       printParentChapterLevel: this.toAstProperty(

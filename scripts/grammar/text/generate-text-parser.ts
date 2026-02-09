@@ -78,6 +78,9 @@ const options: SourceOptions = {
 // Generate parser source
 const parserSource = peggy.generate(grammar, options);
 
+// Ensure output directory exists
+fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+
 // Write parser source to file
 fs.writeFileSync(outputPath, parserSource);
 

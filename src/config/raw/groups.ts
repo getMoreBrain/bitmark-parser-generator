@@ -704,6 +704,11 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_translationOfBook,
+        description: 'External Id of the translated book',
+        format: TagFormat.plainText,
+      },
+      {
         key: ConfigKey.property_duration,
         description: 'The duration of the book',
         format: TagFormat.plainText,
@@ -726,6 +731,13 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_allowPrint,
         description: 'If true, the book allows printing',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
+      {
+        key: ConfigKey.property_allowPrintEnforceSpaceConfiguration,
+        description:
+          'If true, enforces space configuration for printing regardless of the allowPrint setting',
         format: TagFormat.boolean,
         defaultValue: 'false',
       },
