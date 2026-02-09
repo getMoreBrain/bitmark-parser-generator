@@ -735,6 +735,13 @@ const GROUPS: _GroupsConfig = {
         defaultValue: 'false',
       },
       {
+        key: ConfigKey.property_allowPrintEnforceSpaceConfiguration,
+        description:
+          'If true, enforces space configuration for printing regardless of the allowPrint setting',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
+      {
         key: ConfigKey.property_hasPrintRestriction,
         description: 'If true, the book has print restrictions',
         format: TagFormat.boolean,

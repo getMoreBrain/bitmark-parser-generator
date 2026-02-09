@@ -9,6 +9,7 @@ const propertyKeys = {
   property_aiGenerated: '@aiGenerated',
   property_allowedBit: '@allowedBit',
   property_allowPrint: '@allowPrint',
+  property_allowPrintEnforceSpaceConfiguration: '@allowPrintEnforceSpaceConfiguration',
   property_allowSubtitles: '@allowSubtitles',
   property_alt: '@alt',
   property_altLangTag: '@altLangTag',
