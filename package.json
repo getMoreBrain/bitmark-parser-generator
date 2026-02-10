@@ -99,6 +99,7 @@
     "lint": "eslint . --max-warnings 0",
     "lint-fix": "eslint . --fix",
     "regenerate-bitmark-test-json": "tsx ./test/custom/dev/devRegenerateBitmarkTestJson.ts",
+    "regenerate-bitmark-test-bitmark": "tsx ./test/custom/dev/devRegenerateBitmarkTestBitmark.ts",
     "prepublishOnly": "npm run clean && npm run build && npm run test",
     "clean": "tsx scripts/clean.ts",
     "ncu": "npx -y npm-check-updates -i",
