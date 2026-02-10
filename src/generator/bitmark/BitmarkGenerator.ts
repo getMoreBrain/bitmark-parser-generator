@@ -713,7 +713,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     // This is a resource, so handle it with the common code
-    this.writeNL();
+    // this.writeNL();
     this.writeResource(ResourceType.icon, resource.image.src);
     // this.writePropertyStyleResource(ResourceType.icon, resource as ResourceJson);
 
@@ -3592,13 +3592,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
               if (options.ignoreTrue && val === true) continue;
               if (!options.writeEmpty && val === '') continue;
               // if (propertyIndex > 0) this.writeNL_IfNotChain(route);
-              if (!options.forceChain) this.writeNL_IfNotChain(route);
+              if (!options.forceChain && propertyIndex === 0) this.writeNL_IfNotChain(route);
               this.writeOPA();
               this.writeTagKey(name);
               this.writeColon();
               this.writeTextOrValue(`${val}`, TextFormat.plainText, TextLocation.tag);
               this.writeCL();
-              // eslint-disable-next-line @typescript-eslint/no-unused-vars
               propertyIndex++;
             }
           }
