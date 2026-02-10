@@ -433,7 +433,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     for (const gt of groupTag) {
       const { name, tags } = gt;
 
-      this.writeNL();
+      // this.writeNL();
       this.writeProperty('groupTag', name, route, {
         format: TagFormat.plainText,
         writeEmpty: true,
@@ -443,6 +443,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           this.writeProperty('tag', t, route, {
             format: TagFormat.plainText,
             writeEmpty: true,
+            forceChain: true,
           });
         }
       }
@@ -454,7 +455,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> labelTrue / labelFalse
 
-  protected enter_labelTrue(node: NodeInfo, route: NodeInfo[]): boolean {
+  protected leaf_labelTrue(node: NodeInfo, route: NodeInfo[]): boolean {
     const value = node.value as string | undefined;
 
     // Ignore example that is not at the bit level as it are handled elsewhere
@@ -471,10 +472,12 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (haveTrue)
         this.writeProperty('labelTrue', value, route, {
           format: TagFormat.plainText,
+          forceChain: true,
         });
       if (haveFalse)
         this.writeProperty('labelFalse', bit.labelFalse, route, {
           format: TagFormat.plainText,
+          forceChain: true,
         });
     }
 
@@ -482,7 +485,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
-  protected enter_labelFalse(_node: NodeInfo, _route: NodeInfo[]): boolean {
+  protected leaf_labelFalse(_node: NodeInfo, _route: NodeInfo[]): boolean {
     // Handled above in enter_labelTrue(), but this function needed to block automatic property handling
     return true;
   }
@@ -498,7 +501,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const { url, mockupId, size, format, trim } = imageSource;
 
-    this.writeNL();
+    // this.writeNL();
     this.writeProperty('imageSource', url, route, {
       format: TagFormat.plainText,
     });
@@ -506,18 +509,22 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (mockupId)
         this.writeProperty('mockupId', mockupId, route, {
           format: TagFormat.plainText,
+          forceChain: true,
         });
       if (size)
         this.writeProperty('size', size, route, {
           format: TagFormat.plainText,
+          forceChain: true,
         });
       if (format)
         this.writeProperty('format', format, route, {
           format: TagFormat.plainText,
+          forceChain: true,
         });
       if (BooleanUtils.isBoolean(trim))
         this.writeProperty('trim', trim, route, {
           format: TagFormat.plainText,
+          forceChain: true,
         });
     }
 
@@ -536,13 +543,14 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const { technicalTerm, lang } = nodeValue;
 
-    this.writeNL();
+    // this.writeNL();
     this.writeProperty('technicalTerm', technicalTerm, route, {
       format: TagFormat.plainText,
     });
     if (lang != null) {
       this.writeProperty('lang', lang, route, {
         format: TagFormat.plainText,
+        forceChain: true,
       });
     }
 
@@ -561,28 +569,32 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const { servings, unit, unitAbbr, decimalPlaces, disableCalculation, hint } = nodeValue;
 
-    this.writeNL();
+    // this.writeNL();
     this.writeProperty('servings', servings, route, {
       format: TagFormat.plainText,
     });
     if (unit != null) {
       this.writeProperty('unit', unit, route, {
         format: TagFormat.plainText,
+        forceChain: true,
       });
     }
     if (unitAbbr != null) {
       this.writeProperty('unitAbbr', unitAbbr, route, {
         format: TagFormat.plainText,
+        forceChain: true,
       });
     }
     if (decimalPlaces != null) {
       this.writeProperty('decimalPlaces', decimalPlaces, route, {
         format: TagFormat.plainText,
+        forceChain: true,
       });
     }
     if (disableCalculation != null) {
       this.writeProperty('disableCalculation', disableCalculation, route, {
         format: TagFormat.plainText,
+        forceChain: true,
       });
     }
     if (hint != null) {
@@ -605,13 +617,14 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const { name, title, avatarImage } = person;
 
-    this.writeNL();
+    // this.writeNL();
     this.writeProperty('person', name, route, {
       format: TagFormat.plainText,
     });
     if (title) {
       this.writeProperty('title', title, route, {
         format: TagFormat.plainText,
+        forceChain: true,
       });
     }
     if (avatarImage) {
@@ -746,13 +759,14 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const { level, label } = n;
     const levelKey = node.key === NodeType.ratingLevelStart ? 'ratingLevelStart' : 'ratingLevelEnd';
 
-    this.writeNL();
+    // this.writeNL();
     this.writeProperty(levelKey, level, route, {
       format: TagFormat.plainText,
     });
     if (label) {
       this.writeProperty('label', label, route, {
         format: TagFormat.bitmarkText,
+        forceChain: true,
       });
     }
 
@@ -786,11 +800,13 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (color) {
         this.writeProperty('color', color, route, {
           format: TagFormat.plainText,
+          forceChain: true,
         });
       }
       if (emphasis) {
         this.writeProperty('emphasis', emphasis, route, {
           format: TagFormat.plainText,
+          forceChain: true,
         });
       }
     }
@@ -803,7 +819,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected enter_partialAnswer(node: NodeInfo, route: NodeInfo[]): boolean {
     if (node.value) {
-      this.writeNL();
+      // this.writeNL();
       this.writeProperty('partialAnswer', node.value, route, {
         format: TagFormat.plainText,
       });
@@ -817,7 +833,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected leaf_partialAnswer(node: NodeInfo, route: NodeInfo[]): boolean {
     if (node.value) {
-      this.writeNL();
+      // this.writeNL();
       this.writeProperty('partialAnswer', node.value, route, {
         format: TagFormat.plainText,
       });
@@ -832,7 +848,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected enter_sampleSolution(node: NodeInfo, route: NodeInfo[]): boolean {
     if (node.value) {
-      this.writeNL();
+      // this.writeNL();
       this.writeProperty('sampleSolution', node.value, route, {
         format: TagFormat.plainText,
       });
@@ -844,7 +860,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   protected leaf_sampleSolution(node: NodeInfo, route: NodeInfo[]): boolean {
     if (node.value) {
-      this.writeNL();
+      // this.writeNL();
       this.writeProperty('sampleSolution', node.value, route, {
         format: TagFormat.plainText,
       });
@@ -858,7 +874,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> reasonableNumOfChars
 
   protected leaf_reasonableNumOfChars(node: NodeInfo, route: NodeInfo[]): void {
-    this.writeNL();
+    // this.writeNL();
     this.writeProperty('reasonableNumOfChars', node.value, route, {
       format: TagFormat.plainText,
     });
@@ -2451,7 +2467,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_lang(node: NodeInfo, route: NodeInfo[]): void {
     if (!node.value) return;
 
-    this.writeNL();
+    // this.writeNL();
     this.writeProperty('lang', node.value, route, {
       format: TagFormat.boolean,
     });
@@ -2462,7 +2478,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected enter_refAuthor(node: NodeInfo, route: NodeInfo[]): void {
     if (!node.value) return;
 
-    this.writeNL();
+    // this.writeNL();
     this.writeProperty('refAuthor', node.value, route, {
       format: TagFormat.plainText,
       array: true,
@@ -2474,7 +2490,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_refBookTitle(node: NodeInfo, route: NodeInfo[]): void {
     if (!node.value) return;
 
-    this.writeNL();
+    // this.writeNL();
     this.writeProperty('refBookTitle', node.value, route, {
       format: TagFormat.plainText,
       array: true,
@@ -2486,7 +2502,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected enter_refPublisher(node: NodeInfo, route: NodeInfo[]): void {
     if (!node.value) return;
 
-    this.writeNL();
+    // this.writeNL();
     this.writeProperty('refPublisher', node.value, route, {
       format: TagFormat.plainText,
       array: true,
@@ -2498,7 +2514,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_refPublicationYear(node: NodeInfo, route: NodeInfo[]): void {
     if (!node.value) return;
 
-    this.writeNL();
+    // this.writeNL();
     this.writeProperty('refPublicationYear', node.value, route, {
       format: TagFormat.plainText,
     });
@@ -2509,7 +2525,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   protected leaf_citationStyle(node: NodeInfo, route: NodeInfo[]): void {
     if (!node.value) return;
 
-    this.writeNL();
+    // this.writeNL();
     this.writeProperty('citationStyle', node.value, route, {
       format: TagFormat.plainText,
     });
@@ -3011,7 +3027,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           if (!propertyConfig) return;
 
           // Write the property
-          this.writeNL_IfNotChain(route); // Only if NOT in chain
+          // this.writeNL_IfNotChain(route); // Only if NOT in chain
           this.writeProperty(propertyConfig.tag, node.value, route, {
             format: propertyConfig.format ?? TagFormat.plainText,
             array: propertyConfig.array ?? false,
@@ -3542,6 +3558,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       ignoreFalse?: boolean;
       ignoreTrue?: boolean;
       writeEmpty?: boolean;
+      forceChain?: boolean;
     },
   ): void {
     let valuesArray: unknown[];
@@ -3574,12 +3591,14 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
               if (options.ignoreFalse && val === false) continue;
               if (options.ignoreTrue && val === true) continue;
               if (!options.writeEmpty && val === '') continue;
-              if (propertyIndex > 0) this.writeNL_IfNotChain(route);
+              // if (propertyIndex > 0) this.writeNL_IfNotChain(route);
+              if (!options.forceChain) this.writeNL_IfNotChain(route);
               this.writeOPA();
               this.writeTagKey(name);
               this.writeColon();
               this.writeTextOrValue(`${val}`, TextFormat.plainText, TextLocation.tag);
               this.writeCL();
+              // eslint-disable-next-line @typescript-eslint/no-unused-vars
               propertyIndex++;
             }
           }
