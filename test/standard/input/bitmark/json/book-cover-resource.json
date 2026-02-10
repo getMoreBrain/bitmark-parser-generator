@@ -4,9 +4,7 @@
       "type": "book",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "book-resource-123"
-      ],
+      "id": ["book-resource-123"],
       "coverImage": {
         "type": "image",
         "image": {
@@ -51,7 +49,7 @@
       "isPublic": false,
       "chatWithBook": false,
       "chatWithBookBrainKey": "",
-      "allowPrint": false
+      "allowPrint": "enforceFalse"
     },
     "parser": {
       "version": "5.1.0",
@@ -65,9 +63,7 @@
       "type": "article",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "article-123"
-      ],
+      "id": ["article-123"],
       "item": [],
       "lead": [],
       "pageNumber": [],

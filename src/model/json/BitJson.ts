@@ -200,8 +200,7 @@ export interface BitJson {
   maxCreatedBits: number;
   maxDisplayLevel: number;
   maxTocChapterLevel: number;
-  allowPrint: boolean;
-  allowPrintEnforceSpaceConfiguration: boolean;
+  allowPrint: string; // 'enforceTrue' | 'enforceFalse' | 'useSpaceConfiguration'
   printParentChapterLevel: number;
   sourceDocument: string;
   internalPrintPdf: string;

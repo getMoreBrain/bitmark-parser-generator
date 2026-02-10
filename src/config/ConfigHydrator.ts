@@ -122,6 +122,7 @@ class ConfigHydrator {
       chain: _chain,
       deprecated,
       format,
+      values,
       defaultValue,
       jsonKey,
     } = _tag;
@@ -143,6 +144,7 @@ class ConfigHydrator {
       chain,
       jsonKey,
       format,
+      values,
       defaultValue,
       deprecated,
     });
