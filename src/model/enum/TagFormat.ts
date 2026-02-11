@@ -7,6 +7,7 @@ const TagFormat = {
   number: 'number', // If the value is treated as a number
   boolean: 'boolean', // If the value is treated as a boolean
   invertedBoolean: 'invertedBoolean', // If the value is treated as a boolean with the value inverted (e.g. isLongAnswer ==> isShortAnswer = false)
+  enumeration: 'enumeration', // If the value is treated as an enumeration (the value is a string that must be one of a predefined set of values)
 } as const;
 
 export type TagFormatType = EnumType<typeof TagFormat>;

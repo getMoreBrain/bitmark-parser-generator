@@ -15,6 +15,7 @@ class PropertyTagConfig extends AbstractTagConfig {
 
   readonly array?: boolean; // If the property is treated as an array rather than a single value
   readonly format?: TagFormatType; // How the property is formatted
+  readonly values?: string[]; // If the format is an enumeration, the possible values of the property
   readonly defaultValue?: string; // The default value of the property - this value can be omitted from the markup
 
   public constructor(params: {
@@ -25,6 +26,7 @@ class PropertyTagConfig extends AbstractTagConfig {
     chain: TagsConfig | undefined;
     jsonKey: string | undefined;
     format: TagFormatType | undefined;
+    values: string[] | undefined;
     defaultValue: string | undefined;
     deprecated: string | undefined;
   }) {
@@ -35,6 +37,7 @@ class PropertyTagConfig extends AbstractTagConfig {
 
     this.array = params.maxCount === Count.infinity || params.maxCount > 1;
     this.format = params.format;
+    this.values = params.values;
     this.defaultValue = params.defaultValue;
   }
 
@@ -48,6 +51,7 @@ class PropertyTagConfig extends AbstractTagConfig {
       if (this.minCount != null) s += `, min=${this.minCount}`;
       if (this.array != null) s += `, arr=${this.array}`;
       if (this.format != null) s += `, fmt=${this.format}`;
+      if (this.values != null) s += `, vals=[${this.values.join(',')}]`;
       if (this.defaultValue != null) s += `, def=${this.defaultValue}`;
       if (this.jsonKey != null) s += `, json=${this.jsonKey}`;
     }

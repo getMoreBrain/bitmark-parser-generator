@@ -326,8 +326,7 @@ class Builder extends BaseBuilder {
       maxTocChapterLevel?: number;
       sourceDocument?: string;
       internalPrintPdf?: string;
-      allowPrint?: boolean;
-      allowPrintEnforceSpaceConfiguration?: boolean;
+      allowPrint?: string; // 'enforceTrue' | 'enforceFalse' | 'useSpaceConfiguration'
       hasPrintRestriction?: boolean;
       enforceUpdateOverUserInput?: boolean;
       extractorExtractionTimestamp?: string[];
@@ -1319,12 +1318,6 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_allowPrint,
         data.allowPrint,
-        options,
-      ),
-      allowPrintEnforceSpaceConfiguration: this.toAstProperty(
-        bitType,
-        ConfigKey.property_allowPrintEnforceSpaceConfiguration,
-        data.allowPrintEnforceSpaceConfiguration,
         options,
       ),
       printParentChapterLevel: this.toAstProperty(

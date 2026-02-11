@@ -1837,7 +1837,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       // Special case for 'book' bits
       if (Config.isOfBitType(bitType, BitType.book)) {
         if (bitJson.maxTocChapterLevel == null) bitJson.maxTocChapterLevel = -1;
-        if (bitJson.allowPrint == null) bitJson.allowPrint = false;
+        if (bitJson.allowPrint == null) bitJson.allowPrint = 'enforceFalse';
         if (bitJson.hasPrintRestriction == null) bitJson.hasPrintRestriction = true;
         if (bitJson.enforceUpdateOverUserInput == null) bitJson.enforceUpdateOverUserInput = false;
         if (bitJson.hasMarkAsDone == null) bitJson.hasMarkAsDone = false;

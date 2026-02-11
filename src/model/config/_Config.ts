@@ -93,6 +93,7 @@ export interface _PropertyConfig {
   description: string;
   deprecated?: string; // Deprecated version
   format?: TagFormatType; // How the property is formatted
+  values?: string[]; // If the format is an enumeration, the possible values of the property
   defaultValue?: string; // The default value of the property - this value can be omitted from the markup
   jsonKey?: string; // If the json key is different from the tag
 }
@@ -120,6 +121,7 @@ export interface _AbstractTagConfig {
   maxCount?: CountType; // Default: 1
   minCount?: number; // Default: 0
   format?: TagFormatType; // How the tag is formatted
+  values?: string[]; // If the format is an enumeration, the possible values of the property
   defaultValue?: string; // The default value of the tag if omitted from the markup
   jsonKey?: string; // If the json key is different from the tag
   chain?: _AbstractTagConfig[];

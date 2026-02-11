@@ -216,6 +216,7 @@ function propertyContentProcessor(
         chain: undefined,
         jsonKey: undefined,
         format: TagFormat.bitmarkText,
+        values: undefined,
         defaultValue: undefined,
         deprecated: undefined,
       }),
