@@ -49,7 +49,7 @@
       "isPublic": false,
       "chatWithBook": false,
       "chatWithBookBrainKey": "",
-      "allowPrint": "enforceFalse"
+      "allowPrint": "useSpaceConfiguration"
     },
     "parser": {
       "version": "5.1.0",
