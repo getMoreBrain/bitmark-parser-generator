@@ -4,7 +4,9 @@
       "type": "separator",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["92375"],
+      "id": [
+        "92375"
+      ],
       "needsValidation": true,
       "item": [],
       "lead": [],
@@ -26,7 +28,7 @@
       ]
     },
     "parser": {
-      "version": "5.3.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -46,7 +48,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.3.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -57,7 +59,9 @@
       "type": "separator-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "validationDate": "2024-07-15T14:32:18Z",
       "item": [],
       "lead": [],
@@ -90,7 +94,7 @@
       ]
     },
     "parser": {
-      "version": "5.3.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [

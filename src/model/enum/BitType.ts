@@ -244,6 +244,7 @@ const BitType = {
   exampleList: 'example-list',
   extractorAiChat: 'extractor-ai-chat',
   extractorBlock: 'extractor-block',
+  extractorBlueprintConfiguration: 'extractor-blueprint-configuration',
   extractorConfiguration: 'extractor-configuration',
   extractorImage: 'extractor-image',
   extractorImageCollapsible: 'extractor-image-collapsible',
