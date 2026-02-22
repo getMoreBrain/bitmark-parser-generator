@@ -2910,6 +2910,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.extractorImage,
     description: 'Collapsible extractor images bit, used for  images extracted from PDFs',
   },
+  [BitType.extractorBlueprint]: {
+    since: '5.12.0',
+    baseBitType: BitType._standard,
+    description: 'Extractor blueprint bit, used to provide blueprint information about extractors',
+    textFormatDefault: TextFormat.json,
+  },
   [BitType.extractorInformation]: {
     since: '3.8.0',
     baseBitType: BitType._standard,
