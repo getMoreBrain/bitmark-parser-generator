@@ -91,7 +91,7 @@
       "footer": []
     },
     "parser": {
-      "version": "5.3.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -291,7 +291,7 @@
       "footer": []
     },
     "parser": {
-      "version": "5.3.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -388,7 +388,7 @@
       "footer": []
     },
     "parser": {
-      "version": "5.3.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -519,7 +519,7 @@
       "footer": []
     },
     "parser": {
-      "version": "5.3.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -596,7 +596,7 @@
       "footer": []
     },
     "parser": {
-      "version": "5.3.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -829,7 +829,7 @@
       "footer": []
     },
     "parser": {
-      "version": "5.3.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1023,7 +1023,7 @@
       "footer": []
     },
     "parser": {
-      "version": "5.3.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },

@@ -13,7 +13,7 @@
       "body": "Article 1\n[?NOT a hint]\n[.article]\nArticle 1.1"
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -79,7 +79,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -110,7 +110,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -210,7 +210,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -241,7 +241,7 @@
       "body": "This is some code and here no ^ hats should be\nremoved or anything [^.bit] [^.silly^] like that^\n[^notabit]\nThe only thing that should be removed is\n[.notabit]\n[^.notabit]\n[^^.notabit]\nthe start of a new bit\n\n====\nQuestion 1?\nCard 1, Side 1\n--\nAnswer 1\nCard 1, Side 2\n====\nQuestion 2?\nCard 2, Side 1\n--\nAnswer 2\nCard 2, Side 2\n++\nAlternative Answer 2\nCard 2, Side 2\n~~~~\n\nFooter anyone?"
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -293,7 +293,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -326,7 +326,7 @@
       }
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -357,7 +357,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "errors": [
@@ -438,7 +438,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -556,7 +556,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -601,7 +601,7 @@
       "body": "[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -684,7 +684,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -787,7 +787,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -883,7 +883,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1001,7 +1001,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1046,7 +1046,7 @@
       "body": "[%${1}][%][%${originalPageNo}][%]\n[#${2}]"
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1129,7 +1129,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1253,7 +1253,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -1352,7 +1352,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1429,7 +1429,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -1557,7 +1557,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -1622,7 +1622,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1731,7 +1731,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1801,7 +1801,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -1868,7 +1868,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -1933,7 +1933,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -2000,7 +2000,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -2065,7 +2065,7 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.11.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
