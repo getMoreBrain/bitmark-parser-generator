@@ -2883,6 +2883,14 @@ const BITS: _BitsConfig = {
 
     textFormatDefault: TextFormat.plainText,
   },
+  [BitType.extractorBlueprintConfiguration]: {
+    since: '5.11.0',
+    baseBitType: BitType._standard,
+    description:
+      'Extractor blueprint configuration bit, used to specify extractor blueprint configuration when extracting from blueprints',
+
+    textFormatDefault: TextFormat.plainText,
+  },
   [BitType.extractorImage]: {
     since: '4.3.0',
     baseBitType: BitType._standard,
@@ -2909,6 +2917,12 @@ const BITS: _BitsConfig = {
     since: '4.3.0',
     baseBitType: BitType.extractorImage,
     description: 'Collapsible extractor images bit, used for  images extracted from PDFs',
+  },
+  [BitType.extractorBlueprint]: {
+    since: '5.12.0',
+    baseBitType: BitType._standard,
+    description: 'Extractor blueprint bit, used to provide blueprint information about extractors',
+    textFormatDefault: TextFormat.json,
   },
   [BitType.extractorInformation]: {
     since: '3.8.0',
@@ -3124,6 +3138,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.pageOpenBook,
     description:
       'Open book chapter bit, derived from page-open-book, used to create chapter pages that open books',
+  },
+  [BitType.openBookChapterTeaser]: {
+    since: '4.16.0',
+    baseBitType: BitType.openBookChapter,
+    description:
+      'Open book chapter teaser bit, equal to open-book-chapter, used to create teaser chapter pages that open books',
   },
   [BitType.pageOpenBookList]: {
     since: '2.1.0',

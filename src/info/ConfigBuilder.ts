@@ -161,7 +161,8 @@ class ConfigBuilder {
     const processTagEntries = (tag: any, tagNameChain: string[]): any[] => {
       const tags: unknown[] = [];
       let tagName = tag.key as string;
-      const jsonKey = keyToJsonKey(tagName, tagNameChain);
+      // Use explicit jsonKey from config if set, otherwise compute from tag name
+      const jsonKey = tag.jsonKey ?? keyToJsonKey(tagName, tagNameChain);
       // if (tagName == '&image') debugger;
       const tagType = typeFromConfigKey(tag.key);
       let format = '';
@@ -222,6 +223,7 @@ class ConfigBuilder {
           tags.push({
             type: 'group',
             key: groupKey,
+            ...(tag.jsonKey ? { jsonKey: tag.jsonKey } : {}),
           });
         }
         return tags;
@@ -240,6 +242,7 @@ class ConfigBuilder {
         type: 'tag',
         key: tagName,
         jsonKey,
+        ...(tag.secondaryJsonKey ? { secondaryJsonKey: tag.secondaryJsonKey } : {}),
         format,
         default: null,
         alwaysInclude: false,
@@ -257,13 +260,21 @@ class ConfigBuilder {
 
     const serializeCardSet = (
       cardSetKey: string,
-    ): { key: string; sides: { variants: unknown[] }[] } | undefined => {
+    ):
+      | {
+          key: string;
+          jsonKey: string | null;
+          itemType?: 'object' | 'array';
+          sections?: Record<string, { jsonKey: string }>;
+          sides: { name: string; repeat?: boolean; variants: unknown[] }[];
+        }
+      | undefined => {
       const cardSetConfig = CARDS[cardSetKey];
       if (!cardSetConfig) return undefined;
       const normalizedKey = normalizeCardKey(cardSetKey);
 
-      const sides = cardSetConfig.variants.map((variantList) => {
-        const variants = variantList.map((variant) => {
+      const sides = cardSetConfig.sides.map((side) => {
+        const variants = side.variants.map((variant) => {
           const variantTags: unknown[] = [];
           const variantTagEntries = Object.entries(variant.tags ?? []).sort((a, b) => {
             const tagA = a[1];
@@ -280,6 +291,7 @@ class ConfigBuilder {
           }
 
           return {
+            ...(variant.jsonKey !== undefined ? { jsonKey: variant.jsonKey } : {}),
             tags: variantTags,
             repeatCount: variant.repeatCount ?? 1,
             bodyAllowed: variant.bodyAllowed ?? true,
@@ -287,11 +299,20 @@ class ConfigBuilder {
           };
         });
 
-        return { variants };
+        return {
+          name: side.name,
+          ...(side.repeat ? { repeat: side.repeat } : {}),
+          variants,
+        };
       });
 
       return {
         key: normalizedKey,
+        jsonKey: cardSetConfig.jsonKey,
+        ...(cardSetConfig.itemType && cardSetConfig.itemType !== 'object'
+          ? { itemType: cardSetConfig.itemType }
+          : {}),
+        ...(cardSetConfig.sections ? { sections: cardSetConfig.sections } : {}),
         sides,
       };
     };

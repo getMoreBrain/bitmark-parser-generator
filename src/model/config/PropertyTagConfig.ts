@@ -25,6 +25,7 @@ class PropertyTagConfig extends AbstractTagConfig {
     minCount: number;
     chain: TagsConfig | undefined;
     jsonKey: string | undefined;
+    secondaryJsonKey: string | undefined;
     format: TagFormatType | undefined;
     values: string[] | undefined;
     defaultValue: string | undefined;

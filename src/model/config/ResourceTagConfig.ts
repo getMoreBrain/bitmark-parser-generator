@@ -19,6 +19,7 @@ class ResourceTagConfig extends AbstractTagConfig {
     minCount: number;
     chain: TagsConfig | undefined;
     jsonKey: string | undefined;
+    secondaryJsonKey: string | undefined;
     deprecated: string | undefined;
   }) {
     super({
