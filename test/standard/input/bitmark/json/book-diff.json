@@ -4,24 +4,14 @@
       "type": "book-diff",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "135647"
-      ],
-      "externalId": [
-        "e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"
-      ],
-      "spaceId": [
-        "sl"
-      ],
+      "id": ["135647"],
+      "externalId": ["e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc"],
+      "spaceId": ["sl"],
       "lang": "en-US",
-      "language": [
-        "de"
-      ],
+      "language": ["de"],
       "subtype": "draft-book",
       "bookDiff": "test-id",
-      "author": [
-        "Philippe Pointet"
-      ],
+      "author": ["Philippe Pointet"],
       "kind": "learning-path",
       "processHandInLocation": "Auckland",
       "maxTocChapterLevel": 45,
@@ -58,17 +48,17 @@
       "hint": [],
       "instruction": [],
       "body": [],
-      "allowPrint": "useSpaceConfiguration",
       "hasPrintRestriction": true,
       "enforceUpdateOverUserInput": false,
       "hasMarkAsDone": false,
       "processHandIn": false,
       "isPublic": false,
       "chatWithBook": false,
-      "chatWithBookBrainKey": ""
+      "chatWithBookBrainKey": "",
+      "allowPrint": "useSpaceConfiguration"
     },
     "parser": {
-      "version": "5.11.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -120,17 +110,17 @@
       "instruction": [],
       "body": [],
       "maxTocChapterLevel": -1,
-      "allowPrint": "useSpaceConfiguration",
       "hasPrintRestriction": true,
       "enforceUpdateOverUserInput": false,
       "hasMarkAsDone": false,
       "processHandIn": false,
       "isPublic": false,
       "chatWithBook": false,
-      "chatWithBookBrainKey": ""
+      "chatWithBookBrainKey": "",
+      "allowPrint": "useSpaceConfiguration"
     },
     "parser": {
-      "version": "5.11.0",
+      "version": "5.1.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
