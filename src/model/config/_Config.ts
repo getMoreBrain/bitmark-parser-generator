@@ -124,6 +124,7 @@ export interface _AbstractTagConfig {
   values?: string[]; // If the format is an enumeration, the possible values of the property
   defaultValue?: string; // The default value of the tag if omitted from the markup
   jsonKey?: string; // If the json key is different from the tag
+  secondaryJsonKey?: string; // Heading card alternate path
   chain?: _AbstractTagConfig[];
 }
 
@@ -131,17 +132,20 @@ export interface _CardSetsConfig {
   [configKey: string]: _CardSetConfig;
 }
 
-/**
- * TODO: The CardSetConfig needs improving to handle more use cases
- * - Different card configurations
- * - Infinitely repeating cards (this is the default, but maybe there could also be limited cards)
- * - Infinitely repeating sides (this is hacked in at the moment, but the config is not completely correct)
- */
 export interface _CardSetConfig {
-  // Configuration for each variant from the card set
-  // - all cards have the same config
-  // - each variant is indexed via side and variant
-  variants: _CardVariantConfig[][];
+  // JSON mapping properties
+  jsonKey: string | null; // e.g. 'cards', 'pairs', null
+  itemType?: 'object' | 'array'; // Default: 'object'
+  sections?: Record<string, { jsonKey: string }>; // Qualified card divider mappings
+
+  // Card sides (was: variants: _CardVariantConfig[][])
+  sides: _CardSideConfig[];
+}
+
+export interface _CardSideConfig {
+  name: string; // e.g. 'question', 'key', 'cell'
+  repeat?: boolean; // Side repeats for remaining -- dividers
+  variants: _CardVariantConfig[];
 }
 
 export interface _CardVariantConfig {
@@ -150,4 +154,6 @@ export interface _CardVariantConfig {
   bodyAllowed?: boolean; // Default: false
   bodyRequired?: boolean; // Default: false
   repeatCount?: CountType; // Default: 1
+  // JSON mapping fields
+  jsonKey?: string | null; // JSON path for body text
 }

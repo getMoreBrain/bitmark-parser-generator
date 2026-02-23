@@ -1,4 +1,5 @@
-import { CardVariantConfig } from './CardVariantConfig.ts';
+import { type CardSideConfig } from './CardSideConfig.ts';
+import { type CardVariantConfig } from './CardVariantConfig.ts';
 import { type CardSetConfigKeyType } from './enum/CardSetConfigKey.ts';
 
 interface ToStringOptions {
@@ -8,11 +9,29 @@ interface ToStringOptions {
 
 class CardSetConfig {
   readonly configKey: CardSetConfigKeyType;
-  readonly variants: CardVariantConfig[][];
+  readonly jsonKey: string | null;
+  readonly itemType: 'object' | 'array';
+  readonly sections: Record<string, { jsonKey: string }> | undefined;
+  readonly sides: CardSideConfig[];
 
-  public constructor(configKey: CardSetConfigKeyType, variants: CardVariantConfig[][]) {
+  // Legacy accessor — provides the same shape as the old `variants: CardVariantConfig[][]`
+  // so downstream consumers (Config.getCardSetVariantConfig, etc.) continue to work.
+  get variants(): CardVariantConfig[][] {
+    return this.sides.map((side) => side.variants);
+  }
+
+  public constructor(
+    configKey: CardSetConfigKeyType,
+    jsonKey: string | null,
+    itemType: 'object' | 'array',
+    sections: Record<string, { jsonKey: string }> | undefined,
+    sides: CardSideConfig[],
+  ) {
     this.configKey = configKey;
-    this.variants = variants;
+    this.jsonKey = jsonKey;
+    this.itemType = itemType;
+    this.sections = sections;
+    this.sides = sides;
   }
 
   public toString(options?: ToStringOptions): string {
@@ -20,15 +39,12 @@ class CardSetConfig {
 
     let s = '';
 
-    let sideNo = 0;
-    let variantNo = 0;
-    for (const sides of this.variants) {
-      for (const variant of sides) {
-        s += `[Card - Side ${sideNo}, Variant ${variantNo}]`;
-        s += `\n${variant.toString(opts)}`;
-        variantNo++;
-      }
-      sideNo++;
+    s += `[CardSet: ${this.configKey}]`;
+    s += `\n  jsonKey: ${this.jsonKey}`;
+    s += `\n  itemType: ${this.itemType}`;
+
+    for (const side of this.sides) {
+      s += `\n${side.toString(opts)}`;
     }
 
     return s;

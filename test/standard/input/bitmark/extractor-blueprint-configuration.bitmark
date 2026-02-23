@@ -1,0 +1,45 @@
+[.extractor-blueprint-configuration]
+[@id:blueprint-config-001]
+[%1]
+[!Blueprint extractor configuration in TOML]
+
+$$$$
+[Plugins]
+
+# The enabled plugins and the order in which the plugins are run within each execution phase
+plugins = [
+  "Init",
+  "BlueprintExtractor",
+  "BlueprintParser",
+  "BitmarkGenerator",
+]
+
+[Plugins.Plugin.Init]
+path = "@getmorebrain/bitmark-extractor-plugin-init"
+Config.imageBaseUri = "https://blueprint.server.com/images/"
+
+[Plugins.Plugin.BlueprintExtractor]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-blueprint-extractor"
+Config.extractionMode = "full"
+
+[Plugins.Plugin.BlueprintParser]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-blueprint-parser"
+Config.Visualization.enabled = true
+
+[Plugins.Plugin.BitmarkGenerator]
+Config.useCachedData = true
+path = "@getmorebrain/bitmark-extractor-plugin-bitmark-generator"
+Config.Visualization.enabled = true
+
+[General]
+
+# Blueprint-specific provider
+blueprintProvider = "default"
+
+# Set the base URI for images
+imageBaseUri = "https://blueprint.server.com/images/"
+
+# Scale factor for the sizes of all images
+imageScale = 2

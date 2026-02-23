@@ -11,17 +11,21 @@ class CardVariantConfig {
   bodyAllowed?: boolean; // Default: true
   bodyRequired?: boolean; // Default: false
   repeatCount?: CountType; // Default: 1
+  // JSON mapping fields
+  readonly jsonKey?: string | null; // JSON path for body text
 
   public constructor(
     tags: TagsConfig,
     bodyAllowed?: boolean,
     bodyRequired?: boolean,
     repeatCount?: CountType,
+    jsonKey?: string | null,
   ) {
     this.tags = tags;
     this.bodyAllowed = bodyAllowed == null ? true : bodyAllowed;
     this.bodyRequired = bodyRequired;
     this.repeatCount = repeatCount;
+    this.jsonKey = jsonKey;
   }
 
   public toString(options?: ToStringOptions): string {

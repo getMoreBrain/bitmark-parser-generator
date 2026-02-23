@@ -12,6 +12,7 @@ abstract class AbstractTagConfig {
   readonly chain?: TagsConfig;
 
   readonly jsonKey?: string; // If the json key is different from the tag
+  readonly secondaryJsonKey?: string; // Heading card alternate path
 
   readonly deprecated?: string; // Deprecated version
 
@@ -23,6 +24,7 @@ abstract class AbstractTagConfig {
     minCount: number;
     chain: TagsConfig | undefined;
     jsonKey: string | undefined;
+    secondaryJsonKey: string | undefined;
     deprecated: string | undefined;
   }) {
     this.type = params.type;
@@ -32,6 +34,7 @@ abstract class AbstractTagConfig {
     this.minCount = params.minCount;
     this.chain = params.chain;
     this.jsonKey = params.jsonKey;
+    this.secondaryJsonKey = params.secondaryJsonKey;
     this.deprecated = params.deprecated;
   }
 }
