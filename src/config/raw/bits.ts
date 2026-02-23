@@ -2883,6 +2883,14 @@ const BITS: _BitsConfig = {
 
     textFormatDefault: TextFormat.plainText,
   },
+  [BitType.extractorBlueprintConfiguration]: {
+    since: '5.11.0',
+    baseBitType: BitType._standard,
+    description:
+      'Extractor blueprint configuration bit, used to specify extractor blueprint configuration when extracting from blueprints',
+
+    textFormatDefault: TextFormat.plainText,
+  },
   [BitType.extractorImage]: {
     since: '4.3.0',
     baseBitType: BitType._standard,
