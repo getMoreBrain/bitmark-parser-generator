@@ -133,12 +133,14 @@ export interface _CardSetsConfig {
 }
 
 export interface _CardSetConfig {
-  // JSON mapping properties
+  cards: _CardTypeConfig[];
+}
+
+export interface _CardTypeConfig {
+  name: string; // e.g. 'default', 'table-header'
+  isDefault?: boolean; // true for the unqualified ==== divider
   jsonKey: string | null; // e.g. 'cards', 'pairs', null
   itemType?: 'object' | 'array'; // Default: 'object'
-  sections?: Record<string, { jsonKey: string }>; // Qualified card divider mappings
-
-  // Card sides (was: variants: _CardVariantConfig[][])
   sides: _CardSideConfig[];
 }
 

@@ -258,22 +258,10 @@ class ConfigBuilder {
       return tags;
     };
 
-    const serializeCardSet = (
-      cardSetKey: string,
-    ):
-      | {
-          key: string;
-          jsonKey: string | null;
-          itemType?: 'object' | 'array';
-          sections?: Record<string, { jsonKey: string }>;
-          sides: { name: string; repeat?: boolean; variants: unknown[] }[];
-        }
-      | undefined => {
-      const cardSetConfig = CARDS[cardSetKey];
-      if (!cardSetConfig) return undefined;
-      const normalizedKey = normalizeCardKey(cardSetKey);
-
-      const sides = cardSetConfig.sides.map((side) => {
+    const serializeSides = (
+      sides: (typeof CARDS)[string]['cards'][number]['sides'],
+    ): { name: string; repeat?: boolean; variants: unknown[] }[] => {
+      return sides.map((side) => {
         const variants = side.variants.map((variant) => {
           const variantTags: unknown[] = [];
           const variantTagEntries = Object.entries(variant.tags ?? []).sort((a, b) => {
@@ -305,15 +293,40 @@ class ConfigBuilder {
           variants,
         };
       });
+    };
+
+    const serializeCardSet = (
+      cardSetKey: string,
+    ):
+      | {
+          key: string;
+          cards: {
+            name: string;
+            isDefault?: boolean;
+            jsonKey: string | null;
+            itemType?: 'object' | 'array';
+            sides: { name: string; repeat?: boolean; variants: unknown[] }[];
+          }[];
+        }
+      | undefined => {
+      const cardSetConfig = CARDS[cardSetKey];
+      if (!cardSetConfig) return undefined;
+      const normalizedKey = normalizeCardKey(cardSetKey);
+
+      const cards = cardSetConfig.cards.map((card) => {
+        const sides = serializeSides(card.sides);
+        return {
+          name: card.name,
+          ...(card.isDefault ? { isDefault: card.isDefault } : {}),
+          jsonKey: card.jsonKey,
+          ...(card.itemType && card.itemType !== 'object' ? { itemType: card.itemType } : {}),
+          sides,
+        };
+      });
 
       return {
         key: normalizedKey,
-        jsonKey: cardSetConfig.jsonKey,
-        ...(cardSetConfig.itemType && cardSetConfig.itemType !== 'object'
-          ? { itemType: cardSetConfig.itemType }
-          : {}),
-        ...(cardSetConfig.sections ? { sections: cardSetConfig.sections } : {}),
-        sides,
+        cards,
       };
     };
 
@@ -718,18 +731,24 @@ class ConfigBuilder {
           if (config.key && config.key !== expectedKey) {
             errors.push(`Card key mismatch in cards/${file}: expected '${expectedKey}'`);
           }
-          if (Array.isArray(config.sides)) {
-            config.sides.forEach((side: unknown, sideIdx: number) => {
-              const variants = (side as { variants?: unknown[] }).variants;
-              if (Array.isArray(variants)) {
-                variants.forEach((variant: unknown, variantIdx: number) => {
-                  const variantTags = (variant as { tags?: unknown[] }).tags;
-                  if (Array.isArray(variantTags)) {
-                    checkTags(
-                      variantTags,
-                      `cards/${file} (side ${sideIdx}, variant ${variantIdx})`,
-                      10,
-                    );
+          if (Array.isArray(config.cards)) {
+            config.cards.forEach((card: unknown) => {
+              const cardObj = card as { name?: string; sides?: unknown[] };
+              const cardName = cardObj.name ?? 'unknown';
+              if (Array.isArray(cardObj.sides)) {
+                cardObj.sides.forEach((side: unknown, sideIdx: number) => {
+                  const variants = (side as { variants?: unknown[] }).variants;
+                  if (Array.isArray(variants)) {
+                    variants.forEach((variant: unknown, variantIdx: number) => {
+                      const variantTags = (variant as { tags?: unknown[] }).tags;
+                      if (Array.isArray(variantTags)) {
+                        checkTags(
+                          variantTags,
+                          `cards/${file} (card ${cardName}, side ${sideIdx}, variant ${variantIdx})`,
+                          10,
+                        );
+                      }
+                    });
                   }
                 });
               }

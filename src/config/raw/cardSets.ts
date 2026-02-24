@@ -9,69 +9,75 @@ const CARDSETS: _CardSetsConfig = {
   // flashcard
   //
   [CardSetConfigKey.flashcard]: {
-    jsonKey: 'cards',
-    sides: [
+    cards: [
       {
-        name: 'question',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'cards',
+        sides: [
           {
-            jsonKey: 'question.text',
-            tags: [
+            name: 'question',
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the flashcard.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the flashcard.',
-              },
-              {
-                key: ConfigKey.group_resourceIcon,
-                description: 'Icon resource for the flashcard.',
-                jsonKey: 'question.icon',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'answer',
-        variants: [
-          {
-            jsonKey: 'answer.text',
-            tags: [
-              {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the flashcard.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the flashcard.',
-              },
-              {
-                key: ConfigKey.group_resourceIcon,
-                description: 'Icon resource for the flashcard.',
-                jsonKey: 'answer.icon',
+                jsonKey: 'question.text',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the flashcard.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the flashcard.',
+                  },
+                  {
+                    key: ConfigKey.group_resourceIcon,
+                    description: 'Icon resource for the flashcard.',
+                    jsonKey: 'question.icon',
+                  },
+                ],
               },
             ],
           },
           {
-            jsonKey: 'alternativeAnswers[].text',
-            tags: [
+            name: 'answer',
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the flashcard.',
+                jsonKey: 'answer.text',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the flashcard.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the flashcard.',
+                  },
+                  {
+                    key: ConfigKey.group_resourceIcon,
+                    description: 'Icon resource for the flashcard.',
+                    jsonKey: 'answer.icon',
+                  },
+                ],
               },
               {
-                key: ConfigKey.tag_title,
-                description: 'Title of the flashcard.',
-              },
-              {
-                key: ConfigKey.group_resourceIcon,
-                description: 'Icon resource for the flashcard.',
+                jsonKey: 'alternativeAnswers[].text',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the flashcard.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the flashcard.',
+                  },
+                  {
+                    key: ConfigKey.group_resourceIcon,
+                    description: 'Icon resource for the flashcard.',
+                  },
+                ],
+                repeatCount: Count.infinity,
               },
             ],
-            repeatCount: Count.infinity,
           },
         ],
       },
@@ -82,71 +88,77 @@ const CARDSETS: _CardSetsConfig = {
   // definition-list
   //
   [CardSetConfigKey.definitionList]: {
-    jsonKey: 'definitions',
-    sides: [
+    cards: [
       {
-        name: 'term',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'definitions',
+        sides: [
           {
-            jsonKey: 'term.text',
-            tags: [
+            name: 'term',
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the definition.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the definition.',
-                secondaryJsonKey: 'heading.forKeys',
-              },
-              {
-                key: ConfigKey.group_resourceIcon,
-                description: 'Icon resource for the definition.',
-                jsonKey: 'term.icon',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'definition',
-        variants: [
-          {
-            jsonKey: 'definition.text',
-            tags: [
-              {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the definition.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the definition.',
-                secondaryJsonKey: 'heading.forValues',
-              },
-              {
-                key: ConfigKey.group_resourceIcon,
-                description: 'Icon resource for the definition.',
-                jsonKey: 'definition.icon',
+                jsonKey: 'term.text',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the definition.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the definition.',
+                    secondaryJsonKey: 'heading.forKeys',
+                  },
+                  {
+                    key: ConfigKey.group_resourceIcon,
+                    description: 'Icon resource for the definition.',
+                    jsonKey: 'term.icon',
+                  },
+                ],
               },
             ],
           },
           {
-            jsonKey: 'alternativeDefinitions[].text',
-            tags: [
+            name: 'definition',
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the definition.',
+                jsonKey: 'definition.text',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the definition.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the definition.',
+                    secondaryJsonKey: 'heading.forValues',
+                  },
+                  {
+                    key: ConfigKey.group_resourceIcon,
+                    description: 'Icon resource for the definition.',
+                    jsonKey: 'definition.icon',
+                  },
+                ],
               },
               {
-                key: ConfigKey.tag_title,
-                description: 'Title of the definition.',
-              },
-              {
-                key: ConfigKey.group_resourceIcon,
-                description: 'Icon resource for the definition.',
+                jsonKey: 'alternativeDefinitions[].text',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the definition.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the definition.',
+                  },
+                  {
+                    key: ConfigKey.group_resourceIcon,
+                    description: 'Icon resource for the definition.',
+                  },
+                ],
+                repeatCount: Count.infinity,
               },
             ],
-            repeatCount: Count.infinity,
           },
         ],
       },
@@ -157,65 +169,71 @@ const CARDSETS: _CardSetsConfig = {
   // match-pairs
   //
   [CardSetConfigKey.matchPairs]: {
-    jsonKey: 'pairs',
-    sides: [
+    cards: [
       {
-        name: 'key',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'pairs',
+        sides: [
           {
-            jsonKey: 'key',
-            tags: [
+            name: 'key',
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the match pair.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the match pair.',
-                secondaryJsonKey: 'heading.forKeys',
-              },
-              {
-                key: ConfigKey.property_isCaseSensitive,
-                description: 'Property to indicate if the match is case sensitive.',
-                format: TagFormat.boolean,
-              },
-              {
-                key: ConfigKey.resource_audio,
-                description: 'Audio resource for the match pair.',
-                jsonKey: 'keyAudio',
-              },
-              {
-                key: ConfigKey.resource_image,
-                description: 'Image resource for the match pair.',
-                jsonKey: 'keyImage',
+                jsonKey: 'key',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the match pair.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the match pair.',
+                    secondaryJsonKey: 'heading.forKeys',
+                  },
+                  {
+                    key: ConfigKey.property_isCaseSensitive,
+                    description: 'Property to indicate if the match is case sensitive.',
+                    format: TagFormat.boolean,
+                  },
+                  {
+                    key: ConfigKey.resource_audio,
+                    description: 'Audio resource for the match pair.',
+                    jsonKey: 'keyAudio',
+                  },
+                  {
+                    key: ConfigKey.resource_image,
+                    description: 'Image resource for the match pair.',
+                    jsonKey: 'keyImage',
+                  },
+                ],
               },
             ],
           },
-        ],
-      },
-      {
-        name: 'values',
-        repeat: true,
-        variants: [
           {
-            jsonKey: 'values[]',
-            tags: [
+            name: 'values',
+            repeat: true,
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the match pair.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the match pair.',
-                secondaryJsonKey: 'heading.forValues',
-              },
-              {
-                key: ConfigKey.property_isCaseSensitive,
-                description: 'Property to indicate if the match is case sensitive.',
-                format: TagFormat.boolean,
+                jsonKey: 'values[]',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the match pair.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the match pair.',
+                    secondaryJsonKey: 'heading.forValues',
+                  },
+                  {
+                    key: ConfigKey.property_isCaseSensitive,
+                    description: 'Property to indicate if the match is case sensitive.',
+                    format: TagFormat.boolean,
+                  },
+                ],
+                repeatCount: Count.infinity,
               },
             ],
-            repeatCount: Count.infinity,
           },
         ],
       },
@@ -226,54 +244,60 @@ const CARDSETS: _CardSetsConfig = {
   // match-audio-pairs
   //
   [CardSetConfigKey.matchAudioPairs]: {
-    jsonKey: 'pairs',
-    sides: [
+    cards: [
       {
-        name: 'key',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'pairs',
+        sides: [
           {
-            jsonKey: 'key',
-            tags: [
+            name: 'key',
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the audio match pair.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the audio match pair.',
-                secondaryJsonKey: 'heading.forKeys',
-              },
-              {
-                key: ConfigKey.resource_audio,
-                description: 'Audio resource for the match pair.',
-                jsonKey: 'keyAudio',
+                jsonKey: 'key',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the audio match pair.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the audio match pair.',
+                    secondaryJsonKey: 'heading.forKeys',
+                  },
+                  {
+                    key: ConfigKey.resource_audio,
+                    description: 'Audio resource for the match pair.',
+                    jsonKey: 'keyAudio',
+                  },
+                ],
               },
             ],
           },
-        ],
-      },
-      {
-        name: 'values',
-        repeat: true,
-        variants: [
           {
-            jsonKey: 'values[]',
-            tags: [
+            name: 'values',
+            repeat: true,
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the audio match pair.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the audio match pair.',
-                secondaryJsonKey: 'heading.forValues',
-              },
-              {
-                key: ConfigKey.resource_audio,
-                description: 'Audio resource for the match pair.',
+                jsonKey: 'values[]',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the audio match pair.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the audio match pair.',
+                    secondaryJsonKey: 'heading.forValues',
+                  },
+                  {
+                    key: ConfigKey.resource_audio,
+                    description: 'Audio resource for the match pair.',
+                  },
+                ],
+                repeatCount: Count.infinity,
               },
             ],
-            repeatCount: Count.infinity,
           },
         ],
       },
@@ -284,54 +308,60 @@ const CARDSETS: _CardSetsConfig = {
   // match-image-pairs
   //
   [CardSetConfigKey.matchImagePairs]: {
-    jsonKey: 'pairs',
-    sides: [
+    cards: [
       {
-        name: 'key',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'pairs',
+        sides: [
           {
-            jsonKey: 'key',
-            tags: [
+            name: 'key',
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the image match pair.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the image match pair.',
-                secondaryJsonKey: 'heading.forKeys',
-              },
-              {
-                key: ConfigKey.resource_image,
-                description: 'Image resource for the match pair.',
-                jsonKey: 'keyImage',
+                jsonKey: 'key',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the image match pair.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the image match pair.',
+                    secondaryJsonKey: 'heading.forKeys',
+                  },
+                  {
+                    key: ConfigKey.resource_image,
+                    description: 'Image resource for the match pair.',
+                    jsonKey: 'keyImage',
+                  },
+                ],
               },
             ],
           },
-        ],
-      },
-      {
-        name: 'values',
-        repeat: true,
-        variants: [
           {
-            jsonKey: 'values[]',
-            tags: [
+            name: 'values',
+            repeat: true,
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the image match pair.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the image match pair.',
-                secondaryJsonKey: 'heading.forValues',
-              },
-              {
-                key: ConfigKey.resource_image,
-                description: 'Image resource for the match pair.',
+                jsonKey: 'values[]',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the image match pair.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the image match pair.',
+                    secondaryJsonKey: 'heading.forValues',
+                  },
+                  {
+                    key: ConfigKey.resource_image,
+                    description: 'Image resource for the match pair.',
+                  },
+                ],
+                repeatCount: Count.infinity,
               },
             ],
-            repeatCount: Count.infinity,
           },
         ],
       },
@@ -342,65 +372,71 @@ const CARDSETS: _CardSetsConfig = {
   // match-matrix
   //
   [CardSetConfigKey.matchMatrix]: {
-    jsonKey: 'matrix',
-    sides: [
+    cards: [
       {
-        name: 'key',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'matrix',
+        sides: [
           {
-            jsonKey: 'key',
-            tags: [
+            name: 'key',
+            variants: [
               {
-                key: ConfigKey.group_standardItemLeadInstructionHint,
-                description: 'Standard tags for lead, instruction, and hint.',
-              },
-              {
-                key: ConfigKey.property_example,
-                description: 'Example text for the match matrix.',
-                format: TagFormat.plainText,
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the match matrix.',
-                secondaryJsonKey: 'heading.forKeys',
-              },
-              {
-                key: ConfigKey.property_isCaseSensitive,
-                description: 'Property to indicate if the match is case sensitive.',
-                format: TagFormat.boolean,
+                jsonKey: 'key',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description: 'Standard tags for lead, instruction, and hint.',
+                  },
+                  {
+                    key: ConfigKey.property_example,
+                    description: 'Example text for the match matrix.',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the match matrix.',
+                    secondaryJsonKey: 'heading.forKeys',
+                  },
+                  {
+                    key: ConfigKey.property_isCaseSensitive,
+                    description: 'Property to indicate if the match is case sensitive.',
+                    format: TagFormat.boolean,
+                  },
+                ],
               },
             ],
           },
-        ],
-      },
-      {
-        name: 'cell',
-        repeat: true,
-        variants: [
           {
-            jsonKey: 'cells[{s}].values[]',
-            tags: [
+            name: 'cell',
+            repeat: true,
+            variants: [
               {
-                key: ConfigKey.group_standardItemLeadInstructionHint,
-                description: 'Standard tags for lead, instruction, and hint.',
-              },
-              {
-                key: ConfigKey.property_example,
-                description: 'Example text for the match matrix.',
-                format: TagFormat.plainText,
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the match matrix.',
-                secondaryJsonKey: 'heading.forValues',
-              },
-              {
-                key: ConfigKey.property_isCaseSensitive,
-                description: 'Property to indicate if the match is case sensitive.',
-                format: TagFormat.boolean,
+                jsonKey: 'cells[{s}].values[]',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description: 'Standard tags for lead, instruction, and hint.',
+                  },
+                  {
+                    key: ConfigKey.property_example,
+                    description: 'Example text for the match matrix.',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the match matrix.',
+                    secondaryJsonKey: 'heading.forValues',
+                  },
+                  {
+                    key: ConfigKey.property_isCaseSensitive,
+                    description: 'Property to indicate if the match is case sensitive.',
+                    format: TagFormat.boolean,
+                  },
+                ],
+                repeatCount: Count.infinity,
               },
             ],
-            repeatCount: Count.infinity,
           },
         ],
       },
@@ -411,30 +447,36 @@ const CARDSETS: _CardSetsConfig = {
   // statements
   //
   [CardSetConfigKey.statements]: {
-    jsonKey: 'statements',
-    sides: [
+    cards: [
       {
-        name: 'statement',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'statements',
+        sides: [
           {
-            jsonKey: 'statement',
-            tags: [
+            name: 'statement',
+            variants: [
               {
-                key: ConfigKey.tag_true,
-                description: 'Tag for true statements.',
-                maxCount: 1,
-              },
-              {
-                key: ConfigKey.tag_false,
-                description: 'Tag for false statements.',
-                maxCount: 1,
-              },
-              {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the statement.',
+                jsonKey: 'statement',
+                tags: [
+                  {
+                    key: ConfigKey.tag_true,
+                    description: 'Tag for true statements.',
+                    maxCount: 1,
+                  },
+                  {
+                    key: ConfigKey.tag_false,
+                    description: 'Tag for false statements.',
+                    maxCount: 1,
+                  },
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the statement.',
+                  },
+                ],
+                bodyAllowed: false,
               },
             ],
-            bodyAllowed: false,
           },
         ],
       },
@@ -445,24 +487,30 @@ const CARDSETS: _CardSetsConfig = {
   // quiz
   //
   [CardSetConfigKey.quiz]: {
-    jsonKey: 'quizzes',
-    sides: [
+    cards: [
       {
-        name: 'choices',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'quizzes',
+        sides: [
           {
-            jsonKey: null,
-            tags: [
+            name: 'choices',
+            variants: [
               {
-                key: ConfigKey.group_trueFalse,
-                description: 'Group for true/false questions.',
-              },
-              {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the quiz.',
+                jsonKey: null,
+                tags: [
+                  {
+                    key: ConfigKey.group_trueFalse,
+                    description: 'Group for true/false questions.',
+                  },
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the quiz.',
+                  },
+                ],
+                bodyAllowed: false,
               },
             ],
-            bodyAllowed: false,
           },
         ],
       },
@@ -473,59 +521,65 @@ const CARDSETS: _CardSetsConfig = {
   // feedback
   //
   [CardSetConfigKey.feedback]: {
-    jsonKey: 'feedbacks',
-    sides: [
+    cards: [
       {
-        name: 'choices',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'feedbacks',
+        sides: [
           {
-            jsonKey: null,
-            tags: [
+            name: 'choices',
+            variants: [
               {
-                key: ConfigKey.group_standardItemLeadInstructionHint,
-                description: 'Standard tags for lead, instruction, and hint.',
-              },
-              {
-                key: ConfigKey.group_trueFalse,
-                description: 'Group for true/false feedback.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the feedback.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: null,
+                tags: [
+                  {
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description: 'Standard tags for lead, instruction, and hint.',
+                  },
+                  {
+                    key: ConfigKey.group_trueFalse,
+                    description: 'Group for true/false feedback.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the feedback.',
+                    secondaryJsonKey: 'heading.forKeys',
+                  },
+                ],
+                bodyAllowed: false,
               },
             ],
-            bodyAllowed: false,
           },
-        ],
-      },
-      {
-        name: 'reason',
-        variants: [
           {
-            jsonKey: 'reason.text',
-            tags: [
+            name: 'reason',
+            variants: [
               {
-                key: ConfigKey.group_standardItemLeadInstructionHint,
-                description: 'Standard tags for lead, instruction, and hint.',
-              },
-              {
-                key: ConfigKey.property_reasonableNumOfChars,
-                description: 'Property for reasonable number of characters.',
-                format: TagFormat.number,
-              },
-              {
-                key: ConfigKey.property_example,
-                description: 'Example text for the feedback.',
-                format: TagFormat.plainText,
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the feedback.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: 'reason.text',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description: 'Standard tags for lead, instruction, and hint.',
+                  },
+                  {
+                    key: ConfigKey.property_reasonableNumOfChars,
+                    description: 'Property for reasonable number of characters.',
+                    format: TagFormat.number,
+                  },
+                  {
+                    key: ConfigKey.property_example,
+                    description: 'Example text for the feedback.',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the feedback.',
+                    secondaryJsonKey: 'heading.forValues',
+                  },
+                ],
+                bodyAllowed: true,
               },
             ],
-            bodyAllowed: true,
           },
         ],
       },
@@ -536,42 +590,48 @@ const CARDSETS: _CardSetsConfig = {
   // questions
   //
   [CardSetConfigKey.questions]: {
-    jsonKey: 'questions',
-    sides: [
+    cards: [
       {
-        name: 'question',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'questions',
+        sides: [
           {
-            jsonKey: 'question',
-            tags: [
+            name: 'question',
+            variants: [
               {
-                key: ConfigKey.property_reasonableNumOfChars,
-                description: 'Property for reasonable number of characters.',
-                format: TagFormat.number,
-              },
-              {
-                key: ConfigKey.tag_sampleSolution,
-                description: 'Sample solution for the question.',
-              },
-              {
-                key: ConfigKey.property_sampleSolution,
-                description: 'Property for sample solution text.',
-                format: TagFormat.plainText,
-              },
-              {
-                key: ConfigKey.property_additionalSolutions,
-                description: 'Property for additional solutions.',
-                format: TagFormat.plainText,
-                maxCount: Count.infinity,
-              },
-              {
-                key: ConfigKey.property_partialAnswer,
-                description: 'Property for partial answer text.',
-                format: TagFormat.plainText,
-              },
-              {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the question.',
+                jsonKey: 'question',
+                tags: [
+                  {
+                    key: ConfigKey.property_reasonableNumOfChars,
+                    description: 'Property for reasonable number of characters.',
+                    format: TagFormat.number,
+                  },
+                  {
+                    key: ConfigKey.tag_sampleSolution,
+                    description: 'Sample solution for the question.',
+                  },
+                  {
+                    key: ConfigKey.property_sampleSolution,
+                    description: 'Property for sample solution text.',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.property_additionalSolutions,
+                    description: 'Property for additional solutions.',
+                    format: TagFormat.plainText,
+                    maxCount: Count.infinity,
+                  },
+                  {
+                    key: ConfigKey.property_partialAnswer,
+                    description: 'Property for partial answer text.',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for the question.',
+                  },
+                ],
               },
             ],
           },
@@ -584,26 +644,32 @@ const CARDSETS: _CardSetsConfig = {
   // elements
   //
   [CardSetConfigKey.elements]: {
-    jsonKey: null,
-    sides: [
+    cards: [
       {
-        name: 'element',
-        repeat: true,
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: null,
+        sides: [
           {
-            jsonKey: 'elements[]',
-            tags: [
+            name: 'element',
+            repeat: true,
+            variants: [
               {
-                key: ConfigKey.group_standardItemLeadInstructionHint,
-                description: 'Standard tags for lead, instruction, and hint.',
-              },
-              {
-                key: ConfigKey.property_example,
-                description: 'Example text for the element.',
-                format: TagFormat.plainText,
+                jsonKey: 'elements[]',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description: 'Standard tags for lead, instruction, and hint.',
+                  },
+                  {
+                    key: ConfigKey.property_example,
+                    description: 'Example text for the element.',
+                    format: TagFormat.plainText,
+                  },
+                ],
+                repeatCount: Count.infinity,
               },
             ],
-            repeatCount: Count.infinity,
           },
         ],
       },
@@ -614,47 +680,53 @@ const CARDSETS: _CardSetsConfig = {
   // table
   //
   [CardSetConfigKey.table]: {
-    jsonKey: 'table.data',
-    itemType: 'array',
-    sides: [
+    cards: [
       {
-        name: 'cell',
-        repeat: true,
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'table.data',
+        itemType: 'array',
+        sides: [
           {
-            jsonKey: null,
-            tags: [
+            name: 'cell',
+            repeat: true,
+            variants: [
               {
-                key: ConfigKey.group_standardItemLeadInstructionHint,
-                description: 'Standard tags for lead, instruction, and hint.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the table.',
-                secondaryJsonKey: 'table.columns[]',
-              },
-              {
-                key: ConfigKey.property_tableCellType,
-                description: 'Table cell type (th/td).',
-                format: TagFormat.plainText,
-              },
-              {
-                key: ConfigKey.property_tableRowSpan,
-                description: 'Number of rows the cell spans.',
-                format: TagFormat.number,
-              },
-              {
-                key: ConfigKey.property_tableColSpan,
-                description: 'Number of columns the cell spans.',
-                format: TagFormat.number,
-              },
-              {
-                key: ConfigKey.property_tableScope,
-                description: 'Scope attribute for header cells.',
-                format: TagFormat.plainText,
+                jsonKey: null,
+                tags: [
+                  {
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description: 'Standard tags for lead, instruction, and hint.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the table.',
+                    secondaryJsonKey: 'table.columns[]',
+                  },
+                  {
+                    key: ConfigKey.property_tableCellType,
+                    description: 'Table cell type (th/td).',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.property_tableRowSpan,
+                    description: 'Number of rows the cell spans.',
+                    format: TagFormat.number,
+                  },
+                  {
+                    key: ConfigKey.property_tableColSpan,
+                    description: 'Number of columns the cell spans.',
+                    format: TagFormat.number,
+                  },
+                  {
+                    key: ConfigKey.property_tableScope,
+                    description: 'Scope attribute for header cells.',
+                    format: TagFormat.plainText,
+                  },
+                ],
+                repeatCount: Count.infinity,
               },
             ],
-            repeatCount: Count.infinity,
           },
         ],
       },
@@ -665,50 +737,143 @@ const CARDSETS: _CardSetsConfig = {
   // table-extended
   //
   [CardSetConfigKey.tableExtended]: {
-    jsonKey: null,
-    sections: {
-      default: { jsonKey: 'tableExtended.body.rows' },
-      'table-header': { jsonKey: 'tableExtended.header.rows' },
-      'table-footer': { jsonKey: 'tableExtended.footer.rows' },
-    },
-    sides: [
+    cards: [
       {
-        name: 'cell',
-        repeat: true,
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'tableExtended.body.rows',
+        sides: [
           {
-            jsonKey: 'content',
-            tags: [
+            name: 'cell',
+            repeat: true,
+            variants: [
               {
-                key: ConfigKey.group_standardItemLeadInstructionHint,
-                description: 'Standard tags for lead, instruction, and hint.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the table cell.',
-              },
-              {
-                key: ConfigKey.property_tableCellType,
-                description: 'Table cell type (th/td).',
-                format: TagFormat.plainText,
-              },
-              {
-                key: ConfigKey.property_tableRowSpan,
-                description: 'Number of rows the cell spans.',
-                format: TagFormat.number,
-              },
-              {
-                key: ConfigKey.property_tableColSpan,
-                description: 'Number of columns the cell spans.',
-                format: TagFormat.number,
-              },
-              {
-                key: ConfigKey.property_tableScope,
-                description: 'Scope attribute for header cells.',
-                format: TagFormat.plainText,
+                jsonKey: 'content',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description: 'Standard tags for lead, instruction, and hint.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the table cell.',
+                  },
+                  {
+                    key: ConfigKey.property_tableCellType,
+                    description: 'Table cell type (th/td).',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.property_tableRowSpan,
+                    description: 'Number of rows the cell spans.',
+                    format: TagFormat.number,
+                  },
+                  {
+                    key: ConfigKey.property_tableColSpan,
+                    description: 'Number of columns the cell spans.',
+                    format: TagFormat.number,
+                  },
+                  {
+                    key: ConfigKey.property_tableScope,
+                    description: 'Scope attribute for header cells.',
+                    format: TagFormat.plainText,
+                  },
+                ],
+                repeatCount: Count.infinity,
               },
             ],
-            repeatCount: Count.infinity,
+          },
+        ],
+      },
+      {
+        name: 'table-header',
+        jsonKey: 'tableExtended.header.rows',
+        sides: [
+          {
+            name: 'cell',
+            repeat: true,
+            variants: [
+              {
+                jsonKey: 'content',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description: 'Standard tags for lead, instruction, and hint.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the table cell.',
+                  },
+                  {
+                    key: ConfigKey.property_tableCellType,
+                    description: 'Table cell type (th/td).',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.property_tableRowSpan,
+                    description: 'Number of rows the cell spans.',
+                    format: TagFormat.number,
+                  },
+                  {
+                    key: ConfigKey.property_tableColSpan,
+                    description: 'Number of columns the cell spans.',
+                    format: TagFormat.number,
+                  },
+                  {
+                    key: ConfigKey.property_tableScope,
+                    description: 'Scope attribute for header cells.',
+                    format: TagFormat.plainText,
+                  },
+                ],
+                repeatCount: Count.infinity,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'table-footer',
+        jsonKey: 'tableExtended.footer.rows',
+        sides: [
+          {
+            name: 'cell',
+            repeat: true,
+            variants: [
+              {
+                jsonKey: 'content',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description: 'Standard tags for lead, instruction, and hint.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the table cell.',
+                  },
+                  {
+                    key: ConfigKey.property_tableCellType,
+                    description: 'Table cell type (th/td).',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.property_tableRowSpan,
+                    description: 'Number of rows the cell spans.',
+                    format: TagFormat.number,
+                  },
+                  {
+                    key: ConfigKey.property_tableColSpan,
+                    description: 'Number of columns the cell spans.',
+                    format: TagFormat.number,
+                  },
+                  {
+                    key: ConfigKey.property_tableScope,
+                    description: 'Scope attribute for header cells.',
+                    format: TagFormat.plainText,
+                  },
+                ],
+                repeatCount: Count.infinity,
+              },
+            ],
           },
         ],
       },
@@ -719,31 +884,37 @@ const CARDSETS: _CardSetsConfig = {
   // pronunciation-table
   //
   [CardSetConfigKey.pronunciationTable]: {
-    jsonKey: 'pronunciationTable.data',
-    itemType: 'array',
-    sides: [
+    cards: [
       {
-        name: 'cell',
-        repeat: true,
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'pronunciationTable.data',
+        itemType: 'array',
+        sides: [
           {
-            jsonKey: 'body',
-            tags: [
+            name: 'cell',
+            repeat: true,
+            variants: [
               {
-                key: ConfigKey.group_standardItemLeadInstructionHint,
-                description: 'Standard tags for lead, instruction, and hint.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the pronunciation table.',
-              },
-              {
-                key: ConfigKey.resource_audio,
-                description: 'Audio resource for the pronunciation table.',
-                jsonKey: 'audio',
+                jsonKey: 'body',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description: 'Standard tags for lead, instruction, and hint.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the pronunciation table.',
+                  },
+                  {
+                    key: ConfigKey.resource_audio,
+                    description: 'Audio resource for the pronunciation table.',
+                    jsonKey: 'audio',
+                  },
+                ],
+                repeatCount: Count.infinity,
               },
             ],
-            repeatCount: Count.infinity,
           },
         ],
       },
@@ -754,39 +925,46 @@ const CARDSETS: _CardSetsConfig = {
   // bot-action-responses
   //
   [CardSetConfigKey.botActionResponses]: {
-    jsonKey: 'responses',
-    sides: [
+    cards: [
       {
-        name: 'response',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'responses',
+        sides: [
           {
-            jsonKey: 'feedback',
-            tags: [
+            name: 'response',
+            variants: [
               {
-                key: ConfigKey.property_reaction,
-                description: 'Reaction to the bot action.',
-                format: TagFormat.plainText,
-              },
-              {
-                key: ConfigKey.tag_item,
-                description: 'The item for the bot action response.',
-                chain: [
+                jsonKey: 'feedback',
+                tags: [
+                  {
+                    key: ConfigKey.property_reaction,
+                    description: 'Reaction to the bot action.',
+                    format: TagFormat.plainText,
+                  },
                   {
                     key: ConfigKey.tag_item,
-                    description: 'The lead, page number, source page number, and margin number.',
-                    maxCount: 4,
+                    description: 'The item for the bot action response.',
+                    chain: [
+                      {
+                        key: ConfigKey.tag_item,
+                        description:
+                          'The lead, page number, source page number, and margin number.',
+                        maxCount: 4,
+                      },
+                    ],
+                  },
+                  {
+                    key: ConfigKey.tag_instruction,
+                    description: 'The response label for the bot action.',
+                    jsonKey: 'response',
+                  },
+                  {
+                    key: ConfigKey.property_example,
+                    description: 'Example text for the bot action response.',
+                    format: TagFormat.plainText,
                   },
                 ],
-              },
-              {
-                key: ConfigKey.tag_instruction,
-                description: 'The response label for the bot action.',
-                jsonKey: 'response',
-              },
-              {
-                key: ConfigKey.property_example,
-                description: 'Example text for the bot action response.',
-                format: TagFormat.plainText,
               },
             ],
           },
@@ -799,21 +977,27 @@ const CARDSETS: _CardSetsConfig = {
   // cloze-list
   //
   [CardSetConfigKey.clozeList]: {
-    jsonKey: 'listItems',
-    sides: [
+    cards: [
       {
-        name: 'content',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'listItems',
+        sides: [
           {
-            jsonKey: 'body',
-            tags: [
+            name: 'content',
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for cloze items.',
-              },
-              {
-                key: ConfigKey.group_gap,
-                description: 'Group for gap tags in cloze items.',
+                jsonKey: 'body',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for cloze items.',
+                  },
+                  {
+                    key: ConfigKey.group_gap,
+                    description: 'Group for gap tags in cloze items.',
+                  },
+                ],
               },
             ],
           },
@@ -826,21 +1010,27 @@ const CARDSETS: _CardSetsConfig = {
   // example-bit-list
   //
   [CardSetConfigKey.exampleBitList]: {
-    jsonKey: 'listItems',
-    sides: [
+    cards: [
       {
-        name: 'item',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'listItems',
+        sides: [
           {
-            jsonKey: 'body',
-            tags: [
+            name: 'item',
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for example bits.',
-              },
-              {
-                key: ConfigKey.tag_title,
-                description: 'Title of the example bit.',
+                jsonKey: 'body',
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for example bits.',
+                  },
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the example bit.',
+                  },
+                ],
               },
             ],
           },
@@ -853,62 +1043,68 @@ const CARDSETS: _CardSetsConfig = {
   // ingredients
   //
   [CardSetConfigKey.ingredients]: {
-    jsonKey: 'ingredients',
-    sides: [
+    cards: [
       {
-        name: 'ingredient',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'ingredients',
+        sides: [
           {
-            jsonKey: 'ingredient',
-            tags: [
+            name: 'ingredient',
+            variants: [
               {
-                key: ConfigKey.tag_title,
-                description: 'Title of the ingredient.',
-              },
-              {
-                key: ConfigKey.group_trueFalse,
-                description: 'Group for true/false properties of the ingredient.',
-              },
-              {
-                key: ConfigKey.tag_item,
-                description: 'The item for the ingredient.',
-                chain: [
+                jsonKey: 'ingredient',
+                tags: [
+                  {
+                    key: ConfigKey.tag_title,
+                    description: 'Title of the ingredient.',
+                  },
+                  {
+                    key: ConfigKey.group_trueFalse,
+                    description: 'Group for true/false properties of the ingredient.',
+                  },
                   {
                     key: ConfigKey.tag_item,
-                    description: 'Lead, page number, source page number, and margin number.',
-                    maxCount: 4,
+                    description: 'The item for the ingredient.',
+                    chain: [
+                      {
+                        key: ConfigKey.tag_item,
+                        description: 'Lead, page number, source page number, and margin number.',
+                        maxCount: 4,
+                      },
+                    ],
+                  },
+                  {
+                    key: ConfigKey.tag_instruction,
+                    description: 'The quantity of the ingredient.',
+                    jsonKey: 'quantity',
+                  },
+                  {
+                    key: ConfigKey.tag_hint,
+                    description: 'The hint for the ingredient.',
+                  },
+                  {
+                    key: ConfigKey.property_unit,
+                    description: 'Unit of measurement for the ingredient.',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.property_unitAbbr,
+                    description: 'Abbreviation for the unit of measurement.',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.property_decimalPlaces,
+                    description: 'Number of decimal places for the ingredient quantity.',
+                    format: TagFormat.number,
+                    defaultValue: '1',
+                  },
+                  {
+                    key: ConfigKey.property_disableCalculation,
+                    description: 'Disable calculation for the ingredient.',
+                    format: TagFormat.boolean,
                   },
                 ],
-              },
-              {
-                key: ConfigKey.tag_instruction,
-                description: 'The quantity of the ingredient.',
-                jsonKey: 'quantity',
-              },
-              {
-                key: ConfigKey.tag_hint,
-                description: 'The hint for the ingredient.',
-              },
-              {
-                key: ConfigKey.property_unit,
-                description: 'Unit of measurement for the ingredient.',
-                format: TagFormat.plainText,
-              },
-              {
-                key: ConfigKey.property_unitAbbr,
-                description: 'Abbreviation for the unit of measurement.',
-                format: TagFormat.plainText,
-              },
-              {
-                key: ConfigKey.property_decimalPlaces,
-                description: 'Number of decimal places for the ingredient quantity.',
-                format: TagFormat.number,
-                defaultValue: '1',
-              },
-              {
-                key: ConfigKey.property_disableCalculation,
-                description: 'Disable calculation for the ingredient.',
-                format: TagFormat.boolean,
               },
             ],
           },
@@ -921,44 +1117,50 @@ const CARDSETS: _CardSetsConfig = {
   // book-reference-list
   //
   [CardSetConfigKey.bookReferenceList]: {
-    jsonKey: 'bookReferences',
-    sides: [
+    cards: [
       {
-        name: 'reference',
-        variants: [
+        name: 'default',
+        isDefault: true,
+        jsonKey: 'bookReferences',
+        sides: [
           {
-            jsonKey: null,
-            tags: [
+            name: 'reference',
+            variants: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for book references.',
-              },
-              {
-                key: ConfigKey.property_refAuthor,
-                description: 'Author of the book.',
-                format: TagFormat.plainText,
-                maxCount: Count.infinity,
-              },
-              {
-                key: ConfigKey.property_refBookTitle,
-                description: 'Title of the book.',
-                format: TagFormat.plainText,
-              },
-              {
-                key: ConfigKey.property_refPublisher,
-                description: 'Publisher of the book.',
-                format: TagFormat.plainText,
-                maxCount: Count.infinity,
-              },
-              {
-                key: ConfigKey.property_refPublicationYear,
-                description: 'Year of publication of the book.',
-                format: TagFormat.plainText,
-              },
-              {
-                key: ConfigKey.property_citationStyle,
-                description: 'Citation style for the book reference.',
-                format: TagFormat.plainText,
+                jsonKey: null,
+                tags: [
+                  {
+                    key: ConfigKey.group_standardTags,
+                    description: 'Standard tags for book references.',
+                  },
+                  {
+                    key: ConfigKey.property_refAuthor,
+                    description: 'Author of the book.',
+                    format: TagFormat.plainText,
+                    maxCount: Count.infinity,
+                  },
+                  {
+                    key: ConfigKey.property_refBookTitle,
+                    description: 'Title of the book.',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.property_refPublisher,
+                    description: 'Publisher of the book.',
+                    format: TagFormat.plainText,
+                    maxCount: Count.infinity,
+                  },
+                  {
+                    key: ConfigKey.property_refPublicationYear,
+                    description: 'Year of publication of the book.',
+                    format: TagFormat.plainText,
+                  },
+                  {
+                    key: ConfigKey.property_citationStyle,
+                    description: 'Citation style for the book reference.',
+                    format: TagFormat.plainText,
+                  },
+                ],
               },
             ],
           },

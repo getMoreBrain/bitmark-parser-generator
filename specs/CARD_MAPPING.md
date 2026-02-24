@@ -32,7 +32,7 @@ Some bits use a named qualifier on the card divider:
 ==== table-header ====
 ```
 
-This produces a special section in the output (e.g., `table-extended` header/body/footer sections).
+This selects a specific card type by name from the `cards[]` array in the card config (e.g., `table-extended` has card types `default`, `table-header`, `table-footer`, each with its own `jsonKey` and `sides`).
 
 ---
 

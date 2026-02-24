@@ -3,6 +3,7 @@ import { Enum } from '@ncoderz/superenum';
 import { type _AbstractTagConfig, type _CardVariantConfig } from '../model/config/_Config.ts';
 import { CardSetConfig } from '../model/config/CardSetConfig.ts';
 import { CardSideConfig } from '../model/config/CardSideConfig.ts';
+import { CardTypeConfig } from '../model/config/CardTypeConfig.ts';
 import { CardVariantConfig } from '../model/config/CardVariantConfig.ts';
 import { type CardSetConfigKeyType } from '../model/config/enum/CardSetConfigKey.ts';
 import { ConfigKey, typeFromConfigKey } from '../model/config/enum/ConfigKey.ts';
@@ -70,25 +71,32 @@ class ConfigHydrator {
     const _cardSetConfig = CARDS[_cardSet];
     if (!_cardSetConfig) throw new Error(`No config found for card set config key '${_cardSet}'`);
 
-    const sides: CardSideConfig[] = [];
+    const cardTypes: CardTypeConfig[] = [];
 
-    for (const _side of _cardSetConfig.sides) {
-      const variantsOfSide: CardVariantConfig[] = [];
-      for (const _variant of _side.variants) {
-        const v = this.hydrateCardVariantConfig(_variant);
-        variantsOfSide.push(v);
+    for (const _cardType of _cardSetConfig.cards) {
+      const sides: CardSideConfig[] = [];
+
+      for (const _side of _cardType.sides) {
+        const variantsOfSide: CardVariantConfig[] = [];
+        for (const _variant of _side.variants) {
+          const v = this.hydrateCardVariantConfig(_variant);
+          variantsOfSide.push(v);
+        }
+        const sideConfig = new CardSideConfig(_side.name, _side.repeat ?? false, variantsOfSide);
+        sides.push(sideConfig);
       }
-      const sideConfig = new CardSideConfig(_side.name, _side.repeat ?? false, variantsOfSide);
-      sides.push(sideConfig);
+
+      const cardTypeConfig = new CardTypeConfig(
+        _cardType.name,
+        _cardType.isDefault ?? false,
+        _cardType.jsonKey,
+        _cardType.itemType ?? 'object',
+        sides,
+      );
+      cardTypes.push(cardTypeConfig);
     }
 
-    const cardSetConfig = new CardSetConfig(
-      _cardSet,
-      _cardSetConfig.jsonKey,
-      _cardSetConfig.itemType ?? 'object',
-      _cardSetConfig.sections,
-      sides,
-    );
+    const cardSetConfig = new CardSetConfig(_cardSet, cardTypes);
 
     return cardSetConfig;
   }
