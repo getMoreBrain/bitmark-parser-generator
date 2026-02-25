@@ -20,6 +20,21 @@ import { GROUPS } from './raw/groups.ts';
 const MAX_COUNT_DEFAULT = 1;
 const MIN_COUNT_DEFAULT = 0;
 
+/**
+ * Parse a jsonKey that may contain a `^` prefix.
+ * A `^` prefix means the key targets the bit root level (heading card behavior).
+ * Returns the cleaned jsonKey and any derived secondaryJsonKey.
+ */
+function parseJsonKeyPrefix(jsonKey: string | undefined): {
+  jsonKey: string | undefined;
+  secondaryJsonKey: string | undefined;
+} {
+  if (jsonKey?.startsWith('^')) {
+    return { jsonKey: undefined, secondaryJsonKey: jsonKey.substring(1) };
+  }
+  return { jsonKey, secondaryJsonKey: undefined };
+}
+
 class ConfigHydrator {
   public hydrateTagsConfig(_tags: _AbstractTagConfig[]): TagsConfigWithInfo {
     const tagsWithInfo: TagsConfigWithInfo = {
@@ -82,7 +97,12 @@ class ConfigHydrator {
           const v = this.hydrateCardVariantConfig(_variant);
           variantsOfSide.push(v);
         }
-        const sideConfig = new CardSideConfig(_side.name, _side.repeat ?? false, variantsOfSide);
+        const sideConfig = new CardSideConfig(
+          _side.name,
+          _side.repeat ?? false,
+          variantsOfSide,
+          _side.jsonKey,
+        );
         sides.push(sideConfig);
       }
 
@@ -107,9 +127,12 @@ class ConfigHydrator {
       maxCount,
       minCount,
       chain: _chain,
-      secondaryJsonKey,
+      jsonKey: _jsonKey,
+      secondaryJsonKey: _secondaryJsonKey,
       deprecated,
     } = _tag;
+    const { secondaryJsonKey: parsedSecondaryJsonKey } = parseJsonKeyPrefix(_jsonKey);
+    const secondaryJsonKey = parsedSecondaryJsonKey ?? _secondaryJsonKey;
     const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No tag key found for config key '${configKey}'`);
     const tag = Enum(Tag).fromValue(configKey);
@@ -148,9 +171,13 @@ class ConfigHydrator {
       format,
       values,
       defaultValue,
-      jsonKey,
-      secondaryJsonKey,
+      jsonKey: _jsonKey,
+      secondaryJsonKey: _secondaryJsonKey,
     } = _tag;
+    const { jsonKey: parsedJsonKey, secondaryJsonKey: parsedSecondaryJsonKey } =
+      parseJsonKeyPrefix(_jsonKey);
+    const jsonKey = parsedJsonKey;
+    const secondaryJsonKey = parsedSecondaryJsonKey ?? _secondaryJsonKey;
     const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No property key found for config key '${configKey}'`);
     const tag = _configKey.substring(1); // Remove the '@' prefix from the config key
@@ -189,9 +216,13 @@ class ConfigHydrator {
       minCount,
       chain: _chain,
       deprecated,
-      jsonKey,
-      secondaryJsonKey,
+      jsonKey: _jsonKey,
+      secondaryJsonKey: _secondaryJsonKey,
     } = _tag;
+    const { jsonKey: parsedJsonKey, secondaryJsonKey: parsedSecondaryJsonKey } =
+      parseJsonKeyPrefix(_jsonKey);
+    const jsonKey = parsedJsonKey;
+    const secondaryJsonKey = parsedSecondaryJsonKey ?? _secondaryJsonKey;
     const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No resource key found for config key '${configKey}'`);
     const tag = _configKey.substring(1); // Remove the '&' prefix from the config key

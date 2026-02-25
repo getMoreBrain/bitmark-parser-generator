@@ -242,7 +242,6 @@ class ConfigBuilder {
         type: 'tag',
         key: tagName,
         jsonKey,
-        ...(tag.secondaryJsonKey ? { secondaryJsonKey: tag.secondaryJsonKey } : {}),
         format,
         default: null,
         alwaysInclude: false,
@@ -290,6 +289,7 @@ class ConfigBuilder {
         return {
           name: side.name,
           ...(side.repeat ? { repeat: side.repeat } : {}),
+          ...(side.jsonKey ? { jsonKey: side.jsonKey } : {}),
           variants,
         };
       });

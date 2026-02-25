@@ -147,6 +147,7 @@ export interface _CardTypeConfig {
 export interface _CardSideConfig {
   name: string; // e.g. 'question', 'key', 'cell'
   repeat?: boolean; // Side repeats for remaining -- dividers
+  jsonKey?: string; // JSON key wrapping repeating side entries (e.g. 'cells')
   variants: _CardVariantConfig[];
 }
 

@@ -107,7 +107,7 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the definition.',
-                    secondaryJsonKey: 'heading.forKeys',
+                    jsonKey: '^heading.forKeys',
                   },
                   {
                     key: ConfigKey.group_resourceIcon,
@@ -131,7 +131,7 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the definition.',
-                    secondaryJsonKey: 'heading.forValues',
+                    jsonKey: '^heading.forValues',
                   },
                   {
                     key: ConfigKey.group_resourceIcon,
@@ -188,7 +188,7 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the match pair.',
-                    secondaryJsonKey: 'heading.forKeys',
+                    jsonKey: '^heading.forKeys',
                   },
                   {
                     key: ConfigKey.property_isCaseSensitive,
@@ -223,7 +223,7 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the match pair.',
-                    secondaryJsonKey: 'heading.forValues',
+                    jsonKey: '^heading.forValues[]',
                   },
                   {
                     key: ConfigKey.property_isCaseSensitive,
@@ -263,7 +263,7 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the audio match pair.',
-                    secondaryJsonKey: 'heading.forKeys',
+                    jsonKey: '^heading.forKeys',
                   },
                   {
                     key: ConfigKey.resource_audio,
@@ -288,7 +288,7 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the audio match pair.',
-                    secondaryJsonKey: 'heading.forValues',
+                    jsonKey: '^heading.forValues[]',
                   },
                   {
                     key: ConfigKey.resource_audio,
@@ -327,7 +327,7 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the image match pair.',
-                    secondaryJsonKey: 'heading.forKeys',
+                    jsonKey: '^heading.forKeys',
                   },
                   {
                     key: ConfigKey.resource_image,
@@ -352,7 +352,7 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the image match pair.',
-                    secondaryJsonKey: 'heading.forValues',
+                    jsonKey: '^heading.forValues[]',
                   },
                   {
                     key: ConfigKey.resource_image,
@@ -396,7 +396,7 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the match matrix.',
-                    secondaryJsonKey: 'heading.forKeys',
+                    jsonKey: '^heading.forKeys',
                   },
                   {
                     key: ConfigKey.property_isCaseSensitive,
@@ -426,7 +426,7 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the match matrix.',
-                    secondaryJsonKey: 'heading.forValues',
+                    jsonKey: '^heading.forValues[]',
                   },
                   {
                     key: ConfigKey.property_isCaseSensitive,
@@ -544,7 +544,7 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the feedback.',
-                    secondaryJsonKey: 'heading.forKeys',
+                    jsonKey: '^heading.forKeys',
                   },
                 ],
                 bodyAllowed: false,
@@ -574,7 +574,7 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the feedback.',
-                    secondaryJsonKey: 'heading.forValues',
+                    jsonKey: '^heading.forValues',
                   },
                 ],
                 bodyAllowed: true,
@@ -685,7 +685,6 @@ const CARDSETS: _CardSetsConfig = {
         name: 'default',
         isDefault: true,
         jsonKey: 'table.data',
-        itemType: 'array',
         sides: [
           {
             name: 'cell',
@@ -701,27 +700,31 @@ const CARDSETS: _CardSetsConfig = {
                   {
                     key: ConfigKey.tag_title,
                     description: 'Title of the table.',
-                    secondaryJsonKey: 'table.columns[]',
+                    jsonKey: '^table.columns[]',
                   },
                   {
                     key: ConfigKey.property_tableCellType,
                     description: 'Table cell type (th/td).',
                     format: TagFormat.plainText,
+                    jsonKey: 'title|bool(th)',
                   },
                   {
                     key: ConfigKey.property_tableRowSpan,
                     description: 'Number of rows the cell spans.',
                     format: TagFormat.number,
+                    jsonKey: 'rowspan',
                   },
                   {
                     key: ConfigKey.property_tableColSpan,
                     description: 'Number of columns the cell spans.',
                     format: TagFormat.number,
+                    jsonKey: 'colspan',
                   },
                   {
                     key: ConfigKey.property_tableScope,
                     description: 'Scope attribute for header cells.',
                     format: TagFormat.plainText,
+                    jsonKey: 'scope',
                   },
                 ],
                 repeatCount: Count.infinity,
@@ -741,11 +744,12 @@ const CARDSETS: _CardSetsConfig = {
       {
         name: 'default',
         isDefault: true,
-        jsonKey: 'tableExtended.body.rows',
+        jsonKey: 'table.body.rows',
         sides: [
           {
             name: 'cell',
             repeat: true,
+            jsonKey: 'cells',
             variants: [
               {
                 jsonKey: 'content',
@@ -762,21 +766,25 @@ const CARDSETS: _CardSetsConfig = {
                     key: ConfigKey.property_tableCellType,
                     description: 'Table cell type (th/td).',
                     format: TagFormat.plainText,
+                    jsonKey: 'title|bool(th)',
                   },
                   {
                     key: ConfigKey.property_tableRowSpan,
                     description: 'Number of rows the cell spans.',
                     format: TagFormat.number,
+                    jsonKey: 'rowspan',
                   },
                   {
                     key: ConfigKey.property_tableColSpan,
                     description: 'Number of columns the cell spans.',
                     format: TagFormat.number,
+                    jsonKey: 'colspan',
                   },
                   {
                     key: ConfigKey.property_tableScope,
                     description: 'Scope attribute for header cells.',
                     format: TagFormat.plainText,
+                    jsonKey: 'scope',
                   },
                 ],
                 repeatCount: Count.infinity,
@@ -787,11 +795,12 @@ const CARDSETS: _CardSetsConfig = {
       },
       {
         name: 'table-header',
-        jsonKey: 'tableExtended.header.rows',
+        jsonKey: 'table.header.rows',
         sides: [
           {
             name: 'cell',
             repeat: true,
+            jsonKey: 'cells',
             variants: [
               {
                 jsonKey: 'content',
@@ -808,21 +817,25 @@ const CARDSETS: _CardSetsConfig = {
                     key: ConfigKey.property_tableCellType,
                     description: 'Table cell type (th/td).',
                     format: TagFormat.plainText,
+                    jsonKey: 'title|bool(th)',
                   },
                   {
                     key: ConfigKey.property_tableRowSpan,
                     description: 'Number of rows the cell spans.',
                     format: TagFormat.number,
+                    jsonKey: 'rowspan',
                   },
                   {
                     key: ConfigKey.property_tableColSpan,
                     description: 'Number of columns the cell spans.',
                     format: TagFormat.number,
+                    jsonKey: 'colspan',
                   },
                   {
                     key: ConfigKey.property_tableScope,
                     description: 'Scope attribute for header cells.',
                     format: TagFormat.plainText,
+                    jsonKey: 'scope',
                   },
                 ],
                 repeatCount: Count.infinity,
@@ -833,11 +846,12 @@ const CARDSETS: _CardSetsConfig = {
       },
       {
         name: 'table-footer',
-        jsonKey: 'tableExtended.footer.rows',
+        jsonKey: 'table.footer.rows',
         sides: [
           {
             name: 'cell',
             repeat: true,
+            jsonKey: 'cells',
             variants: [
               {
                 jsonKey: 'content',
@@ -854,21 +868,25 @@ const CARDSETS: _CardSetsConfig = {
                     key: ConfigKey.property_tableCellType,
                     description: 'Table cell type (th/td).',
                     format: TagFormat.plainText,
+                    jsonKey: 'title|bool(th)',
                   },
                   {
                     key: ConfigKey.property_tableRowSpan,
                     description: 'Number of rows the cell spans.',
                     format: TagFormat.number,
+                    jsonKey: 'rowspan',
                   },
                   {
                     key: ConfigKey.property_tableColSpan,
                     description: 'Number of columns the cell spans.',
                     format: TagFormat.number,
+                    jsonKey: 'colspan',
                   },
                   {
                     key: ConfigKey.property_tableScope,
                     description: 'Scope attribute for header cells.',
                     format: TagFormat.plainText,
+                    jsonKey: 'scope',
                   },
                 ],
                 repeatCount: Count.infinity,
@@ -889,7 +907,6 @@ const CARDSETS: _CardSetsConfig = {
         name: 'default',
         isDefault: true,
         jsonKey: 'pronunciationTable.data',
-        itemType: 'array',
         sides: [
           {
             name: 'cell',
