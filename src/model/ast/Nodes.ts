@@ -186,6 +186,7 @@ export interface Bit {
   tablePagination?: Property;
   tablePaginationLimit?: Property;
   tableHeight?: Property;
+  tablePreferImage?: Property;
   tableWhitespaceNoWrap?: Property;
   tableAutoWidth?: Property;
   tableResizableColumns?: Property;

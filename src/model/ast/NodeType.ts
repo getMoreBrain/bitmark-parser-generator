@@ -632,6 +632,8 @@ const NodeType = {
   tablePaginationLimit: 'tablePaginationLimit',
   tablePaginationLimitValue: 'tablePaginationLimitValue',
   tablePaginationValue: 'tablePaginationValue',
+  tablePreferImage: 'tablePreferImage',
+  tablePreferImageValue: 'tablePreferImageValue',
   tableResizableColumns: 'tableResizableColumns',
   tableResizableColumnsValue: 'tableResizableColumnsValue',
   tableSearch: 'tableSearch',

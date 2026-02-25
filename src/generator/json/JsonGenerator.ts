@@ -1772,6 +1772,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.tableWhitespaceNoWrap == null) bitJson.tableWhitespaceNoWrap = false;
         if (bitJson.tableAutoWidth == null) bitJson.tableAutoWidth = true;
         if (bitJson.tableResizableColumns == null) bitJson.tableResizableColumns = false;
+        if (bitJson.tablePreferImage == null) bitJson.tablePreferImage = false;
         if (bitJson.tableColumnMinWidth == null) bitJson.tableColumnMinWidth = 0;
         //
       }

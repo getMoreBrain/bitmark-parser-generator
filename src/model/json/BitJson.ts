@@ -141,6 +141,7 @@ export interface BitJson {
   tableWhitespaceNoWrap: boolean;
   tableAutoWidth: boolean;
   tableResizableColumns: boolean;
+  tablePreferImage: boolean;
   tableColumnMinWidth: number;
   quizCountItems: boolean;
   quizStrikethroughSolutions: boolean;

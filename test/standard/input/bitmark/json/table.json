@@ -139,6 +139,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -598,6 +599,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -1113,6 +1115,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -1136,6 +1139,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": false,
       "tableResizableColumns": true,
+      "tablePreferImage": true,
       "caption": [
         {
           "type": "paragraph",
@@ -1281,7 +1285,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.table]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n[@tablePaginationLimit:42]\n[@tableHeight:99]\n[@tableWhitespaceNoWrap:false]\n[@tableAutoWidth:false]\n[@tableResizableColumns:true]\n[@caption: This is the caption ]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+    "bitmark": "[.table]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n[@tablePaginationLimit:42]\n[@tableHeight:99]\n[@tableWhitespaceNoWrap:false]\n[@tableAutoWidth:false]\n[@tableResizableColumns:true]\n[@tablePreferImage:true]\n[@caption: This is the caption ]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
   {
     "bit": {
@@ -1306,6 +1310,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -1455,7 +1460,8 @@
       "tableHeight": 0,
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
-      "tableResizableColumns": false
+      "tableResizableColumns": false,
+      "tablePreferImage": false
     },
     "parser": {
       "version": "5.1.0",
@@ -1604,6 +1610,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -1753,6 +1760,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -1902,6 +1910,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -2051,6 +2060,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -2284,6 +2294,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -2316,6 +2327,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -2339,6 +2351,7 @@
       "tableWhitespaceNoWrap": true,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0,
       "item": [],
       "lead": [],
@@ -2463,6 +2476,6 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.table:bitmark++]\n[@tableFixedHeader:false]\n[@tableSearch:false]\n[@tableSort:false]\n[@tablePagination:false]\n[@tablePaginationLimit:0]\n[@tableHeight:0]\n[@tableWhitespaceNoWrap:true]\n[@tableAutoWidth:true]\n[@tableResizableColumns:false]\n[@tableColumnMinWidth:0]\n\n\n\n====\n[#Fleischstück]\n--\n[#Schnittarten]\n--\n[#Klassische Gartechniken]\n====\n**Stotzen**\n==cuisseaud==|notranslate|\n==hindquarter==|notranslate|\n\n--\nganz\n\n--\nBraten, Glasieren"
+    "bitmark": "[.table:bitmark++]\n[@tableFixedHeader:false]\n[@tableSearch:false]\n[@tableSort:false]\n[@tablePagination:false]\n[@tablePaginationLimit:0]\n[@tableHeight:0]\n[@tableWhitespaceNoWrap:true]\n[@tableAutoWidth:true]\n[@tableResizableColumns:false]\n[@tablePreferImage:false]\n[@tableColumnMinWidth:0]\n\n\n\n====\n[#Fleischstück]\n--\n[#Schnittarten]\n--\n[#Klassische Gartechniken]\n====\n**Stotzen**\n==cuisseaud==|notranslate|\n==hindquarter==|notranslate|\n\n--\nganz\n\n--\nBraten, Glasieren"
   }
 ]

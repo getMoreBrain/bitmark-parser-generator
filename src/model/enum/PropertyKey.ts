@@ -248,6 +248,7 @@ const propertyKeys = {
   property_tableHeight: '@tableHeight',
   property_tablePagination: '@tablePagination',
   property_tablePaginationLimit: '@tablePaginationLimit',
+  property_tablePreferImage: '@tablePreferImage',
   property_tableResizableColumns: '@tableResizableColumns',
   property_tableSearch: '@tableSearch',
   property_tableSort: '@tableSort',

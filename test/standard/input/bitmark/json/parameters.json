@@ -139,6 +139,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -300,6 +301,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -323,6 +325,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": false,
       "tableResizableColumns": true,
+      "tablePreferImage": false,
       "caption": [
         {
           "type": "paragraph",
@@ -493,6 +496,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {

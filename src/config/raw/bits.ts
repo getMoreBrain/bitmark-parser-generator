@@ -5125,6 +5125,12 @@ const BITS: _BitsConfig = {
         format: TagFormat.boolean,
       },
       {
+        key: ConfigKey.property_tablePreferImage,
+        description:
+          'Prefer image for the table, used to render the image of the table instead of the bitmark',
+        format: TagFormat.boolean,
+      },
+      {
         key: ConfigKey.property_tableColumnMinWidth,
         description: 'Minimum width for table columns, used to define the minimum width of columns',
         format: TagFormat.number,

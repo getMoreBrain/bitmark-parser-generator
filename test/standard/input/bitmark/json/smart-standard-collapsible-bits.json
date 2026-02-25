@@ -1497,6 +1497,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -1646,6 +1647,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -1795,6 +1797,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -1944,6 +1947,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+      "tablePreferImage": false,
       "tableColumnMinWidth": 0
     },
     "parser": {

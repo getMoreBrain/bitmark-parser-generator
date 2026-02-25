@@ -161,6 +161,7 @@ mark@gmail.com
 [@tableWhitespaceNoWrap:false]
 [@tableAutoWidth:false]
 [@tableResizableColumns:true]
+[@tablePreferImage:true]
 [@caption: This is the caption ]
 ====
 [#Name]
@@ -370,6 +371,7 @@ mark@gmail.com
 [@tableWhitespaceNoWrap:true]
 [@tableAutoWidth:true]
 [@tableResizableColumns:false]
+[@tablePreferImage:false]
 [@tableColumnMinWidth:0]
 
 

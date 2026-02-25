@@ -260,6 +260,7 @@ class Builder extends BaseBuilder {
       tableWhitespaceNoWrap?: boolean;
       tableAutoWidth?: boolean;
       tableResizableColumns?: boolean;
+      tablePreferImage?: boolean;
       tableColumnMinWidth?: number;
       quizCountItems?: boolean;
       quizStrikethroughSolutions?: boolean;
@@ -1001,6 +1002,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_tableResizableColumns,
         data.tableResizableColumns,
+        options,
+      ),
+      tablePreferImage: this.toAstProperty(
+        bitType,
+        ConfigKey.property_tablePreferImage,
+        data.tablePreferImage,
         options,
       ),
       tableColumnMinWidth: this.toAstProperty(
