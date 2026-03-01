@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.11.0
+Version: 5.13.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -238,7 +238,8 @@ example-collapsible (since: 1.21.0)
 example-list (since: 1.4.13)
 extractor-ai-chat (since: 3.19.0)
 extractor-block (since: 1.5.16)
-extractor-blueprint-configuration (since: 5.8.0)
+extractor-blueprint (since: 5.12.0)
+extractor-blueprint-configuration (since: 5.11.0)
 extractor-configuration (since: 1.7.1)
 extractor-image (since: 4.3.0)
 extractor-image-collapsible (since: 4.3.0)
@@ -422,6 +423,7 @@ page-open-book (since: 1.5.10)
 page-open-book-list (since: 2.1.0)
 print-book (since: 5.5.0)
 open-book-chapter (since: 4.16.0)
+open-book-chapter-teaser (since: 4.16.0)
 page-person (since: 1.5.16)
 page-product (since: 1.4.17)
 page-product-list (since: 1.4.17)
@@ -585,6 +587,7 @@ survey-rating-once (since: 1.6.0)
 table (since: 1.5.19)
 table-alt (since: 1.16.0)
 table-extended (since: 4.14.0)
+table-extended-image (since: 5.13.0)
 table-image (since: 1.5.15)
 table-image-alt (since: 1.16.0)
 take-picture (since: 1.3.0)

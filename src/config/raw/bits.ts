@@ -5138,7 +5138,7 @@ const BITS: _BitsConfig = {
     description: 'Extended table bit, used to create complex tables with all HTML table features',
   },
   [BitType.tableExtendedImage]: {
-    since: '4.14.0',
+    since: '5.13.0',
     baseBitType: BitType.tableExtended,
     description:
       'Extended table image bit, used to create complex tables with images and all HTML table features',
