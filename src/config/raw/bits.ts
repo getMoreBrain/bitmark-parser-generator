@@ -5137,6 +5137,40 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.table,
     description: 'Extended table bit, used to create complex tables with all HTML table features',
   },
+  [BitType.tableExtendedImage]: {
+    since: '4.14.0',
+    baseBitType: BitType.tableExtended,
+    description:
+      'Extended table image bit, used to create complex tables with images and all HTML table features',
+    tags: [
+      {
+        key: ConfigKey.property_caption,
+        description: 'Caption for the table image, used to provide a description for the image',
+        format: TagFormat.bitmarkText,
+      },
+      {
+        key: ConfigKey.resource_backgroundWallpaper,
+        description: 'Background wallpaper for the image, used to set a background for the image',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common resource image tags for images',
+          },
+        ],
+      },
+      {
+        key: ConfigKey.group_resourceBitTags,
+        description:
+          'Resource bit tags for images, used to define additional properties for images',
+      },
+      {
+        key: ConfigKey.group_resourceImage,
+        description: 'Resource image tags for images, used to attach images to the bit',
+        minCount: 1,
+      },
+    ],
+    resourceAttachmentAllowed: false,
+  },
   [BitType.tableAlt]: {
     since: '1.16.0',
     baseBitType: BitType.table,

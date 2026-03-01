@@ -1,0 +1,766 @@
+[
+  {
+    "bit": {
+      "type": "table-extended-image",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "caption": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Sample Quarterly Summary",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "header": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Region",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "rowspan": 2,
+                  "scope": "col"
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Area",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "rowspan": 2,
+                  "scope": "col"
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Q1",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "colspan": 3,
+                  "scope": "colgroup"
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Total",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "rowspan": 2,
+                  "scope": "col"
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Jan",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "scope": "col"
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Feb",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "scope": "col"
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Mar",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "scope": "col"
+                }
+              ]
+            }
+          ]
+        },
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "West",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "rowspan": 2,
+                  "scope": "row"
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Coastal",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "10",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "12",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "11",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "33",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Inland",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "8",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "9",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "7",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "24",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "North",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "scope": "row"
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "(all)",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "14",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "13",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "12",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "39",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "South",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "scope": "row"
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "(all)",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "6",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "7",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "8",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "21",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "footer": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Grand total",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "colspan": 5,
+                  "scope": "row"
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "117",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Note: values are example numbers.",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "colspan": 6
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.table-extended-image]\n[@caption:Sample Quarterly Summary]\n\n==== table-header ====\n[@tableRowSpan:2]\n[@tableScope:col]\nRegion\n--\n[@tableRowSpan:2]\n[@tableScope:col]\nArea\n--\n[@tableColSpan:3]\n[@tableScope:colgroup]\nQ1\n--\n[@tableRowSpan:2]\n[@tableScope:col]\nTotal\n\n==== table-header ====\n[@tableScope:col]\nJan\n--\n[@tableScope:col]\nFeb\n--\n[@tableScope:col]\nMar\n\n====\n[@tableCellType:th]\n[@tableRowSpan:2]\n[@tableScope:row]\nWest\n--\nCoastal\n--\n10\n--\n12\n--\n11\n--\n33\n\n====\nInland\n--\n8\n--\n9\n--\n7\n--\n24\n\n====\n[@tableCellType:th]\n[@tableScope:row]\nNorth\n--\n(all)\n--\n14\n--\n13\n--\n12\n--\n39\n\n====\n[@tableCellType:th]\n[@tableScope:row]\nSouth\n--\n(all)\n--\n6\n--\n7\n--\n8\n--\n21\n\n==== table-footer ====\n[@tableCellType:th]\n[@tableColSpan:5]\n[@tableScope:row]\nGrand total\n--\n117\n\n==== table-footer ====\n[@tableColSpan:6]\nNote: values are example numbers.\n\n===="
+  },
+  {
+    "bit": {
+      "type": "table-extended-image",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "tableFixedHeader": true,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "header": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Name",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Email",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Phone Number",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true
+                }
+              ]
+            }
+          ]
+        },
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "John",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "john@example.com",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "(353) 01 222 3333",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Mark",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "mark@gmail.com",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "(01) 22 888 4444",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.table-extended-image]\n[@tableFixedHeader:true]\n[@tableHeaderWhitespaceNoWrap:false]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  }
+]
