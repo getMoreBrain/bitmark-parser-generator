@@ -287,6 +287,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     textLocation: TextLocationType,
     options?: GenerateOptions,
   ): BreakscapedString {
+    // Sanity check
+    if (!ast || !Array.isArray(ast)) return '' as BreakscapedString;
+
     this.generateOptions = Object.assign({}, options);
 
     this.validateGenerateOptions(ast);

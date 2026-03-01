@@ -598,6 +598,7 @@ const BitType = {
   table: 'table',
   tableAlt: 'table-alt',
   tableExtended: 'table-extended',
+  tableExtendedImage: 'table-extended-image',
   tableImage: 'table-image',
   tableImageAlt: 'table-image-alt',
   takePicture: 'take-picture',
