@@ -81,6 +81,16 @@ const BITS: _BitsConfig = {
     ],
     resourceAttachmentAllowed: false,
   },
+  [BitType.appRag]: {
+    since: '1.3.0',
+    baseBitType: BitType.article,
+    description: 'App RAG (Retrieval-Augmented Generation) bit, equal to article',
+  },
+  [BitType.appSearch]: {
+    since: '1.3.0',
+    baseBitType: BitType.article,
+    description: 'App search bit, equal to article',
+  },
   [BitType.author]: {
     since: '4.2.0',
     baseBitType: BitType._standard,

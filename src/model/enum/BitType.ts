@@ -37,6 +37,8 @@ const BitType = {
   appFlashcardsQuiz: 'app-flashcards-quiz',
   appGetScreenshot: 'app-get-screenshot',
   appLink: 'app-link',
+  appRag: 'app-rag',
+  appSearch: 'app-search',
   article: 'article',
   articleAi: 'article-ai',
   articleAlt: 'article-alt',

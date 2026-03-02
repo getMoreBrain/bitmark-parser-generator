@@ -1,0 +1,7 @@
+[.app-search:bitmark++]
+
+This is an app-search bit with some content.
+
+[.app-search:bitmark--]
+
+This is an app-search bit with some content in bitmark-- format.
