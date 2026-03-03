@@ -82,12 +82,12 @@ const BITS: _BitsConfig = {
     resourceAttachmentAllowed: false,
   },
   [BitType.appRag]: {
-    since: '1.3.0',
+    since: '5.14.0',
     baseBitType: BitType.article,
     description: 'App RAG (Retrieval-Augmented Generation) bit, equal to article',
   },
   [BitType.appSearch]: {
-    since: '1.3.0',
+    since: '5.14.0',
     baseBitType: BitType.article,
     description: 'App search bit, equal to article',
   },
