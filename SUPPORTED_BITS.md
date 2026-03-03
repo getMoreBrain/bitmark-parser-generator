@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.13.0
+Version: 5.14.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -37,6 +37,8 @@ app-flashcards-learn (since: 1.3.0)
 app-flashcards-quiz (since: 1.3.0)
 app-get-screenshot (since: 1.3.0)
 app-link (since: 1.3.0)
+app-rag (since: 5.14.0)
+app-search (since: 5.14.0)
 article (since: 1.3.0)
 article-ai (since: 1.3.0)
 article-alt (since: 1.15.0)
