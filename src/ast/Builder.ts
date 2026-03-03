@@ -198,6 +198,7 @@ class Builder extends BaseBuilder {
       bookDiff?: string;
       coverImage?: string | string[] | Partial<ImageResourceWrapperJson>;
       coverColor?: string;
+      backgroundImage?: string | string[] | Partial<ImageResourceWrapperJson>;
       publications?: string | string[];
       relatedBook?: string | string[];
       translationOfBook?: string;
@@ -726,6 +727,15 @@ class Builder extends BaseBuilder {
         data.coverColor,
         options,
       ),
+      backgroundImage:
+        typeof data.backgroundImage === 'string' || Array.isArray(data.backgroundImage)
+          ? this.toAstProperty(
+              bitType,
+              ConfigKey.property_backgroundImage,
+              ArrayUtils.asArray(data.backgroundImage),
+              options,
+            )
+          : this.toImageResource(context, data.backgroundImage),
       publications: this.toAstProperty(
         bitType,
         ConfigKey.property_publications,

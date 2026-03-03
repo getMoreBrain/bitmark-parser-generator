@@ -35,6 +35,7 @@ const resourceKeys = {
   resource_previewImage: '&previewImage',
   resource_previewVideo: '&previewVideo',
   resource_coverImage: '&coverImage',
+  resource_backgroundImage: '&backgroundImage',
 } as const;
 
 const ResourceKey = resourceKeys;
