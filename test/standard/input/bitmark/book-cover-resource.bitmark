@@ -2,6 +2,7 @@
 [@id:book-resource-123]
 [#Book with Resource CoverImage]
 [&coverImage:https://docs.bitmark.cloud/bit-books/test/cover-resource.png]
+[&backgroundImage:https://docs.bitmark.cloud/bit-books/test/background-resource.png]
 
 [.article:bitmark++]
 [@id:article-123]
