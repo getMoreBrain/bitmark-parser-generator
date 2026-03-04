@@ -127,6 +127,7 @@ export interface Bit {
   bookDiff?: Property;
   coverImage?: Property | ImageResourceWrapperJson;
   coverColor?: Property;
+  backgroundImage?: Property | ImageResourceWrapperJson;
   publications?: Property;
   relatedBook?: Property;
   translationOfBook?: Property;

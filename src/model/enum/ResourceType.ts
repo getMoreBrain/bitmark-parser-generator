@@ -41,6 +41,7 @@ const ResourceType = {
   previewImage: 'previewImage',
   previewVideo: 'previewVideo',
   coverImage: 'coverImage',
+  backgroundImage: 'backgroundImage',
 } as const;
 
 export type ResourceTypeType = EnumType<typeof ResourceType>;

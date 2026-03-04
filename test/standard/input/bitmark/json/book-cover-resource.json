@@ -22,6 +22,23 @@
           "selected": false
         }
       },
+      "backgroundImage": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitmark.cloud",
+          "src": "https://docs.bitmark.cloud/bit-books/test/background-resource.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
       "title": [
         {
           "type": "paragraph",
@@ -56,7 +73,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.book]\n[@id:book-resource-123]\n[#Book with Resource CoverImage]\n[&coverImage:https://docs.bitmark.cloud/bit-books/test/cover-resource.png]"
+    "bitmark": "[.book]\n[@id:book-resource-123]\n[#Book with Resource CoverImage]\n[&coverImage:https://docs.bitmark.cloud/bit-books/test/cover-resource.png]\n[&backgroundImage:https://docs.bitmark.cloud/bit-books/test/background-resource.png]"
   },
   {
     "bit": {

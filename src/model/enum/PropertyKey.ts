@@ -22,6 +22,7 @@ const propertyKeys = {
   property_availableClassifications: '@availableClassifications',
   property_brandColor: '@brandColor',
   property_brandColorName: '@brandColorName',
+  property_backgroundImage: '@backgroundImage',
   property_blockId: '@blockId',
   property_book: '@book',
   property_bookAlias: '@bookAlias',
