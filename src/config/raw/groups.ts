@@ -675,6 +675,22 @@ const GROUPS: _GroupsConfig = {
         ],
       },
       {
+        key: ConfigKey.property_backgroundImage,
+        description: 'The background image(s) of the book',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
+        key: ConfigKey.resource_backgroundImage,
+        description: 'The background image of the book',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common image properties for the background image resource',
+          },
+        ],
+      },
+      {
         key: ConfigKey.property_coverColor,
         description: 'The cover color of the book',
         format: TagFormat.plainText,

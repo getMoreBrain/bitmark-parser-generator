@@ -204,7 +204,8 @@ function resourceContentProcessor(
       configKey === ConfigKey.resource_platformBackgroundImage ||
       configKey === ConfigKey.resource_previewImage ||
       configKey === ConfigKey.resource_previewVideo ||
-      configKey === ConfigKey.resource_coverImage
+      configKey === ConfigKey.resource_coverImage ||
+      configKey === ConfigKey.resource_backgroundImage
     ) {
       if (target.propertyStyleResources) {
         if (target.propertyStyleResources[resourceType]) {

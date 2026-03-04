@@ -63,6 +63,8 @@ const NodeType = {
   avatarImage: 'avatarImage',
   backgroundWallpaper: 'backgroundWallpaper',
   backgroundWallpaperValue: 'backgroundWallpaperValue',
+  backgroundImage: 'backgroundImage',
+  backgroundImageValue: 'backgroundImageValue',
   bitLevel: 'bitLevel', // bit level
   bitmarkAst: 'bitmarkAst', // bitmarkAst
   bitmarkVersion: 'bitmarkVersion',

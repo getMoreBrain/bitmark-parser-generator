@@ -2187,6 +2187,89 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     });
   }
 
+  // bitmarkAst -> bits -> bitsValue -> backgroundImage (when it's a resource object or property array)
+  protected enter_backgroundImage(node: NodeInfo, route: NodeInfo[]): boolean {
+    const value = node.value;
+
+    // Check if this is a resource (object with 'type' field and not an array) or a property array
+    if (value && typeof value === 'object' && !Array.isArray(value) && 'type' in value) {
+      // This is a resource
+      const resource = value as ResourceJson;
+
+      // This is a resource, so handle it with the common code
+      this.writeNL();
+      this.writePropertyStyleResource(node.key, resource);
+
+      // Continue traversal
+      return true;
+    }
+
+    // If it's an array (property), handle it like a property
+    if (Array.isArray(value)) {
+      // This is a property array - use the standard property handling
+      if (value == null) return true;
+
+      // Ignore any property that is not at the bit level
+      const parent = this.getParentNode(route);
+      if (parent?.key !== NodeType.bitsValue) return true;
+
+      const bitType = this.getBitType(route);
+      if (!bitType) return true;
+
+      const config = Config.getBitConfig(bitType);
+      const propertyConfig = Config.getTagConfigForTag(
+        config.tags,
+        ConfigKey.property_backgroundImage,
+      ) as PropertyTagConfig | undefined;
+      if (!propertyConfig) return true;
+
+      // Write the property
+      this.writeNL_IfNotChain(route); // Only if NOT in chain
+      this.writeProperty(propertyConfig.tag, value, route, {
+        format: propertyConfig.format ?? TagFormat.plainText,
+        array: propertyConfig.array ?? false,
+        writeEmpty: true,
+        ignoreFalse: propertyConfig.defaultValue === 'false',
+        ignoreTrue: propertyConfig.defaultValue === 'true',
+      });
+    }
+
+    // Continue traversal
+    return true;
+  }
+
+  // bitmarkAst -> bits -> bitsValue -> backgroundImage (when it's a property string)
+  // This is called when backgroundImage is a simple string value
+  protected leaf_backgroundImage(node: NodeInfo, route: NodeInfo[]): void {
+    // This is a property - use the standard property handling
+    const value = node.value;
+    if (value == null) return;
+
+    // Ignore any property that is not at the bit level as that will be handled by a different handler
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return;
+
+    const bitType = this.getBitType(route);
+    if (!bitType) return;
+
+    const config = Config.getBitConfig(bitType);
+    const propertyConfig = Config.getTagConfigForTag(
+      config.tags,
+      ConfigKey.property_backgroundImage,
+    ) as PropertyTagConfig | undefined;
+    if (!propertyConfig) return;
+
+    // Write the property
+    this.writeNL_IfNotChain(route); // Only if NOT in chain
+    this.writeProperty(propertyConfig.tag, node.value, route, {
+      format: propertyConfig.format ?? TagFormat.plainText,
+      array: propertyConfig.array ?? false,
+      writeEmpty: true,
+      ignoreFalse: propertyConfig.defaultValue === 'false',
+      ignoreTrue: propertyConfig.defaultValue === 'true',
+    });
+  }
+
   protected exit_imagePlaceholder(_node: NodeInfo, _route: NodeInfo[]): void {
     // this.writeNL();
   }
