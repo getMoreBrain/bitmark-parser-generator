@@ -4,7 +4,7 @@ export { Ast } from './ast/Ast.ts';
 export { Builder } from './ast/Builder.ts';
 export { ResourceBuilder } from './ast/ResourceBuilder.ts';
 export { StringWriter } from './ast/writer/StringWriter.ts';
-export { BitmarkParserGenerator, Input, Output } from './BitmarkParserGenerator.ts';
+export { BitmarkParserGenerator, Input, InputFormat, Output } from './BitmarkParserGenerator.ts';
 export { BitmarkGenerator } from './generator/bitmark/BitmarkGenerator.ts';
 export { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator.ts';
 export { JsonGenerator } from './generator/json/JsonGenerator.ts';
@@ -66,6 +66,7 @@ export type {
   ConvertTextOptions,
   CreateAstOptions,
   InfoOptions,
+  InputFormatType,
   InputType,
   OutputType,
   UpgradeOptions as PrettifyOptions,

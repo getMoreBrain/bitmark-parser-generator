@@ -49,6 +49,7 @@
   ],
   "scripts": {
     "init": "tsx scripts/init.ts",
+    "cli": "tsx ./src/cli/launcher.ts",
     "start": "npm run start-parser",
     "start-info": "tsx ./test/custom/dev/devInfo.ts",
     "start-generate-config": "tsx ./test/custom/dev/devGenerateConfig.ts",

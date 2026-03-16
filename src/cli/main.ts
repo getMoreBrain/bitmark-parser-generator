@@ -5,6 +5,7 @@ import { Command, Help, Option } from 'commander';
 import { createBreakscapeCommand } from './commands/breakscape.ts';
 import { createConvertCommand } from './commands/convert.ts';
 import { createConvertTextCommand } from './commands/convertText.ts';
+import { createExtractPlainTextCommand } from './commands/extractPlainText.ts';
 import { createInfoCommand } from './commands/info.ts';
 import { createUnbreakscapeCommand } from './commands/unbreakscape.ts';
 import { FULL_VERSION } from './utils/version.ts';
@@ -47,6 +48,7 @@ async function asyncInit(): Promise<void> {
   // Register commands
   program.addCommand(createConvertCommand());
   program.addCommand(createConvertTextCommand());
+  program.addCommand(createExtractPlainTextCommand());
   program.addCommand(createBreakscapeCommand());
   program.addCommand(createUnbreakscapeCommand());
   program.addCommand(createInfoCommand());
