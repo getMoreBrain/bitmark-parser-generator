@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-parser-generator",
-  "version": "5.15.0",
+  "version": "5.16.0",
   "description": "A bitmark parser and generator using Peggy.js",
   "author": "Get More Brain Ltd",
   "license": "ISC",
@@ -49,6 +49,7 @@
   ],
   "scripts": {
     "init": "tsx scripts/init.ts",
+    "cli": "tsx ./src/cli/launcher.ts",
     "build": "npm run clean && npm run init && npm run build-grammar-bit && npm run build-grammar-text && npm run check && tsup && npm run build-browser && npm run build-supported-info",
     "build-browser": "webpack -c ./webpack.config.cjs",
     "build-doc": "typedoc",

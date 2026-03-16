@@ -163,6 +163,7 @@ export type GenerateOptions = {
   plainTextDividerAllowed?: boolean;
   noBreakscaping?: boolean;
   forceInline?: boolean;
+  noMarkup?: boolean;
 };
 
 const Stage = {
