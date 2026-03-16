@@ -1,0 +1,39 @@
+Here we are testing the inline tag
+
+Here is some inline 'c' code int test=0;, nice huh?
+
+Here is some inline 'plain text' code int test=0;, nice huh?
+
+Here is some inline 'colour' applied **Bold is ignored**, nice huh?
+
+Here is some inline 'style' applied ^Breakscape^!, nice huh?
+
+Here is some inline 'style' applied here is the text, nice huh?
+
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+Here is some inline 'style' applied here is the text, nice huh?
+
+Here is some inline 'style' applied here is the text, nice huh?

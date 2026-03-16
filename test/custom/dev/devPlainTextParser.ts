@@ -11,14 +11,13 @@ import { fileURLToPath } from 'node:url';
 
 import fs from 'fs-extra';
 
-import { BitmarkParserGenerator, Output } from '../../../src/BitmarkParserGenerator.ts';
-import { BitmarkVersion } from '../../../src/model/enum/BitmarkVersion.ts';
+import { BitmarkParserGenerator } from '../../../src/BitmarkParserGenerator.ts';
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const bitmarkParserGenerator = new BitmarkParserGenerator();
 
-class DevPlainTextParser {
+class DevExtractPlainText {
   async test(_debug?: boolean): Promise<void> {
     const filename = path.resolve(dirname, '../../..', 'assets', 'test.text');
 
@@ -26,19 +25,14 @@ class DevPlainTextParser {
       encoding: 'utf8',
     });
 
-    const res = bitmarkParserGenerator.bitmarkTextToPlainText(str, {
-      // bitmarkVersion: BitmarkVersion.v2,
-      bitmarkVersion: BitmarkVersion.v3,
-      outputFormat: Output.text,
-      jsonOptions: {
-        prettify: true,
-      },
+    const res = bitmarkParserGenerator.extractPlainText(str, {
+      //
     });
     console.log(res);
   }
 }
 
-const parser = new DevPlainTextParser();
+const parser = new DevExtractPlainText();
 
 void parser.test(true).then(() => {
   // Done

@@ -43,7 +43,7 @@ import { Breakscape } from './breakscaping/Breakscape.ts';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator.ts';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator.ts';
 import { PlainTextGenerator } from './generator/plainText/PlainTextGenerator.ts';
-import { bitmarkTextParse, BitType, type BitWrapperJson, type TextAst } from './index.ts';
+import { BitType, type BitWrapperJson, type TextAst } from './index.ts';
 import { ConfigBuilder } from './info/ConfigBuilder.ts';
 import { type BreakscapedString } from './model/ast/BreakscapedString.ts';
 import type { _BitConfig, _GroupsConfig } from './model/config/_Config.ts';

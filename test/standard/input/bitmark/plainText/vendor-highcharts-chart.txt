@@ -1,0 +1,13 @@
+298225
+item 1
+This is my first chart bit with a JSON body
+298225
+item 1
+item 2
+this is a json bit
+298225
+item 1
+This is my first chart bit with a JSON body
+298225
+item 1
+This is my first chart bit with a JSON body

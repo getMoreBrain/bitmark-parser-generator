@@ -1,0 +1,8 @@
+This is some ITALIC text
+
+There are multiple lines, and some stars but nothing else _particularly exciting_
+
+Or perhaps nothing very exciting? It really depends on your point of view ;)
+
+** ITALIC **
+ ITALIC

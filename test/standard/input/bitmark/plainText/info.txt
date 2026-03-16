@@ -1,0 +1,7 @@
+287895
+Assignment is very close to an article https://docs.bitmark.cloud/quizzes/#article. The difference is, that this is a "quiz" and therefore has an instruction property. The distinction is important for display, sharing, ...
+287886
+Simple true/false image quiz
+151971
+marginNumber
+The bit content

@@ -1,0 +1,11 @@
+Some text on the previous text
+• Test link in a list 2
+  • Entgelt Some
+text on the previous text
+==Some text==|extref:| with empty extreference and no provider, will not match
+
+==Some text==|exyref:this is an extreference|►this is a reference|provider:must be set| on the previous text
+• Test link in a list 2
+  • Entgelt Some
+text on the previous text
+Some text with empty extreference and empty provider

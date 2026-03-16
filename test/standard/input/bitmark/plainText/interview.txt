@@ -1,0 +1,101 @@
+198779
+1
+Erklären Sie den Begriff „Steuerüberwälzung“.
+Additional solution 1
+Additional solution 2
+Additional solution 3
+136528
+Tag 1
+Tag 2
+**Tag 3**
+3a
+Wählen Sie eine Person auf den Fotos in Aufgabe 2. Schreiben Sie einen kurzen Text in Ihrer Rolle und beantworten Sie die Fragen.
+Warum bist du hier? Wie fühlst du dich? Was denkst du gerade?
+Nothing here
+198779
+Tag 1
+Tag 2
+1
+Erklären Sie den Begriff „Steuerüberwälzung“.
+198781
+3
+Mit welchen Steuern (bspw. Einkommenssteuer, Vermögenssteuer, Mehrwertsteuer, Erbschaftssteuer usw.) sind die einzelnen Ereignisse konfrontiert?
+Anton erhält von seinen Eltern (Variante: von seinem Onkel, seiner Tante) einen Erbvorbezug (Variante: eine Schenkung) von Fr. 200'000. Er macht sich nach seiner abgeschlossenen Ausbildung als Finanzplaner selbständig. Zwei Jahre später heiratet er seine langjährige Freundin Barbara und ein weiteres Jahr darauf wird die Tochter Clara geboren. Sie kaufen sich ein schönes Haus, müssen sich dazu aber einen Teil ihrer Säule 2 auszahlen lassen. Das Einzelunternehmen von Anton entwickelt sich gut und er beschäftigt bereits einige Angestellte. Aus verschiedenen Gründen (Haftung, Mitarbeiterbeteiligung, ggf. steuerliche Überlegungen) möchte Anton eine Aktiengesellschaft gründen und gleichzeitig seine Frau Barbara mitbeteiligen, welche Betriebsökonomin ist und ihn damit auch beruflich sehr gut ergänzt. Anton und Barbara beziehen  aus der Aktiengesellschaft ein regelmässiges Einkommen, schütten sich aber keine Dividende aus. Einige Jahre darauf entschliessen sie sich ein Mitarbeiteraktienmodell einzurichten. Ab diesem Zeitpunkt wird jährlich auch eine Dividende ausgeschüttet. Für die Mitarbeiterbeteiligung hält die Aktiengesellschaft eigene Aktien. Die Aktiengesellschaft hat ein gutes Wachstum und Anton und Barbara entschliessen sich, mit ihrem Unternehmen in einen grösseren Markt zu ziehen. Sie wechseln mit der Aktiengesellschaft den Kanton, behalten aber ihr Haus und vermieten es.
+
+Die Geschichte von Anton und Barbara, ihrer Tochter Clara und der Aktiengesellschaft liesse sich beliebig fortsetzen. Sie zeigt aber bereits jetzt schon anschaulich, wie alltägliche Ereignisse praktisch immer auch mit irgendwelchen Steuern im Zusammenhang stehen.
+
+Dabei sind Mehrfachnennungen von verschiedenen Steuern bei einzelnen Ereignissen möglich. Die nachstehende Tabelle soll der einfacheren Erfassung dienen.
+Ereignis Steuern
+Ereignis Steuern
+Ereignis Steuern
+Selbständigkeit
+Wechsel bei der Einkommenssteuer von unselbständig zu selbständig, u.a. Buchwertprinzip.
+Ereignis Steuern
+Ereignis Steuern
+Ereignis Steuern
+Ereignis Steuern
+Ereignis Steuern
+Ereignis Steuern
+Ereignis Steuern
+Ereignis Steuern
+198782
+4
+Geben Sie eine Definition für öffentliche Abgaben und für Steuern.
+187612
+12
+Datum / Unterschriften
+Dieser Bildungsbericht wurde am
+besprochen.
+Unterschrift der verantwortlichen Berufsbildnerin / des verantwortlichen Berufsbildners:
+Unterschrift der lernenden Person:
+Visum des gesetzlichen Vertreters / der gesetzlichen Vertreterin:
+Datum:
+Unterschrift:
+136484
+9
+Die beiden U-förmigen Teile A und B, die aus je 7 Würfeln bestehen, werden zu einer Gesamtfigur zusammengesetzt, wie es angegeben ist.
+Von wie vielen Würfeln der Gesamtfigur sind genau drei Seitenflächen (Quadrate) sichtbar?
+a
+Wie viele Quadrate der Figur A werden beim Zusammenfügen mit der Figur B verdeckt?
+b
+Wie viele Quadrate der Gesamtfigur sind von aussen sichtbar?
+c
+Auf der Gesamtfigur wandert man entlang von Würfelkanten vom Punkt P auf A zum Punkt Q auf B. Wie lange ist eine solcher Weg mindestens?
+d
+136405
+Persönliche Angaben
+Name:
+Vorname:
+Prüfungsnummer:
+Kantonsschule:
+198264
+Aufgaben:
+Beurteilen Sie, ob sich die Geschwister im MWST-Register der ESTV eintragen lassen
+müssen? Begründen Sie Ihre Antwort mit Hinweis auf das MWSTG.
+Erstellen Sie die MWST-Abrechnung (davon ausgehend, dass die Geschwister unabhängig Ihrer Antwort in Aufgabe 1 registriert sind) für die Baute. Der Einfachheit halber erstellen Sie nur eine Abrechnung über das gesamte Bauwerk (keine Quartalsabrechnungen).
+198267
+Aufgabe 4
+Nutzungsänderung
+Die Produktion AG wurde 2010 gegründet und hat zu diesem Zeitpunkt folgende zwei Liegenschaften erstellt:
+• Produktionsgebäude mit Lagerhalle, welches vollumfänglich für unternehmerische Tätigkeiten verwendet wird,
+• Verwaltungsgebäude, welches zu 50 % für die eigene Tätigkeit verwendet wird; die übrige Fläche – zwei Wohnungen – werden an Privatpersonen vermietet.
+Die Investitionen für die Liegenschaften beliefen sich 2010 auf folgende Werte inkl. 7,60 % MWST:
+• Produktionsgebäude                 CHF 4'842'000 (inkl. 7,60% MWST)
+• Verwaltungsgebäude inkl. Wohnungen CHF 5'380'000 (inkl. 7,60% MWST)
+• Landanteil für beide Gebäude       CHF 1'800'000
+Im Geschäftsjahr 2017 wurden infolge Wasserschadens das Verwaltungsgebäude saniert werden. Die Sanierungskosten haben sich auf 648'000 inkl. 8.0% MWST belaufen. Der Gebäudeversicherungswert hat zu diesem Zeitpunkt (vor Sanierung) CHF 6'000'000 betragen.
+
+Nachdem die Gesellschaft in letzter Zeit massive Verluste erlitten hat, wurde vom Verwaltungsrat im Rahmen einer Sanierung beschlossen, die beiden Liegenschaften zu veräussern. Die Immo Invest AG ist bereit, die Grundstücke auf den 30. Juni 2021 wie folgt zu erwerben:
+• Produktionsgebäude: CHF 6'500'000 (inkl. Land CHF 1'000'000)
+• Verwaltungsgebäude: CHF 7'500'000 (inkl. Land CHF 1'400'000)
+Der öffentlich beurkundete Kaufvertrag wurde am 20. Juli 2021 unterzeichnet.
+
+Zeigen Sie die mehrwertsteuerlichen Konsequenzen aus der Veräusserung der Grundstücke für jeder der drei folgenden Varianten auf:
+Variante 1: Verkauf gemäss Art. 21 MWSTG
+Variante 2: Verkauf mit Option gemäss Art. 22 MWSTG
+Variante 3: Verkauf mittels Meldeverfahren gemäss Art. 38 MWSTG.
+Hello World!
+
+Card 1 with image
+
+Card 2

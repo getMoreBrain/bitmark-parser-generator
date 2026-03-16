@@ -1,0 +1,149 @@
+hint
+Article 2
+[!NOT an instruction]
+
+[.article]
+Article 2.1
+Article 3
+This is a multiple^ [_gap]  with a separate gap
+with  case sensitivity. There is even a gap which inherits the default
+case 
+hint
+This is a multiple^ [_gap]  with a separate gap
+hint
+hint
+12345
+1
+My first config in TOML
+[%${1}][%][%${originalPageNo}][%]
+[#${2}]
+12345
+1
+My first config in TOML
+ Excellent 
+This is a  :)
+
+
+^Testing123^^
+
+$$$$
+**Excellent**
+12345
+1
+My first config in TOML
+12345
+1
+My first config in TOML
+$$$$
+
+
+This is NOT pre!
+[!My first config in TOML]
+This IS pre!
+12345
+1
+My first config in TOML
+$$$$
+
+
+This is NOT pre!
+$$$$
+
+This IS NOT pre!!
+
+[!My first config in TOML]
+This IS pre!!!
+12345
+1
+My first config in TOML
+[%${1}][%][%${originalPageNo}][%]
+[#${2}]
+12345
+1
+My first config in TOML
+ Excellent 
+This is a  :)
+
+
+^Testing123^^
+
+==== text ====
+**Excellent**
+12345
+1
+My first config in TOML
+12345
+1
+My first config in TOML
+==== text ====
+
+
+This is NOT pre!
+[!My first config in TOML]
+This IS pre!
+12345
+1
+My first config in TOML
+==== text ====
+====text ====
+==== text====
+====text====
+
+
+This is NOT pre!
+==== text ====
+
+This IS NOT pre!!
+
+[!My first config in TOML]
+This IS pre!!!
+12345
+1
+My first config in TOML
+========
+
+This is NOT pre!!!
+instruction
+bold
+
+Absolutely **NOT** bold, just **stars**
+
+[?not hint]
+
+More text
+instruction
+bold
+italic
+
+Absolutely __NOT__ italic, just __underlines__
+
+[?not hint]
+
+More text
+test
+**bold**
+Card
+Answer
+A footer with
+Absolutely __NOT__ italic, just __underlines__
+
+[?not hint]
+
+More text
+**bold**
+Card
+Answer
+instruction
+bold
+
+This is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.
+
+[.article]
+new article
+instruction
+bold
+
+This is **pre**, but the following 1st article is NOT a new bit, the 2nd IS a new bit.
+
+[.article]
+new article

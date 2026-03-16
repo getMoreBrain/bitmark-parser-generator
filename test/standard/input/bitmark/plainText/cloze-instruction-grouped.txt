@@ -1,0 +1,28 @@
+287822
+cloze-instruction-grouped
+canvas
+Der Fußball  sich nicht nur in Deutschland besonderer Beliebtheit, er  auch in vielen anderen Ländern in der Rangliste der beliebtesten Sportarten ganz oben. ...
+107938
+5
+In einem Café fängst du ein Gespräch mit einer Studentin an. Du möchtest der Studentin ein paar Fragen stellen.
+Welches Fragewort passt? Wähl aus.
+Wähl die Wörter in der richtigen Reihenfolge aus.
+canvas
+texture
+figurative
+abstract
+contrast
+ kommen Sie?
+ wohnen Sie?
+ studieren Sie?
+ Sprachen sprechen Sie?
+1779156
+5
+IM BÜRO. Ergänzen Sie die Verben.
+1.
+a Frau Schweiker, haben Sie einen Moment Zeit? Ich  gerne über die Präsentation sprechen.
+
+a Das tut mir leid. Jetzt  ich nicht.  wir einen Termin in der nächsten Woche machen?
+
+
+a Leider nicht. Nächste Woche  ich nicht. Ich habe Urlaub. Meine Frau und ich  nach Rom fahren.

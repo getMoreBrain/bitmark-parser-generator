@@ -1,0 +1,10 @@
+This is some BOLD/ITALIC text
+
+There are multiple lines, and some stars but nothing else =particularly exciting=
+
+Or perhaps nothing very exciting? It really depends on your point of view ;)
+
+__BOLD/ITALIC__
+ BOLD/ITALIC 
+
+ BOLD/ITALIC/Comment

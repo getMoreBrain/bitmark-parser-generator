@@ -1,0 +1,3 @@
+blueprint-config-001
+1
+Blueprint extractor configuration in TOML
