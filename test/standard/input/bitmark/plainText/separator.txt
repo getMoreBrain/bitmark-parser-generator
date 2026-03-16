@@ -1,0 +1,5 @@
+92375
+This is a separator
+151971
+marginNumber
+The bit content

@@ -1,0 +1,2 @@
+This is an app-rag bit with some content.
+This is an app-rag bit with some content in bitmark-- format.

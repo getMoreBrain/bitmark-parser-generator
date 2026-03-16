@@ -1,0 +1,3 @@
+This is an article that spans across a page break.
+This article does not span a page break.
+This article has the default value (false) for spansPageBreak.

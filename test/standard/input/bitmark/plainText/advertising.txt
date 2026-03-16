@@ -1,0 +1,19 @@
+18
+120
+Some bold text,
+followed by some plain text. cloze open close cloze1 book.
+
+Some more text.
+Value2
+marginNumber
+Instruction with notranslate
+
+• List 1
+• List 2
+Bit content with notranslate
+• List 1
+• List 2
+342341
+Button Text?
+342341
+Button Text?

@@ -1,0 +1,18 @@
+1001
+The Complete Guide to Modern Web Development
+Master HTML, CSS, JavaScript, and React
+
+
+A comprehensive guide to modern web development covering all essential technologies and frameworks. Perfect for beginners and intermediate developers looking to level up their skills.
+1002
+Learning Python Programming
+Start your journey into Python programming with this beginner-friendly book.
+1003
+amazon
+barnes-noble
+bookshop
+Advanced Database Design
+Mastering SQL and NoSQL
+Deep dive into database design patterns, optimization techniques, and best practices for both SQL and NoSQL databases.
+1004
+Minimal Book Example

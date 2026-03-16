@@ -60,6 +60,17 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Plain Text",
+      "program": "${workspaceFolder}/test/custom/dev/devPlainTextParser.ts",
+      "runtimeArgs": [],
+      "console": "internalConsole",
+      "outputCapture": "std",
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Prettify",
       "program": "${workspaceFolder}/test/custom/dev/devPrettify.ts",
       "runtimeArgs": [],

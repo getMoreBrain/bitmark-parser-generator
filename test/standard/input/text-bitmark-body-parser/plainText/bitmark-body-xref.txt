@@ -1,0 +1,11 @@
+Some text on the previous text
+• Test link in a list 2
+  • Entgelt Some
+text on the previous text
+Some text with empty xreference
+
+Some text on the previous text
+• Test link in a list 2
+  • Entgelt Some
+text on the previous text
+Some text with empty xreference

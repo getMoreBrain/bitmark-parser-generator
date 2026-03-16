@@ -1,0 +1,1603 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "BitJson",
+  "title": "BitJson",
+  "description": "JSON schema for the BitJson interface and related types.",
+  "type": "object",
+  "properties": {
+    "type": { "type": "string", "description": "Bit type" },
+    "originalType": { "type": "string", "description": "Commented bit type" },
+    "bitLevel": { "type": "number" },
+    "format": { "type": "string", "description": "Bit format" },
+    "id": { "$ref": "#/$defs/stringOrStringArray" },
+    "internalComment": { "$ref": "#/$defs/stringOrStringArray" },
+    "customerId": { "type": "string" },
+    "customerExternalId": { "$ref": "#/$defs/stringOrStringArray" },
+    "externalId": { "$ref": "#/$defs/stringOrStringArray" },
+    "spaceId": { "$ref": "#/$defs/stringOrStringArray" },
+    "padletId": { "type": "string" },
+    "jupyterId": { "type": "string" },
+    "jupyterExecutionCount": { "type": "number" },
+    "sourceRL": { "type": "string" },
+    "isPublic": { "type": "boolean" },
+    "isTemplate": { "type": "boolean" },
+    "isTemplateStripTheme": { "type": "boolean" },
+    "isEditable": { "type": "boolean" },
+    "needsValidation": { "type": "boolean" },
+    "validationDate": { "type": "string" },
+    "aiGenerated": { "type": "boolean" },
+    "machineTranslated": { "type": "string" },
+    "translationOf": { "type": "string" },
+    "spansPageBreak": { "type": "boolean" },
+    "searchIndex": { "$ref": "#/$defs/stringOrStringArray" },
+    "analyticsTag": { "$ref": "#/$defs/stringOrStringArray" },
+    "categoryTag": { "$ref": "#/$defs/stringOrStringArray" },
+    "topicTag": { "$ref": "#/$defs/stringOrStringArray" },
+    "reportTag": { "$ref": "#/$defs/stringOrStringArray" },
+    "altLangTag": { "type": "string" },
+    "feedbackEngine": { "type": "string" },
+    "feedbackType": { "type": "string" },
+    "disableFeedback": { "type": "boolean" },
+    "diffOp": { "type": "string" },
+    "diffRef": { "type": "string" },
+    "diffContext": { "type": "string" },
+    "diffTime": { "type": "number" },
+    "path": { "type": "string" },
+    "releaseVersion": { "type": "string" },
+    "releaseKind": { "type": "string" },
+    "releaseDate": { "type": "string" },
+    "iframeSrc": { "type": "string" },
+    "iframeName": { "type": "string" },
+    "ageRange": {
+      "oneOf": [
+        { "type": "number" },
+        { "type": "array", "items": { "type": "number" } }
+      ]
+    },
+    "lang": { "type": "string" },
+    "language": { "$ref": "#/$defs/stringOrStringArray" },
+    "computerLanguage": { "type": "string" },
+    "target": { "$ref": "#/$defs/stringOrStringArray" },
+    "slug": { "type": "string" },
+    "tag": { "$ref": "#/$defs/stringOrStringArray" },
+    "groupTag": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/GroupTagJson" }
+    },
+    "reductionTag": { "$ref": "#/$defs/stringOrStringArray" },
+    "bubbleTag": { "$ref": "#/$defs/stringOrStringArray" },
+    "extractorTag": { "$ref": "#/$defs/stringOrStringArray" },
+    "levelCEFRp": { "type": "string" },
+    "levelCEFR": { "type": "string" },
+    "levelILR": { "type": "string" },
+    "levelACTFL": { "type": "string" },
+    "icon": { "type": "string" },
+    "iconTag": { "type": "string" },
+    "colorTag": { "$ref": "#/$defs/stringOrStringArray" },
+    "flashcardSet": { "$ref": "#/$defs/stringOrStringArray" },
+    "subtype": { "type": "string" },
+    "bookAlias": { "$ref": "#/$defs/stringOrStringArray" },
+    "bookDiff": { "type": "string" },
+    "coverImage": { "$ref": "#/$defs/stringOrStringArray" },
+    "coverColor": { "type": "string" },
+    "backgroundImage": { "$ref": "#/$defs/stringOrStringArray" },
+    "publisher": { "$ref": "#/$defs/stringOrStringArray" },
+    "publisherName": { "type": "string" },
+    "publications": { "$ref": "#/$defs/stringOrStringArray" },
+    "relatedBook": { "$ref": "#/$defs/stringOrStringArray" },
+    "author": { "$ref": "#/$defs/stringOrStringArray" },
+    "subject": { "$ref": "#/$defs/stringOrStringArray" },
+    "date": { "type": "string" },
+    "dateEnd": { "type": "string" },
+    "location": { "type": "string" },
+    "theme": { "$ref": "#/$defs/stringOrStringArray" },
+    "kind": { "type": "string" },
+    "hasMarkAsDone": { "type": "boolean" },
+    "processHandIn": { "type": "boolean" },
+    "processHandInLocation": { "type": "string" },
+    "chatWithBook": { "type": "boolean" },
+    "chatWithBookBrainKey": { "type": "string" },
+    "currency": { "type": "string" },
+    "bookIsbn": { "type": "string" },
+    "bookAuthor": { "type": "string" },
+    "bookType": { "type": "string" },
+    "bookBindingType": { "type": "string" },
+    "bookNumberOfPages": { "type": "string" },
+    "bookRating": { "type": "string" },
+    "bookSeriesTitle": { "type": "string" },
+    "bookSeriesId": { "type": "string" },
+    "bookSeriesNumber": { "type": "string" },
+    "bookLanguage": { "type": "string" },
+    "bookPublishingDate": { "type": "string" },
+    "bookPublisher": { "type": "string" },
+    "bookTranslator": { "type": "string" },
+    "bookOriginalTitle": { "type": "string" },
+    "gmbExternalShop": { "type": "string" },
+    "gmbExternalShopItems": { "$ref": "#/$defs/stringOrStringArray" },
+    "action": { "type": "string" },
+    "showInIndex": { "type": "boolean" },
+    "refAuthor": { "$ref": "#/$defs/stringOrStringArray" },
+    "refBookTitle": { "type": "string" },
+    "refPublisher": { "$ref": "#/$defs/stringOrStringArray" },
+    "refPublicationYear": { "type": "string" },
+    "citationStyle": { "type": "string" },
+    "blockId": { "type": "string" },
+    "pageNo": { "type": "number" },
+    "x": { "type": "number" },
+    "y": { "type": "number" },
+    "width": { "type": "string" },
+    "height": { "type": "string" },
+    "index": { "type": "number" },
+    "classification": { "type": "string" },
+    "availableClassifications": { "$ref": "#/$defs/stringOrStringArray" },
+    "allowedBit": { "$ref": "#/$defs/stringOrStringArray" },
+    "authorFullName": { "type": "string" },
+    "authorPseudonym": { "type": "string" },
+    "authorTitle": { "type": "string" },
+    "authorJobTitle": { "type": "string" },
+    "tableFixedHeader": { "type": "boolean" },
+    "tableHeaderWhitespaceNoWrap": { "type": "boolean" },
+    "tableSearch": { "type": "boolean" },
+    "tableSort": { "type": "boolean" },
+    "tablePagination": { "type": "boolean" },
+    "tablePaginationLimit": { "type": "number" },
+    "tableHeight": { "type": "number" },
+    "tableWhitespaceNoWrap": { "type": "boolean" },
+    "tableAutoWidth": { "type": "boolean" },
+    "tableResizableColumns": { "type": "boolean" },
+    "tableColumnMinWidth": { "type": "number" },
+    "quizCountItems": { "type": "boolean" },
+    "quizStrikethroughSolutions": { "type": "boolean" },
+    "codeLineNumbers": { "type": "boolean" },
+    "codeMinimap": { "type": "boolean" },
+    "stripePricingTableId": { "type": "string" },
+    "stripePublishableKey": { "type": "string" },
+    "thumbImage": { "type": "string" },
+    "scormSource": { "type": "string" },
+    "posterImage": { "type": "string" },
+    "focusX": { "type": "number" },
+    "focusY": { "type": "number" },
+    "pointerLeft": { "type": "string" },
+    "pointerTop": { "type": "string" },
+    "listItemIndent": { "type": "number" },
+    "backgroundWallpaper": { "$ref": "#/$defs/ImageResourceWrapperJson" },
+    "hasBookNavigation": { "type": "boolean" },
+    "duration": { "type": "string" },
+    "deeplink": { "$ref": "#/$defs/stringOrStringArray" },
+    "externalLink": { "type": "string" },
+    "externalLinkText": { "type": "string" },
+    "videoCallLink": { "type": "string" },
+    "vendorDashboardId": { "type": "string" },
+    "vendorSurveyId": { "type": "string" },
+    "vendorUrl": { "type": "string" },
+    "search": { "type": "string" },
+    "bot": { "$ref": "#/$defs/stringOrStringArray" },
+    "list": { "$ref": "#/$defs/stringOrStringArray" },
+    "layer": { "$ref": "#/$defs/stringOrStringArray" },
+    "layerRole": { "$ref": "#/$defs/stringOrStringArray" },
+    "textReference": { "type": "string" },
+    "isTracked": { "type": "boolean" },
+    "isInfoOnly": { "type": "boolean" },
+    "imageFirst": { "type": "boolean" },
+    "activityType": { "type": "string" },
+    "labelTrue": { "type": "string" },
+    "labelFalse": { "type": "string" },
+    "content2Buy": { "type": "string" },
+    "listPrice": { "type": "string" },
+    "customerProductId": { "type": "string" },
+    "customerProductShopLink": { "type": "string" },
+    "mailingList": { "type": "string" },
+    "buttonCaption": { "type": "string" },
+    "callToActionUrl": { "type": "string" },
+    "advertisingClickUrl": { "type": "string" },
+    "brandColor": { "type": "string" },
+    "brandColorName": { "type": "string" },
+    "caption": { "$ref": "#/$defs/JsonText" },
+    "quotedPerson": { "type": "string" },
+    "reasonableNumOfChars": { "type": "number" },
+    "resolved": { "type": "boolean" },
+    "resolvedDate": { "type": "string" },
+    "resolvedBy": { "type": "string" },
+    "handInAcceptFileType": { "$ref": "#/$defs/stringOrStringArray" },
+    "handInRequirement": { "$ref": "#/$defs/stringOrStringArray" },
+    "handInInstruction": { "type": "string" },
+    "maxCreatedBits": { "type": "number" },
+    "maxDisplayLevel": { "type": "number" },
+    "maxTocChapterLevel": { "type": "number" },
+    "allowPrint": { "type": "string" },
+    "printParentChapterLevel": { "type": "number" },
+    "sourceDocument": { "type": "string" },
+    "internalPrintPdf": { "type": "string" },
+    "hasPrintRestriction": { "type": "boolean" },
+    "enforceUpdateOverUserInput": { "type": "boolean" },
+    "extractorExtractionTimestamp": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "tocResource": { "$ref": "#/$defs/stringOrStringArray" },
+    "tocContent": { "$ref": "#/$defs/stringOrStringArray" },
+    "page": { "type": "string" },
+    "platformBrandTarget": { "type": "string" },
+    "platformName": { "type": "string" },
+    "platformIcon": { "$ref": "#/$defs/ImageResourceWrapperJson" },
+    "platformLogo": { "$ref": "#/$defs/ImageResourceWrapperJson" },
+    "platformLogoMaxHeight": { "type": "number" },
+    "platformPrimaryColor": { "type": "string" },
+    "platformSecondaryColor": { "type": "string" },
+    "platformBackgroundColor": { "type": "string" },
+    "platformScrollbarColor": { "type": "string" },
+    "platformSelectionColor": { "type": "string" },
+    "platformSeparatorColor": { "type": "string" },
+    "platformPlaceholderColor": { "type": "string" },
+    "platformTextSelectionColor": { "type": "string" },
+    "platformButtonPrimaryColor": { "type": "string" },
+    "platformButtonBackgroundColor": { "type": "string" },
+    "platformMessageBackgroundColor": { "type": "string" },
+    "platformBackgroundImage": { "$ref": "#/$defs/ImageResourceWrapperJson" },
+    "platformBorderColor": { "type": "string" },
+    "platformSelectionTextColor": { "type": "string" },
+    "platformBaseLayerColor": { "type": "string" },
+    "platformMargin": { "type": "number" },
+    "platformBorderRadius": { "type": "number" },
+    "platformSelectionBorderRadius": { "type": "number" },
+    "platformNeedsShadow": { "type": "boolean" },
+    "productId": { "$ref": "#/$defs/stringOrStringArray" },
+    "product": { "type": "string" },
+    "productVideo": { "type": "string" },
+    "productFolder": { "type": "string" },
+    "technicalTerm": { "$ref": "#/$defs/TechnicalTermJson" },
+    "servings": { "$ref": "#/$defs/ServingsJson" },
+    "ratingLevelStart": { "$ref": "#/$defs/RatingLevelStartEndJson" },
+    "ratingLevelEnd": { "$ref": "#/$defs/RatingLevelStartEndJson" },
+    "ratingLevelSelected": { "type": "number" },
+    "book": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "$ref": "#/$defs/BookJson" } }
+      ]
+    },
+    "title": { "$ref": "#/$defs/JsonText" },
+    "subtitle": { "$ref": "#/$defs/JsonText" },
+    "level": { "type": "number" },
+    "toc": { "type": "boolean" },
+    "progress": { "type": "boolean" },
+    "anchor": { "type": "string" },
+    "reference": { "$ref": "#/$defs/stringOrStringArray" },
+    "referenceEnd": { "type": "string" },
+    "revealSolutions": { "type": "boolean" },
+    "item": { "$ref": "#/$defs/JsonText" },
+    "lead": { "$ref": "#/$defs/JsonText" },
+    "pageNumber": { "$ref": "#/$defs/JsonText" },
+    "marginNumber": { "$ref": "#/$defs/JsonText" },
+    "hint": { "$ref": "#/$defs/JsonText" },
+    "instruction": { "$ref": "#/$defs/JsonText" },
+    "isExample": { "type": "boolean" },
+    "example": { "$ref": "#/$defs/ExampleJson" },
+    "imageSource": { "$ref": "#/$defs/ImageSourceJson" },
+    "person": { "$ref": "#/$defs/PersonJson" },
+    "partner": { "$ref": "#/$defs/PersonJson", "description": "Deprecated, replaced by person" },
+    "marks": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/MarkConfigJson" }
+    },
+    "extraProperties": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "imagePlaceholder": { "$ref": "#/$defs/ImageResourceWrapperJson" },
+    "previewImage": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ImageResourceWrapperJson" }
+    },
+    "previewVideo": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/VideoResourceWrapperJson" }
+    },
+    "resource": { "$ref": "#/$defs/ResourceJson" },
+    "logos": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ImageResourceWrapperJson" }
+    },
+    "images": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ImageResourceWrapperJson" }
+    },
+    "body": { "$ref": "#/$defs/JsonTextOrUnknown" },
+    "sampleSolution": { "type": "string" },
+    "additionalSolutions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "partialAnswer": { "type": "string" },
+    "elements": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "statement": { "$ref": "#/$defs/JsonText" },
+    "isCorrect": { "type": "boolean" },
+    "cards": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/FlashcardJson" }
+    },
+    "definitions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/DefinitionListItemJson" }
+    },
+    "descriptions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/DefinitionListItemJson" }
+    },
+    "statements": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/StatementJson" }
+    },
+    "responses": {
+      "oneOf": [
+        { "type": "array", "items": { "$ref": "#/$defs/ResponseJson" } },
+        { "type": "array", "items": { "$ref": "#/$defs/BotResponseJson" } }
+      ]
+    },
+    "feedbacks": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/FeedbackJson" }
+    },
+    "quizzes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/QuizJson" }
+    },
+    "heading": { "$ref": "#/$defs/HeadingJson" },
+    "pairs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/PairJson" }
+    },
+    "matrix": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/MatrixJson" }
+    },
+    "table": { "$ref": "#/$defs/TableJson" },
+    "tableExtended": { "$ref": "#/$defs/TableExtendedJson" },
+    "choices": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ChoiceJson" }
+    },
+    "questions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/QuestionJson" }
+    },
+    "ingredients": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/IngredientJson" }
+    },
+    "listItems": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ListItemJson" }
+    },
+    "sections": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ListItemJson" },
+      "description": "Pseudonym for listItems"
+    },
+    "bookReferences": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/BookReferenceJson" }
+    },
+    "footer": { "$ref": "#/$defs/JsonText" },
+    "placeholders": { "$ref": "#/$defs/BodyBitsJson" }
+  },
+  "$defs": {
+    "stringOrStringArray": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" } }
+      ]
+    },
+    "JsonText": {
+      "description": "A text value: either a plain string or a TextAst (array of TextNode).",
+      "oneOf": [
+        { "type": "string" },
+        { "$ref": "#/$defs/TextAst" }
+      ]
+    },
+    "JsonTextOrUnknown": {
+      "description": "JsonText or an arbitrary JSON body."
+    },
+    "TextAst": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/TextNode" }
+    },
+    "TextNode": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "marks": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/TextMark" }
+        },
+        "text": { "type": "string" },
+        "content": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/TextNode" }
+        },
+        "parent": { "type": "string" },
+        "attrs": { "$ref": "#/$defs/TextNodeAttributes" }
+      },
+      "required": ["type"]
+    },
+    "TextMark": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "attrs": { "type": "object" }
+      },
+      "required": ["type"]
+    },
+    "TextNodeAttributes": {
+      "type": "object",
+      "properties": {
+        "section": { "type": "string" },
+        "level": { "type": "number" },
+        "checked": { "type": "boolean" },
+        "language": { "type": "string" },
+        "formula": { "type": "string" },
+        "start": { "type": "number" },
+        "src": { "type": "string" },
+        "alt": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+        "title": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+        "textAlign": { "type": "string" },
+        "width": {
+          "oneOf": [{ "type": "string" }, { "type": "number" }, { "type": "null" }]
+        },
+        "height": {
+          "oneOf": [{ "type": "string" }, { "type": "number" }, { "type": "null" }]
+        },
+        "class": { "type": "string" },
+        "comment": { "type": "string" }
+      }
+    },
+    "ExampleJson": {
+      "description": "JsonText | boolean | null",
+      "oneOf": [
+        { "type": "string" },
+        { "$ref": "#/$defs/TextAst" },
+        { "type": "boolean" },
+        { "type": "null" }
+      ]
+    },
+    "BookJson": {
+      "type": "object",
+      "properties": {
+        "book": { "type": "string" },
+        "reference": { "type": "string" },
+        "referenceEnd": { "type": "string" }
+      },
+      "required": ["book", "reference", "referenceEnd"]
+    },
+    "GroupTagJson": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["name", "tags"]
+    },
+    "ImageSourceJson": {
+      "type": "object",
+      "properties": {
+        "url": { "type": "string" },
+        "mockupId": { "type": "string" },
+        "size": { "type": "number" },
+        "format": { "type": "string" },
+        "trim": { "type": "boolean" }
+      },
+      "required": ["url", "mockupId"]
+    },
+    "PersonJson": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "title": { "type": "string" },
+        "avatarImage": { "$ref": "#/$defs/ImageResourceWrapperJson" }
+      },
+      "required": ["name", "title", "avatarImage"]
+    },
+    "MarkConfigJson": {
+      "type": "object",
+      "properties": {
+        "mark": { "type": "string" },
+        "color": { "type": "string" },
+        "emphasis": { "type": "string" }
+      },
+      "required": ["mark", "color", "emphasis"]
+    },
+    "FlashcardJson": {
+      "type": "object",
+      "properties": {
+        "question": { "$ref": "#/$defs/TextAndIconJson" },
+        "answer": { "$ref": "#/$defs/TextAndIconJson" },
+        "alternativeAnswers": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/TextAndIconJson" }
+        },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" }
+      },
+      "required": ["question", "answer", "alternativeAnswers", "item", "lead", "hint", "instruction", "isExample", "example"]
+    },
+    "DefinitionListItemJson": {
+      "type": "object",
+      "properties": {
+        "term": { "$ref": "#/$defs/TextAndIconJson" },
+        "definition": { "$ref": "#/$defs/TextAndIconJson" },
+        "alternativeDefinitions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/TextAndIconJson" }
+        },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" }
+      },
+      "required": ["term", "definition", "alternativeDefinitions", "item", "lead", "hint", "instruction", "isExample", "example"]
+    },
+    "TextAndIconJson": {
+      "type": "object",
+      "properties": {
+        "text": { "$ref": "#/$defs/JsonText" },
+        "icon": { "$ref": "#/$defs/ImageResourceWrapperJson" }
+      },
+      "required": ["text", "icon"]
+    },
+    "StatementJson": {
+      "type": "object",
+      "properties": {
+        "statement": { "$ref": "#/$defs/JsonText" },
+        "isCorrect": { "type": "boolean" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" }
+      },
+      "required": ["statement", "isCorrect", "item", "lead", "hint", "instruction", "isExample", "example"]
+    },
+    "FeedbackChoiceJson": {
+      "type": "object",
+      "properties": {
+        "choice": { "type": "string" },
+        "requireReason": { "type": "boolean" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" }
+      },
+      "required": ["choice", "requireReason", "item", "lead", "hint", "instruction", "isExample", "example"]
+    },
+    "FeedbackReasonJson": {
+      "type": "object",
+      "properties": {
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "text": { "type": "string" },
+        "reasonableNumOfChars": { "type": "number" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" }
+      },
+      "required": ["item", "lead", "hint", "instruction", "text", "reasonableNumOfChars", "isExample", "example"]
+    },
+    "ChoiceJson": {
+      "type": "object",
+      "properties": {
+        "choice": { "type": "string" },
+        "isCorrect": { "type": "boolean" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" }
+      },
+      "required": ["choice", "isCorrect", "item", "lead", "hint", "instruction", "isExample", "example"]
+    },
+    "ResponseJson": {
+      "type": "object",
+      "properties": {
+        "response": { "type": "string" },
+        "isCorrect": { "type": "boolean" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" }
+      },
+      "required": ["response", "isCorrect", "item", "lead", "hint", "instruction", "isExample", "example"]
+    },
+    "FeedbackJson": {
+      "type": "object",
+      "properties": {
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "choices": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/FeedbackChoiceJson" }
+        },
+        "reason": { "$ref": "#/$defs/FeedbackReasonJson" }
+      },
+      "required": ["item", "lead", "hint", "instruction", "choices", "reason"]
+    },
+    "QuizJson": {
+      "type": "object",
+      "properties": {
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isExample": { "type": "boolean" },
+        "choices": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ChoiceJson" }
+        },
+        "responses": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ResponseJson" }
+        }
+      },
+      "required": ["item", "lead", "hint", "instruction", "isExample", "choices", "responses"]
+    },
+    "HeadingJson": {
+      "type": "object",
+      "properties": {
+        "forKeys": { "type": "string" },
+        "forValues": { "$ref": "#/$defs/stringOrStringArray" }
+      },
+      "required": ["forKeys", "forValues"]
+    },
+    "PairJson": {
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "keyAudio": { "$ref": "#/$defs/AudioResourceWrapperJson" },
+        "keyImage": { "$ref": "#/$defs/ImageResourceWrapperJson" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isCaseSensitive": { "type": "boolean" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" },
+        "values": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["key", "keyAudio", "keyImage", "item", "lead", "hint", "instruction", "isCaseSensitive", "isExample", "example", "values"]
+    },
+    "MatrixJson": {
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isExample": { "type": "boolean" },
+        "cells": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/MatrixCellJson" }
+        }
+      },
+      "required": ["key", "item", "lead", "hint", "instruction", "isExample", "cells"]
+    },
+    "MatrixCellJson": {
+      "type": "object",
+      "properties": {
+        "values": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isCaseSensitive": { "type": "boolean" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" }
+      },
+      "required": ["values", "item", "lead", "hint", "instruction", "isCaseSensitive", "isExample", "example"]
+    },
+    "TableJson": {
+      "type": "object",
+      "properties": {
+        "columns": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/JsonText" }
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/JsonText" }
+          }
+        }
+      },
+      "required": ["columns", "data"]
+    },
+    "TableExtendedJson": {
+      "type": "object",
+      "properties": {
+        "header": { "$ref": "#/$defs/TableSectionJson" },
+        "body": { "$ref": "#/$defs/TableSectionJson" },
+        "footer": { "$ref": "#/$defs/TableSectionJson" }
+      }
+    },
+    "TableSectionJson": {
+      "type": "object",
+      "properties": {
+        "rows": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/TableRowJson" }
+        }
+      },
+      "required": ["rows"]
+    },
+    "TableRowJson": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/TableCellJson" }
+        }
+      },
+      "required": ["cells"]
+    },
+    "TableCellJson": {
+      "type": "object",
+      "properties": {
+        "content": { "$ref": "#/$defs/JsonText" },
+        "title": { "type": "boolean" },
+        "rowspan": { "type": "number" },
+        "colspan": { "type": "number" },
+        "scope": {
+          "type": "string",
+          "enum": ["row", "col", "rowgroup", "colgroup"]
+        }
+      },
+      "required": ["content"]
+    },
+    "QuestionJson": {
+      "type": "object",
+      "properties": {
+        "question": { "$ref": "#/$defs/JsonText" },
+        "partialAnswer": { "type": "string" },
+        "sampleSolution": { "type": "string" },
+        "additionalSolutions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "reasonableNumOfChars": { "type": "number" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" }
+      },
+      "required": ["question", "partialAnswer", "sampleSolution", "additionalSolutions", "item", "lead", "hint", "instruction", "reasonableNumOfChars", "isExample", "example"]
+    },
+    "BotResponseJson": {
+      "type": "object",
+      "properties": {
+        "response": { "type": "string" },
+        "reaction": { "type": "string" },
+        "feedback": { "type": "string" },
+        "item": { "type": "string" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" }
+      },
+      "required": ["response", "reaction", "feedback", "item", "lead", "hint"]
+    },
+    "TechnicalTermJson": {
+      "type": "object",
+      "properties": {
+        "technicalTerm": { "type": "string" },
+        "lang": { "type": "string" }
+      },
+      "required": ["technicalTerm", "lang"]
+    },
+    "ServingsJson": {
+      "type": "object",
+      "properties": {
+        "servings": { "type": "number" },
+        "unit": { "type": "string" },
+        "unitAbbr": { "type": "string" },
+        "decimalPlaces": { "type": "number" },
+        "disableCalculation": { "type": "boolean" },
+        "hint": { "type": "string" }
+      },
+      "required": ["servings", "unit", "unitAbbr", "decimalPlaces", "disableCalculation", "hint"]
+    },
+    "IngredientJson": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "checked": { "type": "boolean" },
+        "ingredient": { "type": "string" },
+        "quantity": { "type": "number" },
+        "unit": { "type": "string" },
+        "unitAbbr": { "type": "string" },
+        "decimalPlaces": { "type": "number" },
+        "disableCalculation": { "type": "boolean" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" }
+      },
+      "required": ["title", "checked", "ingredient", "quantity", "unit", "unitAbbr", "decimalPlaces", "disableCalculation", "item", "lead", "hint"]
+    },
+    "RatingLevelStartEndJson": {
+      "type": "object",
+      "properties": {
+        "level": { "type": "number" },
+        "label": { "$ref": "#/$defs/JsonText" }
+      },
+      "required": ["level"]
+    },
+    "ListItemJson": {
+      "type": "object",
+      "properties": {
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "body": { "$ref": "#/$defs/JsonTextOrUnknown" }
+      },
+      "required": ["item", "lead", "hint", "instruction", "body"]
+    },
+    "BookReferenceJson": {
+      "type": "object",
+      "properties": {
+        "lang": { "type": "string" },
+        "refAuthor": { "type": "string" },
+        "refBookTitle": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "refPublisher": { "type": "string" }
+      },
+      "required": ["lang", "refAuthor", "refBookTitle", "refPublisher"]
+    },
+    "BodyBitsJson": {
+      "type": "object",
+      "description": "A map of placeholder keys to body bit objects.",
+      "additionalProperties": { "$ref": "#/$defs/BodyBitJson" }
+    },
+    "BodyBitJson": {
+      "description": "A body bit: TextNode, Gap, Mark, Select, or Highlight.",
+      "oneOf": [
+        { "$ref": "#/$defs/TextNode" },
+        { "$ref": "#/$defs/GapJson" },
+        { "$ref": "#/$defs/MarkJson" },
+        { "$ref": "#/$defs/SelectJson" },
+        { "$ref": "#/$defs/HighlightJson" }
+      ]
+    },
+    "BaseBodyBitJson": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" },
+        "attrs": { "type": "object" }
+      },
+      "required": ["type"]
+    },
+    "GapJson": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "const": "gap" },
+        "solutions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isCaseSensitive": { "type": "boolean" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" },
+        "attrs": { "type": "object" }
+      },
+      "required": ["type", "solutions"]
+    },
+    "MarkJson": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "const": "mark" },
+        "solution": { "type": "string" },
+        "mark": { "type": "string" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "attrs": { "type": "object" }
+      },
+      "required": ["type", "solution", "mark"]
+    },
+    "SelectJson": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "const": "select" },
+        "options": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/SelectOptionJson" }
+        },
+        "prefix": { "type": "string" },
+        "postfix": { "type": "string" },
+        "isExample": { "type": "boolean" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "attrs": { "type": "object" }
+      },
+      "required": ["type", "options"]
+    },
+    "SelectOptionJson": {
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "isCorrect": { "type": "boolean" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" }
+      },
+      "required": ["text", "isCorrect"]
+    },
+    "HighlightJson": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "const": "highlight" },
+        "texts": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/HighlightTextJson" }
+        },
+        "prefix": { "type": "string" },
+        "postfix": { "type": "string" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "attrs": { "type": "object" }
+      },
+      "required": ["type", "texts"]
+    },
+    "HighlightTextJson": {
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "isHighlighted": { "type": "boolean" },
+        "isCorrect": { "type": "boolean" },
+        "item": { "$ref": "#/$defs/JsonText" },
+        "lead": { "$ref": "#/$defs/JsonText" },
+        "hint": { "$ref": "#/$defs/JsonText" },
+        "instruction": { "$ref": "#/$defs/JsonText" },
+        "isExample": { "type": "boolean" },
+        "example": { "$ref": "#/$defs/ExampleJson" }
+      },
+      "required": ["text", "isHighlighted", "isCorrect"]
+    },
+    "ResourceJson": {
+      "description": "A resource wrapper - one of many resource types discriminated by 'type'.",
+      "oneOf": [
+        { "$ref": "#/$defs/ImageResourceWrapperJson" },
+        { "$ref": "#/$defs/ImageResponsiveResourceWrapperJson" },
+        { "$ref": "#/$defs/ImageLinkResourceWrapperJson" },
+        { "$ref": "#/$defs/AudioResourceWrapperJson" },
+        { "$ref": "#/$defs/AudioEmbedResourceWrapperJson" },
+        { "$ref": "#/$defs/AudioLinkResourceWrapperJson" },
+        { "$ref": "#/$defs/VideoResourceWrapperJson" },
+        { "$ref": "#/$defs/VideoEmbedResourceWrapperJson" },
+        { "$ref": "#/$defs/VideoLinkResourceWrapperJson" },
+        { "$ref": "#/$defs/StillImageFilmResourceWrapperJson" },
+        { "$ref": "#/$defs/StillImageFilmEmbedResourceWrapperJson" },
+        { "$ref": "#/$defs/StillImageFilmLinkResourceWrapperJson" },
+        { "$ref": "#/$defs/ArticleResourceWrapperJson" },
+        { "$ref": "#/$defs/DocumentResourceWrapperJson" },
+        { "$ref": "#/$defs/DocumentEmbedResourceWrapperJson" },
+        { "$ref": "#/$defs/DocumentLinkResourceWrapperJson" },
+        { "$ref": "#/$defs/DocumentDownloadResourceWrapperJson" },
+        { "$ref": "#/$defs/AppLinkResourceWrapperJson" },
+        { "$ref": "#/$defs/WebsiteLinkResourceWrapperJson" }
+      ]
+    },
+    "BaseResourceJson": {
+      "type": "object",
+      "properties": {
+        "license": { "type": "string" },
+        "copyright": { "type": "string" },
+        "provider": { "type": "string" },
+        "showInIndex": { "type": "boolean" },
+        "caption": { "$ref": "#/$defs/JsonText" },
+        "search": { "type": "string" },
+        "srcAlt": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "selected": { "type": "boolean" }
+      }
+    },
+    "ImageResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "src": { "type": "string" },
+            "src1x": { "type": "string" },
+            "src2x": { "type": "string" },
+            "src3x": { "type": "string" },
+            "src4x": { "type": "string" },
+            "width": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "height": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "alt": { "type": "string" },
+            "zoomDisabled": { "type": "boolean" }
+          }
+        }
+      ]
+    },
+    "ImageLinkResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "url": { "type": "string" },
+            "src1x": { "type": "string" },
+            "src2x": { "type": "string" },
+            "src3x": { "type": "string" },
+            "src4x": { "type": "string" },
+            "width": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "height": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "alt": { "type": "string" },
+            "zoomDisabled": { "type": "boolean" }
+          }
+        }
+      ]
+    },
+    "AudioResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "src": { "type": "string" },
+            "duration": { "type": "number" },
+            "mute": { "type": "boolean" },
+            "autoplay": { "type": "boolean" }
+          }
+        }
+      ]
+    },
+    "AudioEmbedResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "src": { "type": "string" },
+            "duration": { "type": "number" },
+            "mute": { "type": "boolean" },
+            "autoplay": { "type": "boolean" }
+          }
+        }
+      ]
+    },
+    "AudioLinkResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "url": { "type": "string" },
+            "duration": { "type": "number" },
+            "mute": { "type": "boolean" },
+            "autoplay": { "type": "boolean" }
+          }
+        }
+      ]
+    },
+    "VideoResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "src": { "type": "string" },
+            "width": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "height": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "duration": { "type": "number" },
+            "mute": { "type": "boolean" },
+            "autoplay": { "type": "boolean" },
+            "allowSubtitles": { "type": "boolean" },
+            "showSubtitles": { "type": "boolean" },
+            "alt": { "type": "string" },
+            "posterImage": { "$ref": "#/$defs/ImageResourceJson" },
+            "thumbnails": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/ImageResourceJson" }
+            }
+          }
+        }
+      ]
+    },
+    "VideoEmbedResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "url": { "type": "string" },
+            "width": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "height": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "duration": { "type": "number" },
+            "mute": { "type": "boolean" },
+            "autoplay": { "type": "boolean" },
+            "allowSubtitles": { "type": "boolean" },
+            "showSubtitles": { "type": "boolean" },
+            "alt": { "type": "string" },
+            "posterImage": { "$ref": "#/$defs/ImageResourceJson" },
+            "thumbnails": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/ImageResourceJson" }
+            }
+          }
+        }
+      ]
+    },
+    "VideoLinkResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "url": { "type": "string" },
+            "width": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "height": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "duration": { "type": "number" },
+            "mute": { "type": "boolean" },
+            "autoplay": { "type": "boolean" },
+            "allowSubtitles": { "type": "boolean" },
+            "showSubtitles": { "type": "boolean" },
+            "alt": { "type": "string" },
+            "posterImage": { "$ref": "#/$defs/ImageResourceJson" },
+            "thumbnails": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/ImageResourceJson" }
+            }
+          }
+        }
+      ]
+    },
+    "StillImageFilmEmbedResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "url": { "type": "string" },
+            "width": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "height": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "duration": { "type": "number" },
+            "mute": { "type": "boolean" },
+            "autoplay": { "type": "boolean" },
+            "allowSubtitles": { "type": "boolean" },
+            "showSubtitles": { "type": "boolean" },
+            "alt": { "type": "string" },
+            "posterImage": { "$ref": "#/$defs/ImageResourceJson" },
+            "thumbnails": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/ImageResourceJson" }
+            }
+          }
+        }
+      ]
+    },
+    "StillImageFilmLinkResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "url": { "type": "string" },
+            "width": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "height": { "oneOf": [{ "type": "string" }, { "type": "null" }] },
+            "duration": { "type": "number" },
+            "mute": { "type": "boolean" },
+            "autoplay": { "type": "boolean" },
+            "allowSubtitles": { "type": "boolean" },
+            "showSubtitles": { "type": "boolean" },
+            "alt": { "type": "string" },
+            "posterImage": { "$ref": "#/$defs/ImageResourceJson" },
+            "thumbnails": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/ImageResourceJson" }
+            }
+          }
+        }
+      ]
+    },
+    "ArticleResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "body": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "DocumentResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "url": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "DocumentEmbedResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "url": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "DocumentLinkResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "url": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "DocumentDownloadResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "url": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "AppLinkResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "url": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "WebsiteLinkResourceJson": {
+      "allOf": [
+        { "$ref": "#/$defs/BaseResourceJson" },
+        {
+          "type": "object",
+          "properties": {
+            "url": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "ResourceWrapperJsonBase": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" }
+      },
+      "required": ["type"]
+    },
+    "ImageResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "image" },
+            "image": { "$ref": "#/$defs/ImageResourceJson" }
+          },
+          "required": ["type", "image"]
+        }
+      ]
+    },
+    "ImageResponsiveResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "image-responsive" },
+            "imagePortrait": { "$ref": "#/$defs/ImageResourceJson" },
+            "imageLandscape": { "$ref": "#/$defs/ImageResourceJson" }
+          },
+          "required": ["type", "imagePortrait", "imageLandscape"]
+        }
+      ]
+    },
+    "ImageLinkResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "image-link" },
+            "imageLink": { "$ref": "#/$defs/ImageLinkResourceJson" }
+          },
+          "required": ["type", "imageLink"]
+        }
+      ]
+    },
+    "AudioResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "audio" },
+            "audio": { "$ref": "#/$defs/AudioResourceJson" }
+          },
+          "required": ["type", "audio"]
+        }
+      ]
+    },
+    "AudioEmbedResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "audio-embed" },
+            "audioEmbed": { "$ref": "#/$defs/AudioEmbedResourceJson" }
+          },
+          "required": ["type", "audioEmbed"]
+        }
+      ]
+    },
+    "AudioLinkResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "audio-link" },
+            "audioLink": { "$ref": "#/$defs/AudioLinkResourceJson" }
+          },
+          "required": ["type", "audioLink"]
+        }
+      ]
+    },
+    "VideoResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "video" },
+            "video": { "$ref": "#/$defs/VideoResourceJson" }
+          },
+          "required": ["type", "video"]
+        }
+      ]
+    },
+    "VideoEmbedResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "video-embed" },
+            "videoEmbed": { "$ref": "#/$defs/VideoEmbedResourceJson" }
+          },
+          "required": ["type", "videoEmbed"]
+        }
+      ]
+    },
+    "VideoLinkResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "video-link" },
+            "videoLink": { "$ref": "#/$defs/VideoLinkResourceJson" }
+          },
+          "required": ["type", "videoLink"]
+        }
+      ]
+    },
+    "StillImageFilmResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "still-image-film" },
+            "image": { "$ref": "#/$defs/ImageResourceJson" },
+            "audio": { "$ref": "#/$defs/AudioResourceJson" }
+          },
+          "required": ["type", "image", "audio"]
+        }
+      ]
+    },
+    "StillImageFilmEmbedResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "still-image-film-embed" },
+            "stillImageFilmEmbed": { "$ref": "#/$defs/StillImageFilmEmbedResourceJson" }
+          },
+          "required": ["type", "stillImageFilmEmbed"]
+        }
+      ]
+    },
+    "StillImageFilmLinkResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "still-image-film-link" },
+            "stillImageFilmLink": { "$ref": "#/$defs/StillImageFilmLinkResourceJson" }
+          },
+          "required": ["type", "stillImageFilmLink"]
+        }
+      ]
+    },
+    "ArticleResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "article" },
+            "article": { "$ref": "#/$defs/ArticleResourceJson" }
+          },
+          "required": ["type", "article"]
+        }
+      ]
+    },
+    "DocumentResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "document" },
+            "document": { "$ref": "#/$defs/DocumentResourceJson" }
+          },
+          "required": ["type", "document"]
+        }
+      ]
+    },
+    "DocumentEmbedResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "document-embed" },
+            "documentEmbed": { "$ref": "#/$defs/DocumentEmbedResourceJson" }
+          },
+          "required": ["type", "documentEmbed"]
+        }
+      ]
+    },
+    "DocumentLinkResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "document-link" },
+            "documentLink": { "$ref": "#/$defs/DocumentLinkResourceJson" }
+          },
+          "required": ["type", "documentLink"]
+        }
+      ]
+    },
+    "DocumentDownloadResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "document-download" },
+            "documentDownload": { "$ref": "#/$defs/DocumentDownloadResourceJson" }
+          },
+          "required": ["type", "documentDownload"]
+        }
+      ]
+    },
+    "AppLinkResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "app-link" },
+            "appLink": { "$ref": "#/$defs/AppLinkResourceJson" }
+          },
+          "required": ["type", "appLink"]
+        }
+      ]
+    },
+    "WebsiteLinkResourceWrapperJson": {
+      "allOf": [
+        { "$ref": "#/$defs/ResourceWrapperJsonBase" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "const": "website-link" },
+            "websiteLink": { "$ref": "#/$defs/WebsiteLinkResourceJson" }
+          },
+          "required": ["type", "websiteLink"]
+        }
+      ]
+    }
+  }
+}

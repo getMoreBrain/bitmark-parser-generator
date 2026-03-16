@@ -1,0 +1,8 @@
+Inline \\left( x | y \\right) text
+Inline  \\left( x | y \\right)  text
+
+
+\\left( x | y \\right)
+
+
+Latex blocks are now separate bits!

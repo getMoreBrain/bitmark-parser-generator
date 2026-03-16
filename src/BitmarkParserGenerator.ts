@@ -11,7 +11,7 @@ import { TextGenerator } from './generator/text/TextGenerator.ts';
 import { InfoBuilder, type SupportedBit } from './info/InfoBuilder.ts';
 import { type BitmarkAst } from './model/ast/Nodes.ts';
 import { BitmarkParserType, type BitmarkParserTypeType } from './model/enum/BitmarkParserType.ts';
-import { type BitmarkVersionType } from './model/enum/BitmarkVersion.ts';
+import { BitmarkVersion, type BitmarkVersionType } from './model/enum/BitmarkVersion.ts';
 import { InfoFormat, type InfoFormatType } from './model/info/enum/InfoFormat.ts';
 import { InfoType, type InfoTypeType } from './model/info/enum/InfoType.ts';
 import { BitmarkParser } from './parser/bitmark/BitmarkParser.ts';
@@ -42,6 +42,8 @@ import { type FileOptions } from './ast/writer/FileWriter.ts';
 import { Breakscape } from './breakscaping/Breakscape.ts';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator.ts';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator.ts';
+import { PlainTextGenerator } from './generator/plainText/PlainTextGenerator.ts';
+import { BitType, type BitWrapperJson, type TextAst } from './index.ts';
 import { ConfigBuilder } from './info/ConfigBuilder.ts';
 import { type BreakscapedString } from './model/ast/BreakscapedString.ts';
 import type { _BitConfig, _GroupsConfig } from './model/config/_Config.ts';
@@ -243,6 +245,14 @@ export interface CreateAstOptions {
   inputFormat?: InputType;
 }
 
+export interface ExtractPlainTextOptions {
+  /**
+   * Set to force input to be interpreted as a particular format, overriding the auto-detection
+   * Auto-detection can fail for certain inputs as the input formats can overlap
+   */
+  inputFormat?: InputFormatType;
+}
+
 /**
  * Breakscape options
  */
@@ -340,9 +350,36 @@ const Output = {
    * Output AST as a plain JS object, or a file
    */
   ast: 'ast',
+
+  /**
+   * Output plain text as a string, or a file
+   */
+  text: 'text',
 } as const;
 
 export type OutputType = EnumType<typeof Output>;
+
+/**
+ * Input format enumeration
+ */
+const InputFormat = {
+  /**
+   * Input is bitmark
+   */
+  bitmark: 'bitmark',
+
+  /**
+   * Input is bitmarkText
+   */
+  bitmarkText: 'bitmarkText',
+
+  /**
+   * Input is plain text
+   */
+  plainText: 'plainText',
+} as const;
+
+export type InputFormatType = EnumType<typeof InputFormat>;
 
 /**
  * Options for bitmark text JSON generation
@@ -482,6 +519,12 @@ class BitmarkParserGenerator {
    * - input(JSON/AST) ==> output(bitmark)
    * - input(bitmark)  ==> output(JSON)
    *
+   * Output type can be overridden to one of the following:
+   * - bitmark: output bitmark string
+   * - json: output JSON as a plain JS object, or a file
+   * - ast: output AST as a plain JS object, or a file
+   * - text: output plain text as a string, or a file
+   *
    * By default, the result is returned as a string for bitmark, or a plain JS object for JSON/AST.
    *
    * The options can be used to write the output to a file and to set conversion options or override defaults.
@@ -507,6 +550,7 @@ class BitmarkParserGenerator {
     const outputBitmark = outputFormat === Output.bitmark;
     const outputJson = outputFormat === Output.json;
     const outputAst = outputFormat === Output.ast;
+    const outputText = outputFormat === Output.text;
     const bitmarkParserType = BitmarkParserType.peggy; // Option is no longer used as only Peggy parser supported
 
     let inStr: string = input as string;
@@ -577,6 +621,30 @@ class BitmarkParserGenerator {
       }
     };
 
+    const bitmarkToText = (bitmarkStr: string) => {
+      // Generate AST from the Bitmark markup
+      ast = this.bitmarkParser.toAst(bitmarkStr, {
+        parserType: bitmarkParserType,
+      });
+
+      // Generate JSON object
+      const jsonGenerator = new JsonObjectGenerator(opts);
+      const json = jsonGenerator.generateSync(ast);
+
+      const textGenerator = new PlainTextGenerator();
+
+      const str = textGenerator.generate(json);
+
+      if (opts.outputFile) {
+        // Write res to file
+        fs.writeFileSync(opts.outputFile, str as string, {
+          encoding: 'utf8',
+        });
+      } else {
+        res = str;
+      }
+    };
+
     const astToBitmark = (astJson: BitmarkAst) => {
       // Convert the AST to bitmark
       if (opts.outputFile) {
@@ -611,6 +679,25 @@ class BitmarkParserGenerator {
       }
     };
 
+    const astToText = (astJson: BitmarkAst) => {
+      // Generate JSON object
+      const jsonGenerator = new JsonObjectGenerator(opts);
+      const json = jsonGenerator.generateSync(astJson);
+
+      const textGenerator = new PlainTextGenerator();
+
+      const str = textGenerator.generate(json);
+
+      if (opts.outputFile) {
+        // Write res to file
+        fs.writeFileSync(opts.outputFile, str as string, {
+          encoding: 'utf8',
+        });
+      } else {
+        res = str;
+      }
+    };
+
     const jsonToBitmark = (astJson: BitmarkAst) => {
       // We already have the ast from detecting the input type, so use the AST we already have
 
@@ -633,6 +720,25 @@ class BitmarkParserGenerator {
       res = this.jsonStringifyPrettify(astJson, jsonOptions);
     };
 
+    const jsonToText = (astJson: BitmarkAst) => {
+      // Generate JSON object
+      const jsonGenerator = new JsonObjectGenerator(opts);
+      const json = jsonGenerator.generateSync(astJson);
+
+      const textGenerator = new PlainTextGenerator();
+
+      const str = textGenerator.generate(json);
+
+      if (opts.outputFile) {
+        // Write res to file
+        fs.writeFileSync(opts.outputFile, str as string, {
+          encoding: 'utf8',
+        });
+      } else {
+        res = str;
+      }
+    };
+
     const jsonToJson = (astJson: BitmarkAst) => {
       // Validate and prettify
       astToJson(astJson);
@@ -647,6 +753,9 @@ class BitmarkParserGenerator {
       } else if (outputAst) {
         // Bitmark ==> AST
         bitmarkToAst(inStr);
+      } else if (outputText) {
+        // Bitmark ==> Plain text
+        bitmarkToText(inStr);
       } else {
         // Bitmark ==> JSON
         bitmarkToJson(inStr);
@@ -660,6 +769,9 @@ class BitmarkParserGenerator {
       } else if (outputJson) {
         // AST ==> JSON
         astToJson(ast);
+      } else if (outputText) {
+        // AST ==> Plain text
+        astToText(ast);
       } else {
         // AST ==> Bitmark
         astToBitmark(ast);
@@ -673,6 +785,9 @@ class BitmarkParserGenerator {
       } else if (outputAst) {
         // JSON ==> AST
         jsonToAst(ast);
+      } else if (outputText) {
+        // JSON ==> Plain text
+        jsonToText(ast);
       } else {
         // JSON ==> Bitmark
         jsonToBitmark(ast);
@@ -850,7 +965,7 @@ class BitmarkParserGenerator {
   }
 
   /**
-   * Convert bitmark text from JSON, or JSON to bitmark text.
+   * Convert bitmark text to JSON, or JSON to bitmark text.
    *
    * Input type is detected automatically and may be:
    * - string: bitmark text or JSON
@@ -937,6 +1052,65 @@ class BitmarkParserGenerator {
         res = preRes;
       }
     }
+
+    return res;
+  }
+
+  public extractPlainText(input: string | unknown, options?: ExtractPlainTextOptions): string {
+    const dataIn: unknown = input;
+    const inputFormat = options?.inputFormat;
+    const isString = typeof input === 'string';
+
+    let data: unknown;
+
+    // Parse the input automatically, trying to detect if it's JSON, bitmark, or bitmark text, in that order
+    const parseAutomatically = (): unknown => {
+      let dataOut: unknown = dataIn;
+      if (typeof dataIn === 'string') {
+        try {
+          dataOut = JSON.parse(dataIn);
+        } catch (_e) {
+          // Not valid JSON – treat as bitmark, then bitmark text
+          let isBitmark = false;
+          const bitmarkData = this.convert(dataIn, {
+            outputFormat: Output.json,
+          }) as BitWrapperJson[];
+          if (bitmarkData.length > 0) {
+            const isError = bitmarkData[0].bit.type === BitType._error;
+            if (!isError) {
+              isBitmark = true;
+              dataOut = bitmarkData;
+            }
+          }
+          if (!isBitmark) {
+            // Not bitmark, so treat as bitmark text
+            dataOut = this.convertText(dataIn, {
+              textFormat: TextFormat.bitmarkText,
+            });
+          }
+        }
+      }
+      return dataOut;
+    };
+
+    // Parse the input based on the specified input format, or automatically if not specified
+    if (inputFormat === InputFormat.bitmark) {
+      data = this.convert(dataIn, {
+        outputFormat: Output.json,
+      }) as BitWrapperJson[];
+    } else if (inputFormat === InputFormat.bitmarkText) {
+      data = this.convertText(dataIn, {
+        textFormat: TextFormat.bitmarkText,
+      });
+    } else if (inputFormat === InputFormat.plainText) {
+      if (isString) data = String(input);
+    } else {
+      data = parseAutomatically();
+    }
+
+    // Convert the data to plain text
+    const generator = new PlainTextGenerator();
+    const res = generator.generate(data);
 
     return res;
   }
@@ -1075,6 +1249,19 @@ class BitmarkParserGenerator {
     return;
   }
 
+  public textAstToPlainText(textAst: TextAst, _options?: ExtractPlainTextOptions): string {
+    const textGenerator = new TextGenerator(BitmarkVersion.v3, {
+      //
+    });
+
+    const res = textGenerator.generateSync(textAst, TextFormat.bitmarkText, TextLocation.body, {
+      noBreakscaping: true,
+      noMarkup: true,
+    });
+
+    return res;
+  }
+
   /**
    * Stringify / prettify a plain JS object to a JSON string, depending on the JSON options
    *
@@ -1116,4 +1303,4 @@ class BitmarkParserGenerator {
   }
 }
 
-export { BitmarkParserGenerator, Input, Output };
+export { BitmarkParserGenerator, Input, InputFormat, Output };

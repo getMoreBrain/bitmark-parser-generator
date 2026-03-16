@@ -1,0 +1,9 @@
+18
+120
+e-ef-b11_u1_l1
+e-ef-b11_u1_l12
+e-ef-b11_u1_l12
+Some bold text,
+followed by some plain text. cloze open close cloze1 book.
+
+Some more text.

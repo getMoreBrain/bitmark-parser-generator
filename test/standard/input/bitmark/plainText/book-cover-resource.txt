@@ -1,0 +1,4 @@
+book-resource-123
+Book with Resource CoverImage
+article-123
+This book uses a resource for the cover image instead of a property.

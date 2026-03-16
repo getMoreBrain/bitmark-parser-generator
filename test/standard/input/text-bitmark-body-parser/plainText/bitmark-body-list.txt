@@ -1,0 +1,89 @@
+Some text before the list
+1. Ordered list item 1
+2. Ordered
+list item 2
+3. Ordered list item 3
+  • Bullet list item 3.1
+  • Bullet list item 3.2
+4. Ordered list item 4
+5. Ordered
+list item 5
+6. Ordered list item 6
+  • Bullet list item 6.1
+    • Bullet list item 6.1.1
+7. Ordered list item 7
+8. Ordered list item 8
+  • Bullet list item 8.1
+9. Ordered list item 9
+10. Ordered list item 10
+  • Bullet
+list item 10.1
+  • Bullet list item 10.2
+  • Bullet list item 10.3
+    1. Ordered list item 10.3.1
+      1. Ordered list
+item 10.3.1.1
+  • Bullet list item 10.4
+  • Bullet list item 10.5
+    A. Lettered list item 10.5.1
+    B. Lettered list item 10.5.2
+11. Ordered list item 11
+12. Ordered list item 12
+13. Not allowed, will be part of the ordered list, not 'Bullet list item 1'
+14. Not allowed, will be part of the ordered list, not 'Bullet list item 2'
+15. Not allowed, will be part of the ordered list, not 'Lettered list item 1'
+16. Not allowed, will be part of the ordered list, not 'Lettered list item 2'
+Some text after the list
+
+
+A task list
+[x] Task list item 11.1 checked
+  [x] Task list item 11.1.1 checked
+[x] Task list item 11.3 checked
+[ ] Task list item
+11.4 NOT checked
+[ ] Task list item 11.5 NOT checked
+[x] Task list item 11.6
+checked
+Some text after the tasklist
+
+Simple list
+item 1
+
+item 2
+item 3
+  item 3.1
+  item 3.2
+item 4
+Ordered list, roman tag
+I. item 1
+II. 
+item 2
+III. item 3
+  III. item 3.1
+  IV. item 3.2
+IV. item 4
+Ordered list, roman lower tag
+i. item 1
+ii. 
+item 2
+iii. item 3
+  iii. item 3.1
+  iv. item 3.2
+iv. item 4
+Lettered list, lower tag
+a. item 1
+b. 
+item 2
+c. item 3
+  a. item 3.1
+  b. item 3.2
+d. item 4
+Lettered list, upper tag
+A. item 1
+B. 
+item 2
+C. item 3
+  A. item 3.1
+  B. item 3.2
+D. item 4

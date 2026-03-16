@@ -1,0 +1,7 @@
+Intro text
+
+Timer text there you go
+
+Timer text there you go
+
+==Timer text==|timerz:1234| there you don't go

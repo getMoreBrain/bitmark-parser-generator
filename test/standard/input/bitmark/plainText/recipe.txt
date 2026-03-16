@@ -1,0 +1,18 @@
+ZUTATEN
+Kraftbrühe Murillo
+Title for the ingredient
+Geflügelkraftbrühe
+item
+Scheiben vom Eierstich mit Kürbis ...
+item
+Erbsen ...
+item
+Another title for an ingredient
+Salz
+item
+Mehl
+item
+Cooking time
+item
+Cooking time
+item
