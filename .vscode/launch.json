@@ -60,7 +60,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Plain Text",
+      "name": "Plain Text (test.text)",
       "program": "${workspaceFolder}/test/custom/dev/devPlainTextParser.ts",
       "runtimeArgs": [],
       "console": "internalConsole",

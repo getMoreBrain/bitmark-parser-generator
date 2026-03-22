@@ -56,6 +56,7 @@
     "start-parser": "tsx ./test/custom/dev/devParser.ts",
     "start-generator": "tsx ./test/custom/dev/devGenerator.ts",
     "start-prettify": "tsx ./test/custom/dev/devPrettify.ts",
+    "start-plain": "tsx ./test/custom/dev/devPlainTextParser.ts",
     "start-text-bitmark-body-parser": "tsx ./test/custom/dev/devTextBitmarkBodyParser.ts",
     "start-text-bitmark-body-generator": "tsx ./test/custom/dev/devTextBitmarkBodyGenerator.ts",
     "start-text-bitmark-tag-parser": "tsx ./test/custom/dev/devTextBitmarkTagParser.ts",
