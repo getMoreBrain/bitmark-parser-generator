@@ -1,0 +1,40 @@
+
+Here we are testing the inline tag
+
+Here is some inline 'c' code ==int test=0;==|code:c|, nice huh?
+
+Here is some inline 'plain text' code ==int test=0;==|code|, nice huh?
+
+Here is some inline 'colour' applied ==**Bold is ignored**==|color:pink|, nice huh?
+
+Here is some inline 'style' applied ==^^Break^scape^^!==|strike|, nice huh?
+
+Here is some inline 'style' applied ==here is the text==|strike|#With a comment as well|, nice huh?
+
+Here is some inline 'style' applied ==here is the text==|subscript|, nice huh?
+Here is some inline 'style' applied ==here is the text==|superscript|, nice huh?
+Here is some inline 'style' applied ==here is the text==|ins|, nice huh?
+Here is some inline 'style' applied ==here is the text==|del|, nice huh?
+Here is some inline 'style' applied ==here is the text==|underline|, nice huh?
+Here is some inline 'style' applied ==here is the text==|doubleUnderline|, nice huh?
+Here is some inline 'style' applied ==here is the text==|circle|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEmRed|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEmOrange|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEmYellow|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEmGreen|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEmBlue|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEmPurple|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEmPink|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEmBrown|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEmBlack|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEmWhite|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEmGray|, nice huh?
+Here is some inline 'style' applied ==here is the text==|languageEm|, nice huh?
+Here is some inline 'style' applied ==here is the text==|userUnderline|, nice huh?
+Here is some inline 'style' applied ==here is the text==|userDoubleUnderline|, nice huh?
+Here is some inline 'style' applied ==here is the text==|userStrike|, nice huh?
+Here is some inline 'style' applied ==here is the text==|userCircle|, nice huh?
+Here is some inline 'style' applied ==here is the text==|userHighlight|, nice huh?
+Here is some inline 'style' applied ==here is the text==|notranslate|, nice huh?
+
+Here is some inline 'style' applied ==here is the text==|bold|italic|subscript|, nice huh?

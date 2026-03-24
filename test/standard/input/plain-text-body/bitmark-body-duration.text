@@ -1,0 +1,6 @@
+Intro text
+
+==Duration text==|duration:P23DT23H| there you go
+
+==Duration text==|duration:123| there you don't go
+==Duration text==|duration| there you don't go

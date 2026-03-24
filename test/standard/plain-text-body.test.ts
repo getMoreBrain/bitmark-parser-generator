@@ -12,7 +12,6 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const TEST_FILES = getTestFiles();
 const TEST_INPUT_DIR = getTestFilesDir();
-const PLAIN_TEXT_INPUT_DIR = path.resolve(TEST_INPUT_DIR, './plainText');
 const TEST_OUTPUT_DIR = path.resolve(dirname, './results/plain-text-body/output');
 
 const bpg = new BitmarkParserGenerator();
@@ -47,13 +46,12 @@ describe('plain-text-body', () => {
       const partFolderAndFile = testFile.replace(TEST_INPUT_DIR, '');
       const partFolder = path.dirname(partFolderAndFile);
       const fullFolder = path.join(TEST_OUTPUT_DIR, partFolder);
-      const fullPlainTextInputFolder = path.join(PLAIN_TEXT_INPUT_DIR, partFolder);
       const id = path.basename(partFolderAndFile, '.text');
 
       test(`${id}`, () => {
         fs.ensureDirSync(fullFolder);
 
-        const expectedTxtFile = path.resolve(fullPlainTextInputFolder, `${id}.txt`);
+        const expectedTxtFile = path.resolve(TEST_INPUT_DIR, `${id}.txt`);
         const originalTextFile = path.resolve(fullFolder, `${id}.text`);
         const generatedTxtFile = path.resolve(fullFolder, `${id}.gen.txt`);
         const diffFile = path.resolve(fullFolder, `${id}.diff.json`);
@@ -65,12 +63,14 @@ describe('plain-text-body', () => {
         const originalText = fs.readFileSync(originalTextFile, 'utf8');
 
         // Read in the expected plain text file
-        const expectedPlainText = fs.readFileSync(expectedTxtFile, 'utf8');
+        let expectedPlainText = fs.readFileSync(expectedTxtFile, 'utf8');
+        if (expectedPlainText) expectedPlainText = expectedPlainText.trim();
 
         // Generate plain text from bitmark text
-        const generatedPlainText = bpg.extractPlainText(originalText, {
+        let generatedPlainText = bpg.extractPlainText(originalText, {
           inputFormat: InputFormat.bitmarkText,
         });
+        if (generatedPlainText) generatedPlainText = generatedPlainText.trim();
 
         // Write generated plain text to the output folder
         fs.writeFileSync(generatedTxtFile, generatedPlainText, { encoding: 'utf8' });

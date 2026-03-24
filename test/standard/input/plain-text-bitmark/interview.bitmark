@@ -1,0 +1,225 @@
+[.interview:bitmark--]
+[@id:198779]
+[@reasonableNumOfChars:100]
+[%1]
+[!Erklären Sie den Begriff „Steuerüberwälzung“.]
+===
+[@reasonableNumOfChars:101]
+[@sampleSolution:Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]
+[@additionalSolutions:Additional solution 1]
+[@additionalSolutions:Additional solution 2]
+[@additionalSolutions:Additional solution 3]
+===
+[@reasonableNumOfChars:20]
+[@sampleSolution:Some other text.]
+[@sampleSolution:Some other text **2**.]
+===
+[@sampleSolution:Some other text again.]
+===
+[@sampleSolution:Some other text again.]
+[@partialAnswer:This is a **partialAnswer**]
+[@partialAnswer:This is a **partialAnswer** 2]
+===
+
+
+[.interview:bitmark--&image]
+[@id:136528]
+[&image:https://docs.bitbook.education/bit-books/cornelsen/ab_daf/web-resources/images/ab_2a.png]
+[%3a]
+[@bubbleTag:Tag 1]
+[@bubbleTag:]
+[@bubbleTag:Tag 2]
+[@bubbleTag:**Tag 3**]
+[!Wählen Sie eine Person auf den Fotos in Aufgabe 2. Schreiben Sie einen kurzen Text in Ihrer Rolle und beantworten Sie die Fragen.]
+Warum bist du hier? Wie fühlst du dich? Was denkst du gerade?
+===
+Nothing here
+===
+
+
+
+
+[.interview:bitmark--]
+[@id:198779]
+[@extractorTag:Tag 1]
+[@extractorTag:Tag 2]
+[%1]
+[!Erklären Sie den Begriff „Steuerüberwälzung“.]
+===
+[$Eine Steuerüberwälzung ist eine Übertragung der Steuerzahllast vom Steuerzahler auf den Steuerträger.]
+===
+
+[.interview:bitmark++]
+[@id:198781]
+[%3]
+[!Mit welchen Steuern (bspw. Einkommenssteuer, Vermögenssteuer, Mehrwertsteuer, Erbschaftssteuer usw.) sind die einzelnen Ereignisse konfrontiert?]
+
+Anton erhält von seinen Eltern (Variante: von seinem Onkel, seiner Tante) einen Erbvorbezug (Variante: eine Schenkung) von Fr. 200'000. Er macht sich nach seiner abgeschlossenen Ausbildung als Finanzplaner selbständig. Zwei Jahre später heiratet er seine langjährige Freundin Barbara und ein weiteres Jahr darauf wird die Tochter Clara geboren. Sie kaufen sich ein schönes Haus, müssen sich dazu aber einen Teil ihrer Säule 2 auszahlen lassen. Das Einzelunternehmen von Anton entwickelt sich gut und er beschäftigt bereits einige Angestellte. Aus verschiedenen Gründen (Haftung, Mitarbeiterbeteiligung, ggf. steuerliche Überlegungen) möchte Anton eine Aktiengesellschaft gründen und gleichzeitig seine Frau Barbara mitbeteiligen, welche Betriebsökonomin ist und ihn damit auch beruflich sehr gut ergänzt. Anton und Barbara beziehen  aus der Aktiengesellschaft ein regelmässiges Einkommen, schütten sich aber keine Dividende aus. Einige Jahre darauf entschliessen sie sich ein Mitarbeiteraktienmodell einzurichten. Ab diesem Zeitpunkt wird jährlich auch eine Dividende ausgeschüttet. Für die Mitarbeiterbeteiligung hält die Aktiengesellschaft eigene Aktien. Die Aktiengesellschaft hat ein gutes Wachstum und Anton und Barbara entschliessen sich, mit ihrem Unternehmen in einen grösseren Markt zu ziehen. Sie wechseln mit der Aktiengesellschaft den Kanton, behalten aber ihr Haus und vermieten es.
+
+Die Geschichte von Anton und Barbara, ihrer Tochter Clara und der Aktiengesellschaft liesse sich beliebig fortsetzen. Sie zeigt aber bereits jetzt schon anschaulich, wie alltägliche Ereignisse praktisch immer auch mit irgendwelchen Steuern im Zusammenhang stehen.
+
+Dabei sind Mehrfachnennungen von verschiedenen Steuern bei einzelnen Ereignissen möglich. Die nachstehende Tabelle soll der einfacheren Erfassung dienen.
+===
+Ereignis Steuern
+
+[$Erbvorbezug, Schenkung Eltern
+In vielen Kantonen schenkungssteuerfrei für Nachkommen. Nach Erhalt Einkommens-und Vermögenssteuer.]
+===
+Ereignis Steuern
+[@sampleSolution:Erbvorbezug, Schenkung Onkel Tante
+In den meisten Kantonen steuerbar bei der Schenkungssteuer. Sonst aber Kantone LU und SZ. Nach Erhalt Einkommens- und Vermögenssteuer.]
+===
+[@example]
+Ereignis Steuern
+[@sampleSolution:Selbständigkeit
+Wechsel bei der Einkommenssteuer von unselbständig zu selbständig, u.a. Buchwertprinzip.]
+===
+Ereignis Steuern
+[@sampleSolution:Heirat und Tochter
+Wechsel zur Familienbesteuerung für Einkommens- und Vermögensbesteuerung.]
+===
+Ereignis Steuern
+[@sampleSolution:Hauskauf
+Eigenmietwert, Schuldzinsenabzug, LUK, Vermögenssteuerwert, Schulden bei Einkommens- und Vermögenssteuer.]
+===
+Ereignis Steuern
+[@sampleSolution:Bezug Säule 2
+Kapitalleistungen aus Vorsorge mit reduzierter Einkommenssteuer.]
+===
+Ereignis Steuern
+[@sampleSolution:Umwandlung EU in AG
+Grundsätzlich Steuerneutralität, Wechsel selbständig zu unselbständig, Beginn Arbeitstätigkeit Ehefrau bei Einkommens und Vermögenssteuer, ggf Emissionsabgabe]
+===
+Ereignis Steuern
+[@sampleSolution:Mitarbeiteraktien
+Ggf Verkauf Aktien grundsätzlich steuerfrei bei Einkommenssteuer wenn aus Privatvermögen. Kapitalgewinn aus Verkauf eigene Aktien unterliegt bei Aktiengesellschaft der Gewinnsteuer]
+===
+Ereignis Steuern
+[@sampleSolution:Dividende
+Einkommenssteuer, allenfalls reduziert, wenn Voraussetzungen erfüllt.]
+===
+Ereignis Steuern
+[@sampleSolution:Eigene Aktien
+Plafonierung und Veräusserungsfrist, ansonsten Einkommens- und Verrechnungssteuer.]
+===
+Ereignis Steuern
+[@sampleSolution:Hausvermietung
+Mietertrag und LUK Einkommenssteuer, interkantonale Steuerausscheidung]
+===
+
+[.interview:bitmark--]
+[@id:198782]
+[%4]
+[!Geben Sie eine Definition für öffentliche Abgaben und für Steuern.]
+===
+[$Öffentliche Abgaben sind die aufgrund der Hoheitsgewalt des Gemeinwesens geschuldeten finanziellen Leistungen bzw. Geldleistungen der Individuen an das Gemeinwesen.]
+===
+
+[.interview]
+[@id:187612]
+[%12]
+[!Datum / Unterschriften]
+===
+Dieser Bildungsbericht wurde am
+===
+besprochen.
+**Unterschrift der verantwortlichen Berufsbildnerin / des verantwortlichen Berufsbildners:**
+===
+**Unterschrift der lernenden Person:**
+===
+**Visum des gesetzlichen Vertreters / der gesetzlichen Vertreterin:**
+Datum:
+===
+Unterschrift:
+===
+
+[.interview&image]
+[@id:136484]
+[%9]
+[&image:https://docs.bitmark.cloud/bit-books/aufnahmepruefung_gymnasium_kt_zh/mathe_2019/web-resources/images/aufnahmepruefung3.png]
+[!Die beiden U-förmigen Teile A und B, die aus je 7 Würfeln bestehen, werden zu einer Gesamtfigur zusammengesetzt, wie es angegeben ist.]
+
+===
+[%a] Von wie vielen Würfeln der Gesamtfigur sind genau drei Seitenflächen (Quadrate) sichtbar?
+===
+[%b] Wie viele Quadrate der Figur A werden beim Zusammenfügen mit der Figur B verdeckt?
+===
+[%c] Wie viele Quadrate der Gesamtfigur sind von aussen sichtbar?
+===
+[%d] Auf der Gesamtfigur wandert man entlang von Würfelkanten vom Punkt P auf A zum Punkt Q auf B. Wie lange ist eine solcher Weg mindestens?
+===
+
+
+[.interview:bitmark--]
+[@id:136405]
+[%Persönliche Angaben]
+
+===
+Name:
+===
+Vorname:
+===
+Prüfungsnummer:
+===
+Kantonsschule:
+===
+
+
+[.interview:bitmark--]
+[@id:198264]
+[!Aufgaben:]
+===
+Beurteilen Sie, ob sich die Geschwister im MWST-Register der ESTV eintragen lassen
+müssen? Begründen Sie Ihre Antwort mit Hinweis auf das MWSTG.
+[$Ja, die Eintragung ist zwingend, da die Geschwister eine unternehmerische Tätigkeit im Sinne von Art. 10 MWSTG ausüben und der Umsatz von CHF 100'000 mit dem Verkauf der Wohnung 1 (Verkauf vor Baubeginn stellt eine steuerbare Tätigkeit dar) überschritten wird.]
+===
+Erstellen Sie die MWST-Abrechnung (davon ausgehend, dass die Geschwister unabhängig Ihrer Antwort in Aufgabe 1 registriert sind) für die Baute. Der Einfachheit halber erstellen Sie nur eine Abrechnung über das gesamte Bauwerk (keine Quartalsabrechnungen).
+
+===
+
+[.interview:bitmark--]
+[@id:198267]
+[%Aufgabe 4][%Nutzungsänderung]
+
+Die Produktion AG wurde 2010 gegründet und hat zu diesem Zeitpunkt folgende zwei Liegenschaften erstellt:
+
+• Produktionsgebäude mit Lagerhalle, welches vollumfänglich für unternehmerische Tätigkeiten verwendet wird,
+• Verwaltungsgebäude, welches zu 50 % für die eigene Tätigkeit verwendet wird; die übrige Fläche – zwei Wohnungen – werden an Privatpersonen vermietet.
+
+Die Investitionen für die Liegenschaften beliefen sich 2010 auf folgende Werte inkl. 7,60 % MWST:
+
+• Produktionsgebäude                 CHF 4'842'000 (inkl. 7,60% MWST)
+• Verwaltungsgebäude inkl. Wohnungen CHF 5'380'000 (inkl. 7,60% MWST)
+• Landanteil für beide Gebäude       CHF 1'800'000
+
+Im Geschäftsjahr 2017 wurden infolge Wasserschadens das Verwaltungsgebäude saniert werden. Die Sanierungskosten haben sich auf 648'000 inkl. 8.0% MWST belaufen. Der Gebäudeversicherungswert hat zu diesem Zeitpunkt (vor Sanierung) CHF 6'000'000 betragen.
+
+Nachdem die Gesellschaft in letzter Zeit massive Verluste erlitten hat, wurde vom Verwaltungsrat im Rahmen einer Sanierung beschlossen, die beiden Liegenschaften zu veräussern. Die Immo Invest AG ist bereit, die Grundstücke auf den 30. Juni 2021 wie folgt zu erwerben:
+
+• Produktionsgebäude: CHF 6'500'000 (inkl. Land CHF 1'000'000)
+• Verwaltungsgebäude: CHF 7'500'000 (inkl. Land CHF 1'400'000)
+
+Der öffentlich beurkundete Kaufvertrag wurde am 20. Juli 2021 unterzeichnet.
+
+Zeigen Sie die mehrwertsteuerlichen Konsequenzen aus der Veräusserung der Grundstücke für jeder der drei folgenden Varianten auf:
+===
+Variante 1: Verkauf gemäss Art. 21 MWSTG
+===
+Variante 2: Verkauf mit Option gemäss Art. 22 MWSTG
+===
+Variante 3: Verkauf mittels Meldeverfahren gemäss Art. 38 MWSTG.
+===
+
+
+[.interview]
+Hello World!
+
+|image:https://docs.getmorebrain.com/20.png|width:139|
+
+====
+Card 1 with image
+|image:https://docs.getmorebrain.com/20.png|width:139|
+
+====
+Card 2
+

@@ -1,0 +1,8 @@
+Inline ==\\left( x | y \\right)==|latex| text
+Inline == \\left( x | y \\right) ==|latex| text
+
+==
+\\left( x | y \\right)
+==|latex|
+
+Latex blocks are now separate bits!

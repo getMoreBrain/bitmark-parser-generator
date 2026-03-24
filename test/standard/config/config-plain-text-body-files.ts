@@ -5,7 +5,7 @@ import { FileUtils } from '../../../src/utils/FileUtils.ts';
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const TEST_FILES_DIR = path.resolve(dirname, '../input/text-bitmark-body-parser');
+const TEST_FILES_DIR = path.resolve(dirname, '../input/plain-text-body');
 
 // List all test files in the directory
 const TEST_FILES = (() => {

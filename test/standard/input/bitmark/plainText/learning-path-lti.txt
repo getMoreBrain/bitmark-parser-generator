@@ -1,6 +1,0 @@
-https://other.platform/path/to/quiz
-Nullserie
-Of course, it exists without the image resource like any other bit.
-It works like a .article (instruction, body, resources, …)
-It just adds action, duration and deepLink
-Three strings
