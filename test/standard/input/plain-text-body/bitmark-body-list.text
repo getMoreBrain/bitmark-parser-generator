@@ -1,0 +1,95 @@
+Some text before the list
+•1 Ordered list item 1
+•1 __Ordered
+list item 2__
+•1 Ordered list item 3
+	• Bullet list item 3.1
+	• Bullet list item 3.2
+•1 Ordered list item 4
+•1 Ordered
+list item 5
+•1 Ordered list item 6
+	• Bullet list item 6.1
+		• Bullet __list__ item 6.1.1
+•1 Ordered list item 7
+•1 Ordered list item 8
+	• Bullet list item 8.1
+•1 **Ordered** list item 9
+•1 Ordered list item 10
+	• Bullet
+	list item 10.1
+	• Bullet list item 10.2
+	• Bullet **list item 10.3**
+		•1 Ordered list item 10.3.1
+			•1 Ordered list
+			item 10.3.1.1
+	• Bullet list item 10.4
+	• Bullet list item 10.5
+		•A Lettered list item 10.5.1
+		•A Lettered list item 10.5.2
+•1 Ordered list item 11
+•1 Ordered list item 12
+• Not allowed, will be part of the ordered list, not '**Bullet list item 1**'
+• Not allowed, will be part of the ordered list, not 'Bullet list item 2'
+•A Not allowed, will be part of the ordered list, not '**Lettered list item 1**'
+•A Not allowed, will be part of the ordered list, not 'Lettered list item 2'
+
+Some text after the list
+
+
+A task list
+•+ Task list item 11.1 checked
+	•+ Task list item 11.1.1 checked
+•+ Task list item 11.3 checked
+•- Task list item
+11.4 NOT checked
+•- Task list item 11.5 NOT checked
+•+ Task list item 11.6
+checked
+
+Some text after the tasklist
+
+Simple list
+•_ item 1
+•_ __
+item 2__
+•_ item 3
+	•_ item 3.1
+	•_ item 3.2
+•_ item 4
+
+Ordered list, roman tag
+•0I item 1
+•1I __
+item 2__
+•2I item 3
+	•3I item 3.1
+	•4I item 3.2
+•5I item 4
+
+Ordered list, roman lower tag
+•0i item 1
+•1i __
+item 2__
+•2i item 3
+	•3i item 3.1
+	•4i item 3.2
+•5i item 4
+
+Lettered list, lower tag
+•a item 1
+•a __
+item 2__
+•a item 3
+	•a item 3.1
+	•a item 3.2
+•a item 4
+
+Lettered list, upper tag
+•A item 1
+•A __
+item 2__
+•A item 3
+	•A item 3.1
+	•A item 3.2
+•A item 4

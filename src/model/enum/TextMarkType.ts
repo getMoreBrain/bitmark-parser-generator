@@ -6,6 +6,16 @@ const TextMarkType = {
   light: 'light',
   italic: 'italic',
   highlight: 'highlight',
+  highlightOrange: 'highlightOrange',
+  highlightYellow: 'highlightYellow',
+  highlightGreen: 'highlightGreen',
+  highlightBlue: 'highlightBlue',
+  highlightPurple: 'highlightPurple',
+  highlightPink: 'highlightPink',
+  highlightBrown: 'highlightBrown',
+  highlightBlack: 'highlightBlack',
+  highlightWhite: 'highlightWhite',
+  highlightGray: 'highlightGray',
 
   // Inline only styles
   strike: 'strike',

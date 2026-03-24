@@ -1,0 +1,78 @@
+Some code follows:
+
+|code:JavaScript
+const chain = Object.assign({}, ...ch)
+
+let textAlign_ = chain.captionAlign || "left"; delete chain.captionAlign
+let alt_ = chain.alt || null; delete chain.alt
+let title_ = chain.caption || null; delete chain.caption
+let class_ = chain.align || "center"; delete chain.align
+
+
+|code:typescript
+  /**
+   * Convert Bitmark text to text AST.
+   *
+   * The Bitmark text should be a string.
+   * If parsed bitmark text AST is passed to this function, it will be returned as is.
+   *
+   * @param text - bitmark text
+   * @returns bitmark text AST as plain JS object
+   */
+  toAst(text: string | TextAst | undefined, options?: BitmarkTextParserOptions): TextAst {
+    // If input is not a string, return it as is
+    if (Array.isArray(text)) return text;
+    const str = text as string;
+
+    const testXor = 2 ^ 0x12345678;
+
+    // Ensure options is an object
+    const opts = Object.assign({}, options);
+
+    // Default text format to bitmark-- if not specified
+    if (!opts.textFormat) opts.textFormat = TextFormat.bitmarkMinusMinus;
+
+    const startRule = opts.textFormat === TextFormat.bitmarkPlusPlus ? 'bitmarkPlusPlus' : 'bitmarkMinusMinus';
+
+    return bitmarkTextParse(str ?? '', {
+      startRule,
+    });
+  }
+
+|
+
+Some more code follows with tricky bits:
+
+
+|code:The code starts here
+and continues on the next line,
+and the next line
+
+
+|code:c99
+int main(int argc, char* argv[]){
+  // Body
+}
+
+
+|code:typescript
+void veryNastyCode() {
+  int xor = 1 ^ 0x1234; // This is fine, not breakscaped away
+  int or  = 1 // Inline comment followed by no indentation
+| 0x1234; // This is going to break things
+}
+
+
+|code:coffeescript
+void moreNastyCodeMustBeEscaped() {
+  int xor = 1 ^ 0x1234; // This is fine, not breakscaped away
+  int or  = 1 // Inline comment followed by no indentation
+|^
+  return "Not sure why that is there, but it needs to be escaped!";
+}
+
+|code:c++
+int mess_up(int **doublePointer) {
+  return "take that!!"
+}
+

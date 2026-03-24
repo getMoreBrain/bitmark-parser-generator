@@ -1,0 +1,92 @@
+[.essay]
+[%1]
+[!Listen to the train announcement. Write down every word you hear.]
+[@reasonableNumOfChars:100]
+[@sampleSolution: Will be overridden]
+[@sampleSolution:The train now approaching Platform **2** is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]
+[@additionalSolutions:Additional solution 1]
+[@additionalSolutions:Additional solution 2]
+[@additionalSolutions:Additional solution 3]
+
+[.essay:bitmark--]
+[@id:245552]
+[%][%Lernaufgabe E – 22]
+Fachmann Gesundheit Bruno Moll und Fachfrau Gesundheit Anna Schulz haben in der erweiterten Beispielhaften Situation mithilfe des Internets weitere präventive Massnahmen recherchiert. Aus ihren Recherchen ziehen sie den Schluss, dass es reicht, wenn sich die Klientinnen und Klienten gut ernähren, viel an der frischen Luft sind und gute soziale Kontakte pflegen. [!Überprüfen Sie die Hypothese und beurteilen Sie diese Aussage.]
+[@partialAnswer:This is a **partialAnswer**]
+[@partialAnswer:This is a **partialAnswer** 2]
+[@additionalSolutions:Additional solution 1]
+[@additionalSolutions:Additional solution 2]
+[@additionalSolutions:Additional solution 3]
+
+[.essay::bitmark++]
+[@id:272740]
+[%2][%Situationen und Aufgaben gemäss Lehrplan]
+Ein Kunde hat eine sehr empfindliche Haut, die schnell zu **Juckreiz** neigt. Er möchte sich längerfristig so behandeln, dass dieser Juckreiz möglichst selten auftritt.
+
+[!Machen Sie sich Gedanken zu folgenden Fragen:]
+
+• Haben Sie selbst dieses Problem auch schon erlebt, dass es Sie juckt? Was haben Sie dagegen unternommen?
+• Warum hat die Haut gejuckt? Welche Ursachen könnten eine Rolle spielen?
+
+[@example:The train now approaching Platform **2** is the delayed 11.45 South West Trains service to Poole. Platform 2 for the 11.45 service to Poole.]
+
+[.essay:bitmark++]
+[@id:152151]
+[!Eine Garagen- und Fahrschulgruppe wendet die Gruppenbesteuerung an: Die Beteiligungsverhältnisse präsentieren sich wie folgt:]
+|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_1.png|
+
+Erstellen Sie die Mehrwertsteuerabrechnung 20.1 aufgrund der nachfolgenden Angaben:
+
+**01.01. bis 31.12.20.1 - Beträge In CHF (exkl. MWST)**
+• Autohandels AG
+3.200.000 - Verkäufe an inländische Kunden
+80.000 - Verkäufe an Fahrschule
+100.000 - Dividendenerträge von Gruppengesellschaften
+Investitionen 7,7% = 50% des Umsatzes
+Übriger Aufwand 7,7% = 10% des Umsatzes
+
+• Immobilien AG
+120.000 - Mieterträge von Autohandels AG
+80.000 - Mieterträge von Reparatur und Carrossierie AG
+100.000 - Mietersträge von Fahrschule AG
+-65.000 - Aufwendungen (7,7%)
+
+• Reparatur und Carrosserie AG
+820.000 - Umsätze mit Dritten
+150.000 - Umsätze mit Fahrschule AG
+-360.000 - Aufwendungen (7,7%)
+
+• Fahrschule AG
+270.000 - Kurse und Schulungen im Inland
+80.000 - Kurse und Schulungen im Ausland
+40.000 - Verkäufe von ausgemusterten Fahrzeugen an Dritte
+140.000 - Aufwendungen (7,7%)
+
+
+[?|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_6.png|
+1)VOST: 3.200.000 * 60% * 7,70%				VOST	**147.840**
+2)|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_5.png|
+3) VOST auf steuerbaren Leistungen = 84,5% auf 7,7% von 360	    **23.423**
+
+4)direkte VOST auf Ausland-Umsätzen, da für diese
+optiert werden könnte (Art. 29 Ibis MWSTG).
+Berechnung: 80.000 / 3.900 = 20.51%; 140.000 * 20,51 * 7,70%	       **2.211**
+
+**Abrechnung:**
+
+Umsatz (3.200.000+820.000+390.000)	4.410.000
+./. ausg. Umsätze	-390.000
+steuerbare Umsätze	4.020.000
+
+**Steuer 7,70%	309.540**
+**VOST	-176.557**
+**Nettozahllast	132.983**
+]
+
+
+[.essay]
+[@id:136476]
+[%1]
+[!Gib das Ergebnis an:
+(107 · 0.471)+(6.98+3.41+3.02−3.39)−(97 · 0.471)]
+

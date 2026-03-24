@@ -1,2 +1,0 @@
-This is an app-search bit with some content.
-This is an app-search bit with some content in bitmark-- format.

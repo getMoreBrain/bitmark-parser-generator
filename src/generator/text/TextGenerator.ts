@@ -86,6 +86,17 @@ const STANDARD_MARK_TYPES: TextMarkTypeType[] = [
   TextMarkType.highlight,
 ];
 const INLINE_MARK_TYPES: TextMarkTypeType[] = [
+  TextMarkType.highlightOrange,
+  TextMarkType.highlightYellow,
+  TextMarkType.highlightGreen,
+  TextMarkType.highlightBlue,
+  TextMarkType.highlightPurple,
+  TextMarkType.highlightPink,
+  TextMarkType.highlightBrown,
+  TextMarkType.highlightBlack,
+  TextMarkType.highlightWhite,
+  TextMarkType.highlightGray,
+
   TextMarkType.strike,
   TextMarkType.subscript,
   TextMarkType.superscript,

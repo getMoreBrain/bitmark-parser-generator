@@ -20,14 +20,7 @@ const bpg = new BitmarkParserGenerator();
 
 class DevRegeneratePlainTextFromTextBody {
   async test(_debug?: boolean): Promise<void> {
-    const textFilesDir = path.resolve(
-      dirname,
-      '../../..',
-      'test/standard/input/text-bitmark-body-parser',
-    );
-    const plainTextFilesDir = path.resolve(textFilesDir, 'plainText');
-
-    fs.ensureDirSync(plainTextFilesDir);
+    const textFilesDir = path.resolve(dirname, '../../..', 'test/standard/input/plain-text-body');
 
     const textFiles = FileUtils.getFilenamesSync(textFilesDir, {
       match: new RegExp('.+\\.text$'),
@@ -37,7 +30,7 @@ class DevRegeneratePlainTextFromTextBody {
     for (const textFile of textFiles) {
       const basename = path.basename(textFile);
       const id = path.basename(textFile, '.text');
-      const txtFile = path.join(plainTextFilesDir, `${id}.txt`);
+      const txtFile = path.join(textFilesDir, `${id}.txt`);
 
       console.log(`Processing: ${basename}`);
 

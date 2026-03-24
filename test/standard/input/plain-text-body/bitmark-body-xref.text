@@ -1,0 +1,15 @@
+==Some text==|xref:this is an xreference| on the previous text
+
+• Test link in a list 2
+	• Entgelt ==Some
+	text==|xref:this is **an** xreference| on the previous text
+
+==Some text==|xref:| with empty xreference
+
+==Some text==|xref:this is an xreference|►this is a reference| on the previous text
+
+• Test link in a list 2
+	• Entgelt ==Some
+	text==|xref:this is **an** xreference|►this is __a__ reference| on the previous text
+
+==Some text==|xref:|►| with empty xreference

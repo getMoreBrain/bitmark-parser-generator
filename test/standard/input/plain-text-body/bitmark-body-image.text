@@ -1,0 +1,14 @@
+Some block images follow:
+
+|image:https://t.com/simple.png|
+
+|image:https://t.com/simple.png|@width:928|height:10|
+
+|image:https://t.com/simple.png|#A comment|@alt:Alt text|@captionAlign:right|@alignment:right|zoomDisabled:true|caption:A caption|
+
+Some inline images follow:
+
+Here is the text ==alt text of the inline image==|imageInline:https://img.io/img.svg| more text
+Here is the text ==alt text of the inline image==|imageInline:https://img.io/img.svg|@width:400|height:200| more text
+Here is the text ==alt text of the inline image==|imageInline:https://img.io/img.svg|width:400|@height:200|#comment| more text
+Here is the text ==alt text of the inline image==|imageInline:https://img.io/img.svg|alignmentVertical:bottom|size:super| more text

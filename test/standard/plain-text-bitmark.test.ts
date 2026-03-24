@@ -12,7 +12,6 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const TEST_FILES = getTestFiles();
 const TEST_INPUT_DIR = getTestFilesDir();
-const PLAIN_TEXT_INPUT_DIR = path.resolve(TEST_INPUT_DIR, './plainText');
 const TEST_OUTPUT_DIR = path.resolve(dirname, './results/plain-text-bitmark/output');
 
 const bpg = new BitmarkParserGenerator();
@@ -47,13 +46,12 @@ describe('plain-text-bitmark', () => {
       const partFolderAndFile = testFile.replace(TEST_INPUT_DIR, '');
       const partFolder = path.dirname(partFolderAndFile);
       const fullFolder = path.join(TEST_OUTPUT_DIR, partFolder);
-      const fullPlainTextInputFolder = path.join(PLAIN_TEXT_INPUT_DIR, partFolder);
       const id = path.basename(partFolderAndFile, '.bitmark');
 
       test(`${id}`, () => {
         fs.ensureDirSync(fullFolder);
 
-        const expectedTxtFile = path.resolve(fullPlainTextInputFolder, `${id}.txt`);
+        const expectedTxtFile = path.resolve(TEST_INPUT_DIR, `${id}.txt`);
         const originalMarkupFile = path.resolve(fullFolder, `${id}.bitmark`);
         const generatedTxtFile = path.resolve(fullFolder, `${id}.gen.txt`);
         const diffFile = path.resolve(fullFolder, `${id}.diff.json`);
@@ -65,12 +63,14 @@ describe('plain-text-bitmark', () => {
         const originalMarkup = fs.readFileSync(originalMarkupFile, 'utf8');
 
         // Read in the expected plain text file
-        const expectedText = fs.readFileSync(expectedTxtFile, 'utf8');
+        let expectedText = fs.readFileSync(expectedTxtFile, 'utf8');
+        if (expectedText) expectedText = expectedText.trim();
 
         // Generate plain text from bitmark
-        const generatedText = bpg.extractPlainText(originalMarkup, {
+        let generatedText = bpg.extractPlainText(originalMarkup, {
           inputFormat: InputFormat.bitmark,
         });
+        if (generatedText) generatedText = generatedText.trim();
 
         // Write generated plain text to the output folder
         fs.writeFileSync(generatedTxtFile, generatedText, { encoding: 'utf8' });

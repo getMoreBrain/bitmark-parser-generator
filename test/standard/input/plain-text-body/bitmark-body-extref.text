@@ -1,0 +1,15 @@
+==Some text==|extref:this is an extreference|provider:must be set| on the previous text
+
+• Test link in a list 2
+	• Entgelt ==Some
+	text==|extref:this is **an** extreference|►hello|►hello2|provider: must be set| on the previous text
+
+==Some text==|extref:| with empty extreference and no provider, will not match
+
+==Some text==|exyref:this is an extreference|►this is a reference|provider:must be set| on the previous text
+
+• Test link in a list 2
+	• Entgelt ==Some
+	text==|extref:this is **an** extreference|►this is __a__ reference|provider:must be set| on the previous text
+
+==Some text==|extref:|►|provider:| with empty extreference and empty provider

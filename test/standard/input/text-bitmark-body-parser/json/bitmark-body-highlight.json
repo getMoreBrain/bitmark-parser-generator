@@ -88,6 +88,141 @@
         ],
         "text": " HIGHLIGHT ",
         "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlightOrange"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlightYellow"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlightGreen"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlightBlue"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlightPurple"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlightPink"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlightBrown"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlightBlack"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlightGray"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlightWhite"
+          }
+        ],
+        "text": "text",
+        "type": "text"
       }
     ],
     "attrs": {}
