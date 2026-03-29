@@ -5503,6 +5503,22 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     description: 'Hand in scan bit, used to create scan submission sections in articles or books',
   },
+  [BitType.handInSystemMedia]: {
+    //
+    since: '1.5.15',
+    baseBitType: BitType._standard,
+    description:
+      'Hand in system media bit, used to create system media submission sections in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_handInAcceptFileType,
+        description:
+          'Accepted file types for the hand-in system media, used to define allowed file formats',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+    ],
+  },
   [BitType.handInSubmit]: {
     //
     since: '3.2.0',
