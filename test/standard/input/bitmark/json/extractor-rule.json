@@ -1,0 +1,155 @@
+[
+  {
+    "bit": {
+      "type": "extractor-rule",
+      "format": "text",
+      "bitLevel": 1,
+      "id": [
+        "100001"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Use the following bits when the icon contains an exclamation mark",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "example.com",
+          "src": "https://example.com/rule-reference.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "body": ""
+    },
+    "parser": {
+      "version": "5.17.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.extractor-rule]\n[@id:100001]\n[!Use the following bits when the icon contains an exclamation mark]\n[&image:https://example.com/rule-reference.png]"
+  },
+  {
+    "bit": {
+      "type": "note",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Be aware of this note",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.17.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.note]\nBe aware of this note"
+  },
+  {
+    "bit": {
+      "type": "extractor-rule",
+      "format": "text",
+      "bitLevel": 1,
+      "id": [
+        "100002"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "example.com",
+          "src": "https://example.com/rule-reference-2.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "body": ""
+    },
+    "parser": {
+      "version": "5.17.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.extractor-rule]\n[@id:100002]\n[&image:https://example.com/rule-reference-2.png]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Simple text in an article",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.17.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.article]\nSimple text in an article"
+  }
+]

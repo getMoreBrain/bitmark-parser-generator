@@ -1,0 +1,15 @@
+
+[.extractor-rule]
+[@id:100001]
+[!Use the following bits when the icon contains an exclamation mark]
+[&image:https://example.com/rule-reference.png]
+
+[.note]
+Be aware of this note
+
+[.extractor-rule]
+[@id:100002]
+[&image:https://example.com/rule-reference-2.png]
+
+[.article]
+Simple text in an article
