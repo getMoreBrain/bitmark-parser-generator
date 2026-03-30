@@ -1,0 +1,85 @@
+[
+  {
+    "bit": {
+      "type": "hand-in-system-media",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "189522"
+      ],
+      "handInAcceptFileType": [
+        "application/pdf",
+        "image/tiff"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Halten Sie Ihre Ergebnisse stichwortartig auf Flipchart oder Pinkarten fest damit Sie diese später im Plenum vorstellen können.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Wichtig: die Bullet-Points der Folie sind nur Möglichkeiten und Ideen…bestimmt haben Sie selber noch andere Ideen, Sie müssen nicht zu jedem Bullet-Point Stellung beziehen.",
+              "type": "text"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "text": "Zeit: 60 Minuten",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.17.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.hand-in-system-media]\n[@id:189522]\n[!Halten Sie Ihre Ergebnisse stichwortartig auf Flipchart oder Pinkarten fest damit Sie diese später im Plenum vorstellen können.]\n[@handInAcceptFileType:application/pdf]\n[@handInAcceptFileType:image/tiff]\n\nWichtig: die Bullet-Points der Folie sind nur Möglichkeiten und Ideen…bestimmt haben Sie selber noch andere Ideen, Sie müssen nicht zu jedem Bullet-Point Stellung beziehen.\n\nZeit: 60 Minuten"
+  },
+  {
+    "bit": {
+      "type": "hand-in-system-media",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "197943"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "handInAcceptFileType": []
+    },
+    "parser": {
+      "version": "5.17.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.hand-in-system-media]\n[@id:197943]"
+  }
+]
