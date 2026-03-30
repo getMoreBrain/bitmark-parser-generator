@@ -290,6 +290,7 @@ const BitType = {
   handInPhoto: 'hand-in-photo',
   handInScan: 'hand-in-scan',
   handInSubmit: 'hand-in-submit',
+  handInSystemMedia: 'hand-in-system-media',
   handInVideo: 'hand-in-video',
   handInVoice: 'hand-in-voice',
   help: 'help',
