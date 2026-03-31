@@ -295,21 +295,49 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_standardItemLead]: {
+    type: GroupConfigType.standard,
+    description: 'Standard group for item, lead, page number, and margin number tags',
+    tags: [
+      {
+        key: ConfigKey.tag_item,
+        jsonKey: 'item',
+        description: 'The item for the bit',
+        chain: [
+          {
+            key: ConfigKey.tag_item,
+            jsonKey: 'lead',
+            description: 'The lead for the bit',
+            maxCount: 1,
+            chain: [
+              {
+                key: ConfigKey.tag_item,
+                jsonKey: 'pageNumber',
+                description: 'The page number for the bit',
+                maxCount: 1,
+                chain: [
+                  {
+                    key: ConfigKey.tag_item,
+                    jsonKey: 'marginNumber',
+                    description: 'The margin number for the bit',
+                    maxCount: 1,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
   [ConfigKey.group_standardItemLeadInstructionHint]: {
     type: GroupConfigType.standard,
     description:
       'Standard group for item, lead, page number, margin number, instruction and hint tags',
     tags: [
       {
-        key: ConfigKey.tag_item,
-        description: 'The item for the bit',
-        chain: [
-          {
-            key: ConfigKey.tag_item,
-            description: 'The lead, page number, and margin number for the bit',
-            maxCount: 3,
-          },
-        ],
+        key: ConfigKey.group_standardItemLead,
+        description: 'Item, lead, page number, and margin number tags',
       },
       {
         key: ConfigKey.tag_instruction,

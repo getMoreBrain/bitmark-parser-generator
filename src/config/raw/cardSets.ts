@@ -768,15 +768,9 @@ const CARDSETS: _CardSetsConfig = {
                 format: TagFormat.plainText,
               },
               {
-                key: ConfigKey.tag_item,
-                description: 'The item for the bot action response.',
-                chain: [
-                  {
-                    key: ConfigKey.tag_item,
-                    description: 'The lead, page number, source page number, and margin number.',
-                    maxCount: 4,
-                  },
-                ],
+                key: ConfigKey.group_standardItemLead,
+                description:
+                  'Item, lead, page number, and margin number for the bot action response.',
               },
               {
                 key: ConfigKey.tag_instruction,
@@ -870,15 +864,8 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Group for true/false properties of the ingredient.',
               },
               {
-                key: ConfigKey.tag_item,
-                description: 'The item for the ingredient.',
-                chain: [
-                  {
-                    key: ConfigKey.tag_item,
-                    description: 'Lead, page number, source page number, and margin number.',
-                    maxCount: 4,
-                  },
-                ],
+                key: ConfigKey.group_standardItemLead,
+                description: 'Item, lead, page number, and margin number for the ingredient.',
               },
               {
                 key: ConfigKey.tag_instruction,

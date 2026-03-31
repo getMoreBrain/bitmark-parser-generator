@@ -12,6 +12,20 @@ import {
 } from '../BitmarkPegParserTypes.ts';
 import { itemLeadTagContentProcessor } from './ItemLeadTagContentProcessor.ts';
 
+/**
+ * Recursively flatten nested chain content into a flat array.
+ * Handles both flat chains (old config) and nested sub-chains (new config).
+ */
+function flattenChainContent(content: BitContent): BitContent[] {
+  const result: BitContent[] = [content];
+  if (content.chain) {
+    for (const child of content.chain) {
+      result.push(...flattenChainContent(child));
+    }
+  }
+  return result;
+}
+
 function itemLeadChainContentProcessor(
   context: BitmarkPegParserContext,
   contentDepth: ContentDepthType,
@@ -37,7 +51,7 @@ function buildItemLead(
 
   // Process the chain (lead)
   const itemLeadConfig = Config.getTagConfigForTag(tagsConfig, Enum(Tag).fromValue(content.type));
-  const chainContent = [content, ...(content.chain ?? [])];
+  const chainContent = flattenChainContent(content);
 
   const chainTags = context.bitContentProcessor(
     BitContentLevel.Chain,

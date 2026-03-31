@@ -115,7 +115,7 @@ class ConfigBuilder {
       let jsonKey = key;
 
       if (key === '%') {
-        jsonKey = 'item_todo';
+        jsonKey = 'item';
       } else if (key === '!') {
         jsonKey = 'instruction';
       } else if (key === '?') {
