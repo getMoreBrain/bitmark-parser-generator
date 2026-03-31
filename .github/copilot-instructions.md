@@ -11,3 +11,4 @@
 ## Important Rules
 
 - Do not create documentation unless instructed to do so.
+- submodules are read-only. Do not edit files in submodules.

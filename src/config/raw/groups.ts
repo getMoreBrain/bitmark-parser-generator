@@ -471,6 +471,7 @@ const GROUPS: _GroupsConfig = {
         chain: [
           {
             key: ConfigKey.tag_gap,
+            jsonKey: 'solutions[]',
             description: 'Alternative values for the gaps in the content',
             maxCount: Count.infinity,
           },
@@ -480,11 +481,13 @@ const GROUPS: _GroupsConfig = {
           },
           {
             key: ConfigKey.property_example,
+            jsonKey: 'example',
             description: 'An example for the gap',
             format: TagFormat.plainText,
           },
           {
             key: ConfigKey.property_isCaseSensitive,
+            jsonKey: 'isCaseSensitive',
             description: 'If true, the gap text is case sensitive',
             format: TagFormat.boolean,
           },
@@ -503,11 +506,13 @@ const GROUPS: _GroupsConfig = {
         chain: [
           {
             key: ConfigKey.tag_true,
+            jsonKey: 'choices[]|set(isCorrect=true)',
             description: 'True values for a true/false statement/question',
             maxCount: Count.infinity,
           },
           {
             key: ConfigKey.tag_false,
+            jsonKey: 'choices[]|set(isCorrect=false)',
             description: 'False values for a true/false statement/question',
             maxCount: Count.infinity,
           },
@@ -517,6 +522,7 @@ const GROUPS: _GroupsConfig = {
           },
           {
             key: ConfigKey.property_example,
+            jsonKey: 'example',
             description: 'An example for the true/false statement/question',
             format: TagFormat.plainText,
           },
@@ -529,11 +535,13 @@ const GROUPS: _GroupsConfig = {
         chain: [
           {
             key: ConfigKey.tag_true,
+            jsonKey: 'choices[]|set(isCorrect=true)',
             description: 'True values for a true/false statement/question',
             maxCount: Count.infinity,
           },
           {
             key: ConfigKey.tag_false,
+            jsonKey: 'choices[]|set(isCorrect=false)',
             description: 'False values for a true/false statement/question',
             maxCount: Count.infinity,
           },
@@ -543,6 +551,7 @@ const GROUPS: _GroupsConfig = {
           },
           {
             key: ConfigKey.property_example,
+            jsonKey: 'example',
             description: 'An example for the true/false statement/question',
             format: TagFormat.plainText,
           },
@@ -585,11 +594,13 @@ const GROUPS: _GroupsConfig = {
         chain: [
           {
             key: ConfigKey.property_mark,
+            jsonKey: 'mark',
             description: 'The mark configuration',
             format: TagFormat.plainText,
           },
           {
             key: ConfigKey.property_example,
+            jsonKey: 'example',
             description: 'An example for the marked content',
             format: TagFormat.plainText,
           },

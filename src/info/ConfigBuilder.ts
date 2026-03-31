@@ -133,13 +133,13 @@ class ConfigBuilder {
         // } else if (key === '&') {
         //   jsonKey = 'Resource';
       } else if (key === '+') {
-        jsonKey = 'true_todo';
+        jsonKey = 'choices[]|set(isCorrect=true)';
       } else if (key === '-') {
-        jsonKey = 'false_todo';
+        jsonKey = 'choices[]|set(isCorrect=false)';
       } else if (key === '_') {
-        jsonKey = 'gap_todo';
+        jsonKey = 'solutions[]';
       } else if (key === '=') {
-        jsonKey = 'mark_todo';
+        jsonKey = 'solution';
       } else if (key.startsWith('@')) {
         jsonKey = key.substring(1);
       } else if (key.startsWith('&')) {

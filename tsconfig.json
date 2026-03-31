@@ -21,6 +21,7 @@
     "assets",
     "coverage",
     "docs",
+    "submodules",
     // Catch-22: Have to exclude as it includes imports from the build
     // output so checks will fail if not built,
     "test/standard/web-bpg-minified-wrapper.js"

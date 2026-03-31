@@ -422,11 +422,13 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_true,
                 description: 'Tag for true statements.',
+                jsonKey: 'isCorrect|value(true)',
                 maxCount: 1,
               },
               {
                 key: ConfigKey.tag_false,
                 description: 'Tag for false statements.',
+                jsonKey: 'isCorrect|value(false)',
                 maxCount: 1,
               },
               {
@@ -860,8 +862,16 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the ingredient.',
               },
               {
-                key: ConfigKey.group_trueFalse,
-                description: 'Group for true/false properties of the ingredient.',
+                key: ConfigKey.tag_true,
+                description: 'Checked state for the ingredient.',
+                jsonKey: 'checked|value(true)',
+                maxCount: 1,
+              },
+              {
+                key: ConfigKey.tag_false,
+                description: 'Unchecked state for the ingredient.',
+                jsonKey: 'checked|value(false)',
+                maxCount: 1,
               },
               {
                 key: ConfigKey.group_standardItemLead,

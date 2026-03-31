@@ -1,0 +1,3 @@
+[submodule "submodules/bitmark-parser-rust"]
+	path = submodules/bitmark-parser-rust
+	url = https://github.com/getMoreBrain/bitmark-parser-rust.git
