@@ -3023,6 +3023,25 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     description: 'Extractor repeated text bit, used to define repeated text in extractor pages',
   },
+  [BitType.extractorRule]: {
+    since: '5.17.0',
+    baseBitType: BitType._standard,
+    description:
+      'Extractor rule bit, used to define extraction rules with reference images and instructions',
+    tags: [
+      {
+        key: ConfigKey.group_resourceBitTags,
+        description: 'Resource bit tags for extraction rule images',
+      },
+      {
+        key: ConfigKey.group_resourceImage,
+        description: 'Resource image tags for the rule reference image',
+        minCount: 1,
+      },
+    ],
+    resourceAttachmentAllowed: false,
+    textFormatDefault: TextFormat.plainText,
+  },
   [BitType.extractorPageNumber]: {
     since: '1.5.21',
     baseBitType: BitType.article,
