@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.17.0
+Version: 5.19.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -285,6 +285,7 @@ hand-in-location (since: 1.5.15)
 hand-in-photo (since: 1.5.15)
 hand-in-scan (since: 1.5.15)
 hand-in-submit (since: 3.2.0)
+hand-in-system-media (since: 1.5.15)
 hand-in-video (since: 1.5.15)
 hand-in-voice (since: 1.5.15)
 help (since: 1.3.0)
