@@ -24,25 +24,6 @@ export interface GenerateConfigOptions {
 
 const normalizeCardKey = (cardSetKey: string): string => StringUtils.camelToKebab(cardSetKey);
 
-/**
- * Convert a raw defaultValue string to a typed value for export.
- */
-const convertDefaultValue = (
-  defaultValue: string | undefined,
-  format: string,
-): boolean | number | string | unknown[] | null => {
-  if (defaultValue == null) return null;
-  if (defaultValue === '[]') return [];
-  if (format === 'bool') {
-    return defaultValue === 'true';
-  }
-  if (format === 'number') {
-    const n = Number(defaultValue);
-    return isNaN(n) ? defaultValue : n;
-  }
-  return defaultValue;
-};
-
 class ConfigBuilder {
   public build(options?: GenerateConfigOptions): void {
     const opts: GenerateConfigOptions = Object.assign({}, options);
@@ -263,7 +244,7 @@ class ConfigBuilder {
         jsonKey,
         ...(tag.secondaryJsonKey ? { secondaryJsonKey: tag.secondaryJsonKey } : {}),
         format,
-        default: convertDefaultValue(tag.defaultValue, format),
+        default: tag.defaultValue ?? null,
         alwaysInclude: false,
         min: tag.minCount == null ? 0 : tag.minCount,
         max: tag.maxCount == null ? 1 : tag.maxCount,
@@ -861,7 +842,7 @@ class ConfigBuilder {
       const t = {
         key: tagName,
         format,
-        default: convertDefaultValue(tag.defaultValue, format),
+        default: tag.defaultValue ?? null,
         alwaysInclude: false,
         min: tag.minCount == null ? 0 : tag.minCount,
         max: tag.maxCount == null ? 1 : tag.maxCount,
