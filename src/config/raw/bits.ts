@@ -675,11 +675,13 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_buttonCaption,
         description: 'The caption of the call to action button',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_callToActionUrl,
         description: 'The URL to navigate to when the call to action button is clicked',
         format: TagFormat.plainText,
+        defaultValue: '',
         minCount: 1,
       },
     ],
@@ -1121,22 +1123,26 @@ const BITS: _BitsConfig = {
         description: 'The author of the referenced book',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
+        defaultValue: '[]',
       },
       {
         key: ConfigKey.property_refBookTitle,
         description: 'The title of the referenced book',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_refPublisher,
         description: 'The publisher of the referenced book',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
+        defaultValue: '[]',
       },
       {
         key: ConfigKey.property_refPublicationYear,
         description: 'The publication year of the referenced book',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_citationStyle,
@@ -1271,6 +1277,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_isCaseSensitive,
         description: 'If the cloze answers are case sensitive',
         format: TagFormat.boolean,
+        defaultValue: 'true',
       },
       {
         key: ConfigKey.property_quizCountItems,
@@ -1478,6 +1485,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_pointerTop,
         description: 'The top position of the pointer in the screenshot',
         format: TagFormat.plainText,
+        defaultValue: '',
         minCount: 1,
         maxCount: 1,
       },
@@ -1485,6 +1493,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_pointerLeft,
         description: 'The left position of the pointer in the screenshot',
         format: TagFormat.plainText,
+        defaultValue: '',
         minCount: 1,
         maxCount: 1,
       },
@@ -1943,6 +1952,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_partialAnswer,
         description: 'Partial answer for the essay, used to indicate incomplete answers',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_reference,
@@ -2649,6 +2659,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_path,
         description: 'The path for the platform, used to define navigation paths',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
     ],
   },
@@ -2675,6 +2686,7 @@ const BITS: _BitsConfig = {
         description:
           'Allowed bits in the container, used to define which bits can be placed inside',
         format: TagFormat.plainText,
+        defaultValue: '[]',
         maxCount: Count.infinity,
       },
     ],
@@ -3084,6 +3096,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_slug,
         description: 'Slug for the book, used to identify the book in the system',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_book,
@@ -3138,6 +3151,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_slug,
         description: 'Slug for the book, used to identify the book in the system',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_book,
@@ -3209,6 +3223,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_slug,
         description: 'Slug for the subscription page, used to identify the page in the system',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_buttonCaption,
@@ -3237,6 +3252,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_slug,
         description: 'Slug for the footer, used to identify the footer in the system',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
     ],
     cardSet: CardSetConfigKey.exampleBitList,
@@ -3533,6 +3549,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_slug,
         description: 'Slug for the page banner, used to identify the banner in the system',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
     ],
   },
@@ -4151,6 +4168,7 @@ const BITS: _BitsConfig = {
         description:
           'Case sensitivity for matching pairs, used to define if matches are case-sensitive',
         format: TagFormat.boolean,
+        defaultValue: 'true',
       },
     ],
     cardSet: CardSetConfigKey.matchPairs,
@@ -4389,11 +4407,13 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_slug,
         description: 'Slug for the page, used to identify the page in URLs',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_content2Buy,
         description: 'Content to buy for the page, used to define what is being sold',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_buttonCaption,
@@ -4421,6 +4441,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_slug,
         description: 'Slug for the subpage, used to identify the subpage in URLs',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_page,
@@ -4463,6 +4484,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_slug,
         description: 'Slug for the person page, used to identify the person in URLs',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.group_person,
@@ -4484,6 +4506,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_slug,
         description: 'Slug for the product page, used to identify the product in URLs',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_product,
@@ -4501,6 +4524,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_slug,
         description: 'Slug for the product list page, used to identify the product list in URLs',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       // NOTE: Only one of productVideo or productVideoList should be used, not both - TODO: fix when know which one!
       {
@@ -4525,6 +4549,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_slug,
         description: 'Slug for the product video page, used to identify the product video in URLs',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_productVideo,
@@ -4545,6 +4570,7 @@ const BITS: _BitsConfig = {
         description:
           'Slug for the product video list page, used to identify the product video list in URLs',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       // NOTE: Only one of productVideo or productVideoList should be used, not both - TODO: fix when know which one!
       {
@@ -4570,6 +4596,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_slug,
         description: 'Slug for the section folder page, used to identify the section in URLs',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_productFolder,
@@ -4620,6 +4647,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_platformBrandTarget,
         description: 'The platform brand target (typically "light", "dark" or "none")',
         format: TagFormat.plainText,
+        defaultValue: 'none',
       },
     ],
   },
@@ -4643,6 +4671,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_platformLogoMaxHeight,
         description: 'Maximum height for the platform logo',
         format: TagFormat.number,
+        defaultValue: '40',
       },
       {
         key: ConfigKey.group_platformStylesCommon,
@@ -4818,11 +4847,13 @@ const BITS: _BitsConfig = {
         description:
           'Resolved status for the review note, used to indicate if the note is resolved',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_resolvedDate,
         description: 'Resolved date for the review note, used to define when the note was resolved',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_resolvedBy,
@@ -4983,6 +5014,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_pointerTop,
         description: 'Pointer for the top of the survey matrix, used to define the top label',
         format: TagFormat.plainText,
+        defaultValue: '',
         minCount: 1,
         maxCount: 1,
       },
@@ -4990,6 +5022,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_pointerLeft,
         description: 'Pointer for the left of the survey matrix, used to define the left label',
         format: TagFormat.plainText,
+        defaultValue: '',
         minCount: 1,
         maxCount: 1,
       },
@@ -4997,6 +5030,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_buttonCaption,
         description: 'Caption for the button in the survey matrix, used to define the button text',
         format: TagFormat.plainText,
+        defaultValue: '',
         minCount: 1,
         maxCount: 1,
       },
@@ -5101,28 +5135,32 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_tableFixedHeader,
         description: 'Fixed header for the table, used to keep the header visible while scrolling',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tableHeaderWhitespaceNoWrap,
         description: 'No wrap for table header whitespace, used to prevent header text wrapping',
         format: TagFormat.boolean,
-        // defaultValue: 'false',
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tableSearch,
         description:
           'Search functionality for the table, used to enable searching within the table',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tableSort,
         description: 'Sorting functionality for the table, used to enable sorting of table columns',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tablePagination,
         description: 'Pagination for the table, used to limit the number of rows displayed at once',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tablePaginationLimit,
@@ -5140,23 +5178,25 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_tableWhitespaceNoWrap,
         description: 'No wrap for table whitespace, used to prevent text wrapping in table cells',
         format: TagFormat.boolean,
-        // defaultValue: 'false',
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tableAutoWidth,
         description: 'Auto width for table columns, used to automatically adjust column widths',
         format: TagFormat.boolean,
-        // defaultValue: 'true',
+        defaultValue: 'true',
       },
       {
         key: ConfigKey.property_tableResizableColumns,
         description: 'Resizable columns for the table, used to allow users to resize table columns',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tableColumnMinWidth,
         description: 'Minimum width for table columns, used to define the minimum width of columns',
         format: TagFormat.number,
+        defaultValue: '0',
       },
     ],
     cardSet: CardSetConfigKey.table,
@@ -5322,6 +5362,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_tocResource,
         description: 'Resource content for the table of contents, used to define the resource',
         format: TagFormat.plainText,
+        defaultValue: '[]',
         maxCount: Count.infinity,
       },
       {
@@ -5329,6 +5370,7 @@ const BITS: _BitsConfig = {
         description:
           'Caption for the button in the table of contents resource, used to define the text displayed on the button',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
     ],
   },
@@ -5342,6 +5384,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_tocContent,
         description: 'Content for the table of contents, used to define the content section',
         format: TagFormat.plainText,
+        defaultValue: '[]',
         maxCount: Count.infinity,
       },
       {
@@ -5349,6 +5392,7 @@ const BITS: _BitsConfig = {
         description:
           'Caption for the button in the table of contents content, used to define the text displayed on the button',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
     ],
   },
@@ -5490,6 +5534,7 @@ const BITS: _BitsConfig = {
         description:
           'Accepted file types for the hand-in file, used to define allowed file formats',
         format: TagFormat.plainText,
+        defaultValue: '[]',
         maxCount: Count.infinity,
       },
     ],
@@ -5534,6 +5579,7 @@ const BITS: _BitsConfig = {
         description:
           'Accepted file types for the hand-in system media, used to define allowed file formats',
         format: TagFormat.plainText,
+        defaultValue: '[]',
         maxCount: Count.infinity,
       },
     ],
@@ -5548,18 +5594,21 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_handInRequirement,
         description: 'Requirement for the hand-in submission, used to define what is needed',
         format: TagFormat.plainText,
+        defaultValue: '[]',
         maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_handInInstruction,
         description: 'Instruction for the hand-in submission, used to guide the user',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_buttonCaption,
         description:
           'Caption for the button in the hand-in submission, used to define the button text',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
     ],
   },
@@ -5587,11 +5636,13 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_labelTrue,
         description: 'Label for the true option in the true/false question',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_labelFalse,
         description: 'Label for the false option in the true/false question',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.tag_true,
@@ -5619,11 +5670,13 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_labelTrue,
         description: 'Label for the true option in the true/false question',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.property_labelFalse,
         description: 'Label for the false option in the true/false question',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
     ],
     cardSet: CardSetConfigKey.statements,
@@ -5805,12 +5858,14 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_stripePricingTableId,
         description: 'Stripe pricing table ID, used to define which pricing table to embed',
         format: TagFormat.plainText,
+        defaultValue: '',
         minCount: 1,
       },
       {
         key: ConfigKey.property_stripePublishableKey,
         description: 'Stripe publishable key, used to authenticate the Stripe pricing table',
         format: TagFormat.plainText,
+        defaultValue: '',
         minCount: 1,
       },
     ],

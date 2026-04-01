@@ -490,6 +490,7 @@ const GROUPS: _GroupsConfig = {
             jsonKey: 'isCaseSensitive',
             description: 'If true, the gap text is case sensitive',
             format: TagFormat.boolean,
+            defaultValue: 'true',
           },
         ],
       },
@@ -685,6 +686,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_chatWithBookBrainKey,
         description: 'The BookBrain key for the book chat',
         format: TagFormat.plainText,
+        defaultValue: '',
       },
       {
         key: ConfigKey.tag_title,
@@ -772,6 +774,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_maxTocChapterLevel,
         description: 'The maximum table of contents chapter level',
         format: TagFormat.number,
+        defaultValue: '-1',
       },
       {
         key: ConfigKey.property_sourceDocument,
@@ -854,11 +857,13 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_isTracked,
         description: 'If true, the learning path is tracked',
         format: TagFormat.boolean,
+        defaultValue: 'true',
       },
       {
         key: ConfigKey.property_isInfoOnly,
         description: 'If true, the learning path is info only',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_deeplink,
