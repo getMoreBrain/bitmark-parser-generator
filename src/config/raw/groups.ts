@@ -54,7 +54,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_validationDate,
         description: 'The date when the bit was validated',
         format: TagFormat.plainText,
-        defaultValue: '',
       },
       {
         key: ConfigKey.property_aiGenerated,
@@ -686,7 +685,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_chatWithBookBrainKey,
         description: 'The BookBrain key for the book chat',
         format: TagFormat.plainText,
-        defaultValue: '',
       },
       {
         key: ConfigKey.tag_title,
