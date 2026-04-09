@@ -622,6 +622,8 @@ const NodeType = {
   table: 'table',
   tableAutoWidth: 'tableAutoWidth',
   tableAutoWidthValue: 'tableAutoWidthValue',
+  tableColWidth: 'tableColWidth',
+  tableColWidthValue: 'tableColWidthValue',
   tableColumnMinWidth: 'tableColumnMinWidth',
   tableColumnMinWidthValue: 'tableColumnMinWidthValue',
   tableFixedHeader: 'tableFixedHeader',

@@ -559,6 +559,7 @@ export interface TableCellJson {
   rowspan?: number;
   colspan?: number;
   scope?: 'row' | 'col' | 'rowgroup' | 'colgroup';
+  colwidth?: number;
 }
 
 export interface QuestionJson {
