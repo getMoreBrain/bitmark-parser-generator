@@ -107,6 +107,7 @@ Note: values are example numbers.
 [@tableSort:true]
 [@tablePagination:true]
 ====
+[@tableColWidth:150]
 [#Name]
 --
 [#Email]
