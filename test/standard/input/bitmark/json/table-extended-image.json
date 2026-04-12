@@ -590,6 +590,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -772,6 +773,7 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
+
       "tableColumnMinWidth": 0
     },
     "parser": {

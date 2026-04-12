@@ -243,6 +243,7 @@ const propertyKeys = {
   property_subject: '@subject',
   property_subtype: '@subtype',
   property_tableAutoWidth: '@tableAutoWidth',
+  property_tableColWidth: '@tableColWidth',
   property_tableColumnMinWidth: '@tableColumnMinWidth',
   property_tableFixedHeader: '@tableFixedHeader',
   property_tableHeaderWhitespaceNoWrap: '@tableHeaderWhitespaceNoWrap',

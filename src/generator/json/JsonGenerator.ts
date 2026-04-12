@@ -1762,9 +1762,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         //
       }
 
+      const tableImageHasTable =
+        Config.isOfBitType(bitType, BitType.tableImage) && !this.tableIsEmpty(bitJson.table);
       if (
-        Config.isOfBitType(bitType, BitType.table) &&
-        !Config.isOfBitType(bitType, BitType.tableImage)
+        (Config.isOfBitType(bitType, BitType.table) &&
+          !Config.isOfBitType(bitType, BitType.tableImage)) ||
+        tableImageHasTable
       ) {
         //
         // if (bitJson.content2Buy == null) bitJson.content2Buy = '';
@@ -1783,10 +1786,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         if (bitJson.tableColumnMinWidth == null) bitJson.tableColumnMinWidth = 0;
         //
       }
-      if (Config.isOfBitType(bitType, BitType.tableImage)) {
-        if (this.tableIsEmpty(bitJson.table)) {
-          delete bitJson.table;
-        }
+      if (Config.isOfBitType(bitType, BitType.tableImage) && !tableImageHasTable) {
+        delete bitJson.table;
       }
 
       if (Config.isOfBitType(bitType, BitType.bookReference)) {

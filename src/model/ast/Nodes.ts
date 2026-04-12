@@ -190,6 +190,7 @@ export interface Bit {
   tableWhitespaceNoWrap?: Property;
   tableAutoWidth?: Property;
   tableResizableColumns?: Property;
+  tableColWidth?: Property;
   tableColumnMinWidth?: Property;
   tableCellType?: Property;
   tableRowSpan?: Property;

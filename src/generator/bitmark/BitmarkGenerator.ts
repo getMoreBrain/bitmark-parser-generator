@@ -1639,6 +1639,11 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       this.writeNL();
     }
 
+    if (cell.colwidth && cell.colwidth > 0) {
+      this.writeTableCellProperty('tableColWidth', cell.colwidth);
+      this.writeNL();
+    }
+
     const content = cell.content ?? Breakscape.EMPTY_STRING;
     this.writeTextOrValue(content, this.textFormat, TextLocation.body);
   }

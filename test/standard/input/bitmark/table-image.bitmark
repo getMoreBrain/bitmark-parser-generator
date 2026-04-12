@@ -3,6 +3,35 @@
 [&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]
 
 
+[.table-image]
+[@id:151973]
+[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]
+[@tableFixedHeader:true]
+[@tableHeaderWhitespaceNoWrap:false]
+[@tableSearch:true]
+[@tableSort:true]
+[@tablePagination:true]
+====
+[@tableColWidth:150]
+[#Name]
+--
+[#Email]
+--
+[#Phone Number]
+====
+John
+--
+john@example.com
+--
+(353) 01 222 3333
+====
+Mark
+--
+mark@gmail.com
+--
+(01) 22 888 4444
+====
+
 [.table-image-alt]
 [@id:78954]
 [&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]
@@ -26,3 +55,5 @@
 [.standard-remark-table-image-non-normative:bitmark--]
 [@id:151972]
 [&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]
+
+

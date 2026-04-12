@@ -655,6 +655,11 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Scope attribute for header cells.',
                 format: TagFormat.plainText,
               },
+              {
+                key: ConfigKey.property_tableColWidth,
+                description: 'Width for the column.',
+                format: TagFormat.number,
+              },
             ],
             repeatCount: Count.infinity,
           },
@@ -714,6 +719,11 @@ const CARDSETS: _CardSetsConfig = {
                 jsonKey: 'scope',
                 description: 'Scope attribute for header cells.',
                 format: TagFormat.plainText,
+              },
+              {
+                key: ConfigKey.property_tableColWidth,
+                description: 'Width for the column.',
+                format: TagFormat.number,
               },
             ],
             repeatCount: Count.infinity,
