@@ -198,6 +198,7 @@ const GROUPS: _GroupsConfig = {
       },
       {
         key: ConfigKey.property_groupTag,
+        jsonKey: 'groupTag.name',
         description: 'The group tag(s) for the bit',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
@@ -375,6 +376,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.property_imageSource,
+        jsonKey: 'imageSource.url',
         description: 'The source of an image',
         format: TagFormat.plainText,
         chain: [
@@ -408,6 +410,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.property_technicalTerm,
+        jsonKey: 'technicalTerm.technicalTerm',
         description: 'The technical term',
         format: TagFormat.plainText,
         chain: [
@@ -426,6 +429,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.property_person,
+        jsonKey: 'person.name',
         description: 'A person',
         format: TagFormat.plainText,
         chain: [
@@ -443,6 +447,7 @@ const GROUPS: _GroupsConfig = {
       {
         // Deprecated (parter renamed to person)
         key: ConfigKey.property_partner,
+        jsonKey: 'partner.name',
         description: 'A partner',
         format: TagFormat.plainText,
         chain: [
@@ -565,6 +570,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.property_mark,
+        jsonKey: 'marks.mark',
         description: 'The mark configuration',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
@@ -1205,6 +1211,7 @@ const GROUPS: _GroupsConfig = {
       },
       {
         key: ConfigKey.property_posterImage,
+        jsonKey: 'posterImage.src',
         description: 'The poster image for the video',
         format: TagFormat.plainText,
         chain: [

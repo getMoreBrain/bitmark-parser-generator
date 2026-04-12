@@ -33,12 +33,12 @@ CardConfig
 
 ### Variant Notation
 
-| Notation | Meaning | How reached |
-|----------|---------|-------------|
-| `S1V1` | Side 1, Variant 1 | First content in the card |
-| `S2V1` | Side 2, Variant 1 | After the first `--` |
-| `S2V2` | Side 2, Variant 2 | After `++` within side 2 |
-| `S3V1` | Side 3, Variant 1 | After the second `--` |
+| Notation | Meaning           | How reached               |
+| -------- | ----------------- | ------------------------- |
+| `S1V1`   | Side 1, Variant 1 | First content in the card |
+| `S2V1`   | Side 2, Variant 1 | After the first `--`      |
+| `S2V2`   | Side 2, Variant 2 | After `++` within side 2  |
+| `S3V1`   | Side 3, Variant 1 | After the second `--`     |
 
 **Flattened mapping:** `S1V1`→V1, `S2V1`→V2, `S2V2`→V3, `S3V1`→V4, etc.
 
@@ -50,18 +50,19 @@ The flattening means `--` and `++` produce identical JSON. An author using `--` 
 
 JSON paths use dot notation with array brackets. All paths on `side` and `variant` nodes are **relative to the card item** (i.e., relative to `card.jsonKey[N]`).
 
-| Syntax | Meaning | Example |
-|--------|---------|---------|
-| `key` | Object property | `question` |
-| `key.subkey` | Nested property | `question.text` |
-| `key[]` | Array — append item | `alternativeAnswers[]` |
-| `key[].subkey` | Array of objects — append | `alternativeAnswers[].text` |
-| `{s}` | Repeating side offset (0-based) | `cells[{s}]` |
-| `{v}` | Repeating variant offset (0-based) | `values[{v}]` |
+| Syntax         | Meaning                            | Example                     |
+| -------------- | ---------------------------------- | --------------------------- |
+| `key`          | Object property                    | `question`                  |
+| `key.subkey`   | Nested property                    | `question.text`             |
+| `key[]`        | Array — append item                | `alternativeAnswers[]`      |
+| `key[].subkey` | Array of objects — append          | `alternativeAnswers[].text` |
+| `{s}`          | Repeating side offset (0-based)    | `cells[{s}]`                |
+| `{v}`          | Repeating variant offset (0-based) | `values[{v}]`               |
 
 **Special cases:**
+
 - When `card.jsonKey` is `null`, variant paths are relative to the **bit root** (not a card item).
-- When `card.itemType` is `"array"`, each side/variant creates an element in the card item (which is itself an array).
+- When the side `jsonKey` starts with `[{s}]`, the card item is an array (each side creates an element at index `{s}`).
 
 ---
 
@@ -71,43 +72,42 @@ JSON paths use dot notation with array brackets. All paths on `side` and `varian
 
 Top-level configuration object.
 
-| Property | Type | Required | Description |
-|----------|------|----------|-------------|
-| `name` | string | yes | Configuration identifier (matches `assets/config/cards/*.jsonc` key) |
-| `bits` | string[] | yes | Bit types that use this configuration |
+| Property | Type     | Required | Description                                                          |
+| -------- | -------- | -------- | -------------------------------------------------------------------- |
+| `name`   | string   | yes      | Configuration identifier (matches `assets/config/cards/*.jsonc` key) |
+| `bits`   | string[] | yes      | Bit types that use this configuration                                |
 
 ### card
 
 The card-level node.
 
-| Property | Type | Required | Description |
-|----------|------|----------|-------------|
-| `jsonKey` | string \| null | yes | JSON array key for card items (e.g., `cards`, `pairs`). `null` if the card doesn't create a sub-object. |
-| `itemType` | `"object"` \| `"array"` | no | Shape of each card item. Default: `"object"`. Use `"array"` when each card is a row of cells. |
-| `sides` | [SideNode](#sidenode)[] | yes | Ordered side definitions |
-| `tags` | [TagMapping][] | no | Card-level tag-to-JSON mappings (apply to tags found anywhere in the card). Tag schema follows existing `assets/config/` conventions. May include group references (e.g., `{ group: standard-tags }`). |
-| `sections` | { [qualifier]: { jsonKey } } | no | For qualified card dividers (e.g., `==== table-header ====`). Maps qualifier string → section jsonKey. |
+| Property   | Type                         | Required | Description                                                                                                                                                                                            |
+| ---------- | ---------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `jsonKey`  | string \| null               | yes      | JSON array key for card items (e.g., `cards`, `pairs`). `null` if the card doesn't create a sub-object.                                                                                                |
+| `sides`    | [SideNode](#sidenode)[]      | yes      | Ordered side definitions                                                                                                                                                                               |
+| `tags`     | [TagMapping][]               | no       | Card-level tag-to-JSON mappings (apply to tags found anywhere in the card). Tag schema follows existing `assets/config/` conventions. May include group references (e.g., `{ group: standard-tags }`). |
+| `sections` | { [qualifier]: { jsonKey } } | no       | For qualified card dividers (e.g., `==== table-header ====`). Maps qualifier string → section jsonKey.                                                                                                 |
 
 ### SideNode
 
 A side definition within a card. Sides are separated by `--` in bitmark.
 
-| Property | Type | Required | Description |
-|----------|------|----------|-------------|
-| `name` | string | yes | Human-readable label (e.g., `"question"`, `"key"`, `"cell"`) |
-| `repeat` | boolean | no | If `true`, this side definition repeats for all remaining `--` dividers. Used for dynamic column/cell patterns. |
-| `variants` | [VariantNode](#variantnode)[] | yes | Ordered variant definitions within this side. First entry is the default (V1 of this side). |
-| `tags` | [TagMapping][] | no | Side-level tag-to-JSON mappings |
+| Property   | Type                          | Required | Description                                                                                                     |
+| ---------- | ----------------------------- | -------- | --------------------------------------------------------------------------------------------------------------- |
+| `name`     | string                        | yes      | Human-readable label (e.g., `"question"`, `"key"`, `"cell"`)                                                    |
+| `repeat`   | boolean                       | no       | If `true`, this side definition repeats for all remaining `--` dividers. Used for dynamic column/cell patterns. |
+| `variants` | [VariantNode](#variantnode)[] | yes      | Ordered variant definitions within this side. First entry is the default (V1 of this side).                     |
+| `tags`     | [TagMapping][]                | no       | Side-level tag-to-JSON mappings                                                                                 |
 
 ### VariantNode
 
 A variant within a side. The first variant handles the side's initial content; subsequent variants handle `++` overflow.
 
-| Property | Type | Required | Description |
-|----------|------|----------|-------------|
-| `jsonKey` | string \| null | no | JSON path for body text, relative to card item. `null` if this variant has no body text (all content via tags). |
-| `repeat` | boolean | no | If `true`, this variant repeats for all remaining `++` within the side. |
-| `tags` | [TagMapping][] | no | Variant-level tag-to-JSON mappings |
+| Property  | Type           | Required | Description                                                                                                     |
+| --------- | -------------- | -------- | --------------------------------------------------------------------------------------------------------------- |
+| `jsonKey` | string \| null | no       | JSON path for body text, relative to card item. `null` if this variant has no body text (all content via tags). |
+| `repeat`  | boolean        | no       | If `true`, this variant repeats for all remaining `++` within the side.                                         |
+| `tags`    | [TagMapping][] | no       | Variant-level tag-to-JSON mappings                                                                              |
 
 ### Heading Cards via `secondaryJsonKey`
 
@@ -140,16 +140,16 @@ card:
   sides:
     - name: question
       variants:
-        - jsonKey: question.text              # V1 (S1V1) body → cards[N].question.text
+        - jsonKey: question.text # V1 (S1V1) body → cards[N].question.text
           tags:
             - { group: resource-icon, jsonKey: question.icon }
 
     - name: answer
       variants:
-        - jsonKey: answer.text                # V2 (S2V1) body → cards[N].answer.text
+        - jsonKey: answer.text # V2 (S2V1) body → cards[N].answer.text
           tags:
             - { group: resource-icon, jsonKey: answer.icon }
-        - jsonKey: alternativeAnswers[].text   # V3+ (S2V2+) → cards[N].alternativeAnswers[M].text
+        - jsonKey: alternativeAnswers[].text # V3+ (S2V2+) → cards[N].alternativeAnswers[M].text
           repeat: true
 ```
 
@@ -162,25 +162,25 @@ name: definition-list
 bits: [definition-list, figure, image-figure, legend, meta-search-default-terms]
 
 card:
-  jsonKey: definitions           # or "descriptions" depending on bit type
+  jsonKey: definitions # or "descriptions" depending on bit type
   tags:
     - { group: standard-tags }
 
   sides:
     - name: term
       variants:
-        - jsonKey: term.text                    # V1 (S1V1) body
+        - jsonKey: term.text # V1 (S1V1) body
           tags:
             - { group: resource-icon, jsonKey: term.icon }
-            - { tag: "[#]", jsonKey: title, secondaryJsonKey: heading.forKeys, type: bitmark-- }
+            - { tag: '[#]', jsonKey: title, secondaryJsonKey: heading.forKeys, type: bitmark-- }
 
     - name: definition
       variants:
-        - jsonKey: definition.text              # V2 (S2V1) body
+        - jsonKey: definition.text # V2 (S2V1) body
           tags:
             - { group: resource-icon, jsonKey: definition.icon }
-            - { tag: "[#]", jsonKey: title, secondaryJsonKey: heading.forValues, type: bitmark-- }
-        - jsonKey: alternativeDefinitions[].text  # V3+ (S2V2+)
+            - { tag: '[#]', jsonKey: title, secondaryJsonKey: heading.forValues, type: bitmark-- }
+        - jsonKey: alternativeDefinitions[].text # V3+ (S2V2+)
           repeat: true
 ```
 
@@ -196,24 +196,24 @@ card:
   jsonKey: pairs
   tags:
     - { group: standard-tags }
-    - { tag: "[@isCaseSensitive]", jsonKey: isCaseSensitive, type: boolean }
+    - { tag: '[@isCaseSensitive]', jsonKey: isCaseSensitive, type: boolean }
 
   sides:
     - name: key
       variants:
-        - jsonKey: key                          # V1 (S1V1) body → pairs[N].key
+        - jsonKey: key # V1 (S1V1) body → pairs[N].key
           tags:
-            - { tag: "[#]", jsonKey: title, secondaryJsonKey: heading.forKeys }
-            - { resource: "[&audio]", jsonKey: keyAudio }
-            - { resource: "[&image]", jsonKey: keyImage }
+            - { tag: '[#]', jsonKey: title, secondaryJsonKey: heading.forKeys }
+            - { resource: '[&audio]', jsonKey: keyAudio }
+            - { resource: '[&image]', jsonKey: keyImage }
 
     - name: values
       repeat: true
       variants:
-        - jsonKey: values[]                     # V2+ (S2V1+) → pairs[N].values[M]
+        - jsonKey: values[] # V2+ (S2V1+) → pairs[N].values[M]
           repeat: true
           tags:
-            - { tag: "[#]", jsonKey: title, secondaryJsonKey: heading.forValues }
+            - { tag: '[#]', jsonKey: title, secondaryJsonKey: heading.forValues }
 ```
 
 ---
@@ -234,8 +234,8 @@ card:
       variants:
         - jsonKey: key
           tags:
-            - { tag: "[#]", jsonKey: title, secondaryJsonKey: heading.forKeys }
-            - { resource: "[&audio]", jsonKey: keyAudio }
+            - { tag: '[#]', jsonKey: title, secondaryJsonKey: heading.forKeys }
+            - { resource: '[&audio]', jsonKey: keyAudio }
 
     - name: values
       repeat: true
@@ -243,7 +243,7 @@ card:
         - jsonKey: values[]
           repeat: true
           tags:
-            - { tag: "[#]", jsonKey: title, secondaryJsonKey: heading.forValues }
+            - { tag: '[#]', jsonKey: title, secondaryJsonKey: heading.forValues }
 ```
 
 ---
@@ -264,8 +264,8 @@ card:
       variants:
         - jsonKey: key
           tags:
-            - { tag: "[#]", jsonKey: title, secondaryJsonKey: heading.forKeys }
-            - { resource: "[&image]", jsonKey: keyImage }
+            - { tag: '[#]', jsonKey: title, secondaryJsonKey: heading.forKeys }
+            - { resource: '[&image]', jsonKey: keyImage }
 
     - name: values
       repeat: true
@@ -273,7 +273,7 @@ card:
         - jsonKey: values[]
           repeat: true
           tags:
-            - { tag: "[#]", jsonKey: title, secondaryJsonKey: heading.forValues }
+            - { tag: '[#]', jsonKey: title, secondaryJsonKey: heading.forValues }
 ```
 
 ---
@@ -326,8 +326,8 @@ card:
       variants:
         - jsonKey: statement
           tags:
-            - { tag: "[+]", jsonKey: isCorrect, value: true }
-            - { tag: "[-]", jsonKey: isCorrect, value: false }
+            - { tag: '[+]', jsonKey: isCorrect, value: true }
+            - { tag: '[-]', jsonKey: isCorrect, value: false }
 ```
 
 > Note: The `[+...]` / `[-...]` tags both wrap the statement text AND set `isCorrect`. The body text (inside the tag) maps to `statement`; the `+`/`-` prefix maps to `isCorrect`.
@@ -348,12 +348,12 @@ card:
   sides:
     - name: choices
       variants:
-        - jsonKey: null                         # No body text — all content via inline choice tags
+        - jsonKey: null # No body text — all content via inline choice tags
           tags:
-            - tag: "[+]"
+            - tag: '[+]'
               jsonKey: choices[]
               creates: { array: choices, content: choice, sets: { isCorrect: true } }
-            - tag: "[-]"
+            - tag: '[-]'
               jsonKey: choices[]
               creates: { array: choices, content: choice, sets: { isCorrect: false } }
 ```
@@ -397,15 +397,15 @@ card:
   sides:
     - name: choices
       variants:
-        - jsonKey: null                          # No body text on side 1
+        - jsonKey: null # No body text on side 1
           tags:
-            - { tag: "[#]", jsonKey: title, secondaryJsonKey: heading.forKeys }
-            - { tag: "[!]", jsonKey: instruction }
-            - { tag: "[%]", jsonKey: item }
-            - tag: "[+]"
+            - { tag: '[#]', jsonKey: title, secondaryJsonKey: heading.forKeys }
+            - { tag: '[!]', jsonKey: instruction }
+            - { tag: '[%]', jsonKey: item }
+            - tag: '[+]'
               jsonKey: choices[]
               creates: { array: choices, content: choice, sets: { isCorrect: true } }
-            - tag: "[-]"
+            - tag: '[-]'
               jsonKey: choices[]
               creates: { array: choices, content: choice, sets: { isCorrect: false } }
             # [@requireReason] is a modifier on the preceding [+]/[-] tag:
@@ -413,11 +413,15 @@ card:
 
     - name: reason
       variants:
-        - jsonKey: reason.text                    # V2 (S2V1) body → feedbacks[N].reason.text
+        - jsonKey: reason.text # V2 (S2V1) body → feedbacks[N].reason.text
           tags:
-            - { tag: "[#]", jsonKey: title, secondaryJsonKey: heading.forValues }
-            - { tag: "[!]", jsonKey: reason.instruction }
-            - { tag: "[@reasonableNumOfChars:*]", jsonKey: reason.reasonableNumOfChars, type: number }
+            - { tag: '[#]', jsonKey: title, secondaryJsonKey: heading.forValues }
+            - { tag: '[!]', jsonKey: reason.instruction }
+            - {
+                tag: '[@reasonableNumOfChars:*]',
+                jsonKey: reason.reasonableNumOfChars,
+                type: number,
+              }
 ```
 
 ---
@@ -431,14 +435,14 @@ bits: [bot-action-response]
 card:
   jsonKey: responses
   tags:
-    - { tag: "[%]", jsonKey: item }
-    - { tag: "[!]", jsonKey: response }         # [!] maps to "response" (the user-facing label), not "instruction"
-    - { tag: "[@reaction:*]", jsonKey: reaction }
+    - { tag: '[%]', jsonKey: item }
+    - { tag: '[!]', jsonKey: response } # [!] maps to "response" (the user-facing label), not "instruction"
+    - { tag: '[@reaction:*]', jsonKey: reaction }
 
   sides:
     - name: response
       variants:
-        - jsonKey: feedback                     # V1 body → responses[N].feedback
+        - jsonKey: feedback # V1 body → responses[N].feedback
 ```
 
 > Note: `[!]` is repurposed here — it maps to `response` (not `instruction`).
@@ -459,7 +463,7 @@ card:
   sides:
     - name: content
       variants:
-        - jsonKey: body                         # V1 body → listItems[N].body (contains gap/cloze markup)
+        - jsonKey: body # V1 body → listItems[N].body (contains gap/cloze markup)
 ```
 
 ---
@@ -471,14 +475,14 @@ name: elements
 bits: [sequence]
 
 card:
-  jsonKey: null                                 # Card doesn't create a sub-object
+  jsonKey: null # Card doesn't create a sub-object
 
   sides:
     - name: element
-      repeat: true                              # Each -- creates the next element
+      repeat: true # Each -- creates the next element
       variants:
-        - jsonKey: elements[]                   # Body → elements[V] at the bit level
-          repeat: true                          # ++ also appends to elements[]
+        - jsonKey: elements[] # Body → elements[V] at the bit level
+          repeat: true # ++ also appends to elements[]
 ```
 
 > Note: `card.jsonKey: null` means variant paths are relative to the bit root. Each variant appends to a flat `elements[]` array.
@@ -493,18 +497,18 @@ bits: [table]
 
 card:
   jsonKey: table.data
-  itemType: array                               # Each card = table.data[N] (a row array of strings)
 
   sides:
     - name: cell
       repeat: true
+      jsonKey: "[{s}]"                          # Side jsonKey makes each card item an array
       variants:
         - jsonKey: null                         # Body text appended as scalar string element in the row array
           tags:
             - { tag: "[#]", jsonKey: title, secondaryJsonKey: table.columns[] }
 ```
 
-> Note: `itemType: array` means each card item is a flat array. Each variant's body text is pushed into that array as a string. In the heading card (first card), the `[#]` tag's `secondaryJsonKey` writes to `table.columns[]` at the bit root.
+> Note: The side `jsonKey: "[{s}]"` tells the parser each card item is an array. Each variant's body text is pushed into that array as a string. In the heading card (first card), the `[#]` tag's `secondaryJsonKey` writes to `table.columns[]` at the bit root.
 
 ---
 
@@ -516,7 +520,7 @@ bits: [table-extended]
 
 card:
   sections:
-    default:      { jsonKey: tableExtended.body.rows }
+    default: { jsonKey: tableExtended.body.rows }
     table-header: { jsonKey: tableExtended.header.rows }
     table-footer: { jsonKey: tableExtended.footer.rows }
 
@@ -525,12 +529,12 @@ card:
     - name: cell
       repeat: true
       variants:
-        - jsonKey: content                      # Cell body → rows[N].cells[{s}].content
+        - jsonKey: content # Cell body → rows[N].cells[{s}].content
           tags:
-            - { tag: "[@tableCellType:th]", jsonKey: title, value: true }
-            - { tag: "[@tableRowSpan:*]", jsonKey: rowspan, type: number }
-            - { tag: "[@tableColSpan:*]", jsonKey: colspan, type: number }
-            - { tag: "[@tableScope:*]", jsonKey: scope }
+            - { tag: '[@tableCellType:th]', jsonKey: title, value: true }
+            - { tag: '[@tableRowSpan:*]', jsonKey: rowspan, type: number }
+            - { tag: '[@tableColSpan:*]', jsonKey: colspan, type: number }
+            - { tag: '[@tableScope:*]', jsonKey: scope }
 ```
 
 > Note: The qualified card divider (e.g., `==== table-header ====`) determines which section the row belongs to via `card.sections`. Within each row, variant tag paths are relative to the cell object `rows[N].cells[{s}]`.
@@ -545,19 +549,19 @@ bits: [pronunciation-table]
 
 card:
   jsonKey: pronunciationTable.data
-  itemType: array                               # Each card = data[N] (a row array of cell objects)
 
   sides:
     - name: cell
       repeat: true
+      jsonKey: '[{s}]' # Side jsonKey makes each card item an array
       variants:
-        - jsonKey: body                         # Cell body → data[N][{s}].body
+        - jsonKey: body # Cell body → data[N][{s}].body
           tags:
-            - { tag: "[#]", jsonKey: title }     # [#title] → data[N][{s}].title
-            - { resource: "[&audio]", jsonKey: audio }  # [&audio:...] → data[N][{s}].audio
+            - { tag: '[#]', jsonKey: title } # [#title] → data[N][{s}].title
+            - { resource: '[&audio]', jsonKey: audio } # [&audio:...] → data[N][{s}].audio
 ```
 
-> Note: `itemType: array` — each card is a row (array). Each side creates a cell object within that array. Paths on the variant/tags are relative to the cell object.
+> Note: The side `jsonKey: "[{s}]"` tells the parser each card item is an array of cell objects. Paths on the variant/tags are relative to the cell object.
 
 ---
 
@@ -570,19 +574,19 @@ bits: [cook-ingredients]
 card:
   jsonKey: ingredients
   tags:
-    - { tag: "[#]", jsonKey: title, type: bitmark-- }
-    - { tag: "[!]", jsonKey: quantity, type: number }       # [!] repurposed: maps to quantity, not instruction
-    - { tag: "[+]", jsonKey: checked, value: true }
-    - { tag: "[-]", jsonKey: checked, value: false }
-    - { tag: "[@unit:*]", jsonKey: unit }
-    - { tag: "[@unitAbbr:*]", jsonKey: unitAbbr }
-    - { tag: "[@decimalPlaces:*]", jsonKey: decimalPlaces, type: number }
-    - { tag: "[@disableCalculation]", jsonKey: disableCalculation, value: true, type: boolean }
+    - { tag: '[#]', jsonKey: title, type: bitmark-- }
+    - { tag: '[!]', jsonKey: quantity, type: number } # [!] repurposed: maps to quantity, not instruction
+    - { tag: '[+]', jsonKey: checked, value: true }
+    - { tag: '[-]', jsonKey: checked, value: false }
+    - { tag: '[@unit:*]', jsonKey: unit }
+    - { tag: '[@unitAbbr:*]', jsonKey: unitAbbr }
+    - { tag: '[@decimalPlaces:*]', jsonKey: decimalPlaces, type: number }
+    - { tag: '[@disableCalculation]', jsonKey: disableCalculation, value: true, type: boolean }
 
   sides:
     - name: ingredient
       variants:
-        - jsonKey: ingredient                    # V1 body → ingredients[N].ingredient
+        - jsonKey: ingredient # V1 body → ingredients[N].ingredient
 ```
 
 > Note: `[!]` maps to `quantity` (not `instruction`), and `[+]`/`[-]` map to `checked` (not choices).
@@ -623,12 +627,12 @@ card:
   jsonKey: listItems
   tags:
     - { group: standard-tags }
-    - { tag: "[#]", jsonKey: title, type: bitmark-- }
+    - { tag: '[#]', jsonKey: title, type: bitmark-- }
 
   sides:
     - name: item
       variants:
-        - jsonKey: body                          # V1 body → listItems[N].body
+        - jsonKey: body # V1 body → listItems[N].body
 ```
 
 ---
@@ -671,25 +675,27 @@ four
 
 The schema resolves as follows:
 
-| Step | Bitmark | Node | Resolved JSON path |
-|------|---------|------|--------------------|
-| 1 | `====` | Card 1 created | `cards[0]` |
-| 2 | `What is 2+2?` | side[0] / variant[0] — body | `cards[0].question.text` |
-| 3 | `[&icon:...]` | side[0] / variant[0] — tag `resource-icon` (jsonKey) | `cards[0].question.icon` |
-| 4 | `--` | Advance to side[1] | — |
-| 5 | `4` | side[1] / variant[0] — body | `cards[0].answer.text` |
-| 6 | `++` | Advance to side[1] / variant[1] (repeat) | — |
-| 7 | `four` | side[1] / variant[1] — body | `cards[0].alternativeAnswers[0].text` |
+| Step | Bitmark        | Node                                                 | Resolved JSON path                    |
+| ---- | -------------- | ---------------------------------------------------- | ------------------------------------- |
+| 1    | `====`         | Card 1 created                                       | `cards[0]`                            |
+| 2    | `What is 2+2?` | side[0] / variant[0] — body                          | `cards[0].question.text`              |
+| 3    | `[&icon:...]`  | side[0] / variant[0] — tag `resource-icon` (jsonKey) | `cards[0].question.icon`              |
+| 4    | `--`           | Advance to side[1]                                   | —                                     |
+| 5    | `4`            | side[1] / variant[0] — body                          | `cards[0].answer.text`                |
+| 6    | `++`           | Advance to side[1] / variant[1] (repeat)             | —                                     |
+| 7    | `four`         | side[1] / variant[1] — body                          | `cards[0].alternativeAnswers[0].text` |
 
 JSON output:
 
 ```json
 {
-  "cards": [{
-    "question": { "text": "What is 2+2?", "icon": { "src": "https://img.io/q.svg" } },
-    "answer": { "text": "4" },
-    "alternativeAnswers": [{ "text": "four" }]
-  }]
+  "cards": [
+    {
+      "question": { "text": "What is 2+2?", "icon": { "src": "https://img.io/q.svg" } },
+      "answer": { "text": "4" },
+      "alternativeAnswers": [{ "text": "four" }]
+    }
+  ]
 }
 ```
 
@@ -697,14 +703,14 @@ JSON output:
 
 ## Schema Summary
 
-| Node | Key property | What it resolves to |
-|------|-------------|---------------------|
-| `card` | `jsonKey` | Top-level JSON array (e.g., `cards`, `pairs`, `matrix`) |
-| `side` | `name` + position | Determines which JSON "section" within a card item |
-| `variant` | `jsonKey` | Specific JSON path for body text within the card item |
-| `variant` / `side` / `card` | `tags[]` | Tag-to-JSON mappings with optional `jsonKey` overrides (inherited: card → side → variant) |
-| tag | `jsonKey` | Override the default JSON key for this tag (e.g., resource → custom path) |
-| tag | `secondaryJsonKey` | In the first card, writes to this bit-root path instead of normal `jsonKey` |
-| `card` | `sections` | Qualified card divider routing (e.g., `table-header` → `header.rows`) |
-| `side` | `repeat: true` | Dynamic number of sides (e.g., matrix columns) |
-| `variant` | `repeat: true` | Dynamic number of variants (e.g., multiple values, alternative answers) |
+| Node                        | Key property       | What it resolves to                                                                       |
+| --------------------------- | ------------------ | ----------------------------------------------------------------------------------------- |
+| `card`                      | `jsonKey`          | Top-level JSON array (e.g., `cards`, `pairs`, `matrix`)                                   |
+| `side`                      | `name` + position  | Determines which JSON "section" within a card item                                        |
+| `variant`                   | `jsonKey`          | Specific JSON path for body text within the card item                                     |
+| `variant` / `side` / `card` | `tags[]`           | Tag-to-JSON mappings with optional `jsonKey` overrides (inherited: card → side → variant) |
+| tag                         | `jsonKey`          | Override the default JSON key for this tag (e.g., resource → custom path)                 |
+| tag                         | `secondaryJsonKey` | In the first card, writes to this bit-root path instead of normal `jsonKey`               |
+| `card`                      | `sections`         | Qualified card divider routing (e.g., `table-header` → `header.rows`)                     |
+| `side`                      | `repeat: true`     | Dynamic number of sides (e.g., matrix columns)                                            |
+| `variant`                   | `repeat: true`     | Dynamic number of variants (e.g., multiple values, alternative answers)                   |

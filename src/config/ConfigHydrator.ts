@@ -78,14 +78,18 @@ class ConfigHydrator {
         const v = this.hydrateCardVariantConfig(_variant);
         variantsOfSide.push(v);
       }
-      const sideConfig = new CardSideConfig(_side.name, _side.repeat ?? false, variantsOfSide);
+      const sideConfig = new CardSideConfig(
+        _side.name,
+        _side.repeat ?? false,
+        variantsOfSide,
+        _side.jsonKey,
+      );
       sides.push(sideConfig);
     }
 
     const cardSetConfig = new CardSetConfig(
       _cardSet,
       _cardSetConfig.jsonKey,
-      _cardSetConfig.itemType ?? 'object',
       _cardSetConfig.sections,
       sides,
     );

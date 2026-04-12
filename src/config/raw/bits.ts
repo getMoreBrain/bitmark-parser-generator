@@ -1743,6 +1743,7 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.property_servings,
+        jsonKey: 'servings.servings',
         description: 'The number of servings for the ingredients',
         format: TagFormat.number,
         chain: [
@@ -5020,6 +5021,7 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.property_ratingLevelStart,
+        jsonKey: 'ratingLevelStart.level',
         description: 'Start level for the rating survey, used to define the lowest rating',
         format: TagFormat.number,
         chain: [
@@ -5033,6 +5035,7 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.property_ratingLevelEnd,
+        jsonKey: 'ratingLevelEnd.level',
         description: 'End level for the rating survey, used to define the highest rating',
         format: TagFormat.number,
         chain: [

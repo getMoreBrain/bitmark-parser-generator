@@ -10,6 +10,12 @@ A `jsonKey` string has this structure:
 [^]path[.path...][[]|[{s}|{v}]][|transform]
 ```
 
+Or the special transparent path:
+
+```
+.
+```
+
 Parsing precedence (left to right):
 
 1. `^` — root escape (optional prefix)
@@ -21,6 +27,16 @@ Parsing precedence (left to right):
 ---
 
 ## Path Expressions
+
+### Transparent path (`.`)
+
+A standalone `.` means the tag produces no separate JSON key. The tag's content merges into the parent context (typically the variant body).
+
+```
+jsonKey: "."
+```
+
+Used when a bitmark tag is syntactically meaningful but transparent in JSON output. For example, the `[#]` title tag in `table-extended` cells — `[#Name]` writes "Name" to the cell's `content` field (the variant body), not to a separate `title` key.
 
 ### Simple key
 
@@ -100,36 +116,30 @@ jsonKey: "title|bool(th)"
 If `[@tableCellType:th]` → emits `"title": true`
 If `[@tableCellType:td]` → key is omitted
 
-### `value(x)`
+### `set(k=v)`
 
-Always emit the fixed value `x` regardless of the tag's content. The tag content is written to its parent's `jsonKey` (the variant body or another designated field).
+Sets field `k` to value `v` on the object resolved by the key path. The tag or variant content is written to the key path as normal; the `set()` transform adds an additional fixed property alongside it.
 
 Supported value literals:
 
 - `true` / `false` — JSON booleans
 - Unquoted text — JSON string
 
-```
-jsonKey: "isCorrect|value(true)"
-```
-
-Tag `[+...]` → emits `"isCorrect": true` (tag content goes to variant body)
+**On a tag jsonKey** — the tag content goes to the key path, and `k=v` is set on the containing object:
 
 ```
-jsonKey: "isCorrect|value(false)"
+jsonKey: "statement|set(isCorrect=true)"
 ```
 
-Tag `[-...]` → emits `"isCorrect": false`
+Tag `[+this is true]` → emits `{ "statement": "this is true", "isCorrect": true }` on the card item.
 
 ```
-jsonKey: "checked|value(true)"
+jsonKey: "ingredient|set(checked=false)"
 ```
 
-Tag `[+]` → emits `"checked": true`
+Tag `[-]` → emits `{ "ingredient": <content>, "checked": false }` on the card item.
 
-### `set(k=v)`
-
-Creates an **array element** in the parent and sets field `k` to value `v` on that element. The tag content is written to a `content` field on the same element. The parent key is taken from the key path (which must end with `[]`).
+**On an array path** — creates an array element and sets `k=v` on it. The tag content is written to a content field derived from the array name (singular form: `choices[]` → `choice`).
 
 ```
 jsonKey: "choices[]|set(isCorrect=true)"
@@ -137,13 +147,15 @@ jsonKey: "choices[]|set(isCorrect=true)"
 
 Tag `[+Choice text]` → appends `{ "choice": <content>, "isCorrect": true, ... }` to `choices[]`
 
+Child chain tags (item, lead, hint, instruction, example) are added as sibling fields on the same element.
+
+**On a side jsonKey** — sets `k=v` on every object created by the side path. Variant and tag content populates the object as normal.
+
 ```
-jsonKey: "choices[]|set(isCorrect=false)"
+jsonKey: "cells[{s}]|set(title=true)"
 ```
 
-Tag `[-Choice text]` → appends `{ "choice": <content>, "isCorrect": false, ... }` to `choices[]`
-
-The content field name is derived from the array name — `choices[]` → `choice`, `responses[]` → `response` (singular form). Child chain tags (item, lead, hint, instruction, example) are added as sibling fields on the same element.
+Every cell object at `cells[{s}]` gets `"title": true` set automatically, in addition to whatever content and tags populate it.
 
 ---
 
@@ -153,11 +165,11 @@ The same bitmark tag can have different `jsonKey` values depending on context. T
 
 ### Example: `[+]` and `[-]` tags
 
-| Context                          | `[+]` jsonKey                    | `[-]` jsonKey                     | Behavior                      |
-| -------------------------------- | -------------------------------- | --------------------------------- | ----------------------------- |
-| `group_trueFalse` (default/quiz) | `choices[]\|set(isCorrect=true)` | `choices[]\|set(isCorrect=false)` | Creates choice array elements |
-| `statements` card set            | `isCorrect\|value(true)`         | `isCorrect\|value(false)`         | Sets scalar boolean           |
-| `ingredients` card set           | `checked\|value(true)`           | `checked\|value(false)`           | Sets scalar boolean           |
+| Context                          | `[+]` jsonKey                    | `[-]` jsonKey                     | Behavior                           |
+| -------------------------------- | -------------------------------- | --------------------------------- | ---------------------------------- |
+| `group_trueFalse` (default/quiz) | `choices[]\|set(isCorrect=true)` | `choices[]\|set(isCorrect=false)` | Creates choice array elements      |
+| `statements` card set            | `statement\|set(isCorrect=true)` | `statement\|set(isCorrect=false)` | Content → statement, sets boolean  |
+| `ingredients` card set           | `ingredient\|set(checked=true)`  | `ingredient\|set(checked=false)`  | Content → ingredient, sets boolean |
 
 ### Example: `[_]` (gap) tag
 
@@ -177,16 +189,16 @@ The same bitmark tag can have different `jsonKey` values depending on context. T
 ## Complete Grammar (EBNF)
 
 ```ebnf
-jsonKey      = [root_escape] key_path [transform_suffix]
+jsonKey      = transparent | [root_escape] key_path [transform_suffix]
+transparent  = "."
 root_escape  = "^"
 key_path     = segment ("." segment)*
 segment      = identifier [array_marker]
 identifier   = letter (letter | digit | "_")*
 array_marker = "[]" | "[{s}]" | "[{v}]"
 transform_suffix = "|" transform
-transform    = bool_transform | value_transform | set_transform
+transform    = bool_transform | set_transform
 bool_transform  = "bool(" literal ")"
-value_transform = "value(" literal ")"
 set_transform   = "set(" identifier "=" literal ")"
 literal      = ~[)|=]+
 ```
@@ -197,6 +209,7 @@ literal      = ~[)|=]+
 
 | Syntax            | Purpose                        | Example                          |
 | ----------------- | ------------------------------ | -------------------------------- |
+| `.`               | Transparent (no separate key)  | `.`                              |
 | `key`             | Simple property                | `instruction`                    |
 | `key.sub`         | Nested object                  | `question.text`                  |
 | `key[]`           | Array append                   | `values[]`                       |
@@ -204,5 +217,5 @@ literal      = ~[)|=]+
 | `key[{s}]`        | Side-indexed array             | `cells[{s}].values[]`            |
 | `^key`            | Emit at bit root               | `^heading.forKeys`               |
 | `key\|bool(x)`    | Boolean if value matches       | `title\|bool(th)`                |
-| `key\|value(x)`   | Fixed value emission           | `isCorrect\|value(true)`         |
+| `key\|set(k=v)`   | Set fixed field on object      | `statement\|set(isCorrect=true)` |
 | `key[]\|set(k=v)` | Array element with fixed field | `choices[]\|set(isCorrect=true)` |

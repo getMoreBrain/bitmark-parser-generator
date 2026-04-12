@@ -8,11 +8,18 @@ interface ToStringOptions {
 class CardSideConfig {
   readonly name: string;
   readonly repeat: boolean;
+  readonly jsonKey: string | null | undefined;
   readonly variants: CardVariantConfig[];
 
-  public constructor(name: string, repeat: boolean, variants: CardVariantConfig[]) {
+  public constructor(
+    name: string,
+    repeat: boolean,
+    variants: CardVariantConfig[],
+    jsonKey?: string | null,
+  ) {
     this.name = name;
     this.repeat = repeat;
+    this.jsonKey = jsonKey;
     this.variants = variants;
   }
 

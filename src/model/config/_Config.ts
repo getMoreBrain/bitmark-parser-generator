@@ -135,8 +135,7 @@ export interface _CardSetsConfig {
 export interface _CardSetConfig {
   // JSON mapping properties
   jsonKey: string | null; // e.g. 'cards', 'pairs', null
-  itemType?: 'object' | 'array'; // Default: 'object'
-  sections?: Record<string, { jsonKey: string }>; // Qualified card divider mappings
+  sections?: Record<string, { jsonKey: string; isDefault?: boolean; sideJsonKey?: string }>; // Qualified card divider mappings
 
   // Card sides (was: variants: _CardVariantConfig[][])
   sides: _CardSideConfig[];
@@ -145,6 +144,7 @@ export interface _CardSetConfig {
 export interface _CardSideConfig {
   name: string; // e.g. 'question', 'key', 'cell'
   repeat?: boolean; // Side repeats for remaining -- dividers
+  jsonKey?: string | null; // JSON path for side container (e.g. 'cells[{s}]')
   variants: _CardVariantConfig[];
 }
 

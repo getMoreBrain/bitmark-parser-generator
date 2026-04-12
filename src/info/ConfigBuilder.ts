@@ -8,7 +8,6 @@ import { BITS } from '../config/raw/bits.ts';
 import { CARDS } from '../config/raw/cardSets.ts';
 import { GROUPS } from '../config/raw/groups.ts';
 import type { _BitConfig, _GroupsConfig } from '../model/config/_Config.ts';
-import type { BitConfig } from '../model/config/BitConfig.ts';
 import { typeFromConfigKey } from '../model/config/enum/ConfigKey.ts';
 import { BitTagConfigKeyType } from '../model/enum/BitTagConfigKeyType.ts';
 import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
@@ -27,8 +26,6 @@ const normalizeCardKey = (cardSetKey: string): string => StringUtils.camelToKeba
 class ConfigBuilder {
   public build(options?: GenerateConfigOptions): void {
     const opts: GenerateConfigOptions = Object.assign({}, options);
-
-    this.buildFlat(opts);
 
     const bitConfigs: (_BitConfig & { bitType: BitTypeType })[] = [];
     const groupConfigs: (_GroupsConfig & { key: string })[] = [];
@@ -233,7 +230,9 @@ class ConfigBuilder {
       if (Array.isArray(tag.chain) && tag.chain.length > 0) {
         const chainTags: unknown[] = [];
         for (const [_tagKey, chainTag] of tag.chain.entries()) {
-          chainTags.push(...processTagEntries(chainTag, [...tagNameChain, jsonKey]));
+          // Chained children are nested inside the parent in the config tree,
+          // so their jsonKey should be relative to the parent object (no chain prefix)
+          chainTags.push(...processTagEntries(chainTag, []));
         }
         chain = chainTags;
       }
@@ -262,11 +261,18 @@ class ConfigBuilder {
       cardSetKey: string,
     ):
       | {
-          key: string;
-          jsonKey: string | null;
-          itemType?: 'object' | 'array';
-          sections?: Record<string, { jsonKey: string }>;
-          sides: { name: string; repeat?: boolean; variants: unknown[] }[];
+          name: string;
+          cards: {
+            name: string;
+            isDefault?: boolean;
+            jsonKey?: string | null;
+            sides: {
+              name: string;
+              repeat?: boolean;
+              jsonKey?: string | null;
+              variants: unknown[];
+            }[];
+          }[];
         }
       | undefined => {
       const cardSetConfig = CARDS[cardSetKey];
@@ -294,26 +300,47 @@ class ConfigBuilder {
             ...(variant.jsonKey !== undefined ? { jsonKey: variant.jsonKey } : {}),
             tags: variantTags,
             repeatCount: variant.repeatCount ?? 1,
-            bodyAllowed: variant.bodyAllowed ?? true,
-            bodyRequired: variant.bodyRequired ?? false,
+            ...(variant.bodyRequired ? { bodyRequired: true } : {}),
+            ...(variant.bodyAllowed === false ? { bodyForbidden: true } : {}),
           };
         });
 
         return {
           name: side.name,
           ...(side.repeat ? { repeat: side.repeat } : {}),
+          ...(side.jsonKey != null ? { jsonKey: side.jsonKey } : {}),
           variants,
         };
       });
 
+      // When sections exist, each section becomes its own card entry
+      if (cardSetConfig.sections) {
+        const cards = Object.entries(cardSetConfig.sections).map(([sectionName, section]) => {
+          const cardSides = section.sideJsonKey
+            ? sides.map((s) => ({ ...s, jsonKey: section.sideJsonKey }))
+            : sides;
+          return {
+            name: sectionName,
+            ...(section.isDefault ? { isDefault: true } : {}),
+            jsonKey: section.jsonKey,
+            sides: cardSides,
+          };
+        });
+
+        return { name: normalizedKey, cards };
+      }
+
+      // Single card
       return {
-        key: normalizedKey,
-        jsonKey: cardSetConfig.jsonKey,
-        ...(cardSetConfig.itemType && cardSetConfig.itemType !== 'object'
-          ? { itemType: cardSetConfig.itemType }
-          : {}),
-        ...(cardSetConfig.sections ? { sections: cardSetConfig.sections } : {}),
-        sides,
+        name: normalizedKey,
+        cards: [
+          {
+            name: 'default',
+            isDefault: true,
+            jsonKey: cardSetConfig.jsonKey,
+            sides,
+          },
+        ],
       };
     };
 
@@ -516,7 +543,7 @@ class ConfigBuilder {
       for (const cardSetKey of Object.keys(CARDS)) {
         const cardJson = serializeCardSet(cardSetKey);
         if (!cardJson) continue;
-        const output = path.join(outputFolderCards, `${cardJson.key}.jsonc`);
+        const output = path.join(outputFolderCards, `${cardJson.name}.jsonc`);
         const str = JSON.stringify(cardJson, null, 2);
         fileWrites.push(fs.writeFile(output, str));
       }
@@ -718,22 +745,26 @@ class ConfigBuilder {
           if (config.key && config.key !== expectedKey) {
             errors.push(`Card key mismatch in cards/${file}: expected '${expectedKey}'`);
           }
-          if (Array.isArray(config.sides)) {
-            config.sides.forEach((side: unknown, sideIdx: number) => {
-              const variants = (side as { variants?: unknown[] }).variants;
-              if (Array.isArray(variants)) {
-                variants.forEach((variant: unknown, variantIdx: number) => {
-                  const variantTags = (variant as { tags?: unknown[] }).tags;
-                  if (Array.isArray(variantTags)) {
-                    checkTags(
-                      variantTags,
-                      `cards/${file} (side ${sideIdx}, variant ${variantIdx})`,
-                      10,
-                    );
+          if (Array.isArray(config.cards)) {
+            for (const cardNode of config.cards) {
+              if (cardNode && Array.isArray(cardNode.sides)) {
+                cardNode.sides.forEach((side: unknown, sideIdx: number) => {
+                  const variants = (side as { variants?: unknown[] }).variants;
+                  if (Array.isArray(variants)) {
+                    variants.forEach((variant: unknown, variantIdx: number) => {
+                      const variantTags = (variant as { tags?: unknown[] }).tags;
+                      if (Array.isArray(variantTags)) {
+                        checkTags(
+                          variantTags,
+                          `cards/${file} (side ${sideIdx}, variant ${variantIdx})`,
+                          10,
+                        );
+                      }
+                    });
                   }
                 });
               }
-            });
+            }
           }
         } catch (err) {
           errors.push(`Failed to parse cards/${file}: ${err}`);
@@ -742,276 +773,6 @@ class ConfigBuilder {
     }
 
     return errors;
-  }
-
-  // Build flat bit configs
-  public buildFlat(options?: GenerateConfigOptions): void {
-    const opts: GenerateConfigOptions = Object.assign({}, options);
-    const bitConfigs: BitConfig[] = [];
-
-    for (const bt of Enum(BitType).values()) {
-      const bitType = Config.getBitType(bt);
-      const bitConfig = Config.getBitConfig(bitType);
-      if (bitConfig) bitConfigs.push(bitConfig);
-    }
-
-    const outputFolder = opts.outputDir ?? 'assets/config';
-    const outputFolderBits = path.join(outputFolder, 'bits_flat');
-    fs.ensureDirSync(outputFolderBits);
-
-    // Clean up existing config files
-    const existingFiles = fs.readdirSync(outputFolderBits).filter((f) => f.endsWith('.jsonc'));
-    for (const file of existingFiles) {
-      fs.removeSync(path.join(outputFolderBits, file));
-    }
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const processTagEntries = (tag: any): any[] => {
-      const tags: unknown[] = [];
-      let tagName = tag.key as string;
-      // if (tagName == '&image') debugger;
-      const tagType = typeFromConfigKey(tag.key);
-      let format = '';
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      let chain: any = undefined;
-      if (tagType === BitTagConfigKeyType.tag) {
-        // const resolvedTag = TAGS[tag.configKey];
-        // tagName = resolvedTag.tag;
-        tagName = tag.name;
-        // if (tagName === '%') {
-        //   chain = {
-        //     key: '%',
-        //     format,
-        //     min: tag.minCount,
-        //     max: tag.maxCount,
-        //     description: 'Lead',
-        //     chain: {
-        //       key: '%',
-        //       format,
-        //       min: tag.minCount,
-        //       max: tag.maxCount,
-        //       description: 'Page number',
-        //       chain: {
-        //         key: '%',
-        //         format,
-        //         min: tag.minCount,
-        //         max: tag.maxCount,
-        //         description: 'Margin number',
-        //       },
-        //     },
-        //   };
-        // }
-        format = 'bitmark--';
-      } else if (tagType === BitTagConfigKeyType.property) {
-        // const resolvedProperty = PROPERTIES[tag.configKey];
-        // tagName = resolvedProperty.tag;
-        tagName = tag.key;
-        // const property = resolvedProperty as PropertyTagConfig;
-        // format
-        if (tag.format === TagFormat.plainText) {
-          format = 'string';
-        } else if (tag.format === TagFormat.boolean) {
-          format = 'bool';
-        } else if (tag.format === TagFormat.bitmarkText) {
-          format = 'bitmark';
-        } else if (tag.format === TagFormat.number) {
-          format = 'number';
-        }
-      } else if (tagType === BitTagConfigKeyType.resource) {
-        format = 'string';
-      } else if (tagType === BitTagConfigKeyType.group) {
-        let k = tag.key as string;
-        if (k.startsWith('group_')) k = k.substring(6);
-        k = /*'_' +*/ StringUtils.camelToKebab(k);
-        tags.push({
-          type: 'group',
-          key: k,
-        });
-        return tags;
-      }
-
-      // Process chain
-      if (Array.isArray(tag.chain) && tag.chain.length > 0) {
-        const chainTags: unknown[] = [];
-        for (const [_tagKey, chainTag] of tag.chain.entries()) {
-          chainTags.push(...processTagEntries(chainTag));
-        }
-        chain = chainTags;
-      }
-
-      const t = {
-        key: tagName,
-        format,
-        default: tag.defaultValue ?? null,
-        alwaysInclude: false,
-        min: tag.minCount == null ? 0 : tag.minCount,
-        max: tag.maxCount == null ? 1 : tag.maxCount,
-        description: tag.description ?? '',
-        chain,
-        // raw: {
-        //   ...tag,
-        // },
-      };
-      tags.push(t);
-      return tags;
-    };
-
-    // BitConfigs
-    for (const b of bitConfigs) {
-      const tags = [];
-      const tagEntriesTypeOrder = [
-        BitTagConfigKeyType.tag,
-        BitTagConfigKeyType.property,
-        BitTagConfigKeyType.resource,
-        BitTagConfigKeyType.group,
-        BitTagConfigKeyType.unknown,
-      ];
-
-      const tagEntries = Object.entries(b.tags ?? []).sort((a, b) => {
-        const tagA = a[1];
-        const tagB = b[1];
-        const typeA = typeFromConfigKey(tagA.configKey);
-        const typeB = typeFromConfigKey(tagB.configKey);
-        const typeOrder = tagEntriesTypeOrder.indexOf(typeA) - tagEntriesTypeOrder.indexOf(typeB);
-        return typeOrder;
-      });
-
-      for (const [_tagKey, tag] of tagEntries) {
-        // let tagName = tagKey;
-        // let tagKeyPrefix = '';
-        // let format = '';
-        // let description = '';
-        // // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        // let chain: any = undefined;
-        // if (tag.type === BitTagConfigKeyType.tag) {
-        //   tagName = tag.tag;
-        //   if (tagName === '%') {
-        //     description = 'Item';
-        //     chain = {
-        //       key: '%',
-        //       format,
-        //       min: tag.minCount,
-        //       max: tag.maxCount,
-        //       description: 'Lead',
-        //       chain: {
-        //         key: '%',
-        //         format,
-        //         min: tag.minCount,
-        //         max: tag.maxCount,
-        //         description: 'Page number',
-        //         chain: {
-        //           key: '%',
-        //           format,
-        //           min: tag.minCount,
-        //           max: tag.maxCount,
-        //           description: 'Margin number',
-        //         },
-        //       },
-        //     };
-        //   } else if (tagName === '!') {
-        //     description = 'Instruction';
-        //   } else if (tagName === '?') {
-        //     description = 'Hint';
-        //   } else if (tagName === '#') {
-        //     description = 'Title';
-        //   } else if (tagName === '##') {
-        //     description = 'Sub-title';
-        //   } else if (tagName === '▼') {
-        //     description = 'Anchor';
-        //   } else if (tagName === '►') {
-        //     description = 'Reference';
-        //   } else if (tagName === '$') {
-        //     description = 'Sample solution';
-        //   } else if (tagName === '&') {
-        //     description = 'Resource';
-        //   } else if (tagName === '+') {
-        //     description = 'True statement';
-        //   } else if (tagName === '-') {
-        //     description = 'False statement';
-        //   } else if (tagName === '_') {
-        //     description = 'Gap';
-        //   } else if (tagName === '=') {
-        //     description = 'Mark';
-        //   }
-        //   format = 'bitmark--';
-        // } else if (tag.type === BitTagConfigKeyType.property) {
-        //   tagName = tag.tag;
-        //   tagKeyPrefix = '@';
-        //   const property = tag as PropertyTagConfig;
-        //   // format
-        //   if (property.format === TagFormat.plainText) {
-        //     format = 'string';
-        //   } else if (property.format === TagFormat.boolean) {
-        //     format = 'bool';
-        //   } else if (property.format === TagFormat.bitmarkText) {
-        //     format = 'bitmark';
-        //   } else if (property.format === TagFormat.number) {
-        //     format = 'number';
-        //   }
-        // } else if (tag.type === BitTagConfigKeyType.resource) {
-        //   tagKeyPrefix = '&';
-        // } else if (tag.type === BitTagConfigKeyType.group) {
-        //   tagKeyPrefix = '@';
-        //   let k = tag.configKey as string;
-        //   if (k.startsWith('group_')) k = k.substring(6);
-        //   k = '_' + k;
-        //   inherits.push({
-        //     type: 'group',
-        //     name: k,
-        //   });
-        //   continue;
-        // }
-        // const t = {
-        //   key: tagKeyPrefix + tagName,
-        //   format,
-        //   default: null,
-        //   alwaysInclude: false,
-        //   min: tag.minCount == null ? 0 : tag.minCount,
-        //   max: tag.maxCount == null ? 1 : tag.maxCount,
-        //   description,
-        //   chain,
-        //   // raw: {
-        //   //   ...tag,
-        //   // },
-        // };
-        // tags.push(t);
-        tags.push(...processTagEntries(tag));
-      }
-
-      let cardRef: string | undefined;
-      const cardSetKey = b.cardSet?.configKey;
-      if (cardSetKey && CARDS[cardSetKey]) {
-        cardRef = normalizeCardKey(cardSetKey);
-      }
-      const bitJson = {
-        name: b.bitType,
-        description: '',
-        since: b.since,
-        deprecated: b.deprecated,
-        history: [
-          {
-            version: b.since,
-            changes: ['Initial version'],
-          },
-        ],
-        format: b.textFormatDefault ?? 'bitmark--',
-        bodyAllowed: b.bodyAllowed ?? true,
-        bodyRequired: b.bodyRequired ?? false,
-        footerAllowed: b.footerAllowed ?? true,
-        footerRequired: b.footerRequired ?? false,
-        resourceAttachmentAllowed: b.resourceAttachmentAllowed ?? true,
-        tags,
-        ...(cardRef ? { card: cardRef } : {}),
-      };
-      const output = path.join(outputFolderBits, `${b.bitType}.jsonc`);
-      const str = JSON.stringify(bitJson, null, 2);
-      fs.writeFileSync(output, str);
-      // const bitType = b.bitType;
-      // const bitType2 = Config.getBitType(bitType);
-      // if (bitType !== bitType2) {
-      //   console.log(`BitType: ${bitType} => ${bitType2}`);
-      // }
-    }
   }
 }
 

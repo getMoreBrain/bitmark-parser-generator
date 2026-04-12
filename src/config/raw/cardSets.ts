@@ -422,13 +422,13 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_true,
                 description: 'Tag for true statements.',
-                jsonKey: 'isCorrect|value(true)',
+                jsonKey: 'statement|set(isCorrect=true)',
                 maxCount: 1,
               },
               {
                 key: ConfigKey.tag_false,
                 description: 'Tag for false statements.',
-                jsonKey: 'isCorrect|value(false)',
+                jsonKey: 'statement|set(isCorrect=false)',
                 maxCount: 1,
               },
               {
@@ -617,11 +617,11 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.table]: {
     jsonKey: 'table.data',
-    itemType: 'array',
     sides: [
       {
         name: 'cell',
         repeat: true,
+        jsonKey: '[{s}]',
         variants: [
           {
             jsonKey: null,
@@ -669,14 +669,15 @@ const CARDSETS: _CardSetsConfig = {
   [CardSetConfigKey.tableExtended]: {
     jsonKey: null,
     sections: {
-      default: { jsonKey: 'tableExtended.body.rows' },
-      'table-header': { jsonKey: 'tableExtended.header.rows' },
-      'table-footer': { jsonKey: 'tableExtended.footer.rows' },
+      'table-body': { jsonKey: 'table.body.rows', isDefault: true },
+      'table-header': { jsonKey: 'table.header.rows', sideJsonKey: 'cells[{s}]|set(title=true)' },
+      'table-footer': { jsonKey: 'table.footer.rows', sideJsonKey: 'cells[{s}]|set(title=true)' },
     },
     sides: [
       {
         name: 'cell',
         repeat: true,
+        jsonKey: 'cells[{s}]',
         variants: [
           {
             jsonKey: 'content',
@@ -687,25 +688,30 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.tag_title,
+                jsonKey: '.',
                 description: 'Title of the table cell.',
               },
               {
                 key: ConfigKey.property_tableCellType,
+                jsonKey: 'title|bool(th)',
                 description: 'Table cell type (th/td).',
                 format: TagFormat.plainText,
               },
               {
                 key: ConfigKey.property_tableRowSpan,
+                jsonKey: 'rowspan',
                 description: 'Number of rows the cell spans.',
                 format: TagFormat.number,
               },
               {
                 key: ConfigKey.property_tableColSpan,
+                jsonKey: 'colspan',
                 description: 'Number of columns the cell spans.',
                 format: TagFormat.number,
               },
               {
                 key: ConfigKey.property_tableScope,
+                jsonKey: 'scope',
                 description: 'Scope attribute for header cells.',
                 format: TagFormat.plainText,
               },
@@ -722,11 +728,11 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.pronunciationTable]: {
     jsonKey: 'pronunciationTable.data',
-    itemType: 'array',
     sides: [
       {
         name: 'cell',
         repeat: true,
+        jsonKey: '[{s}]',
         variants: [
           {
             jsonKey: 'body',
@@ -864,13 +870,13 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_true,
                 description: 'Checked state for the ingredient.',
-                jsonKey: 'checked|value(true)',
+                jsonKey: 'ingredient|set(checked=true)',
                 maxCount: 1,
               },
               {
                 key: ConfigKey.tag_false,
                 description: 'Unchecked state for the ingredient.',
-                jsonKey: 'checked|value(false)',
+                jsonKey: 'ingredient|set(checked=false)',
                 maxCount: 1,
               },
               {
