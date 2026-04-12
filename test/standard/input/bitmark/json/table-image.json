@@ -4,9 +4,7 @@
       "type": "table-image",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "78954"
-      ],
+      "id": ["78954"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -33,7 +31,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.19.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -41,12 +39,211 @@
   },
   {
     "bit": {
+      "type": "table-image",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["151973"],
+      "tableFixedHeader": true,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": true,
+      "tableSort": true,
+      "tablePagination": true,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "gif",
+          "provider": "miro.medium.com",
+          "src": "https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "body": [],
+      "table": {
+        "header": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Name",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true,
+                  "colwidth": 150
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Email",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Phone Number",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ],
+                  "title": true
+                }
+              ]
+            }
+          ]
+        },
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "John",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "john@example.com",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "(353) 01 222 3333",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Mark",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "mark@gmail.com",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "(01) 22 888 4444",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.19.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.table-image]\n[@id:151973]\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif]\n[@tableFixedHeader:true]\n[@tableHeaderWhitespaceNoWrap:false]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[@tableColWidth:150]\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  },
+  {
+    "bit": {
       "type": "table-image-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "78954"
-      ],
+      "id": ["78954"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -73,7 +270,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.19.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -84,9 +281,7 @@
       "type": "standard-table-image-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -113,7 +308,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.19.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -122,14 +317,14 @@
           "text": "[.standard-table-image-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 11,
+              "line": 40,
               "column": 1,
-              "offset": 220
+              "offset": 621
             },
             "end": {
-              "line": 11,
+              "line": 40,
               "column": 44,
-              "offset": 263
+              "offset": 664
             }
           }
         },
@@ -138,14 +333,14 @@
           "text": "[.standard-table-image-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 11,
+              "line": 40,
               "column": 1,
-              "offset": 220
+              "offset": 621
             },
             "end": {
-              "line": 11,
+              "line": 40,
               "column": 44,
-              "offset": 263
+              "offset": 664
             }
           }
         }
@@ -158,9 +353,7 @@
       "type": "standard-table-image-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151972"
-      ],
+      "id": ["151972"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -187,7 +380,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.19.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -196,14 +389,14 @@
           "text": "[.standard-table-image-non-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 16,
+              "line": 45,
               "column": 1,
-              "offset": 358
+              "offset": 759
             },
             "end": {
-              "line": 16,
+              "line": 45,
               "column": 48,
-              "offset": 405
+              "offset": 806
             }
           }
         },
@@ -212,14 +405,14 @@
           "text": "[.standard-table-image-non-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 16,
+              "line": 45,
               "column": 1,
-              "offset": 358
+              "offset": 759
             },
             "end": {
-              "line": 16,
+              "line": 45,
               "column": 48,
-              "offset": 405
+              "offset": 806
             }
           }
         }
@@ -232,9 +425,7 @@
       "type": "standard-remark-table-image-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151971"
-      ],
+      "id": ["151971"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -261,7 +452,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.19.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -270,14 +461,14 @@
           "text": "[.standard-remark-table-image-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 21,
+              "line": 50,
               "column": 1,
-              "offset": 500
+              "offset": 901
             },
             "end": {
-              "line": 21,
+              "line": 50,
               "column": 51,
-              "offset": 550
+              "offset": 951
             }
           }
         },
@@ -286,14 +477,14 @@
           "text": "[.standard-remark-table-image-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 21,
+              "line": 50,
               "column": 1,
-              "offset": 500
+              "offset": 901
             },
             "end": {
-              "line": 21,
+              "line": 50,
               "column": 51,
-              "offset": 550
+              "offset": 951
             }
           }
         }
@@ -306,9 +497,7 @@
       "type": "standard-remark-table-image-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": [
-        "151972"
-      ],
+      "id": ["151972"],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -335,7 +524,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.19.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3",
       "warnings": [
@@ -344,14 +533,14 @@
           "text": "[.standard-remark-table-image-non-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 26,
+              "line": 55,
               "column": 1,
-              "offset": 645
+              "offset": 1046
             },
             "end": {
-              "line": 26,
+              "line": 55,
               "column": 55,
-              "offset": 699
+              "offset": 1100
             }
           }
         },
@@ -360,14 +549,14 @@
           "text": "[.standard-remark-table-image-non-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 26,
+              "line": 55,
               "column": 1,
-              "offset": 645
+              "offset": 1046
             },
             "end": {
-              "line": 26,
+              "line": 55,
               "column": 55,
-              "offset": 699
+              "offset": 1100
             }
           }
         }
