@@ -219,6 +219,8 @@ const NodeType = {
   extractorExtractionTimestampValue: 'extractorExtractionTimestampValue',
   extractorTag: 'extractorTag',
   extractorTagValue: 'extractorTagValue',
+  extractorInternal: 'extractorInternal',
+  extractorInternalValue: 'extractorInternalValue',
   extraProperties: 'extraProperties',
   feedback: 'feedback',
   feedbackEngine: 'feedbackEngine',

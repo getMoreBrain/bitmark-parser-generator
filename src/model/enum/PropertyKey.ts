@@ -30,6 +30,7 @@ const propertyKeys = {
   property_bot: '@bot',
   property_bubbleTag: '@bubbleTag',
   property_extractorTag: '@extractorTag',
+  property_extractorInternal: '@extractorInternal',
   property_buttonCaption: '@buttonCaption',
   property_callToActionUrl: '@callToActionUrl',
   property_caption: '@caption',

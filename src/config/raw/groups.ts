@@ -230,6 +230,12 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_extractorInternal,
+        description: 'The internal extractor tag(s) for the bit',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
         key: ConfigKey.property_levelCEFRp,
         description: 'The CEFRp level for the bit',
         format: TagFormat.plainText,

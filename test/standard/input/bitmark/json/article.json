@@ -925,6 +925,10 @@
         "yellow",
         "red"
       ],
+      "extractorInternal": [
+        "internal1",
+        "internal2"
+      ],
       "reductionTag": [
         "green",
         "yellow"
