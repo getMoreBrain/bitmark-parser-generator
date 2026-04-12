@@ -231,7 +231,7 @@ const GROUPS: _GroupsConfig = {
       },
       {
         key: ConfigKey.property_extractorInternal,
-        description: 'The internal extractor tag(s) for the bit',
+        description: 'Internal metadata used by the extractor for processing purposes',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
