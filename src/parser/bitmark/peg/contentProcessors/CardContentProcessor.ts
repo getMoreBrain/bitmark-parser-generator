@@ -1022,13 +1022,22 @@ function parseTable(
     const rowSpanRaw = tags.tableRowSpan ?? readExtraProperty(tags.extraProperties, 'tableRowSpan');
     const colSpanRaw = tags.tableColSpan ?? readExtraProperty(tags.extraProperties, 'tableColSpan');
     const scopeRaw = tags.tableScope ?? readExtraProperty(tags.extraProperties, 'tableScope');
+    const colWidthRaw =
+      tags.tableColWidth ?? readExtraProperty(tags.extraProperties, 'tableColWidth');
 
-    cleanupExtraProperties(tags, ['tableCellType', 'tableRowSpan', 'tableColSpan', 'tableScope']);
+    cleanupExtraProperties(tags, [
+      'tableCellType',
+      'tableRowSpan',
+      'tableColSpan',
+      'tableScope',
+      'tableColWidth',
+    ]);
 
     const cellType = normalizeCellType(cellTypeRaw, section);
     const rowspan = normalizeSpan(rowSpanRaw, 'rowspan');
     const colspan = normalizeSpan(colSpanRaw, 'colspan');
     const scope = normalizeScope(scopeRaw);
+    const colwidth = NumberUtils.asNumber(colWidthRaw) ?? 0;
 
     const cell: TableCellJson = {
       content,
@@ -1038,6 +1047,7 @@ function parseTable(
     if (rowspan > 1) cell.rowspan = rowspan;
     if (colspan > 1) cell.colspan = colspan;
     if (scope) cell.scope = scope;
+    if (colwidth > 0) cell.colwidth = colwidth;
 
     return cell;
   };

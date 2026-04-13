@@ -215,7 +215,6 @@ function propertyContentProcessor(
         minCount: 1,
         chain: undefined,
         jsonKey: undefined,
-        secondaryJsonKey: undefined,
         format: TagFormat.bitmarkText,
         values: undefined,
         defaultValue: undefined,

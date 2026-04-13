@@ -64,6 +64,7 @@ export interface BitJson {
   reductionTag: string | string[];
   bubbleTag: string | string[];
   extractorTag: string | string[];
+  extractorInternal: string | string[];
   levelCEFRp: string;
   levelCEFR: string;
   levelILR: string;
@@ -559,6 +560,7 @@ export interface TableCellJson {
   rowspan?: number;
   colspan?: number;
   scope?: 'row' | 'col' | 'rowgroup' | 'colgroup';
+  colwidth?: number;
 }
 
 export interface QuestionJson {

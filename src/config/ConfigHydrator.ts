@@ -78,14 +78,18 @@ class ConfigHydrator {
         const v = this.hydrateCardVariantConfig(_variant);
         variantsOfSide.push(v);
       }
-      const sideConfig = new CardSideConfig(_side.name, _side.repeat ?? false, variantsOfSide);
+      const sideConfig = new CardSideConfig(
+        _side.name,
+        _side.repeat ?? false,
+        variantsOfSide,
+        _side.jsonKey,
+      );
       sides.push(sideConfig);
     }
 
     const cardSetConfig = new CardSetConfig(
       _cardSet,
       _cardSetConfig.jsonKey,
-      _cardSetConfig.itemType ?? 'object',
       _cardSetConfig.sections,
       sides,
     );
@@ -94,14 +98,7 @@ class ConfigHydrator {
   }
 
   private hydrateTagConfig(_tag: _AbstractTagConfig): TagsConfigWithInfo {
-    const {
-      key: _configKey,
-      maxCount,
-      minCount,
-      chain: _chain,
-      secondaryJsonKey,
-      deprecated,
-    } = _tag;
+    const { key: _configKey, maxCount, minCount, chain: _chain, deprecated } = _tag;
     const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No tag key found for config key '${configKey}'`);
     const tag = Enum(Tag).fromValue(configKey);
@@ -119,7 +116,6 @@ class ConfigHydrator {
       maxCount: maxCount ?? MAX_COUNT_DEFAULT,
       minCount: minCount ?? MIN_COUNT_DEFAULT,
       chain,
-      secondaryJsonKey,
       deprecated,
     });
 
@@ -141,7 +137,6 @@ class ConfigHydrator {
       values,
       defaultValue,
       jsonKey,
-      secondaryJsonKey,
     } = _tag;
     const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No property key found for config key '${configKey}'`);
@@ -160,7 +155,6 @@ class ConfigHydrator {
       minCount: minCount ?? MIN_COUNT_DEFAULT,
       chain,
       jsonKey,
-      secondaryJsonKey,
       format,
       values,
       defaultValue,
@@ -175,15 +169,7 @@ class ConfigHydrator {
   }
 
   private hydrateResourceTagConfig(_tag: _AbstractTagConfig): TagsConfigWithInfo {
-    const {
-      key: _configKey,
-      maxCount,
-      minCount,
-      chain: _chain,
-      deprecated,
-      jsonKey,
-      secondaryJsonKey,
-    } = _tag;
+    const { key: _configKey, maxCount, minCount, chain: _chain, deprecated, jsonKey } = _tag;
     const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No resource key found for config key '${configKey}'`);
     const tag = _configKey.substring(1); // Remove the '&' prefix from the config key
@@ -201,7 +187,6 @@ class ConfigHydrator {
       minCount: minCount ?? MIN_COUNT_DEFAULT,
       chain,
       jsonKey,
-      secondaryJsonKey,
       deprecated,
     });
 

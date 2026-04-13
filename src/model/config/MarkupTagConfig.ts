@@ -19,7 +19,6 @@ class MarkupTagConfig extends AbstractTagConfig {
     maxCount: CountType;
     minCount: number;
     chain: TagsConfig | undefined;
-    secondaryJsonKey: string | undefined;
     deprecated: string | undefined;
   }) {
     super({

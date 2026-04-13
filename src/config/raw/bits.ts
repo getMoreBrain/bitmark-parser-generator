@@ -1271,6 +1271,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_isCaseSensitive,
         description: 'If the cloze answers are case sensitive',
         format: TagFormat.boolean,
+        defaultValue: 'true',
       },
       {
         key: ConfigKey.property_quizCountItems,
@@ -1742,6 +1743,7 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.property_servings,
+        jsonKey: 'servings.servings',
         description: 'The number of servings for the ingredients',
         format: TagFormat.number,
         chain: [
@@ -4151,6 +4153,7 @@ const BITS: _BitsConfig = {
         description:
           'Case sensitivity for matching pairs, used to define if matches are case-sensitive',
         format: TagFormat.boolean,
+        defaultValue: 'true',
       },
     ],
     cardSet: CardSetConfigKey.matchPairs,
@@ -4620,6 +4623,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_platformBrandTarget,
         description: 'The platform brand target (typically "light", "dark" or "none")',
         format: TagFormat.plainText,
+        defaultValue: 'none',
       },
     ],
   },
@@ -4643,6 +4647,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_platformLogoMaxHeight,
         description: 'Maximum height for the platform logo',
         format: TagFormat.number,
+        defaultValue: '40',
       },
       {
         key: ConfigKey.group_platformStylesCommon,
@@ -4818,6 +4823,7 @@ const BITS: _BitsConfig = {
         description:
           'Resolved status for the review note, used to indicate if the note is resolved',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_resolvedDate,
@@ -5015,6 +5021,7 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.property_ratingLevelStart,
+        jsonKey: 'ratingLevelStart.level',
         description: 'Start level for the rating survey, used to define the lowest rating',
         format: TagFormat.number,
         chain: [
@@ -5028,6 +5035,7 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.property_ratingLevelEnd,
+        jsonKey: 'ratingLevelEnd.level',
         description: 'End level for the rating survey, used to define the highest rating',
         format: TagFormat.number,
         chain: [
@@ -5101,28 +5109,32 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_tableFixedHeader,
         description: 'Fixed header for the table, used to keep the header visible while scrolling',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tableHeaderWhitespaceNoWrap,
         description: 'No wrap for table header whitespace, used to prevent header text wrapping',
         format: TagFormat.boolean,
-        // defaultValue: 'false',
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tableSearch,
         description:
           'Search functionality for the table, used to enable searching within the table',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tableSort,
         description: 'Sorting functionality for the table, used to enable sorting of table columns',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tablePagination,
         description: 'Pagination for the table, used to limit the number of rows displayed at once',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tablePaginationLimit,
@@ -5140,23 +5152,25 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_tableWhitespaceNoWrap,
         description: 'No wrap for table whitespace, used to prevent text wrapping in table cells',
         format: TagFormat.boolean,
-        // defaultValue: 'false',
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tableAutoWidth,
         description: 'Auto width for table columns, used to automatically adjust column widths',
         format: TagFormat.boolean,
-        // defaultValue: 'true',
+        defaultValue: 'true',
       },
       {
         key: ConfigKey.property_tableResizableColumns,
         description: 'Resizable columns for the table, used to allow users to resize table columns',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_tableColumnMinWidth,
         description: 'Minimum width for table columns, used to define the minimum width of columns',
         format: TagFormat.number,
+        defaultValue: '0',
       },
     ],
     cardSet: CardSetConfigKey.table,
@@ -5165,6 +5179,7 @@ const BITS: _BitsConfig = {
     since: '4.14.0',
     baseBitType: BitType.table,
     description: 'Extended table bit, used to create complex tables with all HTML table features',
+    cardSet: CardSetConfigKey.tableExtended,
   },
   [BitType.tableExtendedImage]: {
     since: '5.13.0',

@@ -54,7 +54,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_validationDate,
         description: 'The date when the bit was validated',
         format: TagFormat.plainText,
-        defaultValue: '',
       },
       {
         key: ConfigKey.property_aiGenerated,
@@ -199,6 +198,7 @@ const GROUPS: _GroupsConfig = {
       },
       {
         key: ConfigKey.property_groupTag,
+        jsonKey: 'groupTag.name',
         description: 'The group tag(s) for the bit',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
@@ -226,6 +226,12 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_extractorTag,
         description: 'The extractor tag(s) for the bit',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
+        key: ConfigKey.property_extractorInternal,
+        description: 'Internal metadata used by the extractor for processing purposes',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
@@ -295,21 +301,49 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
-  [ConfigKey.group_standardItemLeadInstructionHint]: {
+  [ConfigKey.group_standardItemLead]: {
     type: GroupConfigType.standard,
-    description:
-      'Standard group for item, lead, page number, source page number, margin number, instruction and hint tags',
+    description: 'Standard group for item, lead, page number, and margin number tags',
     tags: [
       {
         key: ConfigKey.tag_item,
+        jsonKey: 'item',
         description: 'The item for the bit',
         chain: [
           {
             key: ConfigKey.tag_item,
-            description: 'The lead, page number, source page number, and margin number for the bit',
-            maxCount: 4,
+            jsonKey: 'lead',
+            description: 'The lead for the bit',
+            maxCount: 1,
+            chain: [
+              {
+                key: ConfigKey.tag_item,
+                jsonKey: 'pageNumber',
+                description: 'The page number for the bit',
+                maxCount: 1,
+                chain: [
+                  {
+                    key: ConfigKey.tag_item,
+                    jsonKey: 'marginNumber',
+                    description: 'The margin number for the bit',
+                    maxCount: 1,
+                  },
+                ],
+              },
+            ],
           },
         ],
+      },
+    ],
+  },
+  [ConfigKey.group_standardItemLeadInstructionHint]: {
+    type: GroupConfigType.standard,
+    description:
+      'Standard group for item, lead, page number, margin number, instruction and hint tags',
+    tags: [
+      {
+        key: ConfigKey.group_standardItemLead,
+        description: 'Item, lead, page number, and margin number tags',
       },
       {
         key: ConfigKey.tag_instruction,
@@ -348,6 +382,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.property_imageSource,
+        jsonKey: 'imageSource.url',
         description: 'The source of an image',
         format: TagFormat.plainText,
         chain: [
@@ -381,6 +416,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.property_technicalTerm,
+        jsonKey: 'technicalTerm.technicalTerm',
         description: 'The technical term',
         format: TagFormat.plainText,
         chain: [
@@ -399,6 +435,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.property_person,
+        jsonKey: 'person.name',
         description: 'A person',
         format: TagFormat.plainText,
         chain: [
@@ -416,6 +453,7 @@ const GROUPS: _GroupsConfig = {
       {
         // Deprecated (parter renamed to person)
         key: ConfigKey.property_partner,
+        jsonKey: 'partner.name',
         description: 'A partner',
         format: TagFormat.plainText,
         chain: [
@@ -443,6 +481,7 @@ const GROUPS: _GroupsConfig = {
         chain: [
           {
             key: ConfigKey.tag_gap,
+            jsonKey: 'solutions[]',
             description: 'Alternative values for the gaps in the content',
             maxCount: Count.infinity,
           },
@@ -452,13 +491,16 @@ const GROUPS: _GroupsConfig = {
           },
           {
             key: ConfigKey.property_example,
+            jsonKey: 'example',
             description: 'An example for the gap',
             format: TagFormat.plainText,
           },
           {
             key: ConfigKey.property_isCaseSensitive,
+            jsonKey: 'isCaseSensitive',
             description: 'If true, the gap text is case sensitive',
             format: TagFormat.boolean,
+            defaultValue: 'true',
           },
         ],
       },
@@ -475,11 +517,13 @@ const GROUPS: _GroupsConfig = {
         chain: [
           {
             key: ConfigKey.tag_true,
+            jsonKey: 'choices[]|set(isCorrect=true)',
             description: 'True values for a true/false statement/question',
             maxCount: Count.infinity,
           },
           {
             key: ConfigKey.tag_false,
+            jsonKey: 'choices[]|set(isCorrect=false)',
             description: 'False values for a true/false statement/question',
             maxCount: Count.infinity,
           },
@@ -489,6 +533,7 @@ const GROUPS: _GroupsConfig = {
           },
           {
             key: ConfigKey.property_example,
+            jsonKey: 'example',
             description: 'An example for the true/false statement/question',
             format: TagFormat.plainText,
           },
@@ -501,11 +546,13 @@ const GROUPS: _GroupsConfig = {
         chain: [
           {
             key: ConfigKey.tag_true,
+            jsonKey: 'choices[]|set(isCorrect=true)',
             description: 'True values for a true/false statement/question',
             maxCount: Count.infinity,
           },
           {
             key: ConfigKey.tag_false,
+            jsonKey: 'choices[]|set(isCorrect=false)',
             description: 'False values for a true/false statement/question',
             maxCount: Count.infinity,
           },
@@ -515,6 +562,7 @@ const GROUPS: _GroupsConfig = {
           },
           {
             key: ConfigKey.property_example,
+            jsonKey: 'example',
             description: 'An example for the true/false statement/question',
             format: TagFormat.plainText,
           },
@@ -528,6 +576,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.property_mark,
+        jsonKey: 'marks.mark',
         description: 'The mark configuration',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
@@ -557,11 +606,13 @@ const GROUPS: _GroupsConfig = {
         chain: [
           {
             key: ConfigKey.property_mark,
+            jsonKey: 'mark',
             description: 'The mark configuration',
             format: TagFormat.plainText,
           },
           {
             key: ConfigKey.property_example,
+            jsonKey: 'example',
             description: 'An example for the marked content',
             format: TagFormat.plainText,
           },
@@ -733,6 +784,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_maxTocChapterLevel,
         description: 'The maximum table of contents chapter level',
         format: TagFormat.number,
+        defaultValue: '-1',
       },
       {
         key: ConfigKey.property_sourceDocument,
@@ -815,11 +867,13 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_isTracked,
         description: 'If true, the learning path is tracked',
         format: TagFormat.boolean,
+        defaultValue: 'true',
       },
       {
         key: ConfigKey.property_isInfoOnly,
         description: 'If true, the learning path is info only',
         format: TagFormat.boolean,
+        defaultValue: 'false',
       },
       {
         key: ConfigKey.property_deeplink,
@@ -1163,6 +1217,7 @@ const GROUPS: _GroupsConfig = {
       },
       {
         key: ConfigKey.property_posterImage,
+        jsonKey: 'posterImage.src',
         description: 'The poster image for the video',
         format: TagFormat.plainText,
         chain: [

@@ -24,6 +24,7 @@ const config = [
       'assets',
       'specs',
       'plans',
+      'submodules',
       '.github',
       'src/generated',
       '**/*.d.ts',

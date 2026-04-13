@@ -97,7 +97,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the definition.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: '^heading.forKeys',
               },
               {
                 key: ConfigKey.group_resourceIcon,
@@ -121,7 +121,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the definition.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: '^heading.forValues',
               },
               {
                 key: ConfigKey.group_resourceIcon,
@@ -172,7 +172,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match pair.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: '^heading.forKeys',
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -207,7 +207,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match pair.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: '^heading.forValues',
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -241,7 +241,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the audio match pair.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: '^heading.forKeys',
               },
               {
                 key: ConfigKey.resource_audio,
@@ -266,7 +266,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the audio match pair.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: '^heading.forValues',
               },
               {
                 key: ConfigKey.resource_audio,
@@ -299,7 +299,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the image match pair.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: '^heading.forKeys',
               },
               {
                 key: ConfigKey.resource_image,
@@ -324,7 +324,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the image match pair.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: '^heading.forValues',
               },
               {
                 key: ConfigKey.resource_image,
@@ -362,7 +362,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match matrix.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: '^heading.forKeys',
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -392,7 +392,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match matrix.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: '^heading.forValues',
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -422,11 +422,13 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_true,
                 description: 'Tag for true statements.',
+                jsonKey: 'statement|set(isCorrect=true)',
                 maxCount: 1,
               },
               {
                 key: ConfigKey.tag_false,
                 description: 'Tag for false statements.',
+                jsonKey: 'statement|set(isCorrect=false)',
                 maxCount: 1,
               },
               {
@@ -492,7 +494,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the feedback.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: '^heading.forKeys',
               },
             ],
             bodyAllowed: false,
@@ -522,7 +524,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the feedback.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: '^heading.forValues',
               },
             ],
             bodyAllowed: true,
@@ -615,7 +617,6 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.table]: {
     jsonKey: 'table.data',
-    itemType: 'array',
     sides: [
       {
         name: 'cell',
@@ -630,8 +631,8 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.tag_title,
+                jsonKey: '^table.columns[]',
                 description: 'Title of the table.',
-                secondaryJsonKey: 'table.columns[]',
               },
               {
                 key: ConfigKey.property_tableCellType,
@@ -652,6 +653,11 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.property_tableScope,
                 description: 'Scope attribute for header cells.',
                 format: TagFormat.plainText,
+              },
+              {
+                key: ConfigKey.property_tableColWidth,
+                description: 'Width for the column.',
+                format: TagFormat.number,
               },
             ],
             repeatCount: Count.infinity,
@@ -667,14 +673,15 @@ const CARDSETS: _CardSetsConfig = {
   [CardSetConfigKey.tableExtended]: {
     jsonKey: null,
     sections: {
-      default: { jsonKey: 'tableExtended.body.rows' },
-      'table-header': { jsonKey: 'tableExtended.header.rows' },
-      'table-footer': { jsonKey: 'tableExtended.footer.rows' },
+      'table-header': { jsonKey: 'table.header.rows', sideJsonKey: 'cells[{s}]|set(title=true)' },
+      'table-body': { jsonKey: 'table.body.rows', isDefault: true },
+      'table-footer': { jsonKey: 'table.footer.rows', sideJsonKey: 'cells[{s}]|set(title=true)' },
     },
     sides: [
       {
         name: 'cell',
         repeat: true,
+        jsonKey: 'cells[{s}]',
         variants: [
           {
             jsonKey: 'content',
@@ -685,27 +692,37 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.tag_title,
+                jsonKey: '.',
                 description: 'Title of the table cell.',
               },
               {
                 key: ConfigKey.property_tableCellType,
+                jsonKey: 'title|bool(th)',
                 description: 'Table cell type (th/td).',
                 format: TagFormat.plainText,
               },
               {
                 key: ConfigKey.property_tableRowSpan,
+                jsonKey: 'rowspan',
                 description: 'Number of rows the cell spans.',
                 format: TagFormat.number,
               },
               {
                 key: ConfigKey.property_tableColSpan,
+                jsonKey: 'colspan',
                 description: 'Number of columns the cell spans.',
                 format: TagFormat.number,
               },
               {
                 key: ConfigKey.property_tableScope,
+                jsonKey: 'scope',
                 description: 'Scope attribute for header cells.',
                 format: TagFormat.plainText,
+              },
+              {
+                key: ConfigKey.property_tableColWidth,
+                description: 'Width for the column.',
+                format: TagFormat.number,
               },
             ],
             repeatCount: Count.infinity,
@@ -720,7 +737,6 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.pronunciationTable]: {
     jsonKey: 'pronunciationTable.data',
-    itemType: 'array',
     sides: [
       {
         name: 'cell',
@@ -768,15 +784,9 @@ const CARDSETS: _CardSetsConfig = {
                 format: TagFormat.plainText,
               },
               {
-                key: ConfigKey.tag_item,
-                description: 'The item for the bot action response.',
-                chain: [
-                  {
-                    key: ConfigKey.tag_item,
-                    description: 'The lead, page number, source page number, and margin number.',
-                    maxCount: 4,
-                  },
-                ],
+                key: ConfigKey.group_standardItemLead,
+                description:
+                  'Item, lead, page number, and margin number for the bot action response.',
               },
               {
                 key: ConfigKey.tag_instruction,
@@ -866,19 +876,20 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the ingredient.',
               },
               {
-                key: ConfigKey.group_trueFalse,
-                description: 'Group for true/false properties of the ingredient.',
+                key: ConfigKey.tag_true,
+                description: 'Checked state for the ingredient.',
+                jsonKey: 'ingredient|set(checked=true)',
+                maxCount: 1,
               },
               {
-                key: ConfigKey.tag_item,
-                description: 'The item for the ingredient.',
-                chain: [
-                  {
-                    key: ConfigKey.tag_item,
-                    description: 'Lead, page number, source page number, and margin number.',
-                    maxCount: 4,
-                  },
-                ],
+                key: ConfigKey.tag_false,
+                description: 'Unchecked state for the ingredient.',
+                jsonKey: 'ingredient|set(checked=false)',
+                maxCount: 1,
+              },
+              {
+                key: ConfigKey.group_standardItemLead,
+                description: 'Item, lead, page number, and margin number for the ingredient.',
               },
               {
                 key: ConfigKey.tag_instruction,

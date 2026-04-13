@@ -185,6 +185,7 @@ class Builder extends BaseBuilder {
       reductionTag?: string | string[];
       bubbleTag?: string | string[];
       extractorTag?: string | string[];
+      extractorInternal?: string | string[];
       levelCEFRp?: string | string[];
       levelCEFR?: string | string[];
       levelILR?: string | string[];
@@ -684,6 +685,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_extractorTag,
         data.extractorTag,
+        options,
+      ),
+      extractorInternal: this.toAstProperty(
+        bitType,
+        ConfigKey.property_extractorInternal,
+        data.extractorInternal,
         options,
       ),
       levelCEFRp: this.toAstProperty(
@@ -2451,6 +2458,7 @@ class Builder extends BaseBuilder {
           if (cell.rowspan != null) tableCell.rowspan = cell.rowspan;
           if (cell.colspan != null) tableCell.colspan = cell.colspan;
           if (cell.scope) tableCell.scope = cell.scope;
+          if (cell.colwidth != null) tableCell.colwidth = cell.colwidth;
 
           return tableCell;
         });

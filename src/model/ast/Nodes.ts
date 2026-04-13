@@ -114,6 +114,7 @@ export interface Bit {
   reductionTag?: Property;
   bubbleTag?: Property;
   extractorTag?: Property;
+  extractorInternal?: Property;
   levelCEFRp?: Property;
   levelCEFR?: Property;
   levelILR?: Property;
@@ -190,6 +191,7 @@ export interface Bit {
   tableWhitespaceNoWrap?: Property;
   tableAutoWidth?: Property;
   tableResizableColumns?: Property;
+  tableColWidth?: Property;
   tableColumnMinWidth?: Property;
   tableCellType?: Property;
   tableRowSpan?: Property;

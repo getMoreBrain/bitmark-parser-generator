@@ -776,7 +776,8 @@
         "scope": {
           "type": "string",
           "enum": ["row", "col", "rowgroup", "colgroup"]
-        }
+        },
+        "colwidth": { "type": "number" }
       },
       "required": ["content"]
     },

@@ -10,8 +10,9 @@ interface ToStringOptions {
 class CardSetConfig {
   readonly configKey: CardSetConfigKeyType;
   readonly jsonKey: string | null;
-  readonly itemType: 'object' | 'array';
-  readonly sections: Record<string, { jsonKey: string }> | undefined;
+  readonly sections:
+    | Record<string, { jsonKey: string; isDefault?: boolean; sideJsonKey?: string }>
+    | undefined;
   readonly sides: CardSideConfig[];
 
   // Legacy accessor — provides the same shape as the old `variants: CardVariantConfig[][]`
@@ -23,13 +24,13 @@ class CardSetConfig {
   public constructor(
     configKey: CardSetConfigKeyType,
     jsonKey: string | null,
-    itemType: 'object' | 'array',
-    sections: Record<string, { jsonKey: string }> | undefined,
+    sections:
+      | Record<string, { jsonKey: string; isDefault?: boolean; sideJsonKey?: string }>
+      | undefined,
     sides: CardSideConfig[],
   ) {
     this.configKey = configKey;
     this.jsonKey = jsonKey;
-    this.itemType = itemType;
     this.sections = sections;
     this.sides = sides;
   }
@@ -41,7 +42,6 @@ class CardSetConfig {
 
     s += `[CardSet: ${this.configKey}]`;
     s += `\n  jsonKey: ${this.jsonKey}`;
-    s += `\n  itemType: ${this.itemType}`;
 
     for (const side of this.sides) {
       s += `\n${side.toString(opts)}`;
