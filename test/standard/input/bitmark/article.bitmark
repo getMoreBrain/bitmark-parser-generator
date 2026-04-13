@@ -80,7 +80,7 @@ This is an article example with the target, tag, reductionTag, colorTag, icon, i
 [@target:target2][@target:target3]
 [@reductionTag:green][@reductionTag:yellow]
 [@tag:green][@tag:yellow]
-[@tag:red][@colorTag:green]
+[@tag:red][@colorTag:green][@extractorInternal:internal1][@extractorInternal:internal2]
 [@colorTag:white]
 [@colorTag:purple][@colorTag:orange]
 [@icon:http://willbe.overridden/image.png]
