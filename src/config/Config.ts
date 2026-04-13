@@ -354,7 +354,6 @@ class Config {
               maxCount: 1,
               chain: tag.chain,
               jsonKey: tag.jsonKey,
-              secondaryJsonKey: tag.secondaryJsonKey,
               deprecated: tag.deprecated,
             });
             finalResourceTags[k] = newTag;

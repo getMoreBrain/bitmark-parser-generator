@@ -8,11 +8,11 @@ This document describes how card data in bitmark markup maps to JSON for each bi
 
 Cards are delimited by block-level dividers:
 
-| Symbol | Name | Usage |
-|--------|------|-------|
-| `====` | Card divider | Separates individual cards |
-| `--` | Side divider | Advances to the **next side** within a card |
-| `++` | Variant divider | Adds another **variant within the current side** |
+| Symbol | Name            | Usage                                            |
+| ------ | --------------- | ------------------------------------------------ |
+| `====` | Card divider    | Separates individual cards                       |
+| `--`   | Side divider    | Advances to the **next side** within a card      |
+| `++`   | Variant divider | Adds another **variant within the current side** |
 
 > **Important:** Although bitmark distinguishes between "sides" (`--`) and "variants within a side" (`++`), the parser **flattens both into a single linear sequence** in JSON. Only the variant position (V1, V2, V3…) matters for the JSON output. End-user mistakes using `--` where `++` was intended (or vice versa) produce identical JSON.
 
@@ -45,18 +45,18 @@ This produces a special section in the output (e.g., `table-extended` header/bod
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| Card N (delimited by `====`) | `cards[N-1]` |
-| V1 (S1V1) body | `cards[N-1].question.text` |
-| V1 `[&icon:...]` resource | `cards[N-1].question.icon` |
-| V2 (S2V1) body — first `--` | `cards[N-1].answer.text` |
-| V2 `[&icon:...]` resource | `cards[N-1].answer.icon` |
-| V3+ (S2V2+) body — additional `--` / `++` | `cards[N-1].alternativeAnswers[].text` |
-| `[%...]` item tag on any V | `cards[N-1].item` |
-| `[?...]` hint tag on any V | `cards[N-1].hint` |
-| `[!...]` instruction tag on any V | `cards[N-1].instruction` |
-| `[@example]` / `[@example:value]` | `cards[N-1].isExample` / `cards[N-1].example` |
+| Bitmark position                          | JSON path                                     |
+| ----------------------------------------- | --------------------------------------------- |
+| Card N (delimited by `====`)              | `cards[N-1]`                                  |
+| V1 (S1V1) body                            | `cards[N-1].question.text`                    |
+| V1 `[&icon:...]` resource                 | `cards[N-1].question.icon`                    |
+| V2 (S2V1) body — first `--`               | `cards[N-1].answer.text`                      |
+| V2 `[&icon:...]` resource                 | `cards[N-1].answer.icon`                      |
+| V3+ (S2V2+) body — additional `--` / `++` | `cards[N-1].alternativeAnswers[].text`        |
+| `[%...]` item tag on any V                | `cards[N-1].item`                             |
+| `[?...]` hint tag on any V                | `cards[N-1].hint`                             |
+| `[!...]` instruction tag on any V         | `cards[N-1].instruction`                      |
+| `[@example]` / `[@example:value]`         | `cards[N-1].isExample` / `cards[N-1].example` |
 
 ### Example
 
@@ -109,20 +109,20 @@ Card content maps to `definitions[]` (for `definition-list`) or `descriptions[]`
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| Card N (delimited by `====`) | `definitions[N-1]` (or `descriptions[N-1]`) |
-| V1 (S1V1) body | `definitions[N-1].term.text` |
-| V1 `[&icon:...]` resource | `definitions[N-1].term.icon` |
-| V2 (S2V1) body — first `--` | `definitions[N-1].definition.text` |
-| V2 `[&icon:...]` resource | `definitions[N-1].definition.icon` |
-| V3+ (S2V2+) body — additional `--` / `++` | `definitions[N-1].alternativeDefinitions[].text` |
-| `[%...]` item tag | `definitions[N-1].item` |
-| `[?...]` hint tag | `definitions[N-1].hint` |
-| `[!...]` instruction tag | `definitions[N-1].instruction` |
-| `[@example]` / `[@example:value]` | `definitions[N-1].isExample` / `definitions[N-1].example` |
-| `[#title]` title tag on V1 | `definitions[N-1].title` (heading title for the term) |
-| First `====` card (heading card) | `heading.forKeys` (V1 `[#...]`) / `heading.forValues` (V2 `[#...]`) |
+| Bitmark position                          | JSON path                                                           |
+| ----------------------------------------- | ------------------------------------------------------------------- |
+| Card N (delimited by `====`)              | `definitions[N-1]` (or `descriptions[N-1]`)                         |
+| V1 (S1V1) body                            | `definitions[N-1].term.text`                                        |
+| V1 `[&icon:...]` resource                 | `definitions[N-1].term.icon`                                        |
+| V2 (S2V1) body — first `--`               | `definitions[N-1].definition.text`                                  |
+| V2 `[&icon:...]` resource                 | `definitions[N-1].definition.icon`                                  |
+| V3+ (S2V2+) body — additional `--` / `++` | `definitions[N-1].alternativeDefinitions[].text`                    |
+| `[%...]` item tag                         | `definitions[N-1].item`                                             |
+| `[?...]` hint tag                         | `definitions[N-1].hint`                                             |
+| `[!...]` instruction tag                  | `definitions[N-1].instruction`                                      |
+| `[@example]` / `[@example:value]`         | `definitions[N-1].isExample` / `definitions[N-1].example`           |
+| `[#title]` title tag on V1                | `definitions[N-1].title` (heading title for the term)               |
+| First `====` card (heading card)          | `heading.forKeys` (V1 `[#...]`) / `heading.forValues` (V2 `[#...]`) |
 
 ### Example
 
@@ -170,18 +170,18 @@ The first `====` block is treated as the **heading card**.
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| First card — V1 (S1V1) `[#...]` tag | `heading.forKeys` |
-| First card — V2 (S2V1) `[#...]` tag (after `--`) | `heading.forValues` (string if one, array if multiple `--`) |
-| Card N (N>1) — V1 (S1V1) body | `pairs[N-2].key` (plain string, bitmark-- format) |
-| Card N (N>1) — V1 `[&audio:...]` | `pairs[N-2].keyAudio` |
-| Card N (N>1) — V1 `[&image:...]` | `pairs[N-2].keyImage` |
-| Card N (N>1) — V2+ (S2V1+) body (each `--` / `++`) | `pairs[N-2].values[]` (array of plain strings) |
-| `[%...]` item tag | `pairs[N-2].item` |
-| `[!...]` instruction tag | `pairs[N-2].instruction` |
-| `[@isCaseSensitive:...]` | `pairs[N-2].isCaseSensitive` |
-| `[@example]` / `[@example:value]` | `pairs[N-2].isExample` / `pairs[N-2].example` |
+| Bitmark position                                   | JSON path                                                   |
+| -------------------------------------------------- | ----------------------------------------------------------- |
+| First card — V1 (S1V1) `[#...]` tag                | `heading.forKeys`                                           |
+| First card — V2 (S2V1) `[#...]` tag (after `--`)   | `heading.forValues` (string if one, array if multiple `--`) |
+| Card N (N>1) — V1 (S1V1) body                      | `pairs[N-2].key` (plain string, bitmark-- format)           |
+| Card N (N>1) — V1 `[&audio:...]`                   | `pairs[N-2].keyAudio`                                       |
+| Card N (N>1) — V1 `[&image:...]`                   | `pairs[N-2].keyImage`                                       |
+| Card N (N>1) — V2+ (S2V1+) body (each `--` / `++`) | `pairs[N-2].values[]` (array of plain strings)              |
+| `[%...]` item tag                                  | `pairs[N-2].item`                                           |
+| `[!...]` instruction tag                           | `pairs[N-2].instruction`                                    |
+| `[@isCaseSensitive:...]`                           | `pairs[N-2].isCaseSensitive`                                |
+| `[@example]` / `[@example:value]`                  | `pairs[N-2].isExample` / `pairs[N-2].example`               |
 
 ### Example
 
@@ -228,11 +228,11 @@ Same structure as `match-pairs` but the key side carries an audio resource.
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
+| Bitmark position                    | JSON path             |
+| ----------------------------------- | --------------------- |
 | Card N — V1 `[&audio:...]` resource | `pairs[N-2].keyAudio` |
-| Card N — V1 body text | `pairs[N-2].key` |
-| Card N — V2+ body (each `--`) | `pairs[N-2].values[]` |
+| Card N — V1 body text               | `pairs[N-2].key`      |
+| Card N — V2+ body (each `--`)       | `pairs[N-2].values[]` |
 
 ### Example
 
@@ -271,11 +271,11 @@ Same structure as `match-pairs` but the key side carries an image resource.
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
+| Bitmark position                                      | JSON path             |
+| ----------------------------------------------------- | --------------------- |
 | Card N — V1 `[&image:...]` / `\|image:...\|` resource | `pairs[N-2].keyImage` |
-| Card N — V1 body text | `pairs[N-2].key` |
-| Card N — V2+ body (each `--`) | `pairs[N-2].values[]` |
+| Card N — V1 body text                                 | `pairs[N-2].key`      |
+| Card N — V2+ body (each `--`)                         | `pairs[N-2].values[]` |
 
 ### Example
 
@@ -309,20 +309,20 @@ The matrix extends the `match-pairs` pattern to support multiple value columns. 
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| First card — V1 (S1V1) `[#...]` | `heading.forKeys` |
-| First card — V2 (S2V1) `[#...]` (first `--`) | `heading.forValues[0]` |
-| First card — V3 (S3V1) `[#...]` (second `--`) | `heading.forValues[1]` |
-| First card — Vn (SnV1) `[#...]` | `heading.forValues[N-2]` |
-| Card N — V1 (S1V1) body | `matrix[N-2].key` |
-| Card N — V2 (S2V1) body (first `--`) | `matrix[N-2].cells[0].values[]` |
-| Card N — V3 (S3V1) body (second `--`) | `matrix[N-2].cells[1].values[]` |
-| Card N — Vn (SnV1) body | `matrix[N-2].cells[N-2].values[]` |
-| Additional `++` within a side block | Additional value in `cells[x].values[]` (S_nV2+) |
-| `[@isCaseSensitive:...]` on a cell | `matrix[N-2].cells[x].isCaseSensitive` |
-| `[@example]` on a cell | `matrix[N-2].cells[x].isExample` / `.example` |
-| `[!...]` on a cell | `matrix[N-2].cells[x].instruction` |
+| Bitmark position                              | JSON path                                        |
+| --------------------------------------------- | ------------------------------------------------ |
+| First card — V1 (S1V1) `[#...]`               | `heading.forKeys`                                |
+| First card — V2 (S2V1) `[#...]` (first `--`)  | `heading.forValues[0]`                           |
+| First card — V3 (S3V1) `[#...]` (second `--`) | `heading.forValues[1]`                           |
+| First card — Vn (SnV1) `[#...]`               | `heading.forValues[N-2]`                         |
+| Card N — V1 (S1V1) body                       | `matrix[N-2].key`                                |
+| Card N — V2 (S2V1) body (first `--`)          | `matrix[N-2].cells[0].values[]`                  |
+| Card N — V3 (S3V1) body (second `--`)         | `matrix[N-2].cells[1].values[]`                  |
+| Card N — Vn (SnV1) body                       | `matrix[N-2].cells[N-2].values[]`                |
+| Additional `++` within a side block           | Additional value in `cells[x].values[]` (S_nV2+) |
+| `[@isCaseSensitive:...]` on a cell            | `matrix[N-2].cells[x].isCaseSensitive`           |
+| `[@example]` on a cell                        | `matrix[N-2].cells[x].isExample` / `.example`    |
+| `[!...]` on a cell                            | `matrix[N-2].cells[x].instruction`               |
 
 ### Example
 
@@ -352,10 +352,7 @@ sie gingen
   "matrix": [
     {
       "key": "gehen",
-      "cells": [
-        { "values": ["ich werde gehen"], "isExample": true },
-        { "values": ["sie gingen"] }
-      ]
+      "cells": [{ "values": ["ich werde gehen"], "isExample": true }, { "values": ["sie gingen"] }]
     }
   ]
 }
@@ -374,15 +371,15 @@ Each card contains a single statement. The correctness is indicated by `[+...]` 
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| Card N (single variant) | `statements[N-1]` |
-| V1 body (without `+`/`-` prefix) | `statements[N-1].statement` |
-| `[+...]` prefix on statement | `statements[N-1].isCorrect = true` |
-| `[-...]` prefix on statement | `statements[N-1].isCorrect = false` |
-| `[%...]` item tag | `statements[N-1].item` |
-| `[?...]` hint tag | `statements[N-1].hint` |
-| `[!...]` instruction tag | `statements[N-1].instruction` |
+| Bitmark position                  | JSON path                                               |
+| --------------------------------- | ------------------------------------------------------- |
+| Card N (single variant)           | `statements[N-1]`                                       |
+| V1 body (without `+`/`-` prefix)  | `statements[N-1].statement`                             |
+| `[+...]` prefix on statement      | `statements[N-1].isCorrect = true`                      |
+| `[-...]` prefix on statement      | `statements[N-1].isCorrect = false`                     |
+| `[%...]` item tag                 | `statements[N-1].item`                                  |
+| `[?...]` hint tag                 | `statements[N-1].hint`                                  |
+| `[!...]` instruction tag          | `statements[N-1].instruction`                           |
 | `[@example]` / `[@example:value]` | `statements[N-1].isExample` / `statements[N-1].example` |
 
 ### Example
@@ -403,7 +400,7 @@ Each card contains a single statement. The correctness is indicated by `[+...]` 
   "labelFalse": "rather no",
   "statements": [
     { "statement": "A house is bigger than a car.", "isCorrect": true },
-    { "statement": "A cow is bigger than a dog.",  "isCorrect": false }
+    { "statement": "A cow is bigger than a dog.", "isCorrect": false }
   ]
 }
 ```
@@ -421,16 +418,16 @@ Each card is one quiz item. Choices are embedded as `[+correct]` / `[-wrong]` in
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| Card N | `quizzes[N-1]` |
-| V1 `[!...]` instruction tag | `quizzes[N-1].instruction` |
-| V1 `[%...]` item tag | `quizzes[N-1].item` |
-| V1 `[?...]` hint tag | `quizzes[N-1].hint` |
-| V1 `[+choice text]` inline tag | `quizzes[N-1].choices[].choice` with `isCorrect: true` |
-| V1 `[-choice text]` inline tag | `quizzes[N-1].choices[].choice` with `isCorrect: false` |
+| Bitmark position               | JSON path                                                   |
+| ------------------------------ | ----------------------------------------------------------- |
+| Card N                         | `quizzes[N-1]`                                              |
+| V1 `[!...]` instruction tag    | `quizzes[N-1].instruction`                                  |
+| V1 `[%...]` item tag           | `quizzes[N-1].item`                                         |
+| V1 `[?...]` hint tag           | `quizzes[N-1].hint`                                         |
+| V1 `[+choice text]` inline tag | `quizzes[N-1].choices[].choice` with `isCorrect: true`      |
+| V1 `[-choice text]` inline tag | `quizzes[N-1].choices[].choice` with `isCorrect: false`     |
 | V1 `[@reaction:...]` on choice | `quizzes[N-1].responses[].reaction` (for multiple-response) |
-| `[@example]` | `quizzes[N-1].isExample` |
+| `[@example]`                   | `quizzes[N-1].isExample`                                    |
 
 ### Example
 
@@ -450,9 +447,9 @@ Each card is one quiz item. Choices are embedded as `[+correct]` / `[-wrong]` in
     {
       "instruction": "Which animal says \"meow\"?",
       "choices": [
-        { "choice": "dog",  "isCorrect": false },
+        { "choice": "dog", "isCorrect": false },
         { "choice": "fish", "isCorrect": false },
-        { "choice": "cat",  "isCorrect": true }
+        { "choice": "cat", "isCorrect": true }
       ]
     }
   ]
@@ -472,19 +469,19 @@ Each card is one open-ended question. The question body is the card body; the sa
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| Card N | `questions[N-1]` |
-| V1 body | `questions[N-1].question` |
-| V1 `[$...]` sample solution tag | `questions[N-1].sampleSolution` |
-| V1 `[@sampleSolution:...]` | `questions[N-1].sampleSolution` |
-| V1 `[@additionalSolutions:...]` (repeatable) | `questions[N-1].additionalSolutions[]` |
-| V1 `[@partialAnswer:...]` | `questions[N-1].partialAnswer` |
-| V1 `[@reasonableNumOfChars:N]` | `questions[N-1].reasonableNumOfChars` |
-| V1 `[%...]` item tag | `questions[N-1].item` |
-| V1 `[?...]` hint tag | `questions[N-1].hint` |
-| V1 `[!...]` instruction tag | `questions[N-1].instruction` |
-| V1 `[@example]` / `[@example:value]` | `questions[N-1].isExample` / `questions[N-1].example` |
+| Bitmark position                             | JSON path                                             |
+| -------------------------------------------- | ----------------------------------------------------- |
+| Card N                                       | `questions[N-1]`                                      |
+| V1 body                                      | `questions[N-1].question`                             |
+| V1 `[$...]` sample solution tag              | `questions[N-1].sampleSolution`                       |
+| V1 `[@sampleSolution:...]`                   | `questions[N-1].sampleSolution`                       |
+| V1 `[@additionalSolutions:...]` (repeatable) | `questions[N-1].additionalSolutions[]`                |
+| V1 `[@partialAnswer:...]`                    | `questions[N-1].partialAnswer`                        |
+| V1 `[@reasonableNumOfChars:N]`               | `questions[N-1].reasonableNumOfChars`                 |
+| V1 `[%...]` item tag                         | `questions[N-1].item`                                 |
+| V1 `[?...]` hint tag                         | `questions[N-1].hint`                                 |
+| V1 `[!...]` instruction tag                  | `questions[N-1].instruction`                          |
+| V1 `[@example]` / `[@example:value]`         | `questions[N-1].isExample` / `questions[N-1].example` |
 
 ### Example
 
@@ -523,17 +520,17 @@ The feedback card has **two sides**. V1 contains the choice options (true/false 
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| First card (heading) | `heading` — V1 `[#...]` → `heading.forKeys`, V2 `[#...]` → `heading.forValues` |
-| Card N | `feedbacks[N-1]` (or `N-2` if heading card used) |
-| V1 (S1V1) `[!...]` instruction | `feedbacks[N-1].instruction` |
-| V1 `[%...]` item | `feedbacks[N-1].item` |
-| V1 `[+choice]` inline tag | `feedbacks[N-1].choices[].choice` with `requireReason: true`/`false` |
-| V1 `[-choice]` inline tag | `feedbacks[N-1].choices[].choice` |
-| V2 (S2V1) body — after `--` | `feedbacks[N-1].reason.text` |
-| V2 `[@reasonableNumOfChars:N]` | `feedbacks[N-1].reason.reasonableNumOfChars` |
-| V2 `[!...]` instruction | `feedbacks[N-1].reason.instruction` |
+| Bitmark position               | JSON path                                                                      |
+| ------------------------------ | ------------------------------------------------------------------------------ |
+| First card (heading)           | `heading` — V1 `[#...]` → `heading.forKeys`, V2 `[#...]` → `heading.forValues` |
+| Card N                         | `feedbacks[N-1]` (or `N-2` if heading card used)                               |
+| V1 (S1V1) `[!...]` instruction | `feedbacks[N-1].instruction`                                                   |
+| V1 `[%...]` item               | `feedbacks[N-1].item`                                                          |
+| V1 `[+choice]` inline tag      | `feedbacks[N-1].choices[].choice` with `requireReason: true`/`false`           |
+| V1 `[-choice]` inline tag      | `feedbacks[N-1].choices[].choice`                                              |
+| V2 (S2V1) body — after `--`    | `feedbacks[N-1].reason.text`                                                   |
+| V2 `[@reasonableNumOfChars:N]` | `feedbacks[N-1].reason.reasonableNumOfChars`                                   |
+| V2 `[!...]` instruction        | `feedbacks[N-1].reason.instruction`                                            |
 
 ### Example
 
@@ -589,13 +586,13 @@ Each card is one bot response choice. The card body is the feedback text shown a
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| Card N | `responses[N-1]` |
+| Bitmark position            | JSON path                                                        |
+| --------------------------- | ---------------------------------------------------------------- |
+| Card N                      | `responses[N-1]`                                                 |
 | V1 `[!...]` instruction tag | `responses[N-1].response` (the user-facing label for the choice) |
-| V1 `[@reaction:...]` | `responses[N-1].reaction` |
-| V1 body | `responses[N-1].feedback` |
-| V1 `[%...]` item | `responses[N-1].item` |
+| V1 `[@reaction:...]`        | `responses[N-1].reaction`                                        |
+| V1 body                     | `responses[N-1].feedback`                                        |
+| V1 `[%...]` item            | `responses[N-1].item`                                            |
 
 ### Example
 
@@ -622,8 +619,13 @@ Body paragraph.
   "instruction": "What did you know?",
   "body": "Body paragraph.",
   "responses": [
-    { "item": "A", "response": "Yes, I knew that", "reaction": "celebrate", "feedback": "👍 Cool!" },
-    { "item": "B", "response": "I didn't know",    "reaction": "like",      "feedback": "😅" }
+    {
+      "item": "A",
+      "response": "Yes, I knew that",
+      "reaction": "celebrate",
+      "feedback": "👍 Cool!"
+    },
+    { "item": "B", "response": "I didn't know", "reaction": "like", "feedback": "😅" }
   ]
 }
 ```
@@ -641,13 +643,13 @@ Each card is one list item containing a cloze-style body with `[_gap]` placehold
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| Card N | `listItems[N-1]` |
-| V1 body (with `[_gap]` placeholders) | `listItems[N-1].body` |
-| V1 `[%...]` item tag | `listItems[N-1].item` |
-| V1 `[?...]` hint tag | `listItems[N-1].hint` |
-| V1 `[!...]` instruction tag | `listItems[N-1].instruction` |
+| Bitmark position                     | JSON path                    |
+| ------------------------------------ | ---------------------------- |
+| Card N                               | `listItems[N-1]`             |
+| V1 body (with `[_gap]` placeholders) | `listItems[N-1].body`        |
+| V1 `[%...]` item tag                 | `listItems[N-1].item`        |
+| V1 `[?...]` hint tag                 | `listItems[N-1].hint`        |
+| V1 `[!...]` instruction tag          | `listItems[N-1].instruction` |
 
 ### Example
 
@@ -669,7 +671,10 @@ Some body
   "body": "Some body",
   "listItems": [
     { "item": "1.", "body": ["This is a ", { "type": "gap", "solutions": ["gap"] }, " text..."] },
-    { "item": "2.", "body": ["This is another ", { "type": "gap", "solutions": ["gap"] }, " text."] }
+    {
+      "item": "2.",
+      "body": ["This is another ", { "type": "gap", "solutions": ["gap"] }, " text."]
+    }
   ]
 }
 ```
@@ -687,12 +692,12 @@ Each card contains a sequence of ordered elements. The variants within a card be
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| Card N | One sequence entry — `elements[]` |
-| V1 body | `elements[0]` |
-| V2 body (after `--` / `++`) | `elements[1]` |
-| Vn body | `elements[N-1]` |
+| Bitmark position            | JSON path                         |
+| --------------------------- | --------------------------------- |
+| Card N                      | One sequence entry — `elements[]` |
+| V1 body                     | `elements[0]`                     |
+| V2 body (after `--` / `++`) | `elements[1]`                     |
+| Vn body                     | `elements[N-1]`                   |
 
 ### Example
 
@@ -728,9 +733,9 @@ The first `====…====` block defines the column headers. Each subsequent block 
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| First card — V1, V2… (separated by `--`) | `table.columns[0]`, `table.columns[1]`, … |
+| Bitmark position                           | JSON path                                     |
+| ------------------------------------------ | --------------------------------------------- |
+| First card — V1, V2… (separated by `--`)   | `table.columns[0]`, `table.columns[1]`, …     |
 | Card N (N>1) — V1, V2… (separated by `--`) | `table.data[N-2][0]`, `table.data[N-2][1]`, … |
 
 ### Example
@@ -756,9 +761,7 @@ john@example.com
 {
   "table": {
     "columns": ["Name", "Email", "Phone"],
-    "data": [
-      ["John", "john@example.com", "(353) 01 222 3333"]
-    ]
+    "data": [["John", "john@example.com", "(353) 01 222 3333"]]
   }
 }
 ```
@@ -776,17 +779,17 @@ Supports full HTML-table-like semantics including rowspan, colspan, header/body/
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| `==== table-header ====` block | `tableExtended.header.rows[]` (each such block is a row) |
-| `====` block (body row) | `tableExtended.body.rows[]` |
-| `==== table-footer ====` block | `tableExtended.footer.rows[]` |
-| Cell (delimited by `--`) | `.rows[N].cells[M]` |
-| Cell body | `.rows[N].cells[M].content` |
-| `[@tableCellType:th]` on cell | `.rows[N].cells[M].title = true` |
-| `[@tableRowSpan:N]` on cell | `.rows[N].cells[M].rowspan` |
-| `[@tableColSpan:N]` on cell | `.rows[N].cells[M].colspan` |
-| `[@tableScope:col\|row\|colgroup\|rowgroup]` | `.rows[N].cells[M].scope` |
+| Bitmark position                             | JSON path                                        |
+| -------------------------------------------- | ------------------------------------------------ |
+| `==== table-header ====` block               | `table.header.rows[]` (each such block is a row) |
+| `====` block (body row)                      | `table.body.rows[]`                              |
+| `==== table-footer ====` block               | `table.footer.rows[]`                            |
+| Cell (delimited by `--`)                     | `.rows[N].cells[M]`                              |
+| Cell body                                    | `.rows[N].cells[M].content`                      |
+| `[@tableCellType:th]` on cell                | `.rows[N].cells[M].title = true`                 |
+| `[@tableRowSpan:N]` on cell                  | `.rows[N].cells[M].rowspan`                      |
+| `[@tableColSpan:N]` on cell                  | `.rows[N].cells[M].colspan`                      |
+| `[@tableScope:col\|row\|colgroup\|rowgroup]` | `.rows[N].cells[M].scope`                        |
 
 ### Example
 
@@ -807,24 +810,19 @@ Coastal
 
 ```json
 {
-  "tableExtended": {
+  "table": {
     "header": {
       "rows": [
-        { "cells": [
+        {
+          "cells": [
             { "content": "Region", "scope": "col" },
-            { "content": "Area",   "scope": "col" }
+            { "content": "Area", "scope": "col" }
           ]
         }
       ]
     },
     "body": {
-      "rows": [
-        { "cells": [
-            { "content": "West" },
-            { "content": "Coastal" }
-          ]
-        }
-      ]
+      "rows": [{ "cells": [{ "content": "West" }, { "content": "Coastal" }] }]
     }
   }
 }
@@ -843,13 +841,13 @@ Each `====` block is a row. Within a row, `--` separates the cells. Each cell ha
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| Card N | `pronunciationTable.data[N-1][]` (a row of cells) |
-| Cell (delimited by `--` within a card) | `pronunciationTable.data[N-1][M]` |
-| Cell `[#title]` tag | `pronunciationTable.data[N-1][M].title` |
-| Cell body text | `pronunciationTable.data[N-1][M].body` |
-| Cell `[&audio:...]` resource | `pronunciationTable.data[N-1][M].audio` |
+| Bitmark position                       | JSON path                                         |
+| -------------------------------------- | ------------------------------------------------- |
+| Card N                                 | `pronunciationTable.data[N-1][]` (a row of cells) |
+| Cell (delimited by `--` within a card) | `pronunciationTable.data[N-1][M]`                 |
+| Cell `[#title]` tag                    | `pronunciationTable.data[N-1][M].title`           |
+| Cell body text                         | `pronunciationTable.data[N-1][M].body`            |
+| Cell `[&audio:...]` resource           | `pronunciationTable.data[N-1][M].audio`           |
 
 ### Example
 
@@ -893,18 +891,18 @@ Each card is one ingredient entry. Quantity, unit, and other metadata come from 
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| Card N | `ingredients[N-1]` |
-| V1 `[#title]` tag | `ingredients[N-1].title` |
-| V1 `[!quantity]` instruction tag | `ingredients[N-1].quantity` |
-| V1 body text | `ingredients[N-1].ingredient` |
-| V1 `[+]` prefix | `ingredients[N-1].checked = true` |
-| V1 `[-]` prefix | `ingredients[N-1].checked = false` |
-| V1 `[@unit:...]` | `ingredients[N-1].unit` |
-| V1 `[@unitAbbr:...]` | `ingredients[N-1].unitAbbr` |
-| V1 `[@decimalPlaces:N]` | `ingredients[N-1].decimalPlaces` |
-| V1 `[@disableCalculation]` | `ingredients[N-1].disableCalculation = true` |
+| Bitmark position                 | JSON path                                    |
+| -------------------------------- | -------------------------------------------- |
+| Card N                           | `ingredients[N-1]`                           |
+| V1 `[#title]` tag                | `ingredients[N-1].title`                     |
+| V1 `[!quantity]` instruction tag | `ingredients[N-1].quantity`                  |
+| V1 body text                     | `ingredients[N-1].ingredient`                |
+| V1 `[+]` prefix                  | `ingredients[N-1].checked = true`            |
+| V1 `[-]` prefix                  | `ingredients[N-1].checked = false`           |
+| V1 `[@unit:...]`                 | `ingredients[N-1].unit`                      |
+| V1 `[@unitAbbr:...]`             | `ingredients[N-1].unitAbbr`                  |
+| V1 `[@decimalPlaces:N]`          | `ingredients[N-1].decimalPlaces`             |
+| V1 `[@disableCalculation]`       | `ingredients[N-1].disableCalculation = true` |
 
 ### Example
 
@@ -923,8 +921,20 @@ Each card is one ingredient entry. Quantity, unit, and other metadata come from 
 {
   "ingredients": [
     { "title": "Section Title" },
-    { "checked": true,  "quantity": 2,   "unit": "Litre",  "unitAbbr": "L", "ingredient": "Chicken stock" },
-    { "checked": false, "quantity": 300, "unit": "grams",  "unitAbbr": "g", "ingredient": "Tomatoes" }
+    {
+      "checked": true,
+      "quantity": 2,
+      "unit": "Litre",
+      "unitAbbr": "L",
+      "ingredient": "Chicken stock"
+    },
+    {
+      "checked": false,
+      "quantity": 300,
+      "unit": "grams",
+      "unitAbbr": "g",
+      "ingredient": "Tomatoes"
+    }
   ]
 }
 ```
@@ -942,15 +952,15 @@ Each card is one book reference entry, defined entirely via property tags. No bo
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| Card N | `bookReferences[N-1]` |
-| V1 `[@refAuthor:...]` (repeatable) | `bookReferences[N-1].refAuthor[]` |
-| V1 `[@refBookTitle:...]` | `bookReferences[N-1].refBookTitle` |
-| V1 `[@refPublisher:...]` (repeatable) | `bookReferences[N-1].refPublisher[]` |
-| V1 `[@refPublicationYear:...]` | `bookReferences[N-1].refPublicationYear` |
-| V1 `[@citationStyle:...]` | `bookReferences[N-1].citationStyle` |
-| V1 `[@lang:...]` | `bookReferences[N-1].lang` |
+| Bitmark position                      | JSON path                                |
+| ------------------------------------- | ---------------------------------------- |
+| Card N                                | `bookReferences[N-1]`                    |
+| V1 `[@refAuthor:...]` (repeatable)    | `bookReferences[N-1].refAuthor[]`        |
+| V1 `[@refBookTitle:...]`              | `bookReferences[N-1].refBookTitle`       |
+| V1 `[@refPublisher:...]` (repeatable) | `bookReferences[N-1].refPublisher[]`     |
+| V1 `[@refPublicationYear:...]`        | `bookReferences[N-1].refPublicationYear` |
+| V1 `[@citationStyle:...]`             | `bookReferences[N-1].citationStyle`      |
+| V1 `[@lang:...]`                      | `bookReferences[N-1].lang`               |
 
 ### Example
 
@@ -969,11 +979,11 @@ Each card is one book reference entry, defined entirely via property tags. No bo
 {
   "bookReferences": [
     {
-      "refAuthor":          ["Philippe Pointet"],
-      "refBookTitle":       "The Content-First Standard \"bitmark\"",
-      "refPublisher":       ["kpmg"],
+      "refAuthor": ["Philippe Pointet"],
+      "refBookTitle": "The Content-First Standard \"bitmark\"",
+      "refPublisher": ["kpmg"],
       "refPublicationYear": "2025",
-      "citationStyle":      "APA"
+      "citationStyle": "APA"
     }
   ]
 }
@@ -992,14 +1002,14 @@ Each card is one list item with a title and body.
 
 ### Mapping
 
-| Bitmark position | JSON path |
-|-----------------|-----------|
-| Card N | `listItems[N-1]` |
-| V1 `[#title]` tag | `listItems[N-1].title` (or mapped per bit type) |
-| V1 body | `listItems[N-1].body` |
-| V1 `[%...]` item tag | `listItems[N-1].item` |
-| V1 `[?...]` hint tag | `listItems[N-1].hint` |
-| V1 `[!...]` instruction tag | `listItems[N-1].instruction` |
+| Bitmark position            | JSON path                                       |
+| --------------------------- | ----------------------------------------------- |
+| Card N                      | `listItems[N-1]`                                |
+| V1 `[#title]` tag           | `listItems[N-1].title` (or mapped per bit type) |
+| V1 body                     | `listItems[N-1].body`                           |
+| V1 `[%...]` item tag        | `listItems[N-1].item`                           |
+| V1 `[?...]` hint tag        | `listItems[N-1].hint`                           |
+| V1 `[!...]` instruction tag | `listItems[N-1].instruction`                    |
 
 ---
 
@@ -1007,18 +1017,18 @@ Each card is one list item with a title and body.
 
 ### Which Card Divider Does Each Bit Use?
 
-| Card divider | Bit types |
-|-------------|-----------|
-| `====` | `flashcard`, `q-and-a-card`, `definition-list`, `cloze-list`, `table`, `table-extended`, `pronunciation-table`, `cook-ingredients`, `book-reference-list`, `example-list`, `page-footer`, `sequence`, `match`, `match-audio`, `match-picture`, `match-matrix`, `true-false`, `multiple-choice`, `multiple-response`, `interview`, `feedback`, `bot-action-response` |
+| Card divider | Bit types                                                                                                                                                                                                                                                                                                                                                           |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `====`       | `flashcard`, `q-and-a-card`, `definition-list`, `cloze-list`, `table`, `table-extended`, `pronunciation-table`, `cook-ingredients`, `book-reference-list`, `example-list`, `page-footer`, `sequence`, `match`, `match-audio`, `match-picture`, `match-matrix`, `true-false`, `multiple-choice`, `multiple-response`, `interview`, `feedback`, `bot-action-response` |
 
 ### Variant Divider Equivalence (Sides vs. Variants)
 
 Bitmark distinguishes two intra-card dividers:
 
-| Divider | Human semantic | JSON effect |
-|---------|---------------|-------------|
-| `--` | Start a new **side** | Advance to the next variant slot |
-| `++` | Add a **variant within the current side** | Advance to the next variant slot |
+| Divider | Human semantic                            | JSON effect                      |
+| ------- | ----------------------------------------- | -------------------------------- |
+| `--`    | Start a new **side**                      | Advance to the next variant slot |
+| `++`    | Add a **variant within the current side** | Advance to the next variant slot |
 
 Both produce identical JSON — the flattened position (V1, V2, V3…) is all that matters. This means an author using `--` where `++` was intended (or vice versa) produces the same output.
 
@@ -1045,6 +1055,6 @@ Both map to:
 ```json
 {
   "question": { "text": "Side 1 content" },
-  "answer":   { "text": "Side 2 content" }
+  "answer": { "text": "Side 2 content" }
 }
 ```

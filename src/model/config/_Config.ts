@@ -124,7 +124,6 @@ export interface _AbstractTagConfig {
   values?: string[]; // If the format is an enumeration, the possible values of the property
   defaultValue?: string; // The default value of the tag if omitted from the markup
   jsonKey?: string; // If the json key is different from the tag
-  secondaryJsonKey?: string; // Heading card alternate path
   chain?: _AbstractTagConfig[];
 }
 

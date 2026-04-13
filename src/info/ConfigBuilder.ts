@@ -241,10 +241,8 @@ class ConfigBuilder {
         type: 'tag',
         key: tagName,
         jsonKey,
-        ...(tag.secondaryJsonKey ? { secondaryJsonKey: tag.secondaryJsonKey } : {}),
         format,
         default: tag.defaultValue ?? null,
-        alwaysInclude: false,
         min: tag.minCount == null ? 0 : tag.minCount,
         max: tag.maxCount == null ? 1 : tag.maxCount,
         description: tag.description ?? '',
@@ -316,9 +314,26 @@ class ConfigBuilder {
       // When sections exist, each section becomes its own card entry
       if (cardSetConfig.sections) {
         const cards = Object.entries(cardSetConfig.sections).map(([sectionName, section]) => {
-          const cardSides = section.sideJsonKey
+          let cardSides = section.sideJsonKey
             ? sides.map((s) => ({ ...s, jsonKey: section.sideJsonKey }))
             : sides;
+
+          // HACK: table-extended — in non-header sections, rewrite the '#' title tag jsonKey
+          // so it targets header rows via root escape instead of being transparent.
+          if (normalizedKey === 'table-extended' && sectionName !== 'table-header') {
+            cardSides = JSON.parse(JSON.stringify(cardSides));
+            for (const side of cardSides) {
+              for (const variant of side.variants) {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                for (const tag of variant.tags as any[]) {
+                  if (tag.type === 'tag' && tag.key === '#' && tag.jsonKey === '.') {
+                    tag.jsonKey = '^table.header.rows.cells[{s}].content';
+                  }
+                }
+              }
+            }
+          }
+
           return {
             name: sectionName,
             ...(section.isDefault ? { isDefault: true } : {}),
@@ -433,9 +448,15 @@ class ConfigBuilder {
         }
       }
 
+      // Walk up the baseBitType chain to find the inherited cardSet
       let cardRef: string | undefined;
-      if (b.cardSet && CARDS[b.cardSet]) {
-        cardRef = normalizeCardKey(b.cardSet as string);
+      let current: _BitConfig | undefined = b;
+      while (current) {
+        if (current.cardSet && CARDS[current.cardSet]) {
+          cardRef = normalizeCardKey(current.cardSet as string);
+          break;
+        }
+        current = current.baseBitType ? (BITS[current.baseBitType] as _BitConfig) : undefined;
       }
 
       // Use resolved values from BitConfig (with inheritance applied)
@@ -451,10 +472,10 @@ class ConfigBuilder {
           },
         ],
         format: resolvedBitConfig.textFormatDefault ?? 'bitmark--',
-        bodyAllowed: resolvedBitConfig.bodyAllowed ?? true,
         bodyRequired: resolvedBitConfig.bodyRequired ?? false,
-        footerAllowed: resolvedBitConfig.footerAllowed ?? true,
+        bodyForbidden: !(resolvedBitConfig.bodyAllowed ?? true),
         footerRequired: resolvedBitConfig.footerRequired ?? false,
+        footerForbidden: !(resolvedBitConfig.footerAllowed ?? true),
         resourceAttachmentAllowed: resolvedBitConfig.resourceAttachmentAllowed ?? true,
         tags,
         ...(cardRef ? { card: cardRef } : {}),

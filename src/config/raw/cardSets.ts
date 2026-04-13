@@ -97,7 +97,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the definition.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: '^heading.forKeys',
               },
               {
                 key: ConfigKey.group_resourceIcon,
@@ -121,7 +121,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the definition.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: '^heading.forValues',
               },
               {
                 key: ConfigKey.group_resourceIcon,
@@ -172,7 +172,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match pair.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: '^heading.forKeys',
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -207,7 +207,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match pair.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: '^heading.forValues',
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -241,7 +241,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the audio match pair.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: '^heading.forKeys',
               },
               {
                 key: ConfigKey.resource_audio,
@@ -266,7 +266,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the audio match pair.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: '^heading.forValues',
               },
               {
                 key: ConfigKey.resource_audio,
@@ -299,7 +299,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the image match pair.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: '^heading.forKeys',
               },
               {
                 key: ConfigKey.resource_image,
@@ -324,7 +324,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the image match pair.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: '^heading.forValues',
               },
               {
                 key: ConfigKey.resource_image,
@@ -362,7 +362,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match matrix.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: '^heading.forKeys',
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -392,7 +392,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match matrix.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: '^heading.forValues',
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -494,7 +494,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the feedback.',
-                secondaryJsonKey: 'heading.forKeys',
+                jsonKey: '^heading.forKeys',
               },
             ],
             bodyAllowed: false,
@@ -524,7 +524,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the feedback.',
-                secondaryJsonKey: 'heading.forValues',
+                jsonKey: '^heading.forValues',
               },
             ],
             bodyAllowed: true,
@@ -621,7 +621,6 @@ const CARDSETS: _CardSetsConfig = {
       {
         name: 'cell',
         repeat: true,
-        jsonKey: '[{s}]',
         variants: [
           {
             jsonKey: null,
@@ -632,8 +631,8 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.tag_title,
+                jsonKey: '^table.columns[]',
                 description: 'Title of the table.',
-                secondaryJsonKey: 'table.columns[]',
               },
               {
                 key: ConfigKey.property_tableCellType,
@@ -674,8 +673,8 @@ const CARDSETS: _CardSetsConfig = {
   [CardSetConfigKey.tableExtended]: {
     jsonKey: null,
     sections: {
-      'table-body': { jsonKey: 'table.body.rows', isDefault: true },
       'table-header': { jsonKey: 'table.header.rows', sideJsonKey: 'cells[{s}]|set(title=true)' },
+      'table-body': { jsonKey: 'table.body.rows', isDefault: true },
       'table-footer': { jsonKey: 'table.footer.rows', sideJsonKey: 'cells[{s}]|set(title=true)' },
     },
     sides: [
@@ -742,7 +741,6 @@ const CARDSETS: _CardSetsConfig = {
       {
         name: 'cell',
         repeat: true,
-        jsonKey: '[{s}]',
         variants: [
           {
             jsonKey: 'body',
