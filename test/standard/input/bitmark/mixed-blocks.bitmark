@@ -1,0 +1,49 @@
+[.article]
+
+# Introduction
+
+Some body text here.
+
+• Point one
+• Point two
+
+|code:javascript
+console.log("hello");
+|
+
+|image:https://example.com/diagram.svg|alt:Diagram|
+
+
+[.multiple-choice]
+[@id: 4325410 ]
+[@revealSolutions: false ]
+[% 8. ]
+[!]
+
+====
+[+ Richtig ]
+[- Falsch ]
+
+
+
+[.article]
+# Title
+
+
+|code:js
+function test () {
+    console.log("Hello World");
+}
+
+Hello World!
+
+• List 1
+	• List 2
+
+Hello World!
+• List 1
+	• List 2
+
+Hello World!
+|
+Hello World!

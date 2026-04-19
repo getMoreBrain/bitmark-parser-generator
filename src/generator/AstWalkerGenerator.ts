@@ -1,4 +1,6 @@
 import { Ast, type AstWalkCallbacks, type NodeInfo } from '../ast/Ast.ts';
+import type { TextNode } from '../model/ast/TextNodes.ts';
+import { TextNodeType } from '../model/enum/TextNodeType.ts';
 import { type Generator } from './Generator.ts';
 
 /**
@@ -105,6 +107,39 @@ abstract class AstWalkerGenerator<AstType, R, Context = undefined>
 
     return undefined;
   }
+
+  protected getSiblingNodes(route: NodeInfo[]): { left?: unknown; right?: unknown } {
+    const parentNode = this.getParentNode(route);
+    if (!parentNode || !parentNode.value || !Array.isArray(parentNode.value)) {
+      return {};
+    }
+
+    const siblings = parentNode.value as unknown[];
+    const index = siblings.findIndex((s) => s === route[route.length - 1]?.value);
+    if (index === -1) {
+      return {};
+    }
+
+    return {
+      left: index > 0 ? siblings[index - 1] : undefined,
+      right: index < siblings.length - 1 ? siblings[index + 1] : undefined,
+    };
+  }
+
+  protected isEmptyParagraph(node: TextNode): boolean {
+    if (!node) return false;
+    if (node.type !== TextNodeType.paragraph) return false;
+    if (!node.content || !Array.isArray(node.content)) return true;
+
+    // Loop all the content nodes and check if they are all empty text nodes
+    for (const contentNode of node.content) {
+      if (contentNode.type !== TextNodeType.text) return false;
+      if (contentNode.text && contentNode.text.trim() !== '') return false;
+    }
+
+    return true;
+  }
+
   //
   // WRITER FUNCTIONS
   //

@@ -1,0 +1,341 @@
+[
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "heading",
+          "content": [
+            {
+              "text": "Introduction",
+              "type": "text"
+            }
+          ],
+          "attrs": {
+            "level": 1
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Some body text here.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Point one",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Point two",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "codeBlock",
+          "attrs": {
+            "language": "javascript"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "console.log(\"hello\");"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [],
+          "attrs": {}
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "alignment": "center",
+            "textAlign": "left",
+            "src": "https://example.com/diagram.svg",
+            "alt": "Diagram",
+            "title": null,
+            "class": "center",
+            "zoomDisabled": true
+          }
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.article]\n\n# Introduction\n\nSome body text here.\n\n• Point one\n• Point two\n\n|code:javascript\nconsole.log(\"hello\");\n|\n\n|image:https://example.com/diagram.svg|alt:Diagram|"
+  },
+  {
+    "bit": {
+      "type": "multiple-choice",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": ["4325410"],
+      "revealSolutions": false,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "8.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "quizzes": [
+        {
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "choices": [
+            {
+              "choice": "Richtig",
+              "isCorrect": true,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            },
+            {
+              "choice": "Falsch",
+              "isCorrect": false,
+              "item": [],
+              "hint": [],
+              "instruction": [],
+              "isExample": false,
+              "example": null
+            }
+          ]
+        }
+      ],
+      "isExample": false,
+      "footer": []
+    },
+    "parser": {
+      "version": "5.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.multiple-choice]\n[@id: 4325410 ]\n[@revealSolutions: false ]\n[% 8. ]\n[!]\n\n====\n[+ Richtig ]\n[- Falsch ]"
+  },
+  {
+    "bit": {
+      "type": "article",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "heading",
+          "content": [
+            {
+              "text": "Title",
+              "type": "text"
+            }
+          ],
+          "attrs": {
+            "level": 1
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": [],
+          "attrs": {}
+        },
+        {
+          "type": "codeBlock",
+          "attrs": {
+            "language": "js"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "function test () {\n    console.log(\"Hello World\");\n}\n\nHello World!"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "List 1",
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "attrs": {
+                    "start": 1
+                  },
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "attrs": {},
+                          "content": [
+                            {
+                              "text": "List 2",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hello World!",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "List 1",
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "type": "bulletList",
+                  "attrs": {
+                    "start": 1
+                  },
+                  "content": [
+                    {
+                      "type": "listItem",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "attrs": {},
+                          "content": [
+                            {
+                              "text": "List 2",
+                              "type": "text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hello World!",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Hello World!",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.20.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.article]\n# Title\n\n\n|code:js\nfunction test () {\n    console.log(\"Hello World\");\n}\n\nHello World!\n\n• List 1\n\t• List 2\n\nHello World!\n• List 1\n\t• List 2\n\nHello World!\n|\nHello World!"
+  }
+]
