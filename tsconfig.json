@@ -13,7 +13,9 @@
     "verbatimModuleSyntax": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    // Required for tsup until it supports TypeScript 6.0 properly
+    "ignoreDeprecations": "6.0"
   },
   "include": ["**/*.ts"],
   "exclude": [

@@ -217,7 +217,6 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   private inParagraph = false;
   private inHeading = false;
   private inCodeBlock = false;
-  private exitedCodeBlock = false;
   private inBulletList = false;
   private inInline = false;
   private markDepth = 0;
@@ -366,7 +365,6 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.inParagraph = false;
     this.inHeading = false;
     this.inCodeBlock = false;
-    this.exitedCodeBlock = false;
     this.inBulletList = false;
     this.inInline = false;
     this.markDepth = 0;
@@ -472,7 +470,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     switch (node.type) {
       case TextNodeType.paragraph:
         this.inParagraph = true;
-        this.writeParagraph(node);
+        this.writeParagraph(node, route);
         break;
 
       case TextNodeType.hardBreak:
@@ -542,9 +540,6 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       default:
       // Ignore unknown type
     }
-
-    // Clear exited flags
-    this.exitedCodeBlock = false;
   }
 
   protected handleBetweenNode(
@@ -598,7 +593,6 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         this.writeNL();
         this.writeNL();
         this.inCodeBlock = false;
-        this.exitedCodeBlock = true;
         break;
 
       case TextNodeType.noBulletList:
@@ -1088,29 +1082,37 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     }
   }
 
-  protected writeParagraph(node: TextNode): void {
+  protected writeParagraph(node: TextNode, route: NodeInfo[]): void {
     // Write paragraph marker for bitmark++
     if (this.textFormat === TextFormat.bitmarkText) {
       // Do not write a paragraph marker when in a bullet list
       if (this.inBulletList) return;
 
-      // Do not write a paragraph marker for the first node if it is a paragraph - it is implicit
-      // (unless it is empty, or an empty string)
-      // This is a nasty look-ahead but otherwise the entire paragraph block would need to be written before
-      // determining if it is the first node and if it is empty
-      const nodeContentLength = node.content?.length ?? 0;
-      if (this.nodeIndex === 0) {
-        if (nodeContentLength === 1) {
-          const isTextNode = node.content?.[0].type === TextNodeType.text;
-          const text = node.content?.[0].text ?? '';
-          if (!isTextNode || text !== '') return;
-        }
-        if (nodeContentLength > 1) return;
+      // Get the previous sibling node type, if it exists
+      const siblingNodes = this.getSiblingNodes(route);
+      const prevSiblingNodeType: TextNodeTypeType | undefined = (siblingNodes.left as TextNode)
+        ?.type;
+
+      // Only continue and write a paragraph marker if:
+      // - in body (not tag where there are no blocks)
+      // - the previous sibling node exists and is one of [codeBlock, paragraph]
+      // - this is an empty paragraph
+      const inBody = this.textLocation === TextLocation.body;
+      const isEmptyParagraph = this.isEmptyParagraph(node);
+      if (
+        !inBody ||
+        (!isEmptyParagraph &&
+          !(
+            prevSiblingNodeType === TextNodeType.codeBlock ||
+            prevSiblingNodeType === TextNodeType.paragraph
+          ))
+      ) {
+        return;
       }
 
       this.write('|');
       this.writeNL();
-      if (this.exitedCodeBlock) {
+      if (prevSiblingNodeType === TextNodeType.codeBlock) {
         // Write an extra newline after a code block
         this.writeNL();
       }
