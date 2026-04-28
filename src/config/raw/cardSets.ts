@@ -28,7 +28,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.group_resourceIcon,
                 description: 'Icon resource for the flashcard.',
-                jsonKey: 'question.icon',
+                jsonKey: 'question.icon|resource(type=image, key=image)',
               },
             ],
           },
@@ -51,7 +51,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.group_resourceIcon,
                 description: 'Icon resource for the flashcard.',
-                jsonKey: 'answer.icon',
+                jsonKey: 'answer.icon|resource(type=image, key=image)',
               },
             ],
           },
@@ -69,6 +69,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.group_resourceIcon,
                 description: 'Icon resource for the flashcard.',
+                jsonKey: 'alternativeAnswers[].icon|resource(type=image, key=image)',
               },
             ],
             repeatCount: Count.infinity,
@@ -97,12 +98,14 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the definition.',
+                format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
               },
               {
                 key: ConfigKey.group_resourceIcon,
                 description: 'Icon resource for the definition.',
-                jsonKey: 'term.icon',
+                format: TagFormat.plainText,
+                jsonKey: 'term.icon|resource(type=image, key=image)',
               },
             ],
           },
@@ -121,12 +124,13 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the definition.',
+                format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
               },
               {
                 key: ConfigKey.group_resourceIcon,
                 description: 'Icon resource for the definition.',
-                jsonKey: 'definition.icon',
+                jsonKey: 'definition.icon|resource(type=image, key=image)',
               },
             ],
           },
@@ -144,6 +148,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.group_resourceIcon,
                 description: 'Icon resource for the definition.',
+                jsonKey: 'alternativeDefinitions[].icon|resource(type=image, key=image)',
               },
             ],
             repeatCount: Count.infinity,
@@ -172,6 +177,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match pair.',
+                format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
               },
               {
@@ -207,6 +213,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match pair.',
+                format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
               },
               {
@@ -241,6 +248,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the audio match pair.',
+                format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
               },
               {
@@ -266,6 +274,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the audio match pair.',
+                format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
               },
               {
@@ -299,6 +308,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the image match pair.',
+                format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
               },
               {
@@ -324,6 +334,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the image match pair.',
+                format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
               },
               {
@@ -362,6 +373,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match matrix.',
+                format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
               },
               {
@@ -392,6 +404,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match matrix.',
+                format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
               },
               {
@@ -494,6 +507,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the feedback.',
+                format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
               },
             ],
@@ -524,6 +538,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 description: 'Title of the feedback.',
+                format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
               },
             ],

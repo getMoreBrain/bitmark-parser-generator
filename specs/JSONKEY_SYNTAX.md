@@ -157,6 +157,30 @@ jsonKey: "cells[{s}]|set(title=true)"
 
 Every cell object at `cells[{s}]` gets `"title": true` set automatically, in addition to whatever content and tags populate it.
 
+### `resource(type=t, key=k)`
+
+Resource-only transform. When a resource tag's value is serialized as a nested resource object, override the inner `"type"` field and the inner slot key. The outer key (the path on the left of `|`) is unaffected.
+
+Both arguments are optional and named. Defaults:
+
+- `type` — falls back to the resource's `res_type`
+- `key` — falls back to the tag's `jsonKey` path
+
+```
+jsonKey: "icon|resource(type=image, key=image)"
+```
+
+For chained `[&icon:url]` on a card term — the outer key remains `icon` (from the path), but the inner object reflects the underlying media:
+
+```json
+"icon": {
+  "type": "image",
+  "image": { "src": "url" }
+}
+```
+
+The transform is read only by the resource value serializer. On non-resource tags it has no effect.
+
 ---
 
 ## Context-Dependent jsonKey
@@ -197,25 +221,29 @@ segment      = identifier [array_marker]
 identifier   = letter (letter | digit | "_")*
 array_marker = "[]" | "[{s}]" | "[{v}]"
 transform_suffix = "|" transform
-transform    = bool_transform | set_transform
+transform    = bool_transform | set_transform | resource_transform
 bool_transform  = "bool(" literal ")"
 set_transform   = "set(" identifier "=" literal ")"
-literal      = ~[)|=]+
+resource_transform = "resource(" [resource_args] ")"
+resource_args   = resource_arg ("," resource_arg)*
+resource_arg    = ("type" | "key") "=" literal
+literal      = ~[)|=,]+
 ```
 
 ---
 
 ## Summary Table
 
-| Syntax            | Purpose                        | Example                          |
-| ----------------- | ------------------------------ | -------------------------------- |
-| `.`               | Transparent (no separate key)  | `.`                              |
-| `key`             | Simple property                | `instruction`                    |
-| `key.sub`         | Nested object                  | `question.text`                  |
-| `key[]`           | Array append                   | `values[]`                       |
-| `key[].sub`       | Array of objects               | `alternativeAnswers[].text`      |
-| `key[{s}]`        | Side-indexed array             | `cells[{s}].values[]`            |
-| `^key`            | Emit at bit root               | `^heading.forKeys`               |
-| `key\|bool(x)`    | Boolean if value matches       | `title\|bool(th)`                |
-| `key\|set(k=v)`   | Set fixed field on object      | `statement\|set(isCorrect=true)` |
-| `key[]\|set(k=v)` | Array element with fixed field | `choices[]\|set(isCorrect=true)` |
+| Syntax                        | Purpose                                    | Example                                 |
+| ----------------------------- | ------------------------------------------ | --------------------------------------- |
+| `.`                           | Transparent (no separate key)              | `.`                                     |
+| `key`                         | Simple property                            | `instruction`                           |
+| `key.sub`                     | Nested object                              | `question.text`                         |
+| `key[]`                       | Array append                               | `values[]`                              |
+| `key[].sub`                   | Array of objects                           | `alternativeAnswers[].text`             |
+| `key[{s}]`                    | Side-indexed array                         | `cells[{s}].values[]`                   |
+| `^key`                        | Emit at bit root                           | `^heading.forKeys`                      |
+| `key\|bool(x)`                | Boolean if value matches                   | `title\|bool(th)`                       |
+| `key\|set(k=v)`               | Set fixed field on object                  | `statement\|set(isCorrect=true)`        |
+| `key[]\|set(k=v)`             | Array element with fixed field             | `choices[]\|set(isCorrect=true)`        |
+| `key\|resource(type=t,key=k)` | Override inner type/slot for resource tags | `icon\|resource(type=image, key=image)` |
