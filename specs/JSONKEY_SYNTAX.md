@@ -157,6 +157,54 @@ jsonKey: "cells[{s}]|set(title=true)"
 
 Every cell object at `cells[{s}]` gets `"title": true` set automatically, in addition to whatever content and tags populate it.
 
+### `multi(count=N, key=K)`
+
+Lexer-count-driven destination redirect. Today this applies only to `Tag::Title` (`[#…]` count = 1, `[##…]` count = 2, …). When the tag is parsed, its lexer count is matched against any `multi(count=N, …)` arms — if it matches, the value is emitted at `K` instead of the base key.
+
+Stackable: chain `|multi(...)|multi(...)` to declare further levels. Codegen sorts arms by `count` ascending and silently overrides the schema's `max` to `1` when any `multi(...)` is present (each count slot is implicitly cardinality 1).
+
+```
+jsonKey: "title|multi(count=2, key=subtitle)"
+```
+
+`[.book]\n[#Title]` → emits `"title": [...]`
+`[.book]\n[##Subtitle]` → emits `"subtitle": [...]`
+
+```
+jsonKey: "title|multi(count=2, key=subtitle)|multi(count=3, key=section)"
+```
+
+Counts 1/2/3 → keys `title`/`subtitle`/`section`.
+
+**Validity**: the set of valid counts is `{1} ∪ {arm.count}`. Counts outside that set produce an `InvalidHeadingLevel` validator warning and the tag is dropped.
+
+**Codegen rejects** at build time:
+
+- duplicate `count=N` across arms,
+- `count=1` (level 1 is the default base key — express it as the bare path before the pipe),
+- `count=0`,
+- chaining `|multi(...)` with non-multi transforms.
+
+### `setMulti(field)`
+
+Like `set(k=v)` but the value comes from the lexer count rather than a literal. Emits the tag's value at the base key **and** a sibling field whose value is the count.
+
+```
+jsonKey: "title|setMulti(level)"
+```
+
+`[.chapter]\n[##My Chapter]` → emits `{ "title": [...], "level": 2 }` on the bit.
+
+Argument is a single bare field name — no `=`, no commas. Any count is valid (no `multi(...)` cap is implied; if a bound is needed, declare matching `|multi(...)` arms or add a future `|maxCount(N)` transform).
+
+The array form composes naturally: each `[#…]`/`[##…]`/etc. produces one `{ baseKey: …, field: count }` element appended to the base array.
+
+```
+jsonKey: "title[]|setMulti(level)"
+```
+
+`[#A]\n[##B]\n[###C]` → `"title": [{...,"level":1},{...,"level":2},{...,"level":3}]`.
+
 ### `resource(type=t, key=k)`
 
 Resource-only transform. When a resource tag's value is serialized as a nested resource object, override the inner `"type"` field and the inner slot key. The outer key (the path on the left of `|`) is unaffected.
@@ -221,14 +269,22 @@ segment      = identifier [array_marker]
 identifier   = letter (letter | digit | "_")*
 array_marker = "[]" | "[{s}]" | "[{v}]"
 transform_suffix = "|" transform
+transform_suffix = "|" transform ("|" "multi(" multi_args ")")*
 transform    = bool_transform | set_transform | resource_transform
+              | multi_transform | set_multi_transform
 bool_transform  = "bool(" literal ")"
 set_transform   = "set(" identifier "=" literal ")"
 resource_transform = "resource(" [resource_args] ")"
 resource_args   = resource_arg ("," resource_arg)*
 resource_arg    = ("type" | "key") "=" literal
+multi_transform = "multi(" multi_args ")"
+multi_args   = "count=" integer "," "key=" identifier
+set_multi_transform = "setMulti(" identifier ")"
 literal      = ~[)|=,]+
+integer      = digit+
 ```
+
+Only `|multi(...)` is repeatable in a chain; mixing `|multi(...)` with other transforms is rejected at codegen time.
 
 ---
 
@@ -246,4 +302,6 @@ literal      = ~[)|=,]+
 | `key\|bool(x)`                | Boolean if value matches                   | `title\|bool(th)`                       |
 | `key\|set(k=v)`               | Set fixed field on object                  | `statement\|set(isCorrect=true)`        |
 | `key[]\|set(k=v)`             | Array element with fixed field             | `choices[]\|set(isCorrect=true)`        |
+| `key\|multi(count=N, key=K)`  | Redirect to `K` when lexer count == N      | `title\|multi(count=2, key=subtitle)`   |
+| `key\|setMulti(field)`        | Set sibling `field` to lexer count         | `title\|setMulti(level)`                |
 | `key\|resource(type=t,key=k)` | Override inner type/slot for resource tags | `icon\|resource(type=image, key=image)` |

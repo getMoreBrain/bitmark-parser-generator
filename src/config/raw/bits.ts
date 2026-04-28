@@ -239,6 +239,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.tag_title,
         description: 'Title and subtitle of the catalog item',
         maxCount: 2,
+        jsonKey: 'title|multi(count=2, key=subtitle)',
       },
       {
         key: ConfigKey.property_coverImage,
@@ -388,6 +389,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.tag_title,
         description: 'Title and subtitle of the catalog item',
         maxCount: 2,
+        jsonKey: 'title|multi(count=2, key=subtitle)',
       },
       {
         key: ConfigKey.property_coverImage,
@@ -537,6 +539,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.tag_title,
         description: 'Title and subtitle of the catalog item',
         maxCount: 2,
+        jsonKey: 'title|multi(count=2, key=subtitle)',
       },
       {
         key: ConfigKey.property_coverImage,
@@ -1066,6 +1069,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.tag_title,
         description: 'The title of the book cover',
         maxCount: 2, // title & subtitle
+        jsonKey: 'title|multi(count=2, key=subtitle)',
       },
       {
         key: ConfigKey.property_coverColor,
@@ -1216,6 +1220,7 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.tag_title,
         description: 'The title of the chapter',
+        jsonKey: 'title|setMulti(level)',
       },
       {
         key: ConfigKey.property_toc,

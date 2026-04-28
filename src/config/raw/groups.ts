@@ -703,6 +703,7 @@ const GROUPS: _GroupsConfig = {
         name: 'Title',
         description: 'The title of the book',
         maxCount: 2,
+        jsonKey: 'title|multi(count=2, key=subtitle)',
       },
       {
         key: ConfigKey.property_subtype,
