@@ -192,7 +192,17 @@ class ConfigBuilder {
         //     },
         //   };
         // }
-        format = 'bitmark--';
+        if (tag.format === TagFormat.plainText) {
+          format = 'string';
+        } else if (tag.format === TagFormat.boolean) {
+          format = 'bool';
+        } else if (tag.format === TagFormat.bitmarkText) {
+          format = 'bitmark';
+        } else if (tag.format === TagFormat.number) {
+          format = 'number';
+        } else {
+          format = 'bitmark--';
+        }
       } else if (tagType === BitTagConfigKeyType.property) {
         // const resolvedProperty = PROPERTIES[tag.configKey];
         // tagName = resolvedProperty.tag;
