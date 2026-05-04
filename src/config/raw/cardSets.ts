@@ -910,6 +910,7 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.tag_instruction,
                 description: 'The quantity of the ingredient.',
                 jsonKey: 'quantity',
+                format: TagFormat.number,
               },
               {
                 key: ConfigKey.tag_hint,

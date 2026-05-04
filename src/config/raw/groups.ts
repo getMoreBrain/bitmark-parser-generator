@@ -274,6 +274,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.tag_anchor,
         name: 'Anchor',
+        format: TagFormat.plainText,
         description: 'The anchor for the bit',
       },
       {
@@ -435,7 +436,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.property_person,
-        jsonKey: 'person.name',
+        jsonKey: 'partner.name',
         description: 'A person',
         format: TagFormat.plainText,
         chain: [
@@ -446,6 +447,7 @@ const GROUPS: _GroupsConfig = {
           },
           {
             key: ConfigKey.group_resourceImage,
+            jsonKey: 'avatarImage|resource(type=image, key=image)',
             description: 'The image of the person',
           },
         ],
@@ -464,6 +466,7 @@ const GROUPS: _GroupsConfig = {
           },
           {
             key: ConfigKey.group_resourceImage,
+            jsonKey: 'avatarImage|resource(type=image, key=image)',
             description: 'The image of the partner',
           },
         ],
@@ -718,6 +721,7 @@ const GROUPS: _GroupsConfig = {
       },
       {
         key: ConfigKey.resource_coverImage,
+        jsonKey: 'coverImage|resource(type=image, key=image)',
         description: 'The cover image of the book',
         chain: [
           {
@@ -734,6 +738,7 @@ const GROUPS: _GroupsConfig = {
       },
       {
         key: ConfigKey.resource_backgroundImage,
+        jsonKey: 'backgroundImage|resource(type=image, key=image)',
         description: 'The background image of the book',
         chain: [
           {
@@ -894,6 +899,7 @@ const GROUPS: _GroupsConfig = {
         chain: [
           {
             key: ConfigKey.tag_reference,
+            format: TagFormat.plainText,
             description: 'The reference(s) for the book(s) in the learning path',
             maxCount: 2,
           },
@@ -1668,6 +1674,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_previewImage,
+        jsonKey: 'previewImage|resource(type=image, key=image)',
         description: 'The preview image resource',
         chain: [
           {
@@ -1684,6 +1691,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_previewVideo,
+        jsonKey: 'previewVideo|resource(type=video, key=video)',
         description: 'The preview video resource',
         chain: [
           {

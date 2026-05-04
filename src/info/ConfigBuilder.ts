@@ -231,6 +231,9 @@ class ConfigBuilder {
             type: 'group',
             key: groupKey,
             ...(tag.jsonKey ? { jsonKey: tag.jsonKey } : {}),
+            ...(tag.minCount != null ? { min: tag.minCount } : {}),
+            ...(tag.maxCount != null ? { max: tag.maxCount } : {}),
+            ...(tag.description ? { description: tag.description } : {}),
           });
         }
         return tags;

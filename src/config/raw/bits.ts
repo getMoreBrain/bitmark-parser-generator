@@ -248,6 +248,7 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.resource_coverImage,
+        jsonKey: 'coverImage|resource(type=image, key=image)',
         description: 'Cover image of the catalog item',
         chain: [
           {
@@ -398,6 +399,7 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.resource_coverImage,
+        jsonKey: 'coverImage|resource(type=image, key=image)',
         description: 'Cover image of the catalog item',
         chain: [
           {
@@ -867,10 +869,12 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.tag_reference,
+        format: TagFormat.plainText,
         description: 'The reference to the bit that this alias points to',
       },
       {
         key: ConfigKey.tag_anchor,
+        format: TagFormat.plainText,
         description: 'The anchor for the bit alias, used for linking',
       },
     ],
@@ -1215,6 +1219,7 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.tag_anchor,
+        format: TagFormat.plainText,
         description: 'The anchor for the chapter, used for linking',
       },
       {
@@ -1776,6 +1781,7 @@ const BITS: _BitsConfig = {
           {
             key: ConfigKey.tag_hint,
             description: 'Hint for the ingredient, used to provide additional information',
+            format: TagFormat.plainText,
           },
         ],
       },
@@ -3099,6 +3105,7 @@ const BITS: _BitsConfig = {
         chain: [
           {
             key: ConfigKey.tag_reference,
+            format: TagFormat.plainText,
             description: 'Reference tag for the book, used to link to the book in the system',
             maxCount: 2,
           },
@@ -3107,6 +3114,7 @@ const BITS: _BitsConfig = {
       {
         /* Allow incorrectly chained reference tag */
         key: ConfigKey.tag_reference,
+        format: TagFormat.plainText,
         description: 'Reference tag for the book, used to link to the book in the system',
       },
       {
@@ -3153,6 +3161,7 @@ const BITS: _BitsConfig = {
         chain: [
           {
             key: ConfigKey.tag_reference,
+            format: TagFormat.plainText,
             description: 'Reference tag for the book, used to link to the book in the system',
             maxCount: 2,
           },
@@ -3161,6 +3170,7 @@ const BITS: _BitsConfig = {
       {
         /* Allow incorrectly chained reference tag */
         key: ConfigKey.tag_reference,
+        format: TagFormat.plainText,
         description: 'Reference tag for the book, used to link to the book in the system',
       },
       {
@@ -3194,6 +3204,7 @@ const BITS: _BitsConfig = {
         chain: [
           {
             key: ConfigKey.tag_reference,
+            format: TagFormat.plainText,
             description: 'Reference tag for the book, used to link to the book in the system',
             maxCount: 2,
           },
@@ -3756,6 +3767,7 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.tag_reference,
+        format: TagFormat.plainText,
         description: 'Reference tag for the internal link, used to link to the target bit',
       },
     ],
@@ -4726,6 +4738,7 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.resource_platformBackgroundImage,
+        jsonKey: 'platformBackgroundImage|resource(type=image, key=image)',
         description: 'The platform section chat background image',
         chain: [
           {
@@ -4893,10 +4906,12 @@ const BITS: _BitsConfig = {
       // Not sure if these are actually valid here, but include them as they are in the test bit.
       {
         key: ConfigKey.tag_anchor,
+        format: TagFormat.plainText,
         description: 'Anchor for the sample solution, used to link to the solution',
       },
       {
         key: ConfigKey.tag_reference,
+        format: TagFormat.plainText,
         description:
           'Reference for the sample solution, used to link to the source of the solution',
       },
