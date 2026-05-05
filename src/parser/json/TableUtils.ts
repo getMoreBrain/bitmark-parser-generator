@@ -72,6 +72,19 @@ export function convertBasicToExtendedTableFormat(table: TableJson): TableExtend
     };
   }
 
+  // Apply columnWidths to header (preferred) or first body row
+  if (Array.isArray(table.columnWidths) && table.columnWidths.length > 0) {
+    const targetCells = tableExtended.header?.rows[0]?.cells ?? tableExtended.body?.rows[0]?.cells;
+    if (targetCells) {
+      for (let i = 0; i < table.columnWidths.length; i++) {
+        const width = table.columnWidths[i];
+        if (typeof width === 'number' && width > 0 && targetCells[i]) {
+          targetCells[i].colwidth = width;
+        }
+      }
+    }
+  }
+
   return tableExtended;
 }
 
@@ -97,7 +110,27 @@ export function convertExtendedToBasicTableFormat(tableExtended: TableExtendedJs
 
   const dataRows: LegacyRow[] = [];
 
+  // Aggregate column widths across all rows; later writes override earlier.
+  const widths: (number | null)[] = [];
+  let hasAnyWidth = false;
+  let maxCellCount = 0;
+
+  const collectWidths = (cells: TableCellJson[] | undefined): void => {
+    if (!cells) return;
+    if (cells.length > maxCellCount) maxCellCount = cells.length;
+    cells.forEach((cell, idx) => {
+      if (cell && typeof cell.colwidth === 'number' && cell.colwidth > 0) {
+        widths[idx] = cell.colwidth;
+        hasAnyWidth = true;
+      }
+    });
+  };
+
   const headRows = tableExtended.header?.rows ?? [];
+  headRows.forEach((row) => collectWidths(row?.cells));
+  (tableExtended.body?.rows ?? []).forEach((row) => collectWidths(row?.cells));
+  (tableExtended.footer?.rows ?? []).forEach((row) => collectWidths(row?.cells));
+
   if (headRows.length > 0) {
     const primaryHeader = extractRowCells(headRows[0]);
 
@@ -132,6 +165,16 @@ export function convertExtendedToBasicTableFormat(tableExtended: TableExtendedJs
 
   if (dataRows.length > 0) {
     table.data = dataRows;
+  }
+
+  if (hasAnyWidth) {
+    const columnCount = table.columns?.length ?? maxCellCount;
+    const columnWidths: (number | null)[] = new Array(columnCount).fill(null);
+    for (let i = 0; i < columnCount; i++) {
+      const w = widths[i];
+      if (typeof w === 'number') columnWidths[i] = w;
+    }
+    table.columnWidths = columnWidths;
   }
 
   return table;

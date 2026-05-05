@@ -5,10 +5,12 @@
 [@tableSort:true]
 [@tablePagination:true]
 ====
+[@tableColWidth:150]
 [#Name]
 --
 [#Email]
 --
+[@tableColWidth:90]
 [#Phone Number]
 ====
 John
@@ -21,6 +23,7 @@ Mark
 --
 mark@gmail.com
 --
+[@tableColWidth:100]
 (01) 22 888 4444
 ====
 

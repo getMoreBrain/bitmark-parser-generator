@@ -2444,6 +2444,19 @@ class Builder extends BaseBuilder {
       );
     }
 
+    if (Array.isArray(nodeTable.columnWidths)) {
+      const columnCount = Array.isArray(nodeTable.columns) ? nodeTable.columns.length : undefined;
+      const source =
+        columnCount != null ? nodeTable.columnWidths.slice(0, columnCount) : nodeTable.columnWidths;
+      const normalized = source.map((w) => (typeof w === 'number' && w > 0 ? w : null));
+      const hasAny = normalized.some((w) => w != null);
+      if (hasAny) {
+        nodeTable.columnWidths = normalized;
+      } else {
+        delete nodeTable.columnWidths;
+      }
+    }
+
     // Parse extended table properties
     const buildSection = (section: TableSectionJson | undefined): TableSectionJson | undefined => {
       if (!section || !Array.isArray(section.rows)) return undefined;
