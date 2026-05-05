@@ -256,6 +256,7 @@ class ConfigBuilder {
         jsonKey,
         format,
         default: tag.defaultValue ?? null,
+        ...(tag.nullable ? { nullable: true } : {}),
         min: tag.minCount == null ? 0 : tag.minCount,
         max: tag.maxCount == null ? 1 : tag.maxCount,
         description: tag.description ?? '',

@@ -123,6 +123,7 @@ export interface _AbstractTagConfig {
   format?: TagFormatType; // How the tag is formatted
   values?: string[]; // If the format is an enumeration, the possible values of the property
   defaultValue?: string; // The default value of the tag if omitted from the markup
+  nullable?: boolean; // If true, the tag's value is null when absent (not the type's zero value)
   jsonKey?: string; // If the json key is different from the tag
   chain?: _AbstractTagConfig[];
 }
