@@ -893,16 +893,16 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_true,
                 description: 'Checked state for the ingredient.',
-                jsonKey: 'ingredient|set(checked=true)',
+                jsonKey: '|set(checked=true)',
                 maxCount: 1,
-                nullable: true,
+                // nullable: true,
               },
               {
                 key: ConfigKey.tag_false,
                 description: 'Unchecked state for the ingredient.',
-                jsonKey: 'ingredient|set(checked=false)',
+                jsonKey: '|set(checked=false)',
                 maxCount: 1,
-                nullable: true,
+                // nullable: true,
               },
               {
                 key: ConfigKey.group_standardItemLead,
