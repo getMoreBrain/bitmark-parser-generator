@@ -536,6 +536,7 @@ export interface PronunciationTableJson {
 }
 
 export interface TableJson {
+  columnWidths?: (number | null)[];
   columns: JsonText[];
   data: JsonText[][];
 }
