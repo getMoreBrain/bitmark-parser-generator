@@ -6,6 +6,7 @@ import { TextLocation } from '../../../../model/enum/TextLocation.ts';
 import { StringUtils } from '../../../../utils/StringUtils.ts';
 import {
   type BitContent,
+  BitContentLevel,
   type BitContentProcessorResult,
   type BitmarkPegParserContext,
   type ContentDepthType,
@@ -13,27 +14,27 @@ import {
 } from '../BitmarkPegParserTypes.ts';
 
 function referenceTagContentProcessor(
-  _context: BitmarkPegParserContext,
+  context: BitmarkPegParserContext,
   _contentDepth: ContentDepthType,
-  _tagsConfig: TagsConfig | undefined,
+  tagsConfig: TagsConfig | undefined,
   content: BitContent,
   target: BitContentProcessorResult,
-  isReferenceEnd: boolean,
 ): void {
-  const { value } = content as TypeValue;
+  const { value, chain } = content as TypeValue;
 
   const trimmedStringValue = StringUtils.trimmedString(value) as BreakscapedString;
 
-  if (isReferenceEnd) {
-    target.referenceEnd = Breakscape.unbreakscape(trimmedStringValue, {
-      format: TextFormat.bitmarkText,
-      location: TextLocation.tag,
-    });
-  } else {
-    target.reference = Breakscape.unbreakscape(trimmedStringValue, {
-      format: TextFormat.bitmarkText,
-      location: TextLocation.tag,
-    });
+  target.reference = Breakscape.unbreakscape(trimmedStringValue, {
+    format: TextFormat.bitmarkText,
+    location: TextLocation.tag,
+  });
+
+  // A chained [►] under a [►] is referenceEnd (per the bit config: tag_reference → chain: tag_reference).
+  if (Array.isArray(chain) && chain.length > 0) {
+    const sub = context.bitContentProcessor(BitContentLevel.Chain, tagsConfig, chain);
+    if (sub.reference != null) {
+      target.referenceEnd = sub.reference;
+    }
   }
 }
 export { referenceTagContentProcessor };
