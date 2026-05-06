@@ -13,6 +13,10 @@ node_modules
 # VSCODE / MISE
 .vscode/mise-tools
 
+# LOCAL
+*.local
+*.local.*
+
 # PACKAGE SPECIFIC
 /assets/config
 /assets/test

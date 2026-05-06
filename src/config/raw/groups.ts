@@ -900,8 +900,17 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.tag_reference,
             format: TagFormat.plainText,
-            description: 'The reference(s) for the book(s) in the learning path',
-            maxCount: 2,
+            description: 'The reference for the book(s) in the learning path',
+            maxCount: 1,
+            chain: [
+              {
+                key: ConfigKey.tag_reference,
+                jsonKey: 'referenceEnd',
+                format: TagFormat.plainText,
+                description: 'The referenceEnd for the book(s) in the learning path',
+                maxCount: 1,
+              },
+            ],
           },
         ],
       },
