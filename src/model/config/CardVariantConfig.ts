@@ -1,4 +1,5 @@
 import { type CountType } from '../enum/Count.ts';
+import { type TextFormatType } from '../enum/TextFormat.ts';
 import { type TagsConfig } from './TagsConfig.ts';
 
 interface ToStringOptions {
@@ -13,6 +14,7 @@ class CardVariantConfig {
   repeatCount?: CountType; // Default: 1
   // JSON mapping fields
   readonly jsonKey?: string | null; // JSON path for body text
+  readonly format?: TextFormatType; // Body text format. Default: bitmark++
 
   public constructor(
     tags: TagsConfig,
@@ -20,12 +22,14 @@ class CardVariantConfig {
     bodyRequired?: boolean,
     repeatCount?: CountType,
     jsonKey?: string | null,
+    format?: TextFormatType,
   ) {
     this.tags = tags;
     this.bodyAllowed = bodyAllowed == null ? true : bodyAllowed;
     this.bodyRequired = bodyRequired;
     this.repeatCount = repeatCount;
     this.jsonKey = jsonKey;
+    this.format = format;
   }
 
   public toString(options?: ToStringOptions): string {

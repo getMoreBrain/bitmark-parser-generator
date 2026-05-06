@@ -12,6 +12,7 @@ import { typeFromConfigKey } from '../model/config/enum/ConfigKey.ts';
 import { BitTagConfigKeyType } from '../model/enum/BitTagConfigKeyType.ts';
 import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
 import { TagFormat } from '../model/enum/TagFormat.ts';
+import { TextFormat } from '../model/enum/TextFormat.ts';
 import { StringUtils } from '../utils/StringUtils.ts';
 
 /**
@@ -287,6 +288,8 @@ class ConfigBuilder {
           }[];
         }
       | undefined => {
+      const variantBodyFormat = (variant: { format?: string }): string =>
+        variant.format ?? TextFormat.bitmarkText;
       const cardSetConfig = CARDS[cardSetKey];
       if (!cardSetConfig) return undefined;
       const normalizedKey = normalizeCardKey(cardSetKey);
@@ -309,7 +312,8 @@ class ConfigBuilder {
           }
 
           return {
-            ...(variant.jsonKey !== undefined ? { jsonKey: variant.jsonKey } : {}),
+            jsonKey: variant.jsonKey ?? null,
+            format: variantBodyFormat(variant),
             tags: variantTags,
             repeatCount: variant.repeatCount ?? 1,
             ...(variant.bodyRequired ? { bodyRequired: true } : {}),

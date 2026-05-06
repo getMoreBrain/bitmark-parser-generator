@@ -156,4 +156,5 @@ export interface _CardVariantConfig {
   repeatCount?: CountType; // Default: 1
   // JSON mapping fields
   jsonKey?: string | null; // JSON path for body text
+  format?: TextFormatType; // Body text format. Default: bitmark++
 }

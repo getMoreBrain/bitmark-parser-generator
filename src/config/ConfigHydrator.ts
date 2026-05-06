@@ -226,7 +226,7 @@ class ConfigHydrator {
   }
 
   private hydrateCardVariantConfig(_variant: _CardVariantConfig): CardVariantConfig {
-    const { tags: _tags, bodyAllowed, bodyRequired, repeatCount, jsonKey } = _variant;
+    const { tags: _tags, bodyAllowed, bodyRequired, repeatCount, jsonKey, format } = _variant;
 
     const tags = this.hydrateTagsConfig(_tags);
 
@@ -236,6 +236,7 @@ class ConfigHydrator {
       bodyRequired,
       repeatCount,
       jsonKey,
+      format,
     );
 
     return cardSetConfig;

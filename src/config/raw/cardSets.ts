@@ -3,6 +3,7 @@ import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey.ts';
 import { ConfigKey } from '../../model/config/enum/ConfigKey.ts';
 import { Count } from '../../model/enum/Count.ts';
 import { TagFormat } from '../../model/enum/TagFormat.ts';
+import { TextFormat } from '../../model/enum/TextFormat.ts';
 
 const CARDSETS: _CardSetsConfig = {
   //
@@ -792,6 +793,7 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'feedback',
+            format: TextFormat.plainText,
             tags: [
               {
                 key: ConfigKey.property_reaction,
@@ -799,14 +801,40 @@ const CARDSETS: _CardSetsConfig = {
                 format: TagFormat.plainText,
               },
               {
-                key: ConfigKey.group_standardItemLead,
-                description:
-                  'Item, lead, page number, and margin number for the bot action response.',
+                key: ConfigKey.tag_item,
+                jsonKey: 'item',
+                format: TagFormat.plainText,
+                description: 'The item for the bit',
+                chain: [
+                  {
+                    key: ConfigKey.tag_item,
+                    jsonKey: 'lead',
+                    description: 'The lead for the bit',
+                    maxCount: 1,
+                    chain: [
+                      {
+                        key: ConfigKey.tag_item,
+                        jsonKey: 'pageNumber',
+                        description: 'The page number for the bit',
+                        maxCount: 1,
+                        chain: [
+                          {
+                            key: ConfigKey.tag_item,
+                            jsonKey: 'marginNumber',
+                            description: 'The margin number for the bit',
+                            maxCount: 1,
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
               },
               {
                 key: ConfigKey.tag_instruction,
                 description: 'The response label for the bot action.',
                 jsonKey: 'response',
+                format: TagFormat.plainText,
               },
               {
                 key: ConfigKey.property_example,
