@@ -204,6 +204,8 @@ export interface BitJson {
   maxTocChapterLevel: number;
   allowPrint: string; // 'enforceTrue' | 'enforceFalse' | 'useSpaceConfiguration'
   printParentChapterLevel: number;
+  printOnRequestCustomerId: string;
+  printOnRequestProductId: string;
   sourceDocument: string;
   internalPrintPdf: string;
   hasPrintRestriction: boolean;
@@ -536,6 +538,7 @@ export interface PronunciationTableJson {
 }
 
 export interface TableJson {
+  columnWidths?: (number | null)[];
   columns: JsonText[];
   data: JsonText[][];
 }

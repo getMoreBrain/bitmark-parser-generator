@@ -734,6 +734,10 @@
             "type": "array",
             "items": { "$ref": "#/$defs/JsonText" }
           }
+        },
+        "columnWidths": {
+          "type": "array",
+          "items": { "type": ["number", "null"] }
         }
       },
       "required": ["columns", "data"]

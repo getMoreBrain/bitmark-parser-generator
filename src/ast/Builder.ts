@@ -336,6 +336,8 @@ class Builder extends BaseBuilder {
       tocContent?: string | string[];
       page?: string | string[];
       printParentChapterLevel?: number;
+      printOnRequestCustomerId?: string;
+      printOnRequestProductId?: string;
       platformBrandTarget?: string;
       platformName?: string;
       platformIcon?: Partial<ImageResourceWrapperJson>;
@@ -1341,6 +1343,18 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_printParentChapterLevel,
         data.printParentChapterLevel,
+        options,
+      ),
+      printOnRequestCustomerId: this.toAstProperty(
+        bitType,
+        ConfigKey.property_printOnRequestCustomerId,
+        data.printOnRequestCustomerId,
+        options,
+      ),
+      printOnRequestProductId: this.toAstProperty(
+        bitType,
+        ConfigKey.property_printOnRequestProductId,
+        data.printOnRequestProductId,
         options,
       ),
       platformBrandTarget: this.toAstProperty(
@@ -2442,6 +2456,19 @@ class Builder extends BaseBuilder {
       nodeTable.data = nodeTable.data.map((row) =>
         (row || []).map((cell) => this.handleJsonText(context, TextLocation.tag, cell)),
       );
+    }
+
+    if (Array.isArray(nodeTable.columnWidths)) {
+      const columnCount = Array.isArray(nodeTable.columns) ? nodeTable.columns.length : undefined;
+      const source =
+        columnCount != null ? nodeTable.columnWidths.slice(0, columnCount) : nodeTable.columnWidths;
+      const normalized = source.map((w) => (typeof w === 'number' && w > 0 ? w : null));
+      const hasAny = normalized.some((w) => w != null);
+      if (hasAny) {
+        nodeTable.columnWidths = normalized;
+      } else {
+        delete nodeTable.columnWidths;
+      }
     }
 
     // Parse extended table properties

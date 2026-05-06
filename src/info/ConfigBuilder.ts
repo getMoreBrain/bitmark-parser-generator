@@ -192,7 +192,17 @@ class ConfigBuilder {
         //     },
         //   };
         // }
-        format = 'bitmark--';
+        if (tag.format === TagFormat.plainText) {
+          format = 'string';
+        } else if (tag.format === TagFormat.boolean) {
+          format = 'bool';
+        } else if (tag.format === TagFormat.bitmarkText) {
+          format = 'bitmark';
+        } else if (tag.format === TagFormat.number) {
+          format = 'number';
+        } else {
+          format = 'bitmark--';
+        }
       } else if (tagType === BitTagConfigKeyType.property) {
         // const resolvedProperty = PROPERTIES[tag.configKey];
         // tagName = resolvedProperty.tag;
@@ -221,6 +231,9 @@ class ConfigBuilder {
             type: 'group',
             key: groupKey,
             ...(tag.jsonKey ? { jsonKey: tag.jsonKey } : {}),
+            ...(tag.minCount != null ? { min: tag.minCount } : {}),
+            ...(tag.maxCount != null ? { max: tag.maxCount } : {}),
+            ...(tag.description ? { description: tag.description } : {}),
           });
         }
         return tags;
@@ -243,6 +256,7 @@ class ConfigBuilder {
         jsonKey,
         format,
         default: tag.defaultValue ?? null,
+        ...(tag.nullable ? { nullable: true } : {}),
         min: tag.minCount == null ? 0 : tag.minCount,
         max: tag.maxCount == null ? 1 : tag.maxCount,
         description: tag.description ?? '',

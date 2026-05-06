@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.21.0
+Version: 5.22.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -623,6 +623,7 @@ vendor-learndash-embed (since: 5.0.0)
 vendor-padlet-embed (since: 1.3.0)
 vendor-stripe-pricing-table (since: 1.20.0)
 vendor-stripe-pricing-table-external (since: 3.13.0)
+vendor-stripe-pricing-table-print-on-request (since: 5.21.0)
 video (since: 1.3.0)
 video-embed (since: 1.3.0)
 video-embed-landscape (since: 1.3.0)
