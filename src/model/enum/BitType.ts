@@ -634,6 +634,7 @@ const BitType = {
   vendorPadletEmbed: 'vendor-padlet-embed',
   vendorStripePricingTable: 'vendor-stripe-pricing-table',
   vendorStripePricingTableExternal: 'vendor-stripe-pricing-table-external',
+  vendorStripePricingTablePrintOnRequest: 'vendor-stripe-pricing-table-print-on-request',
   video: 'video',
   videoEmbed: 'video-embed',
   videoEmbedLandscape: 'video-embed-landscape',

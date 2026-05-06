@@ -1,0 +1,18 @@
+[.vendor-stripe-pricing-table-print-on-request]
+[@id:342346]
+[@stripePricingTableId: prctb1_1NNeGVGt8{VgVjROuB0TVMu ]
+[@stripePublishableKey: pk_live_51[GBBzGt8fVgVjROT6HJUFa32[fTOyyea6JX9IUhegfYdEReYIsRRfKa5mrdsqNgh9vpKwbSMimrSfMlAtJzsFUE00a7KW5WQ ]
+[@printOnRequestCustomerId: 98788bjbjhbjh ]
+[@printOnRequestProductId: 12334143dfrt ]
+
+[.vendor-stripe-pricing-table-print-on-request]
+[@id:342347]
+[@stripePricingTableId: prctb1_OTHER_TABLE ]
+[@stripePublishableKey: pk_live_OTHER_KEY ]
+[@printOnRequestCustomerId: cus_QQQ ]
+[@printOnRequestProductId: prod_RRR ]
+
+[.vendor-stripe-pricing-table-print-on-request]
+[@id:342348]
+[@printOnRequestCustomerId: cus_only_customer ]
+[@printOnRequestProductId: prod_only_product ]
