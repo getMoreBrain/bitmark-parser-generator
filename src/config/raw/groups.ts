@@ -1050,6 +1050,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_imagePlaceholder,
+        jsonKey: 'imagePlaceholder|resource(type=image, key=image)',
         description: 'Placeholder image for the resource',
         chain: [
           {
