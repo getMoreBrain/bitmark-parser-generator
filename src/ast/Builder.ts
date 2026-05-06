@@ -336,6 +336,8 @@ class Builder extends BaseBuilder {
       tocContent?: string | string[];
       page?: string | string[];
       printParentChapterLevel?: number;
+      printOnRequestCustomerId?: string;
+      printOnRequestProductId?: string;
       platformBrandTarget?: string;
       platformName?: string;
       platformIcon?: Partial<ImageResourceWrapperJson>;
@@ -1341,6 +1343,18 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_printParentChapterLevel,
         data.printParentChapterLevel,
+        options,
+      ),
+      printOnRequestCustomerId: this.toAstProperty(
+        bitType,
+        ConfigKey.property_printOnRequestCustomerId,
+        data.printOnRequestCustomerId,
+        options,
+      ),
+      printOnRequestProductId: this.toAstProperty(
+        bitType,
+        ConfigKey.property_printOnRequestProductId,
+        data.printOnRequestProductId,
         options,
       ),
       platformBrandTarget: this.toAstProperty(

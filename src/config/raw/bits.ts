@@ -5856,6 +5856,28 @@ const BITS: _BitsConfig = {
     description:
       'External Stripe pricing table bit, used to embed external Stripe pricing tables in articles or books',
   },
+  [BitType.vendorStripePricingTablePrintOnRequest]: {
+    since: '5.21.0',
+    baseBitType: BitType.vendorStripePricingTable,
+    description:
+      'Stripe pricing table bit with print-on-request customer/product IDs, used to embed Stripe pricing tables tied to a specific print-on-request customer and product',
+    tags: [
+      {
+        key: ConfigKey.property_printOnRequestCustomerId,
+        description:
+          'Print-on-request customer ID, used to identify the customer for the print-on-request flow',
+        format: TagFormat.plainText,
+        minCount: 1,
+      },
+      {
+        key: ConfigKey.property_printOnRequestProductId,
+        description:
+          'Print-on-request product ID, used to identify the product for the print-on-request flow',
+        format: TagFormat.plainText,
+        minCount: 1,
+      },
+    ],
+  },
 
   [BitType.video]: {
     since: '1.3.0',

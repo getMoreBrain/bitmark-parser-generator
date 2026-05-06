@@ -272,6 +272,8 @@ export interface Bit {
   allowPrint?: Property;
   allowPrintValue?: Property;
   printParentChapterLevel?: Property;
+  printOnRequestCustomerId?: Property;
+  printOnRequestProductId?: Property;
   platformBrandTarget?: Property;
   platformName?: Property;
   platformIcon?: ImageResourceWrapperJson;

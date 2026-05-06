@@ -1928,6 +1928,11 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       if (Config.isOfBitType(bitType, BitType.vendorStripePricingTable)) {
         if (bitJson.stripePricingTableId == null) bitJson.stripePricingTableId = '';
         if (bitJson.stripePublishableKey == null) bitJson.stripePublishableKey = '';
+
+        if (Config.isOfBitType(bitType, BitType.vendorStripePricingTablePrintOnRequest)) {
+          if (bitJson.printOnRequestCustomerId == null) bitJson.printOnRequestCustomerId = '';
+          if (bitJson.printOnRequestProductId == null) bitJson.printOnRequestProductId = '';
+        }
       }
 
       // Special case for 'call-to-action' bits
