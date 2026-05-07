@@ -169,6 +169,19 @@ function propertyContentProcessor(
               format: TextFormat.bitmarkText,
               location: TextLocation.tag,
             });
+
+          case TagFormat.coordinates: {
+            const raw = Breakscape.unbreakscape(v as BreakscapedString, {
+              format: TextFormat.plainText,
+              location: TextLocation.tag,
+            });
+            if (raw == null) return undefined;
+            const parts = raw.split(',').map((p) => NumberUtils.asNumber(p.trim()));
+            if (parts.length !== 4 || parts.some((n) => n == null || !Number.isFinite(n))) {
+              return undefined;
+            }
+            return parts as number[];
+          }
         }
       }
       return Breakscape.unbreakscape(v as BreakscapedString, {

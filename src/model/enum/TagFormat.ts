@@ -8,6 +8,7 @@ const TagFormat = {
   boolean: 'boolean', // If the value is treated as a boolean
   invertedBoolean: 'invertedBoolean', // If the value is treated as a boolean with the value inverted (e.g. isLongAnswer ==> isShortAnswer = false)
   enumeration: 'enumeration', // If the value is treated as an enumeration (the value is a string that must be one of a predefined set of values)
+  coordinates: 'coordinates', // Comma-separated list of 4 numbers (e.g. bounding-box x, y, x1, y1)
 } as const;
 
 export type TagFormatType = EnumType<typeof TagFormat>;

@@ -129,6 +129,7 @@ export interface BitContentProcessorResult {
   tableColSpan?: number;
   tableScope?: string;
   tableColWidth?: number;
+  sourceBB?: number[][];
   groupTag?: Partial<GroupTagJson>[];
   tag?: string[];
   imageSource?: Partial<ImageSourceJson>;

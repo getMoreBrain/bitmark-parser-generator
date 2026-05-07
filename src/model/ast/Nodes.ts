@@ -115,6 +115,7 @@ export interface Bit {
   bubbleTag?: Property;
   extractorTag?: Property;
   extractorInternal?: Property;
+  sourceBB?: number[][];
   levelCEFRp?: Property;
   levelCEFR?: Property;
   levelILR?: Property;

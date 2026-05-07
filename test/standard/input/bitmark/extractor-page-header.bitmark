@@ -1,7 +1,10 @@
 
 [.extractor-page-header]
+[@sourceBB:200, 260, 2000, 320]
 This is the page header
 
 
 [.extractor-page-header-collapsible]
+[@sourceBB:200, 260, 2000, 320]
+[@sourceBB:200, 400, 2000, 460]
 This is the page header

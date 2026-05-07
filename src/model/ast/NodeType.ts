@@ -592,6 +592,8 @@ const NodeType = {
   solution: 'solution',
   solutions: 'solutions',
   solutionsValue: 'solutionsValue',
+  sourceBB: 'sourceBB',
+  sourceBBValue: 'sourceBBValue',
   sourceDocument: 'sourceDocument',
   sourceDocumentValue: 'sourceDocumentValue',
   sourceRL: 'sourceRL',
