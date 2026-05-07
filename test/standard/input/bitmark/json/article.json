@@ -1222,6 +1222,7 @@
       "id": [
         "151971"
       ],
+      "sourceBB": [100, 200, 800, 400],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1291,7 +1292,7 @@
         }
       ]
     },
-    "bitmark": "[.standard-article-normative:bitmark--]\n[@id:151971]\n[%][%][%][%][%marginNumber]\n\nBit content"
+    "bitmark": "[.standard-article-normative:bitmark--]\n[@id:151971]\n[@sourceBB:100, 200, 800, 400]\n[%][%][%][%][%marginNumber]\n\nBit content"
   },
   {
     "bit": {
@@ -1341,14 +1342,14 @@
           "text": "[.standard-article-non-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 114,
+              "line": 115,
               "column": 1,
-              "offset": 6217
+              "offset": 6248
             },
             "end": {
-              "line": 114,
+              "line": 115,
               "column": 44,
-              "offset": 6260
+              "offset": 6291
             }
           }
         },
@@ -1357,14 +1358,14 @@
           "text": "[.standard-article-non-normative:bitmark--]",
           "location": {
             "start": {
-              "line": 114,
+              "line": 115,
               "column": 1,
-              "offset": 6217
+              "offset": 6248
             },
             "end": {
-              "line": 114,
+              "line": 115,
               "column": 44,
-              "offset": 6260
+              "offset": 6291
             }
           }
         }
