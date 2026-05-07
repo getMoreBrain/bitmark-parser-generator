@@ -889,15 +889,15 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const tuples = node.value as number[][] | undefined;
     if (!Array.isArray(tuples) || tuples.length === 0) return false;
 
-    for (const tuple of tuples) {
-      if (!Array.isArray(tuple) || tuple.length !== 4) continue;
-      this.writeNL_IfNotChain(route);
-      this.writeOPA();
-      this.writeTagKey('sourceBB');
-      this.writeColon();
-      this.writeString(tuple.join(', '));
-      this.writeCL();
-    }
+    this.writeProperty(
+      'sourceBB',
+      tuples.map((t) => t.join(', ')),
+      route,
+      {
+        format: TagFormat.plainText,
+        array: true,
+      },
+    );
 
     return false;
   }

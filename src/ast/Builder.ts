@@ -1781,7 +1781,9 @@ class Builder extends BaseBuilder {
   protected normaliseSourceBB(data: number[] | number[][] | undefined): number[][] | undefined {
     if (data == null) return undefined;
     if (!Array.isArray(data) || data.length === 0) return undefined;
-    const isNested = Array.isArray(data[0]);
+    // Use some() rather than data[0] so an invalid (undefined) first element doesn't
+    // mask valid nested tuples that follow it.
+    const isNested = (data as unknown[]).some(Array.isArray);
     const tuples = (isNested ? (data as number[][]) : [data as number[]]).filter(
       (t) => Array.isArray(t) && t.length === 4 && t.every((n) => typeof n === 'number'),
     );

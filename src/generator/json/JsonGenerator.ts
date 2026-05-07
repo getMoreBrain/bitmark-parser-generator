@@ -426,8 +426,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
-  // bitmarkAst -> bits -> bitsValue -> productId
-
   // bitmarkAst -> bits -> bitsValue -> sourceBB
 
   protected enter_sourceBB(node: NodeInfo, route: NodeInfo[]): boolean {
@@ -435,17 +433,17 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     // Ignore item that is not at the correct level
     const parent = this.getParentNode(route);
-    if (parent?.key !== NodeType.bitsValue) return true;
+    if (parent?.key !== NodeType.bitsValue) return false;
 
     if (tuples && tuples.length > 0) {
-      const value = tuples.length === 1 ? tuples[0] : tuples;
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (this.bitJson as any).sourceBB = value;
+      this.bitJson.sourceBB = tuples.length === 1 ? tuples[0] : tuples;
     }
 
     // Stop traversal of this branch
     return false;
   }
+
+  // bitmarkAst -> bits -> bitsValue -> productId
 
   protected enter_productId(node: NodeInfo, route: NodeInfo[]): boolean {
     const productIds = node.value as string[];

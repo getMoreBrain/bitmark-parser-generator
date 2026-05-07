@@ -170,18 +170,18 @@ function propertyContentProcessor(
               location: TextLocation.tag,
             });
 
-          case TagFormat.coordinates: {
-            const raw = Breakscape.unbreakscape(v as BreakscapedString, {
+          case TagFormat.coordinates:
+            const coordRaw = Breakscape.unbreakscape(v as BreakscapedString, {
               format: TextFormat.plainText,
               location: TextLocation.tag,
             });
-            if (raw == null) return undefined;
-            const parts = raw.split(',').map((p) => NumberUtils.asNumber(p.trim()));
-            if (parts.length !== 4 || parts.some((n) => n == null || !Number.isFinite(n))) {
+            if (coordRaw == null) return undefined;
+
+            const coordParts = coordRaw.split(',').map((p) => NumberUtils.asNumber(p.trim()));
+            if (coordParts.length !== 4 || coordParts.some((n) => n == null)) {
               return undefined;
             }
-            return parts as number[];
-          }
+            return coordParts as number[];
         }
       }
       return Breakscape.unbreakscape(v as BreakscapedString, {
