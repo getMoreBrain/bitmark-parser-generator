@@ -26,19 +26,17 @@ function parseSourceBB(sourceBB: BitJson['sourceBB']): Bbox[] {
   if (sourceBB == null) return [];
   if (!Array.isArray(sourceBB) || sourceBB.length === 0) return [];
 
-  // `number[][]` form — array of 4-tuples.
-  if (Array.isArray(sourceBB[0])) {
-    const out: Bbox[] = [];
-    for (const candidate of sourceBB as unknown[]) {
-      const box = toBbox(candidate);
-      if (box) out.push(box);
-    }
-    return out;
-  }
+  // Use some() rather than sourceBB[0] so an undefined/invalid first element
+  // doesn't mask valid nested tuples that follow it (mirrors Builder.normaliseSourceBB).
+  const isNested = (sourceBB as unknown[]).some(Array.isArray);
 
-  // `number[]` form — single 4-tuple.
-  const single = toBbox(sourceBB);
-  return single ? [single] : [];
+  const candidates = isNested ? (sourceBB as unknown[]) : [sourceBB];
+  const out: Bbox[] = [];
+  for (const candidate of candidates) {
+    const box = toBbox(candidate);
+    if (box) out.push(box);
+  }
+  return out;
 }
 
 function aabbIntersects(a: Bbox, b: Bbox): boolean {
