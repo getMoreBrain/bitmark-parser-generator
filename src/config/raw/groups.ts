@@ -199,6 +199,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_groupTag,
         jsonKey: 'groupTag.name',
+        exportJsonKey: { groupTag: { name: '$' } },
         description: 'The group tag(s) for the bit',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
@@ -278,6 +279,7 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        exportJsonKey: { anchor: '$' },
         key: ConfigKey.tag_anchor,
         name: 'Anchor',
         format: TagFormat.plainText,
@@ -315,23 +317,27 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.tag_item,
         jsonKey: 'item',
+        exportJsonKey: { item: '$' },
         description: 'The item for the bit',
         chain: [
           {
             key: ConfigKey.tag_item,
             jsonKey: 'lead',
+            exportJsonKey: { lead: '$' },
             description: 'The lead for the bit',
             maxCount: 1,
             chain: [
               {
                 key: ConfigKey.tag_item,
                 jsonKey: 'pageNumber',
+                exportJsonKey: { pageNumber: '$' },
                 description: 'The page number for the bit',
                 maxCount: 1,
                 chain: [
                   {
                     key: ConfigKey.tag_item,
                     jsonKey: 'marginNumber',
+                    exportJsonKey: { marginNumber: '$' },
                     description: 'The margin number for the bit',
                     maxCount: 1,
                   },
@@ -353,11 +359,13 @@ const GROUPS: _GroupsConfig = {
         description: 'Item, lead, page number, and margin number tags',
       },
       {
+        exportJsonKey: { instruction: '$' },
         key: ConfigKey.tag_instruction,
         name: 'Instruction',
         description: 'The instruction for the bit',
       },
       {
+        exportJsonKey: { hint: '$' },
         key: ConfigKey.tag_hint,
         name: 'Hint',
         description: 'The hint for the bit',
@@ -390,6 +398,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_imageSource,
         jsonKey: 'imageSource.url',
+        exportJsonKey: { imageSource: { url: '$' } },
         description: 'The source of an image',
         format: TagFormat.plainText,
         chain: [
@@ -424,6 +433,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_technicalTerm,
         jsonKey: 'technicalTerm.technicalTerm',
+        exportJsonKey: { technicalTerm: { technicalTerm: '$' } },
         description: 'The technical term',
         format: TagFormat.plainText,
         chain: [
@@ -443,6 +453,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_person,
         jsonKey: 'partner.name',
+        exportJsonKey: { partner: { name: '$' } },
         description: 'A person',
         format: TagFormat.plainText,
         chain: [
@@ -462,6 +473,7 @@ const GROUPS: _GroupsConfig = {
         // Deprecated (parter renamed to person)
         key: ConfigKey.property_partner,
         jsonKey: 'partner.name',
+        exportJsonKey: { partner: { name: '$' } },
         description: 'A partner',
         format: TagFormat.plainText,
         chain: [
@@ -484,6 +496,7 @@ const GROUPS: _GroupsConfig = {
     description: 'Gap chain',
     tags: [
       {
+        exportJsonKey: { solutions: [['$']] },
         key: ConfigKey.tag_gap,
         description: 'The value of a gap in the content',
         maxCount: Count.infinity,
@@ -491,6 +504,7 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.tag_gap,
             jsonKey: 'solutions[]',
+            exportJsonKey: { solutions: [['$']] },
             description: 'Alternative values for the gaps in the content',
             maxCount: Count.infinity,
           },
@@ -520,6 +534,7 @@ const GROUPS: _GroupsConfig = {
     description: 'True/False chain',
     tags: [
       {
+        exportJsonKey: { choices: [{ choice: '$', isCorrect: true }] },
         key: ConfigKey.tag_true,
         description: 'True value for a true/false statement/question',
         maxCount: Count.infinity,
@@ -527,12 +542,14 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.tag_true,
             jsonKey: 'choices[]|set(isCorrect=true)',
+            exportJsonKey: { choices: [{ choice: '$', isCorrect: true }] },
             description: 'True values for a true/false statement/question',
             maxCount: Count.infinity,
           },
           {
             key: ConfigKey.tag_false,
             jsonKey: 'choices[]|set(isCorrect=false)',
+            exportJsonKey: { choices: [{ choice: '$', isCorrect: false }] },
             description: 'False values for a true/false statement/question',
             maxCount: Count.infinity,
           },
@@ -549,6 +566,7 @@ const GROUPS: _GroupsConfig = {
         ],
       },
       {
+        exportJsonKey: { choices: [{ choice: '$', isCorrect: false }] },
         key: ConfigKey.tag_false,
         description: 'False value for a true/false statement/question',
         maxCount: Count.infinity,
@@ -556,12 +574,14 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.tag_true,
             jsonKey: 'choices[]|set(isCorrect=true)',
+            exportJsonKey: { choices: [{ choice: '$', isCorrect: true }] },
             description: 'True values for a true/false statement/question',
             maxCount: Count.infinity,
           },
           {
             key: ConfigKey.tag_false,
             jsonKey: 'choices[]|set(isCorrect=false)',
+            exportJsonKey: { choices: [{ choice: '$', isCorrect: false }] },
             description: 'False values for a true/false statement/question',
             maxCount: Count.infinity,
           },
@@ -586,6 +606,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_mark,
         jsonKey: 'marks.mark',
+        exportJsonKey: { marks: { mark: ['$'] } },
         description: 'The mark configuration',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
@@ -609,6 +630,7 @@ const GROUPS: _GroupsConfig = {
     description: 'Mark chain',
     tags: [
       {
+        exportJsonKey: { solution: ['$'] },
         key: ConfigKey.tag_mark,
         description: 'The marked content',
         maxCount: Count.infinity,
@@ -713,6 +735,7 @@ const GROUPS: _GroupsConfig = {
         description: 'The title of the book',
         maxCount: 2,
         jsonKey: 'title|multi(count=2, key=subtitle)',
+        exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
       },
       {
         key: ConfigKey.property_subtype,
@@ -728,6 +751,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.resource_coverImage,
         jsonKey: 'coverImage|resource(type=image, key=image)',
+        exportJsonKey: { coverImage: { type: 'image', image: { src: '$' } } },
         description: 'The cover image of the book',
         chain: [
           {
@@ -745,6 +769,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.resource_backgroundImage,
         jsonKey: 'backgroundImage|resource(type=image, key=image)',
+        exportJsonKey: { backgroundImage: { type: 'image', image: { src: '$' } } },
         description: 'The background image of the book',
         chain: [
           {
@@ -904,6 +929,7 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.plainText,
         chain: [
           {
+            exportJsonKey: { reference: '$' },
             key: ConfigKey.tag_reference,
             format: TagFormat.plainText,
             description: 'The reference(s) for the book(s) in the learning path',
@@ -1231,6 +1257,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_posterImage,
         jsonKey: 'posterImage.src',
+        exportJsonKey: { posterImage: { src: '$' } },
         description: 'The poster image for the video',
         format: TagFormat.plainText,
         chain: [
@@ -1681,6 +1708,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.resource_previewImage,
         jsonKey: 'previewImage|resource(type=image, key=image)',
+        exportJsonKey: { previewImage: { type: 'image', image: { src: '$' } } },
         description: 'The preview image resource',
         chain: [
           {
@@ -1698,6 +1726,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.resource_previewVideo,
         jsonKey: 'previewVideo|resource(type=video, key=video)',
+        exportJsonKey: { previewVideo: { type: 'video', video: { src: '$' } } },
         description: 'The preview video resource',
         chain: [
           {

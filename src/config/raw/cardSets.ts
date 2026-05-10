@@ -11,18 +11,21 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.flashcard]: {
     jsonKey: 'cards',
+    exportJsonKey: { cards: '$' },
     sides: [
       {
         name: 'question',
         variants: [
           {
             jsonKey: 'question.text',
+            exportJsonKey: { question: { text: '$' } },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
                 description: 'Standard tags for the flashcard.',
               },
               {
+                exportJsonKey: { title: '$' },
                 key: ConfigKey.tag_title,
                 description: 'Title of the flashcard.',
               },
@@ -40,12 +43,14 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'answer.text',
+            exportJsonKey: { answer: { text: '$' } },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
                 description: 'Standard tags for the flashcard.',
               },
               {
+                exportJsonKey: { title: '$' },
                 key: ConfigKey.tag_title,
                 description: 'Title of the flashcard.',
               },
@@ -58,12 +63,14 @@ const CARDSETS: _CardSetsConfig = {
           },
           {
             jsonKey: 'alternativeAnswers[].text',
+            exportJsonKey: { alternativeAnswers: [{ text: '$' }] },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
                 description: 'Standard tags for the flashcard.',
               },
               {
+                exportJsonKey: { title: '$' },
                 key: ConfigKey.tag_title,
                 description: 'Title of the flashcard.',
               },
@@ -85,12 +92,14 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.definitionList]: {
     jsonKey: 'definitions',
+    exportJsonKey: { definitions: '$' },
     sides: [
       {
         name: 'term',
         variants: [
           {
             jsonKey: 'term.text',
+            exportJsonKey: { term: { text: '$' } },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -101,6 +110,7 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the definition.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
+                exportJsonKey: { '@bit': { heading: { forKeys: '$' } } },
               },
               {
                 key: ConfigKey.group_resourceIcon,
@@ -117,6 +127,7 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'definition.text',
+            exportJsonKey: { definition: { text: '$' } },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -127,6 +138,7 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the definition.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
+                exportJsonKey: { '@bit': { heading: { forValues: '$' } } },
               },
               {
                 key: ConfigKey.group_resourceIcon,
@@ -137,12 +149,14 @@ const CARDSETS: _CardSetsConfig = {
           },
           {
             jsonKey: 'alternativeDefinitions[].text',
+            exportJsonKey: { alternativeDefinitions: [{ text: '$' }] },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
                 description: 'Standard tags for the definition.',
               },
               {
+                exportJsonKey: { title: '$' },
                 key: ConfigKey.tag_title,
                 description: 'Title of the definition.',
               },
@@ -164,12 +178,14 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.matchPairs]: {
     jsonKey: 'pairs',
+    exportJsonKey: { pairs: '$' },
     sides: [
       {
         name: 'key',
         variants: [
           {
             jsonKey: 'key',
+            exportJsonKey: { key: '$' },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -180,6 +196,7 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the match pair.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
+                exportJsonKey: { '@bit': { heading: { forKeys: '$' } } },
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -190,11 +207,13 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.resource_audio,
                 description: 'Audio resource for the match pair.',
                 jsonKey: 'keyAudio',
+                exportJsonKey: { keyAudio: '$' },
               },
               {
                 key: ConfigKey.resource_image,
                 description: 'Image resource for the match pair.',
                 jsonKey: 'keyImage',
+                exportJsonKey: { keyImage: '$' },
               },
             ],
           },
@@ -206,6 +225,7 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'values[]',
+            exportJsonKey: { values: ['$'] },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -216,6 +236,7 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the match pair.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
+                exportJsonKey: { '@bit': { heading: { forValues: '$' } } },
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -235,12 +256,14 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.matchAudioPairs]: {
     jsonKey: 'pairs',
+    exportJsonKey: { pairs: '$' },
     sides: [
       {
         name: 'key',
         variants: [
           {
             jsonKey: 'key',
+            exportJsonKey: { key: '$' },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -251,11 +274,13 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the audio match pair.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
+                exportJsonKey: { '@bit': { heading: { forKeys: '$' } } },
               },
               {
                 key: ConfigKey.resource_audio,
                 description: 'Audio resource for the match pair.',
                 jsonKey: 'keyAudio',
+                exportJsonKey: { keyAudio: '$' },
               },
             ],
           },
@@ -267,6 +292,7 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'values[]',
+            exportJsonKey: { values: ['$'] },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -277,6 +303,7 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the audio match pair.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
+                exportJsonKey: { '@bit': { heading: { forValues: '$' } } },
               },
               {
                 key: ConfigKey.resource_audio,
@@ -295,12 +322,14 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.matchImagePairs]: {
     jsonKey: 'pairs',
+    exportJsonKey: { pairs: '$' },
     sides: [
       {
         name: 'key',
         variants: [
           {
             jsonKey: 'key',
+            exportJsonKey: { key: '$' },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -311,11 +340,13 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the image match pair.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
+                exportJsonKey: { '@bit': { heading: { forKeys: '$' } } },
               },
               {
                 key: ConfigKey.resource_image,
                 description: 'Image resource for the match pair.',
                 jsonKey: 'keyImage',
+                exportJsonKey: { keyImage: '$' },
               },
             ],
           },
@@ -327,6 +358,7 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'values[]',
+            exportJsonKey: { values: ['$'] },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -337,6 +369,7 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the image match pair.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
+                exportJsonKey: { '@bit': { heading: { forValues: '$' } } },
               },
               {
                 key: ConfigKey.resource_image,
@@ -355,12 +388,14 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.matchMatrix]: {
     jsonKey: 'matrix',
+    exportJsonKey: { matrix: '$' },
     sides: [
       {
         name: 'key',
         variants: [
           {
             jsonKey: 'key',
+            exportJsonKey: { key: '$' },
             tags: [
               {
                 key: ConfigKey.group_standardItemLeadInstructionHint,
@@ -376,6 +411,7 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the match matrix.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
+                exportJsonKey: { '@bit': { heading: { forKeys: '$' } } },
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -392,6 +428,7 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'cells[{s}].values[]',
+            exportJsonKey: { cells: { $s: { values: ['$'] } } },
             tags: [
               {
                 key: ConfigKey.group_standardItemLeadInstructionHint,
@@ -407,6 +444,7 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the match matrix.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
+                exportJsonKey: { '@bit': { heading: { forValues: '$' } } },
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -426,23 +464,27 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.statements]: {
     jsonKey: 'statements',
+    exportJsonKey: { statements: '$' },
     sides: [
       {
         name: 'statement',
         variants: [
           {
             jsonKey: 'statement',
+            exportJsonKey: { statement: '$' },
             tags: [
               {
                 key: ConfigKey.tag_true,
                 description: 'Tag for true statements.',
                 jsonKey: 'statement|set(isCorrect=true)',
+                exportJsonKey: { statement: '$', isCorrect: true },
                 maxCount: 1,
               },
               {
                 key: ConfigKey.tag_false,
                 description: 'Tag for false statements.',
                 jsonKey: 'statement|set(isCorrect=false)',
+                exportJsonKey: { statement: '$', isCorrect: false },
                 maxCount: 1,
               },
               {
@@ -462,6 +504,7 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.quiz]: {
     jsonKey: 'quizzes',
+    exportJsonKey: { quizzes: '$' },
     sides: [
       {
         name: 'choices',
@@ -490,6 +533,7 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.feedback]: {
     jsonKey: 'feedbacks',
+    exportJsonKey: { feedbacks: '$' },
     sides: [
       {
         name: 'choices',
@@ -510,6 +554,7 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the feedback.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
+                exportJsonKey: { '@bit': { heading: { forKeys: '$' } } },
               },
             ],
             bodyAllowed: false,
@@ -521,6 +566,7 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'reason.text',
+            exportJsonKey: { reason: { text: '$' } },
             tags: [
               {
                 key: ConfigKey.group_standardItemLeadInstructionHint,
@@ -541,6 +587,7 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the feedback.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
+                exportJsonKey: { '@bit': { heading: { forValues: '$' } } },
               },
             ],
             bodyAllowed: true,
@@ -555,12 +602,14 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.questions]: {
     jsonKey: 'questions',
+    exportJsonKey: { questions: '$' },
     sides: [
       {
         name: 'question',
         variants: [
           {
             jsonKey: 'question',
+            exportJsonKey: { question: '$' },
             tags: [
               {
                 key: ConfigKey.property_reasonableNumOfChars,
@@ -568,6 +617,7 @@ const CARDSETS: _CardSetsConfig = {
                 format: TagFormat.number,
               },
               {
+                exportJsonKey: { sampleSolution: '$' },
                 key: ConfigKey.tag_sampleSolution,
                 description: 'Sample solution for the question.',
               },
@@ -610,6 +660,7 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'elements[]',
+            exportJsonKey: { elements: ['$'] },
             tags: [
               {
                 key: ConfigKey.group_standardItemLeadInstructionHint,
@@ -633,6 +684,7 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.table]: {
     jsonKey: 'table.data',
+    exportJsonKey: { table: { data: '$' } },
     sides: [
       {
         name: 'cell',
@@ -648,6 +700,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 jsonKey: '^table.columns[]',
+                exportJsonKey: { '@bit': { table: { columns: ['$'] } } },
                 description: 'Title of the table.',
               },
               {
@@ -689,18 +742,34 @@ const CARDSETS: _CardSetsConfig = {
   [CardSetConfigKey.tableExtended]: {
     jsonKey: null,
     sections: {
-      'table-header': { jsonKey: 'table.header.rows', sideJsonKey: 'cells[{s}]|set(title=true)' },
-      'table-body': { jsonKey: 'table.body.rows', isDefault: true },
-      'table-footer': { jsonKey: 'table.footer.rows', sideJsonKey: 'cells[{s}]|set(title=true)' },
+      'table-header': {
+        jsonKey: 'table.header.rows',
+        exportJsonKey: { table: { header: { rows: '$' } } },
+        sideJsonKey: 'cells[{s}]|set(title=true)',
+        sideExportJsonKey: { cells: { $s: { title: true, $: '$' } } },
+      },
+      'table-body': {
+        jsonKey: 'table.body.rows',
+        exportJsonKey: { table: { body: { rows: '$' } } },
+        isDefault: true,
+      },
+      'table-footer': {
+        jsonKey: 'table.footer.rows',
+        exportJsonKey: { table: { footer: { rows: '$' } } },
+        sideJsonKey: 'cells[{s}]|set(title=true)',
+        sideExportJsonKey: { cells: { $s: { title: true, $: '$' } } },
+      },
     },
     sides: [
       {
         name: 'cell',
         repeat: true,
         jsonKey: 'cells[{s}]',
+        exportJsonKey: { cells: { $s: '$' } },
         variants: [
           {
             jsonKey: 'content',
+            exportJsonKey: { content: '$' },
             tags: [
               {
                 key: ConfigKey.group_standardItemLeadInstructionHint,
@@ -709,29 +778,34 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 jsonKey: '.',
+                exportJsonKey: null,
                 description: 'Title of the table cell.',
               },
               {
                 key: ConfigKey.property_tableCellType,
                 jsonKey: 'title|bool(th)',
+                exportJsonKey: [{ '@value=th': { title: true } }],
                 description: 'Table cell type (th/td).',
                 format: TagFormat.plainText,
               },
               {
                 key: ConfigKey.property_tableRowSpan,
                 jsonKey: 'rowspan',
+                exportJsonKey: { rowspan: '$' },
                 description: 'Number of rows the cell spans.',
                 format: TagFormat.number,
               },
               {
                 key: ConfigKey.property_tableColSpan,
                 jsonKey: 'colspan',
+                exportJsonKey: { colspan: '$' },
                 description: 'Number of columns the cell spans.',
                 format: TagFormat.number,
               },
               {
                 key: ConfigKey.property_tableScope,
                 jsonKey: 'scope',
+                exportJsonKey: { scope: '$' },
                 description: 'Scope attribute for header cells.',
                 format: TagFormat.plainText,
               },
@@ -753,6 +827,7 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.pronunciationTable]: {
     jsonKey: 'pronunciationTable.data',
+    exportJsonKey: { pronunciationTable: { data: '$' } },
     sides: [
       {
         name: 'cell',
@@ -760,12 +835,14 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'body',
+            exportJsonKey: { body: '$' },
             tags: [
               {
                 key: ConfigKey.group_standardItemLeadInstructionHint,
                 description: 'Standard tags for lead, instruction, and hint.',
               },
               {
+                exportJsonKey: { title: '$' },
                 key: ConfigKey.tag_title,
                 description: 'Title of the pronunciation table.',
               },
@@ -787,12 +864,14 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.botActionResponses]: {
     jsonKey: 'responses',
+    exportJsonKey: { responses: '$' },
     sides: [
       {
         name: 'response',
         variants: [
           {
             jsonKey: 'feedback',
+            exportJsonKey: { feedback: '$' },
             format: TextFormat.plainText,
             tags: [
               {
@@ -803,24 +882,28 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_item,
                 jsonKey: 'item',
+                exportJsonKey: { item: '$' },
                 format: TagFormat.plainText,
                 description: 'The item for the bit',
                 chain: [
                   {
                     key: ConfigKey.tag_item,
                     jsonKey: 'lead',
+                    exportJsonKey: { lead: '$' },
                     description: 'The lead for the bit',
                     maxCount: 1,
                     chain: [
                       {
                         key: ConfigKey.tag_item,
                         jsonKey: 'pageNumber',
+                        exportJsonKey: { pageNumber: '$' },
                         description: 'The page number for the bit',
                         maxCount: 1,
                         chain: [
                           {
                             key: ConfigKey.tag_item,
                             jsonKey: 'marginNumber',
+                            exportJsonKey: { marginNumber: '$' },
                             description: 'The margin number for the bit',
                             maxCount: 1,
                           },
@@ -834,6 +917,7 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.tag_instruction,
                 description: 'The response label for the bot action.',
                 jsonKey: 'response',
+                exportJsonKey: { response: '$' },
                 format: TagFormat.plainText,
               },
               {
@@ -853,12 +937,14 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.clozeList]: {
     jsonKey: 'listItems',
+    exportJsonKey: { listItems: '$' },
     sides: [
       {
         name: 'content',
         variants: [
           {
             jsonKey: 'body',
+            exportJsonKey: { body: '$' },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -880,18 +966,21 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.exampleBitList]: {
     jsonKey: 'listItems',
+    exportJsonKey: { listItems: '$' },
     sides: [
       {
         name: 'item',
         variants: [
           {
             jsonKey: 'body',
+            exportJsonKey: { body: '$' },
             tags: [
               {
                 key: ConfigKey.group_standardTags,
                 description: 'Standard tags for example bits.',
               },
               {
+                exportJsonKey: { title: '$' },
                 key: ConfigKey.tag_title,
                 description: 'Title of the example bit.',
               },
@@ -907,14 +996,17 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.ingredients]: {
     jsonKey: 'ingredients',
+    exportJsonKey: { ingredients: '$' },
     sides: [
       {
         name: 'ingredient',
         variants: [
           {
             jsonKey: 'ingredient',
+            exportJsonKey: { ingredient: '$' },
             tags: [
               {
+                exportJsonKey: { title: '$' },
                 key: ConfigKey.tag_title,
                 description: 'Title of the ingredient.',
               },
@@ -922,6 +1014,7 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.tag_true,
                 description: 'Checked state for the ingredient.',
                 jsonKey: '|set(checked=true)',
+                exportJsonKey: { checked: true, $: '$' },
                 maxCount: 1,
                 // nullable: true,
               },
@@ -929,6 +1022,7 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.tag_false,
                 description: 'Unchecked state for the ingredient.',
                 jsonKey: '|set(checked=false)',
+                exportJsonKey: { checked: false, $: '$' },
                 maxCount: 1,
                 // nullable: true,
               },
@@ -940,9 +1034,11 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.tag_instruction,
                 description: 'The quantity of the ingredient.',
                 jsonKey: 'quantity',
+                exportJsonKey: { quantity: '$' },
                 format: TagFormat.number,
               },
               {
+                exportJsonKey: { hint: '$' },
                 key: ConfigKey.tag_hint,
                 description: 'The hint for the ingredient.',
               },
@@ -979,6 +1075,7 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.bookReferenceList]: {
     jsonKey: 'bookReferences',
+    exportJsonKey: { bookReferences: '$' },
     sides: [
       {
         name: 'reference',

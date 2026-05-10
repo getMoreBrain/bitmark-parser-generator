@@ -1,307 +1,483 @@
-# jsonKey Mini-Language Specification
+# jsonKey JSON-Pattern Language — reference
 
-This document defines the mini-language used in `jsonKey` strings throughout the bitmark configuration system. The `jsonKey` tells a parser _where_ in the JSON output to write a tag's value, including nesting, arrays, type conversions, and fixed-value emission.
+This crate compiles bitmark `jsonKey` values written in the **JSON-pattern**
+language at code-generation time. The companion runtime semantics doc is
+`RUNTIME.md`. Background design lives in `PLAN-051`.
 
-## Syntax Overview
+## 1. The idea
 
-A `jsonKey` string has this structure:
+A `jsonKey` is a **JSON pattern** — a JSON value that _is_ the sub-tree the
+tag contributes, with sigils standing in for source-driven values.
 
-```
-[^]path[.path...][[]|[{s}|{v}]][|transform]
-```
+Forward (bitmark → JSON): write the literals, substitute sigils.
+Reverse (JSON → bitmark): structurally match literals, extract sigils.
 
-Or the special transparent path:
+A jsonKey is therefore reversible by construction, with no operator
+vocabulary.
 
-```
-.
-```
+Per PLAN-051 §3, **only** the `jsonKey` field on a tag entry may be edited
+in `bitmark.json`. No sibling "schema flag" fields are added or read; every
+behaviour previously imagined as a flag is either implicit in the pattern,
+inferred at codegen, or expressed via inline scope-shift writes.
 
-Parsing precedence (left to right):
+## 2. Storage
 
-1. `^` — root escape (optional prefix)
-2. `|` — pipe separator for transforms
-3. `.` — dot separator for nested object keys
-4. `[]` — array append
-5. `[{s}]` / `[{v}]` — side/variant offset substitution
+`jsonKey` is a JSON value:
 
----
+| Type     | Meaning                                                                |
+| -------- | ---------------------------------------------------------------------- |
+| `null`   | "consume only, emit nothing" — pairs with cascade detection at codegen |
+| `bool`   | constants-only literal pattern                                         |
+| `number` | constants-only literal pattern                                         |
+| `string` | sigil pattern (must start with `$`); else legacy-rejected at top level |
+| `array`  | multiple-rule list, evaluated first-match-wins                         |
+| `object` | single-rule pattern shape                                              |
 
-## Path Expressions
+Top-level non-`$`-prefixed strings are rejected as legacy. Inside a pattern,
+ordinary string values are literal-string constants.
 
-### Transparent path (`.`)
+## 3. Sigils — value position
 
-A standalone `.` means the tag produces no separate JSON key. The tag's content merges into the parent context (typically the variant body).
+| Sigil              | Meaning                                                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------------------------- |
+| `"$"`              | tag's source value                                                                                      |
+| `"$s"`             | side index (also valid as object key)                                                                   |
+| `"$i"`             | tag's occurrence index on its parent                                                                    |
+| `"$level"`         | tag-carried level integer                                                                               |
+| `"$parent.<path>"` | value at the parent's JSON sub-tree at `<path>` (e.g. `$parent.solutions[0]`)                           |
+| `"$<name>"`        | named placeholder for multi-input tags (validated by codegen against the parser-side multi-input table) |
 
-```
-jsonKey: "."
-```
-
-Used when a bitmark tag is syntactically meaningful but transparent in JSON output. For example, the `[#]` title tag in `table-extended` cells — `[#Name]` writes "Name" to the cell's `content` field (the variant body), not to a separate `title` key.
-
-### Simple key
-
-```
-jsonKey: "instruction"
-```
-
-Emits: `"instruction": <value>`
-
-### Dot-separated nesting
-
-```
-jsonKey: "question.text"
-```
-
-Emits: `"question": { "text": <value> }`
-
-### Array append (`[]`)
+`$parent` paths use `.<field>` and `[N]` segments:
 
 ```
-jsonKey: "values[]"
+$parent.solutions[0]
+$parent.isCorrect
+$parent.cells[2].values[0]
 ```
 
-Emits: appends `<value>` to the `values` array.
+## 4. Scope-shift keys (key position only)
 
-```
-jsonKey: "alternativeAnswers[].text"
-```
+Place a sub-tree at a fixed scope. **Multiple scope-shift keys may coexist
+at the same object level**, alongside regular keys — that's how bubble is
+expressed (writing `true` to ancestor flags is idempotent OR).
 
-Emits: appends `{ "text": <value> }` to the `alternativeAnswers` array.
+| Key         | Target                                                            |
+| ----------- | ----------------------------------------------------------------- |
+| `"@bit"`    | bit root (top of `bit.*`)                                         |
+| `"@parser"` | parser scope (sibling of `bit`, e.g. `parser.internalComments[]`) |
+| `"@card"`   | active card-array entry root                                      |
 
-### Side offset substitution (`{s}`)
+A scope-shift cannot **nest** inside another scope-shift (`@bit` inside
+`@parser` is rejected). Adjacent scope-shifts at the same level are fine.
 
-Used in repeating sides. The `{s}` placeholder is replaced with the 0-based side index.
+## 5. Predicate keys (outermost rule level only)
 
-```
-jsonKey: "cells[{s}].values[]"
-```
+Discriminate sibling rules in the multi-rule array form.
 
-For side 0: `"cells": [{ "values": [<value>] }]`
-For side 1: `"cells": [..., { "values": [<value>] }]`
+| Predicate    | Meaning                                           |
+| ------------ | ------------------------------------------------- |
+| `"@value=V"` | tag's value (post-format-coerce) equals literal V |
+| `"@level=N"` | tag's level equals integer N                      |
+| `"@i=N"`     | tag's occurrence index equals integer N           |
 
-### Variant offset substitution (`{v}`)
+Predicate values are typed by the parent tag's `format` (boolean, integer,
+or string). The compiler stores them as `JsonLiteral`; codegen later
+re-types them under the schema.
 
-Used in repeating variants. The `{v}` placeholder is replaced with the 0-based variant index.
+## 6. Pattern shape
 
-```
-jsonKey: "values[{v}]"
-```
+| Shape                                     | Meaning                                                               |
+| ----------------------------------------- | --------------------------------------------------------------------- |
+| literal scalar (`true`, `42`, `"th"`)     | constant — emitted forward, matched on reverse                        |
+| `"$"`                                     | value placeholder                                                     |
+| `["$"]`                                   | append-per-occurrence array                                           |
+| `[lit, "$", lit]`                         | array with constants surrounding the value                            |
+| `{ k1: v1, k2: v2 }`                      | object — fields/keys can be literals, sigils, scope-shifts, templates |
+| object with no `"$"` placeholder anywhere | constants-only rule — fires on tag presence, emits only literals      |
+| `null`                                    | no JSON output                                                        |
+| template key (e.g. `"sub${level}title"`)  | key with sigil interpolation; reverse splits literal anchors          |
 
----
+### 6.1 Object-key forms
 
-## Root Escape (`^`)
+Keys in an object can be:
 
-When `jsonKey` starts with `^`, the value is emitted at the **bit root level** rather than relative to the current card item.
+- literal (`"alt"`, `"choice"`)
+- bare-sigil from the whitelist: `"$s"`, `"$<name>"`
+- template (literal + sigil mix): `"sub${level}title"`. Template keys must
+  contain at least one literal character between sigils.
+- scope shift: `"@bit"` / `"@parser"` / `"@card"`
+- placeholder: `"$"` (pairs with a sibling value pattern)
 
-```
-jsonKey: "^heading.forKeys"
-```
+`$`, `$i`, `$level`, `$parent.…` are **not** valid bare-sigil keys — only
+`$s` and named placeholders are.
 
-This is used for heading cards — the first card in a card set where `[#]` title tags write to bit-level properties.
+The braced placeholder form `${name}` lets a sigil sit immediately next to
+ident-characters, e.g. `"sub${level}title"` (otherwise `$leveltitle` reads
+greedily as one identifier).
 
----
+## 7. Multiple rules per tag
 
-## Transforms (`|`)
-
-A pipe `|` separates the key path from a transform function. The transform modifies how the tag value is converted to JSON.
-
-### `bool(x)`
-
-Emit `true` if the tag's raw value equals `x`; **omit the key entirely** otherwise.
-
-```
-jsonKey: "title|bool(th)"
-```
-
-If `[@tableCellType:th]` → emits `"title": true`
-If `[@tableCellType:td]` → key is omitted
-
-### `set(k=v)`
-
-Sets field `k` to value `v` on the object resolved by the key path. The tag or variant content is written to the key path as normal; the `set()` transform adds an additional fixed property alongside it.
-
-Supported value literals:
-
-- `true` / `false` — JSON booleans
-- Unquoted text — JSON string
-
-**On a tag jsonKey** — the tag content goes to the key path, and `k=v` is set on the containing object:
-
-```
-jsonKey: "statement|set(isCorrect=true)"
-```
-
-Tag `[+this is true]` → emits `{ "statement": "this is true", "isCorrect": true }` on the card item.
-
-```
-jsonKey: "ingredient|set(checked=false)"
-```
-
-Tag `[-]` → emits `{ "ingredient": <content>, "checked": false }` on the card item.
-
-**On an array path** — creates an array element and sets `k=v` on it. The tag content is written to a content field derived from the array name (singular form: `choices[]` → `choice`).
-
-```
-jsonKey: "choices[]|set(isCorrect=true)"
-```
-
-Tag `[+Choice text]` → appends `{ "choice": <content>, "isCorrect": true, ... }` to `choices[]`
-
-Child chain tags (item, lead, hint, instruction, example) are added as sibling fields on the same element.
-
-**On a side jsonKey** — sets `k=v` on every object created by the side path. Variant and tag content populates the object as normal.
-
-```
-jsonKey: "cells[{s}]|set(title=true)"
-```
-
-Every cell object at `cells[{s}]` gets `"title": true` set automatically, in addition to whatever content and tags populate it.
-
-### `multi(count=N, key=K)`
-
-Lexer-count-driven destination redirect. Today this applies only to `Tag::Title` (`[#…]` count = 1, `[##…]` count = 2, …). When the tag is parsed, its lexer count is matched against any `multi(count=N, …)` arms — if it matches, the value is emitted at `K` instead of the base key.
-
-Stackable: chain `|multi(...)|multi(...)` to declare further levels. Codegen sorts arms by `count` ascending and silently overrides the schema's `max` to `1` when any `multi(...)` is present (each count slot is implicitly cardinality 1).
-
-```
-jsonKey: "title|multi(count=2, key=subtitle)"
-```
-
-`[.book]\n[#Title]` → emits `"title": [...]`
-`[.book]\n[##Subtitle]` → emits `"subtitle": [...]`
-
-```
-jsonKey: "title|multi(count=2, key=subtitle)|multi(count=3, key=section)"
-```
-
-Counts 1/2/3 → keys `title`/`subtitle`/`section`.
-
-**Validity**: the set of valid counts is `{1} ∪ {arm.count}`. Counts outside that set produce an `InvalidHeadingLevel` validator warning and the tag is dropped.
-
-**Codegen rejects** at build time:
-
-- duplicate `count=N` across arms,
-- `count=1` (level 1 is the default base key — express it as the bare path before the pipe),
-- `count=0`,
-- chaining `|multi(...)` with non-multi transforms.
-
-### `setMulti(field)`
-
-Like `set(k=v)` but the value comes from the lexer count rather than a literal. Emits the tag's value at the base key **and** a sibling field whose value is the count.
-
-```
-jsonKey: "title|setMulti(level)"
-```
-
-`[.chapter]\n[##My Chapter]` → emits `{ "title": [...], "level": 2 }` on the bit.
-
-Argument is a single bare field name — no `=`, no commas. Any count is valid (no `multi(...)` cap is implied; if a bound is needed, declare matching `|multi(...)` arms or add a future `|maxCount(N)` transform).
-
-The array form composes naturally: each `[#…]`/`[##…]`/etc. produces one `{ baseKey: …, field: count }` element appended to the base array.
-
-```
-jsonKey: "title[]|setMulti(level)"
-```
-
-`[#A]\n[##B]\n[###C]` → `"title": [{...,"level":1},{...,"level":2},{...,"level":3}]`.
-
-### `resource(type=t, key=k)`
-
-Resource-only transform. When a resource tag's value is serialized as a nested resource object, override the inner `"type"` field and the inner slot key. The outer key (the path on the left of `|`) is unaffected.
-
-Both arguments are optional and named. Defaults:
-
-- `type` — falls back to the resource's `res_type`
-- `key` — falls back to the tag's `jsonKey` path
-
-```
-jsonKey: "icon|resource(type=image, key=image)"
-```
-
-For chained `[&icon:url]` on a card term — the outer key remains `icon` (from the path), but the inner object reflects the underlying media:
+Canonical form: an **array** of rule objects, evaluated first-match-wins.
 
 ```json
-"icon": {
-  "type": "image",
-  "image": { "src": "url" }
-}
+[{ "@value=th": { "title": true, "$": "$" } }, { "@value=td": {} }]
 ```
 
-The transform is read only by the resource value serializer. On non-resource tags it has no effect.
+Each rule object:
 
----
+- has at most one outermost predicate key (whose value is the pattern), or
+- has no predicate keys (the entire object is an unconditional pattern;
+  conventionally this rule appears last as a fallback).
 
-## Context-Dependent jsonKey
+The predicate-keyed-object alternative
+(`{"@value=th": …, "@value=td": …}`) is rejected by the compiler.
 
-The same bitmark tag can have different `jsonKey` values depending on context. Tags are registered with unique IDs per context (group, card variant, chain position). The parser resolves which tag config to use based on the current parsing context.
+## 8. Behaviours expressed without sibling fields
 
-### Example: `[+]` and `[-]` tags
+Per PLAN-051 §3, no fields besides `jsonKey` may be added to or modified in
+`bitmark.json`. The behaviours that earlier drafts imagined as flags are
+re-homed:
 
-| Context                          | `[+]` jsonKey                    | `[-]` jsonKey                     | Behavior                           |
-| -------------------------------- | -------------------------------- | --------------------------------- | ---------------------------------- |
-| `group_trueFalse` (default/quiz) | `choices[]\|set(isCorrect=true)` | `choices[]\|set(isCorrect=false)` | Creates choice array elements      |
-| `statements` card set            | `statement\|set(isCorrect=true)` | `statement\|set(isCorrect=false)` | Content → statement, sets boolean  |
-| `ingredients` card set           | `ingredient\|set(checked=true)`  | `ingredient\|set(checked=false)`  | Content → ingredient, sets boolean |
+| Behaviour                                                   | Where it lives now                                                                                                                                                                                                         |
+| ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sub-scope chain (`[@posterImage][@width]`)                  | Existing `parentTagIds` records the chain attachment. The serializer walks the parent tag's compiled pattern to locate the sub-object that chained children fill.                                                          |
+| Starter array (`[@mark][@color][@emphasis]`)                | Implicit from the introducer's pattern shape: an array at the leaf (`{"marks": [{"mark": "$"}]}`) means each occurrence appends a fresh entry.                                                                             |
+| Consume-at-scope (`[@isCaseSensitive]` at bit-header)       | `jsonKey: null` — the pattern itself signals "no JSON output."                                                                                                                                                             |
+| Cascade (bit-header `[@example]` broadcasts to descendants) | **Inferred at codegen.** Same tag name with `null` pattern at one scope and non-null pattern at descendant scope ⇒ cascade pair; codegen emits a static map; runtime reads the bit-header value as the descendant default. |
+| Bubble (`isExample` propagating up)                         | **Inline scope-shift writes** in the descendant rule: `{"@bit": {"isExample": true}, "@card": {"isExample": true}, "isExample": true, ...}`. Idempotent OR is the natural semantic.                                        |
+| Multi-input lex template (`[=word                           | mark:name]`)                                                                                                                                                                                                               | Lex templates already live in parser code. Pattern `$<name>` sigils refer to parser-known slots. Codegen validates against a hardcoded multi-input table. |
+| Parent-derived value (`$parent.<path>`)                     | Self-describing in the pattern.                                                                                                                                                                                            |
 
-### Example: `[_]` (gap) tag
+## 9. Compiler entry point
 
-| Context                   | jsonKey       | Behavior                                  |
-| ------------------------- | ------------- | ----------------------------------------- |
-| `group_gap` (top level)   | `solutions[]` | Tag content appended to `solutions` array |
-| `group_gap` (chain child) | `solutions[]` | Alternative solutions appended            |
+```rust
+use jsonkey_parser::compile_json_key;
+use serde_json::json;
 
-### Example: `[=]` (mark) tag
-
-| Context      | jsonKey    | Behavior                               |
-| ------------ | ---------- | -------------------------------------- |
-| `group_mark` | `solution` | Tag content written as solution string |
-
----
-
-## Complete Grammar (EBNF)
-
-```ebnf
-jsonKey      = transparent | [root_escape] key_path [transform_suffix]
-transparent  = "."
-root_escape  = "^"
-key_path     = segment ("." segment)*
-segment      = identifier [array_marker]
-identifier   = letter (letter | digit | "_")*
-array_marker = "[]" | "[{s}]" | "[{v}]"
-transform_suffix = "|" transform
-transform_suffix = "|" transform ("|" "multi(" multi_args ")")*
-transform    = bool_transform | set_transform | resource_transform
-              | multi_transform | set_multi_transform
-bool_transform  = "bool(" literal ")"
-set_transform   = "set(" identifier "=" literal ")"
-resource_transform = "resource(" [resource_args] ")"
-resource_args   = resource_arg ("," resource_arg)*
-resource_arg    = ("type" | "key") "=" literal
-multi_transform = "multi(" multi_args ")"
-multi_args   = "count=" integer "," "key=" identifier
-set_multi_transform = "setMulti(" identifier ")"
-literal      = ~[)|=,]+
-integer      = digit+
+let value = json!({ "alt": "$" });
+let compiled = compile_json_key(&value, "$.tags.42.jsonKey")?;
+assert_eq!(compiled.rules.len(), 1);
 ```
 
-Only `|multi(...)` is repeatable in a chain; mixing `|multi(...)` with other transforms is rejected at codegen time.
+The compiler accepts only the jsonKey JSON value. There are no schema-flag
+inputs.
 
----
+Phase-1 rejections (structural — see PLAN-051 §7.2):
 
-## Summary Table
+- two sibling `"$"` placeholders in one object,
+- predicate-keyed-object multi-rule form,
+- predicate keys at non-outermost positions,
+- mixed predicate / regular keys at the outermost rule level,
+- scope-shift nested inside another scope-shift,
+- adjacent sigils in a template key,
+- bare-sigil keys outside the whitelist (only `$s` and `$<name>` allowed),
+- `$parent` in a key position,
+- top-level non-`$`-prefixed strings (legacy),
+- duplicate predicates in a rule list.
 
-| Syntax                        | Purpose                                    | Example                                 |
-| ----------------------------- | ------------------------------------------ | --------------------------------------- |
-| `.`                           | Transparent (no separate key)              | `.`                                     |
-| `key`                         | Simple property                            | `instruction`                           |
-| `key.sub`                     | Nested object                              | `question.text`                         |
-| `key[]`                       | Array append                               | `values[]`                              |
-| `key[].sub`                   | Array of objects                           | `alternativeAnswers[].text`             |
-| `key[{s}]`                    | Side-indexed array                         | `cells[{s}].values[]`                   |
-| `^key`                        | Emit at bit root                           | `^heading.forKeys`                      |
-| `key\|bool(x)`                | Boolean if value matches                   | `title\|bool(th)`                       |
-| `key\|set(k=v)`               | Set fixed field on object                  | `statement\|set(isCorrect=true)`        |
-| `key[]\|set(k=v)`             | Array element with fixed field             | `choices[]\|set(isCorrect=true)`        |
-| `key\|multi(count=N, key=K)`  | Redirect to `K` when lexer count == N      | `title\|multi(count=2, key=subtitle)`   |
-| `key\|setMulti(field)`        | Set sibling `field` to lexer count         | `title\|setMulti(level)`                |
-| `key\|resource(type=t,key=k)` | Override inner type/slot for resource tags | `icon\|resource(type=image, key=image)` |
+Phase-3 rejections (require codegen + schema graph — implemented in `bitmark_codegen`):
+
+- `$parent.<path>` whose path can't be resolved against the parent's schema,
+- predicate value type mismatched with parent tag's `format`,
+- `$level` used without a paired `@level=N` predicate,
+- sibling rules whose forward outputs collide structurally,
+- `$<name>` not declared in the parser-side multi-input template table.
+
+## 10. Worked examples
+
+```json
+{ "alt": "$" }                                    // [@alt:foo] → { "alt": "foo" }
+{ "id": ["$"] }                                   // [@id:x][@id:y] → { "id": ["x","y"] }
+{ "@bit": { "heading": { "forKeys": "$" } } }     // match-side-0 → bit root
+{ "cells": { "$s": { "title": true, "body": "$" } } }
+{ "choices": [{ "choice": "$", "isCorrect": true }] }
+{ "resource": { "type": "image", "image": { "src": "$" } } }
+[
+  { "@level=1": { "title": "$" } },
+  { "@level=2": { "subtitle": "$" } }
+]
+[
+  { "@value=th": { "title": true } },
+  { "@value=td": {} }
+]
+{ "@bit": { "isExample": true }, "isExample": true, "example": "$parent.solutions[0]" }
+{ "marks": [{ "mark": "$" }] }                    // chain children fill `marks[i]`
+{ "posterImage": { "src": "$" } }                 // chained tags attach via existing parentTagIds
+null                                              // cascade pair detected at codegen
+```
+
+## 11. Full example set — bitmark token → jsonKey pattern
+
+For each row, the **left** column is the bitmark token; the **right** column
+is the jsonKey JSON pattern.
+
+### 11.1 Direct mapping & multiplicity
+
+```json
+@id              →  [ "$" ]
+@language        →  [ "$" ]                           // schema decides if many or single
+@width           →  { "width": "$" }                  // (or "$" alone if jsonKey of "width" set elsewhere)
+@alt             →  { "alt": "$" }
+@aiGenerated     →  { "aiGenerated": "$" }
+@duration        →  { "duration": "$" }
+[!text]          →  { "instruction": "$" }
+[?text]          →  { "hint": "$" }
+[▼anchor]        →  { "anchor": "$" }
+[$tag]  (alias)  →  { "tag": [ "$" ] }
+```
+
+### 11.2 Card-set containers
+
+```json
+flashcard card body          →  { "cards": [ "$" ] }
+                                // (variant rules below fill each entry)
+
+MCQ quiz body                →  { "quizzes": [ "$" ] }
+match pair body              →  { "pairs": [ "$" ] }
+table row                    →  { "table": { "data": [ "$" ] } }
+cloze-list item              →  { "listItems": [ "$" ] }
+feedback card                →  { "feedbacks": [ "$" ] }
+
+// `[+]` MCQ choice
+                             →  { "choices": [ { "choice": "$", "isCorrect": true } ] }
+// `[-]` MCQ choice
+                             →  { "choices": [ { "choice": "$", "isCorrect": false } ] }
+
+// true-false `[+]`
+                             →  { "statements": [ { "statement": "$", "isCorrect": true } ] }
+
+// table heading cell `[#]` in heading row
+                             →  { "cells": { "$s": { "title": true, "body": "$" } } }
+```
+
+### 11.3 Heading-card promotion
+
+```json
+match heading side 0   →  { "@bit": { "heading": { "forKeys": "$" } } }
+match heading side 1   →  { "@bit": { "heading": { "forValues": "$" } } }
+matrix heading sides   →  { "@bit": { "heading": { "forValues": [ "$" ] } } }
+table heading column   →  { "@bit": { "table": { "columns": [ "$" ] } } }
+```
+
+### 11.4 `[%]` four-slot positional (handled by chaining)
+
+`[%]` tags chain together; the parser tracks chain position and routes each
+occurrence to a separate schema entry, each with its own jsonKey. The schema
+has four entries for `[%]`, distinguished by chain position:
+
+```json
+[%]  chain pos 1   →  { "item":         "$" }
+[%]  chain pos 2   →  { "lead":         "$" }
+[%]  chain pos 3   →  { "pageNumber":   "$" }
+[%]  chain pos 4   →  { "marginNumber": "$" }
+```
+
+Empty `[%]` reserves a slot (handled by parser/schema, not jsonKey — schema
+flag `emptyReservesSlot: true` on the tag).
+
+### 11.5 `[►]` two-slot (handled by chaining)
+
+Same pattern as `[%]`: `[►ref][►end]` chains; parser routes each chain
+position to its own schema entry.
+
+```json
+[►]  chain pos 1   →  { "reference":    "$" }
+[►]  chain pos 2   →  { "referenceEnd": "$" }
+```
+
+### 11.6 `[#]` family (one tag, level-discriminated)
+
+The lexer emits one `TitleStart(level)` token for `[#x]`, `[##x]`, `[###x]`,
+… with `level` = number of hash characters. The schema has one tag entry
+with multiple rules, picked by `@level=N`:
+
+```json
+"jsonKey": [
+  { "@level=1": { "title":       "$" } },
+  { "@level=2": { "subtitle":    "$" } },
+  { "@level=3": { "subsubtitle": "$" } }
+]
+```
+
+Inside a heading-card context the same token routes elsewhere via the `@bit`
+scope shift (§11.3 `{"@bit": {"heading": …}}` etc.) — that discrimination is
+by _parent context_, handled by the parser giving the rule a different
+active scope, so it's a different schema entry rather than a predicate.
+
+### 11.7 Per-value (`[@tableCellType]`)
+
+```json
+@tableCellType   →  [
+                     { "@value=th": { "title": true } },
+                     { "@value=td": { } }
+                   ]
+```
+
+### 11.8 Resources
+
+```json
+[&image:url]                  →  { "resource": { "type": "image",
+                                                  "image":  { "src": "$" } } }
+[&image-link:url]             →  { "resource": { "type": "image-link",
+                                                  "imageLink": { "url": "$" } } }
+[&audio:url]                  →  { "resource": { "type": "audio",
+                                                  "audio":  { "src": "$" } } }
+[&app-link:url]               →  { "resource": { "type": "app-link",
+                                                  "appLink": { "url": "$" } } }
+[&coverImage:url]   (book)    →  { "coverImage":   { "type": "image",
+                                                      "image": { "src": "$" } } }
+[&backgroundWallpaper:url]    →  { "backgroundWallpaper":
+                                                    { "type": "image",
+                                                      "image": { "src": "$" } } }
+[&icon:url]   (on side)       →  { "icon":         { "type": "image",
+                                                      "image": { "src": "$" } } }
+
+@width  in resource scope     →  { "width":  "$" }
+@alt    in resource scope     →  { "alt":    "$" }
+@caption                      →  { "caption": [ "$" ] }
+@srcAlt                       →  { "srcAlt": [ "$" ] }
+@posterImage:url  (in video)  →  { "posterImage": { "src": "$" } }
+                                  // schema flag subscope:true on @posterImage
+                                  // so chained @width lands inside posterImage
+```
+
+### 11.9 Composite property objects (chain of property tags)
+
+```json
+@ratingLevelStart   →  { "ratingLevelStart": { "level": "$" } }
+                       // schema flag subscope:true; chained tags fill ratingLevelStart
+@label              →  { "label": "$" }      // active scope = ratingLevelStart
+
+@servings           →  { "servings": { "servings": "$" } }
+                       // schema flag subscope:true
+@unit               →  { "unit": "$" }       // active scope = servings
+@unitAbbr           →  { "unitAbbr": "$" }   // active scope = servings
+@hint               →  { "hint": "$" }       // active scope = servings
+```
+
+### 11.10 Starter-tag arrays (mark definitions)
+
+```json
+@mark               →  { "marks": [ { "mark": "$" } ] }
+                       // schema flag starter:true means each occurrence opens new entry
+@color              →  { "color": "$" }      // active scope = current marks[*] entry
+@emphasis           →  { "emphasis": "$" }
+
+// video-link thumbnails
+@src1x              →  { "videoLink": { "thumbnails": [
+                          { "src": "$" } ] } }   // schema flag starter:true
+@src2x              →  same as src1x — schema flag starter:true on each
+```
+
+### 11.11 Variants (flashcard `++`)
+
+```json
+flashcard side 1 variant 0    →  { "cards": [ { "question": { "text": "$" } } ] }
+flashcard side 2 variant 0    →  { "cards": [ { "answer":   { "text": "$" } } ] }
+flashcard side 2 variants 1+  →  { "cards": [ { "alternativeAnswers":
+                                                  [ { "text": "$" } ] } ] }
+```
+
+(Variant index → which schema rule is used. Schema metadata, not jsonKey
+logic.)
+
+### 11.12 Repeating-side bare values (table.data cells)
+
+```json
+table.data variant body       →  "$"
+                                  // bare placeholder = no key wrapper
+                                  // active scope = table.data[row][col]
+```
+
+### 11.13 Side-as-namespace
+
+```json
+match side 0 (key)            →  { "key":    "$" }
+match side 1 (values)         →  { "values": [ "$" ] }
+flashcard side 1 (question)   →  { "question": { "text": "$" } }
+flashcard side 2 (answer)     →  { "answer":   { "text": "$" } }
+match-matrix side i cells     →  { "cells": { "$s": { "values": [ "$" ] } } }
+```
+
+### 11.14 Multi-section card-set (table-extended)
+
+```json
+header section card           →  { "@bit": { "table": { "header": { "rows": [ "$" ] } } } }
+body   section card           →  { "@bit": { "table": { "body":   { "rows": [ "$" ] } } } }
+footer section card           →  { "@bit": { "table": { "footer": { "rows": [ "$" ] } } } }
+```
+
+### 11.15 Multi-side composite cards (feedback)
+
+```json
+choice side variant `[+]`     →  { "feedbacks": [ { "choices": [
+                                    { "choice": "$", "isCorrect": true,
+                                      "requireReason": true } ] } ] }
+                                  // requireReason value is itself a per-card flag,
+                                  // schema-driven from the presence of the reason side
+
+reason side primary           →  { "feedbacks": [ { "reason": { "text": "$" } } ] }
+reason side @reasonableNumOfChars
+                              →  { "reasonableNumOfChars": "$" }
+                                  // active scope = feedbacks[*].reason
+```
+
+### 11.16 Inline body nodes
+
+The pattern style works inside body too. The "active scope" for a body
+inline tag is the inline node attrs:
+
+```json
+[_solution]    (cloze gap)    →  { "solutions": [ "$" ] }
+[+text]   highlight-text body →  { "texts": [ { "text": "$",
+                                                 "isCorrect": true,
+                                                 "isHighlighted": false } ] }
+[+text]   cloze-mc-text body  →  { "options": [ { "text": "$",
+                                                   "isCorrect": true } ] }
+[=word|mark:name]  mark body  →  { "solution": "$word", "mark": "$name" }
+                                  // two named placeholders for the two sub-fields
+                                  // (see multi-input tags below)
+|image:url|  inline image     →  { "src": "$", "alt": null, "srcAlt": null,
+                                    "zoomDisabled": false }
+```
+
+### 11.17 Parser scope
+
+```json
+@internalComment  (bit-header)  →  { "@parser": { "internalComments": [ "$" ] } }
+```
+
+### 11.18 `[@example]`
+
+```json
+@example  (bare on gap)        →  { "isExample": true, "example": "$parent" }
+@example  (valued on gap)      →  { "isExample": true, "example": "$" }
+                                   // two rules, picked by presence of value
+@example  (bare on [+] choice) →  { "isExample": true, "example": "$parent" }
+                                   // $parent here = parent's isCorrect (bool)
+@example  (at bit-header)      →  { "isExample": true }
+                                   // schema flag cascade:true broadcasts to children
+```
+
+### 11.19 Cascade-only tags (`[@isCaseSensitive]` at bit-header)
+
+```json
+@isCaseSensitive  (at bit-header)  →  null
+                                       // schema flag cascade:true does the work
+@isCaseSensitive  (at gap)         →  { "isCaseSensitive": "$" }
+```
+
+### 11.20 Single-card flatten variants (`*-1`)
+
+The schema's per-bit-type entry simply uses a different jsonKey:
+
+```json
+multiple-choice    [+]   →  { "quizzes": [ { "choices": [ { "choice": "$",
+                                                              "isCorrect": true } ] } ] }
+multiple-choice-1  [+]   →  { "choices": [ { "choice": "$", "isCorrect": true } ] }
+
+true-false         [+]   →  { "statements": [ { "statement": "$",
+                                                  "isCorrect": true } ] }
+true-false-1       [+]   →  { "statement": "$", "isCorrect": true }
+                            // direct scalar at bit root
+```

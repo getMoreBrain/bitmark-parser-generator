@@ -7,7 +7,12 @@ import { Config } from '../config/Config.ts';
 import { BITS } from '../config/raw/bits.ts';
 import { CARDS } from '../config/raw/cardSets.ts';
 import { GROUPS } from '../config/raw/groups.ts';
-import type { _BitConfig, _GroupsConfig } from '../model/config/_Config.ts';
+import type {
+  _AbstractTagConfig,
+  _BitConfig,
+  _GroupsConfig,
+  ExportJsonKey,
+} from '../model/config/_Config.ts';
 import { typeFromConfigKey } from '../model/config/enum/ConfigKey.ts';
 import { BitTagConfigKeyType } from '../model/enum/BitTagConfigKeyType.ts';
 import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
@@ -99,100 +104,58 @@ class ConfigBuilder {
       BitTagConfigKeyType.unknown,
     ];
 
+    // Validator errors collected during tag processing — listed back to the user
+    // in heading-style paths matching JSONKEYMIGRATION.md.
+    const exportJsonKeyErrors: string[] = [];
+
     // Helper to resolve group references through squash map (handles chained squashing)
-    const resolveGroupReferences = (groupKey: string): string[] => {
+    type GroupRef = {
+      key: string;
+      jsonKey?: string;
+      exportJsonKey?: ExportJsonKey;
+      hasExportJsonKey?: boolean;
+      min?: number | string;
+      max?: number | string;
+      description?: string;
+    };
+    const resolveGroupReferences = (groupKey: string): GroupRef[] => {
       if (squashedGroups.has(groupKey)) {
         const replacements = squashedGroups.get(groupKey)!;
-        // Recursively resolve in case of chained squashing
-        return replacements.flatMap((r) => resolveGroupReferences(r));
+        // Recursively resolve in case of chained squashing.
+        // If a replacement itself is squashed, its own min/max/description are
+        // discarded (it's being replaced); otherwise keep them on the leaf ref.
+        return replacements.flatMap((r) =>
+          squashedGroups.has(r.key) ? resolveGroupReferences(r.key) : [r],
+        );
       }
-      return [groupKey];
+      return [{ key: groupKey }];
     };
 
-    const keyToJsonKey = (key: string, tagNameChain: string[]): string => {
-      let jsonKey = key;
-
-      if (key === '%') {
-        jsonKey = 'item';
-      } else if (key === '!') {
-        jsonKey = 'instruction';
-      } else if (key === '?') {
-        jsonKey = 'hint';
-      } else if (key === '#') {
-        jsonKey = 'title';
-      } else if (key === '##') {
-        jsonKey = 'subTitle';
-      } else if (key === '▼') {
-        jsonKey = 'anchor';
-      } else if (key === '►') {
-        jsonKey = 'reference';
-      } else if (key === '$') {
-        jsonKey = 'sampleSolution';
-        // } else if (key === '&') {
-        //   jsonKey = 'Resource';
-      } else if (key === '+') {
-        jsonKey = 'choices[]|set(isCorrect=true)';
-      } else if (key === '-') {
-        jsonKey = 'choices[]|set(isCorrect=false)';
-      } else if (key === '_') {
-        jsonKey = 'solutions[]';
-      } else if (key === '=') {
-        jsonKey = 'solution';
-      } else if (key.startsWith('@')) {
-        jsonKey = key.substring(1);
-      } else if (key.startsWith('&')) {
-        jsonKey = key.substring(1);
-      }
-
-      // if (jsonKey.startsWith('group_')) {
-      //   jsonKey = jsonKey.substring(6);
-      // }
-      // jsonKey = StringUtils.camelToKebab(jsonKey);
-
-      const thisChain = [...tagNameChain, jsonKey];
-      jsonKey = thisChain.join('.');
-
-      return jsonKey;
+    // Default-form bare key for property/resource entries: '@bookReferences' → 'bookReferences'.
+    // Symbol-mapped tags (#, +, -, _, =, %, ?, !, ▼, ►, $, ##) and dotted/transformed
+    // legacy jsonKeys are NOT default and require an explicit exportJsonKey.
+    const bareKeyForProperty = (key: string): string | undefined => {
+      if (key.startsWith('@') || key.startsWith('&')) return key.substring(1);
+      return undefined;
+    };
+    const legacyIsTrivialDefault = (tag: _AbstractTagConfig): boolean => {
+      const bare = bareKeyForProperty(tag.key as string);
+      if (bare == null) return false; // symbol-mapped, group, etc. — never trivial default
+      // No explicit jsonKey, or explicit jsonKey is exactly the bare name.
+      return tag.jsonKey == null || tag.jsonKey === bare;
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const processTagEntries = (tag: any, tagNameChain: string[]): any[] => {
+    const processTagEntries = (tag: any, pathStack: string[]): any[] => {
       const tags: unknown[] = [];
       let tagName = tag.key as string;
-      // Use explicit jsonKey from config if set, otherwise compute from tag name
-      const jsonKey = tag.jsonKey ?? keyToJsonKey(tagName, tagNameChain);
-      // if (tagName == '&image') debugger;
       const tagType = typeFromConfigKey(tag.key);
       let format = '';
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let chain: any = undefined;
+
       if (tagType === BitTagConfigKeyType.tag) {
-        // const resolvedTag = TAGS[tag.configKey];
-        // tagName = resolvedTag.tag;
         tagName = tag.key;
-        // if (tagName === '%') {
-        //   chain = {
-        //     key: '%',
-        //     format,
-        //     min: tag.minCount,
-        //     max: tag.maxCount,
-        //     description: 'Lead',
-        //     chain: {
-        //       key: '%',
-        //       format,
-        //       min: tag.minCount,
-        //       max: tag.maxCount,
-        //       description: 'Page number',
-        //       chain: {
-        //         key: '%',
-        //         format,
-        //         min: tag.minCount,
-        //         max: tag.maxCount,
-        //         description: 'Margin number',
-        //       },
-        //     },
-        //   };
-        // }
         if (tag.format === TagFormat.plainText) {
           format = 'string';
         } else if (tag.format === TagFormat.boolean) {
@@ -205,11 +168,7 @@ class ConfigBuilder {
           format = 'bitmark--';
         }
       } else if (tagType === BitTagConfigKeyType.property) {
-        // const resolvedProperty = PROPERTIES[tag.configKey];
-        // tagName = resolvedProperty.tag;
         tagName = tag.key;
-        // const property = resolvedProperty as PropertyTagConfig;
-        // format
         if (tag.format === TagFormat.plainText) {
           format = 'string';
         } else if (tag.format === TagFormat.boolean) {
@@ -224,17 +183,23 @@ class ConfigBuilder {
       } else if (tagType === BitTagConfigKeyType.group) {
         let k = tag.key as string;
         if (k.startsWith('group_')) k = k.substring(6);
-        k = /*'_' +*/ StringUtils.camelToKebab(k);
-        // Resolve group references through squash map
+        k = StringUtils.camelToKebab(k);
         const resolvedGroups = resolveGroupReferences(k);
-        for (const groupKey of resolvedGroups) {
+        for (const ref of resolvedGroups) {
+          // Outer tag's exportJsonKey/jsonKey/min/max/description override the squashed leaf's.
+          const hasOuterExport = Object.prototype.hasOwnProperty.call(tag, 'exportJsonKey');
+          const exportJsonKeyChosen = hasOuterExport ? tag.exportJsonKey : ref.exportJsonKey;
+          const hasExportChosen = hasOuterExport || !!ref.hasExportJsonKey;
+          const min = tag.minCount != null ? tag.minCount : ref.min;
+          const max = tag.maxCount != null ? tag.maxCount : ref.max;
+          const description = tag.description ? tag.description : ref.description;
           tags.push({
             type: 'group',
-            key: groupKey,
-            ...(tag.jsonKey ? { jsonKey: tag.jsonKey } : {}),
-            ...(tag.minCount != null ? { min: tag.minCount } : {}),
-            ...(tag.maxCount != null ? { max: tag.maxCount } : {}),
-            ...(tag.description ? { description: tag.description } : {}),
+            key: ref.key,
+            ...(hasExportChosen ? { jsonKey: exportJsonKeyChosen } : {}),
+            ...(min != null ? { min } : {}),
+            ...(max != null ? { max } : {}),
+            ...(description ? { description } : {}),
           });
         }
         return tags;
@@ -243,18 +208,34 @@ class ConfigBuilder {
       // Process chain
       if (Array.isArray(tag.chain) && tag.chain.length > 0) {
         const chainTags: unknown[] = [];
-        for (const [_tagKey, chainTag] of tag.chain.entries()) {
-          // Chained children are nested inside the parent in the config tree,
-          // so their jsonKey should be relative to the parent object (no chain prefix)
-          chainTags.push(...processTagEntries(chainTag, []));
+        const childPathStack = [...pathStack, `tags.${tag.key}`];
+        for (const [, chainTag] of tag.chain.entries()) {
+          chainTags.push(...processTagEntries(chainTag, childPathStack));
         }
         chain = chainTags;
+      }
+
+      // Determine the exportJsonKey field to emit (or omit) for this tag.
+      const hasExport = Object.prototype.hasOwnProperty.call(tag, 'exportJsonKey');
+      let exportJsonKeyField: { jsonKey: ExportJsonKey } | object;
+      if (hasExport) {
+        exportJsonKeyField = { jsonKey: tag.exportJsonKey as ExportJsonKey };
+      } else if (legacyIsTrivialDefault(tag)) {
+        exportJsonKeyField = {};
+      } else {
+        // Validator failure: legacy non-default jsonKey with no exportJsonKey.
+        const headingPath = [...pathStack, `tags.${tag.key}`].join(' / ');
+        exportJsonKeyErrors.push(
+          `Missing exportJsonKey for non-default jsonKey at ${headingPath}` +
+            (tag.jsonKey ? ` (legacy: \`${tag.jsonKey}\`)` : ` (symbol-mapped tag \`${tag.key}\`)`),
+        );
+        exportJsonKeyField = {};
       }
 
       const t = {
         type: 'tag',
         key: tagName,
-        jsonKey,
+        ...exportJsonKeyField,
         format,
         default: tag.defaultValue ?? null,
         ...(tag.nullable ? { nullable: true } : {}),
@@ -262,12 +243,31 @@ class ConfigBuilder {
         max: tag.maxCount == null ? 1 : tag.maxCount,
         description: tag.description ?? '',
         tags: chain,
-        // raw: {
-        //   ...tag,
-        // },
       };
       tags.push(t);
       return tags;
+    };
+
+    // For card-set / side / variant / section: emit `jsonKey: <exportJsonKey>` if
+    // explicit; otherwise omit. Validator-fail when a non-null legacy jsonKey
+    // exists without an exportJsonKey companion.
+    const cardJsonKeyField = (
+      container: { jsonKey?: string | null; exportJsonKey?: ExportJsonKey },
+      legacyKey: 'jsonKey' | 'sideJsonKey',
+      exportKey: 'exportJsonKey' | 'sideExportJsonKey',
+      pathHeading: string,
+    ): { jsonKey: ExportJsonKey } | object => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const c = container as any;
+      const hasExport = Object.prototype.hasOwnProperty.call(c, exportKey);
+      if (hasExport) return { jsonKey: c[exportKey] as ExportJsonKey };
+      const legacy = c[legacyKey];
+      if (legacy == null) return {}; // null or undefined → omit
+      // Non-null legacy with no exportJsonKey → validator failure
+      exportJsonKeyErrors.push(
+        `Missing exportJsonKey for non-default jsonKey at ${pathHeading} (legacy: \`${legacy}\`)`,
+      );
+      return {};
     };
 
     const serializeCardSet = (
@@ -278,11 +278,11 @@ class ConfigBuilder {
           cards: {
             name: string;
             isDefault?: boolean;
-            jsonKey?: string | null;
+            jsonKey?: ExportJsonKey;
             sides: {
               name: string;
               repeat?: boolean;
-              jsonKey?: string | null;
+              jsonKey?: ExportJsonKey;
               variants: unknown[];
             }[];
           }[];
@@ -294,8 +294,10 @@ class ConfigBuilder {
       if (!cardSetConfig) return undefined;
       const normalizedKey = normalizeCardKey(cardSetKey);
 
-      const sides = cardSetConfig.sides.map((side) => {
-        const variants = side.variants.map((variant) => {
+      const sides = cardSetConfig.sides.map((side, sideIdx) => {
+        const sidePath = `cardSets.${normalizedKey} / sides.${side.name ?? `[${sideIdx}]`}`;
+        const variants = side.variants.map((variant, variantIdx) => {
+          const variantPath = `${sidePath} / variants.[${variantIdx}]`;
           const variantTags: unknown[] = [];
           const variantTagEntries = Object.entries(variant.tags ?? []).sort((a, b) => {
             const tagA = a[1];
@@ -308,11 +310,11 @@ class ConfigBuilder {
           });
 
           for (const [, variantTag] of variantTagEntries) {
-            variantTags.push(...processTagEntries(variantTag, []));
+            variantTags.push(...processTagEntries(variantTag, [variantPath]));
           }
 
           return {
-            jsonKey: variant.jsonKey ?? null,
+            ...cardJsonKeyField(variant, 'jsonKey', 'exportJsonKey', variantPath),
             format: variantBodyFormat(variant),
             tags: variantTags,
             repeatCount: variant.repeatCount ?? 1,
@@ -324,7 +326,7 @@ class ConfigBuilder {
         return {
           name: side.name,
           ...(side.repeat ? { repeat: side.repeat } : {}),
-          ...(side.jsonKey != null ? { jsonKey: side.jsonKey } : {}),
+          ...cardJsonKeyField(side, 'jsonKey', 'exportJsonKey', sidePath),
           variants,
         };
       });
@@ -332,30 +334,25 @@ class ConfigBuilder {
       // When sections exist, each section becomes its own card entry
       if (cardSetConfig.sections) {
         const cards = Object.entries(cardSetConfig.sections).map(([sectionName, section]) => {
-          let cardSides = section.sideJsonKey
-            ? sides.map((s) => ({ ...s, jsonKey: section.sideJsonKey }))
-            : sides;
-
-          // HACK: table-extended — in non-header sections, rewrite the '#' title tag jsonKey
-          // so it targets header rows via root escape instead of being transparent.
-          if (normalizedKey === 'table-extended' && sectionName !== 'table-header') {
-            cardSides = JSON.parse(JSON.stringify(cardSides));
-            for (const side of cardSides) {
-              for (const variant of side.variants) {
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                for (const tag of variant.tags as any[]) {
-                  if (tag.type === 'tag' && tag.key === '#' && tag.jsonKey === '.') {
-                    tag.jsonKey = '^table.header.rows.cells[{s}].content';
-                  }
-                }
-              }
-            }
+          const sectionPath = `cardSets.${normalizedKey} / cards.${sectionName}`;
+          // Per-section override of the side jsonKey (when section.sideExportJsonKey or
+          // legacy section.sideJsonKey is set).
+          const hasSideExport = Object.prototype.hasOwnProperty.call(section, 'sideExportJsonKey');
+          let cardSides = sides;
+          if (hasSideExport || section.sideJsonKey != null) {
+            const sideOverride = cardJsonKeyField(
+              section,
+              'sideJsonKey',
+              'sideExportJsonKey',
+              `${sectionPath} / sides.*`,
+            );
+            cardSides = sides.map((s) => ({ ...s, ...sideOverride }));
           }
 
           return {
             name: sectionName,
             ...(section.isDefault ? { isDefault: true } : {}),
-            jsonKey: section.jsonKey,
+            ...cardJsonKeyField(section, 'jsonKey', 'exportJsonKey', sectionPath),
             sides: cardSides,
           };
         });
@@ -364,13 +361,14 @@ class ConfigBuilder {
       }
 
       // Single card
+      const cardSetPath = `cardSets.${normalizedKey} / cards.default`;
       return {
         name: normalizedKey,
         cards: [
           {
             name: 'default',
             isDefault: true,
-            jsonKey: cardSetConfig.jsonKey,
+            ...cardJsonKeyField(cardSetConfig, 'jsonKey', 'exportJsonKey', cardSetPath),
             sides,
           },
         ],
@@ -393,8 +391,8 @@ class ConfigBuilder {
     }
 
     // Calculate which bit-groups should be squashed (only contain group references, no actual tags)
-    // Maps: groupKey -> array of replacement group keys
-    const squashedGroups: Map<string, string[]> = new Map();
+    // Maps: groupKey -> array of replacement group refs (with min/max/description preserved)
+    const squashedGroups: Map<string, GroupRef[]> = new Map();
 
     for (const b of bitGroupConfigs) {
       const groupKey = `group-${b.bitType}`;
@@ -410,15 +408,31 @@ class ConfigBuilder {
       const allAreGroups = processedTags.every((t: any) => t.type === 'group');
 
       if (allAreGroups && processedTags.length > 0) {
-        // This group should be squashed - collect all its group references
-        const replacements: string[] = [];
+        // This group should be squashed - collect all its group references,
+        // preserving min/max/description from each occurrence so they survive
+        // the squash and reach the final emitted bit config.
+        const replacements: GroupRef[] = [];
         if (b.baseBitType) {
           // Note: We'll resolve this later through resolveGroupReferences recursion
-          replacements.push(`group-${b.baseBitType}`);
+          replacements.push({ key: `group-${b.baseBitType}` });
         }
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         for (const t of processedTags as any[]) {
-          replacements.push(t.key);
+          // The processed group tag carries `jsonKey` (already an exportJsonKey
+          // value at this point). Preserve presence semantics: if the field is
+          // present on the processed tag, mark hasExportJsonKey so a downstream
+          // resolveGroupReferences emits the same value.
+          const ref: GroupRef = {
+            key: t.key,
+            ...(t.min != null ? { min: t.min } : {}),
+            ...(t.max != null ? { max: t.max } : {}),
+            ...(t.description ? { description: t.description } : {}),
+          };
+          if (Object.prototype.hasOwnProperty.call(t, 'jsonKey')) {
+            ref.exportJsonKey = t.jsonKey as ExportJsonKey;
+            ref.hasExportJsonKey = true;
+          }
+          replacements.push(ref);
         }
         squashedGroups.set(groupKey, replacements);
       }
@@ -444,20 +458,28 @@ class ConfigBuilder {
         // This bit is inherited from, so its tags are in group-<bitType>
         // The bit config only references its own group (resolved through squash map)
         const resolvedGroups = resolveGroupReferences(`group-${b.bitType}`);
-        for (const groupKey of resolvedGroups) {
+        for (const ref of resolvedGroups) {
           tags.push({
             type: 'group',
-            key: groupKey,
+            key: ref.key,
+            ...(ref.hasExportJsonKey ? { jsonKey: ref.exportJsonKey } : {}),
+            ...(ref.min != null ? { min: ref.min } : {}),
+            ...(ref.max != null ? { max: ref.max } : {}),
+            ...(ref.description ? { description: ref.description } : {}),
           });
         }
       } else {
         // This is a leaf bit - include parent group reference + own tags
         if (b.baseBitType) {
           const resolvedGroups = resolveGroupReferences(`group-${b.baseBitType}`);
-          for (const groupKey of resolvedGroups) {
+          for (const ref of resolvedGroups) {
             tags.push({
               type: 'group',
-              key: groupKey,
+              key: ref.key,
+              ...(ref.jsonKey ? { jsonKey: ref.jsonKey } : {}),
+              ...(ref.min != null ? { min: ref.min } : {}),
+              ...(ref.max != null ? { max: ref.max } : {}),
+              ...(ref.description ? { description: ref.description } : {}),
             });
           }
         }
@@ -605,10 +627,14 @@ class ConfigBuilder {
         // Add reference to parent group if this bit has a baseBitType (resolved through squash map)
         if (b.baseBitType) {
           const resolvedGroups = resolveGroupReferences(`group-${b.baseBitType}`);
-          for (const gk of resolvedGroups) {
+          for (const ref of resolvedGroups) {
             tags.push({
               type: 'group',
-              key: gk,
+              key: ref.key,
+              ...(ref.jsonKey ? { jsonKey: ref.jsonKey } : {}),
+              ...(ref.min != null ? { min: ref.min } : {}),
+              ...(ref.max != null ? { max: ref.max } : {}),
+              ...(ref.description ? { description: ref.description } : {}),
             });
           }
         }
@@ -650,6 +676,18 @@ class ConfigBuilder {
     writeBitsAsGroupConfigs(bitGroupConfigs);
 
     writeCardConfigs();
+
+    // Fail fast on missing exportJsonKey before any file write — this is a
+    // source-config error and the on-disk output would be wrong.
+    if (exportJsonKeyErrors.length > 0) {
+      console.error('\n⚠️  exportJsonKey validation errors:');
+      for (const e of exportJsonKeyErrors) console.error(`  - ${e}`);
+      throw new Error(
+        `exportJsonKey validation failed: ${exportJsonKeyErrors.length} entr${
+          exportJsonKeyErrors.length === 1 ? 'y' : 'ies'
+        } with non-default jsonKey but no exportJsonKey companion.`,
+      );
+    }
 
     // Wait for all async file writes to complete, then validate
     Promise.all(fileWrites)
