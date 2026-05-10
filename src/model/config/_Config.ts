@@ -3,6 +3,21 @@
  *
  */
 import { type BitTypeType } from '../enum/BitType.ts';
+
+/**
+ * JSON-pattern value for the new (export) jsonKey form. See specs/JSONKEY_SYNTAX.md.
+ *
+ * Stored verbatim in the raw configs and emitted under the field name `jsonKey`
+ * when writing assets/config/**\/*.jsonc. Pattern-language validation (sigils,
+ * scope-shifts, predicates) lives in the new parser's compiler, not here.
+ */
+export type ExportJsonKey =
+  | null
+  | boolean
+  | number
+  | string
+  | ExportJsonKey[]
+  | { [k: string]: ExportJsonKey };
 import { type CountType } from '../enum/Count.ts';
 import { type ExampleTypeType } from '../enum/ExampleType.ts';
 import { type TagType } from '../enum/Tag.ts';
@@ -95,7 +110,8 @@ export interface _PropertyConfig {
   format?: TagFormatType; // How the property is formatted
   values?: string[]; // If the format is an enumeration, the possible values of the property
   defaultValue?: string; // The default value of the property - this value can be omitted from the markup
-  jsonKey?: string; // If the json key is different from the tag
+  jsonKey?: string; // If the json key is different from the tag (legacy mini-language)
+  exportJsonKey?: ExportJsonKey; // New JSON-pattern form (see specs/JSONKEY_SYNTAX.md). Omit when default.
 }
 
 export interface _ResourcesConfig {
@@ -107,7 +123,8 @@ export interface _ResourceConfig {
   name?: string; // Will default to the configKey minus prefix if not provided
   description: string;
   deprecated?: string; // Deprecated version
-  jsonKey?: string; // If the json key is different from the tag
+  jsonKey?: string; // If the json key is different from the tag (legacy mini-language)
+  exportJsonKey?: ExportJsonKey; // New JSON-pattern form. Omit when default.
 }
 
 /**
@@ -124,7 +141,8 @@ export interface _AbstractTagConfig {
   values?: string[]; // If the format is an enumeration, the possible values of the property
   defaultValue?: string; // The default value of the tag if omitted from the markup
   nullable?: boolean; // If true, the tag's value is null when absent (not the type's zero value)
-  jsonKey?: string; // If the json key is different from the tag
+  jsonKey?: string; // If the json key is different from the tag (legacy mini-language)
+  exportJsonKey?: ExportJsonKey; // New JSON-pattern form (specs/JSONKEY_SYNTAX.md). Omit when default.
   chain?: _AbstractTagConfig[];
 }
 
@@ -134,8 +152,18 @@ export interface _CardSetsConfig {
 
 export interface _CardSetConfig {
   // JSON mapping properties
-  jsonKey: string | null; // e.g. 'cards', 'pairs', null
-  sections?: Record<string, { jsonKey: string; isDefault?: boolean; sideJsonKey?: string }>; // Qualified card divider mappings
+  jsonKey: string | null; // e.g. 'cards', 'pairs', null (legacy mini-language)
+  exportJsonKey?: ExportJsonKey; // New JSON-pattern form. Omit when default/null.
+  sections?: Record<
+    string,
+    {
+      jsonKey: string;
+      exportJsonKey?: ExportJsonKey;
+      isDefault?: boolean;
+      sideJsonKey?: string;
+      sideExportJsonKey?: ExportJsonKey;
+    }
+  >; // Qualified card divider mappings
 
   // Card sides (was: variants: _CardVariantConfig[][])
   sides: _CardSideConfig[];
@@ -144,7 +172,8 @@ export interface _CardSetConfig {
 export interface _CardSideConfig {
   name: string; // e.g. 'question', 'key', 'cell'
   repeat?: boolean; // Side repeats for remaining -- dividers
-  jsonKey?: string | null; // JSON path for side container (e.g. 'cells[{s}]')
+  jsonKey?: string | null; // JSON path for side container (e.g. 'cells[{s}]') (legacy)
+  exportJsonKey?: ExportJsonKey; // New JSON-pattern form. Omit when default/null.
   variants: _CardVariantConfig[];
 }
 
@@ -155,6 +184,7 @@ export interface _CardVariantConfig {
   bodyRequired?: boolean; // Default: false
   repeatCount?: CountType; // Default: 1
   // JSON mapping fields
-  jsonKey?: string | null; // JSON path for body text
+  jsonKey?: string | null; // JSON path for body text (legacy)
+  exportJsonKey?: ExportJsonKey; // New JSON-pattern form. Omit when default/null.
   format?: TextFormatType; // Body text format. Default: bitmark++
 }

@@ -42,6 +42,7 @@ const BITS: _BitsConfig = {
         description: 'Common tags for quiz bits',
       },
       {
+        exportJsonKey: { title: '$' },
         key: ConfigKey.tag_title,
         description: 'The title of the flashcard quiz',
       },
@@ -131,6 +132,7 @@ const BITS: _BitsConfig = {
     description: 'Article bit, used for articles / paragraphs',
     tags: [
       {
+        exportJsonKey: { title: '$' },
         key: ConfigKey.tag_title,
         description: 'The title of the article',
       },
@@ -240,6 +242,7 @@ const BITS: _BitsConfig = {
         description: 'Title and subtitle of the catalog item',
         maxCount: 2,
         jsonKey: 'title|multi(count=2, key=subtitle)',
+        exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
       },
       {
         key: ConfigKey.property_coverImage,
@@ -249,6 +252,7 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.resource_coverImage,
         jsonKey: 'coverImage|resource(type=image, key=image)',
+        exportJsonKey: { coverImage: { type: 'image', image: { src: '$' } } },
         description: 'Cover image of the catalog item',
         chain: [
           {
@@ -391,6 +395,7 @@ const BITS: _BitsConfig = {
         description: 'Title and subtitle of the catalog item',
         maxCount: 2,
         jsonKey: 'title|multi(count=2, key=subtitle)',
+        exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
       },
       {
         key: ConfigKey.property_coverImage,
@@ -400,6 +405,7 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.resource_coverImage,
         jsonKey: 'coverImage|resource(type=image, key=image)',
+        exportJsonKey: { coverImage: { type: 'image', image: { src: '$' } } },
         description: 'Cover image of the catalog item',
         chain: [
           {
@@ -542,6 +548,7 @@ const BITS: _BitsConfig = {
         description: 'Title and subtitle of the catalog item',
         maxCount: 2,
         jsonKey: 'title|multi(count=2, key=subtitle)',
+        exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
       },
       {
         key: ConfigKey.property_coverImage,
@@ -868,11 +875,13 @@ const BITS: _BitsConfig = {
     description: 'Bit alias, used to create an alias for a bit',
     tags: [
       {
+        exportJsonKey: { reference: '$' },
         key: ConfigKey.tag_reference,
         format: TagFormat.plainText,
         description: 'The reference to the bit that this alias points to',
       },
       {
+        exportJsonKey: { anchor: '$' },
         key: ConfigKey.tag_anchor,
         format: TagFormat.plainText,
         description: 'The anchor for the bit alias, used for linking',
@@ -1074,6 +1083,7 @@ const BITS: _BitsConfig = {
         description: 'The title of the book cover',
         maxCount: 2, // title & subtitle
         jsonKey: 'title|multi(count=2, key=subtitle)',
+        exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
       },
       {
         key: ConfigKey.property_coverColor,
@@ -1218,6 +1228,7 @@ const BITS: _BitsConfig = {
     description: 'Chapter bit, used to define chapters in books or articles',
     tags: [
       {
+        exportJsonKey: { anchor: '$' },
         key: ConfigKey.tag_anchor,
         format: TagFormat.plainText,
         description: 'The anchor for the chapter, used for linking',
@@ -1226,6 +1237,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.tag_title,
         description: 'The title of the chapter',
         jsonKey: 'title|setMulti(level)',
+        exportJsonKey: { title: '$', level: '$level' },
       },
       {
         key: ConfigKey.property_toc,
@@ -1754,6 +1766,7 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.property_servings,
         jsonKey: 'servings.servings',
+        exportJsonKey: { servings: { servings: '$' } },
         description: 'The number of servings for the ingredients',
         format: TagFormat.number,
         chain: [
@@ -1779,6 +1792,7 @@ const BITS: _BitsConfig = {
             format: TagFormat.boolean,
           },
           {
+            exportJsonKey: { hint: '$' },
             key: ConfigKey.tag_hint,
             description: 'Hint for the ingredient, used to provide additional information',
             format: TagFormat.plainText,
@@ -1982,6 +1996,7 @@ const BITS: _BitsConfig = {
     description: 'Example bit, used to provide examples in articles or books',
     tags: [
       {
+        exportJsonKey: { title: '$' },
         key: ConfigKey.tag_title,
         description: 'The title of the example',
       },
@@ -3104,6 +3119,7 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
         chain: [
           {
+            exportJsonKey: { reference: '$' },
             key: ConfigKey.tag_reference,
             format: TagFormat.plainText,
             description: 'Reference tag for the book, used to link to the book in the system',
@@ -3113,6 +3129,7 @@ const BITS: _BitsConfig = {
       },
       {
         /* Allow incorrectly chained reference tag */
+        exportJsonKey: { reference: '$' },
         key: ConfigKey.tag_reference,
         format: TagFormat.plainText,
         description: 'Reference tag for the book, used to link to the book in the system',
@@ -3160,6 +3177,7 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
         chain: [
           {
+            exportJsonKey: { reference: '$' },
             key: ConfigKey.tag_reference,
             format: TagFormat.plainText,
             description: 'Reference tag for the book, used to link to the book in the system',
@@ -3169,6 +3187,7 @@ const BITS: _BitsConfig = {
       },
       {
         /* Allow incorrectly chained reference tag */
+        exportJsonKey: { reference: '$' },
         key: ConfigKey.tag_reference,
         format: TagFormat.plainText,
         description: 'Reference tag for the book, used to link to the book in the system',
@@ -3203,6 +3222,7 @@ const BITS: _BitsConfig = {
         maxCount: Count.infinity,
         chain: [
           {
+            exportJsonKey: { reference: '$' },
             key: ConfigKey.tag_reference,
             format: TagFormat.plainText,
             description: 'Reference tag for the book, used to link to the book in the system',
@@ -3766,6 +3786,7 @@ const BITS: _BitsConfig = {
     description: 'Internal link bit, used to create links to other bits in articles or books',
     tags: [
       {
+        exportJsonKey: { reference: '$' },
         key: ConfigKey.tag_reference,
         format: TagFormat.plainText,
         description: 'Reference tag for the internal link, used to link to the target bit',
@@ -4375,6 +4396,7 @@ const BITS: _BitsConfig = {
     description: 'Page bit, used to create pages in articles or books',
     tags: [
       {
+        exportJsonKey: { title: '$' },
         key: ConfigKey.tag_title,
         description: 'Title of the page, used to display the page title',
       },
@@ -4739,6 +4761,7 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.resource_platformBackgroundImage,
         jsonKey: 'platformBackgroundImage|resource(type=image, key=image)',
+        exportJsonKey: { platformBackgroundImage: { type: 'image', image: { src: '$' } } },
         description: 'The platform section chat background image',
         chain: [
           {
@@ -4833,6 +4856,7 @@ const BITS: _BitsConfig = {
     description: 'Review note bit, used to create review notes in articles or books',
     tags: [
       {
+        exportJsonKey: { title: '$' },
         key: ConfigKey.tag_title,
         description: 'Title of the review note, used to display the note title',
       },
@@ -4905,11 +4929,13 @@ const BITS: _BitsConfig = {
     tags: [
       // Not sure if these are actually valid here, but include them as they are in the test bit.
       {
+        exportJsonKey: { anchor: '$' },
         key: ConfigKey.tag_anchor,
         format: TagFormat.plainText,
         description: 'Anchor for the sample solution, used to link to the solution',
       },
       {
+        exportJsonKey: { reference: '$' },
         key: ConfigKey.tag_reference,
         format: TagFormat.plainText,
         description:
@@ -5042,6 +5068,7 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.property_ratingLevelStart,
         jsonKey: 'ratingLevelStart.level',
+        exportJsonKey: { ratingLevelStart: { level: '$' } },
         description: 'Start level for the rating survey, used to define the lowest rating',
         format: TagFormat.number,
         chain: [
@@ -5056,6 +5083,7 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.property_ratingLevelEnd,
         jsonKey: 'ratingLevelEnd.level',
+        exportJsonKey: { ratingLevelEnd: { level: '$' } },
         description: 'End level for the rating survey, used to define the highest rating',
         format: TagFormat.number,
         chain: [
@@ -5629,10 +5657,12 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
+        exportJsonKey: { choices: [{ choice: '$', isCorrect: true }] },
         key: ConfigKey.tag_true,
         description: 'Tag for the true option in the true/false question',
       },
       {
+        exportJsonKey: { choices: [{ choice: '$', isCorrect: false }] },
         key: ConfigKey.tag_false,
         description: 'Tag for the false option in the true/false question',
       },

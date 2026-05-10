@@ -1,6 +1,7 @@
 import { BitTagConfigKeyType, type BitTagConfigKeyTypeType } from '../enum/BitTagConfigKeyType.ts';
 import { type CountType } from '../enum/Count.ts';
 import { type TagType } from '../enum/Tag.ts';
+import { type ExportJsonKey } from './_Config.ts';
 import { AbstractTagConfig } from './AbstractTagConfig.ts';
 import type { ConfigKeyType } from './enum/ConfigKey.ts';
 import { type TagsConfig } from './TagsConfig.ts';
@@ -19,15 +20,15 @@ class MarkupTagConfig extends AbstractTagConfig {
     maxCount: CountType;
     minCount: number;
     chain: TagsConfig | undefined;
+    jsonKey: string | undefined;
+    exportJsonKey: ExportJsonKey | undefined;
+    hasExportJsonKey: boolean;
     deprecated: string | undefined;
   }) {
     super({
       type: BitTagConfigKeyType.tag,
-      jsonKey: undefined,
       ...params,
     });
-
-    // TODO
   }
 
   public toString(options?: ToStringOptions): string {

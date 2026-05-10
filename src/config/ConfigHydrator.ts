@@ -1,7 +1,7 @@
 import { Enum } from '@ncoderz/superenum';
 
 import { type _AbstractTagConfig, type _CardVariantConfig } from '../model/config/_Config.ts';
-import { CardSetConfig } from '../model/config/CardSetConfig.ts';
+import { CardSetConfig, type CardSetSection } from '../model/config/CardSetConfig.ts';
 import { CardSideConfig } from '../model/config/CardSideConfig.ts';
 import { CardVariantConfig } from '../model/config/CardVariantConfig.ts';
 import { type CardSetConfigKeyType } from '../model/config/enum/CardSetConfigKey.ts';
@@ -83,6 +83,8 @@ class ConfigHydrator {
         _side.repeat ?? false,
         variantsOfSide,
         _side.jsonKey,
+        _side.exportJsonKey,
+        Object.prototype.hasOwnProperty.call(_side, 'exportJsonKey'),
       );
       sides.push(sideConfig);
     }
@@ -90,15 +92,44 @@ class ConfigHydrator {
     const cardSetConfig = new CardSetConfig(
       _cardSet,
       _cardSetConfig.jsonKey,
-      _cardSetConfig.sections,
+      _cardSetConfig.exportJsonKey,
+      Object.prototype.hasOwnProperty.call(_cardSetConfig, 'exportJsonKey'),
+      this.hydrateCardSections(_cardSetConfig.sections),
       sides,
     );
 
     return cardSetConfig;
   }
 
+  private hydrateCardSections(
+    sections: NonNullable<(typeof CARDS)[string]['sections']> | undefined,
+  ): Record<string, CardSetSection> | undefined {
+    if (!sections) return undefined;
+    const out: Record<string, CardSetSection> = {};
+    for (const [k, v] of Object.entries(sections)) {
+      out[k] = {
+        jsonKey: v.jsonKey,
+        exportJsonKey: v.exportJsonKey,
+        hasExportJsonKey: Object.prototype.hasOwnProperty.call(v, 'exportJsonKey'),
+        isDefault: v.isDefault,
+        sideJsonKey: v.sideJsonKey,
+        sideExportJsonKey: v.sideExportJsonKey,
+        hasSideExportJsonKey: Object.prototype.hasOwnProperty.call(v, 'sideExportJsonKey'),
+      };
+    }
+    return out;
+  }
+
   private hydrateTagConfig(_tag: _AbstractTagConfig): TagsConfigWithInfo {
-    const { key: _configKey, maxCount, minCount, chain: _chain, deprecated } = _tag;
+    const {
+      key: _configKey,
+      maxCount,
+      minCount,
+      chain: _chain,
+      deprecated,
+      jsonKey,
+      exportJsonKey,
+    } = _tag;
     const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No tag key found for config key '${configKey}'`);
     const tag = Enum(Tag).fromValue(configKey);
@@ -116,6 +147,9 @@ class ConfigHydrator {
       maxCount: maxCount ?? MAX_COUNT_DEFAULT,
       minCount: minCount ?? MIN_COUNT_DEFAULT,
       chain,
+      jsonKey,
+      exportJsonKey,
+      hasExportJsonKey: Object.prototype.hasOwnProperty.call(_tag, 'exportJsonKey'),
       deprecated,
     });
 
@@ -137,6 +171,7 @@ class ConfigHydrator {
       values,
       defaultValue,
       jsonKey,
+      exportJsonKey,
     } = _tag;
     const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No property key found for config key '${configKey}'`);
@@ -155,6 +190,8 @@ class ConfigHydrator {
       minCount: minCount ?? MIN_COUNT_DEFAULT,
       chain,
       jsonKey,
+      exportJsonKey,
+      hasExportJsonKey: Object.prototype.hasOwnProperty.call(_tag, 'exportJsonKey'),
       format,
       values,
       defaultValue,
@@ -169,7 +206,15 @@ class ConfigHydrator {
   }
 
   private hydrateResourceTagConfig(_tag: _AbstractTagConfig): TagsConfigWithInfo {
-    const { key: _configKey, maxCount, minCount, chain: _chain, deprecated, jsonKey } = _tag;
+    const {
+      key: _configKey,
+      maxCount,
+      minCount,
+      chain: _chain,
+      deprecated,
+      jsonKey,
+      exportJsonKey,
+    } = _tag;
     const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No resource key found for config key '${configKey}'`);
     const tag = _configKey.substring(1); // Remove the '&' prefix from the config key
@@ -187,6 +232,8 @@ class ConfigHydrator {
       minCount: minCount ?? MIN_COUNT_DEFAULT,
       chain,
       jsonKey,
+      exportJsonKey,
+      hasExportJsonKey: Object.prototype.hasOwnProperty.call(_tag, 'exportJsonKey'),
       deprecated,
     });
 
@@ -226,7 +273,15 @@ class ConfigHydrator {
   }
 
   private hydrateCardVariantConfig(_variant: _CardVariantConfig): CardVariantConfig {
-    const { tags: _tags, bodyAllowed, bodyRequired, repeatCount, jsonKey, format } = _variant;
+    const {
+      tags: _tags,
+      bodyAllowed,
+      bodyRequired,
+      repeatCount,
+      jsonKey,
+      exportJsonKey,
+      format,
+    } = _variant;
 
     const tags = this.hydrateTagsConfig(_tags);
 
@@ -236,6 +291,8 @@ class ConfigHydrator {
       bodyRequired,
       repeatCount,
       jsonKey,
+      exportJsonKey,
+      Object.prototype.hasOwnProperty.call(_variant, 'exportJsonKey'),
       format,
     );
 

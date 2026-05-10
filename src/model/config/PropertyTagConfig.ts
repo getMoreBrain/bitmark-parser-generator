@@ -1,6 +1,7 @@
 import { BitTagConfigKeyType, type BitTagConfigKeyTypeType } from '../enum/BitTagConfigKeyType.ts';
 import { Count, type CountType } from '../enum/Count.ts';
 import { type TagFormatType } from '../enum/TagFormat.ts';
+import { type ExportJsonKey } from './_Config.ts';
 import { AbstractTagConfig } from './AbstractTagConfig.ts';
 import type { ConfigKeyType } from './enum/ConfigKey.ts';
 import { type TagsConfig } from './TagsConfig.ts';
@@ -25,6 +26,8 @@ class PropertyTagConfig extends AbstractTagConfig {
     minCount: number;
     chain: TagsConfig | undefined;
     jsonKey: string | undefined;
+    exportJsonKey: ExportJsonKey | undefined;
+    hasExportJsonKey: boolean;
     format: TagFormatType | undefined;
     values: string[] | undefined;
     defaultValue: string | undefined;
