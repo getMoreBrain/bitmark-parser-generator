@@ -21,7 +21,7 @@ export { InfoFormat } from './model/info/enum/InfoFormat.ts';
 export { InfoType } from './model/info/enum/InfoType.ts';
 export { BitmarkParser } from './parser/bitmark/BitmarkParser.ts';
 export { JsonParser } from './parser/json/JsonParser.ts';
-export { BoundingBox } from './utils/BoundingBox.ts';
+export { BoundingBoxIndex } from './utils/BoundingBox.ts';
 
 //
 // Direct text parser export
@@ -229,7 +229,7 @@ export type {
   WebsiteLinkResourceJson,
   WebsiteLinkResourceWrapperJson,
 } from './model/json/ResourceJson.ts';
-export type { Bbox, BoundingBoxEntry } from './utils/BoundingBox.ts';
+export type { Bbox, BoundingBoxEntry, FromBitsOptions } from './utils/BoundingBox.ts';
 
 // Initialise the application
 init();

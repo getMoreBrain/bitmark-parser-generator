@@ -12,13 +12,17 @@ interface BoundingBoxEntry {
   boxes: Bbox[];
 }
 
-function isFiniteNumber(n: unknown): n is number {
-  return typeof n === 'number' && Number.isFinite(n);
+interface FromBitsOptions {
+  /**
+   * If provided, only include bits whose `bit.sourceRL` exactly equals this
+   * value. Bits with no `sourceRL` are excluded.
+   */
+  sourceRL?: string;
 }
 
 function toBbox(arr: unknown): Bbox | null {
   if (!Array.isArray(arr) || arr.length !== 4) return null;
-  if (!arr.every(isFiniteNumber)) return null;
+  if (!arr.every(Number.isFinite)) return null;
   return [arr[0], arr[1], arr[2], arr[3]];
 }
 
@@ -39,11 +43,11 @@ function parseSourceBB(sourceBB: BitJson['sourceBB']): Bbox[] {
   return out;
 }
 
-function aabbIntersects(a: Bbox, b: Bbox): boolean {
+function boundingBoxIntersects(a: Bbox, b: Bbox): boolean {
   return a[0] < b[2] && a[2] > b[0] && a[1] < b[3] && a[3] > b[1];
 }
 
-function aabbUnion(boxes: Bbox[]): Bbox | null {
+function boundingBoxUnion(boxes: Bbox[]): Bbox | null {
   if (boxes.length === 0) return null;
   let [x0, y0, x1, y1] = boxes[0];
   for (let i = 1; i < boxes.length; i++) {
@@ -57,12 +61,12 @@ function aabbUnion(boxes: Bbox[]): Bbox | null {
 }
 
 /**
- * Indexed view over a list of bits with `@sourceBB` tags, designed for live
- * region selection in a browser (e.g. the user drags a box and the preview
- * updates as they go). Each bit's `sourceBB` is parsed once at construction
- * so that intersection queries are pure AABB scans on the hot path.
+ * Index over a list of bits with `@sourceBB` tags, designed for live region
+ * selection in a browser (e.g. the user drags a box and the preview updates
+ * as they go). Each bit's `sourceBB` is parsed once at construction so that
+ * intersection queries are pure bounding-box scans on the hot path.
  */
-class BoundingBox {
+class BoundingBoxIndex {
   private readonly _entries: BoundingBoxEntry[];
   private readonly bitmarkParser = new BitmarkParserGenerator();
 
@@ -73,16 +77,23 @@ class BoundingBox {
   /**
    * Build an index from already-parsed bits. Bits without a parseable
    * `sourceBB` are dropped. Order of the input is preserved.
+   *
+   * Pass `options.sourceRL` to scope the index to a single source page —
+   * bits whose `sourceRL` doesn't match (or is absent) are excluded.
    */
-  static fromBits(wrappers: BitWrapperJson[]): BoundingBox {
+  static fromBits(wrappers: BitWrapperJson[], options?: FromBitsOptions): BoundingBoxIndex {
+    const filterSourceRL = options?.sourceRL;
     const entries: BoundingBoxEntry[] = [];
     for (const wrapper of wrappers) {
       if (!wrapper?.bit) continue;
+      if (filterSourceRL !== undefined && wrapper.bit.sourceRL !== filterSourceRL) {
+        continue;
+      }
       const boxes = parseSourceBB(wrapper.bit.sourceBB);
       if (boxes.length === 0) continue;
       entries.push({ bit: wrapper.bit, wrapper, boxes });
     }
-    return new BoundingBox(entries);
+    return new BoundingBoxIndex(entries);
   }
 
   /** All bits with at least one valid `sourceBB`, in input order. */
@@ -97,7 +108,7 @@ class BoundingBox {
   intersecting(query: Bbox): BoundingBoxEntry[] {
     const matches: BoundingBoxEntry[] = [];
     for (const entry of this._entries) {
-      if (entry.boxes.some((box) => aabbIntersects(query, box))) {
+      if (entry.boxes.some((box) => boundingBoxIntersects(query, box))) {
         matches.push(entry);
       }
     }
@@ -113,7 +124,7 @@ class BoundingBox {
     const matches: Bbox[] = [];
     for (const entry of this._entries) {
       for (const box of entry.boxes) {
-        if (aabbIntersects(query, box)) matches.push(box);
+        if (boundingBoxIntersects(query, box)) matches.push(box);
       }
     }
     return matches;
@@ -126,7 +137,7 @@ class BoundingBox {
    * from the same bit are ignored. Returns `null` if no box matches.
    */
   enclosingBoundingBox(query: Bbox): Bbox | null {
-    return aabbUnion(this.intersectingBoxes(query));
+    return boundingBoxUnion(this.intersectingBoxes(query));
   }
 
   /** Render selected bits back to bitmark text. Empty input returns `''`. */
@@ -140,5 +151,5 @@ class BoundingBox {
   }
 }
 
-export { BoundingBox };
-export type { Bbox, BoundingBoxEntry };
+export { BoundingBoxIndex };
+export type { Bbox, BoundingBoxEntry, FromBitsOptions };
