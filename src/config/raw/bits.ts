@@ -3199,6 +3199,7 @@ const BITS: _BitsConfig = {
               {
                 key: ConfigKey.tag_reference,
                 jsonKey: 'referenceEnd',
+                exportJsonKey: { referenceEnd: '$' },
                 format: TagFormat.plainText,
                 description: 'End reference tag for the book, used to specify a range',
                 maxCount: 1,
@@ -3266,6 +3267,7 @@ const BITS: _BitsConfig = {
               {
                 key: ConfigKey.tag_reference,
                 jsonKey: 'referenceEnd',
+                exportJsonKey: { referenceEnd: '$' },
                 format: TagFormat.plainText,
                 description: 'End reference tag for the book, used to specify a range',
                 maxCount: 1,
@@ -3280,6 +3282,17 @@ const BITS: _BitsConfig = {
         key: ConfigKey.tag_reference,
         format: TagFormat.plainText,
         description: 'Reference tag for the book, used to link to the book in the system',
+        maxCount: 1,
+        chain: [
+          {
+            key: ConfigKey.tag_reference,
+            jsonKey: 'referenceEnd',
+            exportJsonKey: { referenceEnd: '$' },
+            format: TagFormat.plainText,
+            description: 'End reference tag for the book, used to specify a range',
+            maxCount: 1,
+          },
+        ],
       },
       {
         key: ConfigKey.property_buttonCaption,
@@ -3320,6 +3333,7 @@ const BITS: _BitsConfig = {
               {
                 key: ConfigKey.tag_reference,
                 jsonKey: 'referenceEnd',
+                exportJsonKey: { referenceEnd: '$' },
                 format: TagFormat.plainText,
                 description: 'End reference tag for the book, used to specify a range',
                 maxCount: 1,
