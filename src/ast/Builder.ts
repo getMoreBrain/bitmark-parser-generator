@@ -186,6 +186,7 @@ class Builder extends BaseBuilder {
       bubbleTag?: string | string[];
       extractorTag?: string | string[];
       extractorInternal?: string | string[];
+      sourceBB?: number[] | number[][];
       levelCEFRp?: string | string[];
       levelCEFR?: string | string[];
       levelILR?: string | string[];
@@ -695,6 +696,7 @@ class Builder extends BaseBuilder {
         data.extractorInternal,
         options,
       ),
+      sourceBB: this.normaliseSourceBB(data.sourceBB),
       levelCEFRp: this.toAstProperty(
         bitType,
         ConfigKey.property_levelCEFRp,
@@ -1770,6 +1772,22 @@ class Builder extends BaseBuilder {
     nodes = Object.values(combinedNodes);
 
     return nodes.length > 0 ? nodes : undefined;
+  }
+
+  /**
+   * Normalise a sourceBB input into the AST shape (always number[][]).
+   * Accepts a single 4-number tuple or an array of tuples; returns undefined when empty.
+   */
+  protected normaliseSourceBB(data: number[] | number[][] | undefined): number[][] | undefined {
+    if (data == null) return undefined;
+    if (!Array.isArray(data) || data.length === 0) return undefined;
+    // Use some() rather than data[0] so an invalid (undefined) first element doesn't
+    // mask valid nested tuples that follow it.
+    const isNested = (data as unknown[]).some(Array.isArray);
+    const tuples = (isNested ? (data as number[][]) : [data as number[]]).filter(
+      (t) => Array.isArray(t) && t.length === 4 && t.every((n) => typeof n === 'number'),
+    );
+    return tuples.length > 0 ? tuples : undefined;
   }
 
   /**

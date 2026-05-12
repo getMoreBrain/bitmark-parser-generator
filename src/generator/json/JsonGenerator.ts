@@ -426,6 +426,23 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return this.standardHandler(node, route, NodeType.bitsValue, { array: false });
   }
 
+  // bitmarkAst -> bits -> bitsValue -> sourceBB
+
+  protected enter_sourceBB(node: NodeInfo, route: NodeInfo[]): boolean {
+    const tuples = node.value as number[][] | undefined;
+
+    // Ignore item that is not at the correct level
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return false;
+
+    if (tuples && tuples.length > 0) {
+      this.bitJson.sourceBB = tuples.length === 1 ? tuples[0] : tuples;
+    }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
   // bitmarkAst -> bits -> bitsValue -> productId
 
   protected enter_productId(node: NodeInfo, route: NodeInfo[]): boolean {

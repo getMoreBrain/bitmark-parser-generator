@@ -233,6 +233,7 @@ const propertyKeys = {
   property_siteName: '@siteName',
   property_size: '@size',
   property_slug: '@slug',
+  property_sourceBB: '@sourceBB',
   property_sourceDocument: '@sourceDocument',
   property_sourceRL: '@sourceRL',
   property_spaceId: '@spaceId',

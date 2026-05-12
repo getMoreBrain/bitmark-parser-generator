@@ -238,6 +238,12 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_sourceBB,
+        description: 'The source bounding box(es) for the bit (x, y, x1, y1)',
+        format: TagFormat.coordinates,
+        maxCount: Count.infinity,
+      },
+      {
         key: ConfigKey.property_levelCEFRp,
         description: 'The CEFRp level for the bit',
         format: TagFormat.plainText,
