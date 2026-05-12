@@ -676,6 +676,7 @@ const CARDSETS: _CardSetsConfig = {
                 exportJsonKey: { sampleSolution: '$' },
                 key: ConfigKey.tag_sampleSolution,
                 description: 'Sample solution for the question.',
+                format: TagFormat.plainText,
               },
               {
                 key: ConfigKey.property_sampleSolution,

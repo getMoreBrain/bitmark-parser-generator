@@ -511,6 +511,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.tag_gap,
         description: 'The value of a gap in the content',
         maxCount: Count.infinity,
+        format: TagFormat.plainText,
         chain: [
           {
             key: ConfigKey.tag_gap,
@@ -518,6 +519,7 @@ const GROUPS: _GroupsConfig = {
             exportJsonKey: { solutions: ['$'] },
             description: 'Alternative values for the gaps in the content',
             maxCount: Count.infinity,
+            format: TagFormat.plainText,
           },
           {
             key: ConfigKey.group_standardItemLeadInstructionHint,
@@ -570,6 +572,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.tag_true,
         description: 'True value for a true/false statement/question',
         maxCount: Count.infinity,
+        format: TagFormat.plainText,
         chain: [
           {
             key: ConfigKey.tag_true,
@@ -577,6 +580,7 @@ const GROUPS: _GroupsConfig = {
             exportJsonKey: { choices: [{ choice: '$', isCorrect: true }] },
             description: 'True values for a true/false statement/question',
             maxCount: Count.infinity,
+            format: TagFormat.plainText,
           },
           {
             key: ConfigKey.tag_false,
@@ -584,6 +588,7 @@ const GROUPS: _GroupsConfig = {
             exportJsonKey: { choices: [{ choice: '$', isCorrect: false }] },
             description: 'False values for a true/false statement/question',
             maxCount: Count.infinity,
+            format: TagFormat.plainText,
           },
           {
             key: ConfigKey.group_standardItemLeadInstructionHint,
@@ -619,6 +624,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.tag_false,
         description: 'False value for a true/false statement/question',
         maxCount: Count.infinity,
+        format: TagFormat.plainText,
         chain: [
           {
             key: ConfigKey.tag_true,
@@ -626,6 +632,7 @@ const GROUPS: _GroupsConfig = {
             exportJsonKey: { choices: [{ choice: '$', isCorrect: true }] },
             description: 'True values for a true/false statement/question',
             maxCount: Count.infinity,
+            format: TagFormat.plainText,
           },
           {
             key: ConfigKey.tag_false,
@@ -633,6 +640,7 @@ const GROUPS: _GroupsConfig = {
             exportJsonKey: { choices: [{ choice: '$', isCorrect: false }] },
             description: 'False values for a true/false statement/question',
             maxCount: Count.infinity,
+            format: TagFormat.plainText,
           },
           {
             key: ConfigKey.group_standardItemLeadInstructionHint,
@@ -700,6 +708,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.tag_mark,
         description: 'The marked content',
         maxCount: Count.infinity,
+        format: TagFormat.plainText,
         chain: [
           {
             key: ConfigKey.property_mark,
