@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.22.0
+Version: 5.23.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -268,6 +268,7 @@ focus-image (since: 1.3.0)
 foot-note (since: 1.3.0)
 form-free-text (since: 5.3.0)
 formula (since: 1.35.0)
+formula-image (since: 5.23.0)
 gap-text (since: 1.5.15)
 gap-text-instruction-grouped (since: 1.5.15)
 glossary-term (since: 1.33.0)

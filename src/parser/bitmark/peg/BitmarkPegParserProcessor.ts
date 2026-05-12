@@ -552,7 +552,6 @@ class BitmarkPegParserProcessor {
     result.extraProperties = {};
     result.internalComments = [];
 
-    let seenReference = false;
     let inFooter = false;
     const bodyParts: BodyPart[] = [];
     let bodyTextPart: BreakscapedString = Breakscape.EMPTY_STRING;
@@ -600,15 +599,7 @@ class BitmarkPegParserProcessor {
           break;
 
         case TypeKey.Reference:
-          referenceTagContentProcessor(
-            this.context,
-            contentDepth,
-            tagsConfig,
-            content,
-            result,
-            seenReference,
-          );
-          seenReference = true;
+          referenceTagContentProcessor(this.context, contentDepth, tagsConfig, content, result);
           break;
 
         case TypeKey.Title:

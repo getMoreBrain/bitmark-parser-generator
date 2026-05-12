@@ -15,6 +15,7 @@ export interface BitJson {
 
   // Properties
   id: string | string[];
+  gUri: string;
   internalComment: string | string[];
   customerId: string;
   customerExternalId: string | string[];
@@ -65,6 +66,7 @@ export interface BitJson {
   bubbleTag: string | string[];
   extractorTag: string | string[];
   extractorInternal: string | string[];
+  sourceBB?: number[] | number[][];
   levelCEFRp: string;
   levelCEFR: string;
   levelILR: string;

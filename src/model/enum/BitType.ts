@@ -274,6 +274,7 @@ const BitType = {
   footNote: 'foot-note',
   formFreeText: 'form-free-text',
   formula: 'formula',
+  formulaImage: 'formula-image',
   gapText: 'gap-text',
   gapTextInstructionGrouped: 'gap-text-instruction-grouped',
   glossaryTerm: 'glossary-term',

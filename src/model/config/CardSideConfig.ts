@@ -1,3 +1,4 @@
+import { type ExportJsonKey } from './_Config.ts';
 import { CardVariantConfig } from './CardVariantConfig.ts';
 
 interface ToStringOptions {
@@ -9,6 +10,8 @@ class CardSideConfig {
   readonly name: string;
   readonly repeat: boolean;
   readonly jsonKey: string | null | undefined;
+  readonly exportJsonKey?: ExportJsonKey;
+  readonly hasExportJsonKey: boolean;
   readonly variants: CardVariantConfig[];
 
   public constructor(
@@ -16,10 +19,14 @@ class CardSideConfig {
     repeat: boolean,
     variants: CardVariantConfig[],
     jsonKey?: string | null,
+    exportJsonKey?: ExportJsonKey,
+    hasExportJsonKey: boolean = false,
   ) {
     this.name = name;
     this.repeat = repeat;
     this.jsonKey = jsonKey;
+    this.exportJsonKey = exportJsonKey;
+    this.hasExportJsonKey = hasExportJsonKey;
     this.variants = variants;
   }
 

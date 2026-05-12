@@ -10,6 +10,7 @@
     "bitLevel": { "type": "number" },
     "format": { "type": "string", "description": "Bit format" },
     "id": { "$ref": "#/$defs/stringOrStringArray" },
+    "gUri": { "type": "string" },
     "internalComment": { "$ref": "#/$defs/stringOrStringArray" },
     "customerId": { "type": "string" },
     "customerExternalId": { "$ref": "#/$defs/stringOrStringArray" },
@@ -67,6 +68,20 @@
     "reductionTag": { "$ref": "#/$defs/stringOrStringArray" },
     "bubbleTag": { "$ref": "#/$defs/stringOrStringArray" },
     "extractorTag": { "$ref": "#/$defs/stringOrStringArray" },
+    "sourceBB": {
+      "oneOf": [
+        { "type": "array", "items": { "type": "number" }, "minItems": 4, "maxItems": 4 },
+        {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 4,
+            "maxItems": 4
+          }
+        }
+      ]
+    },
     "levelCEFRp": { "type": "string" },
     "levelCEFR": { "type": "string" },
     "levelILR": { "type": "string" },

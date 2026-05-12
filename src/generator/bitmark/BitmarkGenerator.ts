@@ -880,6 +880,28 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     });
   }
 
+  // bitmarkAst -> bits -> bitsValue -> sourceBB
+
+  protected enter_sourceBB(node: NodeInfo, route: NodeInfo[]): boolean {
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return false;
+
+    const tuples = node.value as number[][] | undefined;
+    if (!Array.isArray(tuples) || tuples.length === 0) return false;
+
+    this.writeProperty(
+      'sourceBB',
+      tuples.map((t) => t.join(', ')),
+      route,
+      {
+        format: TagFormat.plainText,
+        array: true,
+      },
+    );
+
+    return false;
+  }
+
   // bitmarkAst -> bits -> bitsValue -> questions -> questionsValue -> additionalSolutions -> additionalSolutionsValue
 
   protected leaf_additionalSolutionsValue(node: NodeInfo, route: NodeInfo[]): void {

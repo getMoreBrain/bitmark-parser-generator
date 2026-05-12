@@ -60,6 +60,7 @@ export interface Bit {
   resourceType?: ResourceTypeType;
   isCommented?: boolean;
   id?: Property;
+  gUri?: Property;
   internalComment?: Property;
   customerId?: Property;
   customerExternalId?: Property;
@@ -115,6 +116,7 @@ export interface Bit {
   bubbleTag?: Property;
   extractorTag?: Property;
   extractorInternal?: Property;
+  sourceBB?: number[][];
   levelCEFRp?: Property;
   levelCEFR?: Property;
   levelILR?: Property;
