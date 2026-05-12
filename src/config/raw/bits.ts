@@ -5803,11 +5803,13 @@ const BITS: _BitsConfig = {
         exportJsonKey: { choices: [{ choice: '$', isCorrect: true }] },
         key: ConfigKey.tag_true,
         description: 'Tag for the true option in the true/false question',
+        format: TagFormat.plainText,
       },
       {
         exportJsonKey: { choices: [{ choice: '$', isCorrect: false }] },
         key: ConfigKey.tag_false,
         description: 'Tag for the false option in the true/false question',
+        format: TagFormat.plainText,
       },
       {
         // Override inherited @example from group_standardTags: boolean root
