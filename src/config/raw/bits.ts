@@ -1291,6 +1291,7 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.property_isCaseSensitive,
+        exportJsonKey: {},
         description: 'If the cloze answers are case sensitive',
         format: TagFormat.boolean,
         defaultValue: 'true',
@@ -2944,6 +2945,7 @@ const BITS: _BitsConfig = {
 
         key: ConfigKey.group_resourceImage,
         description: 'Resource image tags for logo grave images, used to attach images',
+        exportJsonKey: { images: '$' },
         minCount: 1,
         maxCount: Count.infinity,
       },
@@ -3404,6 +3406,7 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.resource_backgroundWallpaper,
+        exportJsonKey: { backgroundWallpaper: { type: 'image', image: { src: '$' } } },
         description: 'Background wallpaper for the image, used to set a background for the image',
         chain: [
           {
@@ -3597,6 +3600,7 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.resource_backgroundWallpaper,
+        exportJsonKey: { backgroundWallpaper: { type: 'image', image: { src: '$' } } },
         description: 'Background wallpaper for the image, used to set a background for the image',
         chain: [
           {
@@ -3769,6 +3773,7 @@ const BITS: _BitsConfig = {
 
         key: ConfigKey.group_resourceImage,
         description: 'Resource image tags for logo grave images, used to attach images',
+        exportJsonKey: { logos: '$' },
         minCount: 1,
         maxCount: Count.infinity,
       },
@@ -3805,6 +3810,7 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.property_reasonableNumOfChars,
+        exportJsonKey: {},
         description: 'Reasonable number of characters for the interview, used to limit input size',
         format: TagFormat.number,
       },
@@ -4188,6 +4194,7 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.property_isCaseSensitive,
+        exportJsonKey: {},
         description:
           'Case sensitivity for matching pairs, used to define if matches are case-sensitive',
         format: TagFormat.boolean,
@@ -4247,6 +4254,7 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.property_reasonableNumOfChars,
+        exportJsonKey: {},
         description: 'Reasonable number of characters for feedback, used to limit input size',
         format: TagFormat.number,
       },
@@ -5242,6 +5250,7 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.resource_backgroundWallpaper,
+        exportJsonKey: { backgroundWallpaper: { type: 'image', image: { src: '$' } } },
         description: 'Background wallpaper for the image, used to set a background for the image',
         chain: [
           {

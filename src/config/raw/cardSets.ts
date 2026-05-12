@@ -33,6 +33,7 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.group_resourceIcon,
                 description: 'Icon resource for the flashcard.',
                 jsonKey: 'question.icon|resource(type=image, key=image)',
+                exportJsonKey: { question: { icon: { type: 'image', image: { src: '$' } } } },
               },
             ],
           },
@@ -58,6 +59,7 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.group_resourceIcon,
                 description: 'Icon resource for the flashcard.',
                 jsonKey: 'answer.icon|resource(type=image, key=image)',
+                exportJsonKey: { answer: { icon: { type: 'image', image: { src: '$' } } } },
               },
             ],
           },
@@ -78,6 +80,9 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.group_resourceIcon,
                 description: 'Icon resource for the flashcard.',
                 jsonKey: 'alternativeAnswers[].icon|resource(type=image, key=image)',
+                exportJsonKey: {
+                  alternativeAnswers: [{ icon: { type: 'image', image: { src: '$' } } }],
+                },
               },
             ],
             repeatCount: Count.infinity,
@@ -117,6 +122,7 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Icon resource for the definition.',
                 format: TagFormat.plainText,
                 jsonKey: 'term.icon|resource(type=image, key=image)',
+                exportJsonKey: { term: { icon: { type: 'image', image: { src: '$' } } } },
               },
             ],
           },
@@ -144,6 +150,7 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.group_resourceIcon,
                 description: 'Icon resource for the definition.',
                 jsonKey: 'definition.icon|resource(type=image, key=image)',
+                exportJsonKey: { definition: { icon: { type: 'image', image: { src: '$' } } } },
               },
             ],
           },
@@ -164,6 +171,9 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.group_resourceIcon,
                 description: 'Icon resource for the definition.',
                 jsonKey: 'alternativeDefinitions[].icon|resource(type=image, key=image)',
+                exportJsonKey: {
+                  alternativeDefinitions: [{ icon: { type: 'image', image: { src: '$' } } }],
+                },
               },
             ],
             repeatCount: Count.infinity,
@@ -200,6 +210,10 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
+                exportJsonKey: [
+                  { '@absent': { isCaseSensitive: '$ancestor' } },
+                  { isCaseSensitive: '$' },
+                ],
                 description: 'Property to indicate if the match is case sensitive.',
                 format: TagFormat.boolean,
               },
@@ -240,6 +254,10 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
+                exportJsonKey: [
+                  { '@absent': { isCaseSensitive: '$ancestor' } },
+                  { isCaseSensitive: '$' },
+                ],
                 description: 'Property to indicate if the match is case sensitive.',
                 format: TagFormat.boolean,
               },
@@ -403,6 +421,11 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
                 description: 'Example text for the match matrix.',
                 format: TagFormat.plainText,
               },
@@ -415,6 +438,10 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
+                exportJsonKey: [
+                  { '@absent': { isCaseSensitive: '$ancestor' } },
+                  { isCaseSensitive: '$' },
+                ],
                 description: 'Property to indicate if the match is case sensitive.',
                 format: TagFormat.boolean,
               },
@@ -436,6 +463,18 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_example,
+                exportJsonKey: [
+                  {
+                    '@keyonly': {
+                      cells: { $s: { isExample: true, example: '$parent.values[0]' } },
+                      '@bit': { isExample: true },
+                    },
+                  },
+                  {
+                    '@absent': { cells: { $s: { isExample: true, example: '$parent.values[0]' } } },
+                  },
+                  { cells: { $s: { isExample: true, example: '$' } }, '@bit': { isExample: true } },
+                ],
                 description: 'Example text for the match matrix.',
                 format: TagFormat.plainText,
               },
@@ -448,6 +487,10 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
+                exportJsonKey: [
+                  { '@absent': { isCaseSensitive: '$ancestor' } },
+                  { isCaseSensitive: '$' },
+                ],
                 description: 'Property to indicate if the match is case sensitive.',
                 format: TagFormat.boolean,
               },
@@ -574,11 +617,20 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_reasonableNumOfChars,
+                exportJsonKey: [
+                  { '@absent': { reasonableNumOfChars: '$ancestor' } },
+                  { reasonableNumOfChars: '$' },
+                ],
                 description: 'Property for reasonable number of characters.',
                 format: TagFormat.number,
               },
               {
                 key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
                 description: 'Example text for the feedback.',
                 format: TagFormat.plainText,
               },
@@ -613,6 +665,10 @@ const CARDSETS: _CardSetsConfig = {
             tags: [
               {
                 key: ConfigKey.property_reasonableNumOfChars,
+                exportJsonKey: [
+                  { '@absent': { reasonableNumOfChars: '$ancestor' } },
+                  { reasonableNumOfChars: '$' },
+                ],
                 description: 'Property for reasonable number of characters.',
                 format: TagFormat.number,
               },
@@ -668,6 +724,11 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
                 description: 'Example text for the element.',
                 format: TagFormat.plainText,
               },
@@ -778,7 +839,11 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.tag_title,
                 jsonKey: '.',
-                exportJsonKey: null,
+                exportJsonKey: {
+                  '@bit': {
+                    table: { header: { rows: { cells: { cells: { $s: { content: '$' } } } } } },
+                  },
+                },
                 description: 'Title of the table cell.',
               },
               {
@@ -922,6 +987,11 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
                 description: 'Example text for the bot action response.',
                 format: TagFormat.plainText,
               },
