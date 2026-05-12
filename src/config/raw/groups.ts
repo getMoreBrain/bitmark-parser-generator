@@ -206,6 +206,7 @@ const GROUPS: _GroupsConfig = {
         chain: [
           {
             key: ConfigKey.property_tag,
+            exportJsonKey: { tags: ['$'] },
             description: 'The tag(s) for the group',
             format: TagFormat.plainText,
             maxCount: Count.infinity,
@@ -386,6 +387,7 @@ const GROUPS: _GroupsConfig = {
       },
       {
         key: ConfigKey.property_example,
+        exportJsonKey: { isExample: true },
         description: 'The example(s) for the bit',
         format: TagFormat.plainText,
       },
@@ -465,6 +467,7 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.group_resourceImage,
             jsonKey: 'avatarImage|resource(type=image, key=image)',
+            exportJsonKey: { avatarImage: { type: 'image', image: { src: '$' } } },
             description: 'The image of the person',
           },
         ],
@@ -485,6 +488,7 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.group_resourceImage,
             jsonKey: 'avatarImage|resource(type=image, key=image)',
+            exportJsonKey: { avatarImage: { type: 'image', image: { src: '$' } } },
             description: 'The image of the partner',
           },
         ],
@@ -504,7 +508,7 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.tag_gap,
             jsonKey: 'solutions[]',
-            exportJsonKey: { solutions: [['$']] },
+            exportJsonKey: { solutions: ['$'] },
             description: 'Alternative values for the gaps in the content',
             maxCount: Count.infinity,
           },
@@ -515,12 +519,33 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.property_example,
             jsonKey: 'example',
+            exportJsonKey: [
+              {
+                '@keyonly': {
+                  isExample: true,
+                  example: '$parent.solutions[0]',
+                  '@bit': { isExample: true },
+                },
+              },
+              {
+                '@absent': {
+                  isExample: true,
+                  example: '$parent.solutions[0]',
+                  '@bit': { isExample: true },
+                },
+              },
+              { isExample: true, example: '$', '@bit': { isExample: true } },
+            ],
             description: 'An example for the gap',
             format: TagFormat.plainText,
           },
           {
             key: ConfigKey.property_isCaseSensitive,
             jsonKey: 'isCaseSensitive',
+            exportJsonKey: [
+              { '@absent': { isCaseSensitive: '$ancestor' } },
+              { isCaseSensitive: '$' },
+            ],
             description: 'If true, the gap text is case sensitive',
             format: TagFormat.boolean,
             defaultValue: 'true',
@@ -560,6 +585,23 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.property_example,
             jsonKey: 'example',
+            exportJsonKey: [
+              {
+                '@keyonly': {
+                  isExample: true,
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: true },
+                },
+              },
+              {
+                '@absent': {
+                  isExample: true,
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: true },
+                },
+              },
+              { isExample: true, example: '$', '@bit': { isExample: true } },
+            ],
             description: 'An example for the true/false statement/question',
             format: TagFormat.plainText,
           },
@@ -644,6 +686,11 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.property_example,
             jsonKey: 'example',
+            exportJsonKey: [
+              { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+              { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+              { isExample: true, example: '$', '@bit': { isExample: true } },
+            ],
             description: 'An example for the marked content',
             format: TagFormat.plainText,
           },
@@ -1314,6 +1361,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_image,
+        exportJsonKey: { resource: { type: 'image', image: { src: '$' } } },
         description: 'The image resource',
         chain: [
           {
@@ -1378,6 +1426,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_imageLink,
+        exportJsonKey: { resource: { type: 'image-link', imageLink: { url: '$' } } },
         description: 'The link to the image resource',
         chain: [
           {
@@ -1394,6 +1443,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_audio,
+        exportJsonKey: { resource: { type: 'audio', audio: { src: '$' } } },
         description: 'The audio resource',
         chain: [
           {
@@ -1410,6 +1460,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_audioEmbed,
+        exportJsonKey: { resource: { type: 'audio-embed', audioEmbed: { src: '$' } } },
         description: 'The embedded audio resource',
         chain: [
           {
@@ -1426,6 +1477,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_audioLink,
+        exportJsonKey: { resource: { type: 'audio-link', audioLink: { url: '$' } } },
         description: 'The link to the audio resource',
         chain: [
           {
@@ -1442,6 +1494,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_video,
+        exportJsonKey: { resource: { type: 'video', video: { src: '$' } } },
         description: 'The video resource',
         chain: [
           {
@@ -1458,6 +1511,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_videoEmbed,
+        exportJsonKey: { resource: { type: 'video-embed', videoEmbed: { url: '$' } } },
         description: 'The embedded video resource',
         chain: [
           {
@@ -1474,6 +1528,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_videoLink,
+        exportJsonKey: { resource: { type: 'video-link', videoLink: { url: '$' } } },
         description: 'The link to the video resource',
         chain: [
           {
@@ -1490,6 +1545,9 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_stillImageFilmEmbed,
+        exportJsonKey: {
+          resource: { type: 'still-image-film-embed', stillImageFilmEmbed: { url: '$' } },
+        },
         description: 'The embedded still image film resource',
         chain: [
           {
@@ -1506,6 +1564,9 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_stillImageFilmLink,
+        exportJsonKey: {
+          resource: { type: 'still-image-film-link', stillImageFilmLink: { url: '$' } },
+        },
         description: 'The link to the still image film resource',
         chain: [
           {
@@ -1570,6 +1631,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_document,
+        exportJsonKey: { resource: { type: 'document', document: { url: '$' } } },
         description: 'The document resource',
         chain: [
           {
@@ -1586,6 +1648,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_documentEmbed,
+        exportJsonKey: { resource: { type: 'document-embed', documentEmbed: { url: '$' } } },
         description: 'The embedded document resource',
         chain: [
           {
@@ -1602,6 +1665,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_documentLink,
+        exportJsonKey: { resource: { type: 'document-link', documentLink: { url: '$' } } },
         description: 'The link to the document resource',
         chain: [
           {
@@ -1618,6 +1682,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_documentDownload,
+        exportJsonKey: { resource: { type: 'document-download', documentDownload: { url: '$' } } },
         description: 'The downloadable document resource',
         chain: [
           {
@@ -1634,6 +1699,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_appLink,
+        exportJsonKey: { resource: { type: 'app-link', appLink: { url: '$' } } },
         description: 'The link to the app resource',
         chain: [
           {
@@ -1650,6 +1716,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_websiteLink,
+        exportJsonKey: { resource: { type: 'website-link', websiteLink: { url: '$' } } },
         description: 'The link to the website resource',
         chain: [
           {

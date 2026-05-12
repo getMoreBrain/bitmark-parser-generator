@@ -185,9 +185,19 @@ class ConfigBuilder {
         if (k.startsWith('group_')) k = k.substring(6);
         k = StringUtils.camelToKebab(k);
         const resolvedGroups = resolveGroupReferences(k);
+        const hasOuterExport = Object.prototype.hasOwnProperty.call(tag, 'exportJsonKey');
+        // Validator: a group reference may carry a per-site jsonKey override
+        // (legacy mini-language string). If it does, it must have an
+        // exportJsonKey companion — otherwise the override would be silently
+        // dropped on emission.
+        if (!hasOuterExport && tag.jsonKey != null) {
+          const headingPath = [...pathStack, `tags.${tag.key}`].join(' / ');
+          exportJsonKeyErrors.push(
+            `Missing exportJsonKey for non-default jsonKey at ${headingPath} (legacy: \`${tag.jsonKey}\`)`,
+          );
+        }
         for (const ref of resolvedGroups) {
           // Outer tag's exportJsonKey/jsonKey/min/max/description override the squashed leaf's.
-          const hasOuterExport = Object.prototype.hasOwnProperty.call(tag, 'exportJsonKey');
           const exportJsonKeyChosen = hasOuterExport ? tag.exportJsonKey : ref.exportJsonKey;
           const hasExportChosen = hasOuterExport || !!ref.hasExportJsonKey;
           const min = tag.minCount != null ? tag.minCount : ref.min;
@@ -476,7 +486,7 @@ class ConfigBuilder {
             tags.push({
               type: 'group',
               key: ref.key,
-              ...(ref.jsonKey ? { jsonKey: ref.jsonKey } : {}),
+              ...(ref.hasExportJsonKey ? { jsonKey: ref.exportJsonKey } : {}),
               ...(ref.min != null ? { min: ref.min } : {}),
               ...(ref.max != null ? { max: ref.max } : {}),
               ...(ref.description ? { description: ref.description } : {}),
@@ -631,7 +641,7 @@ class ConfigBuilder {
             tags.push({
               type: 'group',
               key: ref.key,
-              ...(ref.jsonKey ? { jsonKey: ref.jsonKey } : {}),
+              ...(ref.hasExportJsonKey ? { jsonKey: ref.exportJsonKey } : {}),
               ...(ref.min != null ? { min: ref.min } : {}),
               ...(ref.max != null ? { max: ref.max } : {}),
               ...(ref.description ? { description: ref.description } : {}),
