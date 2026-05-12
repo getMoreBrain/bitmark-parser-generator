@@ -1439,6 +1439,11 @@ const BITS: _BitsConfig = {
 
     textFormatDefault: TextFormat.latex,
   },
+  [BitType.formulaImage]: {
+    since: '5.23.0',
+    baseBitType: BitType.formula,
+    description: 'Formula image bit, used for mathematical formulas rendered as images',
+  },
   [BitType.smartStandardFormula]: {
     since: '3.11.0',
     baseBitType: BitType.formula,
