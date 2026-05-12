@@ -534,6 +534,17 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.group_standardTags,
                 description: 'Standard tags for the statement.',
               },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, '@bit': { isExample: true } } },
+                  { isExample: true, '@bit': { isExample: true } },
+                ],
+                description:
+                  'Example marker on the statement; only default form is meaningful, valued forms fall back to the marker.',
+                format: TagFormat.boolean,
+              },
             ],
             bodyAllowed: false,
           },
@@ -562,6 +573,17 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.group_standardTags,
                 description: 'Standard tags for the quiz.',
+              },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, '@bit': { isExample: true } } },
+                  { isExample: true, '@bit': { isExample: true } },
+                ],
+                description:
+                  'Example marker on the quiz; only default form is meaningful, valued forms fall back to the marker.',
+                format: TagFormat.boolean,
               },
             ],
             bodyAllowed: false,
