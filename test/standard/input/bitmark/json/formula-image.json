@@ -1,0 +1,48 @@
+[
+  {
+    "bit": {
+      "type": "formula-image",
+      "format": "latex",
+      "bitLevel": 1,
+      "id": [
+        "1"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": "C = \\left( X , G , P , D , A , N \\right)"
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.formula-image]\n[@id:1]\n\nC = \\left( X , G , P , D , A , N \\right)"
+  },
+  {
+    "bit": {
+      "type": "formula-image",
+      "format": "latex",
+      "bitLevel": 1,
+      "id": [
+        "2"
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": "C _ { i } = \\left( X _ { i } , G _ { i } , P _ { i } , D _ { i } , A _ { i } , N _ { i } \\right) , i = 1 , 2 , 3 ."
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.formula-image:latex]\n[@id:2]\n\nC _ { i } = \\left( X _ { i } , G _ { i } , P _ { i } , D _ { i } , A _ { i } , N _ { i } \\right) , i = 1 , 2 , 3 ."
+  }
+]

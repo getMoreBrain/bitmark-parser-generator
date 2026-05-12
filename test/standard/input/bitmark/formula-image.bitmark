@@ -1,0 +1,9 @@
+[.formula-image]
+[@id:1]
+
+C = \left( X , G , P , D , A , N \right)
+
+[.formula-image:latex]
+[@id:2]
+
+C _ { i } = \left( X _ { i } , G _ { i } , P _ { i } , D _ { i } , A _ { i } , N _ { i } \right) , i = 1 , 2 , 3 .
