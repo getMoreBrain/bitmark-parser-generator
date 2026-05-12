@@ -380,10 +380,17 @@ const GROUPS: _GroupsConfig = {
         description: 'Item, lead, page number, margin number, instruction and hint tags',
       },
       {
+        // Bit-level example tag: bare/synthesized records the marker only;
+        // valued [@example:text] emits `isExample: true` and `example` as
+        // PM-rendered rich text (bitmark+ format).
         key: ConfigKey.property_example,
-        exportJsonKey: { isExample: true },
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
         description: 'The example(s) for the bit',
-        format: TagFormat.plainText,
+        format: TagFormat.bitmarkText,
       },
     ],
   },
@@ -531,7 +538,7 @@ const GROUPS: _GroupsConfig = {
               { isExample: true, example: '$', '@bit': { isExample: true } },
             ],
             description: 'An example for the gap',
-            format: TagFormat.plainText,
+            format: TagFormat.bitmarkText,
           },
           {
             key: ConfigKey.property_isCaseSensitive,
@@ -597,7 +604,7 @@ const GROUPS: _GroupsConfig = {
               { isExample: true, example: '$', '@bit': { isExample: true } },
             ],
             description: 'An example for the true/false statement/question',
-            format: TagFormat.plainText,
+            format: TagFormat.bitmarkText,
           },
         ],
       },
@@ -628,8 +635,25 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.property_example,
             jsonKey: 'example',
+            exportJsonKey: [
+              {
+                '@keyonly': {
+                  isExample: true,
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: true },
+                },
+              },
+              {
+                '@absent': {
+                  isExample: true,
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: true },
+                },
+              },
+              { isExample: true, example: '$', '@bit': { isExample: true } },
+            ],
             description: 'An example for the true/false statement/question',
-            format: TagFormat.plainText,
+            format: TagFormat.bitmarkText,
           },
         ],
       },
@@ -686,7 +710,7 @@ const GROUPS: _GroupsConfig = {
               { isExample: true, example: '$', '@bit': { isExample: true } },
             ],
             description: 'An example for the marked content',
-            format: TagFormat.plainText,
+            format: TagFormat.bitmarkText,
           },
         ],
       },
