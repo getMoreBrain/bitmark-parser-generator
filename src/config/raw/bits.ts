@@ -52,6 +52,20 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
+      {
+        // Override inherited @example from group_standardTags: string root
+        // example. Bare/synthesized emits `example: "true"` (a text literal
+        // that field-coerces to a paragraph "true" in bitmark+ contexts);
+        // valued [@example:text] emits the user's text via `$`.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true, example: 'true' } },
+          { '@absent': { isExample: true, example: 'true' } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example text for the bit',
+        format: TagFormat.plainText,
+      },
     ],
     rootExampleType: ExampleType.string,
   },
@@ -381,6 +395,17 @@ const BITS: _BitsConfig = {
         description: 'Array of preview videos for the catalog item',
         maxCount: Count.infinity,
       },
+      {
+        // Override inherited @example from group_standardTags: string root example.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true, example: 'true' } },
+          { '@absent': { isExample: true, example: 'true' } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example text for the bit',
+        format: TagFormat.plainText,
+      },
     ],
     rootExampleType: ExampleType.string,
   },
@@ -534,6 +559,17 @@ const BITS: _BitsConfig = {
         description: 'Array of preview videos for the catalog item',
         maxCount: Count.infinity,
       },
+      {
+        // Override inherited @example from group_standardTags: string root example.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true, example: 'true' } },
+          { '@absent': { isExample: true, example: 'true' } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example text for the bit',
+        format: TagFormat.plainText,
+      },
     ],
     rootExampleType: ExampleType.string,
   },
@@ -674,6 +710,17 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_previewVideos,
         description: 'Array of preview videos for the catalog item',
         maxCount: Count.infinity,
+      },
+      {
+        // Override inherited @example from group_standardTags: string root example.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true, example: 'true' } },
+          { '@absent': { isExample: true, example: 'true' } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example text for the bit',
+        format: TagFormat.plainText,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -1978,6 +2025,17 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
+      {
+        // Override inherited @example from group_standardTags: string root example.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true, example: 'true' } },
+          { '@absent': { isExample: true, example: 'true' } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example text for the essay bit',
+        format: TagFormat.plainText,
+      },
     ],
     rootExampleType: ExampleType.string,
   },
@@ -2000,6 +2058,17 @@ const BITS: _BitsConfig = {
         exportJsonKey: { title: '$' },
         key: ConfigKey.tag_title,
         description: 'The title of the example',
+      },
+      {
+        // Override inherited @example from group_standardTags: string root example.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true, example: 'true' } },
+          { '@absent': { isExample: true, example: 'true' } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example text for the example bit',
+        format: TagFormat.plainText,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -4885,6 +4954,17 @@ const BITS: _BitsConfig = {
         description: 'Resolved by for the review note, used to define who resolved the note',
         format: TagFormat.plainText,
       },
+      {
+        // Override inherited @example from group_standardTags: string root example.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true, example: 'true' } },
+          { '@absent': { isExample: true, example: 'true' } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example text for the review note bit',
+        format: TagFormat.plainText,
+      },
     ],
     rootExampleType: ExampleType.string,
   },
@@ -4961,6 +5041,19 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.group_quizCommon,
         description: 'Common quiz tags for sequences',
+      },
+      {
+        // Override inherited @example from group_standardTags: this bit has
+        // a boolean root example (rootExampleType: boolean), so bit-level
+        // [@example] writes `example: true` in addition to `isExample: true`.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true, example: true } },
+          { '@absent': { isExample: true, example: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example flag for the bit (boolean)',
+        format: TagFormat.plainText,
       },
     ],
     cardSet: CardSetConfigKey.elements,
@@ -5674,6 +5767,24 @@ const BITS: _BitsConfig = {
         exportJsonKey: { choices: [{ choice: '$', isCorrect: false }] },
         key: ConfigKey.tag_false,
         description: 'Tag for the false option in the true/false question',
+      },
+      {
+        // Override inherited @example from group_standardTags: boolean root
+        // example. Note: the legacy reference parser ties the bare-form
+        // example value to `statement.isCorrect`, but the statement is not
+        // yet emitted when this tag fires at bit-header. The pattern below
+        // emits a literal `true` for bare/synthesized and `$` for valued —
+        // sufficient for `[+...]` (correct) statements which dominate the
+        // fixtures; `[-...]` (incorrect) bits with bare `[@example]` would
+        // need either a runtime extension or an explicit `[@example:false]`.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true, example: true } },
+          { '@absent': { isExample: true, example: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example flag for the bit (boolean)',
+        format: TagFormat.plainText,
       },
     ],
     rootExampleType: ExampleType.boolean,
