@@ -131,6 +131,7 @@ class Builder extends BaseBuilder {
       resourceType?: ResourceTypeType; // This is optional, it will be inferred from the resource
       isCommented?: boolean;
       id?: string | string[];
+      gUri?: string;
       internalComment?: string | string[];
       customerId?: string;
       customerExternalId?: string | string[];
@@ -485,6 +486,7 @@ class Builder extends BaseBuilder {
 
       // Properties
       id: this.toAstProperty(bitType, ConfigKey.property_id, data.id, options),
+      gUri: this.toAstProperty(bitType, ConfigKey.property_gUri, data.gUri, options),
       internalComment: this.toAstProperty(
         bitType,
         ConfigKey.property_internalComment,

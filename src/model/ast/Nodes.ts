@@ -60,6 +60,7 @@ export interface Bit {
   resourceType?: ResourceTypeType;
   isCommented?: boolean;
   id?: Property;
+  gUri?: Property;
   internalComment?: Property;
   customerId?: Property;
   customerExternalId?: Property;

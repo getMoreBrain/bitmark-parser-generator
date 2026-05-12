@@ -17,6 +17,11 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_gUri,
+        description: 'Global URI for the bit',
+        format: TagFormat.plainText,
+      },
+      {
         key: ConfigKey.property_customerId,
         description: 'The customer-specific identifier for the bit',
         format: TagFormat.plainText,

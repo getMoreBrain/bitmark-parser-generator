@@ -252,6 +252,8 @@ const NodeType = {
   gmbExternalShopItems: 'gmbExternalShopItems',
   groupTag: 'groupTag',
   groupTagValue: 'groupTagValue',
+  gUri: 'gUri',
+  gUriValue: 'gUriValue',
   handInAcceptFileType: 'handInAcceptFileType',
   handInAcceptFileTypeValue: 'handInAcceptFileTypeValue',
   handInInstruction: 'handInInstruction',
