@@ -15,6 +15,7 @@ export interface BitJson {
 
   // Properties
   id: string | string[];
+  gUri: string;
   internalComment: string | string[];
   customerId: string;
   customerExternalId: string | string[];

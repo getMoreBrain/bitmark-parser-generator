@@ -99,6 +99,7 @@ const propertyKeys = {
   property_formula: '@formula',
   property_fullName: '@fullName',
   property_groupTag: '@groupTag',
+  property_gUri: '@gUri',
   property_handInAcceptFileType: '@handInAcceptFileType',
   property_handInInstruction: '@handInInstruction',
   property_handInRequirement: '@handInRequirement',

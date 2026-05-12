@@ -10,6 +10,7 @@
     "bitLevel": { "type": "number" },
     "format": { "type": "string", "description": "Bit format" },
     "id": { "$ref": "#/$defs/stringOrStringArray" },
+    "gUri": { "type": "string" },
     "internalComment": { "$ref": "#/$defs/stringOrStringArray" },
     "customerId": { "type": "string" },
     "customerExternalId": { "$ref": "#/$defs/stringOrStringArray" },

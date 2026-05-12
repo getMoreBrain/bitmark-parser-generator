@@ -7,6 +7,7 @@
       "id": [
         "152331"
       ],
+      "gUri": "https://example.com/bit/cloze-152331",
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -197,7 +198,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.cloze:bitmark++]\n[@id:152331]\nUmsatzsteuern\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_4.png|\n\nVOST-Berechnungen\n\nSchulungs AG\nDirekt:\t 27,5 % auf CHF 20.000\tCHF\t5.500\nIndirekt:\t\tCHF\t0\n\nVerlag AG\nDirekt:\t85,7 % auf CHF 80.000\tCHF\t68.560\nIndirekt:\t14,3 % auf 27,5 % auf CHF 80.000\tCHF\t3.146\n\nTotal Vorsteuern Gruppe\tCHF\t77.206\n\nMWST-Abrechnung\n\nUmsatzsteuer\t\tCHF\t[_151.640]\n\n./. Vorsteuern\t\tCHF\t[_-77.206]\n\nNettosteuer\t\tCHF\t[_74.434]"
+    "bitmark": "[.cloze:bitmark++]\n[@id:152331]\n[@gUri:https://example.com/bit/cloze-152331]\nUmsatzsteuern\n|image:https://docs.bitmark.cloud/bit-books/akad/skript_mehrwertsteuer/web-resources/images/akad_mwst_fallbeispiele_4.png|\n\nVOST-Berechnungen\n\nSchulungs AG\nDirekt:\t 27,5 % auf CHF 20.000\tCHF\t5.500\nIndirekt:\t\tCHF\t0\n\nVerlag AG\nDirekt:\t85,7 % auf CHF 80.000\tCHF\t68.560\nIndirekt:\t14,3 % auf 27,5 % auf CHF 80.000\tCHF\t3.146\n\nTotal Vorsteuern Gruppe\tCHF\t77.206\n\nMWST-Abrechnung\n\nUmsatzsteuer\t\tCHF\t[_151.640]\n\n./. Vorsteuern\t\tCHF\t[_-77.206]\n\nNettosteuer\t\tCHF\t[_74.434]"
   },
   {
     "bit": {
