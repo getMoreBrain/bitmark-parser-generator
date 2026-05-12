@@ -1003,6 +1003,7 @@ const GROUPS: _GroupsConfig = {
               {
                 key: ConfigKey.tag_reference,
                 jsonKey: 'referenceEnd',
+                exportJsonKey: { referenceEnd: '$' },
                 format: TagFormat.plainText,
                 description: 'The referenceEnd for the book(s) in the learning path',
                 maxCount: 1,
