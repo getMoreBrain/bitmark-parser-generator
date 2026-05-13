@@ -1159,6 +1159,44 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_backgroundWallpaper]: {
+    type: GroupConfigType.standard,
+    description: 'Background wallpaper tags',
+    tags: [
+      {
+        key: ConfigKey.resource_backgroundWallpaper,
+        exportJsonKey: { backgroundWallpaper: { type: 'image', image: { src: '$' } } },
+        description: 'Background wallpaper for the image, used to set a background for the image',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommon,
+            description: 'Common resource image tags for images',
+          },
+        ],
+      },
+    ],
+  },
+  [ConfigKey.group_imageNoZoom]: {
+    type: GroupConfigType.standard,
+    description: 'Image bit tags',
+    tags: [
+      {
+        key: ConfigKey.group_backgroundWallpaper,
+        description:
+          'Background wallpaper tags for images, used to define background properties for images',
+      },
+      {
+        key: ConfigKey.group_resourceBitTags,
+        description:
+          'Resource bit tags for images, used to define additional properties for images',
+      },
+      {
+        key: ConfigKey.group_resourceImageNoZoom,
+        description: 'Resource image tags for images, used to attach images to the bit',
+        minCount: 1,
+      },
+    ],
+  },
   //
   // Resource groups
   //
@@ -1275,6 +1313,24 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_zoomDisabled,
         description: 'If true, zooming is disabled for the image',
         format: TagFormat.boolean,
+      },
+    ],
+  },
+  [ConfigKey.group_resourceImageCommonNoZoom]: {
+    type: GroupConfigType.standard,
+    description: 'Common properties for image resources where @zoomDisabled defaults to true',
+    tags: [
+      {
+        key: ConfigKey.group_resourceImageCommon,
+        description: 'Common image properties',
+      },
+      // Shadow @zoomDisabled with a true default (overrides the false default
+      // inherited from group_resourceImageCommon at hydration via later-wins).
+      {
+        key: ConfigKey.property_zoomDisabled,
+        description: 'If true, zooming is disabled for the image (defaults to true)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
       },
     ],
   },
@@ -1417,6 +1473,23 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.group_resourceImageCommon,
             description: 'Common image properties for the image resource',
+          },
+        ],
+      },
+    ],
+  },
+  [ConfigKey.group_resourceImageNoZoom]: {
+    type: GroupConfigType.resource,
+    description: 'Image resource where @zoomDisabled defaults to true',
+    tags: [
+      {
+        key: ConfigKey.resource_image,
+        exportJsonKey: { resource: { type: 'image', image: { src: '$' } } },
+        description: 'The image resource (no-zoom default)',
+        chain: [
+          {
+            key: ConfigKey.group_resourceImageCommonNoZoom,
+            description: 'Common image properties with @zoomDisabled defaulting to true',
           },
         ],
       },

@@ -17,13 +17,17 @@ const groupKeys = {
   group_advertisingCommon: 'group_advertisingCommon',
   group_platformStylesCommon: 'group_platformStylesCommon',
   group_quizCommon: 'group_quizCommon',
+  group_backgroundWallpaper: 'group_backgroundWallpaper',
+  group_imageNoZoom: 'group_imageNoZoom',
   group_resourceBitTags: 'group_resourceBitTags',
   group_resourceCommon: 'group_resourceCommon',
   group_resourceImageCommon: 'group_resourceImageCommon',
+  group_resourceImageCommonNoZoom: 'group_resourceImageCommonNoZoom',
   group_resourceAudioCommon: 'group_resourceAudioCommon',
   group_resourceVideoCommon: 'group_resourceVideoCommon',
   group_resourceIcon: 'group_resourceIcon', // Alias for image
   group_resourceImage: 'group_resourceImage',
+  group_resourceImageNoZoom: 'group_resourceImageNoZoom',
   group_resourceImageEmbed: 'group_resourceImageEmbed',
   group_resourceImageLink: 'group_resourceImageLink',
   group_resourceImageResponsive: 'group_resourceImageResponsive', // Combo resource

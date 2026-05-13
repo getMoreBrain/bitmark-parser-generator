@@ -3016,8 +3016,7 @@ const BITS: _BitsConfig = {
       },
       {
         // Image resource
-
-        key: ConfigKey.group_resourceImage,
+        key: ConfigKey.group_resourceImageNoZoom,
         description: 'Resource image tags for logo grave images, used to attach images',
         exportJsonKey: { images: '$' },
         minCount: 1,
@@ -3520,15 +3519,9 @@ const BITS: _BitsConfig = {
     description: 'Image bit, used to create images in articles or books',
     tags: [
       {
-        key: ConfigKey.resource_backgroundWallpaper,
-        exportJsonKey: { backgroundWallpaper: { type: 'image', image: { src: '$' } } },
-        description: 'Background wallpaper for the image, used to set a background for the image',
-        chain: [
-          {
-            key: ConfigKey.group_resourceImageCommon,
-            description: 'Common resource image tags for images',
-          },
-        ],
+        key: ConfigKey.group_backgroundWallpaper,
+        description:
+          'Background wallpaper tags for images, used to define background properties for images',
       },
       {
         key: ConfigKey.group_resourceBitTags,
@@ -3639,8 +3632,16 @@ const BITS: _BitsConfig = {
   },
   [BitType.imageSeparator]: {
     since: '1.4.15',
-    baseBitType: BitType.image,
+    baseBitType: BitType._standard,
     description: 'Image separator bit, used to create separators in articles or books',
+    tags: [
+      {
+        key: ConfigKey.group_imageNoZoom,
+        description:
+          'Image no zoom tags for images, used to define whether images should have zoom functionality',
+      },
+    ],
+    resourceAttachmentAllowed: false,
   },
   [BitType.imageSeparatorAlt]: {
     since: '1.16.0',
@@ -3682,7 +3683,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageBanner]: {
     since: '1.4.3',
-    baseBitType: BitType.image,
+    baseBitType: BitType._standard,
     description: 'Page banner bit, used to create banners for pages in articles or books',
     tags: [
       {
@@ -3690,7 +3691,13 @@ const BITS: _BitsConfig = {
         description: 'Slug for the page banner, used to identify the banner in the system',
         format: TagFormat.plainText,
       },
+      {
+        key: ConfigKey.group_imageNoZoom,
+        description:
+          'Image no zoom tags for images, used to define whether images should have zoom functionality',
+      },
     ],
+    resourceAttachmentAllowed: false,
   },
   [BitType.pageHero]: {
     since: '1.11.0',
@@ -3714,15 +3721,9 @@ const BITS: _BitsConfig = {
         format: TagFormat.bitmarkText,
       },
       {
-        key: ConfigKey.resource_backgroundWallpaper,
-        exportJsonKey: { backgroundWallpaper: { type: 'image', image: { src: '$' } } },
-        description: 'Background wallpaper for the image, used to set a background for the image',
-        chain: [
-          {
-            key: ConfigKey.group_resourceImageCommon,
-            description: 'Common resource image tags for images',
-          },
-        ],
+        key: ConfigKey.group_backgroundWallpaper,
+        description:
+          'Background wallpaper tags for images, used to define background properties for images',
       },
       {
         key: ConfigKey.group_resourceBitTags,
@@ -3885,8 +3886,7 @@ const BITS: _BitsConfig = {
       },
       {
         // Image resource
-
-        key: ConfigKey.group_resourceImage,
+        key: ConfigKey.group_resourceImageNoZoom,
         description: 'Resource image tags for logo grave images, used to attach images',
         exportJsonKey: { logos: '$' },
         minCount: 1,
@@ -5388,15 +5388,9 @@ const BITS: _BitsConfig = {
         format: TagFormat.bitmarkText,
       },
       {
-        key: ConfigKey.resource_backgroundWallpaper,
-        exportJsonKey: { backgroundWallpaper: { type: 'image', image: { src: '$' } } },
-        description: 'Background wallpaper for the image, used to set a background for the image',
-        chain: [
-          {
-            key: ConfigKey.group_resourceImageCommon,
-            description: 'Common resource image tags for images',
-          },
-        ],
+        key: ConfigKey.group_backgroundWallpaper,
+        description:
+          'Background wallpaper tags for images, used to define background properties for images',
       },
       {
         key: ConfigKey.group_resourceBitTags,
