@@ -2167,6 +2167,18 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.article,
     description: 'Article AI bit, used to create AI-generated articles',
+    tags: [
+      {
+        // Shadows the inherited @aiGenerated from the standard group: this
+        // bit type forces aiGenerated:true regardless of source value or
+        // absence. Literal `true` in the export pattern ignores `$`.
+        key: ConfigKey.property_aiGenerated,
+        description: 'AI-generated flag, forced true for article-ai bits',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+        exportJsonKey: { aiGenerated: true },
+      },
+    ],
   },
   [BitType.articleAttachment]: {
     since: '1.3.0',
@@ -2530,6 +2542,18 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.note,
     description: 'Note AI bit, used to create AI-generated notes in articles or books',
+    tags: [
+      {
+        // Shadows the inherited @aiGenerated from the standard group: this
+        // bit type forces aiGenerated:true regardless of source value or
+        // absence. Literal `true` in the export pattern ignores `$`.
+        key: ConfigKey.property_aiGenerated,
+        description: 'AI-generated flag, forced true for article-ai bits',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+        exportJsonKey: { aiGenerated: true },
+      },
+    ],
   },
   [BitType.notebookArticle]: {
     since: '1.3.0',
@@ -2665,6 +2689,18 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.summary,
     description: 'AI-generated summary bit',
+    tags: [
+      {
+        // Shadows the inherited @aiGenerated from the standard group: this
+        // bit type forces aiGenerated:true regardless of source value or
+        // absence. Literal `true` in the export pattern ignores `$`.
+        key: ConfigKey.property_aiGenerated,
+        description: 'AI-generated flag, forced true for article-ai bits',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+        exportJsonKey: { aiGenerated: true },
+      },
+    ],
   },
   [BitType.videoTranscript]: {
     since: '1.3.0',
@@ -4989,6 +5025,7 @@ const BITS: _BitsConfig = {
           'Resolved status for the review note, used to indicate if the note is resolved',
         format: TagFormat.boolean,
         defaultValue: 'false',
+        nullable: true,
       },
       {
         key: ConfigKey.property_resolvedDate,
