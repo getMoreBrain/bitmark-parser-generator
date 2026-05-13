@@ -1321,11 +1321,45 @@ const GROUPS: _GroupsConfig = {
     description: 'Common properties for image resources where @zoomDisabled defaults to true',
     tags: [
       {
-        key: ConfigKey.group_resourceImageCommon,
-        description: 'Common image properties',
+        key: ConfigKey.group_resourceCommon,
+        description: 'Common resource properties',
       },
-      // Shadow @zoomDisabled with a true default (overrides the false default
-      // inherited from group_resourceImageCommon at hydration via later-wins).
+      {
+        key: ConfigKey.property_src1x,
+        description: 'The source URL for the image at 1x resolution',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_src2x,
+        description: 'The source URL for the image at 2x resolution',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_src3x,
+        description: 'The source URL for the image at 3x resolution',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_src4x,
+        description: 'The source URL for the image at 4x resolution',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_width,
+        description: 'The width of the image',
+        format: TagFormat.number,
+      },
+      {
+        key: ConfigKey.property_height,
+        description: 'The height of the image',
+        format: TagFormat.number,
+      },
+      {
+        key: ConfigKey.property_alt,
+        description: 'The alternative text for the image',
+        format: TagFormat.plainText,
+      },
+      // @zoomDisabled with a true default
       {
         key: ConfigKey.property_zoomDisabled,
         description: 'If true, zooming is disabled for the image (defaults to true)',
