@@ -612,9 +612,9 @@ const GROUPS: _GroupsConfig = {
               },
               {
                 '@absent': {
-                  isExample: '$parent.isCorrect',
+                  isExample: true,
                   example: '$parent.isCorrect',
-                  '@bit': { isExample: '$parent.isCorrect' },
+                  '@bit': { isExample: true },
                 },
               },
               { isExample: true, example: '$', '@bit': { isExample: true } },
@@ -664,9 +664,9 @@ const GROUPS: _GroupsConfig = {
               },
               {
                 '@absent': {
-                  isExample: '$parent.isCorrect',
+                  isExample: true,
                   example: '$parent.isCorrect',
-                  '@bit': { isExample: '$parent.isCorrect' },
+                  '@bit': { isExample: true },
                 },
               },
               { isExample: true, example: '$', '@bit': { isExample: true } },
@@ -722,9 +722,9 @@ const GROUPS: _GroupsConfig = {
               },
               {
                 '@absent': {
-                  isExample: '$parent.isCorrect',
+                  isExample: true,
                   example: '$parent.isCorrect',
-                  '@bit': { isExample: '$parent.isCorrect' },
+                  '@bit': { isExample: true },
                 },
               },
               { isExample: true, example: '$', '@bit': { isExample: true } },
@@ -774,9 +774,9 @@ const GROUPS: _GroupsConfig = {
               },
               {
                 '@absent': {
-                  isExample: '$parent.isCorrect',
+                  isExample: true,
                   example: '$parent.isCorrect',
-                  '@bit': { isExample: '$parent.isCorrect' },
+                  '@bit': { isExample: true },
                 },
               },
               { isExample: true, example: '$', '@bit': { isExample: true } },
