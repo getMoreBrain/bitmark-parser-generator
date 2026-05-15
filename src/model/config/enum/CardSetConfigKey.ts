@@ -6,6 +6,7 @@ const CardSetConfigKey = {
   elements: 'elements',
   statements: 'statements',
   quiz: 'quiz',
+  quizResponses: 'quizResponses',
   feedback: 'feedback',
   questions: 'questions',
   matchPairs: 'matchPairs',

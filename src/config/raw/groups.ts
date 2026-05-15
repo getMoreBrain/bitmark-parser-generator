@@ -678,6 +678,116 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_trueFalseResponses]: {
+    type: GroupConfigType.standard,
+    description: 'True/False Responses chain',
+    tags: [
+      {
+        exportJsonKey: { responses: [{ response: '$', isCorrect: true }] },
+        key: ConfigKey.tag_true,
+        description: 'True value for a true/false statement/question',
+        maxCount: Count.infinity,
+        format: TagFormat.plainText,
+        chain: [
+          {
+            key: ConfigKey.tag_true,
+            jsonKey: 'responses[]|set(isCorrect=true)',
+            exportJsonKey: { responses: [{ response: '$', isCorrect: true }] },
+            description: 'True values for a true/false statement/question',
+            maxCount: Count.infinity,
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.tag_false,
+            jsonKey: 'responses[]|set(isCorrect=false)',
+            exportJsonKey: { responses: [{ response: '$', isCorrect: false }] },
+            description: 'False values for a true/false statement/question',
+            maxCount: Count.infinity,
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.group_standardItemLeadInstructionHint,
+            description: 'Item, lead, page number, margin number, instruction and hint tags',
+          },
+          {
+            key: ConfigKey.property_example,
+            jsonKey: 'example',
+            exportJsonKey: [
+              {
+                '@keyonly': {
+                  isExample: true,
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: true },
+                },
+              },
+              {
+                '@absent': {
+                  isExample: '$parent.isCorrect',
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: '$parent.isCorrect' },
+                },
+              },
+              { isExample: true, example: '$', '@bit': { isExample: true } },
+            ],
+            description: 'An example for the true/false statement/question',
+            format: TagFormat.boolean,
+          },
+        ],
+      },
+      {
+        exportJsonKey: { responses: [{ response: '$', isCorrect: false }] },
+        key: ConfigKey.tag_false,
+        description: 'False value for a true/false statement/question',
+        maxCount: Count.infinity,
+        format: TagFormat.plainText,
+        chain: [
+          {
+            key: ConfigKey.tag_true,
+            jsonKey: 'responses[]|set(isCorrect=true)',
+            exportJsonKey: { responses: [{ response: '$', isCorrect: true }] },
+            description: 'True values for a true/false statement/question',
+            maxCount: Count.infinity,
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.tag_false,
+            jsonKey: 'responses[]|set(isCorrect=false)',
+            exportJsonKey: { responses: [{ response: '$', isCorrect: false }] },
+            description: 'False values for a true/false statement/question',
+            maxCount: Count.infinity,
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.group_standardItemLeadInstructionHint,
+            description: 'Item, lead, page number, margin number, instruction and hint tags',
+          },
+          {
+            key: ConfigKey.property_example,
+            jsonKey: 'example',
+            exportJsonKey: [
+              {
+                '@keyonly': {
+                  isExample: true,
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: true },
+                },
+              },
+              {
+                '@absent': {
+                  isExample: '$parent.isCorrect',
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: '$parent.isCorrect' },
+                },
+              },
+              { isExample: true, example: '$', '@bit': { isExample: true } },
+            ],
+            description: 'An example for the true/false statement/question',
+            format: TagFormat.boolean,
+          },
+        ],
+      },
+    ],
+  },
   [ConfigKey.group_markConfig]: {
     type: GroupConfigType.standard,
     description: 'Mark configuration chain',
@@ -1458,21 +1568,25 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_src1x,
         description: 'The source URL for the video at 1x resolution',
         format: TagFormat.plainText,
+        exportJsonKey: { thumbnails: [{ src: '$' }] },
       },
       {
         key: ConfigKey.property_src2x,
         description: 'The source URL for the video at 2x resolution',
         format: TagFormat.plainText,
+        exportJsonKey: { thumbnails: [{ src: '$' }] },
       },
       {
         key: ConfigKey.property_src3x,
         description: 'The source URL for the video at 3x resolution',
         format: TagFormat.plainText,
+        exportJsonKey: { thumbnails: [{ src: '$' }] },
       },
       {
         key: ConfigKey.property_src4x,
         description: 'The source URL for the video at 4x resolution',
         format: TagFormat.plainText,
+        exportJsonKey: { thumbnails: [{ src: '$' }] },
       },
     ],
   },
@@ -1485,6 +1599,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_icon,
+        exportJsonKey: { resource: { type: 'icon', icon: { src: '$' } } },
         description: 'The icon resource',
         chain: [
           {
@@ -1535,6 +1650,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_imagePortrait,
+        exportJsonKey: { resource: { type: 'image-portrait', imagePortrait: { src: '$' } } },
         description: 'The portrait image resource',
         chain: [
           {
@@ -1551,6 +1667,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_imageLandscape,
+        exportJsonKey: { resource: { type: 'image-landscape', imageLandscape: { src: '$' } } },
         description: 'The landscape image resource',
         chain: [
           {
@@ -1567,6 +1684,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_imageEmbed,
+        exportJsonKey: { resource: { type: 'image-embed', imageEmbed: { src: '$' } } },
         description: 'The embedded image resource',
         chain: [
           {
@@ -1740,6 +1858,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_article,
+        exportJsonKey: { resource: { type: 'article', article: { body: '$' } } },
         description: 'The article resource',
         chain: [
           {
@@ -1756,6 +1875,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_articleEmbed,
+        exportJsonKey: { resource: { type: 'article-embed', articleEmbed: { url: '$' } } },
         description: 'The embedded article resource',
         chain: [
           {
@@ -1772,6 +1892,7 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.resource_articleLink,
+        exportJsonKey: { resource: { type: 'article-link', articleLink: { url: '$' } } },
         description: 'The link to the article resource',
         chain: [
           {

@@ -1364,11 +1364,36 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.cloze,
     description:
       'Cloze instruction grouped bit, used for cloze questions with grouped instructions',
+    tags: [
+      {
+        key: ConfigKey.property_quizCountItems,
+        description: 'The number of items in the cloze quiz (instruction-grouped default: true)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+      // Note: quizStrikethroughSolutions defaults to false for instruction-grouped per OLD
+      // JsonGenerator.ts:1689-1690, which equals the Boolean natural default → no override needed.
+    ],
   },
   [BitType.clozeSolutionGrouped]: {
     since: '1.3.0',
     baseBitType: BitType.cloze,
     description: 'Cloze solution grouped bit, used for cloze questions with grouped solutions',
+    tags: [
+      {
+        key: ConfigKey.property_quizCountItems,
+        description: 'The number of items in the cloze quiz (solution-grouped default: true)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+      {
+        key: ConfigKey.property_quizStrikethroughSolutions,
+        description:
+          'If the cloze solutions should be strikethrough (solution-grouped default: true)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.clozeSeveral]: {
     since: '3.5.0',
@@ -2992,7 +3017,7 @@ const BITS: _BitsConfig = {
         description: 'Product ID for the module product, used to link to a specific product',
         format: TagFormat.plainText,
         minCount: 1,
-        maxCount: Count.infinity,
+        maxCount: 1,
       },
     ],
   },
@@ -4514,7 +4539,7 @@ const BITS: _BitsConfig = {
         description: 'Common quiz tags for multiple response 1 questions',
       },
       {
-        key: ConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalseResponses,
         description: 'True/False tags for multiple response 1 questions',
       },
     ],
@@ -4537,11 +4562,11 @@ const BITS: _BitsConfig = {
         description: 'Common quiz tags for multiple response questions',
       },
       {
-        key: ConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalseResponses,
         description: 'True/False tags for multiple response questions',
       }, // This is actually for multiple-response-1, but we support it here as well (as many bits are wrong)
     ],
-    cardSet: CardSetConfigKey.quiz,
+    cardSet: CardSetConfigKey.quizResponses,
   },
   [BitType.coachSelfReflectionMultipleResponse]: {
     since: '1.3.0',

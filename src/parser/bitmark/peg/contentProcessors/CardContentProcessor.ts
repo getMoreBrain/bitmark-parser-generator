@@ -100,6 +100,7 @@ function buildCards(
       break;
 
     case CardSetConfigKey.quiz:
+    case CardSetConfigKey.quizResponses:
       result = parseQuiz(context, bitType, processedCardSet, choicesV1, responsesV1);
       break;
 
