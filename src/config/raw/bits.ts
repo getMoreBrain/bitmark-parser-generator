@@ -5161,7 +5161,7 @@ const BITS: _BitsConfig = {
           { isExample: true, example: '$' },
         ],
         description: 'The example flag for the bit (boolean)',
-        format: TagFormat.plainText,
+        format: TagFormat.boolean,
       },
     ],
     cardSet: CardSetConfigKey.elements,
