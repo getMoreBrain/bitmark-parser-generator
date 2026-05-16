@@ -471,8 +471,8 @@ const GROUPS: _GroupsConfig = {
     tags: [
       {
         key: ConfigKey.property_person,
-        jsonKey: 'partner.name',
-        exportJsonKey: { partner: { name: '$' } },
+        jsonKey: 'person.name',
+        exportJsonKey: { person: { name: '$' } },
         description: 'A person',
         format: TagFormat.plainText,
         chain: [
@@ -492,8 +492,8 @@ const GROUPS: _GroupsConfig = {
       {
         // Deprecated (parter renamed to person)
         key: ConfigKey.property_partner,
-        jsonKey: 'partner.name',
-        exportJsonKey: { partner: { name: '$' } },
+        jsonKey: 'person.name',
+        exportJsonKey: { person: { name: '$' } },
         description: 'A partner',
         format: TagFormat.plainText,
         chain: [
@@ -617,9 +617,9 @@ const GROUPS: _GroupsConfig = {
               },
               {
                 '@absent': {
-                  isExample: true,
+                  isExample: '$parent.isCorrect',
                   example: '$parent.isCorrect',
-                  '@bit': { isExample: true },
+                  '@bit': { isExample: '$parent.isCorrect' },
                 },
               },
               { isExample: true, example: '$', '@bit': { isExample: true } },
@@ -727,9 +727,9 @@ const GROUPS: _GroupsConfig = {
               },
               {
                 '@absent': {
-                  isExample: true,
+                  isExample: '$parent.isCorrect',
                   example: '$parent.isCorrect',
-                  '@bit': { isExample: true },
+                  '@bit': { isExample: '$parent.isCorrect' },
                 },
               },
               { isExample: true, example: '$', '@bit': { isExample: true } },

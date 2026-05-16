@@ -1628,6 +1628,7 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.group_person,
+        exportJsonKey: { partner: { name: '$' } },
         description: 'Tags for the person in the conversation',
       },
     ],
@@ -5309,7 +5310,7 @@ const BITS: _BitsConfig = {
           { isExample: true, example: '$' },
         ],
         description: 'The example flag for the bit (boolean)',
-        format: TagFormat.plainText,
+        format: TagFormat.boolean,
       },
     ],
     cardSet: CardSetConfigKey.elements,
