@@ -487,8 +487,8 @@ const GROUPS: _GroupsConfig = {
       {
         // Deprecated (parter renamed to person)
         key: ConfigKey.property_partner,
-        jsonKey: 'partner.name',
-        exportJsonKey: { partner: { name: '$' } },
+        jsonKey: 'person.name',
+        exportJsonKey: { person: { name: '$' } },
         description: 'A partner',
         format: TagFormat.plainText,
         chain: [

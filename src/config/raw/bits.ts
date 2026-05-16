@@ -1604,6 +1604,7 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.group_person,
+        exportJsonKey: { partner: { name: '$' } },
         description: 'Tags for the person in the conversation',
       },
     ],
