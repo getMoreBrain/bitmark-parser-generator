@@ -243,6 +243,18 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Standard tags for the match pair.',
               },
               {
+                // Pair-level example: emit `isExample` alongside `example`
+                // (matches OLD parser's per-pair allow-list behaviour).
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker / value on the match pair.',
+                format: TagFormat.bitmarkText,
+              },
+              {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match pair.',
                 format: TagFormat.plainText,
