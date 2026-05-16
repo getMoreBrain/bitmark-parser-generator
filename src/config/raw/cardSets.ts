@@ -460,6 +460,7 @@ const CARDSETS: _CardSetsConfig = {
           {
             jsonKey: 'key',
             exportJsonKey: { key: '$' },
+            format: TextFormat.plainText,
             tags: [
               {
                 key: ConfigKey.group_standardItemLeadInstructionHint,
@@ -502,6 +503,7 @@ const CARDSETS: _CardSetsConfig = {
           {
             jsonKey: 'cells[{s}].values[]',
             exportJsonKey: { cells: { $s: { values: ['$'] } } },
+            format: TextFormat.plainText,
             tags: [
               {
                 key: ConfigKey.group_standardItemLeadInstructionHint,
@@ -515,9 +517,6 @@ const CARDSETS: _CardSetsConfig = {
                       cells: { $s: { isExample: true, example: '$parent.values[0]' } },
                       '@bit': { isExample: true },
                     },
-                  },
-                  {
-                    '@absent': { cells: { $s: { isExample: true, example: '$parent.values[0]' } } },
                   },
                   { cells: { $s: { isExample: true, example: '$' } }, '@bit': { isExample: true } },
                 ],
