@@ -583,12 +583,18 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.property_example,
                 exportJsonKey: [
-                  { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
+                  {
+                    '@keyonly': {
+                      isExample: true,
+                      example: true,
+                      '@bit': { isExample: true },
+                    },
+                  },
                   { '@absent': { isExample: true, '@bit': { isExample: true } } },
-                  { isExample: true, '@bit': { isExample: true } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
                 description:
-                  'Example marker on the statement; only default form is meaningful, valued forms fall back to the marker.',
+                  'Example marker on the statement. Bare `[@example]` emits the boolean marker; valued `[@example:true|false]` emits the literal value.',
                 format: TagFormat.boolean,
               },
             ],
