@@ -518,10 +518,13 @@ const CARDSETS: _CardSetsConfig = {
                       '@bit': { isExample: true },
                     },
                   },
+                  {
+                    '@absent': { cells: { $s: { isExample: true, example: '$parent.values[0]' } } },
+                  },
                   { cells: { $s: { isExample: true, example: '$' } }, '@bit': { isExample: true } },
                 ],
                 description: 'Example text for the match matrix.',
-                format: TagFormat.plainText,
+                format: TagFormat.bitmarkText,
               },
               {
                 key: ConfigKey.tag_title,
