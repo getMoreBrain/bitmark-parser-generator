@@ -104,29 +104,6 @@ const CARDSETS: _CardSetsConfig = {
                   alternativeAnswers: [{ icon: { type: 'image', image: { src: '$' } } }],
                 },
               },
-              {
-                key: ConfigKey.property_example,
-                exportJsonKey: [
-                  {
-                    '@keyonly': {
-                      alternativeAnswers: [{ isExample: true, example: true }],
-                      '@bit': { isExample: true },
-                    },
-                  },
-                  {
-                    '@absent': {
-                      alternativeAnswers: [{ isExample: true, example: true }],
-                      '@bit': { isExample: true },
-                    },
-                  },
-                  {
-                    alternativeAnswers: [{ isExample: true, example: '$' }],
-                    '@bit': { isExample: true },
-                  },
-                ],
-                description: 'Example marker for the flashcard alternative answer.',
-                format: TagFormat.bitmarkText,
-              },
             ],
             repeatCount: Count.infinity,
           },
@@ -237,29 +214,6 @@ const CARDSETS: _CardSetsConfig = {
                 exportJsonKey: {
                   alternativeDefinitions: [{ icon: { type: 'image', image: { src: '$' } } }],
                 },
-              },
-              {
-                key: ConfigKey.property_example,
-                exportJsonKey: [
-                  {
-                    '@keyonly': {
-                      alternativeDefinitions: [{ isExample: true, example: true }],
-                      '@bit': { isExample: true },
-                    },
-                  },
-                  {
-                    '@absent': {
-                      alternativeDefinitions: [{ isExample: true, example: true }],
-                      '@bit': { isExample: true },
-                    },
-                  },
-                  {
-                    alternativeDefinitions: [{ isExample: true, example: '$' }],
-                    '@bit': { isExample: true },
-                  },
-                ],
-                description: 'Example marker for the alternative definition.',
-                format: TagFormat.bitmarkText,
               },
             ],
             repeatCount: Count.infinity,
