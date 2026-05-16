@@ -1319,6 +1319,17 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_trueFalse,
         description: 'Tags for true/false questions in cloze and multiple choice text bits',
       },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+      },
     ],
   },
   [BitType.coachCallToActionClozeAndMultipleChoiceText]: {
@@ -1356,6 +1367,19 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.group_gap,
         description: 'Tags for gaps in cloze bits',
+      },
+      {
+        // Override inherited @example: cloze is in OLD parser's
+        // `isTopLevelExample` allow-list, so [@example] at bit-header
+        // emits `isExample: true`.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
       },
     ],
   },
@@ -3503,7 +3527,19 @@ const BITS: _BitsConfig = {
     since: '1.34.0',
     baseBitType: BitType._standard,
     description: 'Definition list bit, used to create lists of definitions in articles or books',
-
+    tags: [
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+      },
+    ],
     cardSet: CardSetConfigKey.definitionList,
   },
   [BitType.metaSearchDefaultTerms]: {
@@ -3527,6 +3563,17 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.group_quizCommon,
         description: 'Common quiz tags for flashcards',
+      },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
       },
     ],
     cardSet: CardSetConfigKey.flashcard,
@@ -3571,6 +3618,17 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.group_trueFalse,
         description: 'True/False quiz tags for highlighted text',
+      },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
       },
     ],
   },
@@ -3990,6 +4048,17 @@ const BITS: _BitsConfig = {
         description: 'Reasonable number of characters for the interview, used to limit input size',
         format: TagFormat.number,
       },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+      },
     ],
     cardSet: CardSetConfigKey.questions,
   },
@@ -4356,6 +4425,17 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_mark,
         description: 'Mark tags, used to define the content of marks',
       },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+      },
     ],
   },
   [BitType.match]: {
@@ -4375,6 +4455,19 @@ const BITS: _BitsConfig = {
           'Case sensitivity for matching pairs, used to define if matches are case-sensitive',
         format: TagFormat.boolean,
         defaultValue: 'true',
+      },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list
+        // (covers match, matchAll, matchReverse, matchAllReverse,
+        // matchSolutionGrouped, matchMatrix, matchAudio, matchPicture).
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
       },
     ],
     cardSet: CardSetConfigKey.matchPairs,
@@ -4467,6 +4560,17 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_trueFalse,
         description: 'True/False tags for multiple choice 1 questions',
       },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+      },
     ],
   },
   [BitType.coachSelfReflectionMultipleChoice1]: {
@@ -4490,6 +4594,17 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_trueFalse,
         description: 'True/False tags for multiple choice questions',
       }, // This is actually for multiple-choice-1, but we support it here as well (as many bits are wrong)
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+      },
     ],
     cardSet: CardSetConfigKey.quiz,
   },
@@ -4512,6 +4627,17 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.group_trueFalse,
         description: 'True/False tags for multiple choice text questions',
+      },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
       },
     ],
   },
@@ -4542,6 +4668,17 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_trueFalseResponses,
         description: 'True/False tags for multiple response 1 questions',
       },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+      },
     ],
   },
   [BitType.coachSelfReflectionMultipleResponse1]: {
@@ -4565,6 +4702,17 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_trueFalseResponses,
         description: 'True/False tags for multiple response questions',
       }, // This is actually for multiple-response-1, but we support it here as well (as many bits are wrong)
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+      },
     ],
     cardSet: CardSetConfigKey.quizResponses,
   },
@@ -5913,6 +6061,17 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_labelFalse,
         description: 'Label for the false option in the true/false question',
         format: TagFormat.plainText,
+      },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
       },
     ],
     cardSet: CardSetConfigKey.statements,

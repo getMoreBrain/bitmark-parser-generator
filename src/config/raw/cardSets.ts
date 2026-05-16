@@ -35,6 +35,16 @@ const CARDSETS: _CardSetsConfig = {
                 jsonKey: 'question.icon|resource(type=image, key=image)',
                 exportJsonKey: { question: { icon: { type: 'image', image: { src: '$' } } } },
               },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the flashcard question.',
+                format: TagFormat.bitmarkText,
+              },
             ],
           },
         ],
@@ -61,6 +71,16 @@ const CARDSETS: _CardSetsConfig = {
                 jsonKey: 'answer.icon|resource(type=image, key=image)',
                 exportJsonKey: { answer: { icon: { type: 'image', image: { src: '$' } } } },
               },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the flashcard answer.',
+                format: TagFormat.bitmarkText,
+              },
             ],
           },
           {
@@ -83,6 +103,29 @@ const CARDSETS: _CardSetsConfig = {
                 exportJsonKey: {
                   alternativeAnswers: [{ icon: { type: 'image', image: { src: '$' } } }],
                 },
+              },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  {
+                    '@keyonly': {
+                      alternativeAnswers: [{ isExample: true, example: true }],
+                      '@bit': { isExample: true },
+                    },
+                  },
+                  {
+                    '@absent': {
+                      alternativeAnswers: [{ isExample: true, example: true }],
+                      '@bit': { isExample: true },
+                    },
+                  },
+                  {
+                    alternativeAnswers: [{ isExample: true, example: '$' }],
+                    '@bit': { isExample: true },
+                  },
+                ],
+                description: 'Example marker for the flashcard alternative answer.',
+                format: TagFormat.bitmarkText,
               },
             ],
             repeatCount: Count.infinity,
@@ -124,6 +167,16 @@ const CARDSETS: _CardSetsConfig = {
                 jsonKey: 'term.icon|resource(type=image, key=image)',
                 exportJsonKey: { term: { icon: { type: 'image', image: { src: '$' } } } },
               },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the definition term.',
+                format: TagFormat.bitmarkText,
+              },
             ],
           },
         ],
@@ -152,6 +205,16 @@ const CARDSETS: _CardSetsConfig = {
                 jsonKey: 'definition.icon|resource(type=image, key=image)',
                 exportJsonKey: { definition: { icon: { type: 'image', image: { src: '$' } } } },
               },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the definition.',
+                format: TagFormat.bitmarkText,
+              },
             ],
           },
           {
@@ -175,6 +238,29 @@ const CARDSETS: _CardSetsConfig = {
                   alternativeDefinitions: [{ icon: { type: 'image', image: { src: '$' } } }],
                 },
               },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  {
+                    '@keyonly': {
+                      alternativeDefinitions: [{ isExample: true, example: true }],
+                      '@bit': { isExample: true },
+                    },
+                  },
+                  {
+                    '@absent': {
+                      alternativeDefinitions: [{ isExample: true, example: true }],
+                      '@bit': { isExample: true },
+                    },
+                  },
+                  {
+                    alternativeDefinitions: [{ isExample: true, example: '$' }],
+                    '@bit': { isExample: true },
+                  },
+                ],
+                description: 'Example marker for the alternative definition.',
+                format: TagFormat.bitmarkText,
+              },
             ],
             repeatCount: Count.infinity,
           },
@@ -196,6 +282,7 @@ const CARDSETS: _CardSetsConfig = {
           {
             jsonKey: 'key',
             exportJsonKey: { key: '$' },
+            format: TextFormat.plainText,
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -240,6 +327,7 @@ const CARDSETS: _CardSetsConfig = {
           {
             jsonKey: 'values[]',
             exportJsonKey: { values: ['$'] },
+            format: TextFormat.plainText,
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -282,6 +370,7 @@ const CARDSETS: _CardSetsConfig = {
           {
             jsonKey: 'key',
             exportJsonKey: { key: '$' },
+            format: TextFormat.plainText,
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -311,6 +400,7 @@ const CARDSETS: _CardSetsConfig = {
           {
             jsonKey: 'values[]',
             exportJsonKey: { values: ['$'] },
+            format: TextFormat.plainText,
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -348,6 +438,7 @@ const CARDSETS: _CardSetsConfig = {
           {
             jsonKey: 'key',
             exportJsonKey: { key: '$' },
+            format: TextFormat.plainText,
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -377,6 +468,7 @@ const CARDSETS: _CardSetsConfig = {
           {
             jsonKey: 'values[]',
             exportJsonKey: { values: ['$'] },
+            format: TextFormat.plainText,
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -483,7 +575,7 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Title of the match matrix.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
-                exportJsonKey: { '@bit': { heading: { forValues: '$' } } },
+                exportJsonKey: { '@bit': { heading: { forValues: ['$'] } } },
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -651,6 +743,24 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Standard tags for lead, instruction, and hint.',
               },
               {
+                // Feedback choices: `[+]` / `[-]` map to choice + `requireReason`
+                // (NOT `isCorrect` like trueFalse). Shadow the inherited
+                // `tag_true` / `tag_false` from `group_trueFalse` to emit the
+                // feedback-specific shape.
+                key: ConfigKey.tag_true,
+                exportJsonKey: { choices: [{ choice: '$', requireReason: true }] },
+                description: 'Reason-required choice for feedback (`[+]`).',
+                maxCount: Count.infinity,
+                format: TagFormat.plainText,
+              },
+              {
+                key: ConfigKey.tag_false,
+                exportJsonKey: { choices: [{ choice: '$', requireReason: false }] },
+                description: 'Reason-not-required choice for feedback (`[-]`).',
+                maxCount: Count.infinity,
+                format: TagFormat.plainText,
+              },
+              {
                 key: ConfigKey.group_trueFalse,
                 description: 'Group for true/false feedback.',
               },
@@ -759,6 +869,16 @@ const CARDSETS: _CardSetsConfig = {
               {
                 key: ConfigKey.group_standardTags,
                 description: 'Standard tags for the question.',
+              },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the question.',
+                format: TagFormat.bitmarkText,
               },
             ],
           },
@@ -978,6 +1098,7 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.resource_audio,
                 description: 'Audio resource for the pronunciation table.',
                 jsonKey: 'audio',
+                exportJsonKey: { audio: { type: 'audio', audio: { src: '$' } } },
               },
             ],
             repeatCount: Count.infinity,

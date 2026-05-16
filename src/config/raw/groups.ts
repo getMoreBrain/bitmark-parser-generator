@@ -391,15 +391,20 @@ const GROUPS: _GroupsConfig = {
         description: 'Item, lead, page number, margin number, instruction and hint tags',
       },
       {
-        // Bit-level example tag: bare/synthesized records the marker only;
-        // valued [@example:text] emits `isExample: true` and `example` as
-        // PM-rendered rich text (bitmark+ format).
+        // Bit-level example tag (default — non-`isTopLevelExample` bits):
+        // - bare `[@example]`: consume only (records cascade marker, emits
+        //   nothing at bit-level — OLD parser scrubs bit-level isExample
+        //   for bits NOT in its `isTopLevelExample` allow-list).
+        // - synthesized (descendant cascade): still emits `isExample: true`
+        //   at the descendant scope.
+        // - valued `[@example:text]`: emit the example value only; bit-level
+        //   `isExample` is left to bubble from descendants.
+        // Bits in the OLD parser's allow-list (flashcard, definitionList,
+        // sequence, multipleChoice, trueFalse, cloze*, mark, interview,
+        // matchMatrix, match, essay, etc.) override this entry with the
+        // legacy emit-isExample shape.
         key: ConfigKey.property_example,
-        exportJsonKey: [
-          { '@keyonly': { isExample: true } },
-          { '@absent': { isExample: true } },
-          { isExample: true, example: '$' },
-        ],
+        exportJsonKey: [{ '@keyonly': {} }, { '@absent': { isExample: true } }, { example: '$' }],
         description: 'The example(s) for the bit',
         format: TagFormat.bitmarkText,
       },
