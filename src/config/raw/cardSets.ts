@@ -520,7 +520,10 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'cells[{s}].values[]',
-            exportJsonKey: { cells: { $s: { values: ['$'] } } },
+            exportJsonKey: [
+              { '@absent': { '@bit': { heading: { forValues: [''] } } } },
+              { cells: { $s: { values: ['$'] } } },
+            ],
             format: TextFormat.plainText,
             tags: [
               {
