@@ -18,7 +18,10 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'question.text',
-            exportJsonKey: { question: { text: '$' } },
+            exportJsonKey: [
+              { '@absent': { question: {} } },
+              { question: { text: '$' } },
+            ],
             tags: [
               {
                 key: ConfigKey.group_standardTags,
