@@ -304,6 +304,20 @@ class ConfigBuilder {
       if (!cardSetConfig) return undefined;
       const normalizedKey = normalizeCardKey(cardSetKey);
 
+      // Variants have no "inherited-group wrapper" the way bits do
+      // (`writeBitConfigs` always emits a parent `group-{baseBitType}` ref
+      // first, then sorted own tags). Without that wrapper, sorting variant
+      // tags with groups LAST means inherited generic tags (from a group ref
+      // inside the variant) get walked AFTER any direct tag/property
+      // override and overwrite it under the downstream configurator's
+      // last-wins-by-name dedup. Sort groups FIRST so direct overrides win.
+      const variantTagEntriesTypeOrder = [
+        BitTagConfigKeyType.group,
+        BitTagConfigKeyType.tag,
+        BitTagConfigKeyType.property,
+        BitTagConfigKeyType.resource,
+        BitTagConfigKeyType.unknown,
+      ];
       const sides = cardSetConfig.sides.map((side, sideIdx) => {
         const sidePath = `cardSets.${normalizedKey} / sides.${side.name ?? `[${sideIdx}]`}`;
         const variants = side.variants.map((variant, variantIdx) => {
@@ -315,7 +329,8 @@ class ConfigBuilder {
             const typeA = typeFromConfigKey(tagA.key);
             const typeB = typeFromConfigKey(tagB.key);
             const typeOrder =
-              tagEntriesTypeOrder.indexOf(typeA) - tagEntriesTypeOrder.indexOf(typeB);
+              variantTagEntriesTypeOrder.indexOf(typeA) -
+              variantTagEntriesTypeOrder.indexOf(typeB);
             return typeOrder;
           });
 
