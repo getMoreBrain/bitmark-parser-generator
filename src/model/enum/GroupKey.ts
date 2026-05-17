@@ -10,6 +10,7 @@ const groupKeys = {
   group_person: 'group_person',
   group_gap: 'group_gap',
   group_trueFalse: 'group_trueFalse',
+  group_trueFalseInlineSelect: 'group_trueFalseInlineSelect',
   group_trueFalseResponses: 'group_trueFalseResponses',
   group_markConfig: 'group_markConfig',
   group_mark: 'group_mark',

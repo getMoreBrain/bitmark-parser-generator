@@ -1316,7 +1316,7 @@ const BITS: _BitsConfig = {
         description: 'Tags for gaps in cloze and multiple choice text bits',
       },
       {
-        key: ConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalseInlineSelect,
         description: 'Tags for true/false questions in cloze and multiple choice text bits',
       },
       {
@@ -4630,7 +4630,7 @@ const BITS: _BitsConfig = {
         description: 'Common quiz tags for multiple choice text questions',
       },
       {
-        key: ConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalseInlineSelect,
         description: 'True/False tags for multiple choice text questions',
       },
       {

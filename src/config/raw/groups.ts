@@ -797,6 +797,113 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_trueFalseInlineSelect]: {
+    type: GroupConfigType.standard,
+    description:
+      'True/False chain composed inline (select body-bit). +/- tags are consume-only at bit level.',
+    tags: [
+      {
+        exportJsonKey: {},
+        key: ConfigKey.tag_true,
+        description: 'True value for an inline select body bit',
+        maxCount: Count.infinity,
+        format: TagFormat.plainText,
+        chain: [
+          {
+            key: ConfigKey.tag_true,
+            exportJsonKey: {},
+            description: 'True values for an inline select body bit',
+            maxCount: Count.infinity,
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.tag_false,
+            exportJsonKey: {},
+            description: 'False values for an inline select body bit',
+            maxCount: Count.infinity,
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.group_standardItemLeadInstructionHint,
+            description: 'Item, lead, page number, margin number, instruction and hint tags',
+          },
+          {
+            key: ConfigKey.property_example,
+            jsonKey: 'example',
+            exportJsonKey: [
+              {
+                '@keyonly': {
+                  isExample: true,
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: true },
+                },
+              },
+              {
+                '@absent': {
+                  isExample: '$parent.isCorrect',
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: '$parent.isCorrect' },
+                },
+              },
+              { isExample: true, example: '$', '@bit': { isExample: true } },
+            ],
+            description: 'An example for the inline select option',
+            format: TagFormat.boolean,
+          },
+        ],
+      },
+      {
+        exportJsonKey: {},
+        key: ConfigKey.tag_false,
+        description: 'False value for an inline select body bit',
+        maxCount: Count.infinity,
+        format: TagFormat.plainText,
+        chain: [
+          {
+            key: ConfigKey.tag_true,
+            exportJsonKey: {},
+            description: 'True values for an inline select body bit',
+            maxCount: Count.infinity,
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.tag_false,
+            exportJsonKey: {},
+            description: 'False values for an inline select body bit',
+            maxCount: Count.infinity,
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.group_standardItemLeadInstructionHint,
+            description: 'Item, lead, page number, margin number, instruction and hint tags',
+          },
+          {
+            key: ConfigKey.property_example,
+            jsonKey: 'example',
+            exportJsonKey: [
+              {
+                '@keyonly': {
+                  isExample: true,
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: true },
+                },
+              },
+              {
+                '@absent': {
+                  isExample: true,
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: true },
+                },
+              },
+              { isExample: true, example: '$', '@bit': { isExample: true } },
+            ],
+            description: 'An example for the inline select option',
+            format: TagFormat.boolean,
+          },
+        ],
+      },
+    ],
+  },
   [ConfigKey.group_markConfig]: {
     type: GroupConfigType.standard,
     description: 'Mark configuration chain',
