@@ -306,6 +306,26 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Standard tags for the match pair.',
               },
               {
+                // Values-side example override: emit `isExample` + `example`
+                // at pair scope and bubble `isExample` to bit. When bare,
+                // example value comes from the pair's first value (matching
+                // OLD parser's `__isDefaultExample` cascade behaviour).
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  {
+                    '@keyonly': {
+                      isExample: true,
+                      example: '$parent.values[0]',
+                      '@bit': { isExample: true },
+                    },
+                  },
+                  { '@absent': { isExample: true } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker / value on the match pair (values side).',
+                format: TagFormat.bitmarkText,
+              },
+              {
                 key: ConfigKey.tag_title,
                 description: 'Title of the match pair.',
                 format: TagFormat.plainText,
