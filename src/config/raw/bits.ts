@@ -6030,16 +6030,20 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
-        exportJsonKey: { choices: [{ choice: '$', isCorrect: true }] },
+        // PLAN-067 Edit #1: true-false-1's `+` / `-` emit a flat
+        // `{ statement, isCorrect }` at bit root (single-statement bit),
+        // not a `choices[]` array. Format is bitmarkText so the statement
+        // body renders as a ProseMirror tree, matching reference fixtures.
+        exportJsonKey: { statement: '$', isCorrect: true },
         key: ConfigKey.tag_true,
         description: 'Tag for the true option in the true/false question',
-        format: TagFormat.plainText,
+        format: TagFormat.bitmarkText,
       },
       {
-        exportJsonKey: { choices: [{ choice: '$', isCorrect: false }] },
+        exportJsonKey: { statement: '$', isCorrect: false },
         key: ConfigKey.tag_false,
         description: 'Tag for the false option in the true/false question',
-        format: TagFormat.plainText,
+        format: TagFormat.bitmarkText,
       },
       {
         // Override inherited @example from group_standardTags: boolean root
