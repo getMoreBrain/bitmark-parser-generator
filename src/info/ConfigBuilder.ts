@@ -329,8 +329,7 @@ class ConfigBuilder {
             const typeA = typeFromConfigKey(tagA.key);
             const typeB = typeFromConfigKey(tagB.key);
             const typeOrder =
-              variantTagEntriesTypeOrder.indexOf(typeA) -
-              variantTagEntriesTypeOrder.indexOf(typeB);
+              variantTagEntriesTypeOrder.indexOf(typeA) - variantTagEntriesTypeOrder.indexOf(typeB);
             return typeOrder;
           });
 

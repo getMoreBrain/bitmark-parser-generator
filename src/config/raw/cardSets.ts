@@ -18,10 +18,7 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'question.text',
-            exportJsonKey: [
-              { '@absent': { question: {} } },
-              { question: { text: '$' } },
-            ],
+            exportJsonKey: [{ '@absent': { question: {} } }, { question: { text: '$' } }],
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -57,10 +54,7 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'answer.text',
-            exportJsonKey: [
-              { '@absent': { answer: {} } },
-              { answer: { text: '$' } },
-            ],
+            exportJsonKey: [{ '@absent': { answer: {} } }, { answer: { text: '$' } }],
             tags: [
               {
                 key: ConfigKey.group_standardTags,
