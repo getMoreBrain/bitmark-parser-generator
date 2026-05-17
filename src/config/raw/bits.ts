@@ -3101,10 +3101,13 @@ const BITS: _BitsConfig = {
           'Resource bit tags for logo grave images, used to define additional properties',
       },
       {
-        // Image resource
+        // Image resource — fully-expanded shape so each `&image` emission
+        // produces a complete `{type, image: {src}}` object inside the
+        // `images[]` array. Chain attrs like `[@zoomDisabled]` fold under
+        // `images[].image` via the `[]` last-element-merge semantic.
         key: ConfigKey.group_resourceImageNoZoom,
         description: 'Resource image tags for logo grave images, used to attach images',
-        exportJsonKey: { images: '$' },
+        exportJsonKey: { images: [{ type: 'image', image: { src: '$' } }] },
         minCount: 1,
         maxCount: Count.infinity,
       },
@@ -4009,10 +4012,10 @@ const BITS: _BitsConfig = {
           'Resource bit tags for logo grave images, used to define additional properties',
       },
       {
-        // Image resource
+        // Image resource — fully-expanded shape (see BitType.extractorImage).
         key: ConfigKey.group_resourceImageNoZoom,
         description: 'Resource image tags for logo grave images, used to attach images',
-        exportJsonKey: { logos: '$' },
+        exportJsonKey: { logos: [{ type: 'image', image: { src: '$' } }] },
         minCount: 1,
         maxCount: Count.infinity,
       },
@@ -4023,6 +4026,16 @@ const BITS: _BitsConfig = {
     since: '1.6.1',
     baseBitType: BitType.imagesLogoGrave,
     description: 'Prototype images bit, used to create prototype images in articles or books',
+    tags: [
+      {
+        // Override inherited `logos` wrapper with `images` for this bit type.
+        key: ConfigKey.group_resourceImageNoZoom,
+        description: 'Resource image tags for prototype images',
+        exportJsonKey: { images: [{ type: 'image', image: { src: '$' } }] },
+        minCount: 1,
+        maxCount: Count.infinity,
+      },
+    ],
   },
   [BitType.internalLink]: {
     since: '1.3.0',
