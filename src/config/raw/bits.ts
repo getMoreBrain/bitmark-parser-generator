@@ -4465,11 +4465,14 @@ const BITS: _BitsConfig = {
         // Override inherited @example: in `isTopLevelExample` allow-list
         // (covers match, matchAll, matchReverse, matchAllReverse,
         // matchSolutionGrouped, matchMatrix, matchAudio, matchPicture).
+        // Bit-level fires emit only `isExample`; the @example value (when
+        // provided) is recorded in the ancestor stack and consumed by
+        // per-pair/per-cell variant overrides — not surfaced at bit scope.
         key: ConfigKey.property_example,
         exportJsonKey: [
           { '@keyonly': { isExample: true } },
           { '@absent': { isExample: true } },
-          { isExample: true, example: '$' },
+          { isExample: true },
         ],
         description: 'The example(s) for the bit',
         format: TagFormat.bitmarkText,
