@@ -204,7 +204,11 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_groupTag,
         jsonKey: 'groupTag.name',
-        exportJsonKey: { groupTag: { name: '$' } },
+        // PLAN-063: starter-array shape with `@id` declares entity-merge
+        // semantics — repeated `[@groupTag: name]` occurrences with the
+        // same value fold into one entry; chained `@tag` children's
+        // arrays merge as sets.
+        exportJsonKey: { groupTag: [{ '@id': 'name', name: '$' }] },
         description: 'The group tag(s) for the bit',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
