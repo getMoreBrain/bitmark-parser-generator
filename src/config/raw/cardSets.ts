@@ -124,10 +124,7 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'term.text',
-            exportJsonKey: [
-              { '@absent': { term: {} } },
-              { term: { text: '$' } },
-            ],
+            exportJsonKey: [{ '@absent': { term: {} } }, { term: { text: '$' } }],
             tags: [
               {
                 key: ConfigKey.group_standardTags,
@@ -166,10 +163,7 @@ const CARDSETS: _CardSetsConfig = {
         variants: [
           {
             jsonKey: 'definition.text',
-            exportJsonKey: [
-              { '@absent': { definition: {} } },
-              { definition: { text: '$' } },
-            ],
+            exportJsonKey: [{ '@absent': { definition: {} } }, { definition: { text: '$' } }],
             tags: [
               {
                 key: ConfigKey.group_standardTags,
