@@ -3410,6 +3410,10 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.property_book,
+        // Starter-array shape: each `[@book:value]` chain appends a fresh
+        // `{ book, reference }` entry. The chained `►` (tag_reference) lands
+        // inside the most-recently-appended entry as `reference: $`.
+        exportJsonKey: { book: [{ book: '$' }] },
         description: 'Book reference for the page, used to link to a specific book',
         maxCount: Count.infinity,
         chain: [
