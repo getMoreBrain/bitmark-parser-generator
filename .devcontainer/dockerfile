@@ -1,2 +1,0 @@
-FROM mcr.microsoft.com/devcontainers/typescript-node:0-20
-# RUN apt-get update && apt-get -y install poppler-utils mupdf-tools
