@@ -1,31 +1,42 @@
-//devcontainer.json
 {
-  "name": "Node.js",
-
-  // Build image. More info: https://containers.dev/guide/dockerfile
-  "build": { "dockerfile": "Dockerfile" },
-  // "image": "mcr.microsoft.com/devcontainers/typescript-node:0-20",
-
-  // Features to add to the dev container. More info: https://containers.dev/features.
-  // "features": {},
-
+  "name": "bitmark-parser-generator",
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "containerEnv": {
+    "MISE_YES": "1"
+  },
+  "mounts": [
+    "source=bitmark-parser-generator-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=bitmark-parser-generator-claude,target=/home/vscode/.claude,type=volume"
+  ],
   "customizations": {
     "vscode": {
-      "settings": {},
-      "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint", "EditorConfig.EditorConfig"]
+      "settings": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+        "eslint.format.enable": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "npm.packageManager": "npm"
+      },
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next",
+        "hverlin.mise-vscode",
+        "niceandfair.vscode-tombi"
+      ]
     }
-  }
-
-  // "forwardPorts": [3000],
-
-  // "portsAttributes": {
-  //   "3000": {
-  //     "label": "Hello Remote World",
-  //     "onAutoForward": "notify"
-  //   }
-  // },
-
-  // "postCreateCommand": "yarn install"
-
-  // "remoteUser": "root"
+  },
+  "postCreateCommand": "sudo chown vscode:vscode node_modules /home/vscode/.claude && mise install && mise exec -- npm ci",
+  "remoteUser": "vscode"
 }
