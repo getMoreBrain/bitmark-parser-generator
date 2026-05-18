@@ -5014,6 +5014,8 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.resource_platformIcon,
+        jsonKey: 'platformIcon|resource(type=image, key=image)',
+        exportJsonKey: { platformIcon: { type: 'image', image: { src: '$' } } },
         description: 'The platform icon',
         chain: [
           {
@@ -5049,6 +5051,8 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.resource_platformLogo,
+        jsonKey: 'platformLogo|resource(type=image, key=image)',
+        exportJsonKey: { platformLogo: { type: 'image', image: { src: '$' } } },
         description: 'The platform logo',
         chain: [
           {
