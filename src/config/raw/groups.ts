@@ -522,7 +522,9 @@ const GROUPS: _GroupsConfig = {
     description: 'Gap chain',
     tags: [
       {
-        exportJsonKey: { solutions: [['$']] },
+        exportJsonKey: {
+          '@body-inline': { type: 'gap', attrs: { solutions: ['$'] } },
+        },
         key: ConfigKey.tag_gap,
         description: 'The value of a gap in the content',
         maxCount: Count.infinity,
@@ -809,7 +811,12 @@ const GROUPS: _GroupsConfig = {
       'True/False chain composed inline (select body-bit). +/- tags are consume-only at bit level.',
     tags: [
       {
-        exportJsonKey: {},
+        exportJsonKey: {
+          '@body-inline': {
+            type: 'select',
+            attrs: { options: [{ text: '$', isCorrect: true }] },
+          },
+        },
         key: ConfigKey.tag_true,
         description: 'True value for an inline select body bit',
         maxCount: Count.infinity,
@@ -860,7 +867,12 @@ const GROUPS: _GroupsConfig = {
         ],
       },
       {
-        exportJsonKey: {},
+        exportJsonKey: {
+          '@body-inline': {
+            type: 'select',
+            attrs: { options: [{ text: '$', isCorrect: false }] },
+          },
+        },
         key: ConfigKey.tag_false,
         description: 'False value for an inline select body bit',
         maxCount: Count.infinity,
@@ -943,7 +955,9 @@ const GROUPS: _GroupsConfig = {
     description: 'Mark chain',
     tags: [
       {
-        exportJsonKey: { solution: ['$'] },
+        exportJsonKey: {
+          '@body-inline': { type: 'mark', attrs: { solution: '$' } },
+        },
         key: ConfigKey.tag_mark,
         description: 'The marked content',
         maxCount: Count.infinity,
@@ -952,6 +966,7 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.property_mark,
             jsonKey: 'mark',
+            exportJsonKey: { mark: '$' },
             description: 'The mark configuration',
             format: TagFormat.plainText,
           },
