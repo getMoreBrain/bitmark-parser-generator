@@ -3634,37 +3634,12 @@ const BITS: _BitsConfig = {
         description: 'Common quiz tags for highlighted text',
       },
       {
-        key: ConfigKey.group_trueFalse,
-        description: 'True/False quiz tags for highlighted text',
-      },
-      {
-        // Override inherited tag_true from group_trueFalse: emit inline
-        // body highlight node instead of top-level choices[].
-        key: ConfigKey.tag_true,
-        exportJsonKey: {
-          '@body-inline': {
-            type: 'highlight',
-            attrs: { texts: [{ text: '$', isCorrect: true }] },
-          },
-        },
-        description: 'Highlighted span in the body (correct)',
-        maxCount: Count.infinity,
-        format: TagFormat.plainText,
-      },
-      {
-        // Override inherited tag_false from group_trueFalse: emit inline
-        // body highlight node instead of top-level choices[]. Note: the
-        // un-highlighted text entry has no isCorrect field (implicit false).
-        key: ConfigKey.tag_false,
-        exportJsonKey: {
-          '@body-inline': {
-            type: 'highlight',
-            attrs: { texts: [{ text: '$' }] },
-          },
-        },
-        description: 'Highlighted span in the body (incorrect)',
-        maxCount: Count.infinity,
-        format: TagFormat.plainText,
+        // Dedicated highlight inline-select chain: tag_true / tag_false
+        // emit `{type:"highlight", attrs:{texts:[{text,isCorrect?}]}}`
+        // inline body nodes via @body-inline. Bit shares no tag IDs with
+        // multiple-choice / multiple-choice-1 (which use group_trueFalse).
+        key: ConfigKey.group_trueFalseInlineHighlight,
+        description: 'True/False quiz tags for highlighted text (inline body nodes)',
       },
       {
         // Override inherited @example: in `isTopLevelExample` allow-list.

@@ -924,6 +924,125 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_trueFalseInlineHighlight]: {
+    type: GroupConfigType.standard,
+    description:
+      'True/False chain composed inline (highlight body-bit). +/- tags emit `{type:"highlight", attrs:{texts:[{text,isCorrect?}]}}` inline body nodes. Used by highlight-text bit.',
+    tags: [
+      {
+        exportJsonKey: {
+          '@body-inline': {
+            type: 'highlight',
+            attrs: { texts: [{ text: '$', isCorrect: true }] },
+          },
+        },
+        key: ConfigKey.tag_true,
+        description: 'Highlighted span in the body (correct)',
+        maxCount: Count.infinity,
+        format: TagFormat.plainText,
+        chain: [
+          {
+            key: ConfigKey.tag_true,
+            exportJsonKey: {},
+            description: 'Highlighted span values (correct)',
+            maxCount: Count.infinity,
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.tag_false,
+            exportJsonKey: {},
+            description: 'Highlighted span values (incorrect)',
+            maxCount: Count.infinity,
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.group_standardItemLeadInstructionHint,
+            description: 'Item, lead, page number, margin number, instruction and hint tags',
+          },
+          {
+            key: ConfigKey.property_example,
+            jsonKey: 'example',
+            exportJsonKey: [
+              {
+                '@keyonly': {
+                  isExample: true,
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: true },
+                },
+              },
+              {
+                '@absent': {
+                  isExample: '$parent.isCorrect',
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: '$parent.isCorrect' },
+                },
+              },
+              { isExample: true, example: '$', '@bit': { isExample: true } },
+            ],
+            description: 'An example for the highlighted span',
+            format: TagFormat.boolean,
+            nullable: true,
+          },
+        ],
+      },
+      {
+        exportJsonKey: {
+          '@body-inline': {
+            type: 'highlight',
+            attrs: { texts: [{ text: '$' }] },
+          },
+        },
+        key: ConfigKey.tag_false,
+        description: 'Highlighted span in the body (incorrect)',
+        maxCount: Count.infinity,
+        format: TagFormat.plainText,
+        chain: [
+          {
+            key: ConfigKey.tag_true,
+            exportJsonKey: {},
+            description: 'Highlighted span values (correct)',
+            maxCount: Count.infinity,
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.tag_false,
+            exportJsonKey: {},
+            description: 'Highlighted span values (incorrect)',
+            maxCount: Count.infinity,
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.group_standardItemLeadInstructionHint,
+            description: 'Item, lead, page number, margin number, instruction and hint tags',
+          },
+          {
+            key: ConfigKey.property_example,
+            jsonKey: 'example',
+            exportJsonKey: [
+              {
+                '@keyonly': {
+                  isExample: true,
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: true },
+                },
+              },
+              {
+                '@absent': {
+                  isExample: true,
+                  example: '$parent.isCorrect',
+                  '@bit': { isExample: true },
+                },
+              },
+              { isExample: true, example: '$', '@bit': { isExample: true } },
+            ],
+            description: 'An example for the highlighted span',
+            format: TagFormat.boolean,
+            nullable: true,
+          },
+        ],
+      },
+    ],
+  },
   [ConfigKey.group_markConfig]: {
     type: GroupConfigType.standard,
     description: 'Mark configuration chain',
