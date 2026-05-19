@@ -1066,9 +1066,49 @@ const CARDSETS: _CardSetsConfig = {
   //
   // table
   //
+  // PLAN-079: supports BOTH source formats and collapses to the same basic
+  // output (`{ columns?, data, columnWidths? }`):
+  //
+  // 1. Basic format — first card carries `[#X]` markers (fire `tag_title`
+  //    → `^table.columns[]`); subsequent cards are body rows. Cards have
+  //    no qualifier, so they route to the `table-body` (default) section.
+  //
+  // 2. Extended format — `==== table-header ====` / `==== table-footer ====`
+  //    qualifiers. The `table-header` section uses `@cardIndex=0` to route
+  //    the first header card's cells to `columns` and demote remaining
+  //    header cards (rows) into `data`. Per-cell `[@tableRowSpan]` /
+  //    `[@tableScope]` / `[@tableCellType]` tags are valid-but-unmapped
+  //    here (no per-cell metadata in basic shape) — declared on the cell
+  //    variant below.
+  //
   [CardSetConfigKey.table]: {
-    jsonKey: 'table.data',
-    exportJsonKey: { table: { data: '$' } },
+    jsonKey: null,
+    exportJsonKey: null,
+    sections: {
+      'table-header': {
+        // First header card's row of cells → `columns`. Subsequent header
+        // cards' rows → `data` (per-card append; `[$]` shape because
+        // per-card emission fires once per card, multiple fires deep_merge-
+        // append). Two rules, first-match-wins via @cardIndex.
+        jsonKey: 'table.columns',
+        exportJsonKey: [
+          { '@cardIndex=0': { '@bit': { table: { columns: '$' } } } },
+          { '@bit': { table: { data: ['$'] } } },
+        ],
+      },
+      'table-body': {
+        // Batched emission: `$` is the entire 2D array of body card rows.
+        // This is the default section (no qualifier → cards land here).
+        jsonKey: 'table.data',
+        exportJsonKey: { '@bit': { table: { data: '$' } } },
+        isDefault: true,
+      },
+      'table-footer': {
+        // Batched emission: `$` is the entire 2D array of footer rows.
+        jsonKey: 'table.data',
+        exportJsonKey: { '@bit': { table: { data: '$' } } },
+      },
+    },
     sides: [
       {
         name: 'cell',
