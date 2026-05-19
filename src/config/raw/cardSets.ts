@@ -254,6 +254,19 @@ const CARDSETS: _CardSetsConfig = {
                 // in the cardset) fills each pair's `example` with `V`
                 // once per pair from the keys-side cascade fire (single
                 // parsed_variant per pair — no per-value duplication).
+                //
+                // PLAN-076 NOTE: matchPairs (TAG 415) KEEPS `example: '$'`
+                // at the pair-object level. BPG `parseMatchPairs`
+                // (`CardContentProcessor.ts:714-723`) emits ONE example
+                // per PAIR (the `exampleCard` accumulator), placed at the
+                // pair object. Unlike matchMatrix (per-cell example),
+                // matchPairs has no nested per-cell layer, so the pair-key
+                // `[@example:V]` must double-emit as the visible field.
+                // Confirmed via `chaining` fixture: `match-solution-grouped`
+                // expects `example: "packen"` at pair-object level from
+                // `die Koffer[%1][@example:packen]`. Original PLAN-076
+                // draft applied to both keys-side tags; the matchPairs
+                // half was reverted after fixture parity testing.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
@@ -327,22 +340,44 @@ const CARDSETS: _CardSetsConfig = {
                 // TAG 415 (keys side) which fires once per pair — keeping
                 // it here would emit `example` twice per pair (one per
                 // values-side parsed_variant) and merge them into a
-                // multi-paragraph array. The bare-cascade $parent.values[0]
-                // fallback stays on the values side because that's where
-                // the values array is populated by the time the fire runs.
+                // multi-paragraph array.
+                //
+                // PLAN-075: bare `$parent` reads the parent variant fire's
+                // source `$` value (the current `++`-iteration's value
+                // text). For single-value pairs this matches the old
+                // `$parent.values[0]`; for multi-value pairs with
+                // `[@example]` attached to a non-first value, it correctly
+                // resolves to that value.
+                //
+                // PLAN-077: dual `[@absent, { '$cascade': '*' }]` rule
+                // routes pair-key `[@example:V]` (a per-pair cascade
+                // source, bound via per-card CascadeCounters scope) and
+                // bit-header `[@example:V]` (cardset cascade) into the
+                // pair-level `example` via `$cascade`. The aggregator in
+                // `populate_variants` fires this rule ONCE per pair (BPG
+                // `parseMatchPairs` `exampleCard` precedence), avoiding
+                // per-iter pollution.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   {
                     '@keyonly': {
                       isExample: true,
-                      example: '$parent.values[0]',
+                      example: '$parent',
+                      '@bit': { isExample: true },
+                    },
+                  },
+                  {
+                    predicates: ['@absent', { '$cascade': '*' }],
+                    rule: {
+                      isExample: true,
+                      example: '$cascade',
                       '@bit': { isExample: true },
                     },
                   },
                   {
                     '@absent': {
                       isExample: true,
-                      example: '$parent.values[0]',
+                      example: '$parent',
                       '@bit': { isExample: true },
                     },
                   },
@@ -532,11 +567,18 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Standard tags for lead, instruction, and hint.',
               },
               {
+                // PLAN-076: drop `example: '$'` from valued rule — pair-key
+                // `[@example:V]` is consumed as the per-pair cascade source
+                // (BPG `parseMatchMatrix` `exampleCard` accumulator) and must
+                // not double-emit at the pair-object level. The Fresh fire
+                // still records the value into the ancestor stack so the
+                // downstream cascade (PLAN-077) can route it into per-cell
+                // `example` slots.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
                   { '@absent': { isExample: true, '@bit': { isExample: true } } },
-                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                  { isExample: true, '@bit': { isExample: true } },
                 ],
                 description: 'Example text for the match matrix.',
                 format: TagFormat.plainText,
@@ -579,16 +621,33 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Standard tags for lead, instruction, and hint.',
               },
               {
+                // PLAN-075: bare `$parent` reads the parent variant fire's
+                // source `$` value (the current `++`-iteration's cell text).
+                // Replaces `$parent.values[0]` which pinned to position 0
+                // regardless of which `++`-value `[@example]` was on.
+                //
+                // PLAN-077: dual `[@absent, { '$cascade': '*' }]` rule
+                // routes pair-key `[@example:V]` (a per-pair cascade
+                // source, bound via per-card CascadeCounters scope) and
+                // bit-header `[@example:V]` (cardset cascade) into the
+                // per-cell `example` via `$cascade`. The aggregator in
+                // `populate_variants` fires this rule ONCE per cell (BPG
+                // `parseMatchMatrix` `exampleSide` precedence), avoiding
+                // per-iter pollution.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   {
                     '@keyonly': {
-                      cells: { $s: { isExample: true, example: '$parent.values[0]' } },
+                      cells: { $s: { isExample: true, example: '$parent' } },
                       '@bit': { isExample: true },
                     },
                   },
                   {
-                    '@absent': { cells: { $s: { isExample: true, example: '$parent.values[0]' } } },
+                    predicates: ['@absent', { '$cascade': '*' }],
+                    rule: { cells: { $s: { isExample: true, example: '$cascade' } } },
+                  },
+                  {
+                    '@absent': { cells: { $s: { isExample: true, example: '$parent' } } },
                   },
                   { cells: { $s: { isExample: true, example: '$' } }, '@bit': { isExample: true } },
                 ],
