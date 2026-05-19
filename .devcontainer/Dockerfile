@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
 
 # Install shared build and runtime dependencies
-COPY .devcontainer/docker/install-deps.sh /tmp/install-deps.sh
+COPY .devcontainer/scripts/install-deps.sh /tmp/install-deps.sh
 RUN /tmp/install-deps.sh && rm /tmp/install-deps.sh
 
 # Import Node.js release signing keys for GPG verification
@@ -23,7 +23,25 @@ RUN gpg --keyserver hkps://keys.openpgp.org --recv-keys \
   A363A499291CBBC940AE88276104A21DB7A5B203
 USER root
 
-# Install mise and activate it in bash and zsh
-RUN curl https://mise.jdx.dev/install.sh | MISE_INSTALL_PATH=/usr/local/bin/mise sh \
-  && echo 'eval "$(mise activate bash)"' >> /home/vscode/.bashrc \
-  && echo 'eval "$(mise activate zsh)"' >> /home/vscode/.zshrc
+# Install mise from a pinned GitHub release, verified against committed SHA256s.
+# To bump: change MISE_VERSION, then update both SHA256 values from
+#   https://github.com/jdx/mise/releases/download/${MISE_VERSION}/SHASUMS256.txt
+ARG MISE_VERSION=v2026.5.11
+ARG MISE_SHA256_X64=9f677e94d7eab919fa33e84d54314774e061fbdcfbe9e115bc1f500fe01b66ab
+ARG MISE_SHA256_ARM64=a3bc60547a060ebb31ebbe8d8274c721407cf3471043e473b8cb578cee8722fe
+RUN set -eux; \
+    arch="$(dpkg --print-architecture)"; \
+    case "$arch" in \
+      amd64) mise_arch=x64;   mise_sha="${MISE_SHA256_X64}"   ;; \
+      arm64) mise_arch=arm64; mise_sha="${MISE_SHA256_ARM64}" ;; \
+      *) echo "unsupported arch: $arch" >&2; exit 1 ;; \
+    esac; \
+    tarball="mise-${MISE_VERSION}-linux-${mise_arch}.tar.gz"; \
+    curl -fsSLo /tmp/mise.tar.gz \
+      "https://github.com/jdx/mise/releases/download/${MISE_VERSION}/${tarball}"; \
+    echo "${mise_sha}  /tmp/mise.tar.gz" | sha256sum -c -; \
+    tar -xzf /tmp/mise.tar.gz -C /tmp; \
+    install -m 0755 /tmp/mise/bin/mise /usr/local/bin/mise; \
+    rm -rf /tmp/mise /tmp/mise.tar.gz; \
+    echo 'eval "$(mise activate bash)"' >> /home/vscode/.bashrc; \
+    echo 'eval "$(mise activate zsh)"'  >> /home/vscode/.zshrc

@@ -5,5 +5,7 @@ set -e
 # Sourced by both the devcontainer and CI runner Dockerfiles.
 apt-get update && apt-get install -y --no-install-recommends \
     jq \
+    bubblewrap \
+    socat \
  && apt-get clean -y \
  && rm -rf /var/lib/apt/lists/*
