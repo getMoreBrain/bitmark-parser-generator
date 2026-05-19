@@ -568,12 +568,20 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 // PLAN-076: drop `example: '$'` from valued rule — pair-key
-                // `[@example:V]` is consumed as the per-pair cascade source
-                // (BPG `parseMatchMatrix` `exampleCard` accumulator) and must
-                // not double-emit at the pair-object level. The Fresh fire
-                // still records the value into the ancestor stack so the
-                // downstream cascade (PLAN-077) can route it into per-cell
-                // `example` slots.
+                // `[@example:V]` is consumed as the per-pair cascade source.
+                // PLAN-077 R14 follow-up: investigation showed the fixture
+                // reference is INCONSISTENT — bits without a cardset-level
+                // cascade (e.g. bit 3 `[@example:Y]should be...`) expect
+                // pair-level `example: V` at pair scope, but bits WITH a
+                // cardset cascade (e.g. bit 8 `[@example:99]` in title-row
+                // PLUS pair-key `[@example:Y]`) expect NO pair-level
+                // example. Emitting `example: $` here satisfies bit 3 but
+                // breaks bit 8; dropping it satisfies bit 8 but breaks bit
+                // 3. Conditional emission would require runtime gating on
+                // the cardset cascade scope state. Left dropped pending a
+                // dedicated plan — accepted divergence on bit 3's pair-
+                // level emission (cells still get the per-cell `example`
+                // correctly via PLAN-077 §4.2 + §4.3).
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
