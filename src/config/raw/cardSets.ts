@@ -249,9 +249,22 @@ const CARDSETS: _CardSetsConfig = {
               {
                 // Pair-level example: emit `isExample` alongside `example`
                 // (matches OLD parser's per-pair allow-list behaviour).
+                //
+                // PLAN-074: a valued cascade source (`[@example:V]` anywhere
+                // in the cardset) fills each pair's `example` with `V`
+                // once per pair from the keys-side cascade fire (single
+                // parsed_variant per pair — no per-value duplication).
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
+                  {
+                    predicates: ['@absent', { '$cascade': '*' }],
+                    rule: {
+                      isExample: true,
+                      example: '$cascade',
+                      '@bit': { isExample: true },
+                    },
+                  },
                   { '@absent': { isExample: true } },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
@@ -309,8 +322,14 @@ const CARDSETS: _CardSetsConfig = {
                 // `@example` from the bit header fills each pair's
                 // `example` with the pair's first value (mirrors BPG's
                 // `fillStringExample(pairs, __defaultExample=values[0])`).
-                // Per-pair-strip removes empty examples; non-empty PM-tree
-                // values survive.
+                //
+                // PLAN-074: the cascade-source-VALUE branch is handled by
+                // TAG 415 (keys side) which fires once per pair — keeping
+                // it here would emit `example` twice per pair (one per
+                // values-side parsed_variant) and merge them into a
+                // multi-paragraph array. The bare-cascade $parent.values[0]
+                // fallback stays on the values side because that's where
+                // the values array is populated by the time the fire runs.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   {
