@@ -1109,6 +1109,8 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_tableColWidth,
+                jsonKey: '^table.columnWidths[{s}]',
+                exportJsonKey: { '@bit': { table: { columnWidths: { $s: '$' } } } },
                 description: 'Width for the column.',
                 format: TagFormat.number,
               },
