@@ -848,7 +848,8 @@ const CARDSETS: _CardSetsConfig = {
                   { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
-                description: 'Example text for the feedback reason (entry-local only; no bit-header cascade).',
+                description:
+                  'Example text for the feedback reason (entry-local only; no bit-header cascade).',
                 format: TagFormat.plainText,
                 nullable: true,
               },
@@ -928,7 +929,8 @@ const CARDSETS: _CardSetsConfig = {
                   { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
-                description: 'Example marker for the question (entry-local only; no bit-header cascade).',
+                description:
+                  'Example marker for the question (entry-local only; no bit-header cascade).',
                 format: TagFormat.bitmarkText,
                 nullable: true,
               },
@@ -965,7 +967,8 @@ const CARDSETS: _CardSetsConfig = {
                   { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
-                description: 'Example text for the element (entry-local only; no bit-header cascade).',
+                description:
+                  'Example text for the element (entry-local only; no bit-header cascade).',
                 format: TagFormat.plainText,
                 nullable: true,
               },
@@ -1232,7 +1235,8 @@ const CARDSETS: _CardSetsConfig = {
                   { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
-                description: 'Example text for the bot action response (entry-local only; no bit-header cascade).',
+                description:
+                  'Example text for the bot action response (entry-local only; no bit-header cascade).',
                 format: TagFormat.plainText,
                 nullable: true,
               },

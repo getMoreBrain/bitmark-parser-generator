@@ -711,7 +711,8 @@ const GROUPS: _GroupsConfig = {
               },
               { isExample: true, example: '$', '@bit': { isExample: true } },
             ],
-            description: 'An example for the true/false statement/question (incorrect entry — isExample only on cascade)',
+            description:
+              'An example for the true/false statement/question (incorrect entry — isExample only on cascade)',
             format: TagFormat.boolean,
             nullable: true,
           },
