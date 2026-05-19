@@ -305,10 +305,12 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Standard tags for the match pair.',
               },
               {
-                // Values-side example override: emit `isExample` + `example`
-                // at pair scope and bubble `isExample` to bit. When bare,
-                // example value comes from the pair's first value (matching
-                // OLD parser's `__isDefaultExample` cascade behaviour).
+                // PLAN-072 + ALIGN-EXAMPLE-CASCADE §3.6: cascade-fired
+                // `@example` from the bit header fills each pair's
+                // `example` with the pair's first value (mirrors BPG's
+                // `fillStringExample(pairs, __defaultExample=values[0])`).
+                // Per-pair-strip removes empty examples; non-empty PM-tree
+                // values survive.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   {
@@ -318,7 +320,13 @@ const CARDSETS: _CardSetsConfig = {
                       '@bit': { isExample: true },
                     },
                   },
-                  { '@absent': { isExample: true } },
+                  {
+                    '@absent': {
+                      isExample: true,
+                      example: '$parent.values[0]',
+                      '@bit': { isExample: true },
+                    },
+                  },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
                 description: 'Example marker / value on the match pair (values side).',
@@ -626,6 +634,12 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Standard tags for the statement.',
               },
               {
+                // PLAN-072: cascade-fired `@example` from the bit header
+                // fills each statement entry's `example` with the entry's
+                // own `isCorrect`, mirroring BPG's `pushExampleDownTree`
+                // for the statements cardset. Per-array-item strip removes
+                // `example: false` from incorrect entries so only correct
+                // entries retain `example: true`.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   {
@@ -635,11 +649,17 @@ const CARDSETS: _CardSetsConfig = {
                       '@bit': { isExample: true },
                     },
                   },
-                  { '@absent': { isExample: true, '@bit': { isExample: true } } },
+                  {
+                    '@absent': {
+                      isExample: true,
+                      example: '$parent.isCorrect',
+                      '@bit': { isExample: true },
+                    },
+                  },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
                 description:
-                  'Example marker on the statement. Bare `[@example]` emits the boolean marker; valued `[@example:true|false]` emits the literal value.',
+                  'Example marker on the statement. Bare `[@example]` emits the boolean marker; valued `[@example:true|false]` emits the literal value. Cascade from bit-header fills `example` with the entry’s own `isCorrect`.',
                 format: TagFormat.boolean,
                 nullable: true,
               },
@@ -673,14 +693,19 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Standard tags for the quiz.',
               },
               {
+                // ALIGN-EXAMPLE-CASCADE §3.2: variant-level cascade for
+                // quiz choices is delegated to group_trueFalse's
+                // chain-child `@example` (`+` chain with maxEmits:1 +
+                // `@parent.isCorrect=true`). Variant-level `@absent`
+                // would over-fire on subsequent correct choices and on
+                // incorrect ones — drop it.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
-                  { '@absent': { isExample: true, '@bit': { isExample: true } } },
                   { isExample: true, '@bit': { isExample: true } },
                 ],
                 description:
-                  'Example marker on the quiz; only default form is meaningful, valued forms fall back to the marker.',
+                  'Example marker on the quiz choice (entry-local only; cascade handled by group_trueFalse chain-children).',
                 format: TagFormat.boolean,
                 nullable: true,
               },
@@ -714,14 +739,24 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Standard tags for the quiz.',
               },
               {
+                // PLAN-072: cascade-fired `@example` from the bit header
+                // fills each response entry's `example` with the entry's
+                // own `isCorrect`, mirroring BPG's `pushExampleDownTree`
+                // for the quiz-responses cardset (statements-style).
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
-                  { '@absent': { isExample: true, '@bit': { isExample: true } } },
+                  {
+                    '@absent': {
+                      isExample: true,
+                      example: '$parent.isCorrect',
+                      '@bit': { isExample: true },
+                    },
+                  },
                   { isExample: true, '@bit': { isExample: true } },
                 ],
                 description:
-                  'Example marker on the quiz; only default form is meaningful, valued forms fall back to the marker.',
+                  'Example marker on the quiz response; cascade from bit-header fills `example` with the entry’s own `isCorrect`.',
                 format: TagFormat.boolean,
                 nullable: true,
               },
@@ -805,13 +840,15 @@ const CARDSETS: _CardSetsConfig = {
                 format: TagFormat.number,
               },
               {
+                // ALIGN-EXAMPLE-CASCADE §3.9: `feedback.reason` is NOT in
+                // BPG's `pushExampleDownTree` dispatch — no bit-header
+                // cascade.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
-                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
-                description: 'Example text for the feedback.',
+                description: 'Example text for the feedback reason (entry-local only; no bit-header cascade).',
                 format: TagFormat.plainText,
                 nullable: true,
               },
@@ -880,13 +917,18 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Standard tags for the question.',
               },
               {
+                // ALIGN-EXAMPLE-CASCADE §3.10: `questions` is NOT in BPG's
+                // `pushExampleDownTree` dispatch — bit-header `[@example]`
+                // does not propagate `example`/`isExample` onto question
+                // entries. Only entry-local `[@example]` fires (handled by
+                // `@keyonly` and the unconditional fallback). No `@absent`
+                // rule.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
-                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
-                description: 'Example marker for the question.',
+                description: 'Example marker for the question (entry-local only; no bit-header cascade).',
                 format: TagFormat.bitmarkText,
                 nullable: true,
               },
@@ -916,13 +958,14 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Standard tags for lead, instruction, and hint.',
               },
               {
+                // ALIGN-EXAMPLE-CASCADE §3.11: `elements` is NOT in BPG's
+                // `pushExampleDownTree` dispatch — no bit-header cascade.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
-                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
-                description: 'Example text for the element.',
+                description: 'Example text for the element (entry-local only; no bit-header cascade).',
                 format: TagFormat.plainText,
                 nullable: true,
               },
@@ -1181,13 +1224,15 @@ const CARDSETS: _CardSetsConfig = {
                 format: TagFormat.plainText,
               },
               {
+                // ALIGN-EXAMPLE-CASCADE §3.12: `bot-action-responses` is
+                // NOT in BPG's `pushExampleDownTree` dispatch — no bit-
+                // header cascade.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
-                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
-                description: 'Example text for the bot action response.',
+                description: 'Example text for the bot action response (entry-local only; no bit-header cascade).',
                 format: TagFormat.plainText,
                 nullable: true,
               },

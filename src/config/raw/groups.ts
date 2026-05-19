@@ -613,6 +613,20 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // PLAN-072 + ALIGN-EXAMPLE-CASCADE §3.2: cascade-fired
+            // `@example` from the bit header marks EVERY choice with
+            // `isExample: true` (matches BPG output), but only the
+            // FIRST correct choice gets `example: true` (BPG
+            // `fillBooleanExample(..., firstCorrectOnly=true)`).
+            //
+            // Two `@absent` rules, picked first-match-wins:
+            //   1. Verbose form gated on `@parent.isCorrect=true` with
+            //      `maxEmits:1` — fires once for the first correct.
+            //   2. Plain `@absent` — fires on every remaining entry
+            //      (subsequent corrects and all incorrects), emitting
+            //      `isExample` only.
+            // The `serialize_cards` cascade-counter scope holds the cap
+            // across the whole cardset.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -624,10 +638,18 @@ const GROUPS: _GroupsConfig = {
                 },
               },
               {
+                predicates: ['@absent', { '@parent.isCorrect': true }],
+                maxEmits: 1,
+                rule: {
+                  isExample: true,
+                  example: true,
+                  '@bit': { isExample: true },
+                },
+              },
+              {
                 '@absent': {
-                  isExample: '$parent.isCorrect',
-                  example: '$parent.isCorrect',
-                  '@bit': { isExample: '$parent.isCorrect' },
+                  isExample: true,
+                  '@bit': { isExample: true },
                 },
               },
               { isExample: true, example: '$', '@bit': { isExample: true } },
@@ -666,6 +688,11 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // PLAN-072 + ALIGN-EXAMPLE-CASCADE §3.2: cascade-fired
+            // `@example` on a `-` (incorrect choice) emits
+            // `isExample: true` only — no `example` (BPG fixtures show
+            // `isExample` on every choice, but `example` only on the
+            // first correct via firstCorrectOnly cascade).
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -679,13 +706,12 @@ const GROUPS: _GroupsConfig = {
               {
                 '@absent': {
                   isExample: true,
-                  example: '$parent.isCorrect',
                   '@bit': { isExample: true },
                 },
               },
               { isExample: true, example: '$', '@bit': { isExample: true } },
             ],
-            description: 'An example for the true/false statement/question',
+            description: 'An example for the true/false statement/question (incorrect entry — isExample only on cascade)',
             format: TagFormat.boolean,
             nullable: true,
           },
@@ -960,6 +986,13 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // PLAN-072 + ALIGN-EXAMPLE-CASCADE §3.13: cascade-fired
+            // `@example` from the bit header fires `example: true` +
+            // `isExample: true` on the FIRST correct highlight only
+            // (BPG `fillBooleanExample(highlight.texts,
+            // firstCorrectOnly=true)`). Incorrect highlights get
+            // nothing (unlike choices, the highlight-text fixture
+            // shows no `isExample` on incorrect entries).
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -971,15 +1004,17 @@ const GROUPS: _GroupsConfig = {
                 },
               },
               {
-                '@absent': {
-                  isExample: '$parent.isCorrect',
-                  example: '$parent.isCorrect',
-                  '@bit': { isExample: '$parent.isCorrect' },
+                predicates: ['@absent', { '@parent.isCorrect': true }],
+                maxEmits: 1,
+                rule: {
+                  isExample: true,
+                  example: true,
+                  '@bit': { isExample: true },
                 },
               },
               { isExample: true, example: '$', '@bit': { isExample: true } },
             ],
-            description: 'An example for the highlighted span',
+            description: 'An example for the highlighted span (first correct only)',
             format: TagFormat.boolean,
             nullable: true,
           },
@@ -1016,6 +1051,11 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // PLAN-072 + ALIGN-EXAMPLE-CASCADE §3.13: cascade-fired
+            // `@example` on a `-` (incorrect highlight) emits nothing
+            // (highlight-text fixture has no `isExample` on incorrect
+            // entries; firstCorrectOnly cascade skips them entirely).
+            // No `@absent` rule.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -1026,16 +1066,9 @@ const GROUPS: _GroupsConfig = {
                   '@bit': { isExample: true },
                 },
               },
-              {
-                '@absent': {
-                  isExample: true,
-                  example: '$parent.isCorrect',
-                  '@bit': { isExample: true },
-                },
-              },
               { isExample: true, example: '$', '@bit': { isExample: true } },
             ],
-            description: 'An example for the highlighted span',
+            description: 'An example for the highlighted span (incorrect — no cascade fire)',
             format: TagFormat.boolean,
             nullable: true,
           },
