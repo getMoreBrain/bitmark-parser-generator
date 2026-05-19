@@ -37,6 +37,6 @@
       ]
     }
   },
-  "postCreateCommand": "sudo chown vscode:vscode node_modules /home/vscode/.claude && mise install && mise exec -- npm ci",
+  "postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
   "remoteUser": "vscode"
 }
