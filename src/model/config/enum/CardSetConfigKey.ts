@@ -18,6 +18,7 @@ const CardSetConfigKey = {
   pronunciationTable: 'pronunciationTable',
   botActionResponses: 'botActionResponses',
   exampleBitList: 'exampleBitList',
+  pageFooterSections: 'pageFooterSections',
   clozeList: 'clozeList',
   ingredients: 'ingredients',
   // DEPRECATED - TO BE REMOVED IN THE FUTURE

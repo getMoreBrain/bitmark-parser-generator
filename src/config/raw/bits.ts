@@ -3494,7 +3494,9 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
     ],
-    cardSet: CardSetConfigKey.exampleBitList,
+    // page-footer emits cards under `sections` (vs `listItems` for the
+    // sibling exampleList / assignmentList bits) — see JsonGenerator.ts.
+    cardSet: CardSetConfigKey.pageFooterSections,
   },
   [BitType.legend]: {
     since: '3.12.0',

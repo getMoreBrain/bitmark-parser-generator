@@ -1431,6 +1431,39 @@ const CARDSETS: _CardSetsConfig = {
   },
 
   //
+  // page-footer-sections — mirrors example-bit-list but emits cards under
+  // `sections` instead of `listItems`. BPG's JsonGenerator special-cases
+  // BitType.pageFooter in code; this dedicated cardSet expresses the same
+  // routing as pure config so the Rust serializer can pick it up.
+  //
+  [CardSetConfigKey.pageFooterSections]: {
+    jsonKey: 'sections',
+    exportJsonKey: { sections: '$' },
+    sides: [
+      {
+        name: 'item',
+        variants: [
+          {
+            jsonKey: 'body',
+            exportJsonKey: { body: '$' },
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for page-footer section bits.',
+              },
+              {
+                exportJsonKey: { title: '$' },
+                key: ConfigKey.tag_title,
+                description: 'Title of the page-footer section.',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  //
   // ingredients
   //
   [CardSetConfigKey.ingredients]: {
