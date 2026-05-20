@@ -3856,7 +3856,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.tableImage]: {
     since: '1.5.15',
-    baseBitType: BitType.table,
+    baseBitType: BitType.tableExtended,
     description: 'Table image bit, used to create images in tables in articles or books',
     tags: [
       {
