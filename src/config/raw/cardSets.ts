@@ -1092,9 +1092,17 @@ const CARDSETS: _CardSetsConfig = {
         // First header card's row of cells → `columns`. Subsequent header
         // cards' rows → `data` (per-card append; `[$]` shape because
         // per-card emission fires once per card, multiple fires deep_merge-
-        // append). Two rules, first-match-wins via @cardIndex.
+        // append). PLAN-079 + PLAN-080: predicates inside exportJsonKey
+        // both ROUTE cards to this section (when no explicit `==== table-
+        // header ====` qualifier) and SELECT the rule body once routed.
+        // First rule = first card with any `[#]` → `columns`; second rule
+        // = subsequent cards in this section → `data` (per-row append).
         jsonKey: 'table.columns',
         exportJsonKey: [
+          {
+            predicates: [{ '@cardIndex': 0 }, { '@variantHasTag': '#' }],
+            rule: { '@bit': { table: { columns: '$' } } },
+          },
           { '@cardIndex=0': { '@bit': { table: { columns: '$' } } } },
           { '@bit': { table: { data: ['$'] } } },
         ],
@@ -1173,7 +1181,22 @@ const CARDSETS: _CardSetsConfig = {
     sections: {
       'table-header': {
         jsonKey: 'table.header.rows',
-        exportJsonKey: { table: { header: { rows: '$' } } },
+        // PLAN-080: section dispatch via predicates inside exportJsonKey.
+        // Cards with no explicit `==== table-header ====` qualifier
+        // route here if FIRST CARD contains any `[#]` tag in any
+        // variant. Explicit-qualifier cards fall through to the
+        // unconditional fallback rule. Both rules use the per-card
+        // append shape `rows: ['$']` — the runtime triggers per-card
+        // emission whenever the pattern carries predicates, and each
+        // fire appends a single-element array (multi-fire deep-merge
+        // concatenates).
+        exportJsonKey: [
+          {
+            predicates: [{ '@cardIndex': 0 }, { '@variantHasTag': '#' }],
+            rule: { table: { header: { rows: ['$'] } } },
+          },
+          { table: { header: { rows: ['$'] } } },
+        ],
         sideJsonKey: 'cells[{s}]|set(title=true)',
         sideExportJsonKey: { cells: { $s: { title: true, $: '$' } } },
       },
@@ -1206,13 +1229,13 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.tag_title,
-                jsonKey: '.',
-                exportJsonKey: {
-                  '@bit': {
-                    table: { header: { rows: { cells: { cells: { $s: { content: '$' } } } } } },
-                  },
-                },
-                description: 'Title of the table cell.',
+                // PLAN-080: the `[#]` tag writes its text to the cell's
+                // `content` field. When the card is in the `table-header`
+                // section, the section's sideExportJsonKey wraps each
+                // cell with `title: true` automatically.
+                jsonKey: 'content',
+                exportJsonKey: { content: '$' },
+                description: 'Title text of the table cell (header rows).',
               },
               {
                 key: ConfigKey.property_tableCellType,
@@ -1244,6 +1267,9 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_tableColWidth,
+                // PLAN-080: write to the cell's `colwidth` field.
+                jsonKey: 'colwidth',
+                exportJsonKey: { colwidth: '$' },
                 description: 'Width for the column.',
                 format: TagFormat.number,
               },
