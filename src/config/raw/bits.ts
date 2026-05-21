@@ -1324,6 +1324,17 @@ const BITS: _BitsConfig = {
         description: 'Tags for true/false questions in cloze and multiple choice text bits',
       },
       {
+        // Bit-level @isCaseSensitive — empty exportJsonKey (no bit-level emission);
+        // defaultValue 'true' phantom-fires onto the ancestor stack so the gap chain's
+        // `@absent: $ancestor` rule resolves to true. Mirrors BPG Builder.ts:1643-1652
+        // `pushDownTree(... 'isCaseSensitive', data.isCaseSensitive ?? true)` for cloze bits.
+        key: ConfigKey.property_isCaseSensitive,
+        exportJsonKey: {},
+        description: 'If the cloze answers are case sensitive',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+      {
         // Override inherited @example: in `isTopLevelExample` allow-list.
         key: ConfigKey.property_example,
         exportJsonKey: [
