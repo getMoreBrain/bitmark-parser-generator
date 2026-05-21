@@ -868,6 +868,14 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // PLAN-083: cascade-fired `@example` from bit header fires
+            // `isExample:true, example:true` on the FIRST CORRECT option
+            // only (BPG `fillBooleanExample(select.options,
+            // firstCorrectOnly=true)`). Mirrors group_trueFalseInlineHighlight.
+            // Every rule also bubbles `@bit:{isExample:true}` (idempotent
+            // OR — any cascade ⇒ bit marked) and
+            // `@body-inline:{attrs:{isExample:true}}` (node-level marker
+            // on the select node).
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -876,18 +884,27 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
               {
-                '@absent': {
-                  isExample: '$parent.isCorrect',
-                  example: '$parent.isCorrect',
-                  '@bit': { isExample: '$parent.isCorrect' },
+                predicates: ['@absent', { '@parent.isCorrect': true }],
+                maxEmits: 1,
+                rule: {
+                  isExample: true,
+                  example: true,
+                  '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              {
+                isExample: true,
+                example: '$',
+                '@bit': { isExample: true },
+                '@body-inline': { attrs: { isExample: true } },
+              },
             ],
-            description: 'An example for the inline select option',
+            description: 'An example for the inline select option (first correct only)',
             format: TagFormat.boolean,
             nullable: true,
           },
@@ -924,6 +941,10 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // PLAN-083: identical to the `+` lead's chain @example —
+            // cascade reaches the first correct option regardless of
+            // which lead (+/-) opens the chain. Every firing rule bubbles
+            // `@bit:{isExample:true}` and `@body-inline:{attrs:{isExample:true}}`.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -932,18 +953,27 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
               {
-                '@absent': {
+                predicates: ['@absent', { '@parent.isCorrect': true }],
+                maxEmits: 1,
+                rule: {
                   isExample: true,
-                  example: '$parent.isCorrect',
+                  example: true,
                   '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              {
+                isExample: true,
+                example: '$',
+                '@bit': { isExample: true },
+                '@body-inline': { attrs: { isExample: true } },
+              },
             ],
-            description: 'An example for the inline select option',
+            description: 'An example for the inline select option (first correct only)',
             format: TagFormat.boolean,
             nullable: true,
           },
@@ -1002,6 +1032,7 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
               {
@@ -1011,9 +1042,15 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: true,
                   '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              {
+                isExample: true,
+                example: '$',
+                '@bit': { isExample: true },
+                '@body-inline': { attrs: { isExample: true } },
+              },
             ],
             description: 'An example for the highlighted span (first correct only)',
             format: TagFormat.boolean,
@@ -1057,6 +1094,9 @@ const GROUPS: _GroupsConfig = {
             // (highlight-text fixture has no `isExample` on incorrect
             // entries; firstCorrectOnly cascade skips them entirely).
             // No `@absent` rule.
+            // PLAN-083: identical to the `+` lead's chain @example —
+            // cascade reaches the first correct option regardless of
+            // which lead (+/-) opens the chain.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -1065,11 +1105,27 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              {
+                predicates: ['@absent', { '@parent.isCorrect': true }],
+                maxEmits: 1,
+                rule: {
+                  isExample: true,
+                  example: true,
+                  '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
+                },
+              },
+              {
+                isExample: true,
+                example: '$',
+                '@bit': { isExample: true },
+                '@body-inline': { attrs: { isExample: true } },
+              },
             ],
-            description: 'An example for the highlighted span (incorrect — no cascade fire)',
+            description: 'An example for the highlighted span (first correct only)',
             format: TagFormat.boolean,
             nullable: true,
           },
