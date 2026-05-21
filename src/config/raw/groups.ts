@@ -543,20 +543,29 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // BPG ExampleTagContentProcessor.ts:91-95 reads
+            // `__solutionsAst[length - 1]` — the solution closest to the
+            // `[@example]` tag at parse time. Our chain accumulator is built
+            // incrementally (scope.rs `parent.merge` after each tag), so at
+            // the moment `[@example]` fires, `solutions` only contains the
+            // preceding `[_x]` entries — `[-1]` resolves to the closest one.
+            // E.g. `[_cloze][_gap][@example]` → solutions=["cloze","gap"],
+            // `[-1]`="gap"; `[_solution][@example][_problem]` →
+            // solutions=["solution"], `[-1]`="solution".
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
               {
                 '@keyonly': {
                   isExample: true,
-                  example: '$parent.solutions[0]',
+                  example: '$parent.solutions[-1]',
                   '@bit': { isExample: true },
                 },
               },
               {
                 '@absent': {
                   isExample: true,
-                  example: '$parent.solutions[0]',
+                  example: '$parent.solutions[-1]',
                   '@bit': { isExample: true },
                 },
               },
