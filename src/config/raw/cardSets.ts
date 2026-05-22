@@ -664,11 +664,25 @@ const CARDSETS: _CardSetsConfig = {
                 nullable: true,
               },
               {
+                // PLAN-085 / R14: bare `[#]` on a value-side emits the
+                // empty-string positional blank into `forValues` so the
+                // array stays aligned with the cell positions (matches BPG
+                // `extractHeadingCard`'s "all value-side headings present"
+                // shape). The `@keyonly` rule is required for two reasons:
+                // 1) it provides an emission for bare `[#]` (the `$` sigil
+                //    in the unconditional rule has no source for bare); and
+                // 2) the presence of any `@keyonly` rule disables the
+                //    optimised-mode `should_suppress_outcome` strip (see
+                //    `forward_emit.rs`) so the resulting `forValues: [""]`
+                //    survives the all-natural-defaults check.
                 key: ConfigKey.tag_title,
                 description: 'Title of the match matrix.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
-                exportJsonKey: { '@bit': { heading: { forValues: ['$'] } } },
+                exportJsonKey: [
+                  { '@keyonly': { '@bit': { heading: { forValues: [''] } } } },
+                  { '@bit': { heading: { forValues: ['$'] } } },
+                ],
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
