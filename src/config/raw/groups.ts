@@ -1068,10 +1068,16 @@ const GROUPS: _GroupsConfig = {
         ],
       },
       {
+        // PLAN-083 follow-up (2026-05-22): mirror the select `-` lead shape
+        // by writing `isCorrect: false`. Without it, `$parent.isCorrect` in
+        // chain-child @example rules resolves to ParentPathMissing for `-`
+        // entries (e.g. `[-fish][@example]`), so the @keyonly rule falls
+        // through and nothing fires. The natural-default strip removes
+        // `isCorrect: false` from the final texts entries (matches fixture).
         exportJsonKey: {
           '@body-inline': {
             type: 'highlight',
-            attrs: { texts: [{ text: '$' }] },
+            attrs: { texts: [{ text: '$', isCorrect: false }] },
           },
         },
         key: ConfigKey.tag_false,
