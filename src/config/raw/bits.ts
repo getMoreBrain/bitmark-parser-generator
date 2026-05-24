@@ -1472,6 +1472,17 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_quizCommon,
         description: 'Common tags for quiz bits',
       },
+      {
+        // PLAN-084 (R12): bit-level @isCaseSensitive — empty exportJsonKey
+        // (no bit-level emission); defaultValue 'true' phantom-fires onto
+        // the ancestor stack so each listItem's gap chain `@absent: $ancestor`
+        // rule resolves to true. Mirrors the cloze bit (bits.ts:1326-1336).
+        key: ConfigKey.property_isCaseSensitive,
+        exportJsonKey: {},
+        description: 'If the cloze answers are case sensitive',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
     ],
     cardSet: CardSetConfigKey.clozeList,
   },
