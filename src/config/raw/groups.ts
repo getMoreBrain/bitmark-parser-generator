@@ -382,6 +382,25 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_standardInstructionHint]: {
+    type: GroupConfigType.standard,
+    description:
+      'Standard group for instruction and hint tags only (no item/lead/pageNumber/marginNumber chain). Used by sides where item/lead are owned by another side (e.g. matchPairs value-side, which BPG strips item/lead from at sideIdx > 0).',
+    tags: [
+      {
+        exportJsonKey: { instruction: '$' },
+        key: ConfigKey.tag_instruction,
+        name: 'Instruction',
+        description: 'The instruction for the bit',
+      },
+      {
+        exportJsonKey: { hint: '$' },
+        key: ConfigKey.tag_hint,
+        name: 'Hint',
+        description: 'The hint for the bit',
+      },
+    ],
+  },
   [ConfigKey.group_standardTags]: {
     type: GroupConfigType.standard,
     description: 'Standard tags which apply to MOST (but not all) bits',
@@ -407,6 +426,29 @@ const GROUPS: _GroupsConfig = {
         // sequence, multipleChoice, trueFalse, cloze*, mark, interview,
         // matchMatrix, match, essay, etc.) override this entry with the
         // legacy emit-isExample shape.
+        key: ConfigKey.property_example,
+        exportJsonKey: [{ '@keyonly': {} }, { '@absent': { isExample: true } }, { example: '$' }],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
+      },
+    ],
+  },
+  [ConfigKey.group_standardTagsNoItemLead]: {
+    type: GroupConfigType.standard,
+    description:
+      'Standard tags mirror of group_standardTags but excluding the item/lead/pageNumber/marginNumber chain. Used by sides where item/lead are owned by another side (e.g. matchPairs value-side — BPG `parseMatchPairs` strips tags.item / tags.lead for sideIdx > 0).',
+    tags: [
+      {
+        key: ConfigKey.group_standardAllBits,
+        description: 'All standard tags which apply to all bits',
+      },
+      {
+        key: ConfigKey.group_standardInstructionHint,
+        description: 'Instruction and hint tags only (no item/lead chain).',
+      },
+      {
+        // Mirror of group_standardTags property_example entry.
         key: ConfigKey.property_example,
         exportJsonKey: [{ '@keyonly': {} }, { '@absent': { isExample: true } }, { example: '$' }],
         description: 'The example(s) for the bit',

@@ -293,9 +293,19 @@ const CARDSETS: _CardSetsConfig = {
                 exportJsonKey: { '@bit': { heading: { forKeys: '$' } } },
               },
               {
+                // PLAN-084: gate the key-side `@absent → $ancestor` cascade
+                // synth with `@variantLacksTag=isCaseSensitive` so the rule
+                // only fires when NO variant in the active card explicitly
+                // carries `[@isCaseSensitive]`. When a value-side variant
+                // carries the tag (e.g. `[@isCaseSensitive:false]`), the
+                // synth is skipped here; the value-side explicit fire owns
+                // the pair-level emission.
                 key: ConfigKey.property_isCaseSensitive,
                 exportJsonKey: [
-                  { '@absent': { isCaseSensitive: '$ancestor' } },
+                  {
+                    predicates: ['@absent', { '@variantLacksTag': '@isCaseSensitive' }],
+                    rule: { isCaseSensitive: '$ancestor' },
+                  },
                   { isCaseSensitive: '$' },
                 ],
                 description: 'Property to indicate if the match is case sensitive.',
@@ -327,8 +337,12 @@ const CARDSETS: _CardSetsConfig = {
             format: TextFormat.plainText,
             tags: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the match pair.',
+                // PLAN-084: value-side excludes item/lead/pageNumber/marginNumber.
+                // BPG `parseMatchPairs` does `delete tags.item; delete tags.lead;`
+                // for sideIdx > 0; the schema-side equivalent is to use a
+                // group_standardTags variant that omits group_standardItemLead.
+                key: ConfigKey.group_standardTagsNoItemLead,
+                description: 'Standard tags for the match pair (values side, no item/lead).',
               },
               {
                 // PLAN-072 + ALIGN-EXAMPLE-CASCADE §3.6: cascade-fired
@@ -359,8 +373,15 @@ const CARDSETS: _CardSetsConfig = {
                 // per-iter pollution.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
+                  // PLAN-084: bare `[@example]` on a values-side variant fires
+                  // once per pair (first-wins, mirrors BPG `parseMatchPairs`
+                  // `exampleCard` + `pushDownTree` set-if-null semantic).
+                  // `maxEmits: 1` enforced inside the per-pair cascade-counter
+                  // scope opened by `build_card_item`.
                   {
-                    '@keyonly': {
+                    predicates: ['@keyonly'],
+                    maxEmits: 1,
+                    rule: {
                       isExample: true,
                       example: '$parent',
                       '@bit': { isExample: true },
@@ -381,7 +402,13 @@ const CARDSETS: _CardSetsConfig = {
                       '@bit': { isExample: true },
                     },
                   },
-                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                  // PLAN-084: same cap applies to the explicit-value `[@example:V]`
+                  // form so per-`++`-iter values-side fires also first-win.
+                  {
+                    predicates: [],
+                    maxEmits: 1,
+                    rule: { isExample: true, example: '$', '@bit': { isExample: true } },
+                  },
                 ],
                 description: 'Example marker / value on the match pair (values side).',
                 format: TagFormat.bitmarkText,
@@ -395,9 +422,13 @@ const CARDSETS: _CardSetsConfig = {
                 exportJsonKey: { '@bit': { heading: { forValues: '$' } } },
               },
               {
+                // PLAN-084: symmetric @variantLacksTag gating with the key-side.
                 key: ConfigKey.property_isCaseSensitive,
                 exportJsonKey: [
-                  { '@absent': { isCaseSensitive: '$ancestor' } },
+                  {
+                    predicates: ['@absent', { '@variantLacksTag': '@isCaseSensitive' }],
+                    rule: { isCaseSensitive: '$ancestor' },
+                  },
                   { isCaseSensitive: '$' },
                 ],
                 description: 'Property to indicate if the match is case sensitive.',
@@ -457,8 +488,10 @@ const CARDSETS: _CardSetsConfig = {
             format: TextFormat.plainText,
             tags: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the audio match pair.',
+                // PLAN-084: value-side excludes item/lead/pageNumber/marginNumber.
+                key: ConfigKey.group_standardTagsNoItemLead,
+                description:
+                  'Standard tags for the audio match pair (values side, no item/lead).',
               },
               {
                 key: ConfigKey.tag_title,
@@ -525,8 +558,10 @@ const CARDSETS: _CardSetsConfig = {
             format: TextFormat.plainText,
             tags: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the image match pair.',
+                // PLAN-084: value-side excludes item/lead/pageNumber/marginNumber.
+                key: ConfigKey.group_standardTagsNoItemLead,
+                description:
+                  'Standard tags for the image match pair (values side, no item/lead).',
               },
               {
                 key: ConfigKey.tag_title,
@@ -619,7 +654,18 @@ const CARDSETS: _CardSetsConfig = {
           {
             jsonKey: 'cells[{s}].values[]',
             exportJsonKey: [
-              { '@absent': { '@bit': { heading: { forValues: [''] } } } },
+              // PLAN-085 / R14: the positional-blank emission for an
+              // effectively-absent cell side fires ONLY when the active
+              // card has at least one `[#]` variant fire. This matches
+              // BPG `extractHeadingCard`'s `isHeading` gate: when no
+              // `[#]` exists anywhere in the title card, BPG returns
+              // undefined and no `heading` is emitted. The phantom
+              // `forValues:['']` placeholder is appropriate only when
+              // the card is being treated as a title-row.
+              {
+                predicates: ['@absent', { '@variantHasTag': '#' }],
+                rule: { '@bit': { heading: { forValues: [''] } } },
+              },
               { cells: { $s: { values: ['$'] } } },
             ],
             format: TextFormat.plainText,
