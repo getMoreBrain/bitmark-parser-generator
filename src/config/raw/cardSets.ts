@@ -978,6 +978,14 @@ const CARDSETS: _CardSetsConfig = {
                     maxCount: 1,
                     nullable: true,
                   },
+                  {
+                    // `[+ X][! foo]` chains `!` (instruction) onto the
+                    // choice; same for `[?]` (hint), `[%]` (item),
+                    // `[%2]`/`[%3]`/`[%4]` (lead/pageNumber/marginNumber).
+                    // Mirrors group_trueFalse's `+` chain shape.
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description: 'Item, lead, page number, margin number, instruction and hint chained onto the feedback choice.',
+                  },
                 ],
               },
               {
@@ -997,6 +1005,10 @@ const CARDSETS: _CardSetsConfig = {
                     format: TagFormat.boolean,
                     maxCount: 1,
                     nullable: true,
+                  },
+                  {
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description: 'Item, lead, page number, margin number, instruction and hint chained onto the feedback choice.',
                   },
                 ],
               },

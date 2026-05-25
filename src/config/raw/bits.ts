@@ -6116,6 +6116,10 @@ const BITS: _BitsConfig = {
         exportJsonKey: [
           { '@keyonly': { isExample: true, example: true } },
           { '@absent': { isExample: true, example: true } },
+          // `[@example:false]`: emit `isExample: true` only — `example: false`
+          // is the natural default for boolean, stripped in optimised mode.
+          // Mirrors BPG `removeUnwantedProperties` `ignoreAllFalse: true`.
+          { '@value=false': { isExample: true } },
           { isExample: true, example: '$' },
         ],
         description: 'The example flag for the bit (boolean)',
