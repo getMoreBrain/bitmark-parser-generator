@@ -115,6 +115,126 @@ const CARDSETS: _CardSetsConfig = {
   },
 
   //
+  // flashcard1 — single-card variant of flashcard. Same shape, but capped
+  // at one card via `sections.default.maxCount = 1` (PLAN-085). Used by
+  // the `flashcard-1` bit type; the multi-card `flashcard` and
+  // `q-and-a-card` bit types continue to use the unbounded `flashcard`
+  // cardset.
+  //
+  [CardSetConfigKey.flashcard1]: {
+    jsonKey: 'cards',
+    exportJsonKey: { cards: '$' },
+    sections: {
+      default: {
+        jsonKey: 'cards',
+        exportJsonKey: { cards: '$' },
+        isDefault: true,
+        maxCount: 1,
+      },
+    },
+    sides: [
+      {
+        name: 'question',
+        variants: [
+          {
+            jsonKey: 'question.text',
+            exportJsonKey: [{ '@absent': { question: {} } }, { question: { text: '$' } }],
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for the flashcard.',
+              },
+              {
+                exportJsonKey: { title: '$' },
+                key: ConfigKey.tag_title,
+                description: 'Title of the flashcard.',
+              },
+              {
+                key: ConfigKey.group_resourceIcon,
+                description: 'Icon resource for the flashcard.',
+                jsonKey: 'question.icon|resource(type=image, key=image)',
+                exportJsonKey: { question: { icon: { type: 'image', image: { src: '$' } } } },
+              },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the flashcard question.',
+                format: TagFormat.bitmarkText,
+                nullable: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'answer',
+        variants: [
+          {
+            jsonKey: 'answer.text',
+            exportJsonKey: [{ '@absent': { answer: {} } }, { answer: { text: '$' } }],
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for the flashcard.',
+              },
+              {
+                exportJsonKey: { title: '$' },
+                key: ConfigKey.tag_title,
+                description: 'Title of the flashcard.',
+              },
+              {
+                key: ConfigKey.group_resourceIcon,
+                description: 'Icon resource for the flashcard.',
+                jsonKey: 'answer.icon|resource(type=image, key=image)',
+                exportJsonKey: { answer: { icon: { type: 'image', image: { src: '$' } } } },
+              },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the flashcard answer.',
+                format: TagFormat.bitmarkText,
+                nullable: true,
+              },
+            ],
+          },
+          {
+            jsonKey: 'alternativeAnswers[].text',
+            exportJsonKey: { alternativeAnswers: [{ text: '$' }] },
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for the flashcard.',
+              },
+              {
+                exportJsonKey: { title: '$' },
+                key: ConfigKey.tag_title,
+                description: 'Title of the flashcard.',
+              },
+              {
+                key: ConfigKey.group_resourceIcon,
+                description: 'Icon resource for the flashcard.',
+                jsonKey: 'alternativeAnswers[].icon|resource(type=image, key=image)',
+                exportJsonKey: {
+                  alternativeAnswers: [{ icon: { type: 'image', image: { src: '$' } } }],
+                },
+              },
+            ],
+            repeatCount: Count.infinity,
+          },
+        ],
+      },
+    ],
+  },
+
+  //
   // definition-list
   //
   [CardSetConfigKey.definitionList]: {

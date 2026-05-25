@@ -2,6 +2,7 @@ import { type EnumType } from '@ncoderz/superenum';
 
 const CardSetConfigKey = {
   flashcard: 'flashcard',
+  flashcard1: 'flashcard1',
   definitionList: 'definitionList',
   elements: 'elements',
   statements: 'statements',
