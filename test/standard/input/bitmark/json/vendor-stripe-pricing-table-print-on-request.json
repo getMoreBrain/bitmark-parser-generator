@@ -8,6 +8,7 @@
         "342346"
       ],
       "stripePricingTableId": "prctb1_1NNeGVGt8{VgVjROuB0TVMu",
+      "stripePricingTableDescriptiveName": "Print on request plan",
       "stripePublishableKey": "pk_live_51[GBBzGt8fVgVjROT6HJUFa32[fTOyyea6JX9IUhegfYdEReYIsRRfKa5mrdsqNgh9vpKwbSMimrSfMlAtJzsFUE00a7KW5WQ",
       "printOnRequestCustomerId": "98788bjbjhbjh",
       "printOnRequestProductId": "12334143dfrt",
@@ -24,7 +25,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.vendor-stripe-pricing-table-print-on-request]\n[@id:342346]\n[@stripePricingTableId: prctb1_1NNeGVGt8{VgVjROuB0TVMu ]\n[@stripePublishableKey: pk_live_51[GBBzGt8fVgVjROT6HJUFa32[fTOyyea6JX9IUhegfYdEReYIsRRfKa5mrdsqNgh9vpKwbSMimrSfMlAtJzsFUE00a7KW5WQ ]\n[@printOnRequestCustomerId: 98788bjbjhbjh ]\n[@printOnRequestProductId: 12334143dfrt ]"
+    "bitmark": "[.vendor-stripe-pricing-table-print-on-request]\n[@id:342346]\n[@stripePricingTableId: prctb1_1NNeGVGt8{VgVjROuB0TVMu ]\n[@stripePricingTableDescriptiveName: Print on request plan]\n[@stripePublishableKey: pk_live_51[GBBzGt8fVgVjROT6HJUFa32[fTOyyea6JX9IUhegfYdEReYIsRRfKa5mrdsqNgh9vpKwbSMimrSfMlAtJzsFUE00a7KW5WQ ]\n[@printOnRequestCustomerId: 98788bjbjhbjh ]\n[@printOnRequestProductId: 12334143dfrt ]"
   },
   {
     "bit": {
@@ -83,14 +84,14 @@
           "text": "[.vendor-stripe-pricing-table-print-on-request]\n[@id:342348]\n[@printOnRequestCustomerId: cus_only_customer ]\n[@printOnRequestProductId: prod_only_product ]\n",
           "location": {
             "start": {
-              "line": 15,
+              "line": 16,
               "column": 1,
-              "offset": 565
+              "offset": 630
             },
             "end": {
-              "line": 19,
+              "line": 20,
               "column": 1,
-              "offset": 721
+              "offset": 786
             }
           }
         },
@@ -99,14 +100,14 @@
           "text": "[.vendor-stripe-pricing-table-print-on-request]\n[@id:342348]\n[@printOnRequestCustomerId: cus_only_customer ]\n[@printOnRequestProductId: prod_only_product ]\n",
           "location": {
             "start": {
-              "line": 15,
+              "line": 16,
               "column": 1,
-              "offset": 565
+              "offset": 630
             },
             "end": {
-              "line": 19,
+              "line": 20,
               "column": 1,
-              "offset": 721
+              "offset": 786
             }
           }
         }

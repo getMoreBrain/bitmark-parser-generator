@@ -621,6 +621,8 @@ const NodeType = {
   stillImageFilmLink: 'stillImageFilmLink',
   stripePricingTableId: 'stripePricingTableId',
   stripePricingTableIdValue: 'stripePricingTableIdValue',
+  stripePricingTableDescriptiveName: 'stripePricingTableDescriptiveName',
+  stripePricingTableDescriptiveNameValue: 'stripePricingTableDescriptiveNameValue',
   stripePublishableKey: 'stripePublishableKey',
   stripePublishableKeyValue: 'stripePublishableKeyValue',
   subject: 'subject',
