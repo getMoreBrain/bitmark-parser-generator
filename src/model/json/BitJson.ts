@@ -151,6 +151,7 @@ export interface BitJson {
   codeLineNumbers: boolean;
   codeMinimap: boolean;
   stripePricingTableId: string;
+  stripePricingTableDescriptiveName: string;
   stripePublishableKey: string;
   thumbImage: string;
   scormSource: string;

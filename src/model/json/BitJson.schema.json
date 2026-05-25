@@ -166,6 +166,7 @@
     "codeLineNumbers": { "type": "boolean" },
     "codeMinimap": { "type": "boolean" },
     "stripePricingTableId": { "type": "string" },
+    "stripePricingTableDescriptiveName": { "type": "string" },
     "stripePublishableKey": { "type": "string" },
     "thumbImage": { "type": "string" },
     "scormSource": { "type": "string" },

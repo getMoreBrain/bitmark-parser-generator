@@ -1,6 +1,7 @@
 [.vendor-stripe-pricing-table-print-on-request]
 [@id:342346]
 [@stripePricingTableId: prctb1_1NNeGVGt8{VgVjROuB0TVMu ]
+[@stripePricingTableDescriptiveName:   Print on request plan   ]
 [@stripePublishableKey: pk_live_51[GBBzGt8fVgVjROT6HJUFa32[fTOyyea6JX9IUhegfYdEReYIsRRfKa5mrdsqNgh9vpKwbSMimrSfMlAtJzsFUE00a7KW5WQ ]
 [@printOnRequestCustomerId: 98788bjbjhbjh ]
 [@printOnRequestProductId: 12334143dfrt ]
