@@ -382,6 +382,25 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_standardInstructionHint]: {
+    type: GroupConfigType.standard,
+    description:
+      'Standard group for instruction and hint tags only (no item/lead/pageNumber/marginNumber chain). Used by sides where item/lead are owned by another side (e.g. matchPairs value-side, which BPG strips item/lead from at sideIdx > 0).',
+    tags: [
+      {
+        exportJsonKey: { instruction: '$' },
+        key: ConfigKey.tag_instruction,
+        name: 'Instruction',
+        description: 'The instruction for the bit',
+      },
+      {
+        exportJsonKey: { hint: '$' },
+        key: ConfigKey.tag_hint,
+        name: 'Hint',
+        description: 'The hint for the bit',
+      },
+    ],
+  },
   [ConfigKey.group_standardTags]: {
     type: GroupConfigType.standard,
     description: 'Standard tags which apply to MOST (but not all) bits',
@@ -407,6 +426,29 @@ const GROUPS: _GroupsConfig = {
         // sequence, multipleChoice, trueFalse, cloze*, mark, interview,
         // matchMatrix, match, essay, etc.) override this entry with the
         // legacy emit-isExample shape.
+        key: ConfigKey.property_example,
+        exportJsonKey: [{ '@keyonly': {} }, { '@absent': { isExample: true } }, { example: '$' }],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
+      },
+    ],
+  },
+  [ConfigKey.group_standardTagsNoItemLead]: {
+    type: GroupConfigType.standard,
+    description:
+      'Standard tags mirror of group_standardTags but excluding the item/lead/pageNumber/marginNumber chain. Used by sides where item/lead are owned by another side (e.g. matchPairs value-side — BPG `parseMatchPairs` strips tags.item / tags.lead for sideIdx > 0).',
+    tags: [
+      {
+        key: ConfigKey.group_standardAllBits,
+        description: 'All standard tags which apply to all bits',
+      },
+      {
+        key: ConfigKey.group_standardInstructionHint,
+        description: 'Instruction and hint tags only (no item/lead chain).',
+      },
+      {
+        // Mirror of group_standardTags property_example entry.
         key: ConfigKey.property_example,
         exportJsonKey: [{ '@keyonly': {} }, { '@absent': { isExample: true } }, { example: '$' }],
         description: 'The example(s) for the bit',
@@ -543,20 +585,29 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // BPG ExampleTagContentProcessor.ts:91-95 reads
+            // `__solutionsAst[length - 1]` — the solution closest to the
+            // `[@example]` tag at parse time. Our chain accumulator is built
+            // incrementally (scope.rs `parent.merge` after each tag), so at
+            // the moment `[@example]` fires, `solutions` only contains the
+            // preceding `[_x]` entries — `[-1]` resolves to the closest one.
+            // E.g. `[_cloze][_gap][@example]` → solutions=["cloze","gap"],
+            // `[-1]`="gap"; `[_solution][@example][_problem]` →
+            // solutions=["solution"], `[-1]`="solution".
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
               {
                 '@keyonly': {
                   isExample: true,
-                  example: '$parent.solutions[0]',
+                  example: '$parent.solutions[-1]',
                   '@bit': { isExample: true },
                 },
               },
               {
                 '@absent': {
                   isExample: true,
-                  example: '$parent.solutions[0]',
+                  example: '$parent.solutions[-1]',
                   '@bit': { isExample: true },
                 },
               },
@@ -627,6 +678,10 @@ const GROUPS: _GroupsConfig = {
             //      `isExample` only.
             // The `serialize_cards` cascade-counter scope holds the cap
             // across the whole cardset.
+            // @card scope-shift writes choice-container isExample (e.g.
+            // `quizzes[i].isExample`) — was previously provided by the
+            // universal `bubble_is_example` post-walk, which was removed
+            // in favour of explicit per-tag config. SYNTAX.md §8.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -635,6 +690,7 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
               {
@@ -644,15 +700,17 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: true,
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
               {
                 '@absent': {
                   isExample: true,
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              { isExample: true, example: '$', '@bit': { isExample: true }, '@card': { isExample: true } },
             ],
             description: 'An example for the true/false statement/question',
             format: TagFormat.boolean,
@@ -693,6 +751,7 @@ const GROUPS: _GroupsConfig = {
             // `isExample: true` only — no `example` (BPG fixtures show
             // `isExample` on every choice, but `example` only on the
             // first correct via firstCorrectOnly cascade).
+            // @card scope-shift writes choice-container isExample.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -701,15 +760,17 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
               {
                 '@absent': {
                   isExample: true,
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              { isExample: true, example: '$', '@bit': { isExample: true }, '@card': { isExample: true } },
             ],
             description:
               'An example for the true/false statement/question (incorrect entry — isExample only on cascade)',
@@ -752,6 +813,7 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // @card scope-shift writes response-container isExample.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -760,6 +822,7 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
               {
@@ -767,9 +830,10 @@ const GROUPS: _GroupsConfig = {
                   isExample: '$parent.isCorrect',
                   example: '$parent.isCorrect',
                   '@bit': { isExample: '$parent.isCorrect' },
+                  '@card': { isExample: '$parent.isCorrect' },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              { isExample: true, example: '$', '@bit': { isExample: true }, '@card': { isExample: true } },
             ],
             description: 'An example for the true/false statement/question',
             format: TagFormat.boolean,
@@ -805,6 +869,7 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // @card scope-shift writes response-container isExample.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -813,6 +878,7 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
               {
@@ -820,9 +886,10 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              { isExample: true, example: '$', '@bit': { isExample: true }, '@card': { isExample: true } },
             ],
             description: 'An example for the true/false statement/question',
             format: TagFormat.boolean,
@@ -868,6 +935,14 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // PLAN-083: cascade-fired `@example` from bit header fires
+            // `isExample:true, example:true` on the FIRST CORRECT option
+            // only (BPG `fillBooleanExample(select.options,
+            // firstCorrectOnly=true)`). Mirrors group_trueFalseInlineHighlight.
+            // Every rule also bubbles `@bit:{isExample:true}` (idempotent
+            // OR — any cascade ⇒ bit marked) and
+            // `@body-inline:{attrs:{isExample:true}}` (node-level marker
+            // on the select node).
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -876,18 +951,27 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
               {
-                '@absent': {
-                  isExample: '$parent.isCorrect',
-                  example: '$parent.isCorrect',
-                  '@bit': { isExample: '$parent.isCorrect' },
+                predicates: ['@absent', { '@parent.isCorrect': true }],
+                maxEmits: 1,
+                rule: {
+                  isExample: true,
+                  example: true,
+                  '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              {
+                isExample: true,
+                example: '$',
+                '@bit': { isExample: true },
+                '@body-inline': { attrs: { isExample: true } },
+              },
             ],
-            description: 'An example for the inline select option',
+            description: 'An example for the inline select option (first correct only)',
             format: TagFormat.boolean,
             nullable: true,
           },
@@ -924,6 +1008,10 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // PLAN-083: identical to the `+` lead's chain @example —
+            // cascade reaches the first correct option regardless of
+            // which lead (+/-) opens the chain. Every firing rule bubbles
+            // `@bit:{isExample:true}` and `@body-inline:{attrs:{isExample:true}}`.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -932,18 +1020,27 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
               {
-                '@absent': {
+                predicates: ['@absent', { '@parent.isCorrect': true }],
+                maxEmits: 1,
+                rule: {
                   isExample: true,
-                  example: '$parent.isCorrect',
+                  example: true,
                   '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              {
+                isExample: true,
+                example: '$',
+                '@bit': { isExample: true },
+                '@body-inline': { attrs: { isExample: true } },
+              },
             ],
-            description: 'An example for the inline select option',
+            description: 'An example for the inline select option (first correct only)',
             format: TagFormat.boolean,
             nullable: true,
           },
@@ -1002,6 +1099,7 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
               {
@@ -1011,9 +1109,15 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: true,
                   '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              {
+                isExample: true,
+                example: '$',
+                '@bit': { isExample: true },
+                '@body-inline': { attrs: { isExample: true } },
+              },
             ],
             description: 'An example for the highlighted span (first correct only)',
             format: TagFormat.boolean,
@@ -1022,10 +1126,16 @@ const GROUPS: _GroupsConfig = {
         ],
       },
       {
+        // PLAN-083 follow-up (2026-05-22): mirror the select `-` lead shape
+        // by writing `isCorrect: false`. Without it, `$parent.isCorrect` in
+        // chain-child @example rules resolves to ParentPathMissing for `-`
+        // entries (e.g. `[-fish][@example]`), so the @keyonly rule falls
+        // through and nothing fires. The natural-default strip removes
+        // `isCorrect: false` from the final texts entries (matches fixture).
         exportJsonKey: {
           '@body-inline': {
             type: 'highlight',
-            attrs: { texts: [{ text: '$' }] },
+            attrs: { texts: [{ text: '$', isCorrect: false }] },
           },
         },
         key: ConfigKey.tag_false,
@@ -1057,6 +1167,9 @@ const GROUPS: _GroupsConfig = {
             // (highlight-text fixture has no `isExample` on incorrect
             // entries; firstCorrectOnly cascade skips them entirely).
             // No `@absent` rule.
+            // PLAN-083: identical to the `+` lead's chain @example —
+            // cascade reaches the first correct option regardless of
+            // which lead (+/-) opens the chain.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -1065,11 +1178,27 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              {
+                predicates: ['@absent', { '@parent.isCorrect': true }],
+                maxEmits: 1,
+                rule: {
+                  isExample: true,
+                  example: true,
+                  '@bit': { isExample: true },
+                  '@body-inline': { attrs: { isExample: true } },
+                },
+              },
+              {
+                isExample: true,
+                example: '$',
+                '@bit': { isExample: true },
+                '@body-inline': { attrs: { isExample: true } },
+              },
             ],
-            description: 'An example for the highlighted span (incorrect — no cascade fire)',
+            description: 'An example for the highlighted span (first correct only)',
             format: TagFormat.boolean,
             nullable: true,
           },

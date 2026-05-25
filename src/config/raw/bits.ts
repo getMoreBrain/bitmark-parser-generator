@@ -1324,6 +1324,17 @@ const BITS: _BitsConfig = {
         description: 'Tags for true/false questions in cloze and multiple choice text bits',
       },
       {
+        // Bit-level @isCaseSensitive — empty exportJsonKey (no bit-level emission);
+        // defaultValue 'true' phantom-fires onto the ancestor stack so the gap chain's
+        // `@absent: $ancestor` rule resolves to true. Mirrors BPG Builder.ts:1643-1652
+        // `pushDownTree(... 'isCaseSensitive', data.isCaseSensitive ?? true)` for cloze bits.
+        key: ConfigKey.property_isCaseSensitive,
+        exportJsonKey: {},
+        description: 'If the cloze answers are case sensitive',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+      {
         // Override inherited @example: in `isTopLevelExample` allow-list.
         key: ConfigKey.property_example,
         exportJsonKey: [
@@ -1460,6 +1471,17 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.group_quizCommon,
         description: 'Common tags for quiz bits',
+      },
+      {
+        // PLAN-084 (R12): bit-level @isCaseSensitive — empty exportJsonKey
+        // (no bit-level emission); defaultValue 'true' phantom-fires onto
+        // the ancestor stack so each listItem's gap chain `@absent: $ancestor`
+        // rule resolves to true. Mirrors the cloze bit (bits.ts:1326-1336).
+        key: ConfigKey.property_isCaseSensitive,
+        exportJsonKey: {},
+        description: 'If the cloze answers are case sensitive',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
       },
     ],
     cardSet: CardSetConfigKey.clozeList,
@@ -3494,7 +3516,9 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
     ],
-    cardSet: CardSetConfigKey.exampleBitList,
+    // page-footer emits cards under `sections` (vs `listItems` for the
+    // sibling exampleList / assignmentList bits) — see JsonGenerator.ts.
+    cardSet: CardSetConfigKey.pageFooterSections,
   },
   [BitType.legend]: {
     since: '3.12.0',
@@ -3600,6 +3624,10 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.flashcard,
     description: 'Flashcard 1 bit',
+    // PLAN-085: use the flashcard1 cardset (sections.default.maxCount=1)
+    // instead of inheriting `flashcard`'s unbounded cardset, since this
+    // bit type structurally allows only a single card.
+    cardSet: CardSetConfigKey.flashcard1,
   },
   [BitType.qAndACard]: {
     since: '3.25.0',
@@ -3854,7 +3882,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.tableImage]: {
     since: '1.5.15',
-    baseBitType: BitType.table,
+    baseBitType: BitType.tableExtended,
     description: 'Table image bit, used to create images in tables in articles or books',
     tags: [
       {
@@ -6082,14 +6110,23 @@ const BITS: _BitsConfig = {
         // sufficient for `[+...]` (correct) statements which dominate the
         // fixtures; `[-...]` (incorrect) bits with bare `[@example]` would
         // need either a runtime extension or an explicit `[@example:false]`.
+        //
+        // Format is `boolean` so `[@example:false]` coerces to JSON `false`
+        // (a natural default that gets stripped in optimised mode, matching
+        // BPG's `rootExampleType: boolean`). PlainText would emit the
+        // STRING `"false"` which doesn't strip.
         key: ConfigKey.property_example,
         exportJsonKey: [
           { '@keyonly': { isExample: true, example: true } },
           { '@absent': { isExample: true, example: true } },
+          // `[@example:false]`: emit `isExample: true` only — `example: false`
+          // is the natural default for boolean, stripped in optimised mode.
+          // Mirrors BPG `removeUnwantedProperties` `ignoreAllFalse: true`.
+          { '@value=false': { isExample: true } },
           { isExample: true, example: '$' },
         ],
         description: 'The example flag for the bit (boolean)',
-        format: TagFormat.plainText,
+        format: TagFormat.boolean,
         nullable: true,
       },
     ],

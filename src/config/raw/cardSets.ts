@@ -115,6 +115,126 @@ const CARDSETS: _CardSetsConfig = {
   },
 
   //
+  // flashcard1 — single-card variant of flashcard. Same shape, but capped
+  // at one card via `sections.default.maxCount = 1` (PLAN-085). Used by
+  // the `flashcard-1` bit type; the multi-card `flashcard` and
+  // `q-and-a-card` bit types continue to use the unbounded `flashcard`
+  // cardset.
+  //
+  [CardSetConfigKey.flashcard1]: {
+    jsonKey: 'cards',
+    exportJsonKey: { cards: '$' },
+    sections: {
+      default: {
+        jsonKey: 'cards',
+        exportJsonKey: { cards: '$' },
+        isDefault: true,
+        maxCount: 1,
+      },
+    },
+    sides: [
+      {
+        name: 'question',
+        variants: [
+          {
+            jsonKey: 'question.text',
+            exportJsonKey: [{ '@absent': { question: {} } }, { question: { text: '$' } }],
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for the flashcard.',
+              },
+              {
+                exportJsonKey: { title: '$' },
+                key: ConfigKey.tag_title,
+                description: 'Title of the flashcard.',
+              },
+              {
+                key: ConfigKey.group_resourceIcon,
+                description: 'Icon resource for the flashcard.',
+                jsonKey: 'question.icon|resource(type=image, key=image)',
+                exportJsonKey: { question: { icon: { type: 'image', image: { src: '$' } } } },
+              },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the flashcard question.',
+                format: TagFormat.bitmarkText,
+                nullable: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'answer',
+        variants: [
+          {
+            jsonKey: 'answer.text',
+            exportJsonKey: [{ '@absent': { answer: {} } }, { answer: { text: '$' } }],
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for the flashcard.',
+              },
+              {
+                exportJsonKey: { title: '$' },
+                key: ConfigKey.tag_title,
+                description: 'Title of the flashcard.',
+              },
+              {
+                key: ConfigKey.group_resourceIcon,
+                description: 'Icon resource for the flashcard.',
+                jsonKey: 'answer.icon|resource(type=image, key=image)',
+                exportJsonKey: { answer: { icon: { type: 'image', image: { src: '$' } } } },
+              },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the flashcard answer.',
+                format: TagFormat.bitmarkText,
+                nullable: true,
+              },
+            ],
+          },
+          {
+            jsonKey: 'alternativeAnswers[].text',
+            exportJsonKey: { alternativeAnswers: [{ text: '$' }] },
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for the flashcard.',
+              },
+              {
+                exportJsonKey: { title: '$' },
+                key: ConfigKey.tag_title,
+                description: 'Title of the flashcard.',
+              },
+              {
+                key: ConfigKey.group_resourceIcon,
+                description: 'Icon resource for the flashcard.',
+                jsonKey: 'alternativeAnswers[].icon|resource(type=image, key=image)',
+                exportJsonKey: {
+                  alternativeAnswers: [{ icon: { type: 'image', image: { src: '$' } } }],
+                },
+              },
+            ],
+            repeatCount: Count.infinity,
+          },
+        ],
+      },
+    ],
+  },
+
+  //
   // definition-list
   //
   [CardSetConfigKey.definitionList]: {
@@ -293,9 +413,19 @@ const CARDSETS: _CardSetsConfig = {
                 exportJsonKey: { '@bit': { heading: { forKeys: '$' } } },
               },
               {
+                // PLAN-084: gate the key-side `@absent → $ancestor` cascade
+                // synth with `@variantLacksTag=isCaseSensitive` so the rule
+                // only fires when NO variant in the active card explicitly
+                // carries `[@isCaseSensitive]`. When a value-side variant
+                // carries the tag (e.g. `[@isCaseSensitive:false]`), the
+                // synth is skipped here; the value-side explicit fire owns
+                // the pair-level emission.
                 key: ConfigKey.property_isCaseSensitive,
                 exportJsonKey: [
-                  { '@absent': { isCaseSensitive: '$ancestor' } },
+                  {
+                    predicates: ['@absent', { '@variantLacksTag': '@isCaseSensitive' }],
+                    rule: { isCaseSensitive: '$ancestor' },
+                  },
                   { isCaseSensitive: '$' },
                 ],
                 description: 'Property to indicate if the match is case sensitive.',
@@ -327,8 +457,12 @@ const CARDSETS: _CardSetsConfig = {
             format: TextFormat.plainText,
             tags: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the match pair.',
+                // PLAN-084: value-side excludes item/lead/pageNumber/marginNumber.
+                // BPG `parseMatchPairs` does `delete tags.item; delete tags.lead;`
+                // for sideIdx > 0; the schema-side equivalent is to use a
+                // group_standardTags variant that omits group_standardItemLead.
+                key: ConfigKey.group_standardTagsNoItemLead,
+                description: 'Standard tags for the match pair (values side, no item/lead).',
               },
               {
                 // PLAN-072 + ALIGN-EXAMPLE-CASCADE §3.6: cascade-fired
@@ -359,8 +493,15 @@ const CARDSETS: _CardSetsConfig = {
                 // per-iter pollution.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
+                  // PLAN-084: bare `[@example]` on a values-side variant fires
+                  // once per pair (first-wins, mirrors BPG `parseMatchPairs`
+                  // `exampleCard` + `pushDownTree` set-if-null semantic).
+                  // `maxEmits: 1` enforced inside the per-pair cascade-counter
+                  // scope opened by `build_card_item`.
                   {
-                    '@keyonly': {
+                    predicates: ['@keyonly'],
+                    maxEmits: 1,
+                    rule: {
                       isExample: true,
                       example: '$parent',
                       '@bit': { isExample: true },
@@ -381,7 +522,13 @@ const CARDSETS: _CardSetsConfig = {
                       '@bit': { isExample: true },
                     },
                   },
-                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                  // PLAN-084: same cap applies to the explicit-value `[@example:V]`
+                  // form so per-`++`-iter values-side fires also first-win.
+                  {
+                    predicates: [],
+                    maxEmits: 1,
+                    rule: { isExample: true, example: '$', '@bit': { isExample: true } },
+                  },
                 ],
                 description: 'Example marker / value on the match pair (values side).',
                 format: TagFormat.bitmarkText,
@@ -395,9 +542,13 @@ const CARDSETS: _CardSetsConfig = {
                 exportJsonKey: { '@bit': { heading: { forValues: '$' } } },
               },
               {
+                // PLAN-084: symmetric @variantLacksTag gating with the key-side.
                 key: ConfigKey.property_isCaseSensitive,
                 exportJsonKey: [
-                  { '@absent': { isCaseSensitive: '$ancestor' } },
+                  {
+                    predicates: ['@absent', { '@variantLacksTag': '@isCaseSensitive' }],
+                    rule: { isCaseSensitive: '$ancestor' },
+                  },
                   { isCaseSensitive: '$' },
                 ],
                 description: 'Property to indicate if the match is case sensitive.',
@@ -457,8 +608,9 @@ const CARDSETS: _CardSetsConfig = {
             format: TextFormat.plainText,
             tags: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the audio match pair.',
+                // PLAN-084: value-side excludes item/lead/pageNumber/marginNumber.
+                key: ConfigKey.group_standardTagsNoItemLead,
+                description: 'Standard tags for the audio match pair (values side, no item/lead).',
               },
               {
                 key: ConfigKey.tag_title,
@@ -525,8 +677,9 @@ const CARDSETS: _CardSetsConfig = {
             format: TextFormat.plainText,
             tags: [
               {
-                key: ConfigKey.group_standardTags,
-                description: 'Standard tags for the image match pair.',
+                // PLAN-084: value-side excludes item/lead/pageNumber/marginNumber.
+                key: ConfigKey.group_standardTagsNoItemLead,
+                description: 'Standard tags for the image match pair (values side, no item/lead).',
               },
               {
                 key: ConfigKey.tag_title,
@@ -584,9 +737,21 @@ const CARDSETS: _CardSetsConfig = {
                 // correctly via PLAN-077 §4.2 + §4.3).
                 key: ConfigKey.property_example,
                 exportJsonKey: [
-                  { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
-                  { '@absent': { isExample: true, '@bit': { isExample: true } } },
-                  { isExample: true, '@bit': { isExample: true } },
+                  {
+                    '@keyonly': {
+                      isExample: true,
+                      '@bit': { isExample: true },
+                      '@card': { isExample: true },
+                    },
+                  },
+                  {
+                    '@absent': {
+                      isExample: true,
+                      '@bit': { isExample: true },
+                      '@card': { isExample: true },
+                    },
+                  },
+                  { isExample: true, '@bit': { isExample: true }, '@card': { isExample: true } },
                 ],
                 description: 'Example text for the match matrix.',
                 format: TagFormat.plainText,
@@ -619,7 +784,18 @@ const CARDSETS: _CardSetsConfig = {
           {
             jsonKey: 'cells[{s}].values[]',
             exportJsonKey: [
-              { '@absent': { '@bit': { heading: { forValues: [''] } } } },
+              // PLAN-085 / R14: the positional-blank emission for an
+              // effectively-absent cell side fires ONLY when the active
+              // card has at least one `[#]` variant fire. This matches
+              // BPG `extractHeadingCard`'s `isHeading` gate: when no
+              // `[#]` exists anywhere in the title card, BPG returns
+              // undefined and no `heading` is emitted. The phantom
+              // `forValues:['']` placeholder is appropriate only when
+              // the card is being treated as a title-row.
+              {
+                predicates: ['@absent', { '@variantHasTag': '#' }],
+                rule: { '@bit': { heading: { forValues: [''] } } },
+              },
               { cells: { $s: { values: ['$'] } } },
             ],
             format: TextFormat.plainText,
@@ -642,33 +818,61 @@ const CARDSETS: _CardSetsConfig = {
                 // `populate_variants` fires this rule ONCE per cell (BPG
                 // `parseMatchMatrix` `exampleSide` precedence), avoiding
                 // per-iter pollution.
+                // @card scope-shift writes matrix-row container isExample.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   {
                     '@keyonly': {
                       cells: { $s: { isExample: true, example: '$parent' } },
                       '@bit': { isExample: true },
+                      '@card': { isExample: true },
                     },
                   },
                   {
                     predicates: ['@absent', { $cascade: '*' }],
-                    rule: { cells: { $s: { isExample: true, example: '$cascade' } } },
+                    rule: {
+                      cells: { $s: { isExample: true, example: '$cascade' } },
+                      '@bit': { isExample: true },
+                      '@card': { isExample: true },
+                    },
                   },
                   {
-                    '@absent': { cells: { $s: { isExample: true, example: '$parent' } } },
+                    '@absent': {
+                      cells: { $s: { isExample: true, example: '$parent' } },
+                      '@bit': { isExample: true },
+                      '@card': { isExample: true },
+                    },
                   },
-                  { cells: { $s: { isExample: true, example: '$' } }, '@bit': { isExample: true } },
+                  {
+                    cells: { $s: { isExample: true, example: '$' } },
+                    '@bit': { isExample: true },
+                    '@card': { isExample: true },
+                  },
                 ],
                 description: 'Example text for the match matrix.',
                 format: TagFormat.bitmarkText,
                 nullable: true,
               },
               {
+                // PLAN-085 / R14: bare `[#]` on a value-side emits the
+                // empty-string positional blank into `forValues` so the
+                // array stays aligned with the cell positions (matches BPG
+                // `extractHeadingCard`'s "all value-side headings present"
+                // shape). The `@keyonly` rule is required for two reasons:
+                // 1) it provides an emission for bare `[#]` (the `$` sigil
+                //    in the unconditional rule has no source for bare); and
+                // 2) the presence of any `@keyonly` rule disables the
+                //    optimised-mode `should_suppress_outcome` strip (see
+                //    `forward_emit.rs`) so the resulting `forValues: [""]`
+                //    survives the all-natural-defaults check.
                 key: ConfigKey.tag_title,
                 description: 'Title of the match matrix.',
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forValues',
-                exportJsonKey: { '@bit': { heading: { forValues: ['$'] } } },
+                exportJsonKey: [
+                  { '@keyonly': { '@bit': { heading: { forValues: [''] } } } },
+                  { '@bit': { heading: { forValues: ['$'] } } },
+                ],
               },
               {
                 key: ConfigKey.property_isCaseSensitive,
@@ -876,11 +1080,44 @@ const CARDSETS: _CardSetsConfig = {
                 // (NOT `isCorrect` like trueFalse). Shadow the inherited
                 // `tag_true` / `tag_false` from `group_trueFalse` to emit the
                 // feedback-specific shape.
+                //
+                // Chain @example: `[+ X][@example]` writes
+                // `isExample/example` onto the X choice only. BPG's
+                // `setIsExampleFlags` (Builder.ts:4041-4172) does NOT
+                // iterate `cardNode.feedbacks` — so unlike multipleChoice,
+                // there is no bubble to bit-level or feedbacks-level
+                // isExample. Pattern omits `@bit` scope-shift accordingly.
+                // No `@absent`/`@parent.isCorrect` cascade rules either:
+                // BPG's `pushExampleDownTree` (Builder.ts:3777-3849) has
+                // no feedback dispatch, so bit-header `[@example]` does
+                // not flow into feedback choices.
                 key: ConfigKey.tag_true,
                 exportJsonKey: { choices: [{ choice: '$', requireReason: true }] },
                 description: 'Reason-required choice for feedback (`[+]`).',
                 maxCount: Count.infinity,
                 format: TagFormat.plainText,
+                chain: [
+                  {
+                    key: ConfigKey.property_example,
+                    exportJsonKey: [
+                      { '@keyonly': { isExample: true, example: true } },
+                      { isExample: true, example: '$' },
+                    ],
+                    description: 'Per-choice example marker for feedback `[+]`.',
+                    format: TagFormat.boolean,
+                    maxCount: 1,
+                    nullable: true,
+                  },
+                  {
+                    // `[+ X][! foo]` chains `!` (instruction) onto the
+                    // choice; same for `[?]` (hint), `[%]` (item),
+                    // `[%2]`/`[%3]`/`[%4]` (lead/pageNumber/marginNumber).
+                    // Mirrors group_trueFalse's `+` chain shape.
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description:
+                      'Item, lead, page number, margin number, instruction and hint chained onto the feedback choice.',
+                  },
+                ],
               },
               {
                 key: ConfigKey.tag_false,
@@ -888,6 +1125,24 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Reason-not-required choice for feedback (`[-]`).',
                 maxCount: Count.infinity,
                 format: TagFormat.plainText,
+                chain: [
+                  {
+                    key: ConfigKey.property_example,
+                    exportJsonKey: [
+                      { '@keyonly': { isExample: true, example: true } },
+                      { isExample: true, example: '$' },
+                    ],
+                    description: 'Per-choice example marker for feedback `[-]`.',
+                    format: TagFormat.boolean,
+                    maxCount: 1,
+                    nullable: true,
+                  },
+                  {
+                    key: ConfigKey.group_standardItemLeadInstructionHint,
+                    description:
+                      'Item, lead, page number, margin number, instruction and hint chained onto the feedback choice.',
+                  },
+                ],
               },
               {
                 key: ConfigKey.group_trueFalse,
@@ -909,18 +1164,31 @@ const CARDSETS: _CardSetsConfig = {
         name: 'reason',
         variants: [
           {
+            // PLAN: feedback.reason — Object-only variant pattern. Per
+            // SYNTAX.md §8.1, sibling tag emissions do NOT auto-wrap
+            // under `reason.*`; each tag here spells out the full path.
+            // Body is a plain string (BPG `parseFeedback` uses
+            // `cardBodyStr ?? ''` for `reason.text`).
             jsonKey: 'reason.text',
             exportJsonKey: { reason: { text: '$' } },
+            format: TextFormat.plainText,
             tags: [
               {
-                key: ConfigKey.group_standardItemLeadInstructionHint,
-                description: 'Standard tags for lead, instruction, and hint.',
+                // Instruction lands under reason. Hint/item/lead/etc.
+                // omitted: not exercised by any fixture and BPG's
+                // `parseFeedback` spreads only the tags actually present
+                // — adding the rest can be done lazily as fixtures
+                // require them, with the same `{reason: {…}}` wrapper.
+                key: ConfigKey.tag_instruction,
+                exportJsonKey: { reason: { instruction: '$' } },
+                description: 'Instruction for the feedback reason.',
+                format: TagFormat.bitmarkText,
               },
               {
                 key: ConfigKey.property_reasonableNumOfChars,
                 exportJsonKey: [
-                  { '@absent': { reasonableNumOfChars: '$ancestor' } },
-                  { reasonableNumOfChars: '$' },
+                  { '@absent': { reason: { reasonableNumOfChars: '$ancestor' } } },
+                  { reason: { reasonableNumOfChars: '$' } },
                 ],
                 description: 'Property for reasonable number of characters.',
                 format: TagFormat.number,
@@ -928,15 +1196,39 @@ const CARDSETS: _CardSetsConfig = {
               {
                 // ALIGN-EXAMPLE-CASCADE §3.9: `feedback.reason` is NOT in
                 // BPG's `pushExampleDownTree` dispatch — no bit-header
-                // cascade.
+                // cascade. Local emission only.
+                //
+                // Both `reason.example` and `feedbacks[].example` are
+                // `TextAst` per BPG's schema — paragraph arrays. Format
+                // here is `bitmarkText` so `$` coerces to a paragraph
+                // array at both write sites.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
-                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
-                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                  {
+                    // Bare `[@example]`: reason.example is TextAst — BPG
+                    // coerces the boolean default to a paragraph
+                    // containing the string "true". feedbacks[].example
+                    // is not TextAst, stays a boolean. Two literal writes.
+                    '@keyonly': {
+                      reason: {
+                        isExample: true,
+                        example: [{ type: 'paragraph', content: [{ text: 'true', type: 'text' }] }],
+                      },
+                      isExample: true,
+                      example: true,
+                      '@bit': { isExample: true },
+                    },
+                  },
+                  {
+                    reason: { isExample: true, example: '$' },
+                    isExample: true,
+                    example: '$',
+                    '@bit': { isExample: true },
+                  },
                 ],
                 description:
                   'Example text for the feedback reason (entry-local only; no bit-header cascade).',
-                format: TagFormat.plainText,
+                format: TagFormat.bitmarkText,
                 nullable: true,
               },
               {
@@ -1092,9 +1384,17 @@ const CARDSETS: _CardSetsConfig = {
         // First header card's row of cells → `columns`. Subsequent header
         // cards' rows → `data` (per-card append; `[$]` shape because
         // per-card emission fires once per card, multiple fires deep_merge-
-        // append). Two rules, first-match-wins via @cardIndex.
+        // append). PLAN-079 + PLAN-080: predicates inside exportJsonKey
+        // both ROUTE cards to this section (when no explicit `==== table-
+        // header ====` qualifier) and SELECT the rule body once routed.
+        // First rule = first card with any `[#]` → `columns`; second rule
+        // = subsequent cards in this section → `data` (per-row append).
         jsonKey: 'table.columns',
         exportJsonKey: [
+          {
+            predicates: [{ '@cardIndex': 0 }, { '@variantHasTag': '#' }],
+            rule: { '@bit': { table: { columns: '$' } } },
+          },
           { '@cardIndex=0': { '@bit': { table: { columns: '$' } } } },
           { '@bit': { table: { data: ['$'] } } },
         ],
@@ -1173,7 +1473,22 @@ const CARDSETS: _CardSetsConfig = {
     sections: {
       'table-header': {
         jsonKey: 'table.header.rows',
-        exportJsonKey: { table: { header: { rows: '$' } } },
+        // PLAN-080: section dispatch via predicates inside exportJsonKey.
+        // Cards with no explicit `==== table-header ====` qualifier
+        // route here if FIRST CARD contains any `[#]` tag in any
+        // variant. Explicit-qualifier cards fall through to the
+        // unconditional fallback rule. Both rules use the per-card
+        // append shape `rows: ['$']` — the runtime triggers per-card
+        // emission whenever the pattern carries predicates, and each
+        // fire appends a single-element array (multi-fire deep-merge
+        // concatenates).
+        exportJsonKey: [
+          {
+            predicates: [{ '@cardIndex': 0 }, { '@variantHasTag': '#' }],
+            rule: { table: { header: { rows: ['$'] } } },
+          },
+          { table: { header: { rows: ['$'] } } },
+        ],
         sideJsonKey: 'cells[{s}]|set(title=true)',
         sideExportJsonKey: { cells: { $s: { title: true, $: '$' } } },
       },
@@ -1206,13 +1521,13 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.tag_title,
-                jsonKey: '.',
-                exportJsonKey: {
-                  '@bit': {
-                    table: { header: { rows: { cells: { cells: { $s: { content: '$' } } } } } },
-                  },
-                },
-                description: 'Title of the table cell.',
+                // PLAN-080: the `[#]` tag writes its text to the cell's
+                // `content` field. When the card is in the `table-header`
+                // section, the section's sideExportJsonKey wraps each
+                // cell with `title: true` automatically.
+                jsonKey: 'content',
+                exportJsonKey: { content: '$' },
+                description: 'Title text of the table cell (header rows).',
               },
               {
                 key: ConfigKey.property_tableCellType,
@@ -1244,6 +1559,9 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_tableColWidth,
+                // PLAN-080: write to the cell's `colwidth` field.
+                jsonKey: 'colwidth',
+                exportJsonKey: { colwidth: '$' },
                 description: 'Width for the column.',
                 format: TagFormat.number,
               },
@@ -1426,6 +1744,39 @@ const CARDSETS: _CardSetsConfig = {
                 exportJsonKey: { title: '$' },
                 key: ConfigKey.tag_title,
                 description: 'Title of the example bit.',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  //
+  // page-footer-sections — mirrors example-bit-list but emits cards under
+  // `sections` instead of `listItems`. BPG's JsonGenerator special-cases
+  // BitType.pageFooter in code; this dedicated cardSet expresses the same
+  // routing as pure config so the Rust serializer can pick it up.
+  //
+  [CardSetConfigKey.pageFooterSections]: {
+    jsonKey: 'sections',
+    exportJsonKey: { sections: '$' },
+    sides: [
+      {
+        name: 'item',
+        variants: [
+          {
+            jsonKey: 'body',
+            exportJsonKey: { body: '$' },
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for page-footer section bits.',
+              },
+              {
+                exportJsonKey: { title: '$' },
+                key: ConfigKey.tag_title,
+                description: 'Title of the page-footer section.',
               },
             ],
           },

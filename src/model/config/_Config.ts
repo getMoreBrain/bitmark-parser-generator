@@ -162,6 +162,11 @@ export interface _CardSetConfig {
       isDefault?: boolean;
       sideJsonKey?: string;
       sideExportJsonKey?: ExportJsonKey;
+      // PLAN-085: cardinality on the section (per-card-type) — `0` (default)
+      // means unbounded. Mirrors the `minCount` / `maxCount` pattern used
+      // elsewhere on tags / sides / variants.
+      minCount?: number;
+      maxCount?: number;
     }
   >; // Qualified card divider mappings
 
