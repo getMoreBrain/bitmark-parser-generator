@@ -271,7 +271,7 @@ const CARDSETS: _CardSetsConfig = {
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
                   {
-                    predicates: ['@absent', { '$cascade': '*' }],
+                    predicates: ['@absent', { $cascade: '*' }],
                     rule: {
                       isExample: true,
                       example: '$cascade',
@@ -367,7 +367,7 @@ const CARDSETS: _CardSetsConfig = {
                     },
                   },
                   {
-                    predicates: ['@absent', { '$cascade': '*' }],
+                    predicates: ['@absent', { $cascade: '*' }],
                     rule: {
                       isExample: true,
                       example: '$cascade',
@@ -651,7 +651,7 @@ const CARDSETS: _CardSetsConfig = {
                     },
                   },
                   {
-                    predicates: ['@absent', { '$cascade': '*' }],
+                    predicates: ['@absent', { $cascade: '*' }],
                     rule: { cells: { $s: { isExample: true, example: '$cascade' } } },
                   },
                   {

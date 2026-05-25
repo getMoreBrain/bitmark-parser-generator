@@ -5246,7 +5246,6 @@ const BITS: _BitsConfig = {
           'Resolved status for the review note, used to indicate if the note is resolved',
         format: TagFormat.boolean,
         defaultValue: 'false',
-        nullable: true,
       },
       {
         key: ConfigKey.property_resolvedDate,

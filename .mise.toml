@@ -1,4 +1,5 @@
 [tools]
 python = "3.14"
 node = "24"
-"npm:@anthropic-ai/claude-code" = "latest"
+"npm:@anthropic-ai/claude-code" = { version = "latest", npm_args = "--ignore-scripts=false" }
+
