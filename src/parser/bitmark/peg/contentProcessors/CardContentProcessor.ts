@@ -139,6 +139,7 @@ function buildCards(
 
     case CardSetConfigKey.clozeList:
     case CardSetConfigKey.exampleBitList:
+    case CardSetConfigKey.pageFooterSections:
     case CardSetConfigKey.bookReferenceList:
       result = parseCardBits(context, bitType, textFormat, processedCardSet);
       break;

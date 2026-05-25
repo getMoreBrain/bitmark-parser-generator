@@ -5278,7 +5278,6 @@ const BITS: _BitsConfig = {
           'Resolved status for the review note, used to indicate if the note is resolved',
         format: TagFormat.boolean,
         defaultValue: 'false',
-        nullable: true,
       },
       {
         key: ConfigKey.property_resolvedDate,
@@ -6372,6 +6371,11 @@ const BITS: _BitsConfig = {
     description:
       'Stripe pricing table bit with print-on-request customer/product IDs, used to embed Stripe pricing tables tied to a specific print-on-request customer and product',
     tags: [
+      {
+        key: ConfigKey.property_stripePricingTableDescriptiveName,
+        description: 'Descriptive name for the Stripe pricing table',
+        format: TagFormat.plainText,
+      },
       {
         key: ConfigKey.property_printOnRequestCustomerId,
         description:

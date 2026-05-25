@@ -1,8 +1,6 @@
 {
   "editor.tabSize": 2,
-  "editor.rulers": [
-    120
-  ],
+  "editor.rulers": [120],
   "editor.wordWrapColumn": 120,
   "editor.insertSpaces": true,
   "editor.formatOnSave": true,
@@ -15,12 +13,7 @@
     "watchDirectory": "useFsEvents"
   },
   "npm.packageManager": "yarn",
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   // "eslint.nodePath": ".yarn/sdks",
   "eslint.alwaysShowStatus": true,
   "editor.codeActionsOnSave": {
@@ -47,11 +40,12 @@
   // "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
   // "jest.jestCommandLine": "yarn test"
   "jest.runMode": "on-demand",
-  "mise.configureExtensionsUseSymLinks": true,
+  "mise.configureExtensionsAutomatically": false,
+  "mise.configureExtensionsUseSymLinks": false,
   "debug.javascript.defaultRuntimeExecutable": {
-    "pwa-node": "${workspaceFolder}/.vscode/mise-tools/node"
+    "pwa-node": "${workspaceFolder}/.mise/tools/node"
   },
-  "python.defaultInterpreterPath": "${workspaceFolder}/.vscode/mise-tools/python",
-  "java.import.gradle.java.home": "${workspaceFolder}/.vscode/mise-tools/java",
-  "java.jdt.ls.java.home": "${workspaceFolder}/.vscode/mise-tools/java"
+  "python.defaultInterpreterPath": "${workspaceFolder}/.mise/tools/python",
+  "java.import.gradle.java.home": "${workspaceFolder}/.mise/tools/java",
+  "java.jdt.ls.java.home": "${workspaceFolder}/.mise/tools/java"
 }

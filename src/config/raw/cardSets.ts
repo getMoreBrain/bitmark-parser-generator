@@ -391,7 +391,7 @@ const CARDSETS: _CardSetsConfig = {
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
                   {
-                    predicates: ['@absent', { '$cascade': '*' }],
+                    predicates: ['@absent', { $cascade: '*' }],
                     rule: {
                       isExample: true,
                       example: '$cascade',
@@ -508,7 +508,7 @@ const CARDSETS: _CardSetsConfig = {
                     },
                   },
                   {
-                    predicates: ['@absent', { '$cascade': '*' }],
+                    predicates: ['@absent', { $cascade: '*' }],
                     rule: {
                       isExample: true,
                       example: '$cascade',
@@ -610,8 +610,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 // PLAN-084: value-side excludes item/lead/pageNumber/marginNumber.
                 key: ConfigKey.group_standardTagsNoItemLead,
-                description:
-                  'Standard tags for the audio match pair (values side, no item/lead).',
+                description: 'Standard tags for the audio match pair (values side, no item/lead).',
               },
               {
                 key: ConfigKey.tag_title,
@@ -680,8 +679,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 // PLAN-084: value-side excludes item/lead/pageNumber/marginNumber.
                 key: ConfigKey.group_standardTagsNoItemLead,
-                description:
-                  'Standard tags for the image match pair (values side, no item/lead).',
+                description: 'Standard tags for the image match pair (values side, no item/lead).',
               },
               {
                 key: ConfigKey.tag_title,
@@ -739,8 +737,20 @@ const CARDSETS: _CardSetsConfig = {
                 // correctly via PLAN-077 §4.2 + §4.3).
                 key: ConfigKey.property_example,
                 exportJsonKey: [
-                  { '@keyonly': { isExample: true, '@bit': { isExample: true }, '@card': { isExample: true } } },
-                  { '@absent': { isExample: true, '@bit': { isExample: true }, '@card': { isExample: true } } },
+                  {
+                    '@keyonly': {
+                      isExample: true,
+                      '@bit': { isExample: true },
+                      '@card': { isExample: true },
+                    },
+                  },
+                  {
+                    '@absent': {
+                      isExample: true,
+                      '@bit': { isExample: true },
+                      '@card': { isExample: true },
+                    },
+                  },
                   { isExample: true, '@bit': { isExample: true }, '@card': { isExample: true } },
                 ],
                 description: 'Example text for the match matrix.',
@@ -819,7 +829,7 @@ const CARDSETS: _CardSetsConfig = {
                     },
                   },
                   {
-                    predicates: ['@absent', { '$cascade': '*' }],
+                    predicates: ['@absent', { $cascade: '*' }],
                     rule: {
                       cells: { $s: { isExample: true, example: '$cascade' } },
                       '@bit': { isExample: true },
@@ -1104,7 +1114,8 @@ const CARDSETS: _CardSetsConfig = {
                     // `[%2]`/`[%3]`/`[%4]` (lead/pageNumber/marginNumber).
                     // Mirrors group_trueFalse's `+` chain shape.
                     key: ConfigKey.group_standardItemLeadInstructionHint,
-                    description: 'Item, lead, page number, margin number, instruction and hint chained onto the feedback choice.',
+                    description:
+                      'Item, lead, page number, margin number, instruction and hint chained onto the feedback choice.',
                   },
                 ],
               },
@@ -1128,7 +1139,8 @@ const CARDSETS: _CardSetsConfig = {
                   },
                   {
                     key: ConfigKey.group_standardItemLeadInstructionHint,
-                    description: 'Item, lead, page number, margin number, instruction and hint chained onto the feedback choice.',
+                    description:
+                      'Item, lead, page number, margin number, instruction and hint chained onto the feedback choice.',
                   },
                 ],
               },
@@ -1200,9 +1212,7 @@ const CARDSETS: _CardSetsConfig = {
                     '@keyonly': {
                       reason: {
                         isExample: true,
-                        example: [
-                          { type: 'paragraph', content: [{ text: 'true', type: 'text' }] },
-                        ],
+                        example: [{ type: 'paragraph', content: [{ text: 'true', type: 'text' }] }],
                       },
                       isExample: true,
                       example: true,
