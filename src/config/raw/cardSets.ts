@@ -969,18 +969,31 @@ const CARDSETS: _CardSetsConfig = {
         name: 'reason',
         variants: [
           {
+            // PLAN: feedback.reason — Object-only variant pattern. Per
+            // SYNTAX.md §8.1, sibling tag emissions do NOT auto-wrap
+            // under `reason.*`; each tag here spells out the full path.
+            // Body is a plain string (BPG `parseFeedback` uses
+            // `cardBodyStr ?? ''` for `reason.text`).
             jsonKey: 'reason.text',
             exportJsonKey: { reason: { text: '$' } },
+            format: TextFormat.plainText,
             tags: [
               {
-                key: ConfigKey.group_standardItemLeadInstructionHint,
-                description: 'Standard tags for lead, instruction, and hint.',
+                // Instruction lands under reason. Hint/item/lead/etc.
+                // omitted: not exercised by any fixture and BPG's
+                // `parseFeedback` spreads only the tags actually present
+                // — adding the rest can be done lazily as fixtures
+                // require them, with the same `{reason: {…}}` wrapper.
+                key: ConfigKey.tag_instruction,
+                exportJsonKey: { reason: { instruction: '$' } },
+                description: 'Instruction for the feedback reason.',
+                format: TagFormat.bitmarkText,
               },
               {
                 key: ConfigKey.property_reasonableNumOfChars,
                 exportJsonKey: [
-                  { '@absent': { reasonableNumOfChars: '$ancestor' } },
-                  { reasonableNumOfChars: '$' },
+                  { '@absent': { reason: { reasonableNumOfChars: '$ancestor' } } },
+                  { reason: { reasonableNumOfChars: '$' } },
                 ],
                 description: 'Property for reasonable number of characters.',
                 format: TagFormat.number,
@@ -988,15 +1001,41 @@ const CARDSETS: _CardSetsConfig = {
               {
                 // ALIGN-EXAMPLE-CASCADE §3.9: `feedback.reason` is NOT in
                 // BPG's `pushExampleDownTree` dispatch — no bit-header
-                // cascade.
+                // cascade. Local emission only.
+                //
+                // Both `reason.example` and `feedbacks[].example` are
+                // `TextAst` per BPG's schema — paragraph arrays. Format
+                // here is `bitmarkText` so `$` coerces to a paragraph
+                // array at both write sites.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
-                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
-                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                  {
+                    // Bare `[@example]`: reason.example is TextAst — BPG
+                    // coerces the boolean default to a paragraph
+                    // containing the string "true". feedbacks[].example
+                    // is not TextAst, stays a boolean. Two literal writes.
+                    '@keyonly': {
+                      reason: {
+                        isExample: true,
+                        example: [
+                          { type: 'paragraph', content: [{ text: 'true', type: 'text' }] },
+                        ],
+                      },
+                      isExample: true,
+                      example: true,
+                      '@bit': { isExample: true },
+                    },
+                  },
+                  {
+                    reason: { isExample: true, example: '$' },
+                    isExample: true,
+                    example: '$',
+                    '@bit': { isExample: true },
+                  },
                 ],
                 description:
                   'Example text for the feedback reason (entry-local only; no bit-header cascade).',
-                format: TagFormat.plainText,
+                format: TagFormat.bitmarkText,
                 nullable: true,
               },
               {
