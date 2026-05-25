@@ -65,6 +65,7 @@ const BITS: _BitsConfig = {
         ],
         description: 'The example text for the bit',
         format: TagFormat.plainText,
+        nullable: true,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -405,6 +406,7 @@ const BITS: _BitsConfig = {
         ],
         description: 'The example text for the bit',
         format: TagFormat.plainText,
+        nullable: true,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -569,6 +571,7 @@ const BITS: _BitsConfig = {
         ],
         description: 'The example text for the bit',
         format: TagFormat.plainText,
+        nullable: true,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -721,6 +724,7 @@ const BITS: _BitsConfig = {
         ],
         description: 'The example text for the bit',
         format: TagFormat.plainText,
+        nullable: true,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -1316,8 +1320,31 @@ const BITS: _BitsConfig = {
         description: 'Tags for gaps in cloze and multiple choice text bits',
       },
       {
-        key: ConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalseInlineSelect,
         description: 'Tags for true/false questions in cloze and multiple choice text bits',
+      },
+      {
+        // Bit-level @isCaseSensitive — empty exportJsonKey (no bit-level emission);
+        // defaultValue 'true' phantom-fires onto the ancestor stack so the gap chain's
+        // `@absent: $ancestor` rule resolves to true. Mirrors BPG Builder.ts:1643-1652
+        // `pushDownTree(... 'isCaseSensitive', data.isCaseSensitive ?? true)` for cloze bits.
+        key: ConfigKey.property_isCaseSensitive,
+        exportJsonKey: {},
+        description: 'If the cloze answers are case sensitive',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
       },
     ],
   },
@@ -1357,6 +1384,20 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_gap,
         description: 'Tags for gaps in cloze bits',
       },
+      {
+        // Override inherited @example: cloze is in OLD parser's
+        // `isTopLevelExample` allow-list, so [@example] at bit-header
+        // emits `isExample: true`.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
+      },
     ],
   },
   [BitType.clozeInstructionGrouped]: {
@@ -1364,11 +1405,36 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.cloze,
     description:
       'Cloze instruction grouped bit, used for cloze questions with grouped instructions',
+    tags: [
+      {
+        key: ConfigKey.property_quizCountItems,
+        description: 'The number of items in the cloze quiz (instruction-grouped default: true)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+      // Note: quizStrikethroughSolutions defaults to false for instruction-grouped per OLD
+      // JsonGenerator.ts:1689-1690, which equals the Boolean natural default → no override needed.
+    ],
   },
   [BitType.clozeSolutionGrouped]: {
     since: '1.3.0',
     baseBitType: BitType.cloze,
     description: 'Cloze solution grouped bit, used for cloze questions with grouped solutions',
+    tags: [
+      {
+        key: ConfigKey.property_quizCountItems,
+        description: 'The number of items in the cloze quiz (solution-grouped default: true)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+      {
+        key: ConfigKey.property_quizStrikethroughSolutions,
+        description:
+          'If the cloze solutions should be strikethrough (solution-grouped default: true)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.clozeSeveral]: {
     since: '3.5.0',
@@ -1405,6 +1471,17 @@ const BITS: _BitsConfig = {
       {
         key: ConfigKey.group_quizCommon,
         description: 'Common tags for quiz bits',
+      },
+      {
+        // PLAN-084 (R12): bit-level @isCaseSensitive — empty exportJsonKey
+        // (no bit-level emission); defaultValue 'true' phantom-fires onto
+        // the ancestor stack so each listItem's gap chain `@absent: $ancestor`
+        // rule resolves to true. Mirrors the cloze bit (bits.ts:1326-1336).
+        key: ConfigKey.property_isCaseSensitive,
+        exportJsonKey: {},
+        description: 'If the cloze answers are case sensitive',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
       },
     ],
     cardSet: CardSetConfigKey.clozeList,
@@ -1579,6 +1656,7 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.group_person,
+        exportJsonKey: { partner: { name: '$' } },
         description: 'Tags for the person in the conversation',
       },
     ],
@@ -2040,6 +2118,7 @@ const BITS: _BitsConfig = {
         ],
         description: 'The example text for the essay bit',
         format: TagFormat.plainText,
+        nullable: true,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -2074,6 +2153,7 @@ const BITS: _BitsConfig = {
         ],
         description: 'The example text for the example bit',
         format: TagFormat.plainText,
+        nullable: true,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -2167,6 +2247,18 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.article,
     description: 'Article AI bit, used to create AI-generated articles',
+    tags: [
+      {
+        // Shadows the inherited @aiGenerated from the standard group: this
+        // bit type forces aiGenerated:true regardless of source value or
+        // absence. Literal `true` in the export pattern ignores `$`.
+        key: ConfigKey.property_aiGenerated,
+        description: 'AI-generated flag, forced true for article-ai bits',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+        exportJsonKey: { aiGenerated: true },
+      },
+    ],
   },
   [BitType.articleAttachment]: {
     since: '1.3.0',
@@ -2530,6 +2622,18 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.note,
     description: 'Note AI bit, used to create AI-generated notes in articles or books',
+    tags: [
+      {
+        // Shadows the inherited @aiGenerated from the standard group: this
+        // bit type forces aiGenerated:true regardless of source value or
+        // absence. Literal `true` in the export pattern ignores `$`.
+        key: ConfigKey.property_aiGenerated,
+        description: 'AI-generated flag, forced true for article-ai bits',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+        exportJsonKey: { aiGenerated: true },
+      },
+    ],
   },
   [BitType.notebookArticle]: {
     since: '1.3.0',
@@ -2665,6 +2769,18 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.summary,
     description: 'AI-generated summary bit',
+    tags: [
+      {
+        // Shadows the inherited @aiGenerated from the standard group: this
+        // bit type forces aiGenerated:true regardless of source value or
+        // absence. Literal `true` in the export pattern ignores `$`.
+        key: ConfigKey.property_aiGenerated,
+        description: 'AI-generated flag, forced true for article-ai bits',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+        exportJsonKey: { aiGenerated: true },
+      },
+    ],
   },
   [BitType.videoTranscript]: {
     since: '1.3.0',
@@ -2956,7 +3072,7 @@ const BITS: _BitsConfig = {
         description: 'Product ID for the module product, used to link to a specific product',
         format: TagFormat.plainText,
         minCount: 1,
-        maxCount: Count.infinity,
+        maxCount: 1,
       },
     ],
   },
@@ -3015,11 +3131,13 @@ const BITS: _BitsConfig = {
           'Resource bit tags for logo grave images, used to define additional properties',
       },
       {
-        // Image resource
-
-        key: ConfigKey.group_resourceImage,
+        // Image resource — fully-expanded shape so each `&image` emission
+        // produces a complete `{type, image: {src}}` object inside the
+        // `images[]` array. Chain attrs like `[@zoomDisabled]` fold under
+        // `images[].image` via the `[]` last-element-merge semantic.
+        key: ConfigKey.group_resourceImageNoZoom,
         description: 'Resource image tags for logo grave images, used to attach images',
-        exportJsonKey: { images: '$' },
+        exportJsonKey: { images: [{ type: 'image', image: { src: '$' } }] },
         minCount: 1,
         maxCount: Count.infinity,
       },
@@ -3325,6 +3443,10 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.property_book,
+        // Starter-array shape: each `[@book:value]` chain appends a fresh
+        // `{ book, reference }` entry. The chained `►` (tag_reference) lands
+        // inside the most-recently-appended entry as `reference: $`.
+        exportJsonKey: { book: [{ book: '$' }] },
         description: 'Book reference for the page, used to link to a specific book',
         maxCount: Count.infinity,
         chain: [
@@ -3394,7 +3516,9 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
     ],
-    cardSet: CardSetConfigKey.exampleBitList,
+    // page-footer emits cards under `sections` (vs `listItems` for the
+    // sibling exampleList / assignmentList bits) — see JsonGenerator.ts.
+    cardSet: CardSetConfigKey.pageFooterSections,
   },
   [BitType.legend]: {
     since: '3.12.0',
@@ -3443,7 +3567,20 @@ const BITS: _BitsConfig = {
     since: '1.34.0',
     baseBitType: BitType._standard,
     description: 'Definition list bit, used to create lists of definitions in articles or books',
-
+    tags: [
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
+      },
+    ],
     cardSet: CardSetConfigKey.definitionList,
   },
   [BitType.metaSearchDefaultTerms]: {
@@ -3468,6 +3605,18 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_quizCommon,
         description: 'Common quiz tags for flashcards',
       },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
+      },
     ],
     cardSet: CardSetConfigKey.flashcard,
   },
@@ -3475,6 +3624,10 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.flashcard,
     description: 'Flashcard 1 bit',
+    // PLAN-085: use the flashcard1 cardset (sections.default.maxCount=1)
+    // instead of inheriting `flashcard`'s unbounded cardset, since this
+    // bit type structurally allows only a single card.
+    cardSet: CardSetConfigKey.flashcard1,
   },
   [BitType.qAndACard]: {
     since: '3.25.0',
@@ -3509,8 +3662,24 @@ const BITS: _BitsConfig = {
         description: 'Common quiz tags for highlighted text',
       },
       {
-        key: ConfigKey.group_trueFalse,
-        description: 'True/False quiz tags for highlighted text',
+        // Dedicated highlight inline-select chain: tag_true / tag_false
+        // emit `{type:"highlight", attrs:{texts:[{text,isCorrect?}]}}`
+        // inline body nodes via @body-inline. Bit shares no tag IDs with
+        // multiple-choice / multiple-choice-1 (which use group_trueFalse).
+        key: ConfigKey.group_trueFalseInlineHighlight,
+        description: 'True/False quiz tags for highlighted text (inline body nodes)',
+      },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
       },
     ],
   },
@@ -3520,15 +3689,9 @@ const BITS: _BitsConfig = {
     description: 'Image bit, used to create images in articles or books',
     tags: [
       {
-        key: ConfigKey.resource_backgroundWallpaper,
-        exportJsonKey: { backgroundWallpaper: { type: 'image', image: { src: '$' } } },
-        description: 'Background wallpaper for the image, used to set a background for the image',
-        chain: [
-          {
-            key: ConfigKey.group_resourceImageCommon,
-            description: 'Common resource image tags for images',
-          },
-        ],
+        key: ConfigKey.group_backgroundWallpaper,
+        description:
+          'Background wallpaper tags for images, used to define background properties for images',
       },
       {
         key: ConfigKey.group_resourceBitTags,
@@ -3639,8 +3802,16 @@ const BITS: _BitsConfig = {
   },
   [BitType.imageSeparator]: {
     since: '1.4.15',
-    baseBitType: BitType.image,
+    baseBitType: BitType._standard,
     description: 'Image separator bit, used to create separators in articles or books',
+    tags: [
+      {
+        key: ConfigKey.group_imageNoZoom,
+        description:
+          'Image no zoom tags for images, used to define whether images should have zoom functionality',
+      },
+    ],
+    resourceAttachmentAllowed: false,
   },
   [BitType.imageSeparatorAlt]: {
     since: '1.16.0',
@@ -3682,7 +3853,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageBanner]: {
     since: '1.4.3',
-    baseBitType: BitType.image,
+    baseBitType: BitType._standard,
     description: 'Page banner bit, used to create banners for pages in articles or books',
     tags: [
       {
@@ -3690,7 +3861,13 @@ const BITS: _BitsConfig = {
         description: 'Slug for the page banner, used to identify the banner in the system',
         format: TagFormat.plainText,
       },
+      {
+        key: ConfigKey.group_imageNoZoom,
+        description:
+          'Image no zoom tags for images, used to define whether images should have zoom functionality',
+      },
     ],
+    resourceAttachmentAllowed: false,
   },
   [BitType.pageHero]: {
     since: '1.11.0',
@@ -3705,7 +3882,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.tableImage]: {
     since: '1.5.15',
-    baseBitType: BitType.table,
+    baseBitType: BitType.tableExtended,
     description: 'Table image bit, used to create images in tables in articles or books',
     tags: [
       {
@@ -3714,15 +3891,9 @@ const BITS: _BitsConfig = {
         format: TagFormat.bitmarkText,
       },
       {
-        key: ConfigKey.resource_backgroundWallpaper,
-        exportJsonKey: { backgroundWallpaper: { type: 'image', image: { src: '$' } } },
-        description: 'Background wallpaper for the image, used to set a background for the image',
-        chain: [
-          {
-            key: ConfigKey.group_resourceImageCommon,
-            description: 'Common resource image tags for images',
-          },
-        ],
+        key: ConfigKey.group_backgroundWallpaper,
+        description:
+          'Background wallpaper tags for images, used to define background properties for images',
       },
       {
         key: ConfigKey.group_resourceBitTags,
@@ -3884,11 +4055,10 @@ const BITS: _BitsConfig = {
           'Resource bit tags for logo grave images, used to define additional properties',
       },
       {
-        // Image resource
-
-        key: ConfigKey.group_resourceImage,
+        // Image resource — fully-expanded shape (see BitType.extractorImage).
+        key: ConfigKey.group_resourceImageNoZoom,
         description: 'Resource image tags for logo grave images, used to attach images',
-        exportJsonKey: { logos: '$' },
+        exportJsonKey: { logos: [{ type: 'image', image: { src: '$' } }] },
         minCount: 1,
         maxCount: Count.infinity,
       },
@@ -3899,6 +4069,16 @@ const BITS: _BitsConfig = {
     since: '1.6.1',
     baseBitType: BitType.imagesLogoGrave,
     description: 'Prototype images bit, used to create prototype images in articles or books',
+    tags: [
+      {
+        // Override inherited `logos` wrapper with `images` for this bit type.
+        key: ConfigKey.group_resourceImageNoZoom,
+        description: 'Resource image tags for prototype images',
+        exportJsonKey: { images: [{ type: 'image', image: { src: '$' } }] },
+        minCount: 1,
+        maxCount: Count.infinity,
+      },
+    ],
   },
   [BitType.internalLink]: {
     since: '1.3.0',
@@ -3928,6 +4108,18 @@ const BITS: _BitsConfig = {
         exportJsonKey: {},
         description: 'Reasonable number of characters for the interview, used to limit input size',
         format: TagFormat.number,
+      },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
       },
     ],
     cardSet: CardSetConfigKey.questions,
@@ -4295,6 +4487,18 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_mark,
         description: 'Mark tags, used to define the content of marks',
       },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
+      },
     ],
   },
   [BitType.match]: {
@@ -4314,6 +4518,23 @@ const BITS: _BitsConfig = {
           'Case sensitivity for matching pairs, used to define if matches are case-sensitive',
         format: TagFormat.boolean,
         defaultValue: 'true',
+      },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list
+        // (covers match, matchAll, matchReverse, matchAllReverse,
+        // matchSolutionGrouped, matchMatrix, matchAudio, matchPicture).
+        // Bit-level fires emit only `isExample`; the @example value (when
+        // provided) is recorded in the ancestor stack and consumed by
+        // per-pair/per-cell variant overrides — not surfaced at bit scope.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
       },
     ],
     cardSet: CardSetConfigKey.matchPairs,
@@ -4406,6 +4627,18 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_trueFalse,
         description: 'True/False tags for multiple choice 1 questions',
       },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
+      },
     ],
   },
   [BitType.coachSelfReflectionMultipleChoice1]: {
@@ -4429,6 +4662,18 @@ const BITS: _BitsConfig = {
         key: ConfigKey.group_trueFalse,
         description: 'True/False tags for multiple choice questions',
       }, // This is actually for multiple-choice-1, but we support it here as well (as many bits are wrong)
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
+      },
     ],
     cardSet: CardSetConfigKey.quiz,
   },
@@ -4449,8 +4694,20 @@ const BITS: _BitsConfig = {
         description: 'Common quiz tags for multiple choice text questions',
       },
       {
-        key: ConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalseInlineSelect,
         description: 'True/False tags for multiple choice text questions',
+      },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
       },
     ],
   },
@@ -4478,8 +4735,20 @@ const BITS: _BitsConfig = {
         description: 'Common quiz tags for multiple response 1 questions',
       },
       {
-        key: ConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalseResponses,
         description: 'True/False tags for multiple response 1 questions',
+      },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
       },
     ],
   },
@@ -4501,11 +4770,23 @@ const BITS: _BitsConfig = {
         description: 'Common quiz tags for multiple response questions',
       },
       {
-        key: ConfigKey.group_trueFalse,
+        key: ConfigKey.group_trueFalseResponses,
         description: 'True/False tags for multiple response questions',
       }, // This is actually for multiple-response-1, but we support it here as well (as many bits are wrong)
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
+      },
     ],
-    cardSet: CardSetConfigKey.quiz,
+    cardSet: CardSetConfigKey.quizResponses,
   },
   [BitType.coachSelfReflectionMultipleResponse]: {
     since: '1.3.0',
@@ -4761,6 +5042,8 @@ const BITS: _BitsConfig = {
       },
       {
         key: ConfigKey.resource_platformIcon,
+        jsonKey: 'platformIcon|resource(type=image, key=image)',
+        exportJsonKey: { platformIcon: { type: 'image', image: { src: '$' } } },
         description: 'The platform icon',
         chain: [
           {
@@ -4796,6 +5079,8 @@ const BITS: _BitsConfig = {
     tags: [
       {
         key: ConfigKey.resource_platformLogo,
+        jsonKey: 'platformLogo|resource(type=image, key=image)',
+        exportJsonKey: { platformLogo: { type: 'image', image: { src: '$' } } },
         description: 'The platform logo',
         chain: [
           {
@@ -5010,6 +5295,7 @@ const BITS: _BitsConfig = {
         ],
         description: 'The example text for the review note bit',
         format: TagFormat.plainText,
+        nullable: true,
       },
     ],
     rootExampleType: ExampleType.string,
@@ -5099,7 +5385,8 @@ const BITS: _BitsConfig = {
           { isExample: true, example: '$' },
         ],
         description: 'The example flag for the bit (boolean)',
-        format: TagFormat.plainText,
+        format: TagFormat.boolean,
+        nullable: true,
       },
     ],
     cardSet: CardSetConfigKey.elements,
@@ -5388,15 +5675,9 @@ const BITS: _BitsConfig = {
         format: TagFormat.bitmarkText,
       },
       {
-        key: ConfigKey.resource_backgroundWallpaper,
-        exportJsonKey: { backgroundWallpaper: { type: 'image', image: { src: '$' } } },
-        description: 'Background wallpaper for the image, used to set a background for the image',
-        chain: [
-          {
-            key: ConfigKey.group_resourceImageCommon,
-            description: 'Common resource image tags for images',
-          },
-        ],
+        key: ConfigKey.group_backgroundWallpaper,
+        description:
+          'Background wallpaper tags for images, used to define background properties for images',
       },
       {
         key: ConfigKey.group_resourceBitTags,
@@ -5805,16 +6086,20 @@ const BITS: _BitsConfig = {
         format: TagFormat.plainText,
       },
       {
-        exportJsonKey: { choices: [{ choice: '$', isCorrect: true }] },
+        // PLAN-067 Edit #1: true-false-1's `+` / `-` emit a flat
+        // `{ statement, isCorrect }` at bit root (single-statement bit),
+        // not a `choices[]` array. Format is bitmarkText so the statement
+        // body renders as a ProseMirror tree, matching reference fixtures.
+        exportJsonKey: { statement: '$', isCorrect: true },
         key: ConfigKey.tag_true,
         description: 'Tag for the true option in the true/false question',
-        format: TagFormat.plainText,
+        format: TagFormat.bitmarkText,
       },
       {
-        exportJsonKey: { choices: [{ choice: '$', isCorrect: false }] },
+        exportJsonKey: { statement: '$', isCorrect: false },
         key: ConfigKey.tag_false,
         description: 'Tag for the false option in the true/false question',
-        format: TagFormat.plainText,
+        format: TagFormat.bitmarkText,
       },
       {
         // Override inherited @example from group_standardTags: boolean root
@@ -5825,14 +6110,24 @@ const BITS: _BitsConfig = {
         // sufficient for `[+...]` (correct) statements which dominate the
         // fixtures; `[-...]` (incorrect) bits with bare `[@example]` would
         // need either a runtime extension or an explicit `[@example:false]`.
+        //
+        // Format is `boolean` so `[@example:false]` coerces to JSON `false`
+        // (a natural default that gets stripped in optimised mode, matching
+        // BPG's `rootExampleType: boolean`). PlainText would emit the
+        // STRING `"false"` which doesn't strip.
         key: ConfigKey.property_example,
         exportJsonKey: [
           { '@keyonly': { isExample: true, example: true } },
           { '@absent': { isExample: true, example: true } },
+          // `[@example:false]`: emit `isExample: true` only — `example: false`
+          // is the natural default for boolean, stripped in optimised mode.
+          // Mirrors BPG `removeUnwantedProperties` `ignoreAllFalse: true`.
+          { '@value=false': { isExample: true } },
           { isExample: true, example: '$' },
         ],
         description: 'The example flag for the bit (boolean)',
-        format: TagFormat.plainText,
+        format: TagFormat.boolean,
+        nullable: true,
       },
     ],
     rootExampleType: ExampleType.boolean,
@@ -5857,6 +6152,18 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_labelFalse,
         description: 'Label for the false option in the true/false question',
         format: TagFormat.plainText,
+      },
+      {
+        // Override inherited @example: in `isTopLevelExample` allow-list.
+        key: ConfigKey.property_example,
+        exportJsonKey: [
+          { '@keyonly': { isExample: true } },
+          { '@absent': { isExample: true } },
+          { isExample: true, example: '$' },
+        ],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
       },
     ],
     cardSet: CardSetConfigKey.statements,
@@ -6060,6 +6367,11 @@ const BITS: _BitsConfig = {
     description:
       'Stripe pricing table bit with print-on-request customer/product IDs, used to embed Stripe pricing tables tied to a specific print-on-request customer and product',
     tags: [
+      {
+        key: ConfigKey.property_stripePricingTableDescriptiveName,
+        description: 'Descriptive name for the Stripe pricing table',
+        format: TagFormat.plainText,
+      },
       {
         key: ConfigKey.property_printOnRequestCustomerId,
         description:

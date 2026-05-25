@@ -83,6 +83,7 @@ function buildCards(
 
   switch (cardSetType) {
     case CardSetConfigKey.flashcard:
+    case CardSetConfigKey.flashcard1:
     case CardSetConfigKey.definitionList:
       result = parseFlashcardOrDefinitionList(context, bitType, processedCardSet);
       break;
@@ -100,6 +101,7 @@ function buildCards(
       break;
 
     case CardSetConfigKey.quiz:
+    case CardSetConfigKey.quizResponses:
       result = parseQuiz(context, bitType, processedCardSet, choicesV1, responsesV1);
       break;
 
@@ -137,6 +139,7 @@ function buildCards(
 
     case CardSetConfigKey.clozeList:
     case CardSetConfigKey.exampleBitList:
+    case CardSetConfigKey.pageFooterSections:
     case CardSetConfigKey.bookReferenceList:
       result = parseCardBits(context, bitType, textFormat, processedCardSet);
       break;

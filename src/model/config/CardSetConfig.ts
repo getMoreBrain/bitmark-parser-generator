@@ -16,6 +16,11 @@ interface CardSetSection {
   sideJsonKey?: string;
   sideExportJsonKey?: ExportJsonKey;
   hasSideExportJsonKey?: boolean;
+  // PLAN-085: cardinality on the section (per-card-type). `0` (default)
+  // means unbounded. Exported as `min` / `max` in the per-card config
+  // JSON; mirrored on the Rust `CardConfig.min/max` field.
+  minCount?: number;
+  maxCount?: number;
 }
 
 class CardSetConfig {

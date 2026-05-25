@@ -244,6 +244,7 @@ const propertyKeys = {
   property_src4x: '@src4x',
   property_srcAlt: '@srcAlt',
   property_stripePricingTableId: '@stripePricingTableId',
+  property_stripePricingTableDescriptiveName: '@stripePricingTableDescriptiveName',
   property_stripePublishableKey: '@stripePublishableKey',
   property_subject: '@subject',
   property_subtype: '@subtype',

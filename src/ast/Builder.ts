@@ -270,6 +270,7 @@ class Builder extends BaseBuilder {
       codeLineNumbers?: boolean;
       codeMinimap?: boolean;
       stripePricingTableId?: string;
+      stripePricingTableDescriptiveName?: string;
       stripePublishableKey?: string;
       thumbImage?: string;
       scormSource?: string;
@@ -1060,6 +1061,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_stripePricingTableId,
         data.stripePricingTableId,
+        options,
+      ),
+      stripePricingTableDescriptiveName: this.toAstProperty(
+        bitType,
+        ConfigKey.property_stripePricingTableDescriptiveName,
+        data.stripePricingTableDescriptiveName,
         options,
       ),
       stripePublishableKey: this.toAstProperty(

@@ -304,6 +304,20 @@ class ConfigBuilder {
       if (!cardSetConfig) return undefined;
       const normalizedKey = normalizeCardKey(cardSetKey);
 
+      // Variants have no "inherited-group wrapper" the way bits do
+      // (`writeBitConfigs` always emits a parent `group-{baseBitType}` ref
+      // first, then sorted own tags). Without that wrapper, sorting variant
+      // tags with groups LAST means inherited generic tags (from a group ref
+      // inside the variant) get walked AFTER any direct tag/property
+      // override and overwrite it under the downstream configurator's
+      // last-wins-by-name dedup. Sort groups FIRST so direct overrides win.
+      const variantTagEntriesTypeOrder = [
+        BitTagConfigKeyType.group,
+        BitTagConfigKeyType.tag,
+        BitTagConfigKeyType.property,
+        BitTagConfigKeyType.resource,
+        BitTagConfigKeyType.unknown,
+      ];
       const sides = cardSetConfig.sides.map((side, sideIdx) => {
         const sidePath = `cardSets.${normalizedKey} / sides.${side.name ?? `[${sideIdx}]`}`;
         const variants = side.variants.map((variant, variantIdx) => {
@@ -315,7 +329,7 @@ class ConfigBuilder {
             const typeA = typeFromConfigKey(tagA.key);
             const typeB = typeFromConfigKey(tagB.key);
             const typeOrder =
-              tagEntriesTypeOrder.indexOf(typeA) - tagEntriesTypeOrder.indexOf(typeB);
+              variantTagEntriesTypeOrder.indexOf(typeA) - variantTagEntriesTypeOrder.indexOf(typeB);
             return typeOrder;
           });
 
@@ -363,6 +377,14 @@ class ConfigBuilder {
             name: sectionName,
             ...(section.isDefault ? { isDefault: true } : {}),
             ...cardJsonKeyField(section, 'jsonKey', 'exportJsonKey', sectionPath),
+            // PLAN-085: per-section cardinality. Emit only when non-default
+            // (treat `0` / undefined as "unbounded — omit").
+            ...(section.minCount != null && section.minCount !== 0
+              ? { min: section.minCount }
+              : {}),
+            ...(section.maxCount != null && section.maxCount !== 0
+              ? { max: section.maxCount }
+              : {}),
             sides: cardSides,
           };
         });
@@ -464,12 +486,32 @@ class ConfigBuilder {
       });
       const isInheritedFrom = bitGroupConfigKeys.has(b.bitType);
 
+      // Per-key dedup with in-place replacement, mirroring
+      // ConfigHydrator.hydrateTagsConfig's last-wins-per-configKey semantic
+      // (PLAN-066). Walk order = parent inheritance chain (root → leaf) →
+      // each level's tagGroupRefs[] → direct tags[] last; when the same
+      // `key` reappears later in the walk, it REPLACES the earlier entry
+      // in place (preserving position). Without this, the downstream
+      // configurator-api importer hits a UNIQUE(bit_id, group_id)
+      // violation on the second attach and silently keeps the first
+      // (inherited) entry, losing the child's override.
+      const indexByKey = new Map<string, number>();
+      const pushOrReplace = (entry: { key: string; [k: string]: unknown }) => {
+        const existing = indexByKey.get(entry.key);
+        if (existing !== undefined) {
+          tags[existing] = entry;
+        } else {
+          indexByKey.set(entry.key, tags.length);
+          tags.push(entry);
+        }
+      };
+
       if (isInheritedFrom) {
         // This bit is inherited from, so its tags are in group-<bitType>
         // The bit config only references its own group (resolved through squash map)
         const resolvedGroups = resolveGroupReferences(`group-${b.bitType}`);
         for (const ref of resolvedGroups) {
-          tags.push({
+          pushOrReplace({
             type: 'group',
             key: ref.key,
             ...(ref.hasExportJsonKey ? { jsonKey: ref.exportJsonKey } : {}),
@@ -483,7 +525,7 @@ class ConfigBuilder {
         if (b.baseBitType) {
           const resolvedGroups = resolveGroupReferences(`group-${b.baseBitType}`);
           for (const ref of resolvedGroups) {
-            tags.push({
+            pushOrReplace({
               type: 'group',
               key: ref.key,
               ...(ref.hasExportJsonKey ? { jsonKey: ref.exportJsonKey } : {}),
@@ -494,7 +536,9 @@ class ConfigBuilder {
           }
         }
         for (const [_tagKey, tag] of tagEntries) {
-          tags.push(...processTagEntries(tag, []));
+          for (const entry of processTagEntries(tag, [])) {
+            pushOrReplace(entry as { key: string; [k: string]: unknown });
+          }
         }
       }
 

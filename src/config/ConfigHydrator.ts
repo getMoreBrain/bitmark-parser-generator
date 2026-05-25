@@ -115,6 +115,11 @@ class ConfigHydrator {
         sideJsonKey: v.sideJsonKey,
         sideExportJsonKey: v.sideExportJsonKey,
         hasSideExportJsonKey: Object.prototype.hasOwnProperty.call(v, 'sideExportJsonKey'),
+        // PLAN-085: cardinality fields pass through; defaults applied
+        // downstream by the config consumer (Rust treats `0` / undefined
+        // as unbounded).
+        minCount: v.minCount,
+        maxCount: v.maxCount,
       };
     }
     return out;
