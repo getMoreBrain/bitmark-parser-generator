@@ -204,6 +204,7 @@ export interface Bit {
   codeLineNumbers?: Property;
   codeMinimap?: Property;
   stripePricingTableId?: Property;
+  stripePricingTableDescriptiveName?: Property;
   stripePublishableKey?: Property;
   thumbImage?: Property;
   scormSource?: Property;
