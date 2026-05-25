@@ -3633,6 +3633,10 @@ const BITS: _BitsConfig = {
     since: '3.25.0',
     baseBitType: BitType.flashcard1,
     description: 'Q&A card bit, used to create question and answer cards in articles or books',
+    // PLAN-085: q-and-a-card permits multiple cards (some fixtures carry
+    // two). Override the inherited `flashcard1` (max=1) cardset back to
+    // the unbounded `flashcard` cardset.
+    cardSet: CardSetConfigKey.flashcard,
   },
   [BitType.focusImage]: {
     since: '1.3.0',
