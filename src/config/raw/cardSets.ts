@@ -619,9 +619,9 @@ const CARDSETS: _CardSetsConfig = {
                 // correctly via PLAN-077 §4.2 + §4.3).
                 key: ConfigKey.property_example,
                 exportJsonKey: [
-                  { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
-                  { '@absent': { isExample: true, '@bit': { isExample: true } } },
-                  { isExample: true, '@bit': { isExample: true } },
+                  { '@keyonly': { isExample: true, '@bit': { isExample: true }, '@card': { isExample: true } } },
+                  { '@absent': { isExample: true, '@bit': { isExample: true }, '@card': { isExample: true } } },
+                  { isExample: true, '@bit': { isExample: true }, '@card': { isExample: true } },
                 ],
                 description: 'Example text for the match matrix.',
                 format: TagFormat.plainText,
@@ -688,22 +688,36 @@ const CARDSETS: _CardSetsConfig = {
                 // `populate_variants` fires this rule ONCE per cell (BPG
                 // `parseMatchMatrix` `exampleSide` precedence), avoiding
                 // per-iter pollution.
+                // @card scope-shift writes matrix-row container isExample.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
                   {
                     '@keyonly': {
                       cells: { $s: { isExample: true, example: '$parent' } },
                       '@bit': { isExample: true },
+                      '@card': { isExample: true },
                     },
                   },
                   {
                     predicates: ['@absent', { '$cascade': '*' }],
-                    rule: { cells: { $s: { isExample: true, example: '$cascade' } } },
+                    rule: {
+                      cells: { $s: { isExample: true, example: '$cascade' } },
+                      '@bit': { isExample: true },
+                      '@card': { isExample: true },
+                    },
                   },
                   {
-                    '@absent': { cells: { $s: { isExample: true, example: '$parent' } } },
+                    '@absent': {
+                      cells: { $s: { isExample: true, example: '$parent' } },
+                      '@bit': { isExample: true },
+                      '@card': { isExample: true },
+                    },
                   },
-                  { cells: { $s: { isExample: true, example: '$' } }, '@bit': { isExample: true } },
+                  {
+                    cells: { $s: { isExample: true, example: '$' } },
+                    '@bit': { isExample: true },
+                    '@card': { isExample: true },
+                  },
                 ],
                 description: 'Example text for the match matrix.',
                 format: TagFormat.bitmarkText,
@@ -936,11 +950,35 @@ const CARDSETS: _CardSetsConfig = {
                 // (NOT `isCorrect` like trueFalse). Shadow the inherited
                 // `tag_true` / `tag_false` from `group_trueFalse` to emit the
                 // feedback-specific shape.
+                //
+                // Chain @example: `[+ X][@example]` writes
+                // `isExample/example` onto the X choice only. BPG's
+                // `setIsExampleFlags` (Builder.ts:4041-4172) does NOT
+                // iterate `cardNode.feedbacks` — so unlike multipleChoice,
+                // there is no bubble to bit-level or feedbacks-level
+                // isExample. Pattern omits `@bit` scope-shift accordingly.
+                // No `@absent`/`@parent.isCorrect` cascade rules either:
+                // BPG's `pushExampleDownTree` (Builder.ts:3777-3849) has
+                // no feedback dispatch, so bit-header `[@example]` does
+                // not flow into feedback choices.
                 key: ConfigKey.tag_true,
                 exportJsonKey: { choices: [{ choice: '$', requireReason: true }] },
                 description: 'Reason-required choice for feedback (`[+]`).',
                 maxCount: Count.infinity,
                 format: TagFormat.plainText,
+                chain: [
+                  {
+                    key: ConfigKey.property_example,
+                    exportJsonKey: [
+                      { '@keyonly': { isExample: true, example: true } },
+                      { isExample: true, example: '$' },
+                    ],
+                    description: 'Per-choice example marker for feedback `[+]`.',
+                    format: TagFormat.boolean,
+                    maxCount: 1,
+                    nullable: true,
+                  },
+                ],
               },
               {
                 key: ConfigKey.tag_false,
@@ -948,6 +986,19 @@ const CARDSETS: _CardSetsConfig = {
                 description: 'Reason-not-required choice for feedback (`[-]`).',
                 maxCount: Count.infinity,
                 format: TagFormat.plainText,
+                chain: [
+                  {
+                    key: ConfigKey.property_example,
+                    exportJsonKey: [
+                      { '@keyonly': { isExample: true, example: true } },
+                      { isExample: true, example: '$' },
+                    ],
+                    description: 'Per-choice example marker for feedback `[-]`.',
+                    format: TagFormat.boolean,
+                    maxCount: 1,
+                    nullable: true,
+                  },
+                ],
               },
               {
                 key: ConfigKey.group_trueFalse,

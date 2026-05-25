@@ -6107,6 +6107,11 @@ const BITS: _BitsConfig = {
         // sufficient for `[+...]` (correct) statements which dominate the
         // fixtures; `[-...]` (incorrect) bits with bare `[@example]` would
         // need either a runtime extension or an explicit `[@example:false]`.
+        //
+        // Format is `boolean` so `[@example:false]` coerces to JSON `false`
+        // (a natural default that gets stripped in optimised mode, matching
+        // BPG's `rootExampleType: boolean`). PlainText would emit the
+        // STRING `"false"` which doesn't strip.
         key: ConfigKey.property_example,
         exportJsonKey: [
           { '@keyonly': { isExample: true, example: true } },
@@ -6114,7 +6119,7 @@ const BITS: _BitsConfig = {
           { isExample: true, example: '$' },
         ],
         description: 'The example flag for the bit (boolean)',
-        format: TagFormat.plainText,
+        format: TagFormat.boolean,
         nullable: true,
       },
     ],

@@ -678,6 +678,10 @@ const GROUPS: _GroupsConfig = {
             //      `isExample` only.
             // The `serialize_cards` cascade-counter scope holds the cap
             // across the whole cardset.
+            // @card scope-shift writes choice-container isExample (e.g.
+            // `quizzes[i].isExample`) — was previously provided by the
+            // universal `bubble_is_example` post-walk, which was removed
+            // in favour of explicit per-tag config. SYNTAX.md §8.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -686,6 +690,7 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
               {
@@ -695,15 +700,17 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: true,
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
               {
                 '@absent': {
                   isExample: true,
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              { isExample: true, example: '$', '@bit': { isExample: true }, '@card': { isExample: true } },
             ],
             description: 'An example for the true/false statement/question',
             format: TagFormat.boolean,
@@ -744,6 +751,7 @@ const GROUPS: _GroupsConfig = {
             // `isExample: true` only — no `example` (BPG fixtures show
             // `isExample` on every choice, but `example` only on the
             // first correct via firstCorrectOnly cascade).
+            // @card scope-shift writes choice-container isExample.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -752,15 +760,17 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
               {
                 '@absent': {
                   isExample: true,
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              { isExample: true, example: '$', '@bit': { isExample: true }, '@card': { isExample: true } },
             ],
             description:
               'An example for the true/false statement/question (incorrect entry — isExample only on cascade)',
@@ -803,6 +813,7 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // @card scope-shift writes response-container isExample.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -811,6 +822,7 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
               {
@@ -818,9 +830,10 @@ const GROUPS: _GroupsConfig = {
                   isExample: '$parent.isCorrect',
                   example: '$parent.isCorrect',
                   '@bit': { isExample: '$parent.isCorrect' },
+                  '@card': { isExample: '$parent.isCorrect' },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              { isExample: true, example: '$', '@bit': { isExample: true }, '@card': { isExample: true } },
             ],
             description: 'An example for the true/false statement/question',
             format: TagFormat.boolean,
@@ -856,6 +869,7 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
+            // @card scope-shift writes response-container isExample.
             key: ConfigKey.property_example,
             jsonKey: 'example',
             exportJsonKey: [
@@ -864,6 +878,7 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
               {
@@ -871,9 +886,10 @@ const GROUPS: _GroupsConfig = {
                   isExample: true,
                   example: '$parent.isCorrect',
                   '@bit': { isExample: true },
+                  '@card': { isExample: true },
                 },
               },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
+              { isExample: true, example: '$', '@bit': { isExample: true }, '@card': { isExample: true } },
             ],
             description: 'An example for the true/false statement/question',
             format: TagFormat.boolean,
