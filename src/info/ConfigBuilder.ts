@@ -377,6 +377,14 @@ class ConfigBuilder {
             name: sectionName,
             ...(section.isDefault ? { isDefault: true } : {}),
             ...cardJsonKeyField(section, 'jsonKey', 'exportJsonKey', sectionPath),
+            // PLAN-085: per-section cardinality. Emit only when non-default
+            // (treat `0` / undefined as "unbounded — omit").
+            ...(section.minCount != null && section.minCount !== 0
+              ? { min: section.minCount }
+              : {}),
+            ...(section.maxCount != null && section.maxCount !== 0
+              ? { max: section.maxCount }
+              : {}),
             sides: cardSides,
           };
         });

@@ -115,6 +115,126 @@ const CARDSETS: _CardSetsConfig = {
   },
 
   //
+  // flashcard1 — single-card variant of flashcard. Same shape, but capped
+  // at one card via `sections.default.maxCount = 1` (PLAN-085). Used by
+  // the `flashcard-1` bit type; the multi-card `flashcard` and
+  // `q-and-a-card` bit types continue to use the unbounded `flashcard`
+  // cardset.
+  //
+  [CardSetConfigKey.flashcard1]: {
+    jsonKey: 'cards',
+    exportJsonKey: { cards: '$' },
+    sections: {
+      default: {
+        jsonKey: 'cards',
+        exportJsonKey: { cards: '$' },
+        isDefault: true,
+        maxCount: 1,
+      },
+    },
+    sides: [
+      {
+        name: 'question',
+        variants: [
+          {
+            jsonKey: 'question.text',
+            exportJsonKey: [{ '@absent': { question: {} } }, { question: { text: '$' } }],
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for the flashcard.',
+              },
+              {
+                exportJsonKey: { title: '$' },
+                key: ConfigKey.tag_title,
+                description: 'Title of the flashcard.',
+              },
+              {
+                key: ConfigKey.group_resourceIcon,
+                description: 'Icon resource for the flashcard.',
+                jsonKey: 'question.icon|resource(type=image, key=image)',
+                exportJsonKey: { question: { icon: { type: 'image', image: { src: '$' } } } },
+              },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the flashcard question.',
+                format: TagFormat.bitmarkText,
+                nullable: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'answer',
+        variants: [
+          {
+            jsonKey: 'answer.text',
+            exportJsonKey: [{ '@absent': { answer: {} } }, { answer: { text: '$' } }],
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for the flashcard.',
+              },
+              {
+                exportJsonKey: { title: '$' },
+                key: ConfigKey.tag_title,
+                description: 'Title of the flashcard.',
+              },
+              {
+                key: ConfigKey.group_resourceIcon,
+                description: 'Icon resource for the flashcard.',
+                jsonKey: 'answer.icon|resource(type=image, key=image)',
+                exportJsonKey: { answer: { icon: { type: 'image', image: { src: '$' } } } },
+              },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the flashcard answer.',
+                format: TagFormat.bitmarkText,
+                nullable: true,
+              },
+            ],
+          },
+          {
+            jsonKey: 'alternativeAnswers[].text',
+            exportJsonKey: { alternativeAnswers: [{ text: '$' }] },
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for the flashcard.',
+              },
+              {
+                exportJsonKey: { title: '$' },
+                key: ConfigKey.tag_title,
+                description: 'Title of the flashcard.',
+              },
+              {
+                key: ConfigKey.group_resourceIcon,
+                description: 'Icon resource for the flashcard.',
+                jsonKey: 'alternativeAnswers[].icon|resource(type=image, key=image)',
+                exportJsonKey: {
+                  alternativeAnswers: [{ icon: { type: 'image', image: { src: '$' } } }],
+                },
+              },
+            ],
+            repeatCount: Count.infinity,
+          },
+        ],
+      },
+    ],
+  },
+
+  //
   // definition-list
   //
   [CardSetConfigKey.definitionList]: {
@@ -271,7 +391,7 @@ const CARDSETS: _CardSetsConfig = {
                 exportJsonKey: [
                   { '@keyonly': { isExample: true, '@bit': { isExample: true } } },
                   {
-                    predicates: ['@absent', { '$cascade': '*' }],
+                    predicates: ['@absent', { $cascade: '*' }],
                     rule: {
                       isExample: true,
                       example: '$cascade',
@@ -388,7 +508,7 @@ const CARDSETS: _CardSetsConfig = {
                     },
                   },
                   {
-                    predicates: ['@absent', { '$cascade': '*' }],
+                    predicates: ['@absent', { $cascade: '*' }],
                     rule: {
                       isExample: true,
                       example: '$cascade',
@@ -490,8 +610,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 // PLAN-084: value-side excludes item/lead/pageNumber/marginNumber.
                 key: ConfigKey.group_standardTagsNoItemLead,
-                description:
-                  'Standard tags for the audio match pair (values side, no item/lead).',
+                description: 'Standard tags for the audio match pair (values side, no item/lead).',
               },
               {
                 key: ConfigKey.tag_title,
@@ -560,8 +679,7 @@ const CARDSETS: _CardSetsConfig = {
               {
                 // PLAN-084: value-side excludes item/lead/pageNumber/marginNumber.
                 key: ConfigKey.group_standardTagsNoItemLead,
-                description:
-                  'Standard tags for the image match pair (values side, no item/lead).',
+                description: 'Standard tags for the image match pair (values side, no item/lead).',
               },
               {
                 key: ConfigKey.tag_title,
@@ -619,8 +737,20 @@ const CARDSETS: _CardSetsConfig = {
                 // correctly via PLAN-077 §4.2 + §4.3).
                 key: ConfigKey.property_example,
                 exportJsonKey: [
-                  { '@keyonly': { isExample: true, '@bit': { isExample: true }, '@card': { isExample: true } } },
-                  { '@absent': { isExample: true, '@bit': { isExample: true }, '@card': { isExample: true } } },
+                  {
+                    '@keyonly': {
+                      isExample: true,
+                      '@bit': { isExample: true },
+                      '@card': { isExample: true },
+                    },
+                  },
+                  {
+                    '@absent': {
+                      isExample: true,
+                      '@bit': { isExample: true },
+                      '@card': { isExample: true },
+                    },
+                  },
                   { isExample: true, '@bit': { isExample: true }, '@card': { isExample: true } },
                 ],
                 description: 'Example text for the match matrix.',
@@ -699,7 +829,7 @@ const CARDSETS: _CardSetsConfig = {
                     },
                   },
                   {
-                    predicates: ['@absent', { '$cascade': '*' }],
+                    predicates: ['@absent', { $cascade: '*' }],
                     rule: {
                       cells: { $s: { isExample: true, example: '$cascade' } },
                       '@bit': { isExample: true },
@@ -984,7 +1114,8 @@ const CARDSETS: _CardSetsConfig = {
                     // `[%2]`/`[%3]`/`[%4]` (lead/pageNumber/marginNumber).
                     // Mirrors group_trueFalse's `+` chain shape.
                     key: ConfigKey.group_standardItemLeadInstructionHint,
-                    description: 'Item, lead, page number, margin number, instruction and hint chained onto the feedback choice.',
+                    description:
+                      'Item, lead, page number, margin number, instruction and hint chained onto the feedback choice.',
                   },
                 ],
               },
@@ -1008,7 +1139,8 @@ const CARDSETS: _CardSetsConfig = {
                   },
                   {
                     key: ConfigKey.group_standardItemLeadInstructionHint,
-                    description: 'Item, lead, page number, margin number, instruction and hint chained onto the feedback choice.',
+                    description:
+                      'Item, lead, page number, margin number, instruction and hint chained onto the feedback choice.',
                   },
                 ],
               },
@@ -1080,9 +1212,7 @@ const CARDSETS: _CardSetsConfig = {
                     '@keyonly': {
                       reason: {
                         isExample: true,
-                        example: [
-                          { type: 'paragraph', content: [{ text: 'true', type: 'text' }] },
-                        ],
+                        example: [{ type: 'paragraph', content: [{ text: 'true', type: 'text' }] }],
                       },
                       isExample: true,
                       example: true,

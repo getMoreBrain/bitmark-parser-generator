@@ -3624,6 +3624,10 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.flashcard,
     description: 'Flashcard 1 bit',
+    // PLAN-085: use the flashcard1 cardset (sections.default.maxCount=1)
+    // instead of inheriting `flashcard`'s unbounded cardset, since this
+    // bit type structurally allows only a single card.
+    cardSet: CardSetConfigKey.flashcard1,
   },
   [BitType.qAndACard]: {
     since: '3.25.0',
@@ -5270,7 +5274,6 @@ const BITS: _BitsConfig = {
           'Resolved status for the review note, used to indicate if the note is resolved',
         format: TagFormat.boolean,
         defaultValue: 'false',
-        nullable: true,
       },
       {
         key: ConfigKey.property_resolvedDate,

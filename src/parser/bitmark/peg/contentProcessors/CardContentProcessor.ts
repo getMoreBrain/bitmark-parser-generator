@@ -83,6 +83,7 @@ function buildCards(
 
   switch (cardSetType) {
     case CardSetConfigKey.flashcard:
+    case CardSetConfigKey.flashcard1:
     case CardSetConfigKey.definitionList:
       result = parseFlashcardOrDefinitionList(context, bitType, processedCardSet);
       break;
