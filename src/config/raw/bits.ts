@@ -3588,7 +3588,7 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     description: 'Meta search default terms bit, used to define default search terms in articles',
 
-    cardSet: CardSetConfigKey.definitionList,
+    cardSet: CardSetConfigKey.definitionListPlain,
   },
   [BitType.metaSearchDefaultTopics]: {
     since: '3.12.0',
