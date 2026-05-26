@@ -1233,7 +1233,11 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_mark,
         jsonKey: 'marks.mark',
-        exportJsonKey: { marks: [{ mark: '$' }] },
+        // `emphasis: 'underline'` is the per-entry default for mark
+        // configs — mirrors the hardcoded default in BPG
+        // `MarkConfigChainContentProcessor.ts:55-58`. Chained
+        // `[@emphasis:…]` overrides via deep-merge into `marks[-1]`.
+        exportJsonKey: { marks: [{ mark: '$', emphasis: 'underline' }] },
         description: 'The mark configuration',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
@@ -1275,13 +1279,22 @@ const GROUPS: _GroupsConfig = {
           {
             key: ConfigKey.property_example,
             jsonKey: 'example',
-            exportJsonKey: [
-              { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
-              { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
-              { isExample: true, example: '$', '@bit': { isExample: true } },
-            ],
+            // Per-mark `@example` is a boolean toggle. BPG's runtime
+            // `ExampleTagContentProcessor.handleDefaultOnlyExample`
+            // (lines 147-161) normalises ANY `[@example]` or
+            // `[@example:V]` on a mark body-bit to
+            // `__isDefaultExample=true, example=undefined`; the
+            // downstream `toExample(_, _, defaultExample=true)` in
+            // `BaseBuilder.ts:80-87` then emits `example: true`
+            // regardless of source. Declare a single unconditional
+            // boolean-shape rule so the exported schema matches that
+            // runtime semantic instead of the misleading `example: $`
+            // shape (which would only fire if `handleDefaultOnlyExample`
+            // were removed). `@bit: {isExample: true}` cascades the
+            // marker — but NOT the `example` value — to bit root.
+            exportJsonKey: { isExample: true, example: true, '@bit': { isExample: true } },
             description: 'An example for the marked content',
-            format: TagFormat.bitmarkText,
+            format: TagFormat.boolean,
             nullable: true,
           },
         ],
