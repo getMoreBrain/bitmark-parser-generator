@@ -2109,7 +2109,12 @@ const BITS: _BitsConfig = {
         maxCount: Count.infinity,
       },
       {
-        // Override inherited @example from group_standardTags: string root example.
+        // Override inherited @example from group_standardTags: emits both
+        // `isExample` (bool) AND `example` (paragraph array). Declared as
+        // bitmarkText because BPG `JsonGenerator.toExample` renders the
+        // root-example value through the bit's textFormat (not this tag's
+        // declared format) — `TagFormat.plainText` here would be ignored
+        // at runtime and is misleading.
         key: ConfigKey.property_example,
         exportJsonKey: [
           { '@keyonly': { isExample: true, example: 'true' } },
@@ -2117,7 +2122,7 @@ const BITS: _BitsConfig = {
           { isExample: true, example: '$' },
         ],
         description: 'The example text for the essay bit',
-        format: TagFormat.plainText,
+        format: TagFormat.bitmarkText,
         nullable: true,
       },
     ],
