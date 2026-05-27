@@ -1420,12 +1420,29 @@ const CARDSETS: _CardSetsConfig = {
                 // ALIGN-EXAMPLE-CASCADE §3.10: `questions` is NOT in BPG's
                 // `pushExampleDownTree` dispatch — bit-header `[@example]`
                 // does not propagate `example`/`isExample` onto question
-                // entries. Only entry-local `[@example]` fires (handled by
-                // `@keyonly` and the unconditional fallback). No `@absent`
-                // rule.
+                // entries. Only entry-local `[@example]` fires.
+                //
+                // BPG's `BaseBuilder.toExample` for interview questions
+                // (Builder.ts:2575,2588) uses `data.__sampleSolutionAst`
+                // as `defaultExample` — bare `[@example]` (which sets
+                // `__isDefaultExample=true, example=undefined`) emits the
+                // parsed sample-solution AST in the `example` slot. The
+                // `@keyonly` rule mirrors that runtime behaviour via
+                // `$parent.sampleSolution` — the chain-walker's post-walk
+                // retry resolves this once the sibling `[@sampleSolution]`
+                // chain has merged into the shared scope (interview's
+                // `[@example]` typically precedes `[@sampleSolution]` in
+                // source). Format coercion turns the resolved string
+                // value into a PM tree.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
-                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  {
+                    '@keyonly': {
+                      isExample: true,
+                      example: '$parent.sampleSolution',
+                      '@bit': { isExample: true },
+                    },
+                  },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
                 description:
