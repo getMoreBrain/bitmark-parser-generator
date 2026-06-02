@@ -29,14 +29,15 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": true
     },
     "parser": {
       "version": "5.1.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:135649]\n[##It’s complicated]"
+    "bitmark": "[.chapter]\n[▼ch-1]\n[@id:135649]\n[@isCollapsible:true]\n[##It’s complicated]"
   },
   {
     "bit": {
@@ -68,7 +69,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -107,7 +109,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -146,7 +149,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -185,7 +189,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -224,7 +229,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -263,7 +269,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -302,7 +309,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -341,7 +349,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -380,7 +389,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -419,7 +429,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -458,7 +469,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -497,7 +509,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -520,7 +533,8 @@
       "body": [],
       "toc": true,
       "progress": true,
-      "level": 1
+      "level": 1,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -543,7 +557,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -566,7 +581,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -589,7 +605,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",
@@ -612,7 +629,8 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true
+      "progress": true,
+      "isCollapsible": false
     },
     "parser": {
       "version": "5.1.0",

@@ -1302,6 +1302,12 @@ const BITS: _BitsConfig = {
         format: TagFormat.boolean,
         defaultValue: 'true',
       },
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the chapter is collapsible',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
     ],
   },
   [BitType.clozeAndMultipleChoiceText]: {

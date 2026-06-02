@@ -1744,6 +1744,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         //
         if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
         if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
+        if (bitJson.isCollapsible == null) bitJson.isCollapsible = false; // Always set on chapter bits
         if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         //
