@@ -1,6 +1,7 @@
 
 [.extractor-rule]
 [@id:100001]
+[#Exclamation Mark Rule]
 [!Use the following bits when the icon contains an exclamation mark]
 [&image:https://example.com/rule-reference.png]
 
