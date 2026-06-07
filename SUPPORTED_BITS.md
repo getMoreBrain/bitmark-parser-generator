@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.23.0
+Version: 5.24.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -500,6 +500,8 @@ smart-standard-article-non-normative (since: 1.28.0)
 smart-standard-article-non-normative-collapsible (since: 1.28.0)
 smart-standard-article-normative (since: 1.28.0)
 smart-standard-article-normative-collapsible (since: 1.28.0)
+smart-standard-definition-list-non-normative (since: 5.24.0)
+smart-standard-definition-list-normative (since: 5.24.0)
 smart-standard-example-non-normative (since: 1.28.0)
 smart-standard-example-non-normative-collapsible (since: 1.28.0)
 smart-standard-example-normative (since: 1.28.0)
@@ -550,6 +552,8 @@ smart-standard-table-normative (since: 1.28.0)
 smart-standard-table-normative-collapsible (since: 1.28.0)
 standard-article-non-normative (since: 1.16.0)
 standard-article-normative (since: 1.16.0)
+standard-definition-list-non-normative (since: 5.24.0)
+standard-definition-list-normative (since: 5.24.0)
 standard-example-non-normative (since: 1.16.0)
 standard-example-normative (since: 1.16.0)
 standard-image-figure-non-normative (since: 1.16.0)
