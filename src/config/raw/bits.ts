@@ -3588,6 +3588,12 @@ const BITS: _BitsConfig = {
     ],
     cardSet: CardSetConfigKey.definitionList,
   },
+  [BitType.definitionListCollapsible]: {
+    since: '3.12.0',
+    baseBitType: BitType.definitionList,
+    description:
+      'Collapsible definition list bit, used to create collapsible lists of definitions in articles or books',
+  },
   [BitType.metaSearchDefaultTerms]: {
     since: '3.12.0',
     baseBitType: BitType._standard,
