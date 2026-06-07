@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.23.0
+Version: 5.24.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -220,6 +220,7 @@ danger (since: 1.3.0)
 danger-alt (since: 1.16.0)
 danger-collapsible (since: 1.21.0)
 definition-list (since: 1.34.0)
+definition-list-collapsible (since: 3.12.0)
 definition-term (since: 1.34.0)
 deleted (since: 3.9.0)
 details (since: 1.3.0)
