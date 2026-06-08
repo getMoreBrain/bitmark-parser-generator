@@ -321,6 +321,7 @@ export interface Bit {
   level?: number; // 'level' can either the subtitle level [##subtitle]
   toc?: Property;
   progress?: Property;
+  isCollapsible?: Property;
   anchor?: string;
   reference?: string;
   referenceEnd?: string;

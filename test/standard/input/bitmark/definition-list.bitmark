@@ -109,3 +109,35 @@ Collapsible intro
 Collapsible term
 --
 Collapsible definition
+
+
+[.standard-definition-list-normative]
+Normative standards
+====
+Normative term
+--
+Normative definition
+
+
+[.standard-definition-list-non-normative]
+Non-normative standards
+====
+Non-normative term
+--
+Non-normative definition
+
+
+[.smart-standard-definition-list-normative]
+Smart normative standards
+====
+Smart normative term
+--
+Smart normative definition
+
+
+[.smart-standard-definition-list-non-normative]
+Smart non-normative standards
+====
+Smart non-normative term
+--
+Smart non-normative definition

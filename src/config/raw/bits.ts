@@ -1302,6 +1302,12 @@ const BITS: _BitsConfig = {
         format: TagFormat.boolean,
         defaultValue: 'true',
       },
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the chapter is collapsible',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
     ],
   },
   [BitType.clozeAndMultipleChoiceText]: {
@@ -3593,6 +3599,30 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.definitionList,
     description:
       'Collapsible definition list bit, used to create collapsible lists of definitions in articles or books',
+  },
+  [BitType.standardDefinitionListNormative]: {
+    since: '5.24.0',
+    baseBitType: BitType.definitionList,
+    description:
+      'Standard normative definition list bit, used to create normative standard definition lists in articles or books',
+  },
+  [BitType.standardDefinitionListNonNormative]: {
+    since: '5.24.0',
+    baseBitType: BitType.definitionList,
+    description:
+      'Standard non-normative definition list bit, used to create non-normative standard definition lists in articles or books',
+  },
+  [BitType.smartStandardDefinitionListNormative]: {
+    since: '5.24.0',
+    baseBitType: BitType.standardDefinitionListNormative,
+    description:
+      'Smart standard normative definition list bit, used to create normative smart standard definition lists in articles or books',
+  },
+  [BitType.smartStandardDefinitionListNonNormative]: {
+    since: '5.24.0',
+    baseBitType: BitType.standardDefinitionListNonNormative,
+    description:
+      'Smart standard non-normative definition list bit, used to create non-normative smart standard definition lists in articles or books',
   },
   [BitType.metaSearchDefaultTerms]: {
     since: '3.12.0',

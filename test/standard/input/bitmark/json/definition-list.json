@@ -216,7 +216,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.24.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -372,7 +372,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.24.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -594,7 +594,7 @@
       "isExample": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.24.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -807,7 +807,7 @@
       "isExample": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.24.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -882,5 +882,75 @@
       "textParserVersion": "8.37.3"
     },
     "bitmark": "[.definition-list-collapsible]\n\nCollapsible intro\n====\nCollapsible term\n--\nCollapsible definition"
+  },
+  {
+    "bit": {
+      "type": "standard-definition-list-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Normative standards",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Normative term",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Normative definition",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "isExample": false
+    },
+    "parser": {
+      "version": "5.24.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.standard-definition-list-normative]\nNormative standards\n====\nNormative term\n--\nNormative definition"
   }
 ]

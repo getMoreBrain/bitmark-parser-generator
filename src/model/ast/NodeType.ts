@@ -304,6 +304,8 @@ const NodeType = {
   internalPrintPdf: 'internalPrintPdf',
   internalPrintPdfValue: 'internalPrintPdfValue',
   isCaseSensitive: 'isCaseSensitive',
+  isCollapsible: 'isCollapsible',
+  isCollapsibleValue: 'isCollapsibleValue',
   isCommented: 'isCommented',
   isCorrect: 'isCorrect',
   isEditable: 'isEditable',
