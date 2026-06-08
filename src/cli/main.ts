@@ -4,6 +4,7 @@ import { Command, Help, Option } from 'commander';
 
 import { createBreakscapeCommand } from './commands/breakscape.ts';
 import { createConvertCommand } from './commands/convert.ts';
+import { createConvertHtmlTableCommand } from './commands/convertHtmlTable.ts';
 import { createConvertTextCommand } from './commands/convertText.ts';
 import { createExtractPlainTextCommand } from './commands/extractPlainText.ts';
 import { createInfoCommand } from './commands/info.ts';
@@ -47,6 +48,7 @@ async function asyncInit(): Promise<void> {
 
   // Register commands
   program.addCommand(createConvertCommand());
+  program.addCommand(createConvertHtmlTableCommand());
   program.addCommand(createConvertTextCommand());
   program.addCommand(createExtractPlainTextCommand());
   program.addCommand(createBreakscapeCommand());

@@ -41,6 +41,7 @@ import fs from 'fs-extra';
 import { type FileOptions } from './ast/writer/FileWriter.ts';
 import { Breakscape } from './breakscaping/Breakscape.ts';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator.ts';
+import { HtmlTableGenerator } from './generator/html/HtmlTableGenerator.ts';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator.ts';
 import { PlainTextGenerator } from './generator/plainText/PlainTextGenerator.ts';
 import { BitType, type BitWrapperJson, type TextAst } from './index.ts';
@@ -50,6 +51,7 @@ import type { _BitConfig, _GroupsConfig } from './model/config/_Config.ts';
 import { type BodyTextFormatType } from './model/enum/BodyTextFormat.ts';
 import { TextFormat, type TextFormatType } from './model/enum/TextFormat.ts';
 import { TextLocation, type TextLocationType } from './model/enum/TextLocation.ts';
+import { type HtmlTableFormat, HtmlTableParser } from './parser/html/HtmlTableParser.ts';
 
 /* STRIP:END */
 STRIP; // eslint-disable-line @typescript-eslint/no-unused-expressions
@@ -254,6 +256,56 @@ export interface ExtractPlainTextOptions {
 }
 
 /**
+ * Options for {@link BitmarkParserGenerator.convertHtmlTable}
+ */
+export interface ConvertHtmlTableOptions {
+  /**
+   * Force the input format, overriding auto-detection.
+   * - `html`: input is HTML; extract tables and output bitmark/JSON/AST
+   * - any other value: input is bitmark/JSON/AST; output HTML
+   */
+  inputFormat?: InputFormatType;
+
+  /**
+   * Output format.
+   * - HTML input: `bitmark` (default) | `json` | `ast` | `html` (re-emit / normalise)
+   * - bitmark/JSON/AST input: `html` (default, and only valid value)
+   */
+  outputFormat?: OutputType | 'html';
+
+  /**
+   * Bit type to emit when converting HTML to bits.
+   * `table-extended` (default, lossless) or `table` (lossy: drops spans/scope/sections).
+   */
+  tableFormat?: HtmlTableFormat;
+
+  /**
+   * Keep unmappable HTML tags as literal text instead of unwrapping them (HTML -> bits only).
+   */
+  keepUnknownTags?: boolean;
+
+  /**
+   * Specify a file to write the output to
+   */
+  outputFile?: string;
+
+  /**
+   * Options for the output file
+   */
+  fileOptions?: FileOptions;
+
+  /**
+   * Options for bitmark generation (HTML -> bitmark)
+   */
+  bitmarkOptions?: BitmarkOptions;
+
+  /**
+   * Options for JSON generation (HTML -> json)
+   */
+  jsonOptions?: JsonOptions;
+}
+
+/**
  * Breakscape options
  */
 export interface BreakscapeOptions {
@@ -377,6 +429,11 @@ const InputFormat = {
    * Input is plain text
    */
   plainText: 'plainText',
+
+  /**
+   * Input is HTML (used by convertHtmlTable)
+   */
+  html: 'html',
 } as const;
 
 export type InputFormatType = EnumType<typeof InputFormat>;
@@ -1113,6 +1170,108 @@ class BitmarkParserGenerator {
     const res = generator.generate(data);
 
     return res;
+  }
+
+  /**
+   * Convert between HTML tables and bitmark tables.
+   *
+   * Direction is auto-detected (override with `options.inputFormat`):
+   * - HTML input: every `<table>` is extracted and emitted as a `[.table-extended]` (or `[.table]`)
+   *   bit; output as bitmark (default), JSON, AST, or HTML (re-emit).
+   * - bitmark / JSON / AST input: each `table` / `table-extended` bit is rendered as an HTML
+   *   `<table>` fragment.
+   *
+   * Cell content is reproduced verbatim except inline conversion to bitmark marks (bold, italic,
+   * superscript, etc.), with lists and images mapped to their bitmark equivalents.
+   *
+   * @param input - HTML, bitmark, JSON or AST string; or a parsed JSON/AST value; or a file path.
+   * @param options - the conversion options
+   * @returns the converted output as a string (or object for JSON/AST), or void when writing a file
+   * @throws Error if any error occurs
+   */
+  public convertHtmlTable(
+    input: string | unknown,
+    options?: ConvertHtmlTableOptions,
+  ): string | unknown | void {
+    const opts: ConvertHtmlTableOptions = Object.assign({}, options);
+
+    if (env.isBrowser && opts.outputFile) {
+      throw new Error('Cannot write to file in browser environment');
+    }
+
+    let inStr: string = input as string;
+    const inputIsString = typeof input === 'string';
+
+    // If a file path, read the file in
+    if (env.isNode && inputIsString && fs.existsSync(inStr)) {
+      inStr = fs.readFileSync(inStr, { encoding: 'utf8' });
+    }
+
+    // Determine direction
+    const isHtmlString = (s: string): boolean => {
+      const t = s.replace(/^\s+/, '');
+      return t.startsWith('<') && /<table/i.test(t);
+    };
+    let htmlInput: boolean;
+    if (opts.inputFormat === InputFormat.html) {
+      htmlInput = true;
+    } else if (opts.inputFormat != null) {
+      htmlInput = false; // any other forced format means input is bits
+    } else {
+      htmlInput = inputIsString && isHtmlString(inStr);
+    }
+
+    if (htmlInput) {
+      // HTML -> bits
+      const parser = new HtmlTableParser();
+      const bits = parser.parse(inStr, {
+        tableFormat: opts.tableFormat ?? 'table-extended',
+        keepUnknownTags: opts.keepUnknownTags,
+        onWarning: (m) => console.warn(m),
+      });
+
+      const outputFormat = opts.outputFormat ?? Output.bitmark;
+
+      if (outputFormat === 'html') {
+        // HTML -> HTML (normalise): build JSON then regenerate HTML
+        const json = this.convert(bits, { outputFormat: Output.json });
+        return this.outputHtml(new HtmlTableGenerator().generate(json), opts);
+      }
+
+      return this.convert(bits, {
+        outputFormat: Enum(Output).fromValue(outputFormat),
+        outputFile: opts.outputFile,
+        fileOptions: opts.fileOptions,
+        jsonOptions: opts.jsonOptions,
+        bitmarkOptions: opts.bitmarkOptions,
+      });
+    }
+
+    // bits -> HTML
+    const outputFormat = opts.outputFormat ?? 'html';
+    if (outputFormat !== 'html') {
+      throw new Error(
+        'convertHtmlTable: non-HTML input can only be converted to HTML. ' +
+          'Use convert() for bitmark/JSON/AST conversions.',
+      );
+    }
+
+    const json = this.convert(inputIsString ? inStr : input, { outputFormat: Output.json });
+    return this.outputHtml(new HtmlTableGenerator().generate(json), opts);
+  }
+
+  /**
+   * Write an HTML string to the configured output file, or return it.
+   */
+  private outputHtml(html: string, opts: ConvertHtmlTableOptions): string | void {
+    if (opts.outputFile) {
+      const output = opts.outputFile.toString();
+      const flag = opts.fileOptions?.append ? 'a' : 'w';
+      fs.ensureDirSync(path.dirname(output));
+      fs.writeFileSync(output, html, { flag });
+      return;
+    }
+    return html;
   }
 
   /**

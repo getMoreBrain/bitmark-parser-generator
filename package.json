@@ -55,6 +55,8 @@
     "start-generate-config": "tsx ./test/custom/dev/devGenerateConfig.ts",
     "start-parser": "tsx ./test/custom/dev/devParser.ts",
     "start-generator": "tsx ./test/custom/dev/devGenerator.ts",
+    "start-html-table-parser": "tsx ./test/custom/dev/devHtmlTableParser.ts",
+    "start-html-table-generator": "tsx ./test/custom/dev/devHtmlTableGenerator.ts",
     "start-prettify": "tsx ./test/custom/dev/devPrettify.ts",
     "start-plain": "tsx ./test/custom/dev/devPlainTextParser.ts",
     "start-text-bitmark-body-parser": "tsx ./test/custom/dev/devTextBitmarkBodyParser.ts",
