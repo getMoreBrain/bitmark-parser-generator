@@ -226,6 +226,7 @@ const BitType = {
   dangerAlt: 'danger-alt',
   dangerCollapsible: 'danger-collapsible',
   definitionList: 'definition-list',
+  definitionListCollapsible: 'definition-list-collapsible',
   definitionTerm: 'definition-term',
   deleted: 'deleted',
   details: 'details',
