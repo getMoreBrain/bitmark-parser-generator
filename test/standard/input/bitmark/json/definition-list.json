@@ -216,7 +216,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.24.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -372,7 +372,7 @@
       "isExample": false
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.24.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -594,7 +594,7 @@
       "isExample": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.24.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
@@ -807,10 +807,290 @@
       "isExample": true
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.24.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
     "bitmark": "[.definition-list]\n[%item][%lead]\nSomebody\n====\nTerm 1?\nCard 1, Side 1\n--\nDefinition 1\nCard 1, Side 2\n++\nAlternative Definition 2\nCard 1, Side 2\n====\nTerm 2?\nCard 2, Side 1\n--\nDefinition 2\nCard 2, Side 2, No footer\n[%item][%lead]\n[@example]\n====\n\n\n~~~~\n\nFooter anyone?"
+  },
+  {
+    "bit": {
+      "type": "standard-definition-list-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Normative standards",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Normative term",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Normative definition",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "isExample": false
+    },
+    "parser": {
+      "version": "5.24.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.standard-definition-list-normative]\nNormative standards\n====\nNormative term\n--\nNormative definition"
+  },
+  {
+    "bit": {
+      "type": "standard-definition-list-non-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Non-normative standards",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Non-normative term",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Non-normative definition",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "isExample": false
+    },
+    "parser": {
+      "version": "5.24.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.standard-definition-list-non-normative]\nNon-normative standards\n====\nNon-normative term\n--\nNon-normative definition"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-definition-list-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Smart normative standards",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Smart normative term",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Smart normative definition",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "isExample": false
+    },
+    "parser": {
+      "version": "5.24.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.smart-standard-definition-list-normative]\nSmart normative standards\n====\nSmart normative term\n--\nSmart normative definition"
+  },
+  {
+    "bit": {
+      "type": "smart-standard-definition-list-non-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Smart non-normative standards",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "definitions": [
+        {
+          "term": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Smart non-normative term",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "definition": {
+            "text": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Smart non-normative definition",
+                    "type": "text"
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          "alternativeDefinitions": [],
+          "item": [],
+          "hint": [],
+          "instruction": [],
+          "isExample": false,
+          "example": null
+        }
+      ],
+      "isExample": false
+    },
+    "parser": {
+      "version": "5.24.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.smart-standard-definition-list-non-normative]\nSmart non-normative standards\n====\nSmart non-normative term\n--\nSmart non-normative definition"
   }
 ]

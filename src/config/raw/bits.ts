@@ -3594,6 +3594,30 @@ const BITS: _BitsConfig = {
     ],
     cardSet: CardSetConfigKey.definitionList,
   },
+  [BitType.standardDefinitionListNormative]: {
+    since: '5.24.0',
+    baseBitType: BitType.definitionList,
+    description:
+      'Standard normative definition list bit, used to create normative standard definition lists in articles or books',
+  },
+  [BitType.standardDefinitionListNonNormative]: {
+    since: '5.24.0',
+    baseBitType: BitType.definitionList,
+    description:
+      'Standard non-normative definition list bit, used to create non-normative standard definition lists in articles or books',
+  },
+  [BitType.smartStandardDefinitionListNormative]: {
+    since: '5.24.0',
+    baseBitType: BitType.standardDefinitionListNormative,
+    description:
+      'Smart standard normative definition list bit, used to create normative smart standard definition lists in articles or books',
+  },
+  [BitType.smartStandardDefinitionListNonNormative]: {
+    since: '5.24.0',
+    baseBitType: BitType.standardDefinitionListNonNormative,
+    description:
+      'Smart standard non-normative definition list bit, used to create non-normative smart standard definition lists in articles or books',
+  },
   [BitType.metaSearchDefaultTerms]: {
     since: '3.12.0',
     baseBitType: BitType._standard,
