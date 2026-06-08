@@ -28,7 +28,7 @@ dedicated API method + CLI command **`convertHtmlTable`** (parallel to `convertT
 | HTML generator | Consumes the **JSON bit array** (like `PlainTextGenerator`), not the AST walker. |
 | HTML parser | Emits a **bit-JSON array**, then reuses the existing JSON→AST→output pipeline (`convert()`); no `Builder`. |
 | HTML output | Bare `<table>` **fragments**, blank-line (`\n\n`) separated, **pretty-printed** (2-space indent). |
-| th/td | Input: `th`⇒`title:true`, `td`⇒omit. Output: `th` iff `title===true` **or** (`title` undefined **and** section ∈ {header,footer}); else `td`. |
+| th/td | Input: `th`⇒`title:true`, `td`⇒omit. Output: `th` iff `title===true`, else `td` (title-driven, matching `BitmarkGenerator`; section defaults are applied at parse time when setting `title`, not at render time). |
 | colwidth | Input: cell `width="N"` attr or `style="width:Npx"` → `colwidth` (int). Output: `colwidth`→`width="N"`. `<colgroup>/<col>` deferred. |
 | Output bit-type | HTML generator renders **only `table` + `table-extended`** bits (others skipped). |
 | `--tableFormat` | `<table\|table-extended>`, default `table-extended` (lossless). `table` is **lossy** (warn) — flattens via `convertExtendedToBasicTableFormat`. HTML→bits only. |
@@ -248,6 +248,13 @@ Hand-written scanner (`HtmlTableParser.ts`), lenient (FR-robustness):
 ## Build-time note
 - `@caption` is a **property** (rendered in tag location), so the caption inline converter must
   emit **inline content only** (marks, no list/image/paragraph block nodes).
+
+## Known limitations (discovered during implementation)
+- **Images round-trip via JSON, not bitmark.** A cell `<img>` is preserved as an `image`/
+  `imageInline` node through HTML → JSON → HTML, but the existing bitmark text engine serialises
+  an image node to `|image:…|` and does **not** parse that back to an image node (verified: even
+  plain `convertText` is lossy here). So HTML → bitmark → HTML degrades an in-cell image to text.
+  This is a pre-existing bitmark-text characteristic, not specific to this feature.
 
 ## Deferred / Out of Scope (v1)
 - `<colgroup>/<col>` width model (positional).
