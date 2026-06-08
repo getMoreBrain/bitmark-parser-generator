@@ -348,6 +348,127 @@ const CARDSETS: _CardSetsConfig = {
   },
 
   //
+  // definition-list-plain
+  //
+  // Same shape as `definitionList`, but every variant body is rendered as
+  // plain text (string), not bitmark+ AST. Used by
+  // `meta-search-default-terms` / `meta-search-default-topics`, which need
+  // term/definition text emitted verbatim instead of as a ProseMirror tree.
+  //
+  [CardSetConfigKey.definitionListPlain]: {
+    jsonKey: 'definitions',
+    exportJsonKey: { definitions: '$' },
+    sides: [
+      {
+        name: 'term',
+        variants: [
+          {
+            jsonKey: 'term.text',
+            exportJsonKey: [{ '@absent': { term: {} } }, { term: { text: '$' } }],
+            format: TextFormat.plainText,
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for the definition.',
+              },
+              {
+                key: ConfigKey.tag_title,
+                description: 'Title of the definition.',
+                format: TagFormat.plainText,
+                jsonKey: '^heading.forKeys',
+                exportJsonKey: { '@bit': { heading: { forKeys: '$' } } },
+              },
+              {
+                key: ConfigKey.group_resourceIcon,
+                description: 'Icon resource for the definition.',
+                format: TagFormat.plainText,
+                jsonKey: 'term.icon|resource(type=image, key=image)',
+                exportJsonKey: { term: { icon: { type: 'image', image: { src: '$' } } } },
+              },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the definition term.',
+                format: TagFormat.bitmarkText,
+                nullable: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'definition',
+        variants: [
+          {
+            jsonKey: 'definition.text',
+            exportJsonKey: [{ '@absent': { definition: {} } }, { definition: { text: '$' } }],
+            format: TextFormat.plainText,
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for the definition.',
+              },
+              {
+                key: ConfigKey.tag_title,
+                description: 'Title of the definition.',
+                format: TagFormat.plainText,
+                jsonKey: '^heading.forValues',
+                exportJsonKey: { '@bit': { heading: { forValues: '$' } } },
+              },
+              {
+                key: ConfigKey.group_resourceIcon,
+                description: 'Icon resource for the definition.',
+                jsonKey: 'definition.icon|resource(type=image, key=image)',
+                exportJsonKey: { definition: { icon: { type: 'image', image: { src: '$' } } } },
+              },
+              {
+                key: ConfigKey.property_example,
+                exportJsonKey: [
+                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { '@absent': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  { isExample: true, example: '$', '@bit': { isExample: true } },
+                ],
+                description: 'Example marker for the definition.',
+                format: TagFormat.bitmarkText,
+                nullable: true,
+              },
+            ],
+          },
+          {
+            jsonKey: 'alternativeDefinitions[].text',
+            exportJsonKey: { alternativeDefinitions: [{ text: '$' }] },
+            format: TextFormat.plainText,
+            tags: [
+              {
+                key: ConfigKey.group_standardTags,
+                description: 'Standard tags for the definition.',
+              },
+              {
+                exportJsonKey: { title: '$' },
+                key: ConfigKey.tag_title,
+                description: 'Title of the definition.',
+              },
+              {
+                key: ConfigKey.group_resourceIcon,
+                description: 'Icon resource for the definition.',
+                jsonKey: 'alternativeDefinitions[].icon|resource(type=image, key=image)',
+                exportJsonKey: {
+                  alternativeDefinitions: [{ icon: { type: 'image', image: { src: '$' } } }],
+                },
+              },
+            ],
+            repeatCount: Count.infinity,
+          },
+        ],
+      },
+    ],
+  },
+
+  //
   // match-pairs
   //
   [CardSetConfigKey.matchPairs]: {
@@ -1299,12 +1420,29 @@ const CARDSETS: _CardSetsConfig = {
                 // ALIGN-EXAMPLE-CASCADE §3.10: `questions` is NOT in BPG's
                 // `pushExampleDownTree` dispatch — bit-header `[@example]`
                 // does not propagate `example`/`isExample` onto question
-                // entries. Only entry-local `[@example]` fires (handled by
-                // `@keyonly` and the unconditional fallback). No `@absent`
-                // rule.
+                // entries. Only entry-local `[@example]` fires.
+                //
+                // BPG's `BaseBuilder.toExample` for interview questions
+                // (Builder.ts:2575,2588) uses `data.__sampleSolutionAst`
+                // as `defaultExample` — bare `[@example]` (which sets
+                // `__isDefaultExample=true, example=undefined`) emits the
+                // parsed sample-solution AST in the `example` slot. The
+                // `@keyonly` rule mirrors that runtime behaviour via
+                // `$parent.sampleSolution` — the chain-walker's post-walk
+                // retry resolves this once the sibling `[@sampleSolution]`
+                // chain has merged into the shared scope (interview's
+                // `[@example]` typically precedes `[@sampleSolution]` in
+                // source). Format coercion turns the resolved string
+                // value into a PM tree.
                 key: ConfigKey.property_example,
                 exportJsonKey: [
-                  { '@keyonly': { isExample: true, example: true, '@bit': { isExample: true } } },
+                  {
+                    '@keyonly': {
+                      isExample: true,
+                      example: '$parent.sampleSolution',
+                      '@bit': { isExample: true },
+                    },
+                  },
                   { isExample: true, example: '$', '@bit': { isExample: true } },
                 ],
                 description:

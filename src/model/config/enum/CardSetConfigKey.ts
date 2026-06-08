@@ -4,6 +4,7 @@ const CardSetConfigKey = {
   flashcard: 'flashcard',
   flashcard1: 'flashcard1',
   definitionList: 'definitionList',
+  definitionListPlain: 'definitionListPlain',
   elements: 'elements',
   statements: 'statements',
   quiz: 'quiz',

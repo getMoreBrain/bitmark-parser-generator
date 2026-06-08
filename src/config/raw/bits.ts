@@ -1302,6 +1302,12 @@ const BITS: _BitsConfig = {
         format: TagFormat.boolean,
         defaultValue: 'true',
       },
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the chapter is collapsible',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
     ],
   },
   [BitType.clozeAndMultipleChoiceText]: {
@@ -2109,7 +2115,12 @@ const BITS: _BitsConfig = {
         maxCount: Count.infinity,
       },
       {
-        // Override inherited @example from group_standardTags: string root example.
+        // Override inherited @example from group_standardTags: emits both
+        // `isExample` (bool) AND `example` (paragraph array). Declared as
+        // bitmarkText because BPG `JsonGenerator.toExample` renders the
+        // root-example value through the bit's textFormat (not this tag's
+        // declared format) — `TagFormat.plainText` here would be ignored
+        // at runtime and is misleading.
         key: ConfigKey.property_example,
         exportJsonKey: [
           { '@keyonly': { isExample: true, example: 'true' } },
@@ -2117,7 +2128,7 @@ const BITS: _BitsConfig = {
           { isExample: true, example: '$' },
         ],
         description: 'The example text for the essay bit',
-        format: TagFormat.plainText,
+        format: TagFormat.bitmarkText,
         nullable: true,
       },
     ],
@@ -3583,12 +3594,42 @@ const BITS: _BitsConfig = {
     ],
     cardSet: CardSetConfigKey.definitionList,
   },
+  [BitType.definitionListCollapsible]: {
+    since: '5.25.0',
+    baseBitType: BitType.definitionList,
+    description:
+      'Collapsible definition list bit, used to create collapsible lists of definitions in articles or books',
+  },
+  [BitType.standardDefinitionListNormative]: {
+    since: '5.24.0',
+    baseBitType: BitType.definitionList,
+    description:
+      'Standard normative definition list bit, used to create normative standard definition lists in articles or books',
+  },
+  [BitType.standardDefinitionListNonNormative]: {
+    since: '5.24.0',
+    baseBitType: BitType.definitionList,
+    description:
+      'Standard non-normative definition list bit, used to create non-normative standard definition lists in articles or books',
+  },
+  [BitType.smartStandardDefinitionListNormative]: {
+    since: '5.24.0',
+    baseBitType: BitType.standardDefinitionListNormative,
+    description:
+      'Smart standard normative definition list bit, used to create normative smart standard definition lists in articles or books',
+  },
+  [BitType.smartStandardDefinitionListNonNormative]: {
+    since: '5.24.0',
+    baseBitType: BitType.standardDefinitionListNonNormative,
+    description:
+      'Smart standard non-normative definition list bit, used to create non-normative smart standard definition lists in articles or books',
+  },
   [BitType.metaSearchDefaultTerms]: {
     since: '3.12.0',
     baseBitType: BitType._standard,
     description: 'Meta search default terms bit, used to define default search terms in articles',
 
-    cardSet: CardSetConfigKey.definitionList,
+    cardSet: CardSetConfigKey.definitionListPlain,
   },
   [BitType.metaSearchDefaultTopics]: {
     since: '3.12.0',
@@ -3633,6 +3674,10 @@ const BITS: _BitsConfig = {
     since: '3.25.0',
     baseBitType: BitType.flashcard1,
     description: 'Q&A card bit, used to create question and answer cards in articles or books',
+    // PLAN-085: q-and-a-card permits multiple cards (some fixtures carry
+    // two). Override the inherited `flashcard1` (max=1) cardset back to
+    // the unbounded `flashcard` cardset.
+    cardSet: CardSetConfigKey.flashcard,
   },
   [BitType.focusImage]: {
     since: '1.3.0',

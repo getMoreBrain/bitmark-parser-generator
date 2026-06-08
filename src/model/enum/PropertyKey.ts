@@ -120,6 +120,7 @@ const propertyKeys = {
   property_enforceUpdateOverUserInput: '@enforceUpdateOverUserInput',
   property_extractorExtractionTimestamp: '@extractorExtractionTimestamp',
   property_isCaseSensitive: '@isCaseSensitive',
+  property_isCollapsible: '@isCollapsible',
   property_isInfoOnly: '@isInfoOnly',
   property_isPublic: '@isPublic',
   property_isTemplate: '@isTemplate',

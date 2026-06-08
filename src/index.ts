@@ -63,6 +63,7 @@ export type { FileOptions } from './ast/writer/FileWriter.ts';
 export { type Writer } from './ast/writer/Writer.ts';
 export type {
   BreakscapeOptions,
+  ConvertHtmlTableOptions,
   ConvertOptions,
   ConvertTextOptions,
   CreateAstOptions,
@@ -77,6 +78,7 @@ export type {
 } from './BitmarkParserGenerator.ts';
 export type { BitmarkOptions } from './generator/bitmark/BitmarkGenerator.ts';
 export type { Generator } from './generator/Generator.ts';
+export { HtmlTableGenerator } from './generator/html/HtmlTableGenerator.ts';
 export type { JsonOptions } from './generator/json/JsonGenerator.ts';
 export { type BreakscapedString } from './model/ast/BreakscapedString.ts';
 export type {
@@ -229,6 +231,11 @@ export type {
   WebsiteLinkResourceJson,
   WebsiteLinkResourceWrapperJson,
 } from './model/json/ResourceJson.ts';
+export {
+  type HtmlTableFormat,
+  type HtmlTableParseOptions,
+  HtmlTableParser,
+} from './parser/html/HtmlTableParser.ts';
 export type { Bbox, BoundingBoxEntry, FromBitsOptions } from './utils/BoundingBox.ts';
 
 // Initialise the application

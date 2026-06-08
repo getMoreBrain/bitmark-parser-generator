@@ -384,6 +384,7 @@ class Builder extends BaseBuilder {
       level?: number | string;
       toc?: boolean;
       progress?: boolean;
+      isCollapsible?: boolean;
       anchor?: string;
       reference?: string;
       referenceEnd?: string;
@@ -1557,6 +1558,12 @@ class Builder extends BaseBuilder {
       level: NumberUtils.asNumber(data.level),
       toc: this.toAstProperty(bitType, ConfigKey.property_toc, data.toc, options),
       progress: this.toAstProperty(bitType, ConfigKey.property_progress, data.progress, options),
+      isCollapsible: this.toAstProperty(
+        bitType,
+        ConfigKey.property_isCollapsible,
+        data.isCollapsible,
+        options,
+      ),
       anchor: data.anchor,
       reference: data.reference,
       referenceEnd: data.referenceEnd,
