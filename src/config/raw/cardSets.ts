@@ -1517,6 +1517,16 @@ const CARDSETS: _CardSetsConfig = {
   [CardSetConfigKey.table]: {
     jsonKey: null,
     exportJsonKey: null,
+    // PLAN-109 / HTML.md §8 — idiomatic HTML mapping. The classic (non-extended)
+    // table produces the same `<table>`/`<thead>`/`<tbody>`/`<tfoot>` structure as
+    // table-extended, so the structural htmlKeys mirror that cardSet. NOTE: the
+    // JSON side routes the FIRST header card → `columns` (header) and SUBSEQUENT
+    // header cards → `data` (body); HTML uses a uniform `<thead>` for the whole
+    // `table-header` section, so a multi-card header (e.g. a second header card
+    // that JSON sends to `data`) renders as additional `<thead>` rows rather than
+    // moving to `<tbody>`. Per-card header/body splitting needs engine-level
+    // routing not yet expressible in the pattern vocabulary — see PLAN-109.
+    htmlKey: { '@el': 'table', '@children': '$' },
     sections: {
       'table-header': {
         // First header card's row of cells → `columns`. Subsequent header
@@ -1536,24 +1546,35 @@ const CARDSETS: _CardSetsConfig = {
           { '@cardIndex=0': { '@bit': { table: { columns: '$' } } } },
           { '@bit': { table: { data: ['$'] } } },
         ],
+        // Header section → `<thead>` rows of `<th>`; `@tableColWidth` bubbles a
+        // `width` attr onto the enclosing `<th>` (HTML-C2).
+        htmlKey: { '@el': 'thead', '@children': { '@el': 'tr', '@children': '$' } },
+        sideHtmlKey: { '@el': 'th', '@children': '$' },
       },
       'table-body': {
         // Batched emission: `$` is the entire 2D array of body card rows.
         // This is the default section (no qualifier → cards land here).
         jsonKey: 'table.data',
         exportJsonKey: { '@bit': { table: { data: '$' } } },
+        htmlKey: { '@el': 'tbody', '@children': { '@el': 'tr', '@children': '$' } },
         isDefault: true,
       },
       'table-footer': {
         // Batched emission: `$` is the entire 2D array of footer rows.
         jsonKey: 'table.data',
         exportJsonKey: { '@bit': { table: { data: '$' } } },
+        // Footer cells route to `data` (not `columns`), so they are `<td>` (no
+        // sideHtmlKey override — the cell side default applies).
+        htmlKey: { '@el': 'tfoot', '@children': { '@el': 'tr', '@children': '$' } },
       },
     },
     sides: [
       {
         name: 'cell',
         repeat: true,
+        // Default (body/footer) cell → `<td>`; the header section overrides to
+        // `<th>` via its sideHtmlKey (HTML.md §8).
+        htmlKey: { '@el': 'td', '@children': '$' },
         variants: [
           {
             jsonKey: null,
@@ -1570,6 +1591,8 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_tableCellType,
+                // HTML.md §8: first-match predicate selecting `<th>` vs `<td>`.
+                htmlKey: [{ '@value=th': { '@el': 'th' } }, { '@absent': { '@el': 'td' } }],
                 description: 'Table cell type (th/td).',
                 format: TagFormat.plainText,
               },
@@ -1592,6 +1615,9 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.property_tableColWidth,
                 jsonKey: '^table.columnWidths[{s}]',
                 exportJsonKey: { '@bit': { table: { columnWidths: { $s: '$' } } } },
+                // HTML.md §8 + HTML-C2: contribute a `width` attribute onto the
+                // enclosing cell element (`<th>`/`<td>`).
+                htmlKey: { '@el': { '@attr': { width: '$' } } },
                 description: 'Width for the column.',
                 format: TagFormat.number,
               },
@@ -1608,6 +1634,12 @@ const CARDSETS: _CardSetsConfig = {
   //
   [CardSetConfigKey.tableExtended]: {
     jsonKey: null,
+    // PLAN-109 / HTML.md §8 — idiomatic HTML mapping for the extended table.
+    // The card-set container is the `<table>` element; each section is a
+    // table section element (`<thead>`/`<tbody>`/`<tfoot>`) whose children are
+    // `<tr>` rows, and each cell side is a `<td>` (body) or `<th>` (header /
+    // footer, via the section sideHtmlKey override).
+    htmlKey: { '@el': 'table', '@children': '$' },
     sections: {
       'table-header': {
         jsonKey: 'table.header.rows',
@@ -1627,19 +1659,29 @@ const CARDSETS: _CardSetsConfig = {
           },
           { table: { header: { rows: ['$'] } } },
         ],
+        htmlKey: { '@el': 'thead', '@children': { '@el': 'tr', '@children': '$' } },
         sideJsonKey: 'cells[{s}]|set(title=true)',
         sideExportJsonKey: { cells: { $s: { title: true, $: '$' } } },
+        // Header cells are `<th>`. The `width` attribute is contributed by the
+        // `@tableColWidth` tag, which bubbles it onto the enclosing `<th>`
+        // (HTML-C2) — so it is not repeated here.
+        sideHtmlKey: { '@el': 'th', '@children': '$' },
       },
       'table-body': {
         jsonKey: 'table.body.rows',
         exportJsonKey: { table: { body: { rows: '$' } } },
+        htmlKey: { '@el': 'tbody', '@children': { '@el': 'tr', '@children': '$' } },
         isDefault: true,
       },
       'table-footer': {
         jsonKey: 'table.footer.rows',
         exportJsonKey: { table: { footer: { rows: '$' } } },
+        htmlKey: { '@el': 'tfoot', '@children': { '@el': 'tr', '@children': '$' } },
         sideJsonKey: 'cells[{s}]|set(title=true)',
         sideExportJsonKey: { cells: { $s: { title: true, $: '$' } } },
+        // Footer cells render as `<th>` (mirrors the header `title: true`
+        // mapping); §8 lists only the header side, so this parallels it.
+        sideHtmlKey: { '@el': 'th', '@children': '$' },
       },
     },
     sides: [
@@ -1648,6 +1690,9 @@ const CARDSETS: _CardSetsConfig = {
         repeat: true,
         jsonKey: 'cells[{s}]',
         exportJsonKey: { cells: { $s: '$' } },
+        // Default (body) cell → `<td>`; the header/footer sections override the
+        // side to `<th>` via their sideHtmlKey (HTML.md §8).
+        htmlKey: { '@el': 'td', '@children': '$' },
         variants: [
           {
             jsonKey: 'content',
@@ -1671,6 +1716,9 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.property_tableCellType,
                 jsonKey: 'title|bool(th)',
                 exportJsonKey: [{ '@value=th': { title: true } }],
+                // HTML.md §8: same first-match predicate machinery selecting
+                // `<th>` vs `<td>` instead of `title:true` vs nothing.
+                htmlKey: [{ '@value=th': { '@el': 'th' } }, { '@absent': { '@el': 'td' } }],
                 description: 'Table cell type (th/td).',
                 format: TagFormat.plainText,
               },
@@ -1700,6 +1748,9 @@ const CARDSETS: _CardSetsConfig = {
                 // PLAN-080: write to the cell's `colwidth` field.
                 jsonKey: 'colwidth',
                 exportJsonKey: { colwidth: '$' },
+                // HTML.md §8 + HTML-C2: contribute a `width` attribute onto the
+                // enclosing cell element (`<th>`/`<td>`).
+                htmlKey: { '@el': { '@attr': { width: '$' } } },
                 description: 'Width for the column.',
                 format: TagFormat.number,
               },
