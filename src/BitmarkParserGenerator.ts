@@ -4,6 +4,7 @@ import { Ast } from './ast/Ast.ts';
 import { Config } from './config/Config.ts';
 import { type BitmarkOptions } from './generator/bitmark/BitmarkGenerator.ts';
 import { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerator.ts';
+import { HtmlTableGenerator } from './generator/html/HtmlTableGenerator.ts';
 import { type JsonOptions } from './generator/json/JsonGenerator.ts';
 import { JsonObjectGenerator } from './generator/json/JsonObjectGenerator.ts';
 // import { TextFormat, TextFormatType } from './model/enum/TextFormat.ts';
@@ -15,6 +16,7 @@ import { BitmarkVersion, type BitmarkVersionType } from './model/enum/BitmarkVer
 import { InfoFormat, type InfoFormatType } from './model/info/enum/InfoFormat.ts';
 import { InfoType, type InfoTypeType } from './model/info/enum/InfoType.ts';
 import { BitmarkParser } from './parser/bitmark/BitmarkParser.ts';
+import { type HtmlTableFormat, HtmlTableParser } from './parser/html/HtmlTableParser.ts';
 import { JsonParser } from './parser/json/JsonParser.ts';
 import { TextParser } from './parser/text/TextParser.ts';
 import { env } from './utils/env/Env.ts';
@@ -28,6 +30,11 @@ import { env } from './utils/env/Env.ts';
  * However, the prettifier will move comments that it does not believe are associated with code.
  *
  * Therefore we have to use some dummy code to prevent it from removing the STRIP stripping comments.
+ *
+ * IMPORTANT: Only NodeJS-specific imports belong in this block. A browser-safe module that is used
+ * by browser-facing code (e.g. HtmlTableGenerator / HtmlTableParser, used by convertHtmlTable) must
+ * be imported OUTSIDE this block. If such an import is stripped from the browser build, its
+ * references become dangling globals (ReferenceError) once the bundle is minified.
  */
 const STRIP = 0;
 
@@ -41,7 +48,6 @@ import fs from 'fs-extra';
 import { type FileOptions } from './ast/writer/FileWriter.ts';
 import { Breakscape } from './breakscaping/Breakscape.ts';
 import { BitmarkFileGenerator } from './generator/bitmark/BitmarkFileGenerator.ts';
-import { HtmlTableGenerator } from './generator/html/HtmlTableGenerator.ts';
 import { JsonFileGenerator } from './generator/json/JsonFileGenerator.ts';
 import { PlainTextGenerator } from './generator/plainText/PlainTextGenerator.ts';
 import { BitType, type BitWrapperJson, type TextAst } from './index.ts';
@@ -51,7 +57,6 @@ import type { _BitConfig, _GroupsConfig } from './model/config/_Config.ts';
 import { type BodyTextFormatType } from './model/enum/BodyTextFormat.ts';
 import { TextFormat, type TextFormatType } from './model/enum/TextFormat.ts';
 import { TextLocation, type TextLocationType } from './model/enum/TextLocation.ts';
-import { type HtmlTableFormat, HtmlTableParser } from './parser/html/HtmlTableParser.ts';
 
 /* STRIP:END */
 STRIP; // eslint-disable-line @typescript-eslint/no-unused-expressions
