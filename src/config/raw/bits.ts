@@ -3263,11 +3263,6 @@ const BITS: _BitsConfig = {
       'Extractor rule bit, used to define extraction rules with reference images and instructions',
     tags: [
       {
-        exportJsonKey: { title: '$' },
-        key: ConfigKey.tag_title,
-        description: 'The name of the extraction rule',
-      },
-      {
         key: ConfigKey.group_resourceBitTags,
         description: 'Resource bit tags for extraction rule images',
       },

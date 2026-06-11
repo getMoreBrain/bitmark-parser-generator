@@ -7,18 +7,6 @@
       "id": [
         "100001"
       ],
-      "title": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "Exclamation Mark Rule",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -60,7 +48,7 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.extractor-rule]\n[@id:100001]\n[#Exclamation Mark Rule]\n[!Use the following bits when the icon contains an exclamation mark]\n[&image:https://example.com/rule-reference.png]"
+    "bitmark": "[.extractor-rule]\n[@id:100001]\n[!Use the following bits when the icon contains an exclamation mark]\n[&image:https://example.com/rule-reference.png]"
   },
   {
     "bit": {
