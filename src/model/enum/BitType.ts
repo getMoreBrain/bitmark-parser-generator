@@ -568,8 +568,7 @@ const BitType = {
     'smart-standard-remark-table-non-normative-collapsible',
   smartStandardRemarkTableNormative: 'smart-standard-remark-table-normative',
   smartStandardRemarkTableNormativeCollapsible: 'smart-standard-remark-table-normative-collapsible',
-  smartStandardTableExtendedImageNonNormative:
-    'smart-standard-table-extended-image-non-normative',
+  smartStandardTableExtendedImageNonNormative: 'smart-standard-table-extended-image-non-normative',
   smartStandardTableExtendedImageNonNormativeCollapsible:
     'smart-standard-table-extended-image-non-normative-collapsible',
   smartStandardTableExtendedImageNormative: 'smart-standard-table-extended-image-normative',
