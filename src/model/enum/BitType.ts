@@ -542,6 +542,21 @@ const BitType = {
   smartStandardRemarkNonNormativeCollapsible: 'smart-standard-remark-non-normative-collapsible',
   smartStandardRemarkNormative: 'smart-standard-remark-normative',
   smartStandardRemarkNormativeCollapsible: 'smart-standard-remark-normative-collapsible',
+  smartStandardRemarkTableExtendedImageNonNormative:
+    'smart-standard-remark-table-extended-image-non-normative',
+  smartStandardRemarkTableExtendedImageNonNormativeCollapsible:
+    'smart-standard-remark-table-extended-image-non-normative-collapsible',
+  smartStandardRemarkTableExtendedImageNormative:
+    'smart-standard-remark-table-extended-image-normative',
+  smartStandardRemarkTableExtendedImageNormativeCollapsible:
+    'smart-standard-remark-table-extended-image-normative-collapsible',
+  smartStandardRemarkTableExtendedNonNormative:
+    'smart-standard-remark-table-extended-non-normative',
+  smartStandardRemarkTableExtendedNonNormativeCollapsible:
+    'smart-standard-remark-table-extended-non-normative-collapsible',
+  smartStandardRemarkTableExtendedNormative: 'smart-standard-remark-table-extended-normative',
+  smartStandardRemarkTableExtendedNormativeCollapsible:
+    'smart-standard-remark-table-extended-normative-collapsible',
   smartStandardRemarkTableImageNonNormative: 'smart-standard-remark-table-image-non-normative',
   smartStandardRemarkTableImageNonNormativeCollapsible:
     'smart-standard-remark-table-image-non-normative-collapsible',
@@ -553,6 +568,19 @@ const BitType = {
     'smart-standard-remark-table-non-normative-collapsible',
   smartStandardRemarkTableNormative: 'smart-standard-remark-table-normative',
   smartStandardRemarkTableNormativeCollapsible: 'smart-standard-remark-table-normative-collapsible',
+  smartStandardTableExtendedImageNonNormative:
+    'smart-standard-table-extended-image-non-normative',
+  smartStandardTableExtendedImageNonNormativeCollapsible:
+    'smart-standard-table-extended-image-non-normative-collapsible',
+  smartStandardTableExtendedImageNormative: 'smart-standard-table-extended-image-normative',
+  smartStandardTableExtendedImageNormativeCollapsible:
+    'smart-standard-table-extended-image-normative-collapsible',
+  smartStandardTableExtendedNonNormative: 'smart-standard-table-extended-non-normative',
+  smartStandardTableExtendedNonNormativeCollapsible:
+    'smart-standard-table-extended-non-normative-collapsible',
+  smartStandardTableExtendedNormative: 'smart-standard-table-extended-normative',
+  smartStandardTableExtendedNormativeCollapsible:
+    'smart-standard-table-extended-normative-collapsible',
   smartStandardTableImageNonNormative: 'smart-standard-table-image-non-normative',
   smartStandardTableImageNonNormativeCollapsible:
     'smart-standard-table-image-non-normative-collapsible',
@@ -576,10 +604,19 @@ const BitType = {
   standardNoteNormative: 'standard-note-normative',
   standardRemarkNonNormative: 'standard-remark-non-normative',
   standardRemarkNormative: 'standard-remark-normative',
+  standardRemarkTableExtendedImageNonNormative:
+    'standard-remark-table-extended-image-non-normative',
+  standardRemarkTableExtendedImageNormative: 'standard-remark-table-extended-image-normative',
+  standardRemarkTableExtendedNonNormative: 'standard-remark-table-extended-non-normative',
+  standardRemarkTableExtendedNormative: 'standard-remark-table-extended-normative',
   standardRemarkTableImageNonNormative: 'standard-remark-table-image-non-normative',
   standardRemarkTableImageNormative: 'standard-remark-table-image-normative',
   standardRemarkTableNonNormative: 'standard-remark-table-non-normative',
   standardRemarkTableNormative: 'standard-remark-table-normative',
+  standardTableExtendedImageNonNormative: 'standard-table-extended-image-non-normative',
+  standardTableExtendedImageNormative: 'standard-table-extended-image-normative',
+  standardTableExtendedNonNormative: 'standard-table-extended-non-normative',
+  standardTableExtendedNormative: 'standard-table-extended-normative',
   standardTableImageNonNormative: 'standard-table-image-non-normative',
   standardTableImageNormative: 'standard-table-image-normative',
   standardTableNonNormative: 'standard-table-non-normative',
