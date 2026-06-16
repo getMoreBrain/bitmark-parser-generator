@@ -1,6 +1,6 @@
 import { type CountType } from '../enum/Count.ts';
 import { type TextFormatType } from '../enum/TextFormat.ts';
-import { type ExportJsonKey } from './_Config.ts';
+import { type ExportJsonKey, type HtmlKey } from './_Config.ts';
 import { type TagsConfig } from './TagsConfig.ts';
 
 interface ToStringOptions {
@@ -17,6 +17,8 @@ class CardVariantConfig {
   readonly jsonKey?: string | null; // JSON path for body text (legacy)
   readonly exportJsonKey?: ExportJsonKey; // New JSON-pattern jsonKey
   readonly hasExportJsonKey: boolean;
+  readonly htmlKey?: HtmlKey; // HTML key-pattern
+  readonly hasHtmlKey: boolean;
   readonly format?: TextFormatType; // Body text format. Default: bitmark++
 
   public constructor(
@@ -28,6 +30,8 @@ class CardVariantConfig {
     exportJsonKey?: ExportJsonKey,
     hasExportJsonKey: boolean = false,
     format?: TextFormatType,
+    htmlKey?: HtmlKey,
+    hasHtmlKey: boolean = false,
   ) {
     this.tags = tags;
     this.bodyAllowed = bodyAllowed == null ? true : bodyAllowed;
@@ -36,6 +40,8 @@ class CardVariantConfig {
     this.jsonKey = jsonKey;
     this.exportJsonKey = exportJsonKey;
     this.hasExportJsonKey = hasExportJsonKey;
+    this.htmlKey = htmlKey;
+    this.hasHtmlKey = hasHtmlKey;
     this.format = format;
   }
 

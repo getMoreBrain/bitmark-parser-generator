@@ -18,6 +18,19 @@ export type ExportJsonKey =
   | string
   | ExportJsonKey[]
   | { [k: string]: ExportJsonKey };
+
+/**
+ * Key-pattern value for the HTML backend of the key-pattern language.
+ * See crates/lib/jsonkey_parser/doc/HTML.md (design: PLAN-109).
+ *
+ * Structurally identical to {@link ExportJsonKey} (a recursive JSON value) — the
+ * pattern grammar, sigils, and predicates are shared; only the leaf node model
+ * (and HTML-specific reserved keys such as `@el` / `@attr` / `@children` /
+ * `@text`) differ, and those are validated by the new parser's compiler, not
+ * here. Stored verbatim in the raw configs and emitted under the field name
+ * `htmlKey` when writing assets/config/**\/*.jsonc. Omit when absent.
+ */
+export type HtmlKey = null | boolean | number | string | HtmlKey[] | { [k: string]: HtmlKey };
 import { type CountType } from '../enum/Count.ts';
 import { type ExampleTypeType } from '../enum/ExampleType.ts';
 import { type TagType } from '../enum/Tag.ts';
@@ -112,6 +125,7 @@ export interface _PropertyConfig {
   defaultValue?: string; // The default value of the property - this value can be omitted from the markup
   jsonKey?: string; // If the json key is different from the tag (legacy mini-language)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form (see specs/JSONKEY_SYNTAX.md). Omit when default.
+  htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.
 }
 
 export interface _ResourcesConfig {
@@ -125,6 +139,7 @@ export interface _ResourceConfig {
   deprecated?: string; // Deprecated version
   jsonKey?: string; // If the json key is different from the tag (legacy mini-language)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form. Omit when default.
+  htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.
 }
 
 /**
@@ -143,6 +158,7 @@ export interface _AbstractTagConfig {
   nullable?: boolean; // If true, the tag's value is null when absent (not the type's zero value)
   jsonKey?: string; // If the json key is different from the tag (legacy mini-language)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form (specs/JSONKEY_SYNTAX.md). Omit when default.
+  htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.
   chain?: _AbstractTagConfig[];
 }
 
@@ -154,14 +170,17 @@ export interface _CardSetConfig {
   // JSON mapping properties
   jsonKey: string | null; // e.g. 'cards', 'pairs', null (legacy mini-language)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form. Omit when default/null.
+  htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.
   sections?: Record<
     string,
     {
       jsonKey: string;
       exportJsonKey?: ExportJsonKey;
+      htmlKey?: HtmlKey;
       isDefault?: boolean;
       sideJsonKey?: string;
       sideExportJsonKey?: ExportJsonKey;
+      sideHtmlKey?: HtmlKey;
       // PLAN-085: cardinality on the section (per-card-type) — `0` (default)
       // means unbounded. Mirrors the `minCount` / `maxCount` pattern used
       // elsewhere on tags / sides / variants.
@@ -179,6 +198,7 @@ export interface _CardSideConfig {
   repeat?: boolean; // Side repeats for remaining -- dividers
   jsonKey?: string | null; // JSON path for side container (e.g. 'cells[{s}]') (legacy)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form. Omit when default/null.
+  htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.
   variants: _CardVariantConfig[];
 }
 
@@ -191,5 +211,6 @@ export interface _CardVariantConfig {
   // JSON mapping fields
   jsonKey?: string | null; // JSON path for body text (legacy)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form. Omit when default/null.
+  htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.
   format?: TextFormatType; // Body text format. Default: bitmark++
 }

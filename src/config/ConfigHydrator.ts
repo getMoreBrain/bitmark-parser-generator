@@ -85,6 +85,8 @@ class ConfigHydrator {
         _side.jsonKey,
         _side.exportJsonKey,
         Object.prototype.hasOwnProperty.call(_side, 'exportJsonKey'),
+        _side.htmlKey,
+        Object.prototype.hasOwnProperty.call(_side, 'htmlKey'),
       );
       sides.push(sideConfig);
     }
@@ -96,6 +98,8 @@ class ConfigHydrator {
       Object.prototype.hasOwnProperty.call(_cardSetConfig, 'exportJsonKey'),
       this.hydrateCardSections(_cardSetConfig.sections),
       sides,
+      _cardSetConfig.htmlKey,
+      Object.prototype.hasOwnProperty.call(_cardSetConfig, 'htmlKey'),
     );
 
     return cardSetConfig;
@@ -111,10 +115,14 @@ class ConfigHydrator {
         jsonKey: v.jsonKey,
         exportJsonKey: v.exportJsonKey,
         hasExportJsonKey: Object.prototype.hasOwnProperty.call(v, 'exportJsonKey'),
+        htmlKey: v.htmlKey,
+        hasHtmlKey: Object.prototype.hasOwnProperty.call(v, 'htmlKey'),
         isDefault: v.isDefault,
         sideJsonKey: v.sideJsonKey,
         sideExportJsonKey: v.sideExportJsonKey,
         hasSideExportJsonKey: Object.prototype.hasOwnProperty.call(v, 'sideExportJsonKey'),
+        sideHtmlKey: v.sideHtmlKey,
+        hasSideHtmlKey: Object.prototype.hasOwnProperty.call(v, 'sideHtmlKey'),
         // PLAN-085: cardinality fields pass through; defaults applied
         // downstream by the config consumer (Rust treats `0` / undefined
         // as unbounded).
@@ -134,6 +142,7 @@ class ConfigHydrator {
       deprecated,
       jsonKey,
       exportJsonKey,
+      htmlKey,
     } = _tag;
     const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No tag key found for config key '${configKey}'`);
@@ -155,6 +164,8 @@ class ConfigHydrator {
       jsonKey,
       exportJsonKey,
       hasExportJsonKey: Object.prototype.hasOwnProperty.call(_tag, 'exportJsonKey'),
+      htmlKey,
+      hasHtmlKey: Object.prototype.hasOwnProperty.call(_tag, 'htmlKey'),
       deprecated,
     });
 
@@ -177,6 +188,7 @@ class ConfigHydrator {
       defaultValue,
       jsonKey,
       exportJsonKey,
+      htmlKey,
     } = _tag;
     const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No property key found for config key '${configKey}'`);
@@ -197,6 +209,8 @@ class ConfigHydrator {
       jsonKey,
       exportJsonKey,
       hasExportJsonKey: Object.prototype.hasOwnProperty.call(_tag, 'exportJsonKey'),
+      htmlKey,
+      hasHtmlKey: Object.prototype.hasOwnProperty.call(_tag, 'htmlKey'),
       format,
       values,
       defaultValue,
@@ -219,6 +233,7 @@ class ConfigHydrator {
       deprecated,
       jsonKey,
       exportJsonKey,
+      htmlKey,
     } = _tag;
     const configKey = Enum(ConfigKey).fromValue(_configKey) || ConfigKey._unknown;
     if (!configKey) throw new Error(`No resource key found for config key '${configKey}'`);
@@ -239,6 +254,8 @@ class ConfigHydrator {
       jsonKey,
       exportJsonKey,
       hasExportJsonKey: Object.prototype.hasOwnProperty.call(_tag, 'exportJsonKey'),
+      htmlKey,
+      hasHtmlKey: Object.prototype.hasOwnProperty.call(_tag, 'htmlKey'),
       deprecated,
     });
 
@@ -285,6 +302,7 @@ class ConfigHydrator {
       repeatCount,
       jsonKey,
       exportJsonKey,
+      htmlKey,
       format,
     } = _variant;
 
@@ -299,6 +317,8 @@ class ConfigHydrator {
       exportJsonKey,
       Object.prototype.hasOwnProperty.call(_variant, 'exportJsonKey'),
       format,
+      htmlKey,
+      Object.prototype.hasOwnProperty.call(_variant, 'htmlKey'),
     );
 
     return cardSetConfig;

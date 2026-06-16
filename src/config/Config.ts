@@ -356,6 +356,8 @@ class Config {
               jsonKey: tag.jsonKey,
               exportJsonKey: tag.exportJsonKey,
               hasExportJsonKey: tag.hasExportJsonKey,
+              htmlKey: tag.htmlKey,
+              hasHtmlKey: tag.hasHtmlKey,
               deprecated: tag.deprecated,
             });
             finalResourceTags[k] = newTag;

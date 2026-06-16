@@ -1,4 +1,4 @@
-import { type ExportJsonKey } from './_Config.ts';
+import { type ExportJsonKey, type HtmlKey } from './_Config.ts';
 import { type CardSideConfig } from './CardSideConfig.ts';
 import { type CardVariantConfig } from './CardVariantConfig.ts';
 import { type CardSetConfigKeyType } from './enum/CardSetConfigKey.ts';
@@ -12,10 +12,14 @@ interface CardSetSection {
   jsonKey: string;
   exportJsonKey?: ExportJsonKey;
   hasExportJsonKey?: boolean;
+  htmlKey?: HtmlKey;
+  hasHtmlKey?: boolean;
   isDefault?: boolean;
   sideJsonKey?: string;
   sideExportJsonKey?: ExportJsonKey;
   hasSideExportJsonKey?: boolean;
+  sideHtmlKey?: HtmlKey;
+  hasSideHtmlKey?: boolean;
   // PLAN-085: cardinality on the section (per-card-type). `0` (default)
   // means unbounded. Exported as `min` / `max` in the per-card config
   // JSON; mirrored on the Rust `CardConfig.min/max` field.
@@ -28,6 +32,8 @@ class CardSetConfig {
   readonly jsonKey: string | null;
   readonly exportJsonKey?: ExportJsonKey;
   readonly hasExportJsonKey: boolean;
+  readonly htmlKey?: HtmlKey;
+  readonly hasHtmlKey: boolean;
   readonly sections: Record<string, CardSetSection> | undefined;
   readonly sides: CardSideConfig[];
 
@@ -44,11 +50,15 @@ class CardSetConfig {
     hasExportJsonKey: boolean,
     sections: Record<string, CardSetSection> | undefined,
     sides: CardSideConfig[],
+    htmlKey: HtmlKey | undefined = undefined,
+    hasHtmlKey: boolean = false,
   ) {
     this.configKey = configKey;
     this.jsonKey = jsonKey;
     this.exportJsonKey = exportJsonKey;
     this.hasExportJsonKey = hasExportJsonKey;
+    this.htmlKey = htmlKey;
+    this.hasHtmlKey = hasHtmlKey;
     this.sections = sections;
     this.sides = sides;
   }

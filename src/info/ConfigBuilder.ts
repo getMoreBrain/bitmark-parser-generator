@@ -12,6 +12,7 @@ import type {
   _BitConfig,
   _GroupsConfig,
   ExportJsonKey,
+  HtmlKey,
 } from '../model/config/_Config.ts';
 import { typeFromConfigKey } from '../model/config/enum/ConfigKey.ts';
 import { BitTagConfigKeyType } from '../model/enum/BitTagConfigKeyType.ts';
@@ -114,6 +115,8 @@ class ConfigBuilder {
       jsonKey?: string;
       exportJsonKey?: ExportJsonKey;
       hasExportJsonKey?: boolean;
+      htmlKey?: HtmlKey;
+      hasHtmlKey?: boolean;
       min?: number | string;
       max?: number | string;
       description?: string;
@@ -186,6 +189,7 @@ class ConfigBuilder {
         k = StringUtils.camelToKebab(k);
         const resolvedGroups = resolveGroupReferences(k);
         const hasOuterExport = Object.prototype.hasOwnProperty.call(tag, 'exportJsonKey');
+        const hasOuterHtml = Object.prototype.hasOwnProperty.call(tag, 'htmlKey');
         // Validator: a group reference may carry a per-site jsonKey override
         // (legacy mini-language string). If it does, it must have an
         // exportJsonKey companion — otherwise the override would be silently
@@ -200,6 +204,8 @@ class ConfigBuilder {
           // Outer tag's exportJsonKey/jsonKey/min/max/description override the squashed leaf's.
           const exportJsonKeyChosen = hasOuterExport ? tag.exportJsonKey : ref.exportJsonKey;
           const hasExportChosen = hasOuterExport || !!ref.hasExportJsonKey;
+          const htmlKeyChosen = hasOuterHtml ? tag.htmlKey : ref.htmlKey;
+          const hasHtmlChosen = hasOuterHtml || !!ref.hasHtmlKey;
           const min = tag.minCount != null ? tag.minCount : ref.min;
           const max = tag.maxCount != null ? tag.maxCount : ref.max;
           const description = tag.description ? tag.description : ref.description;
@@ -207,6 +213,7 @@ class ConfigBuilder {
             type: 'group',
             key: ref.key,
             ...(hasExportChosen ? { jsonKey: exportJsonKeyChosen } : {}),
+            ...(hasHtmlChosen ? { htmlKey: htmlKeyChosen } : {}),
             ...(min != null ? { min } : {}),
             ...(max != null ? { max } : {}),
             ...(description ? { description } : {}),
@@ -242,10 +249,19 @@ class ConfigBuilder {
         exportJsonKeyField = {};
       }
 
+      // htmlKey has no legacy companion and no validator: emit verbatim under
+      // `htmlKey` when explicitly set, otherwise omit (data-* fallback applies
+      // downstream — see HTML.md §5).
+      const hasHtml = Object.prototype.hasOwnProperty.call(tag, 'htmlKey');
+      const htmlKeyField: { htmlKey: HtmlKey } | object = hasHtml
+        ? { htmlKey: tag.htmlKey as HtmlKey }
+        : {};
+
       const t = {
         type: 'tag',
         key: tagName,
         ...exportJsonKeyField,
+        ...htmlKeyField,
         format,
         default: tag.defaultValue ?? null,
         ...(tag.nullable ? { nullable: true } : {}),
@@ -280,19 +296,36 @@ class ConfigBuilder {
       return {};
     };
 
+    // For card-set / side / variant / section: emit `htmlKey: <htmlKey>` if
+    // explicit; otherwise omit. No legacy companion and no validator (HTML.md §5).
+    const cardHtmlKeyField = (
+      container: { htmlKey?: HtmlKey; sideHtmlKey?: HtmlKey },
+      htmlExportKey: 'htmlKey' | 'sideHtmlKey',
+    ): { htmlKey: HtmlKey } | object => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const c = container as any;
+      if (Object.prototype.hasOwnProperty.call(c, htmlExportKey)) {
+        return { htmlKey: c[htmlExportKey] as HtmlKey };
+      }
+      return {};
+    };
+
     const serializeCardSet = (
       cardSetKey: string,
     ):
       | {
           name: string;
+          htmlKey?: HtmlKey;
           cards: {
             name: string;
             isDefault?: boolean;
             jsonKey?: ExportJsonKey;
+            htmlKey?: HtmlKey;
             sides: {
               name: string;
               repeat?: boolean;
               jsonKey?: ExportJsonKey;
+              htmlKey?: HtmlKey;
               variants: unknown[];
             }[];
           }[];
@@ -339,6 +372,7 @@ class ConfigBuilder {
 
           return {
             ...cardJsonKeyField(variant, 'jsonKey', 'exportJsonKey', variantPath),
+            ...cardHtmlKeyField(variant, 'htmlKey'),
             format: variantBodyFormat(variant),
             tags: variantTags,
             repeatCount: variant.repeatCount ?? 1,
@@ -351,6 +385,7 @@ class ConfigBuilder {
           name: side.name,
           ...(side.repeat ? { repeat: side.repeat } : {}),
           ...cardJsonKeyField(side, 'jsonKey', 'exportJsonKey', sidePath),
+          ...cardHtmlKeyField(side, 'htmlKey'),
           variants,
         };
       });
@@ -362,21 +397,24 @@ class ConfigBuilder {
           // Per-section override of the side jsonKey (when section.sideExportJsonKey or
           // legacy section.sideJsonKey is set).
           const hasSideExport = Object.prototype.hasOwnProperty.call(section, 'sideExportJsonKey');
+          const hasSideHtml = Object.prototype.hasOwnProperty.call(section, 'sideHtmlKey');
           let cardSides = sides;
-          if (hasSideExport || section.sideJsonKey != null) {
+          if (hasSideExport || section.sideJsonKey != null || hasSideHtml) {
             const sideOverride = cardJsonKeyField(
               section,
               'sideJsonKey',
               'sideExportJsonKey',
               `${sectionPath} / sides.*`,
             );
-            cardSides = sides.map((s) => ({ ...s, ...sideOverride }));
+            const sideHtmlOverride = cardHtmlKeyField(section, 'sideHtmlKey');
+            cardSides = sides.map((s) => ({ ...s, ...sideOverride, ...sideHtmlOverride }));
           }
 
           return {
             name: sectionName,
             ...(section.isDefault ? { isDefault: true } : {}),
             ...cardJsonKeyField(section, 'jsonKey', 'exportJsonKey', sectionPath),
+            ...cardHtmlKeyField(section, 'htmlKey'),
             // PLAN-085: per-section cardinality. Emit only when non-default
             // (treat `0` / undefined as "unbounded — omit").
             ...(section.minCount != null && section.minCount !== 0
@@ -389,7 +427,12 @@ class ConfigBuilder {
           };
         });
 
-        return { name: normalizedKey, cards };
+        // The card-set container key (e.g. the `<table>` wrapper for tables —
+        // HTML.md §8) has no slot in the sectioned shape the way single-card
+        // sets do, so emit it here at the top level. Only htmlKey is emitted
+        // (legacy jsonKey/exportJsonKey for sectioned roots is intentionally
+        // omitted, preserving existing JSON output).
+        return { name: normalizedKey, ...cardHtmlKeyField(cardSetConfig, 'htmlKey'), cards };
       }
 
       // Single card
@@ -401,6 +444,7 @@ class ConfigBuilder {
             name: 'default',
             isDefault: true,
             ...cardJsonKeyField(cardSetConfig, 'jsonKey', 'exportJsonKey', cardSetPath),
+            ...cardHtmlKeyField(cardSetConfig, 'htmlKey'),
             sides,
           },
         ],
@@ -464,6 +508,10 @@ class ConfigBuilder {
             ref.exportJsonKey = t.jsonKey as ExportJsonKey;
             ref.hasExportJsonKey = true;
           }
+          if (Object.prototype.hasOwnProperty.call(t, 'htmlKey')) {
+            ref.htmlKey = t.htmlKey as HtmlKey;
+            ref.hasHtmlKey = true;
+          }
           replacements.push(ref);
         }
         squashedGroups.set(groupKey, replacements);
@@ -515,6 +563,7 @@ class ConfigBuilder {
             type: 'group',
             key: ref.key,
             ...(ref.hasExportJsonKey ? { jsonKey: ref.exportJsonKey } : {}),
+            ...(ref.hasHtmlKey ? { htmlKey: ref.htmlKey } : {}),
             ...(ref.min != null ? { min: ref.min } : {}),
             ...(ref.max != null ? { max: ref.max } : {}),
             ...(ref.description ? { description: ref.description } : {}),
@@ -529,6 +578,7 @@ class ConfigBuilder {
               type: 'group',
               key: ref.key,
               ...(ref.hasExportJsonKey ? { jsonKey: ref.exportJsonKey } : {}),
+              ...(ref.hasHtmlKey ? { htmlKey: ref.htmlKey } : {}),
               ...(ref.min != null ? { min: ref.min } : {}),
               ...(ref.max != null ? { max: ref.max } : {}),
               ...(ref.description ? { description: ref.description } : {}),
@@ -686,6 +736,7 @@ class ConfigBuilder {
               type: 'group',
               key: ref.key,
               ...(ref.hasExportJsonKey ? { jsonKey: ref.exportJsonKey } : {}),
+              ...(ref.hasHtmlKey ? { htmlKey: ref.htmlKey } : {}),
               ...(ref.min != null ? { min: ref.min } : {}),
               ...(ref.max != null ? { max: ref.max } : {}),
               ...(ref.description ? { description: ref.description } : {}),

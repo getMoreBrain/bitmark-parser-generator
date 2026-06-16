@@ -230,6 +230,8 @@ function propertyContentProcessor(
         jsonKey: undefined,
         exportJsonKey: undefined,
         hasExportJsonKey: false,
+        htmlKey: undefined,
+        hasHtmlKey: false,
         format: TagFormat.bitmarkText,
         values: undefined,
         defaultValue: undefined,
