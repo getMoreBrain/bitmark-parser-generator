@@ -763,5 +763,2645 @@
       "textParserVersion": "8.37.3"
     },
     "bitmark": "[.table-extended]\n[@tableFixedHeader:true]\n[@tableHeaderWhitespaceNoWrap:false]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[@tableColWidth:150]\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
+  },
+  {
+    "bit": {
+      "type": "standard-table-extended-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "1",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "standard-table-extended-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.standard-table-extended-normative]\n====\nKind\n--\nExample\n====\n1\n--\nstandard-table-extended-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "standard-table-extended-non-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "2",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "standard-table-extended-non-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.standard-table-extended-non-normative]\n====\nKind\n--\nExample\n====\n2\n--\nstandard-table-extended-non-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "standard-remark-table-extended-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "3",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "standard-remark-table-extended-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.standard-remark-table-extended-normative]\n====\nKind\n--\nExample\n====\n3\n--\nstandard-remark-table-extended-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "standard-remark-table-extended-non-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "4",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "standard-remark-table-extended-non-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.standard-remark-table-extended-non-normative]\n====\nKind\n--\nExample\n====\n4\n--\nstandard-remark-table-extended-non-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "standard-table-extended-image-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "5",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "standard-table-extended-image-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.standard-table-extended-image-normative]\n====\nKind\n--\nExample\n====\n5\n--\nstandard-table-extended-image-normative\n====\n",
+          "location": {
+            "start": {
+              "line": 175,
+              "column": 1,
+              "offset": 1624
+            },
+            "end": {
+              "line": 185,
+              "column": 1,
+              "offset": 1743
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.standard-table-extended-image-normative]\n====\nKind\n--\nExample\n====\n5\n--\nstandard-table-extended-image-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "standard-table-extended-image-non-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "6",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "standard-table-extended-image-non-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.standard-table-extended-image-non-normative]\n====\nKind\n--\nExample\n====\n6\n--\nstandard-table-extended-image-non-normative\n====\n",
+          "location": {
+            "start": {
+              "line": 186,
+              "column": 1,
+              "offset": 1744
+            },
+            "end": {
+              "line": 196,
+              "column": 1,
+              "offset": 1871
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.standard-table-extended-image-non-normative]\n====\nKind\n--\nExample\n====\n6\n--\nstandard-table-extended-image-non-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "standard-remark-table-extended-image-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "7",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "standard-remark-table-extended-image-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.standard-remark-table-extended-image-normative]\n====\nKind\n--\nExample\n====\n7\n--\nstandard-remark-table-extended-image-normative\n====\n",
+          "location": {
+            "start": {
+              "line": 197,
+              "column": 1,
+              "offset": 1872
+            },
+            "end": {
+              "line": 207,
+              "column": 1,
+              "offset": 2005
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.standard-remark-table-extended-image-normative]\n====\nKind\n--\nExample\n====\n7\n--\nstandard-remark-table-extended-image-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "standard-remark-table-extended-image-non-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "8",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "standard-remark-table-extended-image-non-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.standard-remark-table-extended-image-non-normative]\n====\nKind\n--\nExample\n====\n8\n--\nstandard-remark-table-extended-image-non-normative\n====\n",
+          "location": {
+            "start": {
+              "line": 208,
+              "column": 1,
+              "offset": 2006
+            },
+            "end": {
+              "line": 218,
+              "column": 1,
+              "offset": 2147
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.standard-remark-table-extended-image-non-normative]\n====\nKind\n--\nExample\n====\n8\n--\nstandard-remark-table-extended-image-non-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-table-extended-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "9",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-table-extended-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.smart-standard-table-extended-normative]\n====\nKind\n--\nExample\n====\n9\n--\nsmart-standard-table-extended-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-table-extended-non-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "10",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-table-extended-non-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.smart-standard-table-extended-non-normative]\n====\nKind\n--\nExample\n====\n10\n--\nsmart-standard-table-extended-non-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-table-extended-normative-collapsible",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "11",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-table-extended-normative-collapsible",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.smart-standard-table-extended-normative-collapsible]\n====\nKind\n--\nExample\n====\n11\n--\nsmart-standard-table-extended-normative-collapsible\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-table-extended-non-normative-collapsible",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "12",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-table-extended-non-normative-collapsible",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.smart-standard-table-extended-non-normative-collapsible]\n====\nKind\n--\nExample\n====\n12\n--\nsmart-standard-table-extended-non-normative-collapsible\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-table-extended-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "13",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-remark-table-extended-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.smart-standard-remark-table-extended-normative]\n====\nKind\n--\nExample\n====\n13\n--\nsmart-standard-remark-table-extended-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-table-extended-non-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "14",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-remark-table-extended-non-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.smart-standard-remark-table-extended-non-normative]\n====\nKind\n--\nExample\n====\n14\n--\nsmart-standard-remark-table-extended-non-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-table-extended-normative-collapsible",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "15",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-remark-table-extended-normative-collapsible",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.smart-standard-remark-table-extended-normative-collapsible]\n====\nKind\n--\nExample\n====\n15\n--\nsmart-standard-remark-table-extended-normative-collapsible\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-table-extended-non-normative-collapsible",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "16",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-remark-table-extended-non-normative-collapsible",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.smart-standard-remark-table-extended-non-normative-collapsible]\n====\nKind\n--\nExample\n====\n16\n--\nsmart-standard-remark-table-extended-non-normative-collapsible\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-table-extended-image-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "17",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-table-extended-image-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.smart-standard-table-extended-image-normative]\n====\nKind\n--\nExample\n====\n17\n--\nsmart-standard-table-extended-image-normative\n====\n",
+          "location": {
+            "start": {
+              "line": 307,
+              "column": 1,
+              "offset": 3299
+            },
+            "end": {
+              "line": 317,
+              "column": 1,
+              "offset": 3431
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.smart-standard-table-extended-image-normative]\n====\nKind\n--\nExample\n====\n17\n--\nsmart-standard-table-extended-image-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-table-extended-image-non-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "18",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-table-extended-image-non-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.smart-standard-table-extended-image-non-normative]\n====\nKind\n--\nExample\n====\n18\n--\nsmart-standard-table-extended-image-non-normative\n====\n",
+          "location": {
+            "start": {
+              "line": 318,
+              "column": 1,
+              "offset": 3432
+            },
+            "end": {
+              "line": 328,
+              "column": 1,
+              "offset": 3572
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.smart-standard-table-extended-image-non-normative]\n====\nKind\n--\nExample\n====\n18\n--\nsmart-standard-table-extended-image-non-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-table-extended-image-normative-collapsible",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "19",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-table-extended-image-normative-collapsible",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.smart-standard-table-extended-image-normative-collapsible]\n====\nKind\n--\nExample\n====\n19\n--\nsmart-standard-table-extended-image-normative-collapsible\n====\n",
+          "location": {
+            "start": {
+              "line": 329,
+              "column": 1,
+              "offset": 3573
+            },
+            "end": {
+              "line": 339,
+              "column": 1,
+              "offset": 3729
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.smart-standard-table-extended-image-normative-collapsible]\n====\nKind\n--\nExample\n====\n19\n--\nsmart-standard-table-extended-image-normative-collapsible\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-table-extended-image-non-normative-collapsible",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "20",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-table-extended-image-non-normative-collapsible",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.smart-standard-table-extended-image-non-normative-collapsible]\n====\nKind\n--\nExample\n====\n20\n--\nsmart-standard-table-extended-image-non-normative-collapsible\n====\n",
+          "location": {
+            "start": {
+              "line": 340,
+              "column": 1,
+              "offset": 3730
+            },
+            "end": {
+              "line": 350,
+              "column": 1,
+              "offset": 3894
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.smart-standard-table-extended-image-non-normative-collapsible]\n====\nKind\n--\nExample\n====\n20\n--\nsmart-standard-table-extended-image-non-normative-collapsible\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-table-extended-image-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "21",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-remark-table-extended-image-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.smart-standard-remark-table-extended-image-normative]\n====\nKind\n--\nExample\n====\n21\n--\nsmart-standard-remark-table-extended-image-normative\n====\n",
+          "location": {
+            "start": {
+              "line": 351,
+              "column": 1,
+              "offset": 3895
+            },
+            "end": {
+              "line": 361,
+              "column": 1,
+              "offset": 4041
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.smart-standard-remark-table-extended-image-normative]\n====\nKind\n--\nExample\n====\n21\n--\nsmart-standard-remark-table-extended-image-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-table-extended-image-non-normative",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "22",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-remark-table-extended-image-non-normative",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.smart-standard-remark-table-extended-image-non-normative]\n====\nKind\n--\nExample\n====\n22\n--\nsmart-standard-remark-table-extended-image-non-normative\n====\n",
+          "location": {
+            "start": {
+              "line": 362,
+              "column": 1,
+              "offset": 4042
+            },
+            "end": {
+              "line": 372,
+              "column": 1,
+              "offset": 4196
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.smart-standard-remark-table-extended-image-non-normative]\n====\nKind\n--\nExample\n====\n22\n--\nsmart-standard-remark-table-extended-image-non-normative\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-table-extended-image-normative-collapsible",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "23",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-remark-table-extended-image-normative-collapsible",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.smart-standard-remark-table-extended-image-normative-collapsible]\n====\nKind\n--\nExample\n====\n23\n--\nsmart-standard-remark-table-extended-image-normative-collapsible\n====\n",
+          "location": {
+            "start": {
+              "line": 373,
+              "column": 1,
+              "offset": 4197
+            },
+            "end": {
+              "line": 383,
+              "column": 1,
+              "offset": 4367
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.smart-standard-remark-table-extended-image-normative-collapsible]\n====\nKind\n--\nExample\n====\n23\n--\nsmart-standard-remark-table-extended-image-normative-collapsible\n===="
+  },
+  {
+    "bit": {
+      "type": "smart-standard-remark-table-extended-image-non-normative-collapsible",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "table": {
+        "body": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Kind",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "Example",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "24",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "text": "smart-standard-remark-table-extended-image-non-normative-collapsible",
+                          "type": "text"
+                        }
+                      ],
+                      "attrs": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tableFixedHeader": false,
+      "tableHeaderWhitespaceNoWrap": false,
+      "tableSearch": false,
+      "tableSort": false,
+      "tablePagination": false,
+      "tablePaginationLimit": 0,
+      "tableHeight": 0,
+      "tableWhitespaceNoWrap": false,
+      "tableAutoWidth": true,
+      "tableResizableColumns": false,
+      "tableColumnMinWidth": 0
+    },
+    "parser": {
+      "version": "5.26.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3",
+      "warnings": [
+        {
+          "message": "[&image] is required at least 1 time(s)",
+          "text": "[.smart-standard-remark-table-extended-image-non-normative-collapsible]\n====\nKind\n--\nExample\n====\n24\n--\nsmart-standard-remark-table-extended-image-non-normative-collapsible\n====\n",
+          "location": {
+            "start": {
+              "line": 384,
+              "column": 1,
+              "offset": 4368
+            },
+            "end": {
+              "line": 394,
+              "column": 1,
+              "offset": 4546
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.smart-standard-remark-table-extended-image-non-normative-collapsible]\n====\nKind\n--\nExample\n====\n24\n--\nsmart-standard-remark-table-extended-image-non-normative-collapsible\n===="
   }
 ]
