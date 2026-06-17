@@ -3263,11 +3263,6 @@ const BITS: _BitsConfig = {
       'Extractor rule bit, used to define extraction rules with reference images and instructions',
     tags: [
       {
-        exportJsonKey: { title: '$' },
-        key: ConfigKey.tag_title,
-        description: 'The name of the extraction rule',
-      },
-      {
         key: ConfigKey.group_resourceBitTags,
         description: 'Resource bit tags for extraction rule images',
       },
@@ -3990,6 +3985,30 @@ const BITS: _BitsConfig = {
     description:
       'Standard non-normative remark table image bit, used to create non-normative remark images in tables in articles or books',
   },
+  [BitType.standardTableExtendedImageNormative]: {
+    since: '1.16.0',
+    baseBitType: BitType.tableExtendedImage,
+    description:
+      'Standard normative extended table image bit, used to create normative extended images in tables in articles or books',
+  },
+  [BitType.standardTableExtendedImageNonNormative]: {
+    since: '1.16.0',
+    baseBitType: BitType.tableExtendedImage,
+    description:
+      'Standard non-normative extended table image bit, used to create non-normative extended images in tables in articles or books',
+  },
+  [BitType.standardRemarkTableExtendedImageNormative]: {
+    since: '1.17.0',
+    baseBitType: BitType.tableExtendedImage,
+    description:
+      'Standard normative remark extended table image bit, used to create normative remark extended images in tables in articles or books',
+  },
+  [BitType.standardRemarkTableExtendedImageNonNormative]: {
+    since: '1.17.0',
+    baseBitType: BitType.tableExtendedImage,
+    description:
+      'Standard non-normative remark extended table image bit, used to create non-normative remark extended images in tables in articles or books',
+  },
   [BitType.smartStandardTableImageNormative]: {
     since: '1.28.0',
     baseBitType: BitType.standardTableImageNormative,
@@ -4014,6 +4033,30 @@ const BITS: _BitsConfig = {
     description:
       'Smart standard non-normative remark table image bit, used to create smart standard non-normative remark images in tables in articles or books',
   },
+  [BitType.smartStandardTableExtendedImageNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardTableExtendedImageNormative,
+    description:
+      'Smart standard normative extended table image bit, used to create smart standard normative extended images in tables in articles or books',
+  },
+  [BitType.smartStandardTableExtendedImageNonNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardTableExtendedImageNonNormative,
+    description:
+      'Smart standard non-normative extended table image bit, used to create smart standard non-normative extended images in tables in articles or books',
+  },
+  [BitType.smartStandardRemarkTableExtendedImageNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardRemarkTableExtendedImageNormative,
+    description:
+      'Smart standard normative remark extended table image bit, used to create smart standard normative remark extended images in tables in articles or books',
+  },
+  [BitType.smartStandardRemarkTableExtendedImageNonNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardRemarkTableExtendedImageNonNormative,
+    description:
+      'Smart standard non-normative remark extended table image bit, used to create smart standard non-normative remark extended images in tables in articles or books',
+  },
   [BitType.smartStandardTableImageNormativeCollapsible]: {
     since: '1.28.0',
     baseBitType: BitType.smartStandardTableImageNormative,
@@ -4037,6 +4080,30 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.smartStandardRemarkTableImageNonNormative,
     description:
       'Collapsible smart standard non-normative remark table image bit, used to create collapsible smart standard non-normative remark images in tables in articles or books',
+  },
+  [BitType.smartStandardTableExtendedImageNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardTableExtendedImageNormative,
+    description:
+      'Collapsible smart standard normative extended table image bit, used to create collapsible smart standard normative extended images in tables in articles or books',
+  },
+  [BitType.smartStandardTableExtendedImageNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardTableExtendedImageNonNormative,
+    description:
+      'Collapsible smart standard non-normative extended table image bit, used to create collapsible smart standard non-normative extended images in tables in articles or books',
+  },
+  [BitType.smartStandardRemarkTableExtendedImageNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardRemarkTableExtendedImageNormative,
+    description:
+      'Collapsible smart standard normative remark extended table image bit, used to create collapsible smart standard normative remark extended images in tables in articles or books',
+  },
+  [BitType.smartStandardRemarkTableExtendedImageNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardRemarkTableExtendedImageNonNormative,
+    description:
+      'Collapsible smart standard non-normative remark extended table image bit, used to create collapsible smart standard non-normative remark extended images in tables in articles or books',
   },
   [BitType.imageLink]: {
     since: '1.3.0',
@@ -5780,6 +5847,30 @@ const BITS: _BitsConfig = {
     description:
       'Standard non-normative remark table bit, used to create standard non-normative remark tables in articles or books',
   },
+  [BitType.standardTableExtendedNormative]: {
+    since: '1.16.0',
+    baseBitType: BitType.tableExtended,
+    description:
+      'Standard normative extended table bit, used to create standard normative extended tables in articles or books',
+  },
+  [BitType.standardTableExtendedNonNormative]: {
+    since: '1.16.0',
+    baseBitType: BitType.tableExtended,
+    description:
+      'Standard non-normative extended table bit, used to create standard non-normative extended tables in articles or books',
+  },
+  [BitType.standardRemarkTableExtendedNormative]: {
+    since: '1.17.0',
+    baseBitType: BitType.tableExtended,
+    description:
+      'Standard normative remark extended table bit, used to create standard normative remark extended tables in articles or books',
+  },
+  [BitType.standardRemarkTableExtendedNonNormative]: {
+    since: '1.17.0',
+    baseBitType: BitType.tableExtended,
+    description:
+      'Standard non-normative remark extended table bit, used to create standard non-normative remark extended tables in articles or books',
+  },
   [BitType.smartStandardTableNormative]: {
     since: '1.28.0',
     baseBitType: BitType.standardTableNormative,
@@ -5804,6 +5895,30 @@ const BITS: _BitsConfig = {
     description:
       'Smart standard non-normative remark table bit, used to create smart standard non-normative remark tables in articles or books',
   },
+  [BitType.smartStandardTableExtendedNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardTableExtendedNormative,
+    description:
+      'Smart standard normative extended table bit, used to create smart standard normative extended tables in articles or books',
+  },
+  [BitType.smartStandardTableExtendedNonNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardTableExtendedNonNormative,
+    description:
+      'Smart standard non-normative extended table bit, used to create smart standard non-normative extended tables in articles or books',
+  },
+  [BitType.smartStandardRemarkTableExtendedNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardRemarkTableExtendedNormative,
+    description:
+      'Smart standard normative remark extended table bit, used to create smart standard normative remark extended tables in articles or books',
+  },
+  [BitType.smartStandardRemarkTableExtendedNonNormative]: {
+    since: '1.28.0',
+    baseBitType: BitType.standardRemarkTableExtendedNonNormative,
+    description:
+      'Smart standard non-normative remark extended table bit, used to create smart standard non-normative remark extended tables in articles or books',
+  },
   [BitType.smartStandardTableNormativeCollapsible]: {
     since: '1.28.0',
     baseBitType: BitType.smartStandardTableNormative,
@@ -5827,6 +5942,30 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.smartStandardRemarkTableNonNormative,
     description:
       'Collapsible smart standard non-normative remark table bit, used to create collapsible smart standard non-normative remark tables in articles or books',
+  },
+  [BitType.smartStandardTableExtendedNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardTableExtendedNormative,
+    description:
+      'Collapsible smart standard normative extended table bit, used to create collapsible smart standard normative extended tables in articles or books',
+  },
+  [BitType.smartStandardTableExtendedNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardTableExtendedNonNormative,
+    description:
+      'Collapsible smart standard non-normative extended table bit, used to create collapsible smart standard non-normative extended tables in articles or books',
+  },
+  [BitType.smartStandardRemarkTableExtendedNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardRemarkTableExtendedNormative,
+    description:
+      'Collapsible smart standard normative remark extended table bit, used to create collapsible smart standard normative remark extended tables in articles or books',
+  },
+  [BitType.smartStandardRemarkTableExtendedNonNormativeCollapsible]: {
+    since: '1.28.0',
+    baseBitType: BitType.smartStandardRemarkTableExtendedNonNormative,
+    description:
+      'Collapsible smart standard non-normative remark extended table bit, used to create collapsible smart standard non-normative remark extended tables in articles or books',
   },
   [BitType.parameters]: {
     since: '1.18.0',
