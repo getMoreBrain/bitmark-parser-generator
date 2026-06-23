@@ -33,8 +33,10 @@ const MARK_TO_TAG: Record<string, string> = {
   code: 'code',
 };
 
-// Existing bitmark text parsing leaves inline images as text tokens in table cells:
-// group 1 = alt text, group 2 = src, group 3 = pipe-delimited attributes/comments.
+// Existing bitmark text parsing can leave inline images as text tokens in table cells.
+// Match the bitmark inline image shape `==alt==|imageInline:src|width:40|`:
+// group 1 = text between `==` delimiters (alt), group 2 = src after `imageInline:`,
+// group 3 = zero or more pipe-delimited attributes/comments following the src.
 const INLINE_IMAGE_RE =
   /==([^=]*(?:=(?!=)[^=]*)*)==\|imageInline:([^|\s]+)((?:\|(?:@?[A-Za-z][A-Za-z0-9_-]*:[^|\s]+|#[^|\s]*))*)\|?/g;
 
@@ -333,7 +335,7 @@ class HtmlTableGenerator {
       const value = attr.slice(colon + 1);
       if (key === 'width' || key === 'height') {
         const n = Number.parseInt(value, 10);
-        if (Number.isInteger(n) && n > 0) attrs[key] = n;
+        if (!Number.isNaN(n) && n > 0) attrs[key] = n;
       } else if (key === 'class' || key === 'title') {
         attrs[key] = value;
       }
