@@ -497,6 +497,7 @@ export class HtmlTableParser {
   }
 
   private latexFromMath(el: HtmlElement): string {
+    // Prefer explicit LaTeX from common HTML/MathML fallbacks before using visible text.
     const alt = el.attrs.alttext ?? el.attrs.alt ?? el.attrs.title;
     if (alt != null) return decodeEntities(alt);
 

@@ -187,6 +187,14 @@ describe('cell content (inline marks)', () => {
     expect(c[0].content[2].type).toBe('latex');
     expect(c[0].content[2].attrs.formula).toBe('y^2');
   });
+
+  it('maps MathML text content to latex nodes when no formula attribute is present', () => {
+    const c = content(
+      '<table><tr><td><math><mi>x</mi><mo>+</mo><mn>1</mn></math></td></tr></table>',
+    );
+    expect(c[0].content[0].type).toBe('latex');
+    expect(c[0].content[0].attrs.formula).toBe('x+1');
+  });
 });
 
 describe('lossy table format', () => {
