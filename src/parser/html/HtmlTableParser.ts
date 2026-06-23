@@ -510,10 +510,12 @@ export class HtmlTableParser {
   private findLatexAnnotation(el: HtmlElement): HtmlElement | undefined {
     for (const child of el.children) {
       if (!isElement(child)) continue;
-      const encoding = child.attrs.encoding?.toLowerCase() ?? '';
+      const encoding = child.attrs.encoding;
+      const lowerEncoding = encoding?.toLowerCase();
       if (
         this.localName(child.name) === 'annotation' &&
-        (encoding.includes('tex') || encoding.includes('latex'))
+        lowerEncoding != null &&
+        (lowerEncoding.includes('tex') || lowerEncoding.includes('latex'))
       ) {
         return child;
       }
