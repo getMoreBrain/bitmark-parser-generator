@@ -290,6 +290,12 @@ export interface ConvertHtmlTableOptions {
   keepUnknownTags?: boolean;
 
   /**
+   * Disable breakscaping when generating bitmark table cell content from HTML.
+   * Useful when cells already contain raw bitmark that should pass through untouched.
+   */
+  noBreakscaping?: boolean;
+
+  /**
    * Specify a file to write the output to
    */
   outputFile?: string;
@@ -1248,7 +1254,10 @@ class BitmarkParserGenerator {
         outputFile: opts.outputFile,
         fileOptions: opts.fileOptions,
         jsonOptions: opts.jsonOptions,
-        bitmarkOptions: opts.bitmarkOptions,
+        bitmarkOptions: {
+          ...opts.bitmarkOptions,
+          ...(opts.noBreakscaping ? { noBreakscaping: true } : {}),
+        },
       });
     }
 
