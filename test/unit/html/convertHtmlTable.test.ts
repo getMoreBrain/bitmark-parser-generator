@@ -286,7 +286,10 @@ describe('HtmlTableGenerator (bit JSON -> HTML)', () => {
                 cells: [
                   {
                     content: [
-                      { type: 'paragraph', content: [{ type: 'latex', attrs: { formula: 'x^2' } }] },
+                      {
+                        type: 'paragraph',
+                        content: [{ type: 'latex', attrs: { formula: 'x^2' } }],
+                      },
                     ],
                   },
                 ],
