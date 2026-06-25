@@ -67,6 +67,7 @@ export interface BitJson {
   extractorTag: string | string[];
   extractorInternal: string | string[];
   sourceBB?: number[] | number[][];
+  bitFingerprint: string | string[];
   levelCEFRp: string;
   levelCEFR: string;
   levelILR: string;
