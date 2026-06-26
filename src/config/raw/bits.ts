@@ -3166,6 +3166,18 @@ const BITS: _BitsConfig = {
     baseBitType: BitType._standard,
     description: 'Extractor blueprint bit, used to provide blueprint information about extractors',
     textFormatDefault: TextFormat.json,
+    tags: [
+      {
+        key: ConfigKey.group_resourceBitTags,
+        description: 'Resource bit tags for the blueprint reference image',
+      },
+      {
+        key: ConfigKey.group_resourceImage,
+        description:
+          'Optional uncropped reference page image, used so authoring tools can compute crops against the original page dimensions',
+      },
+    ],
+    resourceAttachmentAllowed: false,
   },
   [BitType.extractorInformation]: {
     since: '3.8.0',
