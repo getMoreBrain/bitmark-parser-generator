@@ -134,6 +134,8 @@ export interface Bit {
   publications?: Property;
   relatedBook?: Property;
   translationOfBook?: Property;
+  userFeedbackTranslationUrl?: Property;
+  userFeedbackContentUrl?: Property;
   author?: Property;
   subject?: Property;
   date?: Property;
