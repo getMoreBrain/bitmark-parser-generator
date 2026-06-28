@@ -253,6 +253,13 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_bitFingerprint,
+        description:
+          'Fingerprint(s) used by the AI extractor to identify the bit (font, style, color, pixels, etc.)',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
         key: ConfigKey.property_levelCEFRp,
         description: 'The CEFRp level for the bit',
         format: TagFormat.plainText,

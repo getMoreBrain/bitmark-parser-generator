@@ -71,6 +71,8 @@ const NodeType = {
   bits: 'bits', // bits
   bitsValue: 'bitsValue', // bit
   bitType: 'bitType', // bit type
+  bitFingerprint: 'bitFingerprint',
+  bitFingerprintValue: 'bitFingerprintValue',
   blockId: 'blockId',
   blockIdValue: 'blockIdValue',
   body: 'body',
