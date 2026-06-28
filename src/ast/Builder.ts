@@ -188,6 +188,7 @@ class Builder extends BaseBuilder {
       extractorTag?: string | string[];
       extractorInternal?: string | string[];
       sourceBB?: number[] | number[][];
+      bitFingerprint?: string | string[];
       levelCEFRp?: string | string[];
       levelCEFR?: string | string[];
       levelILR?: string | string[];
@@ -703,6 +704,12 @@ class Builder extends BaseBuilder {
         options,
       ),
       sourceBB: this.normaliseSourceBB(data.sourceBB),
+      bitFingerprint: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bitFingerprint,
+        data.bitFingerprint,
+        options,
+      ),
       levelCEFRp: this.toAstProperty(
         bitType,
         ConfigKey.property_levelCEFRp,

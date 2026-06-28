@@ -31,6 +31,7 @@ const propertyKeys = {
   property_bubbleTag: '@bubbleTag',
   property_extractorTag: '@extractorTag',
   property_extractorInternal: '@extractorInternal',
+  property_bitFingerprint: '@bitFingerprint',
   property_buttonCaption: '@buttonCaption',
   property_callToActionUrl: '@callToActionUrl',
   property_caption: '@caption',

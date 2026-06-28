@@ -40,6 +40,12 @@
         [200, 260, 2000, 320],
         [200, 400, 2000, 460]
       ],
+      "bitFingerprint": [
+        "font-myriad_pro",
+        "style-bold",
+        "font-size-19.4",
+        "font-color-007fff"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -64,6 +70,6 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.extractor-page-header-collapsible]\n[@sourceBB:200, 260, 2000, 320]\n[@sourceBB:200, 400, 2000, 460]\nThis is the page header"
+    "bitmark": "[.extractor-page-header-collapsible]\n[@sourceBB:200, 260, 2000, 320]\n[@sourceBB:200, 400, 2000, 460]\n[@bitFingerprint:font-myriad_pro]\n[@bitFingerprint:style-bold]\n[@bitFingerprint:font-size-19.4]\n[@bitFingerprint:font-color-007fff]\nThis is the page header"
   }
 ]
