@@ -510,12 +510,10 @@ export class HtmlTableParser {
   private findLatexAnnotation(el: HtmlElement): HtmlElement | undefined {
     for (const child of el.children) {
       if (!isElement(child)) continue;
-      const encoding = child.attrs.encoding;
-      const lowerEncoding = encoding?.toLowerCase();
+      const lowerEncoding = (child.attrs.encoding ?? '').toLowerCase();
       if (
         this.localName(child.name) === 'annotation' &&
-        lowerEncoding != null &&
-        (lowerEncoding.includes('tex') || lowerEncoding.includes('latex'))
+        (/\btex\b/.test(lowerEncoding) || /\blatex\b/.test(lowerEncoding))
       ) {
         return child;
       }
@@ -528,7 +526,8 @@ export class HtmlTableParser {
   private textContent(el: HtmlElement): string {
     return el.children
       .map((child) => (isElement(child) ? this.textContent(child) : decodeEntities(child.value)))
-      .join('');
+      .join('')
+      .replace(/\s+/g, ' ');
   }
 
   private localName(name: string): string {
