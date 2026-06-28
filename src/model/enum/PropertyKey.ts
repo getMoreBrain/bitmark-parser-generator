@@ -92,6 +92,8 @@ const propertyKeys = {
   property_externalLinkText: '@externalLinkText',
   property_feedbackEngine: '@feedbackEngine',
   property_feedbackType: '@feedbackType',
+  property_userFeedbackTranslationUrl: '@userFeedbackTranslationUrl',
+  property_userFeedbackContentUrl: '@userFeedbackContentUrl',
   property_flashcardSet: '@flashcardSet',
   property_focusX: '@focusX',
   property_focusY: '@focusY',

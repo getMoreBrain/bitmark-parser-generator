@@ -119,8 +119,7 @@ class BaseBuilder {
     }
 
     const propertyConfig = Config.getTagConfigForTag(tagsConfig, key) as
-      | PropertyTagConfig
-      | undefined;
+      PropertyTagConfig | undefined;
 
     // Convert to array or single value if needed
     if (propertyConfig?.array && !Array.isArray(value)) {

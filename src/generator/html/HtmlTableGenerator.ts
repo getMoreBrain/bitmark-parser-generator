@@ -33,6 +33,16 @@ const MARK_TO_TAG: Record<string, string> = {
   code: 'code',
 };
 
+// Existing bitmark text parsing can leave inline images as text tokens in table cells.
+// Match the bitmark inline image shape `==alt==|imageInline:src|width:40|`:
+// - group 1 captures simple alt text between `==` delimiters.
+// - group 2 captures a src with no whitespace or `|` characters.
+// - group 3 captures simple pipe-delimited key/value attributes and comments.
+// This intentionally handles generated/simple image tokens, not every possible bitmark image form.
+const INLINE_IMAGE_RE =
+  /==([^=]*(?:=(?!=)[^=]*)*)==\|imageInline:([^|\s]+)((?:\|(?:@?[A-Za-z][A-Za-z0-9_-]*:[^|\s]+|#[^|\s]*))*)\|?/g;
+const MAX_IMAGE_DIMENSION = 9999;
+
 interface BitLike {
   type?: string;
   caption?: TextAst | string;
@@ -184,6 +194,8 @@ class HtmlTableGenerator {
       case 'image':
       case 'imageInline':
         return this.imageToHtml(node);
+      case 'latex':
+        return this.latexToHtml(node);
       default:
         return this.inlineToHtml([node]);
     }
@@ -196,9 +208,10 @@ class HtmlTableGenerator {
   private inlineNodeToHtml(node: TextNode): string {
     if (node.type === 'hardBreak') return '<br>';
     if (node.type === 'image' || node.type === 'imageInline') return this.imageToHtml(node);
+    if (node.type === 'latex') return this.latexToHtml(node);
 
     if (node.type === 'text') {
-      return this.wrapMarks(this.escapeText(node.text ?? ''), node.marks);
+      return this.wrapMarks(this.textToHtml(node.text ?? ''), node.marks);
     }
 
     // Any other node: render its children inline.
@@ -292,6 +305,53 @@ class HtmlTableGenerator {
       parts.push(`class="${this.escapeAttr(attrs.class)}"`);
     }
     return `<img ${parts.join(' ')}>`;
+  }
+
+  private textToHtml(text: string): string {
+    let html = '';
+    let lastIndex = 0;
+
+    for (const match of text.matchAll(INLINE_IMAGE_RE)) {
+      const index = match.index ?? 0;
+      html += this.escapeText(text.slice(lastIndex, index));
+      html += this.inlineImageTokenToHtml(match);
+      lastIndex = index + match[0].length;
+    }
+
+    html += this.escapeText(text.slice(lastIndex));
+    return html;
+  }
+
+  private inlineImageTokenToHtml(match: RegExpMatchArray): string {
+    const attrs: Record<string, unknown> = {
+      alt: match[1],
+      src: match[2],
+    };
+
+    const rawAttrs = match[3] ?? '';
+    for (const attr of rawAttrs.split('|')) {
+      if (!attr || attr.startsWith('#')) continue;
+      const colon = attr.indexOf(':');
+      if (colon < 1) continue;
+
+      const key = attr.slice(0, colon).replace(/^@/, '');
+      const value = attr.slice(colon + 1);
+      if (key === 'width' || key === 'height') {
+        const n = Number.parseInt(value, 10);
+        if (!Number.isNaN(n) && n > 0 && n <= MAX_IMAGE_DIMENSION) attrs[key] = n;
+      } else if (key === 'class' || key === 'title') {
+        attrs[key] = value;
+      }
+    }
+
+    return this.imageToHtml({ type: 'imageInline', attrs } as unknown as TextNode);
+  }
+
+  // --- formulas -------------------------------------------------------------
+
+  private latexToHtml(node: TextNode): string {
+    const formula = (node as { attrs?: { formula?: string } }).attrs?.formula ?? '';
+    return `<math alttext="${this.escapeAttr(formula)}"></math>`;
   }
 
   // --- escaping -------------------------------------------------------------

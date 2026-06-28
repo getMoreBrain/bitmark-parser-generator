@@ -60,7 +60,7 @@ const IMPLIED_CLOSE: Record<string, Set<string>> = {
 };
 
 // Matches an opening or closing tag, tolerating quoted attribute values that contain `>`.
-const TAG_RE = /<(\/)?([a-zA-Z][a-zA-Z0-9-]*)((?:\s+(?:"[^"]*"|'[^']*'|[^<>"'])*)?)(\/)?>/g;
+const TAG_RE = /<(\/)?([a-zA-Z][a-zA-Z0-9:-]*)((?:\s+(?:"[^"]*"|'[^']*'|[^<>"'])*)?)(\/)?>/g;
 
 // Matches a single attribute: name plus optional (quoted/unquoted) value.
 const ATTR_RE = /([a-zA-Z_:][a-zA-Z0-9:._-]*)(?:\s*=\s*("[^"]*"|'[^']*'|[^\s"'>]+))?/g;

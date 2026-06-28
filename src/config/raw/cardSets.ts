@@ -1598,16 +1598,25 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_tableRowSpan,
+                // HTML-C2: contribute a `rowspan` attribute onto the enclosing
+                // cell element (`<th>`/`<td>`).
+                htmlKey: { '@el': { '@attr': { rowspan: '$' } } },
                 description: 'Number of rows the cell spans.',
                 format: TagFormat.number,
               },
               {
                 key: ConfigKey.property_tableColSpan,
+                // HTML-C2: contribute a `colspan` attribute onto the enclosing
+                // cell element (`<th>`/`<td>`).
+                htmlKey: { '@el': { '@attr': { colspan: '$' } } },
                 description: 'Number of columns the cell spans.',
                 format: TagFormat.number,
               },
               {
                 key: ConfigKey.property_tableScope,
+                // HTML-C2: contribute a `scope` attribute onto the enclosing
+                // cell element (`<th>`/`<td>`).
+                htmlKey: { '@el': { '@attr': { scope: '$' } } },
                 description: 'Scope attribute for header cells.',
                 format: TagFormat.plainText,
               },
@@ -1726,6 +1735,9 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.property_tableRowSpan,
                 jsonKey: 'rowspan',
                 exportJsonKey: { rowspan: '$' },
+                // HTML-C2: contribute a `rowspan` attribute onto the enclosing
+                // cell element (`<th>`/`<td>`).
+                htmlKey: { '@el': { '@attr': { rowspan: '$' } } },
                 description: 'Number of rows the cell spans.',
                 format: TagFormat.number,
               },
@@ -1733,6 +1745,9 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.property_tableColSpan,
                 jsonKey: 'colspan',
                 exportJsonKey: { colspan: '$' },
+                // HTML-C2: contribute a `colspan` attribute onto the enclosing
+                // cell element (`<th>`/`<td>`).
+                htmlKey: { '@el': { '@attr': { colspan: '$' } } },
                 description: 'Number of columns the cell spans.',
                 format: TagFormat.number,
               },
@@ -1740,6 +1755,9 @@ const CARDSETS: _CardSetsConfig = {
                 key: ConfigKey.property_tableScope,
                 jsonKey: 'scope',
                 exportJsonKey: { scope: '$' },
+                // HTML-C2: contribute a `scope` attribute onto the enclosing
+                // cell element (`<th>`/`<td>`).
+                htmlKey: { '@el': { '@attr': { scope: '$' } } },
                 description: 'Scope attribute for header cells.',
                 format: TagFormat.plainText,
               },

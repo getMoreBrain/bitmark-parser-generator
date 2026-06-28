@@ -332,6 +332,10 @@ export class HtmlTableParser {
       return [this.imageNode(el, true)];
     }
 
+    if (this.isMathTag(name)) {
+      return [this.latexNode(el)];
+    }
+
     const markType = MARK_TAGS[name];
     if (markType) {
       return this.inlineNodes(el.children, [...marks, { type: markType } as TextMark]);
@@ -475,6 +479,59 @@ export class HtmlTableParser {
     if (el.attrs.class) attrs.class = el.attrs.class;
 
     return { type: inline ? 'imageInline' : 'image', attrs } as unknown as TextNode;
+  }
+
+  // --- formulas -------------------------------------------------------------
+
+  private isMathTag(name: string): boolean {
+    return this.localName(name) === 'math';
+  }
+
+  private latexNode(el: HtmlElement): TextNode {
+    return {
+      type: 'latex',
+      attrs: {
+        formula: this.latexFromMath(el),
+      },
+    } as unknown as TextNode;
+  }
+
+  private latexFromMath(el: HtmlElement): string {
+    // Prefer explicit LaTeX from common HTML/MathML fallbacks before using visible text.
+    const alt = el.attrs.alttext ?? el.attrs.alt ?? el.attrs.title;
+    if (alt != null) return decodeEntities(alt);
+
+    const annotation = this.findLatexAnnotation(el);
+    if (annotation) return this.textContent(annotation).trim();
+
+    return this.textContent(el).trim();
+  }
+
+  private findLatexAnnotation(el: HtmlElement): HtmlElement | undefined {
+    for (const child of el.children) {
+      if (!isElement(child)) continue;
+      const lowerEncoding = (child.attrs.encoding ?? '').toLowerCase();
+      if (
+        this.localName(child.name) === 'annotation' &&
+        (/\btex\b/.test(lowerEncoding) || /\blatex\b/.test(lowerEncoding))
+      ) {
+        return child;
+      }
+      const nested = this.findLatexAnnotation(child);
+      if (nested) return nested;
+    }
+    return undefined;
+  }
+
+  private textContent(el: HtmlElement): string {
+    return el.children
+      .map((child) => (isElement(child) ? this.textContent(child) : decodeEntities(child.value)))
+      .join('')
+      .replace(/\s+/g, ' ');
+  }
+
+  private localName(name: string): string {
+    return name.includes(':') ? name.slice(name.indexOf(':') + 1) : name;
   }
 
   // --- whitespace -----------------------------------------------------------

@@ -1463,6 +1463,16 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.plainText,
       },
       {
+        key: ConfigKey.property_userFeedbackTranslationUrl,
+        description: 'URL to an external feedback form for book translation feedback',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_userFeedbackContentUrl,
+        description: 'URL to an external feedback form for book content feedback',
+        format: TagFormat.plainText,
+      },
+      {
         key: ConfigKey.property_duration,
         description: 'The duration of the book',
         format: TagFormat.plainText,

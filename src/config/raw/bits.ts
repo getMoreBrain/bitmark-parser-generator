@@ -3934,6 +3934,8 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_caption,
         description: 'Caption for the table image, used to provide a description for the image',
         format: TagFormat.bitmarkText,
+        // HTML-10 / HTML-C2: render as the table's `<caption>` (see table bit).
+        htmlKey: { '@el': 'caption', '@children': '$' },
       },
       {
         key: ConfigKey.group_backgroundWallpaper,
@@ -5703,6 +5705,11 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_caption,
         description: 'Caption for the table, used to define the title of the table',
         format: TagFormat.bitmarkText,
+        // HTML-10 / HTML-C2: a bit-level caption renders as the table's
+        // `<caption>` — placed inside the idiomatic `<table>` container as
+        // its first child. Outside a table context it falls back to the
+        // residual carrier.
+        htmlKey: { '@el': 'caption', '@children': '$' },
       },
       {
         key: ConfigKey.property_tableFixedHeader,
@@ -5790,6 +5797,8 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_caption,
         description: 'Caption for the table image, used to provide a description for the image',
         format: TagFormat.bitmarkText,
+        // HTML-10 / HTML-C2: render as the table's `<caption>` (see table bit).
+        htmlKey: { '@el': 'caption', '@children': '$' },
       },
       {
         key: ConfigKey.group_backgroundWallpaper,

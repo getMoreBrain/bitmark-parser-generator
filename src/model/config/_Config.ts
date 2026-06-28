@@ -12,12 +12,7 @@ import { type BitTypeType } from '../enum/BitType.ts';
  * scope-shifts, predicates) lives in the new parser's compiler, not here.
  */
 export type ExportJsonKey =
-  | null
-  | boolean
-  | number
-  | string
-  | ExportJsonKey[]
-  | { [k: string]: ExportJsonKey };
+  null | boolean | number | string | ExportJsonKey[] | { [k: string]: ExportJsonKey };
 
 /**
  * Key-pattern value for the HTML backend of the key-pattern language.

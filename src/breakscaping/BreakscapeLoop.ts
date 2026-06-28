@@ -58,7 +58,7 @@ function breakscapeBuf(src: string, fmt: BodyTextFormatType, loc: TextLocationTy
   let atLineStart = true;
   let col = 0;
 
-  for (let i = 0; i < len; ) {
+  for (let i = 0; i < len;) {
     const ch = src.charCodeAt(i); // number
     const nxt = i + 1 < len ? src.charCodeAt(i + 1) : 0;
 
@@ -184,7 +184,7 @@ function unbreakscapeBuf(src: string, fmt: BodyTextFormatType, loc: TextLocation
   let outPos = 0;
   let bol = true; // beginning-of-line flag
 
-  for (let i = 0; i < len; ) {
+  for (let i = 0; i < len;) {
     const ch = src[i] as string;
 
     // 1) HATS  – remove exactly one ^ from each run

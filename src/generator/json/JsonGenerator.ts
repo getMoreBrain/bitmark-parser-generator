@@ -598,7 +598,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
   // bitmarkAst -> bits -> bitsValue -> extraProperties
 
-  protected enter_extraProperties(node: NodeInfo, _route: NodeInfo[]): void {
+  protected enter_extraProperties(node: NodeInfo, _route: NodeInfo[]): boolean {
     const extraProperties = node.value as ExtraProperties | undefined;
 
     if (!this.options.excludeUnknownProperties && extraProperties) {
@@ -610,6 +610,12 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         this.addProperty(this.bitJson, k, values, { array: true });
       }
     }
+
+    // Return false to stop the AST walker descending into the extraProperties children.
+    // Otherwise per-key handlers (e.g. enter_width) would fire for any extra-property key
+    // that matches a known property name, emitting it as a first-class field and bypassing
+    // the excludeUnknownProperties guard. See PLAN-014.
+    return false;
   }
 
   // bitmarkAst -> bits -> bitsValue -> cardNode -> cardBits -> cardBitsValue

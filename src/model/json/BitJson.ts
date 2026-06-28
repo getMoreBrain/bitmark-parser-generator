@@ -85,6 +85,8 @@ export interface BitJson {
   publisherName: string;
   publications: string | string[];
   relatedBook: string | string[];
+  userFeedbackTranslationUrl: string;
+  userFeedbackContentUrl: string;
   author: string | string[];
   subject: string | string[];
   date: string;
