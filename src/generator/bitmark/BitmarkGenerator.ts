@@ -2205,8 +2205,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
     const config = Config.getBitConfig(bitType);
     const propertyConfig = Config.getTagConfigForTag(config.tags, ConfigKey.property_coverImage) as
-      | PropertyTagConfig
-      | undefined;
+      PropertyTagConfig | undefined;
     if (!propertyConfig) return;
 
     // Write the property
@@ -3138,8 +3137,7 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
 
           const config = Config.getBitConfig(bitType);
           const propertyConfig = Config.getTagConfigForTag(config.tags, propertyConfigKey) as
-            | PropertyTagConfig
-            | undefined;
+            PropertyTagConfig | undefined;
           if (!propertyConfig) return;
 
           // Write the property
