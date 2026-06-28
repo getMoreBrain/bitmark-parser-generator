@@ -127,6 +127,11 @@ export interface BitmarkOptions {
    * Generate debug information in the output.
    */
   debugGenerationInline?: boolean;
+
+  /**
+   * Generate table cell content without breakscaping text.
+   */
+  noBreakscaping?: boolean;
 }
 
 /**
@@ -1667,7 +1672,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     }
 
     const content = cell.content ?? Breakscape.EMPTY_STRING;
-    this.writeTextOrValue(content, this.textFormat, TextLocation.body);
+    const options = this.options.noBreakscaping ? { noBreakscaping: true } : undefined;
+    this.writeTextOrValue(content, this.textFormat, TextLocation.body, options);
   }
 
   private writeTableCellProperty(name: string, value: string | number): void {

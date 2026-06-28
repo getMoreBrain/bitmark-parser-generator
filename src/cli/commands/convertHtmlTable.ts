@@ -39,6 +39,7 @@ export function createConvertHtmlTableCommand(): Command {
         .default('table-extended'),
     )
     .option('--keepUnknownTags', 'keep unmappable HTML tags as literal text (HTML input only)')
+    .option('--noBreakscaping', 'do not breakscape generated bitmark table cell content')
     .option('-p, --pretty', 'prettify the JSON output with indent')
     .option('--indent <indent>', 'prettify indent (default: 2 when --pretty is set)', (v) =>
       Number.parseInt(v, 10),
@@ -65,6 +66,7 @@ export function createConvertHtmlTableCommand(): Command {
             options.tableFormat,
           ) as HtmlTableFormat | undefined,
           keepUnknownTags: options.keepUnknownTags,
+          noBreakscaping: options.noBreakscaping,
           jsonOptions: {
             prettify,
           },
@@ -93,7 +95,9 @@ Examples:
 
   $ bitmark-parser convertHtmlTable input.bitmark -o output.html
 
-  $ bitmark-parser convertHtmlTable --tableFormat table input.html`,
+  $ bitmark-parser convertHtmlTable --tableFormat table input.html
+
+  $ bitmark-parser convertHtmlTable --noBreakscaping input.html`,
     );
 
   return cmd;
