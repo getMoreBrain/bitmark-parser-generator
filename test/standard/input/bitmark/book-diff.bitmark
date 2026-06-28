@@ -15,6 +15,8 @@
 [@processHandInLocation:Auckland]
 [@sourceDocument:http://example.com/source.pdf]
 [@internalPrintPdf:http://example.com/print.pdf]
+[@userFeedbackTranslationUrl: https://example.com/feedback/translation]
+[@userFeedbackContentUrl: https://example.com/feedback/content]
 
 
 [.book-diff]

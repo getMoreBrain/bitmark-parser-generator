@@ -205,6 +205,8 @@ class Builder extends BaseBuilder {
       publications?: string | string[];
       relatedBook?: string | string[];
       translationOfBook?: string;
+      userFeedbackTranslationUrl?: string;
+      userFeedbackContentUrl?: string;
       author?: string | string[];
       subject?: string | string[];
       date?: string;
@@ -767,6 +769,18 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_translationOfBook,
         data.translationOfBook,
+        options,
+      ),
+      userFeedbackTranslationUrl: this.toAstProperty(
+        bitType,
+        ConfigKey.property_userFeedbackTranslationUrl,
+        data.userFeedbackTranslationUrl,
+        options,
+      ),
+      userFeedbackContentUrl: this.toAstProperty(
+        bitType,
+        ConfigKey.property_userFeedbackContentUrl,
+        data.userFeedbackContentUrl,
         options,
       ),
       author: this.toAstProperty(bitType, ConfigKey.property_author, data.author, options),
