@@ -2,6 +2,21 @@ import { describe, expect, it } from 'vitest';
 
 import { BitmarkParserGenerator, Output } from '../../../../src/BitmarkParserGenerator.ts';
 
+interface GeneratedMatrix {
+  cells?: Array<Record<string, unknown>>;
+  unknownMatrixProperty?: unknown;
+}
+
+interface GeneratedBit {
+  matrix?: GeneratedMatrix[];
+  unknownBitProperty?: unknown;
+}
+
+interface GeneratedWrapper {
+  bit: GeneratedBit;
+  unknownWrapperProperty?: unknown;
+}
+
 describe('JSON match-matrix parser', () => {
   it('ignores null matrix cells and unknown properties', () => {
     const input = [
@@ -62,13 +77,7 @@ describe('JSON match-matrix parser', () => {
 
     const json = new BitmarkParserGenerator().convert(input, {
       outputFormat: Output.json,
-    }) as Array<{
-      bit: {
-        matrix?: Array<{
-          cells?: unknown[];
-        }>;
-      };
-    }>;
+    }) as GeneratedWrapper[];
 
     expect(json[0]).not.toHaveProperty('unknownWrapperProperty');
     expect(json[0].bit).not.toHaveProperty('unknownBitProperty');
