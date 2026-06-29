@@ -1,0 +1,13 @@
+Intro line before an indented list
+	• a
+	• b
+
+Indented list with nesting
+	• a
+		• a-sub1
+	• b
+
+Canonical list is unchanged
+• a
+	• a-sub
+• b
