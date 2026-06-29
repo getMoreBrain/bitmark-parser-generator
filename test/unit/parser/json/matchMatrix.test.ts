@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { BitmarkParserGenerator } from '../../../../src/BitmarkParserGenerator.ts';
+import { BitmarkParserGenerator, Output } from '../../../../src/BitmarkParserGenerator.ts';
 
 describe('JSON match-matrix parser', () => {
   it('ignores null matrix cells and unknown properties', () => {
@@ -60,9 +60,23 @@ describe('JSON match-matrix parser', () => {
       },
     ];
 
-    const bitmark = new BitmarkParserGenerator().convert(input);
+    const json = new BitmarkParserGenerator().convert(input, {
+      outputFormat: Output.json,
+    }) as Array<{
+      bit: {
+        matrix?: Array<{
+          cells?: unknown[];
+        }>;
+      };
+    }>;
 
-    expect(bitmark).toContain('[.match-matrix]');
-    expect(bitmark).toContain('x');
+    expect(json[0]).not.toHaveProperty('unknownWrapperProperty');
+    expect(json[0].bit).not.toHaveProperty('unknownBitProperty');
+    expect(json[0].bit.matrix?.[0]).not.toHaveProperty('unknownMatrixProperty');
+    expect(json[0].bit.matrix?.[0].cells).toHaveLength(1);
+    expect(json[0].bit.matrix?.[0].cells?.[0]).toMatchObject({
+      values: ['x'],
+      isCaseSensitive: true,
+    });
   });
 });
