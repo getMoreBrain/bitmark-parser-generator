@@ -243,7 +243,24 @@ function bitmarkMinusMinusString(_str) {
 {
     var indentStack = [], indent = ""
 
-    input = input.trimStart()
+    // Trim trailing whitespace.
+    input = input.replace(/\s+$/, "")
+
+    // Trim leading whitespace, but preserve the leading tabs of the first line of content when
+    // that line is a (tab-)indented list item. This allows a list that has been uniformly indented
+    // with tabs to be recognised as a list (it then establishes its own base indentation, see
+    // ListBaseIndent) instead of being stripped to the left margin / parsed as literal text.
+    // Leading tabs before non-list content are still trimmed, so all other output is unchanged.
+    var _firstNonWs = input.search(/\S/)
+    if (_firstNonWs < 0) {
+        input = ""
+    } else {
+        var _lineStart = input.lastIndexOf("\n", _firstNonWs) + 1
+        var _lead = input.slice(_lineStart, _firstNonWs)
+        var _rest = input.slice(_firstNonWs)
+        var _isIndentedListItem = /^\t+$/.test(_lead) && /^•([0-9]+[Ii]?|_|[Aa]|\+|-)? /.test(_rest)
+        input = _isIndentedListItem ? _lead + _rest : _rest
+    }
 }
 
 
@@ -287,7 +304,7 @@ BlockStartTags
 
 BlockStart
   = TitleTags
-  / ListTags
+  / '\t'* ListTags
   / ImageBlock
   / CodeHeader
   / ExplicitParagraphHeader
@@ -370,6 +387,9 @@ ListTags
   / TaskListTag
 
 ListBlock
+  = ListBaseIndent b: ListBlockInner { return b }
+
+ListBlockInner
   = c: BulletListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
   / c: NoBulletListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
   / c: OrderedListContainer bl: BulletListLine+ NL? { let start = bl[0]._tempListStart; return { ...c, attrs: { start }, content: bl } }
@@ -379,14 +399,20 @@ ListBlock
   / c: LetteredListLowerContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
   / c: TaskListContainer bl: BulletListLine+ NL? { return { ...c, content: bl, attrs: {} } }
 
-BulletListContainer = &BulletListTag { return { type: "bulletList" } }
-NoBulletListContainer = &NoBulletListTag { return { type: "noBulletList" } }
-OrderedListContainer = &OrderedListTag { return { type: "orderedList" } }
-OrderedListRomanContainer = &OrderedListRomanTag { return { type: "orderedListRoman" } }
-OrderedListRomanLowerContainer = &OrderedListRomanLowerTag { return { type: "orderedListRomanLower" } }
-LetteredListContainer = &LetteredListTag { return { type: "letteredList" } }
-LetteredListLowerContainer = &LetteredListLowerTag { return { type: "letteredListLower" } }
-TaskListContainer = &TaskListTag { return { type: "taskList" } }
+// A list may be uniformly indented with tabs. The first list line establishes the base
+// indentation for the whole block; nesting is then relative to that base. For a canonical
+// (non-indented) list the base is "" and behaviour is unchanged.
+ListBaseIndent
+  = &( i: '\t'* ListTags { indentStack = []; indent = i.join("") } )
+
+BulletListContainer = &(SAMEDENT BulletListTag) { return { type: "bulletList" } }
+NoBulletListContainer = &(SAMEDENT NoBulletListTag) { return { type: "noBulletList" } }
+OrderedListContainer = &(SAMEDENT OrderedListTag) { return { type: "orderedList" } }
+OrderedListRomanContainer = &(SAMEDENT OrderedListRomanTag) { return { type: "orderedListRoman" } }
+OrderedListRomanLowerContainer = &(SAMEDENT OrderedListRomanLowerTag) { return { type: "orderedListRomanLower" } }
+LetteredListContainer = &(SAMEDENT LetteredListTag) { return { type: "letteredList" } }
+LetteredListLowerContainer = &(SAMEDENT LetteredListLowerTag) { return { type: "letteredListLower" } }
+TaskListContainer = &(SAMEDENT TaskListTag) { return { type: "taskList" } }
 
 BulletListLine
   = SAMEDENT lt: ListTags listItem: $(( !NL . )* NL?)

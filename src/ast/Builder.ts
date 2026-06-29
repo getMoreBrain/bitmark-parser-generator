@@ -2378,6 +2378,7 @@ class Builder extends BaseBuilder {
 
     // Set isExample for matrix based on isExample for cells
     for (const c of data.cells || []) {
+      if (!c) continue;
       if (data.__isDefaultExample && !c.isExample) {
         c.isExample = true;
       }
