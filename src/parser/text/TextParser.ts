@@ -74,7 +74,7 @@ class TextParser {
   toAst(text: string | TextAst | undefined, options: BitmarkTextParserOptions): TextAst {
     // If input is not a string, return it as is
     if (Array.isArray(text)) return text;
-    let str = (text as string) ?? '';
+    const str = (text as string) ?? '';
 
     // If the str is empty, return an empty array (as otherwise the parser will
     // return an empty paragraph which is unnecessary)
