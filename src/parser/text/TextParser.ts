@@ -74,7 +74,7 @@ class TextParser {
   toAst(text: string | TextAst | undefined, options: BitmarkTextParserOptions): TextAst {
     // If input is not a string, return it as is
     if (Array.isArray(text)) return text;
-    const str = (text as string) ?? '';
+    let str = (text as string) ?? '';
 
     // If the str is empty, return an empty array (as otherwise the parser will
     // return an empty paragraph which is unnecessary)
@@ -91,9 +91,9 @@ class TextParser {
       startRule = 'bitmarkPlus';
     }
 
-    // NOTE: leading/trailing whitespace is normalised by the parser grammar's initializer (which
-    // also preserves the leading tabs of an indented list so it is recognised as a list), so the
-    // string is passed through to the parser as-is here.
+    // Always trim the string before parsing (parser handles leading/trailing whitespace inconsistently)
+    str = str.trim();
+
     return bitmarkTextParse(str, {
       startRule,
     }) as TextAst;
