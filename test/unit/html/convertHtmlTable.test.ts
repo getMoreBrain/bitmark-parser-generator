@@ -175,6 +175,26 @@ describe('cell content (inline marks)', () => {
     expect(c[0].attrs.alt).toBe('pic');
     expect(c[0].attrs.width).toBe(40);
   });
+
+  it('maps MathML alttext and TeX annotations to latex nodes', () => {
+    const c = content(
+      '<table><tr><td><math alttext="x^2"></math> ' +
+        '<mml:math><semantics><annotation encoding="application/x-tex">y^2</annotation></semantics></mml:math>' +
+        '</td></tr></table>',
+    );
+    expect(c[0].content[0].type).toBe('latex');
+    expect(c[0].content[0].attrs.formula).toBe('x^2');
+    expect(c[0].content[2].type).toBe('latex');
+    expect(c[0].content[2].attrs.formula).toBe('y^2');
+  });
+
+  it('maps MathML text content to latex nodes when no formula attribute is present', () => {
+    const c = content(
+      '<table><tr><td><math><mi>x</mi><mo>+</mo><mn>1</mn></math></td></tr></table>',
+    );
+    expect(c[0].content[0].type).toBe('latex');
+    expect(c[0].content[0].attrs.formula).toBe('x+1');
+  });
 });
 
 describe('lossy table format', () => {
@@ -263,6 +283,33 @@ describe('HtmlTableGenerator (bit JSON -> HTML)', () => {
     expect(html).toContain('a &lt; b &amp; c');
   });
 
+  it('renders latex nodes as MathML with LaTeX in alttext', () => {
+    const html = new HtmlTableGenerator().generate([
+      {
+        type: 'table-extended',
+        table: {
+          body: {
+            rows: [
+              {
+                cells: [
+                  {
+                    content: [
+                      {
+                        type: 'paragraph',
+                        content: [{ type: 'latex', attrs: { formula: 'x^2' } }],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      },
+    ]);
+    expect(html).toContain('<math alttext="x^2"></math>');
+  });
+
   it('skips bits without a table and non table/table-extended types', () => {
     const html = new HtmlTableGenerator().generate([
       { type: 'article', body: [] },
@@ -315,6 +362,22 @@ describe('round-trip', () => {
     expect(out).toContain('scope="col"');
     expect(out).toContain('John <b>Smith</b>');
     expect(out).toContain('rowspan="2"');
+  });
+
+  it('can disable breakscaping so raw bitmark in table cells passes through', () => {
+    const html = '<table><tr><td>Start **[text^]** ==[n^]==|latex| end</td></tr></table>';
+    const bitmark = bpg.convertHtmlTable(html, { noBreakscaping: true }) as string;
+    expect(bitmark).toContain('Start **[text^]** ==[n^]==|latex| end');
+  });
+
+  it('HTML formulas and images can round-trip through bitmark table cells', () => {
+    const html =
+      '<table><tr><td>Inline <math alttext="x^2"></math> ' +
+      '<img src="x.png" alt="pic" width="40"></td></tr></table>';
+    const bitmark = bpg.convertHtmlTable(html) as string;
+    const out = bpg.convertHtmlTable(bitmark) as string;
+    expect(out).toContain('<math alttext="x^2"></math>');
+    expect(out).toContain('<img src="x.png" alt="pic" width="40">');
   });
 });
 

@@ -68,6 +68,7 @@
     "reductionTag": { "$ref": "#/$defs/stringOrStringArray" },
     "bubbleTag": { "$ref": "#/$defs/stringOrStringArray" },
     "extractorTag": { "$ref": "#/$defs/stringOrStringArray" },
+    "extractorInternal": { "$ref": "#/$defs/stringOrStringArray" },
     "sourceBB": {
       "oneOf": [
         { "type": "array", "items": { "type": "number" }, "minItems": 4, "maxItems": 4 },
@@ -82,6 +83,7 @@
         }
       ]
     },
+    "bitFingerprint": { "$ref": "#/$defs/stringOrStringArray" },
     "levelCEFRp": { "type": "string" },
     "levelCEFR": { "type": "string" },
     "levelILR": { "type": "string" },
@@ -100,6 +102,8 @@
     "publisherName": { "type": "string" },
     "publications": { "$ref": "#/$defs/stringOrStringArray" },
     "relatedBook": { "$ref": "#/$defs/stringOrStringArray" },
+    "userFeedbackTranslationUrl": { "type": "string" },
+    "userFeedbackContentUrl": { "type": "string" },
     "author": { "$ref": "#/$defs/stringOrStringArray" },
     "subject": { "$ref": "#/$defs/stringOrStringArray" },
     "date": { "type": "string" },

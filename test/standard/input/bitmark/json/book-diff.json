@@ -17,6 +17,8 @@
       "maxTocChapterLevel": 45,
       "sourceDocument": "http://example.com/source.pdf",
       "internalPrintPdf": "http://example.com/print.pdf",
+      "userFeedbackTranslationUrl": "https://example.com/feedback/translation",
+      "userFeedbackContentUrl": "https://example.com/feedback/content",
       "title": [
         {
           "type": "paragraph",
@@ -95,7 +97,7 @@
         }
       ]
     },
-    "bitmark": "[.book-diff]\n[@id:135647]\n[@lang:en-US]\n[@language:de]\n[@spaceId:sl]\n[#How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[##Or, what the digitization of textbooks has to do with Schiller and power sockets]\n[@subtype:draft-book]\n[@author:Philippe Pointet]\n[@externalId:e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc]\n[@kind:learning-path]\n[@bookDiff: e-garantie-du-revenu_lj4qvpq8gk5m]\n[@bookDiff: test-id]\n[@maxTocChapterLevel:45]\n[@processHandInLocation:Auckland]\n[@sourceDocument:http://example.com/source.pdf]\n[@internalPrintPdf:http://example.com/print.pdf]"
+    "bitmark": "[.book-diff]\n[@id:135647]\n[@lang:en-US]\n[@language:de]\n[@spaceId:sl]\n[#How the Content-First Standard “bitmark” Enables the Digital Transformation and Democratization of Learning]\n[##Or, what the digitization of textbooks has to do with Schiller and power sockets]\n[@subtype:draft-book]\n[@author:Philippe Pointet]\n[@externalId:e-how-the-content-first-standard-bitmark-e_tnn9v9uncnyc]\n[@kind:learning-path]\n[@bookDiff: e-garantie-du-revenu_lj4qvpq8gk5m]\n[@bookDiff: test-id]\n[@maxTocChapterLevel:45]\n[@processHandInLocation:Auckland]\n[@sourceDocument:http://example.com/source.pdf]\n[@internalPrintPdf:http://example.com/print.pdf]\n[@userFeedbackTranslationUrl: https://example.com/feedback/translation]\n[@userFeedbackContentUrl: https://example.com/feedback/content]"
   },
   {
     "bit": {

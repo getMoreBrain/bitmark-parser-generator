@@ -188,6 +188,7 @@ class Builder extends BaseBuilder {
       extractorTag?: string | string[];
       extractorInternal?: string | string[];
       sourceBB?: number[] | number[][];
+      bitFingerprint?: string | string[];
       levelCEFRp?: string | string[];
       levelCEFR?: string | string[];
       levelILR?: string | string[];
@@ -205,6 +206,8 @@ class Builder extends BaseBuilder {
       publications?: string | string[];
       relatedBook?: string | string[];
       translationOfBook?: string;
+      userFeedbackTranslationUrl?: string;
+      userFeedbackContentUrl?: string;
       author?: string | string[];
       subject?: string | string[];
       date?: string;
@@ -701,6 +704,12 @@ class Builder extends BaseBuilder {
         options,
       ),
       sourceBB: this.normaliseSourceBB(data.sourceBB),
+      bitFingerprint: this.toAstProperty(
+        bitType,
+        ConfigKey.property_bitFingerprint,
+        data.bitFingerprint,
+        options,
+      ),
       levelCEFRp: this.toAstProperty(
         bitType,
         ConfigKey.property_levelCEFRp,
@@ -767,6 +776,18 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_translationOfBook,
         data.translationOfBook,
+        options,
+      ),
+      userFeedbackTranslationUrl: this.toAstProperty(
+        bitType,
+        ConfigKey.property_userFeedbackTranslationUrl,
+        data.userFeedbackTranslationUrl,
+        options,
+      ),
+      userFeedbackContentUrl: this.toAstProperty(
+        bitType,
+        ConfigKey.property_userFeedbackContentUrl,
+        data.userFeedbackContentUrl,
         options,
       ),
       author: this.toAstProperty(bitType, ConfigKey.property_author, data.author, options),
@@ -2357,6 +2378,7 @@ class Builder extends BaseBuilder {
 
     // Set isExample for matrix based on isExample for cells
     for (const c of data.cells || []) {
+      if (!c) continue;
       if (data.__isDefaultExample && !c.isExample) {
         c.isExample = true;
       }

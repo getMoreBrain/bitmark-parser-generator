@@ -117,6 +117,7 @@ export interface Bit {
   extractorTag?: Property;
   extractorInternal?: Property;
   sourceBB?: number[][];
+  bitFingerprint?: Property;
   levelCEFRp?: Property;
   levelCEFR?: Property;
   levelILR?: Property;
@@ -134,6 +135,8 @@ export interface Bit {
   publications?: Property;
   relatedBook?: Property;
   translationOfBook?: Property;
+  userFeedbackTranslationUrl?: Property;
+  userFeedbackContentUrl?: Property;
   author?: Property;
   subject?: Property;
   date?: Property;

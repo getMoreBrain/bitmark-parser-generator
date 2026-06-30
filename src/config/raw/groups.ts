@@ -253,6 +253,13 @@ const GROUPS: _GroupsConfig = {
         maxCount: Count.infinity,
       },
       {
+        key: ConfigKey.property_bitFingerprint,
+        description:
+          'Fingerprint(s) used by the AI extractor to identify the bit (font, style, color, pixels, etc.)',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
         key: ConfigKey.property_levelCEFRp,
         description: 'The CEFRp level for the bit',
         format: TagFormat.plainText,
@@ -1460,6 +1467,16 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_translationOfBook,
         description: 'External Id of the translated book',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_userFeedbackTranslationUrl,
+        description: 'URL to an external feedback form for book translation feedback',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_userFeedbackContentUrl,
+        description: 'URL to an external feedback form for book content feedback',
         format: TagFormat.plainText,
       },
       {
