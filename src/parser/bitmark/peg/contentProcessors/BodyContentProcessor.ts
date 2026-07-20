@@ -155,10 +155,12 @@ class BodyContentProcessor {
         newlines,
         parserPlainText,
       );
-      finalBodyString = Breakscape.unbreakscape(bodyStr, {
-        format: textFormat,
-        location: TextLocation.body,
-      }).trim() as BreakscapedString;
+      finalBodyString = StringUtils.trimKeepLeadingTabs(
+        Breakscape.unbreakscape(bodyStr, {
+          format: textFormat,
+          location: TextLocation.body,
+        }),
+      ) as BreakscapedString;
       const finalBodyIsAst = Array.isArray(finalBody);
       const bodyAst = finalBodyIsAst ? (finalBody as TextAst) : undefined;
 
@@ -287,7 +289,9 @@ class BodyContentProcessor {
     let trimmedParts: BodyPart[] = parts.reduce((acc, part) => {
       const text = part as BodyText;
       if (!foundText && text.type === BodyBitType.text) {
-        const t = text.data.bodyText.trimStart() as BreakscapedString;
+        // Trim the start, but keep any tabs immediately preceding the first non-whitespace
+        // character so a tab-indented first line survives as literal text
+        const t = StringUtils.trimStartKeepLeadingTabs(text.data.bodyText) as BreakscapedString;
         if (t) {
           foundText = true;
           text.data.bodyText = t;

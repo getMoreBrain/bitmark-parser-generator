@@ -30,6 +30,38 @@ class StringUtils {
   }
 
   /**
+   * Trim leading and trailing whitespace, but keep any tabs that immediately precede the
+   * first non-whitespace character.
+   *
+   * This preserves the indentation of a tab-indented first line so that e.g. a tab-indented
+   * bullet-like line ("\t• a") survives as literal text with its tab intact, rather than
+   * having its indentation stripped and being misinterpreted as a (broken) list.
+   *
+   * e.g.
+   *   "\t\tText"             -> "\t\tText"
+   *   "\t\n\tText"           -> "\tText"
+   *   "\t \tText"            -> "\tText"
+   *   "\n\n\n\t \t \t\tText" -> "\t\tText"
+   *
+   * @param str the string to trim
+   * @returns the trimmed string
+   */
+  trimKeepLeadingTabs(str: string): string {
+    return this.trimStartKeepLeadingTabs(str.replace(/\s+$/, ''));
+  }
+
+  /**
+   * Trim leading whitespace, but keep any tabs that immediately precede the first
+   * non-whitespace character (see trimKeepLeadingTabs). A whitespace-only string trims to ''.
+   *
+   * @param str the string to trim
+   * @returns the trimmed string
+   */
+  trimStartKeepLeadingTabs(str: string): string {
+    return /\S/.test(str) ? str.replace(/^\s*?(\t*)(?=\S)/, '$1') : '';
+  }
+
+  /**
    * Count the occurrences of a substring in a string.
    *
    * @param str the string to search

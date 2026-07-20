@@ -91,9 +91,10 @@ class TextParser {
       startRule = 'bitmarkPlus';
     }
 
-    // Always trim the string before parsing (parser handles leading/trailing whitespace inconsistently)
-    str = str.trim();
-
+    // NOTE: leading/trailing whitespace is normalised by the parser grammar's initializer (which
+    // keeps any tabs immediately preceding the first non-whitespace character, so tab-indented
+    // first lines survive as literal text), so the string is passed through to the parser as-is
+    // here.
     return bitmarkTextParse(str, {
       startRule,
     }) as TextAst;

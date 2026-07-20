@@ -94,6 +94,25 @@ function s(_string) {
   return _string ?? ""
 }
 
+/**
+ * Trim leading and trailing whitespace, but keep any tabs that immediately precede the
+ * first non-whitespace character.
+ *
+ * This preserves the indentation of a tab-indented first line so that e.g. a tab-indented
+ * bullet-like line ("\t• a") is parsed as literal text with its tab intact, rather than
+ * having its indentation stripped and being misinterpreted as a (broken) list.
+ *
+ * e.g.
+ *   "\t\tText"            -> "\t\tText"
+ *   "\t\n\tText"          -> "\tText"
+ *   "\t \tText"           -> "\tText"
+ *   "\n\n\n\t \t \t\tText" -> "\t\tText"
+ */
+function trimKeepLeadingTabs(_str) {
+  const str_ = s(_str).replace(/\s+$/, "")
+  return str_.replace(/^\s*?(\t*)(?=\S)/, "$1")
+}
+
 function legacyContextAwarewUnbreakscape(_str) {
 	let u_ = _str || ""
 
@@ -243,7 +262,9 @@ function bitmarkMinusMinusString(_str) {
 {
     var indentStack = [], indent = ""
 
-    input = input.trimStart()
+    // Trim whitespace, but keep any tabs immediately preceding the first non-whitespace
+    // character so tab-indented first lines survive as literal text.
+    input = trimKeepLeadingTabs(input)
 }
 
 
@@ -505,9 +526,9 @@ ParagraphTag
   = BlockTag
 
 Paragraph
-   = !BlockStart body: ParagraphBody { return { type: "paragraph", content: bitmarkPlusString(body.trim()), attrs: { } } }
-   / ExplicitParagraphHeader body: ParagraphBody { return { type: "paragraph", content: bitmarkPlusString(body.trim()), attrs: { } } }
-   / ExplicitParagraphHeader body: '' { return { type: "paragraph", content: bitmarkPlusString(body.trim()), attrs: { } } }
+   = !BlockStart body: ParagraphBody { return { type: "paragraph", content: bitmarkPlusString(trimKeepLeadingTabs(body)), attrs: { } } }
+   / ExplicitParagraphHeader body: ParagraphBody { return { type: "paragraph", content: bitmarkPlusString(trimKeepLeadingTabs(body)), attrs: { } } }
+   / ExplicitParagraphHeader body: '' { return { type: "paragraph", content: bitmarkPlusString(trimKeepLeadingTabs(body)), attrs: { } } }
 
 ParagraphBody
   = $(ParagraphLine+)
