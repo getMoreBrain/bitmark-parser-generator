@@ -996,10 +996,17 @@ const CARDSETS: _CardSetsConfig = {
                 ],
               },
               {
+                // matchMatrix cells are NESTED (`cells[$s]`), unlike matchPairs'
+                // flat pair object — so `isCaseSensitive` must be written INTO the
+                // cell, mirroring the sibling `example` rule above (`cells: { $s:
+                // {...} }`). The earlier flat `{ isCaseSensitive: '$' }` (copied
+                // from matchPairs) wrote at bit scope, so an authored cell-side
+                // `[@isCaseSensitive:false]` (e.g. on a `++` value) was dropped
+                // instead of landing on the cell. PLAN-122.
                 key: ConfigKey.property_isCaseSensitive,
                 exportJsonKey: [
-                  { '@absent': { isCaseSensitive: '$ancestor' } },
-                  { isCaseSensitive: '$' },
+                  { '@absent': { cells: { $s: { isCaseSensitive: '$ancestor' } } } },
+                  { cells: { $s: { isCaseSensitive: '$' } } },
                 ],
                 description: 'Property to indicate if the match is case sensitive.',
                 format: TagFormat.boolean,
