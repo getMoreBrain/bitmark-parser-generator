@@ -92,8 +92,9 @@ class TextParser {
     }
 
     // NOTE: leading/trailing whitespace is normalised by the parser grammar's initializer (which
-    // also preserves the leading tabs of an indented list so it is recognised as a list), so the
-    // string is passed through to the parser as-is here.
+    // keeps any tabs immediately preceding the first non-whitespace character, so tab-indented
+    // first lines survive as literal text), so the string is passed through to the parser as-is
+    // here.
     return bitmarkTextParse(str, {
       startRule,
     }) as TextAst;
