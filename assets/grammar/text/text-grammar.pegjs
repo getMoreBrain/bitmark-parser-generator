@@ -243,6 +243,11 @@ function bitmarkMinusMinusString(_str) {
 {
     var indentStack = [], indent = ""
 
+    // Trim trailing whitespace. This runs on every (nested) parse, so it also trims the
+    // trailing whitespace of title text ("# Title \t"), which is passed to a nested parse
+    // untrimmed by the TitleBlock rule.
+    input = input.replace(/\s+$/, "")
+
     input = input.trimStart()
 }
 
