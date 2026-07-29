@@ -886,11 +886,16 @@ const CARDSETS: _CardSetsConfig = {
                 exportJsonKey: { '@bit': { heading: { forKeys: '$' } } },
               },
               {
+                // Axis-side `[@isCaseSensitive]` is a cascade SOURCE
+                // only: it must fire (so value-side cells inherit via
+                // `$ancestor`) but emit nothing itself — emission is
+                // owned by the value-side's cell-nested rule
+                // (`cells[$s].isCaseSensitive`, PLAN-122). The earlier
+                // flat `$ancestor` rule here double-emitted at bit
+                // scope and broke the `optimize(fullize(x)) ==
+                // optimize(x)` law on match-matrix.
                 key: ConfigKey.property_isCaseSensitive,
-                exportJsonKey: [
-                  { '@absent': { isCaseSensitive: '$ancestor' } },
-                  { isCaseSensitive: '$' },
-                ],
+                exportJsonKey: {},
                 description: 'Property to indicate if the match is case sensitive.',
                 format: TagFormat.boolean,
               },

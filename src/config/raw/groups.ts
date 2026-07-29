@@ -671,18 +671,16 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
-            // PLAN-072 + ALIGN-EXAMPLE-CASCADE §3.2: cascade-fired
-            // `@example` from the bit header marks EVERY choice with
-            // `isExample: true` (matches BPG output), but only the
-            // FIRST correct choice gets `example: true` (BPG
-            // `fillBooleanExample(..., firstCorrectOnly=true)`).
-            //
-            // Two `@absent` rules, picked first-match-wins:
-            //   1. Verbose form gated on `@parent.isCorrect=true` with
-            //      `maxEmits:1` — fires once for the first correct.
-            //   2. Plain `@absent` — fires on every remaining entry
-            //      (subsequent corrects and all incorrects), emitting
-            //      `isExample` only.
+            // PLAN-072 + ALIGN-EXAMPLE-CASCADE §3.2, corrected by
+            // bpg 5.31 probing: cascade-fired `@example` decorates only
+            // the FIRST correct choice (`example: true` via the
+            // `@parent.isCorrect`-gated `@absent` rule, `maxEmits:1` —
+            // BPG `fillBooleanExample(..., firstCorrectOnly=true)`).
+            // There is deliberately NO plain `@absent` rule: an ancestor
+            // bare example must leave the remaining choices untouched
+            // (a plain `@absent` decoration broke the
+            // `optimize(fullize(x)) == optimize(x)` law — the
+            // synthesized `isExample` keys survived re-optimization).
             // The `serialize_cards` cascade-counter scope holds the cap
             // across the whole cardset.
             // @card scope-shift writes choice-container isExample (e.g.
@@ -706,13 +704,6 @@ const GROUPS: _GroupsConfig = {
                 rule: {
                   isExample: true,
                   example: true,
-                  '@bit': { isExample: true },
-                  '@card': { isExample: true },
-                },
-              },
-              {
-                '@absent': {
-                  isExample: true,
                   '@bit': { isExample: true },
                   '@card': { isExample: true },
                 },
@@ -758,11 +749,13 @@ const GROUPS: _GroupsConfig = {
             description: 'Item, lead, page number, margin number, instruction and hint tags',
           },
           {
-            // PLAN-072 + ALIGN-EXAMPLE-CASCADE §3.2: cascade-fired
-            // `@example` on a `-` (incorrect choice) emits
-            // `isExample: true` only — no `example` (BPG fixtures show
-            // `isExample` on every choice, but `example` only on the
-            // first correct via firstCorrectOnly cascade).
+            // PLAN-072 + ALIGN-EXAMPLE-CASCADE §3.2, corrected by
+            // bpg 5.31 probing: an ancestor bare `@example` leaves
+            // incorrect choices UNTOUCHED — no cascade decoration at
+            // all (no `@absent` rule; a plain `@absent → isExample`
+            // decoration broke the `optimize(fullize(x)) ==
+            // optimize(x)` law). Only an explicit `[@example]` on the
+            // choice itself emits.
             // @card scope-shift writes choice-container isExample.
             key: ConfigKey.property_example,
             jsonKey: 'example',
@@ -776,13 +769,6 @@ const GROUPS: _GroupsConfig = {
                 },
               },
               {
-                '@absent': {
-                  isExample: true,
-                  '@bit': { isExample: true },
-                  '@card': { isExample: true },
-                },
-              },
-              {
                 isExample: true,
                 example: '$',
                 '@bit': { isExample: true },
@@ -790,7 +776,7 @@ const GROUPS: _GroupsConfig = {
               },
             ],
             description:
-              'An example for the true/false statement/question (incorrect entry — isExample only on cascade)',
+              'An example for the true/false statement/question (incorrect entry — no cascade decoration: an ancestor bare example leaves incorrect choices untouched, bpg 5.31)',
             format: TagFormat.boolean,
             nullable: true,
           },
