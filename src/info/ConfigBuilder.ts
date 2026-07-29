@@ -180,6 +180,8 @@ class ConfigBuilder {
           format = 'bitmark';
         } else if (tag.format === TagFormat.number) {
           format = 'number';
+        } else if (tag.format === TagFormat.coordinates) {
+          format = 'coordinates';
         }
       } else if (tagType === BitTagConfigKeyType.resource) {
         format = 'string';
