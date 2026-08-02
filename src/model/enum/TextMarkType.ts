@@ -25,6 +25,7 @@ const TextMarkType = {
   del: 'del',
   underline: 'underline',
   doubleUnderline: 'doubleUnderline',
+  smallcaps: 'smallcaps',
   circle: 'circle',
   languageEmRed: 'languageEmRed',
   languageEmOrange: 'languageEmOrange',

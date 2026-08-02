@@ -104,6 +104,7 @@ const INLINE_MARK_TYPES: TextMarkTypeType[] = [
   TextMarkType.del,
   TextMarkType.underline,
   TextMarkType.doubleUnderline,
+  TextMarkType.smallcaps,
   TextMarkType.circle,
   TextMarkType.languageEmRed,
   TextMarkType.languageEmOrange,
