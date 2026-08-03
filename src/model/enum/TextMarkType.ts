@@ -57,8 +57,9 @@ const TextMarkType = {
   var: 'var',
   code: 'code',
   timer: 'timer',
-  duration: 'duration',
-  color: 'color',
+  duration: 'duration', // legacy: no longer produced by the parser (>= 8.41.1), accepted as generator input
+  color: 'color', // legacy: no longer produced by the parser (>= 8.41.1, now textStyle), accepted as generator input
+  textStyle: 'textStyle',
   colorPicker: 'colorPicker',
   comment: 'comment',
 } as const;

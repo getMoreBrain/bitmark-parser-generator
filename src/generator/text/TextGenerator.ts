@@ -135,10 +135,25 @@ const INLINE_MARK_TYPES: TextMarkTypeType[] = [
   TextMarkType.var,
   TextMarkType.code,
   TextMarkType.timer,
-  TextMarkType.duration,
-  TextMarkType.color,
+  TextMarkType.color, // legacy input, written as color: (same as textStyle)
+  TextMarkType.textStyle,
   TextMarkType.colorPicker,
   TextMarkType.comment,
+];
+
+// Valid colors for the highlight|color: / userHighlight|color: compound chains.
+// Must match the HighlightColor rule in text-grammar.pegjs.
+const HIGHLIGHT_COLORS = [
+  'orange',
+  'yellow',
+  'green',
+  'blue',
+  'purple',
+  'pink',
+  'brown',
+  'white',
+  'black',
+  'gray',
 ];
 
 // Regex explanation:
@@ -981,18 +996,22 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         return;
       }
 
+      // Resolve legacy mark combinations and drop marks the current grammar cannot express
+      const marks = this.getWritableMarks(node.marks);
+      if (marks.length === 0) return; // all marks dropped - the text is written unmarked
+
       // Single marks are only valid if there is only one mark for this text
       // They are only used in inline / heading marks since bitmark-- was dropped.
-      const singleMark = node.marks.length === 1 && forceSingleMark;
+      const singleMark = marks.length === 1 && forceSingleMark;
 
       // Get the correct mark start / end
-      const markStartEnd = node.marks.reduce(
+      const markStartEnd = marks.reduce(
         (acc, mark) => {
           if (acc) return acc;
-          if (STANDARD_MARK_TYPES.indexOf(mark.type) !== -1) {
+          if (this.isStandardMark(mark)) {
             if (singleMark) return STANDARD_MARKS[mark.type];
             return INLINE_MARK;
-          } else if (INLINE_MARK_TYPES.indexOf(mark.type) !== -1) {
+          } else if (this.isInlineMark(mark)) {
             return INLINE_MARK;
           } else {
             // Do nothing (NOTE: link is handled in writeText)
@@ -1015,8 +1034,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
         // Write the inline/comment mark if not entering (|<mark content>)
         if (stage == Stage.between) {
-          for (const mark of node.marks) {
-            if (STANDARD_MARK_TYPES.indexOf(mark.type) !== -1) {
+          for (const mark of marks) {
+            if (this.isStandardMark(mark)) {
               if (!singleMark) {
                 this.writeInlineMarkStartEnd();
                 this.writeInlineMark(mark);
@@ -1045,7 +1064,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
             } else if (TextMarkType.symbol === mark.type) {
               this.writeInlineMarkStartEnd();
               this.writeSymbolMark(mark as SymbolMark);
-            } else if (INLINE_MARK_TYPES.indexOf(mark.type) !== -1) {
+            } else if (this.isInlineMark(mark)) {
               this.writeInlineMarkStartEnd();
               this.writeInlineMark(mark);
             } else {
@@ -1057,8 +1076,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         // Write the inline/comment mark end when exiting (|)
         if (stage == Stage.exit) {
           let inlineMarkWritten = false;
-          for (const mark of node.marks) {
-            if (STANDARD_MARK_TYPES.indexOf(mark.type) !== -1) {
+          for (const mark of marks) {
+            if (this.isStandardMark(mark)) {
               if (!singleMark) {
                 inlineMarkWritten = true;
               }
@@ -1069,7 +1088,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
               TextMarkType.xref === mark.type ||
               TextMarkType.footnote === mark.type ||
               TextMarkType.footnoteStar === mark.type ||
-              INLINE_MARK_TYPES.indexOf(mark.type) !== -1
+              this.isInlineMark(mark)
             ) {
               inlineMarkWritten = true;
             } else {
@@ -1195,8 +1214,16 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
     const inlineImage = node.type === TextNodeType.imageInline;
 
+    let ignoreAttributes: Set<string> | undefined;
+    if (inlineImage) {
+      ignoreAttributes = new Set(['alt', 'zoomDisabled', 'title']);
+      // Suppress attrs equal to the grammar defaults (the parser re-adds them)
+      const a = attrs as unknown as Record<string, unknown>;
+      if (a.alignmentVertical === 'top') ignoreAttributes.add('alignmentVertical');
+      if (a.size === 'line-height') ignoreAttributes.add('size');
+    }
     const mediaAttrs = this.getMediaAttrs(inlineImage ? 'imageInline' : 'image', attrs, {
-      ignoreAttributes: inlineImage ? new Set(['alt', 'zoomDisabled', 'title']) : undefined,
+      ignoreAttributes,
     });
 
     let s = '';
@@ -1239,21 +1266,109 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   }
 
   protected writeInlineMark(mark: TextMark) {
-    let s = `${mark.type}`;
-    if (mark.attrs) {
-      for (const [k, v] of Object.entries(mark.attrs)) {
-        if (
-          (k === 'language' && v !== 'plain text') ||
-          k === 'color' ||
-          k === 'propertyRef' ||
-          k === 'name' ||
-          k === 'duration'
-        ) {
-          s = `${s}:${v}`;
+    const attrs = (mark.attrs ?? {}) as Record<string, unknown>;
+    let s: string;
+
+    switch (mark.type) {
+      case TextMarkType.textStyle:
+      case TextMarkType.color: // legacy input, normalized to the current chain form
+        s = `color:${attrs.color ?? ''}`;
+        break;
+      case TextMarkType.timer:
+        // getWritableMarks guarantees a duration is present
+        s = attrs.name ? `timer:${attrs.name}` : 'timer';
+        s += `|duration:${attrs.duration ?? ''}`;
+        break;
+      case TextMarkType.highlight:
+      case TextMarkType.userHighlight:
+        s = attrs.color ? `${mark.type}|color:${attrs.color}` : `${mark.type}`;
+        break;
+      default: {
+        s = `${mark.type}`;
+        for (const [k, v] of Object.entries(attrs)) {
+          if ((k === 'language' && v !== 'plain text') || k === 'propertyRef' || k === 'name') {
+            s = `${s}:${v}`;
+          }
         }
       }
     }
+
     this.write(s);
+  }
+
+  /**
+   * Resolve the marks of a text node into the marks that will actually be written.
+   *
+   * - Merges a legacy standalone 'duration' mark into its sibling 'timer' mark.
+   * - Drops marks the current grammar cannot express (standalone 'duration', 'timer'
+   *   without a duration).
+   * - Moves a 'textStyle'/'color' mark before a preceding bare 'highlight'/'userHighlight'
+   *   mark when its color is a valid highlight color; written in the original order the
+   *   output would re-parse as a highlight-with-color compound mark and change meaning.
+   */
+  protected getWritableMarks(nodeMarks: TextMark[]): TextMark[] {
+    const attrsOf = (m: TextMark) => (m.attrs ?? {}) as Record<string, unknown>;
+
+    let marks: TextMark[] = [...nodeMarks];
+
+    // Merge a legacy timer + duration mark pair
+    const timer = marks.find((m) => m.type === TextMarkType.timer);
+    const duration = marks.find((m) => m.type === TextMarkType.duration);
+    if (timer && duration && !attrsOf(timer).duration) {
+      marks = marks.map((m) =>
+        m === timer
+          ? ({
+              ...timer,
+              attrs: { ...attrsOf(timer), duration: attrsOf(duration).duration },
+            } as TextMark)
+          : m,
+      );
+    }
+
+    // Drop marks the current grammar cannot express
+    marks = marks.filter((m) => {
+      if (m.type === TextMarkType.duration) return false;
+      if (m.type === TextMarkType.timer) return !!attrsOf(m).duration;
+      return true;
+    });
+
+    // Reorder [bare highlight/userHighlight, textStyle(valid highlight color)] pairs
+    const isBareHighlight = (m: TextMark) =>
+      (m.type === TextMarkType.highlight || m.type === TextMarkType.userHighlight) &&
+      !attrsOf(m).color;
+    const isHighlightColorStyle = (m: TextMark) =>
+      (m.type === TextMarkType.textStyle || m.type === TextMarkType.color) &&
+      HIGHLIGHT_COLORS.indexOf(attrsOf(m).color as string) !== -1;
+    for (let i = 0; i < marks.length - 1; i++) {
+      if (isBareHighlight(marks[i]) && isHighlightColorStyle(marks[i + 1])) {
+        const tmp = marks[i];
+        marks[i] = marks[i + 1];
+        marks[i + 1] = tmp;
+      }
+    }
+
+    return marks;
+  }
+
+  /**
+   * True if the mark is written using its standard form (e.g. **bold**, !!highlight!!)
+   * when it is the only mark. A highlight mark with a color attribute is excluded - it
+   * can only be expressed using the inline chain form (==text==|highlight|color:x|).
+   */
+  protected isStandardMark(mark: TextMark): boolean {
+    if (STANDARD_MARK_TYPES.indexOf(mark.type) === -1) return false;
+    return !(mark.attrs && (mark.attrs as Record<string, unknown>).color);
+  }
+
+  /**
+   * True if the mark is written using the inline chain form (==text==|mark|).
+   */
+  protected isInlineMark(mark: TextMark): boolean {
+    if (INLINE_MARK_TYPES.indexOf(mark.type) !== -1) return true;
+    return (
+      mark.type === TextMarkType.highlight &&
+      !!(mark.attrs && (mark.attrs as Record<string, unknown>).color)
+    );
   }
 
   protected writeCommentMark(mark: CommentMark) {

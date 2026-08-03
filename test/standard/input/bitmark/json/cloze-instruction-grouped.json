@@ -385,8 +385,10 @@
             },
             {
               "attrs": {
+                "alignmentVertical": "top",
                 "alt": "a",
                 "src": "https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/images/bck1.png",
+                "size": "line-height",
                 "zoomDisabled": true
               },
               "type": "imageInline"
@@ -433,8 +435,10 @@
             },
             {
               "attrs": {
+                "alignmentVertical": "top",
                 "alt": "a",
                 "src": "https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/images/bck1.png",
+                "size": "line-height",
                 "zoomDisabled": true
               },
               "type": "imageInline"
@@ -514,8 +518,10 @@
             },
             {
               "attrs": {
+                "alignmentVertical": "top",
                 "alt": "a",
                 "src": "https://docs.getmorebrain.com/bit-books/cornelsen/grammatik_aktiv_a1_b1/web-resources/images/bck1.png",
+                "size": "line-height",
                 "zoomDisabled": true
               },
               "type": "imageInline"

@@ -199,9 +199,11 @@
             },
             {
               "attrs": {
+                "alignmentVertical": "top",
                 "alt": "Gray circular control knob",
                 "src": "https://embedded/page-0001_image-0008.png",
                 "srcAlt": "https://embedded/page-0001_image-0008.png",
+                "size": "line-height",
                 "zoomDisabled": true
               },
               "type": "imageInline"

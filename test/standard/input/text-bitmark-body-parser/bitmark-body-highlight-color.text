@@ -1,0 +1,26 @@
+Intro text
+
+==text==|highlight|color:orange| there you go
+==text==|highlight|color:yellow| there you go
+==text==|highlight|color:green| there you go
+==text==|highlight|color:blue| there you go
+==text==|highlight|color:purple| there you go
+==text==|highlight|color:pink| there you go
+==text==|highlight|color:brown| there you go
+==text==|highlight|color:white| there you go
+==text==|highlight|color:black| there you go
+==text==|highlight|color:gray| there you go
+
+==text==|userHighlight|color:yellow| there you go
+==text==|userHighlight|color:green| there you go
+==text==|userHighlight|color:black| there you go
+
+==text==|highlight| bare highlight
+==text==|userHighlight| bare userHighlight
+==text==|highlight|bold| highlight then bold
+
+==red text==|highlight|color:red| red text on default highlight
+==red text==|userHighlight|color:red| red text on default userHighlight
+==aqua text==|color:aqua|highlight| explicit combo order
+
+==text==|highlight|color:bad| partial tail
