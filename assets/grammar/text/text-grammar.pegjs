@@ -2,7 +2,7 @@
 
 {{
 
-const VERSION = "8.37.3"
+const VERSION = "8.41.1"
 
 //Parser peggy.js
 
@@ -625,7 +625,7 @@ InlineTag = InlineHalfTag InlineHalfTag
 InlineStyledText
   = BodyBitOpenTag t: $(([0-9])+ ) BodyBitCloseTag { return { index: +t, type: "bit" } }
   / InlineTag t: $((!InlineTag .)* ) InlineTag '|latex|' { return { attrs: { formula: unbreakscape(t)}, type: "latex" } }
-  / InlineTag alt: $((!InlineTag .)* ) InlineTag '|imageInline:' u: Url '|' ch: InlineMediaChain? { return { attrs: { alt, src: (u.pr + u.t).trim(), ...Object.assign({}, ...ch), zoomDisabled: true }, type: "imageInline" } }
+  / InlineTag alt: $((!InlineTag .)* ) InlineTag '|imageInline:' u: Url '|' ch: InlineMediaChain? { return { attrs: { alt, src: (u.pr + u.t).trim(), 'alignmentVertical': 'top' , size: 'line-height', ...Object.assign({}, ...ch), zoomDisabled: true }, type: "imageInline" } }
   / InlineTag t: $((!InlineTag .)* ) InlineTag marks: AttrChain { if (!marks) marks = []; return { marks, text: unbreakscape(t), type: "text" } }
   / BoldTag t: $((!BoldTag .)* ) BoldTag { return { marks: [{type: "bold"}], text: unbreakscape(t), type: "text" } }
   / ItalicTag t: $((!ItalicTag .)* ) ItalicTag { return { marks: [{type: "italic"}], text: unbreakscape(t), type: "text" } }
@@ -676,10 +676,11 @@ AttrChainItem
   / 'var:' str: $((!BlockTag char)*) BlockTag {return { type: 'var', attrs: { name: str.trim() } }}
   / 'code' BlockTag {return { type: 'code', attrs: { language: "plain text" } }}
   / 'code:' lang: $((!BlockTag char)*) BlockTag {return { type: 'code', attrs: { language: lang.trim().toLowerCase() } }}
-  / 'timer' BlockTag {return { type: 'timer', attrs: { name: "" } }}
-  / 'timer:' str: $((!BlockTag char)*) BlockTag {return { type: 'timer', attrs: { name: str.trim() } }}
-  / 'duration:' str: $('P' $((!BlockTag char)*)) BlockTag {return { type: 'duration', attrs: { duration: str } }}
-  / 'color:' color: Color BlockTag {return { type: 'color', attrs: { color } }}
+  / 'timer' BlockTag 'duration:' d: $('P' $((!BlockTag char)*)) BlockTag {return { type: 'timer', attrs: { name: "", duration: d.trim() } }}
+  / 'timer:' str: $((!BlockTag char)*) BlockTag 'duration:' d: $('P' $((!BlockTag char)*)) BlockTag {return { type: 'timer', attrs: { name: str.trim() , duration: d.trim() } }}
+  / 'highlight' BlockTag 'color:' color: HighlightColor BlockTag {return { type: 'highlight', attrs: { color } }}
+  / 'userHighlight' BlockTag 'color:' color: HighlightColor BlockTag {return { type: 'userHighlight', attrs: { color } }}
+  / 'color:' color: Color BlockTag {return { type: 'textStyle', attrs: { color } }}
   / 'colorPicker:' str: $((!BlockTag char)*) BlockTag {return { type: 'colorPicker', attrs: { propertyRef: str.trim() } }}
   / style: AlternativeStyleTags BlockTag {return { type: style }}
   / '#' str: $((!BlockTag char)*) BlockTag {return { type: "comment", comment: str }}
@@ -721,6 +722,7 @@ AlternativeStyleTags
   / 'del'
   / 'underline'
   / 'doubleUnderline'
+  / 'smallcaps'
   / 'circle'
   / 'languageEmRed'
   / 'languageEmOrange'
@@ -766,7 +768,17 @@ Color
   / 'white'
   / 'yellow'
 
-
+HighlightColor
+  = 'orange'
+  / 'yellow'
+  / 'green'
+  / 'blue'
+  / 'purple'
+  / 'pink'
+  / 'brown'
+  / 'white'
+  / 'black'
+  / 'gray'
 
 
 

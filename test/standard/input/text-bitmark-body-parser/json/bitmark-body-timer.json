@@ -17,7 +17,8 @@
           {
             "type": "timer",
             "attrs": {
-              "name": ""
+              "name": "",
+              "duration": "P23DT23H"
             }
           }
         ],
@@ -39,7 +40,8 @@
           {
             "type": "timer",
             "attrs": {
-              "name": "name of timer"
+              "name": "name of timer",
+              "duration": "P1DT6H"
             }
           }
         ],
@@ -57,7 +59,47 @@
         "type": "hardBreak"
       },
       {
+        "text": "==Timer text==|timer| there you don't go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "==Timer text==|timer:name of timer| there you don't go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "==Timer text==|timer|duration:123| there you don't go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
         "text": "==Timer text==|timerz:1234| there you don't go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "==Duration text==|duration:P23DT23H| there you don't go",
         "type": "text"
       }
     ],

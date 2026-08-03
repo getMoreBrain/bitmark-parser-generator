@@ -15,279 +15,13 @@
       {
         "marks": [
           {
-            "type": "textStyle",
-            "attrs": {
-              "color": "aqua"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "black"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "blue"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "brown"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "fuchsia"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "lightgrey"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "gray"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "darkgray"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "green"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "lime"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "magenta"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "maroon"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "navy"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "olive"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
+            "type": "highlight",
             "attrs": {
               "color": "orange"
             }
           }
         ],
-        "text": "Color text",
+        "text": "text",
         "type": "text"
       },
       {
@@ -300,13 +34,13 @@
       {
         "marks": [
           {
-            "type": "textStyle",
+            "type": "highlight",
             "attrs": {
-              "color": "pink"
+              "color": "yellow"
             }
           }
         ],
-        "text": "Color text",
+        "text": "text",
         "type": "text"
       },
       {
@@ -319,13 +53,51 @@
       {
         "marks": [
           {
-            "type": "textStyle",
+            "type": "highlight",
+            "attrs": {
+              "color": "green"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight",
+            "attrs": {
+              "color": "blue"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight",
             "attrs": {
               "color": "purple"
             }
           }
         ],
-        "text": "Color text",
+        "text": "text",
         "type": "text"
       },
       {
@@ -337,6 +109,221 @@
       },
       {
         "marks": [
+          {
+            "type": "highlight",
+            "attrs": {
+              "color": "pink"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight",
+            "attrs": {
+              "color": "brown"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight",
+            "attrs": {
+              "color": "white"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight",
+            "attrs": {
+              "color": "black"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight",
+            "attrs": {
+              "color": "gray"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "userHighlight",
+            "attrs": {
+              "color": "yellow"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "userHighlight",
+            "attrs": {
+              "color": "green"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "userHighlight",
+            "attrs": {
+              "color": "black"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " there you go",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " bare highlight",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "userHighlight"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " bare userHighlight",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          },
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " highlight then bold",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          },
           {
             "type": "textStyle",
             "attrs": {
@@ -344,11 +331,33 @@
             }
           }
         ],
-        "text": "Color text",
+        "text": "red text",
         "type": "text"
       },
       {
-        "text": " there you go",
+        "text": " red text on default highlight",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "marks": [
+          {
+            "type": "userHighlight"
+          },
+          {
+            "type": "textStyle",
+            "attrs": {
+              "color": "red"
+            }
+          }
+        ],
+        "text": "red text",
+        "type": "text"
+      },
+      {
+        "text": " red text on default userHighlight",
         "type": "text"
       },
       {
@@ -359,16 +368,22 @@
           {
             "type": "textStyle",
             "attrs": {
-              "color": "silver"
+              "color": "aqua"
             }
+          },
+          {
+            "type": "highlight"
           }
         ],
-        "text": "Color text",
+        "text": "aqua text",
         "type": "text"
       },
       {
-        "text": " there you go",
+        "text": " explicit combo order",
         "type": "text"
+      },
+      {
+        "type": "hardBreak"
       },
       {
         "type": "hardBreak"
@@ -376,94 +391,14 @@
       {
         "marks": [
           {
-            "type": "textStyle",
-            "attrs": {
-              "color": "teal"
-            }
+            "type": "highlight"
           }
         ],
-        "text": "Color text",
+        "text": "text",
         "type": "text"
       },
       {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "violet"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "white"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "marks": [
-          {
-            "type": "textStyle",
-            "attrs": {
-              "color": "yellow"
-            }
-          }
-        ],
-        "text": "Color text",
-        "type": "text"
-      },
-      {
-        "text": " there you go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "text": "==Color text==|color:bad| there you don't go",
-        "type": "text"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "type": "hardBreak"
-      },
-      {
-        "text": "==Color text==|bad:1234| there you don't go",
+        "text": "color:bad| partial tail",
         "type": "text"
       }
     ],

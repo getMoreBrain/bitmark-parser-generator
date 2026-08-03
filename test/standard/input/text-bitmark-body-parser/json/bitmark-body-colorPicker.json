@@ -186,7 +186,7 @@
       {
         "marks": [
           {
-            "type": "color",
+            "type": "textStyle",
             "attrs": {
               "color": "yellow"
             }

@@ -71,7 +71,7 @@
       {
         "marks": [
           {
-            "type": "color",
+            "type": "textStyle",
             "attrs": {
               "color": "pink"
             }
@@ -248,6 +248,26 @@
         "marks": [
           {
             "type": "doubleUnderline"
+          }
+        ],
+        "text": "here is the text",
+        "type": "text"
+      },
+      {
+        "text": ", nice huh?",
+        "type": "text"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "text": "Here is some inline 'style' applied ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "smallcaps"
           }
         ],
         "text": "here is the text",

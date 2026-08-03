@@ -69,6 +69,8 @@
         "attrs": {
           "alt": "alt text of the inline image",
           "src": "https://img.io/img.svg",
+          "alignmentVertical": "top",
+          "size": "line-height",
           "zoomDisabled": true
         },
         "type": "imageInline"
@@ -88,6 +90,8 @@
         "attrs": {
           "alt": "alt text of the inline image",
           "src": "https://img.io/img.svg",
+          "alignmentVertical": "top",
+          "size": "line-height",
           "width": 400,
           "height": 200,
           "zoomDisabled": true
@@ -109,6 +113,8 @@
         "attrs": {
           "alt": "alt text of the inline image",
           "src": "https://img.io/img.svg",
+          "alignmentVertical": "top",
+          "size": "line-height",
           "width": 400,
           "height": 200,
           "comment": "comment",

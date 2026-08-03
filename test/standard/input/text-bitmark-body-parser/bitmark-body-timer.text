@@ -1,7 +1,15 @@
 Intro text
 
-==Timer text==|timer| there you go
+==Timer text==|timer|duration:P23DT23H| there you go
 
-==Timer text==|timer:name of timer| there you go
+==Timer text==|timer:name of timer|duration:P1DT6H| there you go
+
+==Timer text==|timer| there you don't go
+
+==Timer text==|timer:name of timer| there you don't go
+
+==Timer text==|timer|duration:123| there you don't go
 
 ==Timer text==|timerz:1234| there you don't go
+
+==Duration text==|duration:P23DT23H| there you don't go
