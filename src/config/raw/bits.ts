@@ -42,7 +42,9 @@ const BITS: _BitsConfig = {
         description: 'Common tags for quiz bits',
       },
       {
-        exportJsonKey: { title: '$' },
+        maxCount: 2,
+        jsonKey: 'title|multi(count=2, key=subtitle)',
+        exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
         key: ConfigKey.tag_title,
         description: 'The title of the flashcard quiz',
       },
@@ -147,7 +149,9 @@ const BITS: _BitsConfig = {
     description: 'Article bit, used for articles / paragraphs',
     tags: [
       {
-        exportJsonKey: { title: '$' },
+        maxCount: 2,
+        jsonKey: 'title|multi(count=2, key=subtitle)',
+        exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
         key: ConfigKey.tag_title,
         description: 'The title of the article',
       },
@@ -2150,7 +2154,9 @@ const BITS: _BitsConfig = {
     description: 'Example bit, used to provide examples in articles or books',
     tags: [
       {
-        exportJsonKey: { title: '$' },
+        maxCount: 2,
+        jsonKey: 'title|multi(count=2, key=subtitle)',
+        exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
         key: ConfigKey.tag_title,
         description: 'The title of the example',
       },
@@ -4931,7 +4937,9 @@ const BITS: _BitsConfig = {
     description: 'Page bit, used to create pages in articles or books',
     tags: [
       {
-        exportJsonKey: { title: '$' },
+        maxCount: 2,
+        jsonKey: 'title|multi(count=2, key=subtitle)',
+        exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
         key: ConfigKey.tag_title,
         description: 'Title of the page, used to display the page title',
       },
@@ -5395,7 +5403,9 @@ const BITS: _BitsConfig = {
     description: 'Review note bit, used to create review notes in articles or books',
     tags: [
       {
-        exportJsonKey: { title: '$' },
+        maxCount: 2,
+        jsonKey: 'title|multi(count=2, key=subtitle)',
+        exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
         key: ConfigKey.tag_title,
         description: 'Title of the review note, used to display the note title',
       },
