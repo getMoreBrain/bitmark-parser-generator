@@ -445,6 +445,8 @@ const BitType = {
   pageSectionFolder: 'page-section-folder',
   pageShopInShop: 'page-shop-in-shop',
   pageSpecial: 'page-special',
+  pageEnd: 'page-end',
+  pageStart: 'page-start',
   pageSubpage: 'page-subpage',
   pageSubscribe: 'page-subscribe',
   parameters: 'parameters',
