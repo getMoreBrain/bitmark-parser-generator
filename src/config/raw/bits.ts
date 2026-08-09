@@ -5039,6 +5039,16 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.pageSubpage,
     description: 'Page special bit, used to create special pages in articles or books',
   },
+  [BitType.pageEnd]: {
+    since: '5.32.0',
+    baseBitType: BitType.article,
+    description: 'Page end bit, used to mark the end of a page section in articles or books',
+  },
+  [BitType.pageStart]: {
+    since: '5.32.0',
+    baseBitType: BitType.article,
+    description: 'Page start bit, used to mark the start of a page section in articles or books',
+  },
   [BitType.pagePerson]: {
     since: '1.5.16',
     baseBitType: BitType._standard,
