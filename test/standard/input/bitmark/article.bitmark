@@ -79,7 +79,7 @@ This is an article example with the target, tag, reductionTag, colorTag, icon, i
 
 [@target:target1]
 [@target:target2][@target:target3]
-[@reductionTag:green][@reductionTag:yellow]
+[@reductionTag:green][@reductionTag:yellow][@reviewTag:link][@reviewerTag:Bob][@reviewerTag:Carol]
 [@tag:green][@tag:yellow]
 [@tag:red][@colorTag:green][@extractorInternal:internal1][@extractorInternal:internal2]
 [@colorTag:white]

@@ -227,6 +227,8 @@ const propertyKeys = {
   property_resolvedBy: '@resolvedBy',
   property_resolvedDate: '@resolvedDate',
   property_revealSolutions: '@revealSolutions',
+  property_reviewTag: '@reviewTag',
+  property_reviewerTag: '@reviewerTag',
   property_sampleSolution: '@sampleSolution',
   property_scormSource: '@scormSource',
   property_search: '@search',
