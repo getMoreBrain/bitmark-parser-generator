@@ -325,6 +325,20 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.plainText,
         maxCount: Count.infinity,
       },
+      {
+        // Universal @internalComment — declares in config what Config.ts also
+        // injects programmatically into every bit (its push runs last and wins
+        // the keyed merge, so runtime behaviour is unchanged). Declared here so
+        // the config export (ConfigBuilder → assets/config → configurator →
+        // bitmark.json) carries the tag for downstream parsers. Empty
+        // exportJsonKey: consumed but never emitted to the bit JSON (the value
+        // is routed to parser.internalComments).
+        key: ConfigKey.property_internalComment,
+        description: 'Internal comment for the bit.',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+        exportJsonKey: {},
+      },
     ],
   },
   [ConfigKey.group_standardItemLead]: {
