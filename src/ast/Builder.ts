@@ -183,6 +183,8 @@ class Builder extends BaseBuilder {
       slug?: string;
       tag?: string | string[];
       groupTag?: Partial<GroupTagJson> | Partial<GroupTagJson>[];
+      reviewTag?: string | string[];
+      reviewerTag?: string | string[];
       reductionTag?: string | string[];
       bubbleTag?: string | string[];
       extractorTag?: string | string[];
@@ -684,6 +686,13 @@ class Builder extends BaseBuilder {
       slug: this.toAstProperty(bitType, ConfigKey.property_slug, data.slug, options),
       tag: this.toAstProperty(bitType, ConfigKey.property_tag, data.tag, options),
       groupTag: this.buildGroupTags(context, data.groupTag),
+      reviewTag: this.toAstProperty(bitType, ConfigKey.property_reviewTag, data.reviewTag, options),
+      reviewerTag: this.toAstProperty(
+        bitType,
+        ConfigKey.property_reviewerTag,
+        data.reviewerTag,
+        options,
+      ),
       reductionTag: this.toAstProperty(
         bitType,
         ConfigKey.property_reductionTag,

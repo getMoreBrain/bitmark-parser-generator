@@ -1,3 +1,4 @@
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import { createRequire } from 'node:module';
 import path from 'node:path';
@@ -81,8 +82,12 @@ const parserSource = peggy.generate(grammar, options);
 // Ensure output directory exists
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 
+// Append the source grammar hash so tests can detect a stale generated parser
+// (see test/unit/parser/generated-parser-staleness.test.ts)
+const grammarHash = crypto.createHash('sha256').update(grammar).digest('hex');
+
 // Write parser source to file
-fs.writeFileSync(outputPath, parserSource);
+fs.writeFileSync(outputPath, `${parserSource}\n// grammar-sha256: ${grammarHash}\n`);
 
 // Test parser
 if (optTest) {
