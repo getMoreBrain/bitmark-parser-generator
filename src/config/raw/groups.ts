@@ -223,6 +223,18 @@ const GROUPS: _GroupsConfig = {
         ],
       },
       {
+        key: ConfigKey.property_reviewTag,
+        description: 'The review tag(s) for the bit',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
+        key: ConfigKey.property_reviewerTag,
+        description: 'The reviewer tag(s) for the bit',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
         key: ConfigKey.property_reductionTag,
         description: 'The reduction tag(s) for the bit',
         format: TagFormat.plainText,
