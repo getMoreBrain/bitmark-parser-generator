@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.32.0
+Version: 5.34.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
@@ -439,6 +439,8 @@ page-promotion (since: 1.6.6)
 page-section-folder (since: 1.4.17)
 page-shop-in-shop (since: 1.6.6)
 page-special (since: 1.6.6)
+page-end (since: 5.33.0)
+page-start (since: 5.33.0)
 page-subpage (since: 1.6.6)
 page-subscribe (since: 1.5.10)
 parameters (since: 1.18.0)

@@ -574,6 +574,10 @@ const NodeType = {
   responses: 'responses',
   responsesValue: 'responsesValue',
   revealSolutions: 'revealSolutions',
+  reviewTag: 'reviewTag',
+  reviewTagValue: 'reviewTagValue',
+  reviewerTag: 'reviewerTag',
+  reviewerTagValue: 'reviewerTagValue',
   root: 'root', // bit type (root)
   rows: 'rows',
   rowsValue: 'rowsValue',

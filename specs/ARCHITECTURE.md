@@ -272,7 +272,12 @@ graph TD
 
 **Rules**:
 - Grammars are the source of truth for bitmark syntax
-- Generated parsers are committed to repo for browser builds
+- Generated parsers (`src/generated/`) are gitignored build artifacts, regenerated with
+  `npm run build-grammar-bit` / `npm run build-grammar-text`. A staleness test
+  (`test/unit/parser/generated-parser-staleness.test.ts`) fails if a grammar is edited
+  without regenerating its parser (the scripts stamp the grammar's sha256 into the output)
+- Browser-bundle tests (`test/standard/web-*.test.ts`) run against `dist/` — run
+  `npm run tsup && npm run build-browser` after grammar or source changes
 - Grammar changes require rebuild and full test suite execution
 
 ### Parser Layer
