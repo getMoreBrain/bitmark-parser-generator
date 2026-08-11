@@ -578,6 +578,8 @@ const NodeType = {
   reviewTagValue: 'reviewTagValue',
   reviewerTag: 'reviewerTag',
   reviewerTagValue: 'reviewerTagValue',
+  rightsPolicy: 'rightsPolicy',
+  rightsPolicyValue: 'rightsPolicyValue',
   root: 'root', // bit type (root)
   rows: 'rows',
   rowsValue: 'rowsValue',

@@ -24,6 +24,9 @@ export interface BitJson {
   padletId: string;
   jupyterId: string;
   jupyterExecutionCount: number;
+  copyright: string;
+  license: string;
+  rightsPolicy: string[];
   sourceRL: string;
   isPublic: boolean;
   isTemplate: boolean;

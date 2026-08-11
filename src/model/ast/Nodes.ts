@@ -69,6 +69,9 @@ export interface Bit {
   padletId?: Property;
   jupyterId?: Property;
   jupyterExecutionCount?: Property;
+  copyright?: Property;
+  license?: Property;
+  rightsPolicy?: Property;
   sourceRL?: Property;
   isPublic?: Property;
   isTemplate?: Property;
