@@ -152,6 +152,8 @@ const BITS: _BitsConfig = {
         maxCount: 2,
         jsonKey: 'title|multi(count=2, key=subtitle)',
         exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
+        // PLAN-140 W3 (NISO import): the title of a mapped source element.
+        mappingKeys: { 'xml-niso': { '@el': 'title', '@text': '$' } },
         key: ConfigKey.tag_title,
         description: 'The title of the article',
       },
@@ -194,6 +196,15 @@ const BITS: _BitsConfig = {
     since: '1.28.0',
     baseBitType: BitType.standardArticleNormative,
     description: 'Smart standard normative article bit',
+    // PLAN-140 W3 (NISO import, tranche 1): one article bit per NISO
+    // paragraph (catalog D1). CONTENT key (@children): the subtree is the
+    // bit's body; nothing inside it promotes. KNOWN LIMITATION (plan Q4,
+    // open): normativity is inherited from ancestor context, which the
+    // pattern language cannot yet express — non-normative front-matter
+    // prose currently also lands on the normative variant.
+    mappingKeys: {
+      'xml-niso': { '@el': 'p', '@attr': { id: '$customerId' }, '@children': '$' },
+    },
   },
   [BitType.smartStandardArticleNonNormative]: {
     since: '1.28.0',
@@ -1281,6 +1292,15 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType._standard,
     description: 'Chapter bit, used to define chapters in books or articles',
+    // PLAN-140 W3 (NISO import, tranche 1): recover a chapter from a NISO
+    // section or annex. STRUCTURAL key (no @children content slot): the
+    // element carries no body of its own — tag children (label/title) map
+    // via tag keys, every mapped descendant promotes to a following sibling
+    // bit, and the chapter level derives from nesting depth (catalog D1).
+    // The source id lands as [@customerId] (two-id model, D2).
+    mappingKeys: {
+      'xml-niso': { '@el': 'sec|app', '@attr': { id: '$customerId' } },
+    },
     tags: [
       {
         exportJsonKey: { anchor: '$' },
@@ -1293,6 +1313,9 @@ const BITS: _BitsConfig = {
         description: 'The title of the chapter',
         jsonKey: 'title|setMulti(level)',
         exportJsonKey: { title: '$', level: '$level' },
+        // PLAN-140 W3 (NISO import): the section/annex title; the heading
+        // level rides the normalizer-derived nesting depth (plan Q2).
+        mappingKeys: { 'xml-niso': { '@el': 'title', '@text': '$' } },
       },
       {
         key: ConfigKey.property_toc,
@@ -2622,6 +2645,15 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardNoteNonNormative,
     description:
       'Smart standard non-normative note bit, used to provide non-normative notes in smart standards',
+    // PLAN-140 W3 (NISO import, tranche 1). CONTENT key (@children): a
+    // note's inner paragraphs are note body, never separate bits.
+    mappingKeys: {
+      'xml-niso': {
+        '@el': 'non-normative-note',
+        '@attr': { id: '$customerId' },
+        '@children': '$',
+      },
+    },
   },
   [BitType.smartStandardNoteNormativeCollapsible]: {
     since: '1.28.0',

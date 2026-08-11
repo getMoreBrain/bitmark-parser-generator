@@ -26,6 +26,17 @@ export type ExportJsonKey =
  * `htmlKey` when writing assets/config/**\/*.jsonc. Omit when absent.
  */
 export type HtmlKey = null | boolean | number | string | HtmlKey[] | { [k: string]: HtmlKey };
+
+/**
+ * Named key mappings keyed by mapping id (the `mappingTypes` catalog:
+ * `"html"`, `"xml"`, `"xml-niso"`, …). The generic successor of the per-field
+ * forms (`htmlKey` ≡ `mappingKeys.html`): values are key patterns in the
+ * shared pattern grammar ({@link HtmlKey}). Mirrored verbatim into
+ * `bitmark.json`'s per-construct `mappingKeys` record (PLAN-140 W3 — the
+ * first consumer is the bit-level `xml-niso` element key set for the NISO
+ * import). Omit when absent.
+ */
+export type MappingKeys = { [mappingId: string]: HtmlKey };
 import { type CountType } from '../enum/Count.ts';
 import { type ExampleTypeType } from '../enum/ExampleType.ts';
 import { type TagType } from '../enum/Tag.ts';
@@ -64,6 +75,7 @@ export interface _BitConfig {
   footerRequired?: boolean; // Default: false
   resourceAttachmentAllowed?: boolean; // Default: true
   rootExampleType?: ExampleTypeType;
+  mappingKeys?: MappingKeys; // Bit-level named key mappings (element keys for markup import). Omit when absent.
 }
 
 export interface _BitAliasConfig {
@@ -154,6 +166,7 @@ export interface _AbstractTagConfig {
   jsonKey?: string; // If the json key is different from the tag (legacy mini-language)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form (specs/JSONKEY_SYNTAX.md). Omit when default.
   htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.
+  mappingKeys?: MappingKeys; // Named key mappings beyond html (e.g. xml-niso). Omit when absent.
   chain?: _AbstractTagConfig[];
 }
 

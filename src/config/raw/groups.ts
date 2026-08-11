@@ -361,6 +361,9 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.tag_item,
         jsonKey: 'item',
         exportJsonKey: { item: '$' },
+        // PLAN-140 W3 (NISO import): the clause/note label of a mapped
+        // source element ([%1], [%ANMERKUNG 1]).
+        mappingKeys: { 'xml-niso': { '@el': 'label', '@text': '$' } },
         description: 'The item for the bit',
         chain: [
           {
