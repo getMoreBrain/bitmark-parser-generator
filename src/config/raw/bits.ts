@@ -1299,7 +1299,7 @@ const BITS: _BitsConfig = {
     // bit, and the chapter level derives from nesting depth (catalog D1).
     // The source id lands as [@customerId] (two-id model, D2).
     mappingKeys: {
-      'xml-niso': { '@el': 'sec|app', '@attr': { id: '$customerId' } },
+      'xml-niso': { '@el': 'sec|app', '@attr': { id: '$customerId' }, '▼': '$anchor' },
     },
     tags: [
       {
@@ -2652,6 +2652,7 @@ const BITS: _BitsConfig = {
         '@el': 'non-normative-note',
         '@attr': { id: '$customerId' },
         '@children': '$',
+        '▼': '$anchor',
       },
     },
   },
