@@ -210,6 +210,28 @@ const BITS: _BitsConfig = {
     since: '1.28.0',
     baseBitType: BitType.standardArticleNonNormative,
     description: 'Smart standard non-normative article bit',
+    // PLAN-140 Q4 (normativity inheritance): a <p> is non-normative because
+    // of an ANCESTOR element — a foreword/intro sec or an informative annex.
+    // @ancestor is a reverse-match-only constraint (forward emission ignores
+    // it); the rules are alternatives, first-satisfied wins, and the
+    // @ancestor literals give this key higher specificity than the plain
+    // normative-article <p> key wherever the context applies.
+    mappingKeys: {
+      'xml-niso': [
+        {
+          '@el': 'p',
+          '@attr': { id: '$customerId' },
+          '@ancestor': { '@attr': { 'sec-type': 'foreword|intro' } },
+          '@children': '$',
+        },
+        {
+          '@el': 'p',
+          '@attr': { id: '$customerId' },
+          '@ancestor': { '@attr': { 'content-type': 'informative' } },
+          '@children': '$',
+        },
+      ],
+    },
   },
   [BitType.smartStandardArticleNormativeCollapsible]: {
     since: '1.28.0',
@@ -2770,6 +2792,18 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardRemarkNonNormative,
     description:
       'Smart standard non-normative remark bit, used to provide non-normative remarks in smart standards',
+    // PLAN-140 Q4 rider: a warning/caution note routes to the remark bit —
+    // the same element as the note key, distinguished by the content-type
+    // attr literal (alias value: forward emits the first alternative,
+    // reverse accepts any). Most-specific-wins beats the plain note key.
+    mappingKeys: {
+      'xml-niso': {
+        '@el': 'non-normative-note',
+        '@attr': { 'content-type': 'warning|caution', id: '$customerId' },
+        '@children': '$',
+        '▼': '$anchor',
+      },
+    },
   },
   [BitType.smartStandardRemarkNormativeCollapsible]: {
     since: '1.28.0',
