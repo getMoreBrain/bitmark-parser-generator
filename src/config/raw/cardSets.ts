@@ -243,11 +243,27 @@ const CARDSETS: _CardSetsConfig = {
     // PLAN-141 F1 (NISO import): each <def-item> is one card; the sides
     // read <term>/<def>; the enclosing <legend>'s <title> lands on the
     // term side's heading tag ([#Key] header card).
-    mappingKeys: { 'xml-niso': { '@el': 'def-item', '@children': '$' } },
+    // PLAN-141 F3: a <tbx:langSet> is ALSO one card (a terminology entry —
+    // its enclosing <tbx:termEntry> is a transparent claim wrapper); its
+    // children compose the term/definition sides via the side rules below.
+    mappingKeys: {
+      'xml-niso': [
+        { '@el': 'def-item', '@children': '$' },
+        { '@el': 'tbx:langSet', '@children': '$' },
+      ],
+    },
     sides: [
       {
         name: 'term',
-        mappingKeys: { 'xml-niso': { '@el': 'term', '@text': '$' } },
+        // F3: every <tbx:tig>'s <tbx:term> STACKS one-per-line onto the
+        // single term side (the "$\n" template's authored separator; the
+        // trailing one is trimmed) — the PDF's Maus/Mus/M/Müsli stack.
+        mappingKeys: {
+          'xml-niso': [
+            { '@el': 'term', '@text': '$' },
+            { '@el': 'tbx:tig', '@children': { '@el': 'tbx:term', '@text': '$\n' } },
+          ],
+        },
         variants: [
           {
             jsonKey: 'term.text',
@@ -289,7 +305,24 @@ const CARDSETS: _CardSetsConfig = {
       },
       {
         name: 'definition',
-        mappingKeys: { 'xml-niso': { '@el': 'def', '@children': '$' } },
+        // F3: the definition side COMPOSES from the entry's fields in
+        // document order, with the ES-rendered locale affixes AUTHORED as
+        // value-position templates (never engine text): the subject field
+        // in ⟨⟩ glues (trailing space) onto the definition line; example /
+        // notes / source follow as blank-line-separated lines. The TBX
+        // grammar flags (normativeAuthorization, termType, partOfSpeech,
+        // grammaticalNumber) are unrendered machine-only data — dropped and
+        // recorded (catalog R-2, reviewed under D7 max-preservation).
+        mappingKeys: {
+          'xml-niso': [
+            { '@el': 'def', '@children': '$' },
+            { '@el': 'tbx:subjectField', '@text': '⟨$⟩ ' },
+            { '@el': 'tbx:definition', '@children': '$' },
+            { '@el': 'tbx:example', '@children': 'BEISPIEL $' },
+            { '@el': 'tbx:note', '@children': 'Anmerkung zu Begriff: $' },
+            { '@el': 'tbx:source', '@text': '[QUELLE: $]' },
+          ],
+        },
         variants: [
           {
             jsonKey: 'definition.text',

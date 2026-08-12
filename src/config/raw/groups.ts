@@ -173,6 +173,17 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_lang,
         description: 'The language for the bit',
         format: TagFormat.plainText,
+        // PLAN-141 F3 (NISO import): a term-sec's language rides
+        // <tbx:termEntry><tbx:langSet xml:lang> — a nested content slot
+        // whose leaf is a $-in-ATTR-position slot (the nested counterpart
+        // of the value-attr slot). Only termEntry elements match, so the
+        // shared tag is inert everywhere else.
+        mappingKeys: {
+          'xml-niso': {
+            '@el': 'tbx:termEntry',
+            '@children': { '@el': 'tbx:langSet', '@attr': { 'xml:lang': '$' } },
+          },
+        },
       },
       {
         key: ConfigKey.property_publisher,

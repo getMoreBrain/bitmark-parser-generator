@@ -3735,6 +3735,15 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardDefinitionListNormative,
     description:
       'Smart standard normative definition list bit, used to create normative smart standard definition lists in articles or books',
+    // PLAN-141 F3 (NISO import): a terms-and-definitions clause. STRUCTURAL-
+    // shaped: <label> → [%], the tbx:termEntry/langSet subtree builds the
+    // definition-list card via the card set's authored keys (all tig terms
+    // stacked on the term side; definition/example/notes/source composed on
+    // the definition side with authored locale affixes), langSet @xml:lang →
+    // [@lang] (nested attr slot on the tag key). Anchor = the source id.
+    mappingKeys: {
+      'xml-niso': { '@el': 'term-sec', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+    },
   },
   [BitType.smartStandardDefinitionListNonNormative]: {
     since: '5.24.0',
