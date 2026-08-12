@@ -31,6 +31,14 @@ const GROUPS: _GroupsConfig = {
         description: 'The external identifier for the bit',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
+        // PLAN-140 refs family (NISO import): the machine identifier of a
+        // referenced standard. NESTED content slot — the tag reads (and
+        // consumes) ONLY the <std-id> inside a <std> child; the remaining
+        // designation/title text stays bit body. A <std> without <std-id>
+        // does not fire the key.
+        mappingKeys: {
+          'xml-niso': { '@el': 'std', '@children': { '@el': 'std-id', '@text': '$' } },
+        },
       },
       {
         key: ConfigKey.property_sourceRL,

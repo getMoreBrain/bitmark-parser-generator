@@ -2629,6 +2629,13 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardList,
     description:
       'Smart standard list bit, used to create smart standard lists in articles or books',
+    // PLAN-140 refs family (NISO import): a reference list is a STRUCTURAL
+    // bit (no @children — it takes a path ordinal anchor and its <ref>
+    // children promote to sibling list-item bits); its <title> rides [#]
+    // via the title tag key.
+    mappingKeys: {
+      'xml-niso': { '@el': 'ref-list', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+    },
   },
   [BitType.smartStandardListCollapsible]: {
     since: '1.28.0',
@@ -4679,6 +4686,18 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardListItem,
     description:
       'Smart standard list item bit, used to create smart standard list items in articles or books',
+    // PLAN-140 refs family (NISO import): one list-item bit per <ref> —
+    // CONTENT key (its citation subtree is the body), counter anchor scoped
+    // to the containing list, <label> → [%], nested <std-id> → [@externalId]
+    // (the externalId tag key's nested content slot).
+    mappingKeys: {
+      'xml-niso': {
+        '@el': 'ref',
+        '@attr': { id: '$customerId' },
+        '@children': '$',
+        '▼': '$anchor',
+      },
+    },
   },
   [BitType.smartStandardListItemCollapsible]: {
     since: '1.28.0',
