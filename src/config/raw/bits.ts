@@ -267,6 +267,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_coverImage,
         description: 'Cover image of the catalog item',
         format: TagFormat.plainText,
+        nullable: true,
       },
       {
         key: ConfigKey.resource_coverImage,
@@ -432,6 +433,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_coverImage,
         description: 'Cover image of the catalog item',
         format: TagFormat.plainText,
+        nullable: true,
       },
       {
         key: ConfigKey.resource_coverImage,
@@ -597,6 +599,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_coverImage,
         description: 'Cover image of the catalog item',
         format: TagFormat.plainText,
+        nullable: true,
       },
       {
         key: ConfigKey.property_content2Buy,
@@ -1384,11 +1387,13 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_quizCountItems,
         description: 'The number of items in the cloze quiz',
         format: TagFormat.boolean,
+        nullable: true,
       },
       {
         key: ConfigKey.property_quizStrikethroughSolutions,
         description: 'If the cloze solutions should be strikethrough',
         format: TagFormat.boolean,
+        nullable: true,
       },
       {
         key: ConfigKey.group_gap,
@@ -3227,11 +3232,13 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_x,
         description: 'X-coordinate for the block, used to position the block on the page',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_y,
         description: 'Y-coordinate for the block, used to position the block on the page',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_width,
@@ -5084,6 +5091,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_product,
         description: 'Product reference for the product page, used to link to the product',
         format: TagFormat.plainText,
+        nullable: true,
       },
     ],
   },
@@ -5102,6 +5110,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_product,
         description: 'Product reference for the product list, used to link to the product',
         format: TagFormat.plainText,
+        nullable: true,
         maxCount: Count.infinity,
       },
       // {
@@ -5684,6 +5693,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_ratingLevelSelected,
         description: 'Selected level for the rating survey, used to define the default rating',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_buttonCaption,
