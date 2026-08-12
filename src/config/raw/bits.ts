@@ -3911,6 +3911,14 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardImageFigureNormative,
     description:
       'Smart standard normative image figure bit, used to create smart standard normative image figures in articles or books',
+    // PLAN-141 F1 (NISO import): a figure is STRUCTURAL-shaped (no
+    // @children — no body): <label> → [%], <caption>/<graphic> ride the
+    // [&image] resource chain, the <legend> def-list becomes the bit's
+    // definition-list cards, and an inner note PROMOTES as a sibling bit.
+    // Anchor = the source id (D2 revised).
+    mappingKeys: {
+      'xml-niso': { '@el': 'fig', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+    },
   },
   [BitType.smartStandardImageFigureNonNormative]: {
     since: '1.28.0',

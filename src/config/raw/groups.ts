@@ -1845,6 +1845,12 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_caption,
         description: 'The caption for the resource',
         format: TagFormat.bitmarkText,
+        // PLAN-141 F1 (NISO import): a figure's <caption><title> — the
+        // nested content slot reads the title text; the caption rides the
+        // resource chain ([&image:…][@caption:…], catalog D5).
+        mappingKeys: {
+          'xml-niso': { '@el': 'caption', '@children': { '@el': 'title', '@text': '$' } },
+        },
       },
       {
         key: ConfigKey.property_showInIndex,
@@ -2112,6 +2118,10 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.resource_image,
         exportJsonKey: { resource: { type: 'image', image: { src: '$' } } },
+        // PLAN-141 F1 (NISO import): the image URL rides the `$`-in-attr
+        // value slot — a <graphic xlink:href> child of the mapped bit
+        // element roots the [&image:URL] chain.
+        mappingKeys: { 'xml-niso': { '@el': 'graphic', '@attr': { 'xlink:href': '$' } } },
         description: 'The image resource',
         chain: [
           {
