@@ -3660,6 +3660,19 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.legend,
     description:
       'Smart standard normative legend bit, used to provide normative smart standard legends in articles or books',
+    // PLAN-141 F2 (NISO import): a free-standing <legend> (a formula's) or
+    // bare <def-list> (a table footer's — no <legend> wrapper there) that is
+    // NOT the claimed card content of its enclosing bit is a legend bit:
+    // STRUCTURAL-shaped, its <title> and <def-item>s build the
+    // definition-list cards via the card set's authored keys. A <legend>
+    // inside a figure/table bit stays that bit's claimed card content and
+    // never reaches this key. Anchor = the source id (D2 revised).
+    mappingKeys: {
+      'xml-niso': [
+        { '@el': 'legend', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+        { '@el': 'def-list', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+      ],
+    },
   },
   [BitType.smartStandardRemarkLegend]: {
     since: '3.12.0',
@@ -5849,6 +5862,12 @@ const BITS: _BitsConfig = {
         // its first child. Outside a table context it falls back to the
         // residual carrier.
         htmlKey: { '@el': 'caption', '@children': '$' },
+        // PLAN-141 F2 (NISO import): a table-wrap's <caption><title> — the
+        // nested content slot reads the title text (catalog D5: the caption
+        // is a TOP-LEVEL bit property on table bits).
+        mappingKeys: {
+          'xml-niso': { '@el': 'caption', '@children': { '@el': 'title', '@text': '$' } },
+        },
       },
       {
         key: ConfigKey.property_tableFixedHeader,
@@ -6039,6 +6058,15 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardTableExtendedNormative,
     description:
       'Smart standard normative extended table bit, used to create smart standard normative extended tables in articles or books',
+    // PLAN-141 F2 (NISO import): a table-wrap is STRUCTURAL-shaped (no
+    // @children — no body): <label> → [%], <caption><title> → the bit-level
+    // [@caption] (D5), the inner <table>/<table-wrap-foot> build the
+    // table-extended card grid via the card set's authored keys, and a
+    // footer <def-list> PROMOTES as a sibling legend bit. Anchor = the
+    // source id (D2 revised).
+    mappingKeys: {
+      'xml-niso': { '@el': 'table-wrap', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+    },
   },
   [BitType.smartStandardTableExtendedNonNormative]: {
     since: '1.28.0',
