@@ -197,13 +197,26 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardArticleNormative,
     description: 'Smart standard normative article bit',
     // PLAN-140 W3 (NISO import, tranche 1): one article bit per NISO
-    // paragraph (catalog D1). CONTENT key (@children): the subtree is the
-    // bit's body; nothing inside it promotes. KNOWN LIMITATION (plan Q4,
-    // open): normativity is inherited from ancestor context, which the
-    // pattern language cannot yet express — non-normative front-matter
-    // prose currently also lands on the normative variant.
+    // paragraph (catalog D1). CONTENT keys (@children): the subtree is the
+    // bit's body; nothing inside it promotes. (Ancestor-context normativity
+    // is the non-normative sibling's @ancestor key — plan Q4, resolved.)
+    //
+    // Second rule (catalog D1 push-down): a NUMBERED-PARAGRAPH sec is an
+    // article, not a chapter — the sec-type literal outranks the chapter
+    // key's plain sec|app rule (most-specific-wins). Content key: the sec's
+    // label rides [%] via the label tag key, its inner <p> is the body, its
+    // id is the bit's customerId, and the anchor slot marks it
+    // anchor-bearing.
     mappingKeys: {
-      'xml-niso': { '@el': 'p', '@attr': { id: '$customerId' }, '@children': '$' },
+      'xml-niso': [
+        { '@el': 'p', '@attr': { id: '$customerId' }, '@children': '$' },
+        {
+          '@el': 'sec',
+          '@attr': { 'sec-type': 'numbered-paragraph', id: '$customerId' },
+          '@children': '$',
+          '▼': '$anchor',
+        },
+      ],
     },
   },
   [BitType.smartStandardArticleNonNormative]: {
