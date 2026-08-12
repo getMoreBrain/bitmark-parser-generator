@@ -179,6 +179,10 @@ export interface _CardSetConfig {
   jsonKey: string | null; // e.g. 'cards', 'pairs', null (legacy mini-language)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form. Omit when default/null.
   htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.
+  // Named key mappings beyond html (e.g. xml-niso): the element key of the
+  // set's REPEATING CARD (exports to the default card's mappingKeys record,
+  // mirroring how the set-level jsonKey exports to the default card).
+  mappingKeys?: MappingKeys;
   sections?: Record<
     string,
     {
@@ -207,6 +211,7 @@ export interface _CardSideConfig {
   jsonKey?: string | null; // JSON path for side container (e.g. 'cells[{s}]') (legacy)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form. Omit when default/null.
   htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.
+  mappingKeys?: MappingKeys; // Named key mappings beyond html (e.g. xml-niso). Omit when absent.
   variants: _CardVariantConfig[];
 }
 

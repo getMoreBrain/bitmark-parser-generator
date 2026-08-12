@@ -240,9 +240,14 @@ const CARDSETS: _CardSetsConfig = {
   [CardSetConfigKey.definitionList]: {
     jsonKey: 'definitions',
     exportJsonKey: { definitions: '$' },
+    // PLAN-141 F1 (NISO import): each <def-item> is one card; the sides
+    // read <term>/<def>; the enclosing <legend>'s <title> lands on the
+    // term side's heading tag ([#Key] header card).
+    mappingKeys: { 'xml-niso': { '@el': 'def-item', '@children': '$' } },
     sides: [
       {
         name: 'term',
+        mappingKeys: { 'xml-niso': { '@el': 'term', '@text': '$' } },
         variants: [
           {
             jsonKey: 'term.text',
@@ -258,6 +263,7 @@ const CARDSETS: _CardSetsConfig = {
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
                 exportJsonKey: { '@bit': { heading: { forKeys: '$' } } },
+                mappingKeys: { 'xml-niso': { '@el': 'title', '@text': '$' } },
               },
               {
                 key: ConfigKey.group_resourceIcon,
@@ -283,6 +289,7 @@ const CARDSETS: _CardSetsConfig = {
       },
       {
         name: 'definition',
+        mappingKeys: { 'xml-niso': { '@el': 'def', '@children': '$' } },
         variants: [
           {
             jsonKey: 'definition.text',
