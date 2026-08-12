@@ -1558,11 +1558,28 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType._standard,
     description: 'Code bit, used for code snippets in articles or documents',
+    // PLAN-141 F4 (NISO import): a <code> block is a CONTENT bit with a
+    // literal text body; @language recovers as [@computerLanguage] (absent
+    // attr → no tag). Anchor = the source id (D2 revised).
+    mappingKeys: {
+      'xml-niso': {
+        '@el': 'code',
+        '@attr': { id: '$customerId', language: '$computerLanguage' },
+        '▼': '$anchor',
+        '@text': '$',
+      },
+    },
     tags: [
       {
         key: ConfigKey.property_computerLanguage,
         description: 'The programming language of the code snippet',
         format: TagFormat.plainText,
+        // PLAN-141 F4 (NISO import): the bit key's `language` sigil recovers
+        // a present attr; this `@absent` rule supplies the AUTHORED default
+        // when the source carries none (catalog code row — an untyped block
+        // is `[@computerLanguage:text]`). Fires only on foreign imports,
+        // never the carrier round-trip.
+        mappingKeys: { 'xml-niso': [{ '@absent': 'text' }] },
       },
       {
         key: ConfigKey.property_codeLineNumbers,
@@ -1605,6 +1622,19 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.formula,
     description:
       'Smart standard normative formula bit, used for mathematical formulas in smart standards that are normative',
+    // PLAN-141 F4 (NISO import): a <disp-formula> is a CONTENT bit whose
+    // latex-format body carries the <mml:math> subtree VERBATIM (G1 — no
+    // MathML↔LaTeX transform; ids stripped); <label> → [%]; a contained
+    // <legend> PROMOTES as a sibling legend bit (cards cannot nest in a
+    // body). Anchor = the source id (D2 revised).
+    mappingKeys: {
+      'xml-niso': {
+        '@el': 'disp-formula',
+        '@attr': { id: '$customerId' },
+        '▼': '$anchor',
+        '@children': '$',
+      },
+    },
   },
   [BitType.smartStandardRemarkFormula]: {
     since: '3.11.0',
