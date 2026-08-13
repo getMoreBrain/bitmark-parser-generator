@@ -1,0 +1,19 @@
+[.extractor-reconcile]
+==== text ====
+{
+  "config": {
+    "ignoreEOLHyphens": true
+  },
+  "issues": [
+    {
+      "bitId": "bit-1",
+      "code": "MISSING_TEXT",
+      "status": "accepted"
+    },
+    {
+      "bitId": "bit-2",
+      "code": "EXTRA_TEXT",
+      "status": "fixed"
+    }
+  ]
+}
