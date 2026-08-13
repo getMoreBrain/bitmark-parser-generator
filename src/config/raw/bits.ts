@@ -52,7 +52,6 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_flashcardSet,
         description: 'The flashcard set to use for the app flashcards',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -386,7 +385,6 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_gmbExternalShopItems,
         description: 'Array of external shop items',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -553,7 +551,6 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_gmbExternalShopItems,
         description: 'Array of external shop items',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -708,7 +705,6 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_gmbExternalShopItems,
         description: 'Array of external shop items',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -1164,7 +1160,6 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_bookAlias,
         description: 'The alias for the book',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
     ],
@@ -1523,13 +1518,11 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_codeLineNumbers,
         description: 'If line numbers should be displayed for the code snippet',
         format: TagFormat.boolean,
-        nullable: true,
       },
       {
         key: ConfigKey.property_codeMinimap,
         description: 'If a minimap should be displayed for the code snippet',
         format: TagFormat.boolean,
-        nullable: true,
       },
     ],
     textFormatDefault: TextFormat.plainText,
@@ -2242,7 +2235,6 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_classification,
         description: 'Classification for the created bits',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
     ],
@@ -2928,7 +2920,6 @@ const BITS: _BitsConfig = {
         description:
           'Allowed bits in the container, used to define which bits can be placed inside',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
     ],
@@ -3283,7 +3274,6 @@ const BITS: _BitsConfig = {
         description:
           'Available classifications for the block, used to define possible classifications',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -5176,7 +5166,6 @@ const BITS: _BitsConfig = {
         description:
           'Product video reference for the product video list, used to link to the video',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       // {
@@ -6077,7 +6066,6 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_tocResource,
         description: 'Resource content for the table of contents, used to define the resource',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -6098,7 +6086,6 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_tocContent,
         description: 'Content for the table of contents, used to define the content section',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -6247,7 +6234,6 @@ const BITS: _BitsConfig = {
         description:
           'Accepted file types for the hand-in file, used to define allowed file formats',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
     ],
@@ -6292,7 +6278,6 @@ const BITS: _BitsConfig = {
         description:
           'Accepted file types for the hand-in system media, used to define allowed file formats',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
     ],
@@ -6307,7 +6292,6 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_handInRequirement,
         description: 'Requirement for the hand-in submission, used to define what is needed',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {

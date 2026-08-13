@@ -14,7 +14,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_id,
         description: 'The unique identifier(s) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -31,7 +30,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_externalId,
         description: 'The external identifier for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -88,35 +86,30 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_searchIndex,
         description: 'The search index(es) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_analyticsTag,
         description: 'The analytics tag(s) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_categoryTag,
         description: 'The category tag(s) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_topicTag,
         description: 'The topic tag(s) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_reportTag,
         description: 'The report tag(s) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -138,7 +131,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_disableFeedback,
         description: 'If true, feedback is disabled for the bit',
         format: TagFormat.boolean,
-        nullable: true,
       },
       {
         key: ConfigKey.property_diffTo,
@@ -170,7 +162,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_ageRange,
         description: 'The age range for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -182,7 +173,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_publisher,
         description: 'The publisher(s) of the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -207,7 +197,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_target,
         description: 'The target(s) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -255,28 +244,24 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_reductionTag,
         description: 'The reduction tag(s) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_bubbleTag,
         description: 'The bubble tag(s) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_extractorTag,
         description: 'The extractor tag(s) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_extractorInternal,
         description: 'Internal metadata used by the extractor for processing purposes',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -290,7 +275,6 @@ const GROUPS: _GroupsConfig = {
         description:
           'Fingerprint(s) used by the AI extractor to identify the bit (font, style, color, pixels, etc.)',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -327,7 +311,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_colorTag,
         description: 'The color tag(s) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -352,14 +335,12 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_layer,
         description: 'The layer(s) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_layerRole,
         description: 'The layer role(s) for the bit',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -546,7 +527,6 @@ const GROUPS: _GroupsConfig = {
             key: ConfigKey.property_trim,
             description: 'If true, the image is trimmed',
             format: TagFormat.boolean,
-            nullable: true,
           },
         ],
       },
@@ -1297,7 +1277,6 @@ const GROUPS: _GroupsConfig = {
             key: ConfigKey.property_emphasis,
             description: 'The emphasis of the mark',
             format: TagFormat.plainText,
-            nullable: true,
           },
         ],
       },
@@ -1356,7 +1335,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_language,
         description: 'The language of the book',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -1368,7 +1346,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_spaceId,
         description: 'The space ID for the book',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -1464,7 +1441,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_backgroundImage,
         description: 'The background image(s) of the book',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -1488,28 +1464,24 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_subject,
         description: 'The subject(s) of the book',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_author,
         description: 'The author(s) of the book',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_publications,
         description: 'The publication(s) of the book',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
         key: ConfigKey.property_relatedBook,
         description: 'Books related to this book',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -1571,7 +1543,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_extractorExtractionTimestamp,
         description: 'Extraction timestamps for book conversion',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
     ],
@@ -1609,7 +1580,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_list,
         description: 'The list of items in the learning path',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -1633,7 +1603,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_deeplink,
         description: 'The deeplink(s) for the learning path',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -1793,7 +1762,6 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_additionalSolutions,
         description: 'Additional solutions',
         format: TagFormat.plainText,
-        nullable: true,
         maxCount: Count.infinity,
       },
     ],
