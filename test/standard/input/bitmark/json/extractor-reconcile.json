@@ -4,6 +4,9 @@
       "type": "extractor-reconcile",
       "format": "json",
       "bitLevel": 1,
+      "id": [
+        "reconcile-10411"
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -33,6 +36,6 @@
       "bitmarkVersion": "3",
       "textParserVersion": "8.37.3"
     },
-    "bitmark": "[.extractor-reconcile]\n==== text ====\n{\n  \"config\": {\n    \"ignoreEOLHyphens\": true\n  },\n  \"issues\": [\n    {\n      \"bitId\": \"bit-1\",\n      \"code\": \"MISSING_TEXT\",\n      \"status\": \"accepted\"\n    },\n    {\n      \"bitId\": \"bit-2\",\n      \"code\": \"EXTRA_TEXT\",\n      \"status\": \"fixed\"\n    }\n  ]\n}"
+    "bitmark": "[.extractor-reconcile]\n[@id:reconcile-10411]\n==== text ====\n{\n  \"config\": {\n    \"ignoreEOLHyphens\": true\n  },\n  \"issues\": [\n    {\n      \"bitId\": \"bit-1\",\n      \"code\": \"MISSING_TEXT\",\n      \"status\": \"accepted\"\n    },\n    {\n      \"bitId\": \"bit-2\",\n      \"code\": \"EXTRA_TEXT\",\n      \"status\": \"fixed\"\n    }\n  ]\n}"
   }
 ]

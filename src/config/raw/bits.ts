@@ -3206,11 +3206,10 @@ const BITS: _BitsConfig = {
     textFormatDefault: TextFormat.json,
   },
   [BitType.extractorReconcile]: {
-    since: '5.34.0',
+    since: '5.35.0',
     baseBitType: BitType._standard,
     description:
       'Extractor reconcile bit, used to store PDF-compare reconciliation decisions (config and issues) in JSON',
-
     textFormatDefault: TextFormat.json,
   },
   [BitType.extractorAiChat]: {
