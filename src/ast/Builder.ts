@@ -140,6 +140,9 @@ class Builder extends BaseBuilder {
       padletId?: string;
       jupyterId?: string;
       jupyterExecutionCount?: number;
+      copyright?: string;
+      license?: string;
+      rightsPolicy?: string | string[];
       sourceRL?: string;
       isPublic?: boolean;
       isTemplate?: boolean;
@@ -525,6 +528,14 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_jupyterExecutionCount,
         data.jupyterExecutionCount,
+        options,
+      ),
+      copyright: this.toAstProperty(bitType, ConfigKey.property_copyright, data.copyright, options),
+      license: this.toAstProperty(bitType, ConfigKey.property_license, data.license, options),
+      rightsPolicy: this.toAstProperty(
+        bitType,
+        ConfigKey.property_rightsPolicy,
+        data.rightsPolicy,
         options,
       ),
       sourceRL: this.toAstProperty(bitType, ConfigKey.property_sourceRL, data.sourceRL, options),

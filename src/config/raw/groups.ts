@@ -38,6 +38,22 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.plainText,
       },
       {
+        key: ConfigKey.property_copyright,
+        description: 'The copyright information for the bit',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_license,
+        description: 'The license for the bit',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_rightsPolicy,
+        description: 'The rights policy or policies for the bit',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
         key: ConfigKey.property_isTemplate,
         description: 'If true, the bit is a template',
         format: TagFormat.boolean,
