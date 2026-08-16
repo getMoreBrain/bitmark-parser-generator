@@ -189,6 +189,9 @@ export interface _CardSetConfig {
       jsonKey: string;
       exportJsonKey?: ExportJsonKey;
       htmlKey?: HtmlKey;
+      // PLAN-141 F2: named key mappings beyond html (e.g. xml-niso) on the
+      // SECTION — exported to the section's generated card record.
+      mappingKeys?: MappingKeys;
       isDefault?: boolean;
       sideJsonKey?: string;
       sideExportJsonKey?: ExportJsonKey;
