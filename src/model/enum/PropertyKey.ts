@@ -229,6 +229,7 @@ const propertyKeys = {
   property_revealSolutions: '@revealSolutions',
   property_reviewTag: '@reviewTag',
   property_reviewerTag: '@reviewerTag',
+  property_rightsPolicy: '@rightsPolicy',
   property_sampleSolution: '@sampleSolution',
   property_scormSource: '@scormSource',
   property_search: '@search',

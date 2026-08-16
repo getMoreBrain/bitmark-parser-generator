@@ -38,6 +38,22 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.plainText,
       },
       {
+        key: ConfigKey.property_copyright,
+        description: 'The copyright information for the bit',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_license,
+        description: 'The license for the bit',
+        format: TagFormat.plainText,
+      },
+      {
+        key: ConfigKey.property_rightsPolicy,
+        description: 'The rights policy or policies for the bit',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+      },
+      {
         key: ConfigKey.property_isTemplate,
         description: 'If true, the bit is a template',
         format: TagFormat.boolean,
@@ -64,6 +80,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_aiGenerated,
         description: 'If true, the bit is AI-generated',
         format: TagFormat.boolean,
+        nullable: true,
       },
       {
         key: ConfigKey.property_machineTranslated,
@@ -79,6 +96,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_spansPageBreak,
         description: 'If true, the bit spans a page break',
         format: TagFormat.boolean,
+        nullable: true,
       },
       {
         key: ConfigKey.property_searchIndex,
@@ -181,6 +199,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_theme,
         description: 'The theme(s) for the bit',
         format: TagFormat.plainText,
+        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -199,6 +218,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_tag,
         description: 'The tag(s) for the bit',
         format: TagFormat.plainText,
+        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -218,6 +238,7 @@ const GROUPS: _GroupsConfig = {
             exportJsonKey: { tags: ['$'] },
             description: 'The tag(s) for the group',
             format: TagFormat.plainText,
+            nullable: true,
             maxCount: Count.infinity,
           },
         ],
@@ -336,6 +357,20 @@ const GROUPS: _GroupsConfig = {
         description: 'The layer role(s) for the bit',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
+      },
+      {
+        // Universal @internalComment — declares in config what Config.ts also
+        // injects programmatically into every bit (its push runs last and wins
+        // the keyed merge, so runtime behaviour is unchanged). Declared here so
+        // the config export (ConfigBuilder → assets/config → configurator →
+        // bitmark.json) carries the tag for downstream parsers. Empty
+        // exportJsonKey: consumed but never emitted to the bit JSON (the value
+        // is routed to parser.internalComments).
+        key: ConfigKey.property_internalComment,
+        description: 'Internal comment for the bit.',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+        exportJsonKey: {},
       },
     ],
   },
@@ -496,6 +531,7 @@ const GROUPS: _GroupsConfig = {
             key: ConfigKey.property_size,
             description: 'The size of the image',
             format: TagFormat.number,
+            nullable: true,
           },
           {
             key: ConfigKey.property_format,
@@ -1401,6 +1437,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_coverImage,
         description: 'The cover image(s) of the book',
         format: TagFormat.plainText,
+        nullable: true,
         maxCount: Count.infinity,
       },
       {
@@ -1718,6 +1755,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_platformNeedsShadow,
         description: 'If true, the platform needs shadow',
         format: TagFormat.boolean,
+        nullable: true,
       },
     ],
   },
@@ -1729,6 +1767,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_revealSolutions,
         description: 'If true, the quiz solutions are revealed',
         format: TagFormat.boolean,
+        nullable: true,
         // defaultValue: 'false',
       },
       {
@@ -1878,11 +1917,13 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_width,
         description: 'The width of the image',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_height,
         description: 'The height of the image',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_alt,
@@ -1928,11 +1969,13 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_width,
         description: 'The width of the image',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_height,
         description: 'The height of the image',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_alt,
@@ -1985,11 +2028,13 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_width,
         description: 'The width of the video',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_height,
         description: 'The height of the video',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_duration,
