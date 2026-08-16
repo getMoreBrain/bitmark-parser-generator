@@ -1005,6 +1005,13 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType._standard,
     description: 'Book bit, used to represent a book',
+    // PLAN-141 F5 (NISO import): the <std-meta> front-matter container is
+    // the [.book] bit (STRUCTURAL, first in document order): primary
+    // title-wrap → [#], primary content-language → [@language], dated
+    // std-ref → [@externalId] (tag keys with maxEmits caps — the NISO
+    // convention puts the document language first). std-meta has no id, so
+    // no anchor/customerId. Remaining leaves drop as recorded loss (R-4).
+    mappingKeys: { 'xml-niso': { '@el': 'std-meta' } },
     tags: [
       {
         key: ConfigKey.group_bookCommon,

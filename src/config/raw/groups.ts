@@ -36,8 +36,15 @@ const GROUPS: _GroupsConfig = {
         // consumes) ONLY the <std-id> inside a <std> child; the remaining
         // designation/title text stays bit body. A <std> without <std-id>
         // does not fire the key.
+        // PLAN-141 F5: on the [.book] bit, the DATED <std-ref> designation
+        // is the document's external id. Safe rule order: <std-ref> is a
+        // direct bit-element child only under <std-meta> (everywhere else
+        // it nests inside <std>, which the tag spine never reaches).
         mappingKeys: {
-          'xml-niso': { '@el': 'std', '@children': { '@el': 'std-id', '@text': '$' } },
+          'xml-niso': [
+            { '@el': 'std', '@children': { '@el': 'std-id', '@text': '$' } },
+            { '@el': 'std-ref', '@attr': { type: 'dated' }, '@text': '$' },
+          ],
         },
       },
       {
@@ -1351,6 +1358,14 @@ const GROUPS: _GroupsConfig = {
         description: 'The language of the book',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
+        // PLAN-141 F5 (NISO import): only the PRIMARY (first)
+        // <content-language> survives — the maxEmits cap realises the
+        // catalog's document-language rule (extras drop, R-4).
+        mappingKeys: {
+          'xml-niso': [
+            { predicates: [], maxEmits: 1, rule: { '@el': 'content-language', '@text': '$' } },
+          ],
+        },
       },
       {
         key: ConfigKey.property_customerExternalId,
@@ -1427,6 +1442,17 @@ const GROUPS: _GroupsConfig = {
         maxCount: 2,
         jsonKey: 'title|multi(count=2, key=subtitle)',
         exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
+        // PLAN-141 F5 (NISO import): the PRIMARY (first) <title-wrap>'s
+        // assembled <full> title → [#]; the per-language extras drop (R-4).
+        mappingKeys: {
+          'xml-niso': [
+            {
+              predicates: [],
+              maxEmits: 1,
+              rule: { '@el': 'title-wrap', '@children': { '@el': 'full', '@text': '$' } },
+            },
+          ],
+        },
       },
       {
         key: ConfigKey.property_subtype,
