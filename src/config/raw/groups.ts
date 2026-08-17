@@ -31,6 +31,21 @@ const GROUPS: _GroupsConfig = {
         description: 'The external identifier for the bit',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
+        // PLAN-140 refs family (NISO import): the machine identifier of a
+        // referenced standard. NESTED content slot — the tag reads (and
+        // consumes) ONLY the <std-id> inside a <std> child; the remaining
+        // designation/title text stays bit body. A <std> without <std-id>
+        // does not fire the key.
+        // PLAN-141 F5: on the [.book] bit, the DATED <std-ref> designation
+        // is the document's external id. Safe rule order: <std-ref> is a
+        // direct bit-element child only under <std-meta> (everywhere else
+        // it nests inside <std>, which the tag spine never reaches).
+        mappingKeys: {
+          'xml-niso-iec': [
+            { '@el': 'std', '@children': { '@el': 'std-id', '@text': '$' } },
+            { '@el': 'std-ref', '@attr': { type: 'dated' }, '@text': '$' },
+          ],
+        },
       },
       {
         key: ConfigKey.property_sourceRL,
@@ -183,6 +198,17 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_lang,
         description: 'The language for the bit',
         format: TagFormat.plainText,
+        // PLAN-141 F3 (NISO import): a term-sec's language rides
+        // <tbx:termEntry><tbx:langSet xml:lang> — a nested content slot
+        // whose leaf is a $-in-ATTR-position slot (the nested counterpart
+        // of the value-attr slot). Only termEntry elements match, so the
+        // shared tag is inert everywhere else.
+        mappingKeys: {
+          'xml-niso-iec': {
+            '@el': 'tbx:termEntry',
+            '@children': { '@el': 'tbx:langSet', '@attr': { 'xml:lang': '$' } },
+          },
+        },
       },
       {
         key: ConfigKey.property_publisher,
@@ -382,6 +408,9 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.tag_item,
         jsonKey: 'item',
         exportJsonKey: { item: '$' },
+        // PLAN-140 W3 (NISO import): the clause/note label of a mapped
+        // source element ([%1], [%ANMERKUNG 1]).
+        mappingKeys: { 'xml-niso-iec': { '@el': 'label', '@text': '$' } },
         description: 'The item for the bit',
         chain: [
           {
@@ -1351,6 +1380,14 @@ const GROUPS: _GroupsConfig = {
         description: 'The language of the book',
         format: TagFormat.plainText,
         maxCount: Count.infinity,
+        // PLAN-141 F5 (NISO import): only the PRIMARY (first)
+        // <content-language> survives — the maxEmits cap realises the
+        // catalog's document-language rule (extras drop, R-4).
+        mappingKeys: {
+          'xml-niso-iec': [
+            { predicates: [], maxEmits: 1, rule: { '@el': 'content-language', '@text': '$' } },
+          ],
+        },
       },
       {
         key: ConfigKey.property_customerExternalId,
@@ -1427,6 +1464,17 @@ const GROUPS: _GroupsConfig = {
         maxCount: 2,
         jsonKey: 'title|multi(count=2, key=subtitle)',
         exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
+        // PLAN-141 F5 (NISO import): the PRIMARY (first) <title-wrap>'s
+        // assembled <full> title → [#]; the per-language extras drop (R-4).
+        mappingKeys: {
+          'xml-niso-iec': [
+            {
+              predicates: [],
+              maxEmits: 1,
+              rule: { '@el': 'title-wrap', '@children': { '@el': 'full', '@text': '$' } },
+            },
+          ],
+        },
       },
       {
         key: ConfigKey.property_subtype,
@@ -1859,6 +1907,12 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_caption,
         description: 'The caption for the resource',
         format: TagFormat.bitmarkText,
+        // PLAN-141 F1 (NISO import): a figure's <caption><title> — the
+        // nested content slot reads the title text; the caption rides the
+        // resource chain ([&image:…][@caption:…], catalog D5).
+        mappingKeys: {
+          'xml-niso-iec': { '@el': 'caption', '@children': { '@el': 'title', '@text': '$' } },
+        },
       },
       {
         key: ConfigKey.property_showInIndex,
@@ -2132,6 +2186,10 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.resource_image,
         exportJsonKey: { resource: { type: 'image', image: { src: '$' } } },
+        // PLAN-141 F1 (NISO import): the image URL rides the `$`-in-attr
+        // value slot — a <graphic xlink:href> child of the mapped bit
+        // element roots the [&image:URL] chain.
+        mappingKeys: { 'xml-niso-iec': { '@el': 'graphic', '@attr': { 'xlink:href': '$' } } },
         description: 'The image resource',
         chain: [
           {
