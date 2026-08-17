@@ -187,6 +187,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_diffTime,
         description: 'The diff time for the bit',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_ageRange,
@@ -1788,16 +1789,19 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_platformMargin,
         description: 'The platform margin',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_platformBorderRadius,
         description: 'The platform border radius',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_platformSelectionBorderRadius,
         description: 'The platform selection border radius',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_platformNeedsShadow,

@@ -879,6 +879,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_maxCreatedBits,
         description: 'The maximum number of bits that can be created from this bit',
         format: TagFormat.number,
+        nullable: true,
       },
     ],
     textFormatDefault: TextFormat.plainText,
@@ -1302,11 +1303,13 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_focusX,
         description: 'The X coordinate for focusing the image in the browser',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_focusY,
         description: 'The Y coordinate for focusing the image in the browser',
         format: TagFormat.number,
+        nullable: true,
       },
     ],
   },
@@ -2201,6 +2204,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_reasonableNumOfChars,
         description: 'The reasonable number of characters for the essay',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_sampleSolution,
@@ -3358,6 +3362,7 @@ const BITS: _BitsConfig = {
         description:
           'Page number for the block, used to indicate the page on which the block appears',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_x,
@@ -3375,16 +3380,19 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_width,
         description: 'Width of the block, used to define the size of the block on the page',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_height,
         description: 'Height of the block, used to define the size of the block on the page',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_index,
         description: 'Index of the block, used to order blocks within the extractor page',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_classification,
@@ -3866,11 +3874,13 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_focusX,
         description: 'X-coordinate for the focus point, used to define the focus area in the image',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_focusY,
         description: 'Y-coordinate for the focus point, used to define the focus area in the image',
         format: TagFormat.number,
+        nullable: true,
       },
     ],
   },
@@ -6216,6 +6226,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_maxDisplayLevel,
         description: 'Maximum display level for the chapter in the table of contents',
         format: TagFormat.number,
+        nullable: true,
       },
     ],
   },
@@ -6229,6 +6240,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_maxTocChapterLevel,
         description: 'Maximum chapter level for the inline table of contents',
         format: TagFormat.number,
+        nullable: true,
       },
     ],
   },
@@ -6677,11 +6689,13 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_width, // Same as image
         description: 'Width for the embedded content, used to define the width in pixels',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_height, // Same as image
         description: 'Height for the embedded content, used to define the height in pixels',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_vendorUrl,
@@ -6723,6 +6737,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_jupyterExecutionCount,
         description: 'Execution count for the Jupyter output, used to define the execution order',
         format: TagFormat.number,
+        nullable: true,
       },
     ],
     textFormatDefault: TextFormat.plainText,
