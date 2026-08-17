@@ -29,11 +29,11 @@ export type HtmlKey = null | boolean | number | string | HtmlKey[] | { [k: strin
 
 /**
  * Named key mappings keyed by mapping id (the `mappingTypes` catalog:
- * `"html"`, `"xml"`, `"niso-xml-iec"`, …). The generic successor of the per-field
+ * `"html"`, `"xml"`, `"xml-niso-iec"`, …). The generic successor of the per-field
  * forms (`htmlKey` ≡ `mappingKeys.html`): values are key patterns in the
  * shared pattern grammar ({@link HtmlKey}). Mirrored verbatim into
  * `bitmark.json`'s per-construct `mappingKeys` record (PLAN-140 W3 — the
- * first consumer is the bit-level `niso-xml-iec` element key set for the NISO
+ * first consumer is the bit-level `xml-niso-iec` element key set for the NISO
  * import). Omit when absent.
  */
 export type MappingKeys = { [mappingId: string]: HtmlKey };
@@ -166,7 +166,7 @@ export interface _AbstractTagConfig {
   jsonKey?: string; // If the json key is different from the tag (legacy mini-language)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form (specs/JSONKEY_SYNTAX.md). Omit when default.
   htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.
-  mappingKeys?: MappingKeys; // Named key mappings beyond html (e.g. niso-xml-iec). Omit when absent.
+  mappingKeys?: MappingKeys; // Named key mappings beyond html (e.g. xml-niso-iec). Omit when absent.
   chain?: _AbstractTagConfig[];
 }
 
@@ -179,7 +179,7 @@ export interface _CardSetConfig {
   jsonKey: string | null; // e.g. 'cards', 'pairs', null (legacy mini-language)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form. Omit when default/null.
   htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.
-  // Named key mappings beyond html (e.g. niso-xml-iec): the element key of the
+  // Named key mappings beyond html (e.g. xml-niso-iec): the element key of the
   // set's REPEATING CARD (exports to the default card's mappingKeys record,
   // mirroring how the set-level jsonKey exports to the default card).
   mappingKeys?: MappingKeys;
@@ -189,7 +189,7 @@ export interface _CardSetConfig {
       jsonKey: string;
       exportJsonKey?: ExportJsonKey;
       htmlKey?: HtmlKey;
-      // PLAN-141 F2: named key mappings beyond html (e.g. niso-xml-iec) on the
+      // PLAN-141 F2: named key mappings beyond html (e.g. xml-niso-iec) on the
       // SECTION — exported to the section's generated card record.
       mappingKeys?: MappingKeys;
       isDefault?: boolean;
@@ -214,7 +214,7 @@ export interface _CardSideConfig {
   jsonKey?: string | null; // JSON path for side container (e.g. 'cells[{s}]') (legacy)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form. Omit when default/null.
   htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.
-  mappingKeys?: MappingKeys; // Named key mappings beyond html (e.g. niso-xml-iec). Omit when absent.
+  mappingKeys?: MappingKeys; // Named key mappings beyond html (e.g. xml-niso-iec). Omit when absent.
   variants: _CardVariantConfig[];
 }
 

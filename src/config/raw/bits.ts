@@ -153,7 +153,7 @@ const BITS: _BitsConfig = {
         jsonKey: 'title|multi(count=2, key=subtitle)',
         exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
         // PLAN-140 W3 (NISO import): the title of a mapped source element.
-        mappingKeys: { 'niso-xml-iec': { '@el': 'title', '@text': '$' } },
+        mappingKeys: { 'xml-niso-iec': { '@el': 'title', '@text': '$' } },
         key: ConfigKey.tag_title,
         description: 'The title of the article',
       },
@@ -208,7 +208,7 @@ const BITS: _BitsConfig = {
     // id is the bit's customerId, and the anchor slot marks it
     // anchor-bearing.
     mappingKeys: {
-      'niso-xml-iec': [
+      'xml-niso-iec': [
         { '@el': 'p', '@attr': { id: '$customerId' }, '@children': '$' },
         {
           '@el': 'sec',
@@ -230,7 +230,7 @@ const BITS: _BitsConfig = {
     // @ancestor literals give this key higher specificity than the plain
     // normative-article <p> key wherever the context applies.
     mappingKeys: {
-      'niso-xml-iec': [
+      'xml-niso-iec': [
         {
           '@el': 'p',
           '@attr': { id: '$customerId' },
@@ -1011,7 +1011,7 @@ const BITS: _BitsConfig = {
     // std-ref → [@externalId] (tag keys with maxEmits caps — the NISO
     // convention puts the document language first). std-meta has no id, so
     // no anchor/customerId. Remaining leaves drop as recorded loss (R-4).
-    mappingKeys: { 'niso-xml-iec': { '@el': 'std-meta' } },
+    mappingKeys: { 'xml-niso-iec': { '@el': 'std-meta' } },
     tags: [
       {
         key: ConfigKey.group_bookCommon,
@@ -1341,7 +1341,7 @@ const BITS: _BitsConfig = {
     // bit, and the chapter level derives from nesting depth (catalog D1).
     // The source id lands as [@customerId] (two-id model, D2).
     mappingKeys: {
-      'niso-xml-iec': { '@el': 'sec|app', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+      'xml-niso-iec': { '@el': 'sec|app', '@attr': { id: '$customerId' }, '▼': '$anchor' },
     },
     tags: [
       {
@@ -1357,7 +1357,7 @@ const BITS: _BitsConfig = {
         exportJsonKey: { title: '$', level: '$level' },
         // PLAN-140 W3 (NISO import): the section/annex title; the heading
         // level rides the normalizer-derived nesting depth (plan Q2).
-        mappingKeys: { 'niso-xml-iec': { '@el': 'title', '@text': '$' } },
+        mappingKeys: { 'xml-niso-iec': { '@el': 'title', '@text': '$' } },
       },
       {
         key: ConfigKey.property_toc,
@@ -1569,7 +1569,7 @@ const BITS: _BitsConfig = {
     // literal text body; @language recovers as [@computerLanguage] (absent
     // attr → no tag). Anchor = the source id (D2 revised).
     mappingKeys: {
-      'niso-xml-iec': {
+      'xml-niso-iec': {
         '@el': 'code',
         '@attr': { id: '$customerId', language: '$computerLanguage' },
         '▼': '$anchor',
@@ -1586,7 +1586,7 @@ const BITS: _BitsConfig = {
         // when the source carries none (catalog code row — an untyped block
         // is `[@computerLanguage:text]`). Fires only on foreign imports,
         // never the carrier round-trip.
-        mappingKeys: { 'niso-xml-iec': [{ '@absent': 'text' }] },
+        mappingKeys: { 'xml-niso-iec': [{ '@absent': 'text' }] },
       },
       {
         key: ConfigKey.property_codeLineNumbers,
@@ -1635,7 +1635,7 @@ const BITS: _BitsConfig = {
     // <legend> PROMOTES as a sibling legend bit (cards cannot nest in a
     // body). Anchor = the source id (D2 revised).
     mappingKeys: {
-      'niso-xml-iec': {
+      'xml-niso-iec': {
         '@el': 'disp-formula',
         '@attr': { id: '$customerId' },
         '▼': '$anchor',
@@ -2671,7 +2671,7 @@ const BITS: _BitsConfig = {
     // children promote to sibling list-item bits); its <title> rides [#]
     // via the title tag key.
     mappingKeys: {
-      'niso-xml-iec': { '@el': 'ref-list', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+      'xml-niso-iec': { '@el': 'ref-list', '@attr': { id: '$customerId' }, '▼': '$anchor' },
     },
   },
   [BitType.smartStandardListCollapsible]: {
@@ -2727,7 +2727,7 @@ const BITS: _BitsConfig = {
     // PLAN-140 W3 (NISO import, tranche 1). CONTENT key (@children): a
     // note's inner paragraphs are note body, never separate bits.
     mappingKeys: {
-      'niso-xml-iec': {
+      'xml-niso-iec': {
         '@el': 'non-normative-note',
         '@attr': { id: '$customerId' },
         '@children': '$',
@@ -2854,7 +2854,7 @@ const BITS: _BitsConfig = {
     // attr literal (alias value: forward emits the first alternative,
     // reverse accepts any). Most-specific-wins beats the plain note key.
     mappingKeys: {
-      'niso-xml-iec': {
+      'xml-niso-iec': {
         '@el': 'non-normative-note',
         '@attr': { 'content-type': 'warning|caution', id: '$customerId' },
         '@children': '$',
@@ -3705,7 +3705,7 @@ const BITS: _BitsConfig = {
     // inside a figure/table bit stays that bit's claimed card content and
     // never reaches this key. Anchor = the source id (D2 revised).
     mappingKeys: {
-      'niso-xml-iec': [
+      'xml-niso-iec': [
         { '@el': 'legend', '@attr': { id: '$customerId' }, '▼': '$anchor' },
         { '@el': 'def-list', '@attr': { id: '$customerId' }, '▼': '$anchor' },
       ],
@@ -3779,7 +3779,7 @@ const BITS: _BitsConfig = {
     // the definition side with authored locale affixes), langSet @xml:lang →
     // [@lang] (nested attr slot on the tag key). Anchor = the source id.
     mappingKeys: {
-      'niso-xml-iec': { '@el': 'term-sec', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+      'xml-niso-iec': { '@el': 'term-sec', '@attr': { id: '$customerId' }, '▼': '$anchor' },
     },
   },
   [BitType.smartStandardDefinitionListNonNormative]: {
@@ -3976,7 +3976,7 @@ const BITS: _BitsConfig = {
     // definition-list cards, and an inner note PROMOTES as a sibling bit.
     // Anchor = the source id (D2 revised).
     mappingKeys: {
-      'niso-xml-iec': { '@el': 'fig', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+      'xml-niso-iec': { '@el': 'fig', '@attr': { id: '$customerId' }, '▼': '$anchor' },
     },
   },
   [BitType.smartStandardImageFigureNonNormative]: {
@@ -4758,7 +4758,7 @@ const BITS: _BitsConfig = {
     // to the containing list, <label> → [%], nested <std-id> → [@externalId]
     // (the externalId tag key's nested content slot).
     mappingKeys: {
-      'niso-xml-iec': {
+      'xml-niso-iec': {
         '@el': 'ref',
         '@attr': { id: '$customerId' },
         '@children': '$',
@@ -5912,7 +5912,7 @@ const BITS: _BitsConfig = {
         // nested content slot reads the title text (catalog D5: the caption
         // is a TOP-LEVEL bit property on table bits).
         mappingKeys: {
-          'niso-xml-iec': { '@el': 'caption', '@children': { '@el': 'title', '@text': '$' } },
+          'xml-niso-iec': { '@el': 'caption', '@children': { '@el': 'title', '@text': '$' } },
         },
       },
       {
@@ -6111,7 +6111,7 @@ const BITS: _BitsConfig = {
     // footer <def-list> PROMOTES as a sibling legend bit. Anchor = the
     // source id (D2 revised).
     mappingKeys: {
-      'niso-xml-iec': { '@el': 'table-wrap', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+      'xml-niso-iec': { '@el': 'table-wrap', '@attr': { id: '$customerId' }, '▼': '$anchor' },
     },
   },
   [BitType.smartStandardTableExtendedNonNormative]: {
