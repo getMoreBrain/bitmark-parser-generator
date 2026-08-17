@@ -1737,7 +1737,9 @@ const CARDSETS: _CardSetsConfig = {
         htmlKey: { '@el': 'thead', '@children': { '@el': 'tr', '@children': '$' } },
         // PLAN-141 F2 (NISO import): the XHTML table model NISO uses — a
         // <thead> SECTION whose <tr> rows are the header cards.
-        mappingKeys: { 'xml-niso-iec': { '@el': 'thead', '@children': { '@el': 'tr', '@children': '$' } } },
+        mappingKeys: {
+          'xml-niso-iec': { '@el': 'thead', '@children': { '@el': 'tr', '@children': '$' } },
+        },
         sideJsonKey: 'cells[{s}]|set(title=true)',
         sideExportJsonKey: { cells: { $s: { title: true, $: '$' } } },
         // Header cells are `<th>`. The `width` attribute is contributed by the
@@ -1750,7 +1752,9 @@ const CARDSETS: _CardSetsConfig = {
         exportJsonKey: { table: { body: { rows: '$' } } },
         htmlKey: { '@el': 'tbody', '@children': { '@el': 'tr', '@children': '$' } },
         // PLAN-141 F2 (NISO import): <tbody> rows are the (default) data cards.
-        mappingKeys: { 'xml-niso-iec': { '@el': 'tbody', '@children': { '@el': 'tr', '@children': '$' } } },
+        mappingKeys: {
+          'xml-niso-iec': { '@el': 'tbody', '@children': { '@el': 'tr', '@children': '$' } },
+        },
         isDefault: true,
       },
       'table-footer': {
