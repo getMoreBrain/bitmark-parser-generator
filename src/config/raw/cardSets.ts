@@ -247,7 +247,7 @@ const CARDSETS: _CardSetsConfig = {
     // its enclosing <tbx:termEntry> is a transparent claim wrapper); its
     // children compose the term/definition sides via the side rules below.
     mappingKeys: {
-      'xml-niso': [
+      'niso-xml-iec': [
         { '@el': 'def-item', '@children': '$' },
         { '@el': 'tbx:langSet', '@children': '$' },
       ],
@@ -259,7 +259,7 @@ const CARDSETS: _CardSetsConfig = {
         // single term side (the "$\n" template's authored separator; the
         // trailing one is trimmed) — the PDF's Maus/Mus/M/Müsli stack.
         mappingKeys: {
-          'xml-niso': [
+          'niso-xml-iec': [
             { '@el': 'term', '@text': '$' },
             { '@el': 'tbx:tig', '@children': { '@el': 'tbx:term', '@text': '$\n' } },
           ],
@@ -279,7 +279,7 @@ const CARDSETS: _CardSetsConfig = {
                 format: TagFormat.plainText,
                 jsonKey: '^heading.forKeys',
                 exportJsonKey: { '@bit': { heading: { forKeys: '$' } } },
-                mappingKeys: { 'xml-niso': { '@el': 'title', '@text': '$' } },
+                mappingKeys: { 'niso-xml-iec': { '@el': 'title', '@text': '$' } },
               },
               {
                 key: ConfigKey.group_resourceIcon,
@@ -314,7 +314,7 @@ const CARDSETS: _CardSetsConfig = {
         // grammaticalNumber) are unrendered machine-only data — dropped and
         // recorded (catalog R-2, reviewed under D7 max-preservation).
         mappingKeys: {
-          'xml-niso': [
+          'niso-xml-iec': [
             { '@el': 'def', '@children': '$' },
             { '@el': 'tbx:subjectField', '@text': '⟨$⟩ ' },
             { '@el': 'tbx:definition', '@children': '$' },
@@ -1723,7 +1723,7 @@ const CARDSETS: _CardSetsConfig = {
         htmlKey: { '@el': 'thead', '@children': { '@el': 'tr', '@children': '$' } },
         // PLAN-141 F2 (NISO import): the XHTML table model NISO uses — a
         // <thead> SECTION whose <tr> rows are the header cards.
-        mappingKeys: { 'xml-niso': { '@el': 'thead', '@children': { '@el': 'tr', '@children': '$' } } },
+        mappingKeys: { 'niso-xml-iec': { '@el': 'thead', '@children': { '@el': 'tr', '@children': '$' } } },
         sideJsonKey: 'cells[{s}]|set(title=true)',
         sideExportJsonKey: { cells: { $s: { title: true, $: '$' } } },
         // Header cells are `<th>`. The `width` attribute is contributed by the
@@ -1736,7 +1736,7 @@ const CARDSETS: _CardSetsConfig = {
         exportJsonKey: { table: { body: { rows: '$' } } },
         htmlKey: { '@el': 'tbody', '@children': { '@el': 'tr', '@children': '$' } },
         // PLAN-141 F2 (NISO import): <tbody> rows are the (default) data cards.
-        mappingKeys: { 'xml-niso': { '@el': 'tbody', '@children': { '@el': 'tr', '@children': '$' } } },
+        mappingKeys: { 'niso-xml-iec': { '@el': 'tbody', '@children': { '@el': 'tr', '@children': '$' } } },
         isDefault: true,
       },
       'table-footer': {
@@ -1747,7 +1747,7 @@ const CARDSETS: _CardSetsConfig = {
         // source is the <table-wrap-foot> block (CONTENT-shaped: no rows; its
         // prose/notes flatten into one footer card — catalog table-wrap-foot
         // row; a contained <def-list> promotes as a sibling legend bit).
-        mappingKeys: { 'xml-niso': { '@el': 'table-wrap-foot', '@children': '$' } },
+        mappingKeys: { 'niso-xml-iec': { '@el': 'table-wrap-foot', '@children': '$' } },
         sideJsonKey: 'cells[{s}]|set(title=true)',
         sideExportJsonKey: { cells: { $s: { title: true, $: '$' } } },
         // Footer cells render as `<th>` (mirrors the header `title: true`
@@ -1765,7 +1765,7 @@ const CARDSETS: _CardSetsConfig = {
         // side to `<th>` via their sideHtmlKey (HTML.md §8).
         htmlKey: { '@el': 'td', '@children': '$' },
         // PLAN-141 F2 (NISO import): a <td> row child is a body cell side.
-        mappingKeys: { 'xml-niso': { '@el': 'td', '@children': '$' } },
+        mappingKeys: { 'niso-xml-iec': { '@el': 'td', '@children': '$' } },
         variants: [
           {
             jsonKey: 'content',
@@ -1787,7 +1787,7 @@ const CARDSETS: _CardSetsConfig = {
                 // PLAN-141 F2 (NISO import): a <th> row child is a TITLE cell —
                 // its content lands in the `[#…]` tag (an empty <th> keeps its
                 // slot as a bare `[#]`).
-                mappingKeys: { 'xml-niso': { '@el': 'th', '@children': '$' } },
+                mappingKeys: { 'niso-xml-iec': { '@el': 'th', '@children': '$' } },
               },
               {
                 key: ConfigKey.property_tableCellType,
@@ -1808,7 +1808,7 @@ const CARDSETS: _CardSetsConfig = {
                 htmlKey: { '@el': { '@attr': { rowspan: '$' } } },
                 // PLAN-141 F2 (NISO import): recover the source cell's own
                 // `rowspan` attribute (element-scope attr form).
-                mappingKeys: { 'xml-niso': { '@el': { '@attr': { rowspan: '$' } } } },
+                mappingKeys: { 'niso-xml-iec': { '@el': { '@attr': { rowspan: '$' } } } },
                 description: 'Number of rows the cell spans.',
                 format: TagFormat.number,
               },
@@ -1821,7 +1821,7 @@ const CARDSETS: _CardSetsConfig = {
                 htmlKey: { '@el': { '@attr': { colspan: '$' } } },
                 // PLAN-141 F2 (NISO import): recover the source cell's own
                 // `colspan` attribute (element-scope attr form).
-                mappingKeys: { 'xml-niso': { '@el': { '@attr': { colspan: '$' } } } },
+                mappingKeys: { 'niso-xml-iec': { '@el': { '@attr': { colspan: '$' } } } },
                 description: 'Number of columns the cell spans.',
                 format: TagFormat.number,
               },
@@ -1849,7 +1849,7 @@ const CARDSETS: _CardSetsConfig = {
                 // (header) card's sides. Number format ⇒ only an integral
                 // percentage survives ("20.0000%" → 20); a fractional one
                 // (renderer-equalised "4.7619%") is dropped — catalog `col` row.
-                mappingKeys: { 'xml-niso': { '@el': 'col', '@attr': { width: '$' } } },
+                mappingKeys: { 'niso-xml-iec': { '@el': 'col', '@attr': { width: '$' } } },
                 description: 'Width for the column.',
                 format: TagFormat.number,
               },

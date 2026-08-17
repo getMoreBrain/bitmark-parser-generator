@@ -41,7 +41,7 @@ const GROUPS: _GroupsConfig = {
         // direct bit-element child only under <std-meta> (everywhere else
         // it nests inside <std>, which the tag spine never reaches).
         mappingKeys: {
-          'xml-niso': [
+          'niso-xml-iec': [
             { '@el': 'std', '@children': { '@el': 'std-id', '@text': '$' } },
             { '@el': 'std-ref', '@attr': { type: 'dated' }, '@text': '$' },
           ],
@@ -186,7 +186,7 @@ const GROUPS: _GroupsConfig = {
         // of the value-attr slot). Only termEntry elements match, so the
         // shared tag is inert everywhere else.
         mappingKeys: {
-          'xml-niso': {
+          'niso-xml-iec': {
             '@el': 'tbx:termEntry',
             '@children': { '@el': 'tbx:langSet', '@attr': { 'xml:lang': '$' } },
           },
@@ -389,7 +389,7 @@ const GROUPS: _GroupsConfig = {
         exportJsonKey: { item: '$' },
         // PLAN-140 W3 (NISO import): the clause/note label of a mapped
         // source element ([%1], [%ANMERKUNG 1]).
-        mappingKeys: { 'xml-niso': { '@el': 'label', '@text': '$' } },
+        mappingKeys: { 'niso-xml-iec': { '@el': 'label', '@text': '$' } },
         description: 'The item for the bit',
         chain: [
           {
@@ -1362,7 +1362,7 @@ const GROUPS: _GroupsConfig = {
         // <content-language> survives — the maxEmits cap realises the
         // catalog's document-language rule (extras drop, R-4).
         mappingKeys: {
-          'xml-niso': [
+          'niso-xml-iec': [
             { predicates: [], maxEmits: 1, rule: { '@el': 'content-language', '@text': '$' } },
           ],
         },
@@ -1445,7 +1445,7 @@ const GROUPS: _GroupsConfig = {
         // PLAN-141 F5 (NISO import): the PRIMARY (first) <title-wrap>'s
         // assembled <full> title → [#]; the per-language extras drop (R-4).
         mappingKeys: {
-          'xml-niso': [
+          'niso-xml-iec': [
             {
               predicates: [],
               maxEmits: 1,
@@ -1886,7 +1886,7 @@ const GROUPS: _GroupsConfig = {
         // nested content slot reads the title text; the caption rides the
         // resource chain ([&image:…][@caption:…], catalog D5).
         mappingKeys: {
-          'xml-niso': { '@el': 'caption', '@children': { '@el': 'title', '@text': '$' } },
+          'niso-xml-iec': { '@el': 'caption', '@children': { '@el': 'title', '@text': '$' } },
         },
       },
       {
@@ -2158,7 +2158,7 @@ const GROUPS: _GroupsConfig = {
         // PLAN-141 F1 (NISO import): the image URL rides the `$`-in-attr
         // value slot — a <graphic xlink:href> child of the mapped bit
         // element roots the [&image:URL] chain.
-        mappingKeys: { 'xml-niso': { '@el': 'graphic', '@attr': { 'xlink:href': '$' } } },
+        mappingKeys: { 'niso-xml-iec': { '@el': 'graphic', '@attr': { 'xlink:href': '$' } } },
         description: 'The image resource',
         chain: [
           {
