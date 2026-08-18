@@ -183,6 +183,8 @@ const NodeType = {
   definition: 'definition',
   definitions: 'definitions',
   definitionsValue: 'definitionsValue',
+  displayName: 'displayName',
+  displayNameValue: 'displayNameValue',
   diffContext: 'diffContext',
   diffContextValue: 'diffContextValue',
   diffOp: 'diffOp',
