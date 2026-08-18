@@ -117,6 +117,7 @@ class ConfigBuilder {
       hasExportJsonKey?: boolean;
       htmlKey?: HtmlKey;
       hasHtmlKey?: boolean;
+      extraKeys?: MappingKeysRecord;
       min?: number | string;
       max?: number | string;
       description?: string;
@@ -135,14 +136,21 @@ class ConfigBuilder {
     };
 
     // The emitted `mappingKeys` record: members keyed by mapping-type id
-    // (`json`, `html`, later `xml`/`xml-niso`). A null value means "no key" and
-    // is never emitted; an empty record is omitted entirely.
+    // (`json`, `html`, plus named mappings like `xml-niso-iec` carried
+    // verbatim from the raw config's `mappingKeys` field). A null value
+    // means "no key" and is never emitted; an empty record is omitted
+    // entirely. `base` seeds the record with the raw named mappings; the
+    // json/html members (from exportJsonKey/htmlKey) overlay it.
     type MappingKeysRecord = Record<string, unknown>;
     const mappingKeysField = (
+      base: MappingKeysRecord | undefined,
       json: { value?: unknown; present: boolean },
       html: { value?: unknown; present: boolean },
     ): { mappingKeys: MappingKeysRecord } | object => {
       const record: MappingKeysRecord = {};
+      for (const [id, value] of Object.entries(base ?? {})) {
+        if (value != null) record[id] = value;
+      }
       if (json.present && json.value != null) record.json = json.value;
       if (html.present && html.value != null) record.html = html.value;
       return Object.keys(record).length > 0 ? { mappingKeys: record } : {};
@@ -231,6 +239,7 @@ class ConfigBuilder {
             type: 'group',
             key: ref.key,
             ...mappingKeysField(
+              { ...(ref.extraKeys ?? {}), ...(tag.mappingKeys ?? {}) },
               { value: exportJsonKeyChosen, present: hasExportChosen },
               { value: htmlKeyChosen, present: hasHtmlChosen },
             ),
@@ -271,6 +280,7 @@ class ConfigBuilder {
         type: 'tag',
         key: tagName,
         ...mappingKeysField(
+          tag.mappingKeys as MappingKeysRecord | undefined,
           { value: tag.exportJsonKey as ExportJsonKey, present: hasExport },
           { value: tag.htmlKey as HtmlKey, present: hasHtml },
         ),
@@ -293,6 +303,7 @@ class ConfigBuilder {
     // HTML.md §5).
     const cardMappingKeysField = (
       container: object,
+      base: MappingKeysRecord | undefined,
       legacyKey: 'jsonKey' | 'sideJsonKey',
       exportKey: 'exportJsonKey' | 'sideExportJsonKey',
       htmlExportKey: 'htmlKey' | 'sideHtmlKey',
@@ -308,6 +319,7 @@ class ConfigBuilder {
         );
       }
       return mappingKeysField(
+        base,
         { value: c[exportKey], present: hasExport },
         {
           value: c[htmlExportKey],
@@ -375,7 +387,14 @@ class ConfigBuilder {
           }
 
           return {
-            ...cardMappingKeysField(variant, 'jsonKey', 'exportJsonKey', 'htmlKey', variantPath),
+            ...cardMappingKeysField(
+              variant,
+              undefined,
+              'jsonKey',
+              'exportJsonKey',
+              'htmlKey',
+              variantPath,
+            ),
             bodyFormat: variantBodyFormat(variant),
             tags: variantTags,
             ...(variant.repeatCount != null && variant.repeatCount !== 1
@@ -389,7 +408,14 @@ class ConfigBuilder {
         return {
           name: side.name,
           ...(side.repeat ? { repeat: side.repeat } : {}),
-          ...cardMappingKeysField(side, 'jsonKey', 'exportJsonKey', 'htmlKey', sidePath),
+          ...cardMappingKeysField(
+            side,
+            side.mappingKeys,
+            'jsonKey',
+            'exportJsonKey',
+            'htmlKey',
+            sidePath,
+          ),
           variants,
         };
       });
@@ -433,7 +459,14 @@ class ConfigBuilder {
           return {
             name: sectionName,
             ...(section.isDefault ? { isDefault: true } : {}),
-            ...cardMappingKeysField(section, 'jsonKey', 'exportJsonKey', 'htmlKey', sectionPath),
+            ...cardMappingKeysField(
+              section,
+              section.mappingKeys,
+              'jsonKey',
+              'exportJsonKey',
+              'htmlKey',
+              sectionPath,
+            ),
             // PLAN-085: per-section cardinality. Emit only when non-default
             // (treat `0` / undefined as "unbounded — omit").
             ...(section.minCount != null && section.minCount !== 0
@@ -454,6 +487,7 @@ class ConfigBuilder {
         return {
           name: normalizedKey,
           ...mappingKeysField(
+            undefined,
             { present: false },
             {
               value: (cardSetConfig as { htmlKey?: HtmlKey }).htmlKey,
@@ -474,6 +508,7 @@ class ConfigBuilder {
             isDefault: true,
             ...cardMappingKeysField(
               cardSetConfig,
+              cardSetConfig.mappingKeys,
               'jsonKey',
               'exportJsonKey',
               'htmlKey',
@@ -548,6 +583,10 @@ class ConfigBuilder {
             ref.htmlKey = record.html as HtmlKey;
             ref.hasHtmlKey = true;
           }
+          const extras = Object.fromEntries(
+            Object.entries(record).filter(([id]) => id !== 'json' && id !== 'html'),
+          );
+          if (Object.keys(extras).length > 0) ref.extraKeys = extras;
           replacements.push(ref);
         }
         squashedGroups.set(groupKey, replacements);
@@ -599,6 +638,7 @@ class ConfigBuilder {
             type: 'group',
             key: ref.key,
             ...mappingKeysField(
+              ref.extraKeys,
               { value: ref.exportJsonKey, present: !!ref.hasExportJsonKey },
               { value: ref.htmlKey, present: !!ref.hasHtmlKey },
             ),
@@ -616,6 +656,7 @@ class ConfigBuilder {
               type: 'group',
               key: ref.key,
               ...mappingKeysField(
+                ref.extraKeys,
                 { value: ref.exportJsonKey, present: !!ref.hasExportJsonKey },
                 { value: ref.htmlKey, present: !!ref.hasHtmlKey },
               ),
@@ -661,6 +702,9 @@ class ConfigBuilder {
         ...(resolvedBitConfig.resourceAttachmentAllowed === false
           ? { resourceAttachmentAllowed: false }
           : {}),
+        // Bit-level named key mappings (element keys for markup import),
+        // carried verbatim from the raw config.
+        ...mappingKeysField(b.mappingKeys, { present: false }, { present: false }),
         tags,
         ...(cardRef ? { cardSet: cardRef } : {}),
       };
@@ -769,6 +813,7 @@ class ConfigBuilder {
               type: 'group',
               key: ref.key,
               ...mappingKeysField(
+                ref.extraKeys,
                 { value: ref.exportJsonKey, present: !!ref.hasExportJsonKey },
                 { value: ref.htmlKey, present: !!ref.hasHtmlKey },
               ),
