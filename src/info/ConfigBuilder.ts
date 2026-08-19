@@ -77,7 +77,7 @@ class ConfigBuilder {
     }
     const outputFolder = opts.outputDir ?? 'assets/config';
     const outputFolderBits = path.join(outputFolder, 'bits');
-    const outputFolderGroups = path.join(outputFolder, 'partials');
+    const outputFolderGroups = path.join(outputFolder, 'groups');
     const outputFolderCards = path.join(outputFolder, 'cards');
     fs.ensureDirSync(outputFolderBits);
     fs.ensureDirSync(outputFolderGroups);
@@ -117,6 +117,7 @@ class ConfigBuilder {
       hasExportJsonKey?: boolean;
       htmlKey?: HtmlKey;
       hasHtmlKey?: boolean;
+      extraKeys?: MappingKeysRecord;
       min?: number | string;
       max?: number | string;
       description?: string;
@@ -132,6 +133,27 @@ class ConfigBuilder {
         );
       }
       return [{ key: groupKey }];
+    };
+
+    // The emitted `mappingKeys` record: members keyed by mapping-type id
+    // (`json`, `html`, plus named mappings like `xml-niso-iec` carried
+    // verbatim from the raw config's `mappingKeys` field). A null value
+    // means "no key" and is never emitted; an empty record is omitted
+    // entirely. `base` seeds the record with the raw named mappings; the
+    // json/html members (from exportJsonKey/htmlKey) overlay it.
+    type MappingKeysRecord = Record<string, unknown>;
+    const mappingKeysField = (
+      base: MappingKeysRecord | undefined,
+      json: { value?: unknown; present: boolean },
+      html: { value?: unknown; present: boolean },
+    ): { mappingKeys: MappingKeysRecord } | object => {
+      const record: MappingKeysRecord = {};
+      for (const [id, value] of Object.entries(base ?? {})) {
+        if (value != null) record[id] = value;
+      }
+      if (json.present && json.value != null) record.json = json.value;
+      if (html.present && html.value != null) record.html = html.value;
+      return Object.keys(record).length > 0 ? { mappingKeys: record } : {};
     };
 
     // Default-form bare key for property/resource entries: '@bookReferences' → 'bookReferences'.
@@ -157,27 +179,29 @@ class ConfigBuilder {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let chain: any = undefined;
 
+      // Tag value formats use the stored vocabulary directly
+      // (string | boolean | bitmark+ | number | coordinates); `string` is the
+      // natural default and is omitted on emission.
       if (tagType === BitTagConfigKeyType.tag) {
         tagName = tag.key;
         if (tag.format === TagFormat.plainText) {
           format = 'string';
         } else if (tag.format === TagFormat.boolean) {
-          format = 'bool';
-        } else if (tag.format === TagFormat.bitmarkText) {
-          format = 'bitmark';
+          format = 'boolean';
         } else if (tag.format === TagFormat.number) {
           format = 'number';
         } else {
-          format = 'bitmark--';
+          // bitmarkText and unspecified: tag text parses as bitmark+ either way.
+          format = 'bitmark+';
         }
       } else if (tagType === BitTagConfigKeyType.property) {
         tagName = tag.key;
         if (tag.format === TagFormat.plainText) {
           format = 'string';
         } else if (tag.format === TagFormat.boolean) {
-          format = 'bool';
+          format = 'boolean';
         } else if (tag.format === TagFormat.bitmarkText) {
-          format = 'bitmark';
+          format = 'bitmark+';
         } else if (tag.format === TagFormat.number) {
           format = 'number';
         } else if (tag.format === TagFormat.coordinates) {
@@ -214,8 +238,11 @@ class ConfigBuilder {
           tags.push({
             type: 'group',
             key: ref.key,
-            ...(hasExportChosen ? { jsonKey: exportJsonKeyChosen } : {}),
-            ...(hasHtmlChosen ? { htmlKey: htmlKeyChosen } : {}),
+            ...mappingKeysField(
+              { ...(ref.extraKeys ?? {}), ...(tag.mappingKeys ?? {}) },
+              { value: exportJsonKeyChosen, present: hasExportChosen },
+              { value: htmlKeyChosen, present: hasHtmlChosen },
+            ),
             ...(min != null ? { min } : {}),
             ...(max != null ? { max } : {}),
             ...(description ? { description } : {}),
@@ -234,41 +261,34 @@ class ConfigBuilder {
         chain = chainTags;
       }
 
-      // Determine the exportJsonKey field to emit (or omit) for this tag.
+      // The json member comes from exportJsonKey; absent is only valid for
+      // trivially-default keys (validator below). The html member has no
+      // legacy companion and no validator: emitted verbatim when explicitly
+      // set (data-* fallback applies downstream — see HTML.md §5).
       const hasExport = Object.prototype.hasOwnProperty.call(tag, 'exportJsonKey');
-      let exportJsonKeyField: { jsonKey: ExportJsonKey } | object;
-      if (hasExport) {
-        exportJsonKeyField = { jsonKey: tag.exportJsonKey as ExportJsonKey };
-      } else if (legacyIsTrivialDefault(tag)) {
-        exportJsonKeyField = {};
-      } else {
+      if (!hasExport && !legacyIsTrivialDefault(tag)) {
         // Validator failure: legacy non-default jsonKey with no exportJsonKey.
         const headingPath = [...pathStack, `tags.${tag.key}`].join(' / ');
         exportJsonKeyErrors.push(
           `Missing exportJsonKey for non-default jsonKey at ${headingPath}` +
             (tag.jsonKey ? ` (legacy: \`${tag.jsonKey}\`)` : ` (symbol-mapped tag \`${tag.key}\`)`),
         );
-        exportJsonKeyField = {};
       }
-
-      // htmlKey has no legacy companion and no validator: emit verbatim under
-      // `htmlKey` when explicitly set, otherwise omit (data-* fallback applies
-      // downstream — see HTML.md §5).
       const hasHtml = Object.prototype.hasOwnProperty.call(tag, 'htmlKey');
-      const htmlKeyField: { htmlKey: HtmlKey } | object = hasHtml
-        ? { htmlKey: tag.htmlKey as HtmlKey }
-        : {};
 
       const t = {
         type: 'tag',
         key: tagName,
-        ...exportJsonKeyField,
-        ...htmlKeyField,
-        format,
-        default: tag.defaultValue ?? null,
+        ...mappingKeysField(
+          tag.mappingKeys as MappingKeysRecord | undefined,
+          { value: tag.exportJsonKey as ExportJsonKey, present: hasExport },
+          { value: tag.htmlKey as HtmlKey, present: hasHtml },
+        ),
+        ...(format && format !== 'string' ? { format } : {}),
+        ...(tag.defaultValue != null ? { default: tag.defaultValue } : {}),
         ...(tag.nullable ? { nullable: true } : {}),
-        min: tag.minCount == null ? 0 : tag.minCount,
-        max: tag.maxCount == null ? 1 : tag.maxCount,
+        ...(tag.minCount != null && tag.minCount !== 0 ? { min: tag.minCount } : {}),
+        ...(tag.maxCount != null && tag.maxCount !== 1 ? { max: tag.maxCount } : {}),
         description: tag.description ?? '',
         tags: chain,
       };
@@ -276,40 +296,36 @@ class ConfigBuilder {
       return tags;
     };
 
-    // For card-set / side / variant / section: emit `jsonKey: <exportJsonKey>` if
-    // explicit; otherwise omit. Validator-fail when a non-null legacy jsonKey
-    // exists without an exportJsonKey companion.
-    const cardJsonKeyField = (
-      container: { jsonKey?: string | null; exportJsonKey?: ExportJsonKey },
+    // For card-set / side / variant / section: build the `mappingKeys` record.
+    // json member from the exportJsonKey companion (validator-fail when a
+    // non-null legacy jsonKey exists without one); html member emitted
+    // verbatim when explicitly set (no legacy companion, no validator —
+    // HTML.md §5).
+    const cardMappingKeysField = (
+      container: object,
+      base: MappingKeysRecord | undefined,
       legacyKey: 'jsonKey' | 'sideJsonKey',
       exportKey: 'exportJsonKey' | 'sideExportJsonKey',
+      htmlExportKey: 'htmlKey' | 'sideHtmlKey',
       pathHeading: string,
-    ): { jsonKey: ExportJsonKey } | object => {
+    ): { mappingKeys: MappingKeysRecord } | object => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const c = container as any;
       const hasExport = Object.prototype.hasOwnProperty.call(c, exportKey);
-      if (hasExport) return { jsonKey: c[exportKey] as ExportJsonKey };
-      const legacy = c[legacyKey];
-      if (legacy == null) return {}; // null or undefined → omit
-      // Non-null legacy with no exportJsonKey → validator failure
-      exportJsonKeyErrors.push(
-        `Missing exportJsonKey for non-default jsonKey at ${pathHeading} (legacy: \`${legacy}\`)`,
-      );
-      return {};
-    };
-
-    // For card-set / side / variant / section: emit `htmlKey: <htmlKey>` if
-    // explicit; otherwise omit. No legacy companion and no validator (HTML.md §5).
-    const cardHtmlKeyField = (
-      container: { htmlKey?: HtmlKey; sideHtmlKey?: HtmlKey },
-      htmlExportKey: 'htmlKey' | 'sideHtmlKey',
-    ): { htmlKey: HtmlKey } | object => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const c = container as any;
-      if (Object.prototype.hasOwnProperty.call(c, htmlExportKey)) {
-        return { htmlKey: c[htmlExportKey] as HtmlKey };
+      if (!hasExport && c[legacyKey] != null) {
+        // Non-null legacy with no exportJsonKey → validator failure
+        exportJsonKeyErrors.push(
+          `Missing exportJsonKey for non-default jsonKey at ${pathHeading} (legacy: \`${c[legacyKey]}\`)`,
+        );
       }
-      return {};
+      return mappingKeysField(
+        base,
+        { value: c[exportKey], present: hasExport },
+        {
+          value: c[htmlExportKey],
+          present: Object.prototype.hasOwnProperty.call(c, htmlExportKey),
+        },
+      );
     };
 
     const serializeCardSet = (
@@ -317,17 +333,15 @@ class ConfigBuilder {
     ):
       | {
           name: string;
-          htmlKey?: HtmlKey;
+          mappingKeys?: MappingKeysRecord;
           cards: {
             name: string;
             isDefault?: boolean;
-            jsonKey?: ExportJsonKey;
-            htmlKey?: HtmlKey;
+            mappingKeys?: MappingKeysRecord;
             sides: {
               name: string;
               repeat?: boolean;
-              jsonKey?: ExportJsonKey;
-              htmlKey?: HtmlKey;
+              mappingKeys?: MappingKeysRecord;
               variants: unknown[];
             }[];
           }[];
@@ -373,11 +387,19 @@ class ConfigBuilder {
           }
 
           return {
-            ...cardJsonKeyField(variant, 'jsonKey', 'exportJsonKey', variantPath),
-            ...cardHtmlKeyField(variant, 'htmlKey'),
-            format: variantBodyFormat(variant),
+            ...cardMappingKeysField(
+              variant,
+              undefined,
+              'jsonKey',
+              'exportJsonKey',
+              'htmlKey',
+              variantPath,
+            ),
+            bodyFormat: variantBodyFormat(variant),
             tags: variantTags,
-            repeatCount: variant.repeatCount ?? 1,
+            ...(variant.repeatCount != null && variant.repeatCount !== 1
+              ? { repeatCount: variant.repeatCount }
+              : {}),
             ...(variant.bodyRequired ? { bodyRequired: true } : {}),
             ...(variant.bodyAllowed === false ? { bodyForbidden: true } : {}),
           };
@@ -386,8 +408,14 @@ class ConfigBuilder {
         return {
           name: side.name,
           ...(side.repeat ? { repeat: side.repeat } : {}),
-          ...cardJsonKeyField(side, 'jsonKey', 'exportJsonKey', sidePath),
-          ...cardHtmlKeyField(side, 'htmlKey'),
+          ...cardMappingKeysField(
+            side,
+            side.mappingKeys,
+            'jsonKey',
+            'exportJsonKey',
+            'htmlKey',
+            sidePath,
+          ),
           variants,
         };
       });
@@ -396,27 +424,49 @@ class ConfigBuilder {
       if (cardSetConfig.sections) {
         const cards = Object.entries(cardSetConfig.sections).map(([sectionName, section]) => {
           const sectionPath = `cardSets.${normalizedKey} / cards.${sectionName}`;
-          // Per-section override of the side jsonKey (when section.sideExportJsonKey or
-          // legacy section.sideJsonKey is set).
+          // Per-section override of the side mapping keys (when
+          // section.sideExportJsonKey / legacy section.sideJsonKey /
+          // section.sideHtmlKey is set). Overrides merge member-wise into
+          // each side's record; an explicit null clears that member.
           const hasSideExport = Object.prototype.hasOwnProperty.call(section, 'sideExportJsonKey');
           const hasSideHtml = Object.prototype.hasOwnProperty.call(section, 'sideHtmlKey');
           let cardSides = sides;
           if (hasSideExport || section.sideJsonKey != null || hasSideHtml) {
-            const sideOverride = cardJsonKeyField(
-              section,
-              'sideJsonKey',
-              'sideExportJsonKey',
-              `${sectionPath} / sides.*`,
-            );
-            const sideHtmlOverride = cardHtmlKeyField(section, 'sideHtmlKey');
-            cardSides = sides.map((s) => ({ ...s, ...sideOverride, ...sideHtmlOverride }));
+            if (!hasSideExport && section.sideJsonKey != null) {
+              exportJsonKeyErrors.push(
+                `Missing exportJsonKey for non-default jsonKey at ${sectionPath} / sides.* (legacy: \`${section.sideJsonKey}\`)`,
+              );
+            }
+            cardSides = sides.map((s) => {
+              const record: MappingKeysRecord = { ...(s.mappingKeys ?? {}) };
+              if (hasSideExport) {
+                if (section.sideExportJsonKey != null) record.json = section.sideExportJsonKey;
+                else delete record.json;
+              }
+              if (hasSideHtml) {
+                if (section.sideHtmlKey != null) record.html = section.sideHtmlKey;
+                else delete record.html;
+              }
+              return {
+                name: s.name,
+                ...(s.repeat ? { repeat: s.repeat } : {}),
+                ...(Object.keys(record).length > 0 ? { mappingKeys: record } : {}),
+                variants: s.variants,
+              };
+            });
           }
 
           return {
             name: sectionName,
             ...(section.isDefault ? { isDefault: true } : {}),
-            ...cardJsonKeyField(section, 'jsonKey', 'exportJsonKey', sectionPath),
-            ...cardHtmlKeyField(section, 'htmlKey'),
+            ...cardMappingKeysField(
+              section,
+              section.mappingKeys,
+              'jsonKey',
+              'exportJsonKey',
+              'htmlKey',
+              sectionPath,
+            ),
             // PLAN-085: per-section cardinality. Emit only when non-default
             // (treat `0` / undefined as "unbounded — omit").
             ...(section.minCount != null && section.minCount !== 0
@@ -431,10 +481,21 @@ class ConfigBuilder {
 
         // The card-set container key (e.g. the `<table>` wrapper for tables —
         // HTML.md §8) has no slot in the sectioned shape the way single-card
-        // sets do, so emit it here at the top level. Only htmlKey is emitted
-        // (legacy jsonKey/exportJsonKey for sectioned roots is intentionally
-        // omitted, preserving existing JSON output).
-        return { name: normalizedKey, ...cardHtmlKeyField(cardSetConfig, 'htmlKey'), cards };
+        // sets do, so emit it here at the top level. Only the html member is
+        // emitted (legacy jsonKey/exportJsonKey for sectioned roots is
+        // intentionally omitted, preserving existing JSON output).
+        return {
+          name: normalizedKey,
+          ...mappingKeysField(
+            undefined,
+            { present: false },
+            {
+              value: (cardSetConfig as { htmlKey?: HtmlKey }).htmlKey,
+              present: Object.prototype.hasOwnProperty.call(cardSetConfig, 'htmlKey'),
+            },
+          ),
+          cards,
+        };
       }
 
       // Single card
@@ -445,8 +506,14 @@ class ConfigBuilder {
           {
             name: 'default',
             isDefault: true,
-            ...cardJsonKeyField(cardSetConfig, 'jsonKey', 'exportJsonKey', cardSetPath),
-            ...cardHtmlKeyField(cardSetConfig, 'htmlKey'),
+            ...cardMappingKeysField(
+              cardSetConfig,
+              cardSetConfig.mappingKeys,
+              'jsonKey',
+              'exportJsonKey',
+              'htmlKey',
+              cardSetPath,
+            ),
             sides,
           },
         ],
@@ -496,24 +563,30 @@ class ConfigBuilder {
         }
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         for (const t of processedTags as any[]) {
-          // The processed group tag carries `jsonKey` (already an exportJsonKey
-          // value at this point). Preserve presence semantics: if the field is
-          // present on the processed tag, mark hasExportJsonKey so a downstream
-          // resolveGroupReferences emits the same value.
+          // The processed group tag carries a `mappingKeys` record (json
+          // member already an exportJsonKey value at this point). Preserve
+          // presence semantics: if a member is present on the processed tag,
+          // mark it so a downstream resolveGroupReferences emits the same
+          // value.
           const ref: GroupRef = {
             key: t.key,
             ...(t.min != null ? { min: t.min } : {}),
             ...(t.max != null ? { max: t.max } : {}),
             ...(t.description ? { description: t.description } : {}),
           };
-          if (Object.prototype.hasOwnProperty.call(t, 'jsonKey')) {
-            ref.exportJsonKey = t.jsonKey as ExportJsonKey;
+          const record = (t.mappingKeys ?? {}) as MappingKeysRecord;
+          if (Object.prototype.hasOwnProperty.call(record, 'json')) {
+            ref.exportJsonKey = record.json as ExportJsonKey;
             ref.hasExportJsonKey = true;
           }
-          if (Object.prototype.hasOwnProperty.call(t, 'htmlKey')) {
-            ref.htmlKey = t.htmlKey as HtmlKey;
+          if (Object.prototype.hasOwnProperty.call(record, 'html')) {
+            ref.htmlKey = record.html as HtmlKey;
             ref.hasHtmlKey = true;
           }
+          const extras = Object.fromEntries(
+            Object.entries(record).filter(([id]) => id !== 'json' && id !== 'html'),
+          );
+          if (Object.keys(extras).length > 0) ref.extraKeys = extras;
           replacements.push(ref);
         }
         squashedGroups.set(groupKey, replacements);
@@ -564,8 +637,11 @@ class ConfigBuilder {
           pushOrReplace({
             type: 'group',
             key: ref.key,
-            ...(ref.hasExportJsonKey ? { jsonKey: ref.exportJsonKey } : {}),
-            ...(ref.hasHtmlKey ? { htmlKey: ref.htmlKey } : {}),
+            ...mappingKeysField(
+              ref.extraKeys,
+              { value: ref.exportJsonKey, present: !!ref.hasExportJsonKey },
+              { value: ref.htmlKey, present: !!ref.hasHtmlKey },
+            ),
             ...(ref.min != null ? { min: ref.min } : {}),
             ...(ref.max != null ? { max: ref.max } : {}),
             ...(ref.description ? { description: ref.description } : {}),
@@ -579,8 +655,11 @@ class ConfigBuilder {
             pushOrReplace({
               type: 'group',
               key: ref.key,
-              ...(ref.hasExportJsonKey ? { jsonKey: ref.exportJsonKey } : {}),
-              ...(ref.hasHtmlKey ? { htmlKey: ref.htmlKey } : {}),
+              ...mappingKeysField(
+                ref.extraKeys,
+                { value: ref.exportJsonKey, present: !!ref.hasExportJsonKey },
+                { value: ref.htmlKey, present: !!ref.hasHtmlKey },
+              ),
               ...(ref.min != null ? { min: ref.min } : {}),
               ...(ref.max != null ? { max: ref.max } : {}),
               ...(ref.description ? { description: ref.description } : {}),
@@ -605,26 +684,29 @@ class ConfigBuilder {
         current = current.baseBitType ? (BITS[current.baseBitType] as _BitConfig) : undefined;
       }
 
-      // Use resolved values from BitConfig (with inheritance applied)
+      // Use resolved values from BitConfig (with inheritance applied).
+      // Flags are omitted at their natural defaults; `bodyFormat` keeps the
+      // full text-format fidelity (`bitmark++`/`bitmark--`); no fabricated
+      // `history` (the raw config carries none — the field stays supported
+      // for hand-authored provenance).
       const bitJson = {
         name: b.bitType,
         description: b.description ?? '',
         since: resolvedBitConfig.since,
         deprecated: resolvedBitConfig.deprecated,
-        history: [
-          {
-            version: resolvedBitConfig.since,
-            changes: ['Initial version'],
-          },
-        ],
-        format: resolvedBitConfig.textFormatDefault ?? 'bitmark--',
-        bodyRequired: resolvedBitConfig.bodyRequired ?? false,
-        bodyForbidden: !(resolvedBitConfig.bodyAllowed ?? true),
-        footerRequired: resolvedBitConfig.footerRequired ?? false,
-        footerForbidden: !(resolvedBitConfig.footerAllowed ?? true),
-        resourceAttachmentAllowed: resolvedBitConfig.resourceAttachmentAllowed ?? true,
+        bodyFormat: resolvedBitConfig.textFormatDefault ?? 'bitmark--',
+        ...(resolvedBitConfig.bodyRequired ? { bodyRequired: true } : {}),
+        ...(resolvedBitConfig.bodyAllowed === false ? { bodyForbidden: true } : {}),
+        ...(resolvedBitConfig.footerRequired ? { footerRequired: true } : {}),
+        ...(resolvedBitConfig.footerAllowed === false ? { footerForbidden: true } : {}),
+        ...(resolvedBitConfig.resourceAttachmentAllowed === false
+          ? { resourceAttachmentAllowed: false }
+          : {}),
+        // Bit-level named key mappings (element keys for markup import),
+        // carried verbatim from the raw config.
+        ...mappingKeysField(b.mappingKeys, { present: false }, { present: false }),
         tags,
-        ...(cardRef ? { card: cardRef } : {}),
+        ...(cardRef ? { cardSet: cardRef } : {}),
       };
       const output = path.join(outputFolderBits, `${b.bitType}.jsonc`);
       const str = JSON.stringify(bitJson, null, 2);
@@ -661,14 +743,7 @@ class ConfigBuilder {
         const bitJson = {
           name: groupKey,
           description: g.description ?? '',
-          since: 'UNKNOWN',
           deprecated: g.deprecated,
-          history: [
-            {
-              version: 'UNKNOWN',
-              changes: ['Initial version'],
-            },
-          ],
           tags,
           // cards: [
           //   {
@@ -737,8 +812,11 @@ class ConfigBuilder {
             tags.push({
               type: 'group',
               key: ref.key,
-              ...(ref.hasExportJsonKey ? { jsonKey: ref.exportJsonKey } : {}),
-              ...(ref.hasHtmlKey ? { htmlKey: ref.htmlKey } : {}),
+              ...mappingKeysField(
+                ref.extraKeys,
+                { value: ref.exportJsonKey, present: !!ref.hasExportJsonKey },
+                { value: ref.htmlKey, present: !!ref.hasHtmlKey },
+              ),
               ...(ref.min != null ? { min: ref.min } : {}),
               ...(ref.max != null ? { max: ref.max } : {}),
               ...(ref.description ? { description: ref.description } : {}),
@@ -760,14 +838,7 @@ class ConfigBuilder {
         const bitJson = {
           name: groupKey,
           description: b.description ?? '',
-          since: 'UNKNOWN',
           deprecated: b.deprecated,
-          history: [
-            {
-              version: 'UNKNOWN',
-              changes: ['Initial version'],
-            },
-          ],
           tags,
         };
         const output = path.join(outputFolderGroups, `${groupKey}.jsonc`);
@@ -825,7 +896,7 @@ class ConfigBuilder {
   private validateConfigTree(outputFolder: string): string[] {
     const errors: string[] = [];
     const outputFolderBits = path.join(outputFolder, 'bits');
-    const outputFolderGroups = path.join(outputFolder, 'partials');
+    const outputFolderGroups = path.join(outputFolder, 'groups');
     const outputFolderCards = path.join(outputFolder, 'cards');
 
     // Read all group files to build a set of available groups
@@ -911,7 +982,7 @@ class ConfigBuilder {
           const content = fs.readFileSync(filePath, 'utf-8');
           const config = JSON.parse(content);
           if (config.tags && Array.isArray(config.tags)) {
-            checkTags(config.tags, `partials/${file}`, 15); // Approximate line offset for tags array
+            checkTags(config.tags, `groups/${file}`, 15); // Approximate line offset for tags array
           }
         } catch (err) {
           errors.push(`Failed to parse ${file}: ${err}`);

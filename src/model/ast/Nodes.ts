@@ -108,6 +108,7 @@ export interface Bit {
   language?: Property;
   publisher?: Property;
   publisherName?: Property;
+  displayName?: Property;
   theme?: Property;
   rtl?: Property;
   computerLanguage?: Property;

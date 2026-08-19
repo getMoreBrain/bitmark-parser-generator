@@ -89,6 +89,7 @@ export interface BitJson {
   backgroundImage: string | string[];
   publisher: string | string[];
   publisherName: string;
+  displayName: string;
   publications: string | string[];
   relatedBook: string | string[];
   userFeedbackTranslationUrl: string;

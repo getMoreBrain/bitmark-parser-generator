@@ -152,6 +152,8 @@ const BITS: _BitsConfig = {
         maxCount: 2,
         jsonKey: 'title|multi(count=2, key=subtitle)',
         exportJsonKey: [{ '@level=1': { title: '$' } }, { '@level=2': { subtitle: '$' } }],
+        // PLAN-140 W3 (NISO import): the title of a mapped source element.
+        mappingKeys: { 'xml-niso-iec': { '@el': 'title', '@text': '$' } },
         key: ConfigKey.tag_title,
         description: 'The title of the article',
       },
@@ -194,11 +196,55 @@ const BITS: _BitsConfig = {
     since: '1.28.0',
     baseBitType: BitType.standardArticleNormative,
     description: 'Smart standard normative article bit',
+    // PLAN-140 W3 (NISO import, tranche 1): one article bit per NISO
+    // paragraph (catalog D1). CONTENT keys (@children): the subtree is the
+    // bit's body; nothing inside it promotes. (Ancestor-context normativity
+    // is the non-normative sibling's @ancestor key — plan Q4, resolved.)
+    //
+    // Second rule (catalog D1 push-down): a NUMBERED-PARAGRAPH sec is an
+    // article, not a chapter — the sec-type literal outranks the chapter
+    // key's plain sec|app rule (most-specific-wins). Content key: the sec's
+    // label rides [%] via the label tag key, its inner <p> is the body, its
+    // id is the bit's customerId, and the anchor slot marks it
+    // anchor-bearing.
+    mappingKeys: {
+      'xml-niso-iec': [
+        { '@el': 'p', '@attr': { id: '$customerId' }, '@children': '$' },
+        {
+          '@el': 'sec',
+          '@attr': { 'sec-type': 'numbered-paragraph', id: '$customerId' },
+          '@children': '$',
+          '▼': '$anchor',
+        },
+      ],
+    },
   },
   [BitType.smartStandardArticleNonNormative]: {
     since: '1.28.0',
     baseBitType: BitType.standardArticleNonNormative,
     description: 'Smart standard non-normative article bit',
+    // PLAN-140 Q4 (normativity inheritance): a <p> is non-normative because
+    // of an ANCESTOR element — a foreword/intro sec or an informative annex.
+    // @ancestor is a reverse-match-only constraint (forward emission ignores
+    // it); the rules are alternatives, first-satisfied wins, and the
+    // @ancestor literals give this key higher specificity than the plain
+    // normative-article <p> key wherever the context applies.
+    mappingKeys: {
+      'xml-niso-iec': [
+        {
+          '@el': 'p',
+          '@attr': { id: '$customerId' },
+          '@ancestor': { '@attr': { 'sec-type': 'foreword|intro' } },
+          '@children': '$',
+        },
+        {
+          '@el': 'p',
+          '@attr': { id: '$customerId' },
+          '@ancestor': { '@attr': { 'content-type': 'informative' } },
+          '@children': '$',
+        },
+      ],
+    },
   },
   [BitType.smartStandardArticleNormativeCollapsible]: {
     since: '1.28.0',
@@ -833,6 +879,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_maxCreatedBits,
         description: 'The maximum number of bits that can be created from this bit',
         format: TagFormat.number,
+        nullable: true,
       },
     ],
     textFormatDefault: TextFormat.plainText,
@@ -962,6 +1009,13 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType._standard,
     description: 'Book bit, used to represent a book',
+    // PLAN-141 F5 (NISO import): the <std-meta> front-matter container is
+    // the [.book] bit (STRUCTURAL, first in document order): primary
+    // title-wrap → [#], primary content-language → [@language], dated
+    // std-ref → [@externalId] (tag keys with maxEmits caps — the NISO
+    // convention puts the document language first). std-meta has no id, so
+    // no anchor/customerId. Remaining leaves drop as recorded loss (R-4).
+    mappingKeys: { 'xml-niso-iec': { '@el': 'std-meta' } },
     tags: [
       {
         key: ConfigKey.group_bookCommon,
@@ -1249,11 +1303,13 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_focusX,
         description: 'The X coordinate for focusing the image in the browser',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_focusY,
         description: 'The Y coordinate for focusing the image in the browser',
         format: TagFormat.number,
+        nullable: true,
       },
     ],
   },
@@ -1284,6 +1340,15 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType._standard,
     description: 'Chapter bit, used to define chapters in books or articles',
+    // PLAN-140 W3 (NISO import, tranche 1): recover a chapter from a NISO
+    // section or annex. STRUCTURAL key (no @children content slot): the
+    // element carries no body of its own — tag children (label/title) map
+    // via tag keys, every mapped descendant promotes to a following sibling
+    // bit, and the chapter level derives from nesting depth (catalog D1).
+    // The source id lands as [@customerId] (two-id model, D2).
+    mappingKeys: {
+      'xml-niso-iec': { '@el': 'sec|app', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+    },
     tags: [
       {
         exportJsonKey: { anchor: '$' },
@@ -1296,6 +1361,9 @@ const BITS: _BitsConfig = {
         description: 'The title of the chapter',
         jsonKey: 'title|setMulti(level)',
         exportJsonKey: { title: '$', level: '$level' },
+        // PLAN-140 W3 (NISO import): the section/annex title; the heading
+        // level rides the normalizer-derived nesting depth (plan Q2).
+        mappingKeys: { 'xml-niso-iec': { '@el': 'title', '@text': '$' } },
       },
       {
         key: ConfigKey.property_toc,
@@ -1505,11 +1573,28 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType._standard,
     description: 'Code bit, used for code snippets in articles or documents',
+    // PLAN-141 F4 (NISO import): a <code> block is a CONTENT bit with a
+    // literal text body; @language recovers as [@computerLanguage] (absent
+    // attr → no tag). Anchor = the source id (D2 revised).
+    mappingKeys: {
+      'xml-niso-iec': {
+        '@el': 'code',
+        '@attr': { id: '$customerId', language: '$computerLanguage' },
+        '▼': '$anchor',
+        '@text': '$',
+      },
+    },
     tags: [
       {
         key: ConfigKey.property_computerLanguage,
         description: 'The programming language of the code snippet',
         format: TagFormat.plainText,
+        // PLAN-141 F4 (NISO import): the bit key's `language` sigil recovers
+        // a present attr; this `@absent` rule supplies the AUTHORED default
+        // when the source carries none (catalog code row — an untyped block
+        // is `[@computerLanguage:text]`). Fires only on foreign imports,
+        // never the carrier round-trip.
+        mappingKeys: { 'xml-niso-iec': [{ '@absent': 'text' }] },
       },
       {
         key: ConfigKey.property_codeLineNumbers,
@@ -1552,6 +1637,19 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.formula,
     description:
       'Smart standard normative formula bit, used for mathematical formulas in smart standards that are normative',
+    // PLAN-141 F4 (NISO import): a <disp-formula> is a CONTENT bit whose
+    // latex-format body carries the <mml:math> subtree VERBATIM (G1 — no
+    // MathML↔LaTeX transform; ids stripped); <label> → [%]; a contained
+    // <legend> PROMOTES as a sibling legend bit (cards cannot nest in a
+    // body). Anchor = the source id (D2 revised).
+    mappingKeys: {
+      'xml-niso-iec': {
+        '@el': 'disp-formula',
+        '@attr': { id: '$customerId' },
+        '▼': '$anchor',
+        '@children': '$',
+      },
+    },
   },
   [BitType.smartStandardRemarkFormula]: {
     since: '3.11.0',
@@ -2106,6 +2204,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_reasonableNumOfChars,
         description: 'The reasonable number of characters for the essay',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_sampleSolution,
@@ -2576,6 +2675,13 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardList,
     description:
       'Smart standard list bit, used to create smart standard lists in articles or books',
+    // PLAN-140 refs family (NISO import): a reference list is a STRUCTURAL
+    // bit (no @children — it takes a path ordinal anchor and its <ref>
+    // children promote to sibling list-item bits); its <title> rides [#]
+    // via the title tag key.
+    mappingKeys: {
+      'xml-niso-iec': { '@el': 'ref-list', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+    },
   },
   [BitType.smartStandardListCollapsible]: {
     since: '1.28.0',
@@ -2627,6 +2733,16 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardNoteNonNormative,
     description:
       'Smart standard non-normative note bit, used to provide non-normative notes in smart standards',
+    // PLAN-140 W3 (NISO import, tranche 1). CONTENT key (@children): a
+    // note's inner paragraphs are note body, never separate bits.
+    mappingKeys: {
+      'xml-niso-iec': {
+        '@el': 'non-normative-note',
+        '@attr': { id: '$customerId' },
+        '@children': '$',
+        '▼': '$anchor',
+      },
+    },
   },
   [BitType.smartStandardNoteNormativeCollapsible]: {
     since: '1.28.0',
@@ -2742,6 +2858,18 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardRemarkNonNormative,
     description:
       'Smart standard non-normative remark bit, used to provide non-normative remarks in smart standards',
+    // PLAN-140 Q4 rider: a warning/caution note routes to the remark bit —
+    // the same element as the note key, distinguished by the content-type
+    // attr literal (alias value: forward emits the first alternative,
+    // reverse accepts any). Most-specific-wins beats the plain note key.
+    mappingKeys: {
+      'xml-niso-iec': {
+        '@el': 'non-normative-note',
+        '@attr': { 'content-type': 'warning|caution', id: '$customerId' },
+        '@children': '$',
+        '▼': '$anchor',
+      },
+    },
   },
   [BitType.smartStandardRemarkNormativeCollapsible]: {
     since: '1.28.0',
@@ -3234,6 +3362,7 @@ const BITS: _BitsConfig = {
         description:
           'Page number for the block, used to indicate the page on which the block appears',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_x,
@@ -3251,16 +3380,19 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_width,
         description: 'Width of the block, used to define the size of the block on the page',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_height,
         description: 'Height of the block, used to define the size of the block on the page',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_index,
         description: 'Index of the block, used to order blocks within the extractor page',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_classification,
@@ -3587,6 +3719,19 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.legend,
     description:
       'Smart standard normative legend bit, used to provide normative smart standard legends in articles or books',
+    // PLAN-141 F2 (NISO import): a free-standing <legend> (a formula's) or
+    // bare <def-list> (a table footer's — no <legend> wrapper there) that is
+    // NOT the claimed card content of its enclosing bit is a legend bit:
+    // STRUCTURAL-shaped, its <title> and <def-item>s build the
+    // definition-list cards via the card set's authored keys. A <legend>
+    // inside a figure/table bit stays that bit's claimed card content and
+    // never reaches this key. Anchor = the source id (D2 revised).
+    mappingKeys: {
+      'xml-niso-iec': [
+        { '@el': 'legend', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+        { '@el': 'def-list', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+      ],
+    },
   },
   [BitType.smartStandardRemarkLegend]: {
     since: '3.12.0',
@@ -3649,6 +3794,15 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardDefinitionListNormative,
     description:
       'Smart standard normative definition list bit, used to create normative smart standard definition lists in articles or books',
+    // PLAN-141 F3 (NISO import): a terms-and-definitions clause. STRUCTURAL-
+    // shaped: <label> → [%], the tbx:termEntry/langSet subtree builds the
+    // definition-list card via the card set's authored keys (all tig terms
+    // stacked on the term side; definition/example/notes/source composed on
+    // the definition side with authored locale affixes), langSet @xml:lang →
+    // [@lang] (nested attr slot on the tag key). Anchor = the source id.
+    mappingKeys: {
+      'xml-niso-iec': { '@el': 'term-sec', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+    },
   },
   [BitType.smartStandardDefinitionListNonNormative]: {
     since: '5.24.0',
@@ -3720,11 +3874,13 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_focusX,
         description: 'X-coordinate for the focus point, used to define the focus area in the image',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_focusY,
         description: 'Y-coordinate for the focus point, used to define the focus area in the image',
         format: TagFormat.number,
+        nullable: true,
       },
     ],
   },
@@ -3838,6 +3994,14 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardImageFigureNormative,
     description:
       'Smart standard normative image figure bit, used to create smart standard normative image figures in articles or books',
+    // PLAN-141 F1 (NISO import): a figure is STRUCTURAL-shaped (no
+    // @children — no body): <label> → [%], <caption>/<graphic> ride the
+    // [&image] resource chain, the <legend> def-list becomes the bit's
+    // definition-list cards, and an inner note PROMOTES as a sibling bit.
+    // Anchor = the source id (D2 revised).
+    mappingKeys: {
+      'xml-niso-iec': { '@el': 'fig', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+    },
   },
   [BitType.smartStandardImageFigureNonNormative]: {
     since: '1.28.0',
@@ -4613,6 +4777,18 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardListItem,
     description:
       'Smart standard list item bit, used to create smart standard list items in articles or books',
+    // PLAN-140 refs family (NISO import): one list-item bit per <ref> —
+    // CONTENT key (its citation subtree is the body), counter anchor scoped
+    // to the containing list, <label> → [%], nested <std-id> → [@externalId]
+    // (the externalId tag key's nested content slot).
+    mappingKeys: {
+      'xml-niso-iec': {
+        '@el': 'ref',
+        '@attr': { id: '$customerId' },
+        '@children': '$',
+        '▼': '$anchor',
+      },
+    },
   },
   [BitType.smartStandardListItemCollapsible]: {
     since: '1.28.0',
@@ -5759,6 +5935,12 @@ const BITS: _BitsConfig = {
         // its first child. Outside a table context it falls back to the
         // residual carrier.
         htmlKey: { '@el': 'caption', '@children': '$' },
+        // PLAN-141 F2 (NISO import): a table-wrap's <caption><title> — the
+        // nested content slot reads the title text (catalog D5: the caption
+        // is a TOP-LEVEL bit property on table bits).
+        mappingKeys: {
+          'xml-niso-iec': { '@el': 'caption', '@children': { '@el': 'title', '@text': '$' } },
+        },
       },
       {
         key: ConfigKey.property_tableFixedHeader,
@@ -5949,6 +6131,15 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.standardTableExtendedNormative,
     description:
       'Smart standard normative extended table bit, used to create smart standard normative extended tables in articles or books',
+    // PLAN-141 F2 (NISO import): a table-wrap is STRUCTURAL-shaped (no
+    // @children — no body): <label> → [%], <caption><title> → the bit-level
+    // [@caption] (D5), the inner <table>/<table-wrap-foot> build the
+    // table-extended card grid via the card set's authored keys, and a
+    // footer <def-list> PROMOTES as a sibling legend bit. Anchor = the
+    // source id (D2 revised).
+    mappingKeys: {
+      'xml-niso-iec': { '@el': 'table-wrap', '@attr': { id: '$customerId' }, '▼': '$anchor' },
+    },
   },
   [BitType.smartStandardTableExtendedNonNormative]: {
     since: '1.28.0',
@@ -6035,6 +6226,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_maxDisplayLevel,
         description: 'Maximum display level for the chapter in the table of contents',
         format: TagFormat.number,
+        nullable: true,
       },
     ],
   },
@@ -6048,6 +6240,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_maxTocChapterLevel,
         description: 'Maximum chapter level for the inline table of contents',
         format: TagFormat.number,
+        nullable: true,
       },
     ],
   },
@@ -6496,11 +6689,13 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_width, // Same as image
         description: 'Width for the embedded content, used to define the width in pixels',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_height, // Same as image
         description: 'Height for the embedded content, used to define the height in pixels',
         format: TagFormat.number,
+        nullable: true,
       },
       {
         key: ConfigKey.property_vendorUrl,
@@ -6542,6 +6737,7 @@ const BITS: _BitsConfig = {
         key: ConfigKey.property_jupyterExecutionCount,
         description: 'Execution count for the Jupyter output, used to define the execution order',
         format: TagFormat.number,
+        nullable: true,
       },
     ],
     textFormatDefault: TextFormat.plainText,
