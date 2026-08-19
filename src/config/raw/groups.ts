@@ -1391,6 +1391,11 @@ const GROUPS: _GroupsConfig = {
         },
       },
       {
+        key: ConfigKey.property_displayName,
+        description: 'The display name of the book',
+        format: TagFormat.plainText,
+      },
+      {
         key: ConfigKey.property_customerExternalId,
         description: 'The customer-specific external identifier for the book',
         format: TagFormat.plainText,

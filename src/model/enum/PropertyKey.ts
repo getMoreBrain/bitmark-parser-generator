@@ -75,6 +75,7 @@ const propertyKeys = {
   property_dateEnd: '@dateEnd',
   property_decimalPlaces: '@decimalPlaces',
   property_deeplink: '@deeplink',
+  property_displayName: '@displayName',
   property_diffContext: '@diffContext',
   property_diffOp: '@diffOp',
   property_diffRef: '@diffRef',

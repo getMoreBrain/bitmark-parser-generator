@@ -179,6 +179,7 @@ class Builder extends BaseBuilder {
       language?: string | string[];
       publisher?: string | string[];
       publisherName?: string;
+      displayName?: string;
       theme?: string | string[];
       rtl?: boolean;
       computerLanguage?: string;
@@ -683,6 +684,12 @@ class Builder extends BaseBuilder {
         bitType,
         ConfigKey.property_publisherName,
         data.publisherName,
+        options,
+      ),
+      displayName: this.toAstProperty(
+        bitType,
+        ConfigKey.property_displayName,
+        data.displayName,
         options,
       ),
       theme: this.toAstProperty(bitType, ConfigKey.property_theme, data.theme, options),
