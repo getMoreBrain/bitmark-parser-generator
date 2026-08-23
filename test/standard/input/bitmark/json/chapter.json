@@ -20,6 +20,7 @@
         }
       ],
       "level": 2,
+      "isCollapsible": true,
       "anchor": "ch-1",
       "item": [],
       "lead": [],
@@ -29,8 +30,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": true
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -69,8 +69,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -109,8 +108,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -149,8 +147,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -189,8 +186,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -229,8 +225,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -269,8 +264,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -309,8 +303,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -349,8 +342,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -389,8 +381,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -429,8 +420,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -469,8 +459,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -509,8 +498,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -533,8 +521,7 @@
       "body": [],
       "toc": true,
       "progress": true,
-      "level": 1,
-      "isCollapsible": false
+      "level": 1
     },
     "parser": {
       "version": "5.1.0",
@@ -557,8 +544,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -581,8 +567,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -605,8 +590,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",
@@ -629,8 +613,7 @@
       "instruction": [],
       "body": [],
       "toc": true,
-      "progress": true,
-      "isCollapsible": false
+      "progress": true
     },
     "parser": {
       "version": "5.1.0",

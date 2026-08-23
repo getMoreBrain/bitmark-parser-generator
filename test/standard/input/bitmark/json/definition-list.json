@@ -815,9 +815,10 @@
   },
   {
     "bit": {
-      "type": "definition-list-collapsible",
+      "type": "definition-list",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],

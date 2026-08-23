@@ -248,13 +248,31 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardArticleNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardArticleNormative,
     description: 'Smart standard normative article bit that is collapsible',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardArticleNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardArticleNonNormative,
     description: 'Smart standard non-normative article bit that is collapsible',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.statement]: {
     since: '1.3.0',
@@ -1377,12 +1395,6 @@ const BITS: _BitsConfig = {
         format: TagFormat.boolean,
         defaultValue: 'true',
       },
-      {
-        key: ConfigKey.property_isCollapsible,
-        description: 'If true, the chapter is collapsible',
-        format: TagFormat.boolean,
-        defaultValue: 'false',
-      },
     ],
   },
   [BitType.clozeAndMultipleChoiceText]: {
@@ -2311,15 +2323,33 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardExampleNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardExampleNormative,
     description:
       'Smart standard normative example collapsible bit, used to provide normative examples in smart standards that can be collapsed',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardExampleNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardExampleNonNormative,
     description:
       'Smart standard non-normative example collapsible bit, used to provide non-normative examples in smart standards that can be collapsed',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.authorContentBitGenerator]: {
     since: '4.2.0',
@@ -2685,9 +2715,18 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardListCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardList,
     description:
       'Smart standard list collapsible bit, used to create collapsible smart standard lists in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.message]: {
     since: '1.3.0',
@@ -2746,15 +2785,33 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardNoteNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardNoteNormative,
     description:
       'Smart standard normative note collapsible bit, used to provide normative notes in smart standards that can be collapsed',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardNoteNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardNoteNonNormative,
     description:
       'Smart standard non-normative note collapsible bit, used to provide non-normative notes in smart standards that can be collapsed',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.noteAi]: {
     since: '1.3.0',
@@ -2873,15 +2930,33 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardRemarkNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardRemarkNormative,
     description:
       'Smart standard normative remark collapsible bit, used to provide normative remarks in smart standards that can be collapsed',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardRemarkNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardRemarkNonNormative,
     description:
       'Smart standard non-normative remark collapsible bit, used to provide non-normative remarks in smart standards that can be collapsed',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.selfAssessment]: {
     since: '1.3.0',
@@ -2956,58 +3031,148 @@ const BITS: _BitsConfig = {
   },
   [BitType.collapsible]: {
     since: '1.21.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.article,
     description: 'Collapsible bit, used to create collapsible sections in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.sideNoteCollapsible]: {
     since: '1.21.0',
-    baseBitType: BitType.article,
+    deprecated: '5.37.0',
+    baseBitType: BitType.sideNote,
     description:
       'Side note collapsible bit, used to create collapsible side notes in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.infoCollapsible]: {
     since: '1.21.0',
-    baseBitType: BitType.article,
+    deprecated: '5.37.0',
+    baseBitType: BitType.info,
     description:
       'Info collapsible bit, used to create collapsible informational sections in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.remarkCollapsible]: {
     since: '1.21.0',
-    baseBitType: BitType.article,
+    deprecated: '5.37.0',
+    baseBitType: BitType.remark,
     description: 'Remark collapsible bit, used to create collapsible remarks in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.warningCollapsible]: {
     since: '1.21.0',
-    baseBitType: BitType.article,
+    deprecated: '5.37.0',
+    baseBitType: BitType.warning,
     description:
       'Warning collapsible bit, used to create collapsible warnings in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.dangerCollapsible]: {
     since: '1.21.0',
-    baseBitType: BitType.article,
+    deprecated: '5.37.0',
+    baseBitType: BitType.danger,
     description:
       'Danger collapsible bit, used to create collapsible danger sections in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.noteCollapsible]: {
     since: '1.21.0',
-    baseBitType: BitType.article,
+    deprecated: '5.37.0',
+    baseBitType: BitType.note,
     description: 'Note collapsible bit, used to create collapsible notes in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.exampleCollapsible]: {
     since: '1.21.0',
-    baseBitType: BitType.article,
+    deprecated: '5.37.0',
+    baseBitType: BitType.example,
     description:
       'Example collapsible bit, used to create collapsible examples in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.hintCollapsible]: {
     since: '1.21.0',
-    baseBitType: BitType.article,
+    deprecated: '5.37.0',
+    baseBitType: BitType.hint,
     description: 'Hint collapsible bit, used to create collapsible hints in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.bugCollapsible]: {
     since: '1.21.0',
-    baseBitType: BitType.article,
+    deprecated: '5.37.0',
+    baseBitType: BitType.bug,
     description: 'Bug collapsible bit, used to create collapsible bug reports in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.platformPath]: {
     since: '3.14.1',
@@ -3240,9 +3405,18 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorPageCollapsible]: {
     since: '1.30.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.extractorPage,
     description:
       'Collapsible extractor page bit, used to extract pages from images with collapsible functionality',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.extractorPageWithBlocks]: {
     since: '1.5.21',
@@ -3251,9 +3425,18 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorPageWithBlocksCollapsible]: {
     since: '1.30.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.extractorPageWithBlocks,
     description:
       'Collapsible extractor page with blocks bit, used to extract pages with blocks from images with collapsible functionality',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.extractorConfiguration]: {
     since: '1.7.1',
@@ -3297,8 +3480,17 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorImageCollapsible]: {
     since: '4.3.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.extractorImage,
     description: 'Collapsible extractor images bit, used for  images extracted from PDFs',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.extractorBlueprint]: {
     since: '5.12.0',
@@ -3446,9 +3638,18 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorPageNumberCollapsible]: {
     since: '1.30.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.extractorPageNumber,
     description:
       'Collapsible extractor page number bit, used to define page numbers in extractor pages with collapsible functionality',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.extractorPageHeader]: {
     since: '1.5.21',
@@ -3457,9 +3658,18 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorPageHeaderCollapsible]: {
     since: '1.30.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.extractorPageHeader,
     description:
       'Collapsible extractor page header bit, used to define headers in extractor pages with collapsible functionality',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.extractorPageFooter]: {
     since: '1.5.21',
@@ -3468,9 +3678,18 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorPageFooterCollapsible]: {
     since: '1.30.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.extractorPageFooter,
     description:
       'Collapsible extractor page footer bit, used to define footers in extractor pages with collapsible functionality',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.pageOpenBook]: {
     since: '1.5.10',
@@ -3773,9 +3992,18 @@ const BITS: _BitsConfig = {
   },
   [BitType.definitionListCollapsible]: {
     since: '5.25.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.definitionList,
     description:
       'Collapsible definition list bit, used to create collapsible lists of definitions in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.standardDefinitionListNormative]: {
     since: '5.24.0',
@@ -4011,15 +4239,33 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardImageFigureNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardImageFigureNormative,
     description:
       'Collapsible smart standard normative image figure bit, used to create collapsible smart standard normative image figures in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardImageFigureNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardImageFigureNonNormative,
     description:
       'Collapsible smart standard non-normative image figure bit, used to create collapsible smart standard non-normative image figures in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.imageLandscape]: {
     since: '1.3.0',
@@ -4255,51 +4501,123 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardTableImageNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardTableImageNormative,
     description:
       'Collapsible smart standard normative table image bit, used to create collapsible smart standard normative images in tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardTableImageNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardTableImageNonNormative,
     description:
       'Collapsible smart standard non-normative table image bit, used to create collapsible smart standard non-normative images in tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardRemarkTableImageNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardRemarkTableImageNormative,
     description:
       'Collapsible smart standard normative remark table image bit, used to create collapsible smart standard normative remark images in tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardRemarkTableImageNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardRemarkTableImageNonNormative,
     description:
       'Collapsible smart standard non-normative remark table image bit, used to create collapsible smart standard non-normative remark images in tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardTableExtendedImageNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardTableExtendedImageNormative,
     description:
       'Collapsible smart standard normative extended table image bit, used to create collapsible smart standard normative extended images in tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardTableExtendedImageNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardTableExtendedImageNonNormative,
     description:
       'Collapsible smart standard non-normative extended table image bit, used to create collapsible smart standard non-normative extended images in tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardRemarkTableExtendedImageNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardRemarkTableExtendedImageNormative,
     description:
       'Collapsible smart standard normative remark extended table image bit, used to create collapsible smart standard normative remark extended images in tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardRemarkTableExtendedImageNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardRemarkTableExtendedImageNonNormative,
     description:
       'Collapsible smart standard non-normative remark extended table image bit, used to create collapsible smart standard non-normative remark extended images in tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.imageLink]: {
     since: '1.3.0',
@@ -4792,9 +5110,18 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardListItemCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardListItem,
     description:
       'Collapsible smart standard list item bit, used to create collapsible smart standard list items in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.mark]: {
     since: '1.3.0',
@@ -5142,8 +5469,17 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageCollapsible]: {
     since: '1.30.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.page,
     description: 'Collapsible page bit, used to create collapsible sections in pages',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.pageCoverImage]: {
     since: '1.22.0',
@@ -6161,51 +6497,123 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardTableNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardTableNormative,
     description:
       'Collapsible smart standard normative table bit, used to create collapsible smart standard normative tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardTableNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardTableNonNormative,
     description:
       'Collapsible smart standard non-normative table bit, used to create collapsible smart standard non-normative tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardRemarkTableNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardRemarkTableNormative,
     description:
       'Collapsible smart standard normative remark table bit, used to create collapsible smart standard normative remark tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardRemarkTableNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardRemarkTableNonNormative,
     description:
       'Collapsible smart standard non-normative remark table bit, used to create collapsible smart standard non-normative remark tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardTableExtendedNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardTableExtendedNormative,
     description:
       'Collapsible smart standard normative extended table bit, used to create collapsible smart standard normative extended tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardTableExtendedNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardTableExtendedNonNormative,
     description:
       'Collapsible smart standard non-normative extended table bit, used to create collapsible smart standard non-normative extended tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardRemarkTableExtendedNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardRemarkTableExtendedNormative,
     description:
       'Collapsible smart standard normative remark extended table bit, used to create collapsible smart standard normative remark extended tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.smartStandardRemarkTableExtendedNonNormativeCollapsible]: {
     since: '1.28.0',
+    deprecated: '5.37.0',
     baseBitType: BitType.smartStandardRemarkTableExtendedNonNormative,
     description:
       'Collapsible smart standard non-normative remark extended table bit, used to create collapsible smart standard non-normative remark extended tables in articles or books',
+    tags: [
+      {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible (defaults true for this deprecated bit type)',
+        format: TagFormat.boolean,
+        defaultValue: 'true',
+      },
+    ],
   },
   [BitType.parameters]: {
     since: '1.18.0',

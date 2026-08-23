@@ -49,9 +49,10 @@
   },
   {
     "bit": {
-      "type": "extractor-page-collapsible",
+      "type": "extractor-page",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
