@@ -711,6 +711,8 @@ const NodeType = {
   type: 'type',
   unit: 'unit',
   unitAbbr: 'unitAbbr',
+  unitAbbrPlural: 'unitAbbrPlural',
+  unitPlural: 'unitPlural',
   url: 'url',
   validationDate: 'validationDate',
   validationDateValue: 'validationDateValue',
