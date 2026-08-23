@@ -24,6 +24,7 @@ const config = [
       'assets',
       'specs',
       'plans',
+      '.claude',
       'submodules',
       '.github',
       'src/generated',
