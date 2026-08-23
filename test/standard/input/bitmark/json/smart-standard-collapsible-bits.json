@@ -1,12 +1,13 @@
 [
   {
     "bit": {
-      "type": "smart-standard-article-normative-collapsible",
+      "type": "smart-standard-article-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -80,12 +81,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-article-non-normative-collapsible",
+      "type": "smart-standard-article-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -159,12 +161,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-example-normative-collapsible",
+      "type": "smart-standard-example-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -240,12 +243,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-example-non-normative-collapsible",
+      "type": "smart-standard-example-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -321,7 +325,7 @@
   },
   {
     "bit": {
-      "type": "smart-standard-image-figure-normative-collapsible",
+      "type": "smart-standard-image-figure-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "backgroundWallpaper": {
@@ -341,6 +345,7 @@
           "selected": false
         }
       },
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -399,7 +404,7 @@
   },
   {
     "bit": {
-      "type": "smart-standard-image-figure-non-normative-collapsible",
+      "type": "smart-standard-image-figure-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "backgroundWallpaper": {
@@ -419,6 +424,7 @@
           "selected": false
         }
       },
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -567,12 +573,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-list-collapsible",
+      "type": "smart-standard-list",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -646,12 +653,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-list-item-collapsible",
+      "type": "smart-standard-list-item",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -726,10 +734,11 @@
   },
   {
     "bit": {
-      "type": "smart-standard-list-item-collapsible",
+      "type": "smart-standard-list-item",
       "format": "bitmark++",
       "bitLevel": 1,
       "listItemIndent": 5,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -747,12 +756,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-note-normative-collapsible",
+      "type": "smart-standard-note-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -826,12 +836,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-note-non-normative-collapsible",
+      "type": "smart-standard-note-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -905,12 +916,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-remark-normative-collapsible",
+      "type": "smart-standard-remark-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -984,12 +996,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-remark-non-normative-collapsible",
+      "type": "smart-standard-remark-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1063,12 +1076,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-table-image-normative-collapsible",
+      "type": "smart-standard-table-image-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1137,12 +1151,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-table-image-non-normative-collapsible",
+      "type": "smart-standard-table-image-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151972"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1211,12 +1226,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-remark-table-image-normative-collapsible",
+      "type": "smart-standard-remark-table-image-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151971"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1285,12 +1301,13 @@
   },
   {
     "bit": {
-      "type": "smart-standard-remark-table-image-non-normative-collapsible",
+      "type": "smart-standard-remark-table-image-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151972"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1359,13 +1376,14 @@
   },
   {
     "bit": {
-      "type": "smart-standard-table-normative-collapsible",
+      "type": "smart-standard-table-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
       "tableSearch": true,
       "tableSort": true,
       "tablePagination": true,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1497,7 +1515,6 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
-
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -1509,13 +1526,14 @@
   },
   {
     "bit": {
-      "type": "smart-standard-table-non-normative-collapsible",
+      "type": "smart-standard-table-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
       "tableSearch": true,
       "tableSort": true,
       "tablePagination": true,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1647,7 +1665,6 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
-
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -1659,13 +1676,14 @@
   },
   {
     "bit": {
-      "type": "smart-standard-remark-table-normative-collapsible",
+      "type": "smart-standard-remark-table-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
       "tableSearch": true,
       "tableSort": true,
       "tablePagination": true,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1797,7 +1815,6 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
-
       "tableColumnMinWidth": 0
     },
     "parser": {
@@ -1809,13 +1826,14 @@
   },
   {
     "bit": {
-      "type": "smart-standard-remark-table-non-normative-collapsible",
+      "type": "smart-standard-remark-table-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
       "tableFixedHeader": true,
       "tableSearch": true,
       "tableSort": true,
       "tablePagination": true,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1947,7 +1965,6 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
-
       "tableColumnMinWidth": 0
     },
     "parser": {

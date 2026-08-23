@@ -16,6 +16,7 @@
       "theme": [
         "grundzuege"
       ],
+      "isCollapsible": true,
       "item": [
         {
           "type": "paragraph",
@@ -154,12 +155,13 @@
   },
   {
     "bit": {
-      "type": "side-note-collapsible",
+      "type": "side-note",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -210,12 +212,13 @@
   },
   {
     "bit": {
-      "type": "info-collapsible",
+      "type": "info",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -266,12 +269,13 @@
   },
   {
     "bit": {
-      "type": "remark-collapsible",
+      "type": "remark",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -322,12 +326,13 @@
   },
   {
     "bit": {
-      "type": "warning-collapsible",
+      "type": "warning",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -378,12 +383,13 @@
   },
   {
     "bit": {
-      "type": "danger-collapsible",
+      "type": "danger",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -434,12 +440,13 @@
   },
   {
     "bit": {
-      "type": "note-collapsible",
+      "type": "note",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -490,12 +497,13 @@
   },
   {
     "bit": {
-      "type": "example-collapsible",
+      "type": "example",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -535,7 +543,9 @@
           ],
           "attrs": {}
         }
-      ]
+      ],
+      "isExample": false,
+      "example": null
     },
     "parser": {
       "version": "5.1.0",
@@ -546,12 +556,13 @@
   },
   {
     "bit": {
-      "type": "hint-collapsible",
+      "type": "hint",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -602,12 +613,13 @@
   },
   {
     "bit": {
-      "type": "bug-collapsible",
+      "type": "bug",
       "format": "bitmark++",
       "bitLevel": 1,
       "id": [
         "151970"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],

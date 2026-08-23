@@ -4,7 +4,12 @@
       "type": "extractor-page-header",
       "format": "bitmark++",
       "bitLevel": 1,
-      "sourceBB": [200, 260, 2000, 320],
+      "sourceBB": [
+        200,
+        260,
+        2000,
+        320
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -33,12 +38,22 @@
   },
   {
     "bit": {
-      "type": "extractor-page-header-collapsible",
+      "type": "extractor-page-header",
       "format": "bitmark++",
       "bitLevel": 1,
       "sourceBB": [
-        [200, 260, 2000, 320],
-        [200, 400, 2000, 460]
+        [
+          200,
+          260,
+          2000,
+          320
+        ],
+        [
+          200,
+          400,
+          2000,
+          460
+        ]
       ],
       "bitFingerprint": [
         "font-myriad_pro",
@@ -46,6 +61,7 @@
         "font-size-19.4",
         "font-color-007fff"
       ],
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],

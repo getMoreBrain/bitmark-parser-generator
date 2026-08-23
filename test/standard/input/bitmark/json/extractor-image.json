@@ -159,7 +159,7 @@
   },
   {
     "bit": {
-      "type": "extractor-image-collapsible",
+      "type": "extractor-image",
       "format": "text",
       "bitLevel": 1,
       "id": [
@@ -169,6 +169,7 @@
       "levelCEFR": "levelCEFR",
       "levelILR": "levelILR",
       "levelACTFL": "levelACTFL",
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],

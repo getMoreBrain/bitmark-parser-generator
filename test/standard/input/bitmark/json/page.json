@@ -145,13 +145,14 @@
   },
   {
     "bit": {
-      "type": "page-collapsible",
+      "type": "page",
       "format": "bitmark++",
       "bitLevel": 1,
       "ageRange": [
         "18",
         "120"
       ],
+      "isCollapsible": true,
       "resource": {
         "type": "image",
         "image": {

@@ -1848,9 +1848,10 @@
   },
   {
     "bit": {
-      "type": "smart-standard-table-extended-normative-collapsible",
+      "type": "smart-standard-table-extended-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -1949,9 +1950,10 @@
   },
   {
     "bit": {
-      "type": "smart-standard-table-extended-non-normative-collapsible",
+      "type": "smart-standard-table-extended-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -2252,9 +2254,10 @@
   },
   {
     "bit": {
-      "type": "smart-standard-remark-table-extended-normative-collapsible",
+      "type": "smart-standard-remark-table-extended-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -2353,9 +2356,10 @@
   },
   {
     "bit": {
-      "type": "smart-standard-remark-table-extended-non-normative-collapsible",
+      "type": "smart-standard-remark-table-extended-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -2692,9 +2696,10 @@
   },
   {
     "bit": {
-      "type": "smart-standard-table-extended-image-normative-collapsible",
+      "type": "smart-standard-table-extended-image-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -2811,9 +2816,10 @@
   },
   {
     "bit": {
-      "type": "smart-standard-table-extended-image-non-normative-collapsible",
+      "type": "smart-standard-table-extended-image-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3168,9 +3174,10 @@
   },
   {
     "bit": {
-      "type": "smart-standard-remark-table-extended-image-normative-collapsible",
+      "type": "smart-standard-remark-table-extended-image-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -3287,9 +3294,10 @@
   },
   {
     "bit": {
-      "type": "smart-standard-remark-table-extended-image-non-normative-collapsible",
+      "type": "smart-standard-remark-table-extended-image-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isCollapsible": true,
       "item": [],
       "lead": [],
       "pageNumber": [],

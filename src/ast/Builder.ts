@@ -15,6 +15,7 @@ import {
 } from '../model/ast/Nodes.ts';
 import { type JsonText, type TextAst, type TextNode } from '../model/ast/TextNodes.ts';
 import { ConfigKey } from '../model/config/enum/ConfigKey.ts';
+import type { PropertyTagConfig } from '../model/config/PropertyTagConfig.ts';
 import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
 import { BodyBitType, type BodyBitTypeType } from '../model/enum/BodyBitType.ts';
 import { DeprecatedTextFormat } from '../model/enum/DeprecatedTextFormat.ts';
@@ -451,8 +452,27 @@ class Builder extends BaseBuilder {
     // Copy all data to a new object to avoid modifying the original data
     data = structuredClone(data);
 
+    // PLAN-017: migrate the deprecated `*-collapsible` bit types to their non-collapsible cousin
+    // plus `isCollapsible`. Done here because both parse paths (bitmark PEG and JSON) converge on
+    // buildBit(), so bitmark and JSON input migrate and both generators emit the new form.
+    // Must run BEFORE the bit config is resolved. `?? true` keeps PLAN-016 semantics: an explicit
+    // `isCollapsible: false` in the source still wins (and still yields no JSON key).
+    const migratedBitType = Config.getMigratedBitType(data.bitType);
+    if (migratedBitType) {
+      data.bitType = migratedBitType;
+      data.isCollapsible = data.isCollapsible ?? true;
+    }
+
     const bitType = data.bitType;
     const bitConfig = Config.getBitConfig(bitType);
+
+    // PLAN-016: the deprecated `*-collapsible` bit types override @isCollapsible
+    // with `defaultValue: 'true'`. Materialise that default into the AST when the
+    // tag is absent, so both generators (and the exported config) agree. Scoped to
+    // this tag only — other `defaultValue: 'true'` tags are not materialised.
+    const isCollapsibleDefaultsTrue =
+      (bitConfig.tags[ConfigKey.property_isCollapsible] as PropertyTagConfig | undefined)
+        ?.defaultValue === 'true';
 
     // Text Format (accepts deprecated values, and converts them to the new format)
     const deprecatedTextFormat = Enum(DeprecatedTextFormat).fromValue(data.textFormat);
@@ -1609,7 +1629,7 @@ class Builder extends BaseBuilder {
       isCollapsible: this.toAstProperty(
         bitType,
         ConfigKey.property_isCollapsible,
-        data.isCollapsible,
+        data.isCollapsible ?? (isCollapsibleDefaultsTrue ? true : undefined),
         options,
       ),
       anchor: data.anchor,
