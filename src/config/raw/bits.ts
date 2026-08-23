@@ -2028,12 +2028,22 @@ const BITS: _BitsConfig = {
         chain: [
           {
             key: ConfigKey.property_unit,
-            description: 'The unit of measurement for the ingredients',
+            description: 'The unit of measurement for the ingredients (singular)',
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.property_unitPlural,
+            description: 'The unit of measurement for the ingredients (plural)',
             format: TagFormat.plainText,
           },
           {
             key: ConfigKey.property_unitAbbr,
-            description: 'The abbreviation for the unit of measurement',
+            description: 'The abbreviation for the unit of measurement (singular)',
+            format: TagFormat.plainText,
+          },
+          {
+            key: ConfigKey.property_unitAbbrPlural,
+            description: 'The abbreviation for the unit of measurement (plural)',
             format: TagFormat.plainText,
           },
           {

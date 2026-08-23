@@ -24,7 +24,15 @@ function servingsChainContentProcessor(
 
   if (context.DEBUG_CHAIN_TAGS) context.debugPrint('servings TAGS', tags);
 
-  const { unit, unitAbbr, decimalPlaces, disableCalculation, __hintString } = tags;
+  const {
+    unit,
+    unitPlural,
+    unitAbbr,
+    unitAbbrPlural,
+    decimalPlaces,
+    disableCalculation,
+    __hintString,
+  } = tags;
 
   // Extract the servings from the content tag
   const servings = NumberUtils.asNumber(content.value) ?? 1;
@@ -32,7 +40,9 @@ function servingsChainContentProcessor(
   const node: Partial<ServingsJson> = {
     servings,
     unit,
+    unitPlural,
     unitAbbr,
+    unitAbbrPlural,
     decimalPlaces: decimalPlaces ?? 1,
     disableCalculation,
     hint: __hintString,

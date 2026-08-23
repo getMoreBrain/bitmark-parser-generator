@@ -853,12 +853,14 @@
       "properties": {
         "servings": { "type": "number" },
         "unit": { "type": "string" },
+        "unitPlural": { "type": "string" },
         "unitAbbr": { "type": "string" },
+        "unitAbbrPlural": { "type": "string" },
         "decimalPlaces": { "type": "number" },
         "disableCalculation": { "type": "boolean" },
         "hint": { "type": "string" }
       },
-      "required": ["servings", "unit", "unitAbbr", "decimalPlaces", "disableCalculation", "hint"]
+      "required": ["servings", "unit", "unitPlural", "unitAbbr", "unitAbbrPlural", "decimalPlaces", "disableCalculation", "hint"]
     },
     "IngredientJson": {
       "type": "object",
@@ -868,14 +870,16 @@
         "ingredient": { "type": "string" },
         "quantity": { "type": "number" },
         "unit": { "type": "string" },
+        "unitPlural": { "type": "string" },
         "unitAbbr": { "type": "string" },
+        "unitAbbrPlural": { "type": "string" },
         "decimalPlaces": { "type": "number" },
         "disableCalculation": { "type": "boolean" },
         "item": { "$ref": "#/$defs/JsonText" },
         "lead": { "$ref": "#/$defs/JsonText" },
         "hint": { "$ref": "#/$defs/JsonText" }
       },
-      "required": ["title", "checked", "ingredient", "quantity", "unit", "unitAbbr", "decimalPlaces", "disableCalculation", "item", "lead", "hint"]
+      "required": ["title", "checked", "ingredient", "quantity", "unit", "unitPlural", "unitAbbr", "unitAbbrPlural", "decimalPlaces", "disableCalculation", "item", "lead", "hint"]
     },
     "RatingLevelStartEndJson": {
       "type": "object",

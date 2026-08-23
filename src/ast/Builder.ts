@@ -2710,7 +2710,9 @@ class Builder extends BaseBuilder {
       ingredient: this.handleJsonText(context, TextLocation.tag, data.ingredient),
       quantity: data.quantity ?? 0,
       unit: data.unit ?? '',
+      unitPlural: data.unitPlural ?? '',
       unitAbbr: data.unitAbbr ?? '',
+      unitAbbrPlural: data.unitAbbrPlural ?? '',
       decimalPlaces: data.decimalPlaces ?? 1,
       disableCalculation: data.disableCalculation ?? false,
       item: this.handleJsonText(context, TextLocation.tag, data.item),
@@ -3542,13 +3544,24 @@ class Builder extends BaseBuilder {
     data: Partial<ServingsJson> | undefined,
   ): ServingsJson | undefined {
     if (!data) return undefined;
-    const { servings, unit, unitAbbr, decimalPlaces, disableCalculation, hint } = data;
+    const {
+      servings,
+      unit,
+      unitPlural,
+      unitAbbr,
+      unitAbbrPlural,
+      decimalPlaces,
+      disableCalculation,
+      hint,
+    } = data;
 
     // NOTE: Node order is important and is defined here
     const node: ServingsJson = {
       servings: servings ?? 0,
       unit: unit ?? '',
+      unitPlural: unitPlural ?? '',
       unitAbbr: unitAbbr ?? '',
+      unitAbbrPlural: unitAbbrPlural ?? '',
       decimalPlaces: decimalPlaces ?? 1,
       disableCalculation: disableCalculation ?? false,
       hint: hint ?? '',

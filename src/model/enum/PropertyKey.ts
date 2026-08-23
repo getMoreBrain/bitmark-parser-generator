@@ -287,6 +287,8 @@ const propertyKeys = {
   property_trim: '@trim',
   property_unit: '@unit',
   property_unitAbbr: '@unitAbbr',
+  property_unitAbbrPlural: '@unitAbbrPlural',
+  property_unitPlural: '@unitPlural',
   property_vendorDashboardId: '@vendorDashboardId',
   property_vendorSurveyId: '@vendorSurveyId',
   property_vendorUrl: '@vendorUrl',
