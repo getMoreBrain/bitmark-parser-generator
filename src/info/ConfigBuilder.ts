@@ -694,6 +694,9 @@ class ConfigBuilder {
         description: b.description ?? '',
         since: resolvedBitConfig.since,
         deprecated: resolvedBitConfig.deprecated,
+        // PLAN-017 migration target (config-derived); lets downstream engines
+        // remap deprecated bit types without any name-based logic.
+        migrateTo: Config.getMigratedBitType(b.bitType),
         bodyFormat: resolvedBitConfig.textFormatDefault ?? 'bitmark--',
         ...(resolvedBitConfig.bodyRequired ? { bodyRequired: true } : {}),
         ...(resolvedBitConfig.bodyAllowed === false ? { bodyForbidden: true } : {}),
