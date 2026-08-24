@@ -572,7 +572,16 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return true;
 
-    const { servings, unit, unitAbbr, decimalPlaces, disableCalculation, hint } = nodeValue;
+    const {
+      servings,
+      unit,
+      unitPlural,
+      unitAbbr,
+      unitAbbrPlural,
+      decimalPlaces,
+      disableCalculation,
+      hint,
+    } = nodeValue;
 
     // this.writeNL();
     this.writeProperty('servings', servings, route, {
@@ -584,8 +593,20 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         forceChain: true,
       });
     }
+    if (unitPlural != null) {
+      this.writeProperty('unitPlural', unitPlural, route, {
+        format: TagFormat.plainText,
+        forceChain: true,
+      });
+    }
     if (unitAbbr != null) {
       this.writeProperty('unitAbbr', unitAbbr, route, {
+        format: TagFormat.plainText,
+        forceChain: true,
+      });
+    }
+    if (unitAbbrPlural != null) {
+      this.writeProperty('unitAbbrPlural', unitAbbrPlural, route, {
         format: TagFormat.plainText,
         forceChain: true,
       });
@@ -1947,9 +1968,21 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
           format: TagFormat.plainText,
         });
 
+      // [@unitPlural:kilograms]
+      if (ingredient.unitPlural != null)
+        this.writeProperty('unitPlural', ingredient.unitPlural, route, {
+          format: TagFormat.plainText,
+        });
+
       // [@unitAbbr:kg]
       if (ingredient.unitAbbr != null)
         this.writeProperty('unitAbbr', ingredient.unitAbbr, route, {
+          format: TagFormat.plainText,
+        });
+
+      // [@unitAbbrPlural:kg]
+      if (ingredient.unitAbbrPlural != null)
+        this.writeProperty('unitAbbrPlural', ingredient.unitAbbrPlural, route, {
           format: TagFormat.plainText,
         });
 

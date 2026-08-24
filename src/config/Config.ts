@@ -21,6 +21,11 @@ import { ConfigHydrator } from './ConfigHydrator.ts';
 import { BITS } from './raw/bits.ts';
 import { GROUPS } from './raw/groups.ts';
 
+/**
+ * PLAN-017: suffix identifying the deprecated collapsible bit types.
+ */
+const COLLAPSIBLE_BIT_TYPE_SUFFIX = '-collapsible';
+
 export interface ComboResources {
   [configKey: string]: TagsConfig;
 }
@@ -29,6 +34,7 @@ class Config {
   public bitLevelMin = 1;
   public bitLevelMax = 7;
   private bitCache: Map<BitTypeType, BitConfig> = new Map();
+  private migratedBitCache: Map<BitTypeType, BitTypeType | undefined> = new Map();
   private allResourcesCache: TagsConfig | undefined;
   private comboResourcesCache: Map<ConfigKeyType, TagsConfig | undefined> = new Map();
 
@@ -47,6 +53,32 @@ class Config {
   public getBitType(bitType: BitTypeType | string | undefined): BitTypeType {
     if (bitType?.startsWith('|')) bitType = bitType.substring(1);
     return Enum(BitType).fromValue(bitType) ?? BitType._error;
+  }
+
+  /**
+   * PLAN-017: Return the migration target for a deprecated `*-collapsible` bit type.
+   *
+   * Every `*-collapsible` bit type declares its non-collapsible cousin as its `baseBitType`, so the
+   * target is read from the config rather than a hand-maintained table — a new `*-collapsible` bit
+   * type is covered automatically.
+   *
+   * `BitType.collapsible` is the one exclusion: it has no non-collapsible cousin (its `baseBitType`
+   * is `article`, which is not a migration target).
+   *
+   * @param bitType the bit type
+   * @returns the bit type to migrate to, or undefined if the bit type does not migrate
+   */
+  public getMigratedBitType(bitType: BitTypeType): BitTypeType | undefined {
+    const cached = this.migratedBitCache.get(bitType);
+    if (cached !== undefined || this.migratedBitCache.has(bitType)) return cached;
+
+    let target: BitTypeType | undefined;
+    if (bitType !== BitType.collapsible && bitType.endsWith(COLLAPSIBLE_BIT_TYPE_SUFFIX)) {
+      target = BITS[bitType]?.baseBitType;
+    }
+
+    this.migratedBitCache.set(bitType, target);
+    return target;
   }
 
   /**

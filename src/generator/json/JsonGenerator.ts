@@ -466,6 +466,32 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
+  // bitmarkAst -> bits -> bitsValue -> isCollapsible
+
+  /**
+   * PLAN-016: `isCollapsible` is emitted only when true. `false` is the implied
+   * default for every bit, so it is never written to the JSON — an absent key
+   * means the bit's configured default (`true` for the deprecated
+   * `*-collapsible` bit types, `false` everywhere else).
+   *
+   * Defining these handlers suppresses the generic property handlers that
+   * `generatePropertyHandlers()` would otherwise install for this tag.
+   */
+  protected leaf_isCollapsible(node: NodeInfo, route: NodeInfo[]): boolean {
+    // Ignore any property that is not at the bit level
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return false;
+
+    if (node.value === true) this.bitJson.isCollapsible = true;
+
+    // Stop traversal of this branch
+    return false;
+  }
+
+  protected enter_isCollapsible(node: NodeInfo, route: NodeInfo[]): boolean {
+    return this.leaf_isCollapsible(node, route);
+  }
+
   // bitmarkAst -> bits -> bitsValue -> markConfig
 
   protected enter_markConfig(_node: NodeInfo, _route: NodeInfo[]): boolean {
@@ -1750,7 +1776,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         //
         if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
         if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
-        if (bitJson.isCollapsible == null) bitJson.isCollapsible = false; // Always set on chapter bits
         if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         //

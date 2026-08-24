@@ -2144,12 +2144,22 @@ const CARDSETS: _CardSetsConfig = {
               },
               {
                 key: ConfigKey.property_unit,
-                description: 'Unit of measurement for the ingredient.',
+                description: 'Unit of measurement for the ingredient (singular).',
+                format: TagFormat.plainText,
+              },
+              {
+                key: ConfigKey.property_unitPlural,
+                description: 'Unit of measurement for the ingredient (plural).',
                 format: TagFormat.plainText,
               },
               {
                 key: ConfigKey.property_unitAbbr,
-                description: 'Abbreviation for the unit of measurement.',
+                description: 'Abbreviation for the unit of measurement (singular).',
+                format: TagFormat.plainText,
+              },
+              {
+                key: ConfigKey.property_unitAbbrPlural,
+                description: 'Abbreviation for the unit of measurement (plural).',
                 format: TagFormat.plainText,
               },
               {

@@ -108,6 +108,11 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.plainText,
       },
       {
+        key: ConfigKey.property_isCollapsible,
+        description: 'If true, the bit is collapsible',
+        format: TagFormat.boolean,
+      },
+      {
         key: ConfigKey.property_spansPageBreak,
         description: 'If true, the bit spans a page break',
         format: TagFormat.boolean,

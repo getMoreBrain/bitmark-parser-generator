@@ -613,7 +613,9 @@ export interface TechnicalTermJson {
 export interface ServingsJson {
   servings: number;
   unit: string;
+  unitPlural: string;
   unitAbbr: string;
+  unitAbbrPlural: string;
   decimalPlaces: number;
   disableCalculation: boolean;
   hint: string;
@@ -625,7 +627,9 @@ export interface IngredientJson {
   ingredient: string;
   quantity: number;
   unit: string;
+  unitPlural: string;
   unitAbbr: string;
+  unitAbbrPlural: string;
   decimalPlaces: number;
   disableCalculation: boolean;
   item: JsonText;
