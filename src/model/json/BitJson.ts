@@ -65,6 +65,8 @@ export interface BitJson {
   slug: string;
   tag: string | string[];
   groupTag: GroupTagJson[];
+  accessibilityTag: string | string[];
+  accessibilityGroupTag: GroupTagJson[];
   reviewTag: string | string[];
   reviewerTag: string | string[];
   reductionTag: string | string[];
