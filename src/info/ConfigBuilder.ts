@@ -170,6 +170,47 @@ class ConfigBuilder {
       return tag.jsonKey == null || tag.jsonKey === bare;
     };
 
+    // PLAN-151 (bitmark-parser): resolved-default + emission-policy export.
+    // The parser-side config models every tag as a RESOLVED default plus an
+    // orthogonal `emit` policy; the legacy `nullable` field and redundant
+    // natural defaults are no longer part of the exported schema:
+    //   - internal `nullable: true`      → `emit: "passthrough"` (absence is
+    //     a distinct state). A NON-natural defaultValue stays exported
+    //     alongside — a non-natural default is always emitted, no matter the
+    //     policy; a natural one is redundant on every policy and drops.
+    //   - defaultValue == format natural → dropped (redundant: an absent key
+    //     already means the natural — 'false' / '0' / '')
+    //   - defaultValue non-natural       → `default` + `emit: "always"` (the
+    //     key never goes absent; preserves the historical
+    //     materialise-in-both-modes behaviour)
+    //   - otherwise                      → nothing (implicit `nonNatural`)
+    const naturalDefaultFor = (format: string): string | undefined => {
+      switch (format) {
+        case 'boolean':
+          return 'false';
+        case 'number':
+          return '0';
+        case 'coordinates':
+          return undefined; // intrinsically passthrough — no natural value
+        default:
+          return ''; // '', 'string', 'bitmark+'
+      }
+    };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const defaultAndEmitFields = (tag: any, format: string): object => {
+      if (tag.nullable) {
+        return {
+          ...(tag.defaultValue != null && tag.defaultValue !== naturalDefaultFor(format)
+            ? { default: tag.defaultValue }
+            : {}),
+          emit: 'passthrough',
+        };
+      }
+      if (tag.defaultValue == null) return {};
+      if (tag.defaultValue === naturalDefaultFor(format)) return {}; // redundant natural
+      return { default: tag.defaultValue, emit: 'always' };
+    };
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const processTagEntries = (tag: any, pathStack: string[]): any[] => {
       const tags: unknown[] = [];
@@ -285,8 +326,7 @@ class ConfigBuilder {
           { value: tag.htmlKey as HtmlKey, present: hasHtml },
         ),
         ...(format && format !== 'string' ? { format } : {}),
-        ...(tag.defaultValue != null ? { default: tag.defaultValue } : {}),
-        ...(tag.nullable ? { nullable: true } : {}),
+        ...defaultAndEmitFields(tag, format),
         ...(tag.minCount != null && tag.minCount !== 0 ? { min: tag.minCount } : {}),
         ...(tag.maxCount != null && tag.maxCount !== 1 ? { max: tag.maxCount } : {}),
         description: tag.description ?? '',
