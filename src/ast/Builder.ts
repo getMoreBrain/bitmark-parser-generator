@@ -397,7 +397,7 @@ class Builder extends BaseBuilder {
       level?: number | string;
       toc?: boolean;
       progress?: boolean;
-      isCollapsible?: boolean;
+      isCollapsible?: boolean | null; // null (from JSON input) is treated as not set
       anchor?: string;
       reference?: string;
       referenceEnd?: string;
@@ -459,7 +459,7 @@ class Builder extends BaseBuilder {
     // plus `isCollapsible`. Done here because both parse paths (bitmark PEG and JSON) converge on
     // buildBit(), so bitmark and JSON input migrate and both generators emit the new form.
     // Must run BEFORE the bit config is resolved. `?? true` keeps PLAN-016 semantics: an explicit
-    // `isCollapsible: false` in the source still wins (and still yields no JSON key).
+    // `isCollapsible: false` in the source still wins (and is emitted as `false` in the JSON).
     const migratedBitType = Config.getMigratedBitType(data.bitType);
     if (migratedBitType) {
       data.bitType = migratedBitType;
