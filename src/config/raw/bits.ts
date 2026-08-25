@@ -2882,7 +2882,9 @@ const BITS: _BitsConfig = {
   },
   [BitType.printPageBreak]: {
     since: '5.4.0',
-    baseBitType: BitType.separator,
+    // Based on `article`, not `separator`: `separator` adds nothing over `article`,
+    // and basing on it would inherit the decorative accessibility defaults.
+    baseBitType: BitType.article,
     description:
       'Print page break bit, used to create page breaks for printing in articles or books',
   },
@@ -2978,12 +2980,24 @@ const BITS: _BitsConfig = {
     since: '1.4.15',
     baseBitType: BitType.article,
     description: 'Separator bit, used to create visual separators in articles or books',
+    tags: [
+      {
+        key: ConfigKey.group_accessibilityDecorative,
+        description: 'Accessibility tags, defaulting to a decorative image',
+      },
+    ],
   },
   [BitType.separatorAlt]: {
     since: '1.16.0',
     baseBitType: BitType.separator,
     description:
       'Alternative separator bit, used to create visual separators in articles or books with alternative styling',
+    tags: [
+      {
+        key: ConfigKey.group_accessibilityDecorative,
+        description: 'Accessibility tags, defaulting to a decorative image',
+      },
+    ],
   },
   [BitType.sticker]: {
     since: '1.5.28',
@@ -4286,6 +4300,12 @@ const BITS: _BitsConfig = {
     since: '1.3.0',
     baseBitType: BitType.image,
     description: 'Image mood bit, used to create mood images in articles or books',
+    tags: [
+      {
+        key: ConfigKey.group_accessibilityDecorative,
+        description: 'Accessibility tags, defaulting to a decorative image',
+      },
+    ],
   },
   [BitType.imagePortrait]: {
     since: '1.3.0',
@@ -4307,6 +4327,10 @@ const BITS: _BitsConfig = {
         description:
           'Image no zoom tags for images, used to define whether images should have zoom functionality',
       },
+      {
+        key: ConfigKey.group_accessibilityDecorative,
+        description: 'Accessibility tags, defaulting to a decorative image',
+      },
     ],
     resourceAttachmentAllowed: false,
   },
@@ -4315,6 +4339,12 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.imageSeparator,
     description:
       'Alternative image separator bit, used to create alternative separators in articles or books',
+    tags: [
+      {
+        key: ConfigKey.group_accessibilityDecorative,
+        description: 'Accessibility tags, defaulting to a decorative image',
+      },
+    ],
   },
   [BitType.imageScreenshot]: {
     since: '1.3.0',

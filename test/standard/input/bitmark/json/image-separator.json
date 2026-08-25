@@ -4,6 +4,14 @@
       "type": "image-separator",
       "format": "bitmark++",
       "bitLevel": 1,
+      "accessibilityGroupTag": [
+        {
+          "name": "image",
+          "tags": [
+            "decorative"
+          ]
+        }
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -65,6 +73,14 @@
       "type": "image-separator",
       "format": "bitmark++",
       "bitLevel": 1,
+      "accessibilityGroupTag": [
+        {
+          "name": "image",
+          "tags": [
+            "decorative"
+          ]
+        }
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -126,6 +142,14 @@
       "type": "image-separator",
       "format": "bitmark++",
       "bitLevel": 1,
+      "accessibilityGroupTag": [
+        {
+          "name": "image",
+          "tags": [
+            "decorative"
+          ]
+        }
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -187,6 +211,14 @@
       "type": "image-separator-alt",
       "format": "bitmark++",
       "bitLevel": 1,
+      "accessibilityGroupTag": [
+        {
+          "name": "image",
+          "tags": [
+            "decorative"
+          ]
+        }
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -242,5 +274,74 @@
       "textParserVersion": "8.37.3"
     },
     "bitmark": "[.image-separator-alt]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image:https://miro.medium.com/v2/resizefit1400/1nT_Rrk9LCI5XWiLGzzOzBQ*.gif][@zoomDisabled:true]"
+  },
+  {
+    "bit": {
+      "type": "image-separator-alt",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "accessibilityGroupTag": [
+        {
+          "name": "photo",
+          "tags": [
+            "functional"
+          ]
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "png",
+          "provider": "docs.bitbook.education",
+          "src": "https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": true,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Die Texte und Aufgaben in diesem ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "fakultativen Teil B",
+              "type": "text"
+            },
+            {
+              "text": " stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.1.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.image-separator-alt]\n[@accessibilityGroupTag: photo ][@accessibilityTag: functional ]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   }
 ]

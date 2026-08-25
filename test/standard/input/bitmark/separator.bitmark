@@ -15,3 +15,12 @@ This is a separator
 [%][%][%][%][%marginNumber]
 
 The bit content
+
+
+[.separator-alt]
+[@accessibilityGroupTag: rule ][@accessibilityTag: standard ]
+An authored separator
+
+
+[.print-page-break]
+No accessibility default here

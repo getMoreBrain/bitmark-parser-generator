@@ -14,6 +14,7 @@ import {
   type Property,
 } from '../model/ast/Nodes.ts';
 import { type JsonText, type TextAst, type TextNode } from '../model/ast/TextNodes.ts';
+import type { BitConfig } from '../model/config/BitConfig.ts';
 import { ConfigKey } from '../model/config/enum/ConfigKey.ts';
 import type { PropertyTagConfig } from '../model/config/PropertyTagConfig.ts';
 import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
@@ -188,6 +189,8 @@ class Builder extends BaseBuilder {
       slug?: string;
       tag?: string | string[];
       groupTag?: Partial<GroupTagJson> | Partial<GroupTagJson>[];
+      accessibilityTag?: string | string[];
+      accessibilityGroupTag?: Partial<GroupTagJson> | Partial<GroupTagJson>[];
       reviewTag?: string | string[];
       reviewerTag?: string | string[];
       reductionTag?: string | string[];
@@ -474,6 +477,15 @@ class Builder extends BaseBuilder {
       (bitConfig.tags[ConfigKey.property_isCollapsible] as PropertyTagConfig | undefined)
         ?.defaultValue === 'true';
 
+    // PLAN-019: bits that are decorative by definition carry `group_accessibilityDecorative`,
+    // which declares `@accessibilityGroupTag` (and its chained `@accessibilityTag`) with a
+    // default. Materialise that default into the AST when the tag is absent, so both
+    // generators agree. Both parse paths converge here, so bitmark and JSON input behave alike.
+    const accessibilityGroupTag = this.resolveAccessibilityGroupTag(
+      bitConfig,
+      data.accessibilityGroupTag,
+    );
+
     // Text Format (accepts deprecated values, and converts them to the new format)
     const deprecatedTextFormat = Enum(DeprecatedTextFormat).fromValue(data.textFormat);
     let textFormat = Enum(TextFormat).fromValue(data.textFormat) ?? bitConfig.textFormatDefault;
@@ -724,6 +736,13 @@ class Builder extends BaseBuilder {
       slug: this.toAstProperty(bitType, ConfigKey.property_slug, data.slug, options),
       tag: this.toAstProperty(bitType, ConfigKey.property_tag, data.tag, options),
       groupTag: this.buildGroupTags(context, data.groupTag),
+      accessibilityTag: this.toAstProperty(
+        bitType,
+        ConfigKey.property_accessibilityTag,
+        data.accessibilityTag,
+        options,
+      ),
+      accessibilityGroupTag: this.buildGroupTags(context, accessibilityGroupTag),
       reviewTag: this.toAstProperty(bitType, ConfigKey.property_reviewTag, data.reviewTag, options),
       reviewerTag: this.toAstProperty(
         bitType,
@@ -1823,6 +1842,36 @@ class Builder extends BaseBuilder {
     });
 
     return node;
+  }
+
+  /**
+   * Resolve the accessibilityGroupTag data, materialising the bit type's default when absent.
+   *
+   * PLAN-019: `group_accessibilityDecorative` re-declares `@accessibilityGroupTag` with a
+   * `defaultValue`, and its chained `@accessibilityTag` likewise. When the bit carries no
+   * authored value, synthesize the default group so it reaches both generators. An authored
+   * value always wins.
+   *
+   * @param bitConfig - the resolved config for the bit
+   * @param data - authored data for the node, if any
+   * @returns
+   */
+  protected resolveAccessibilityGroupTag(
+    bitConfig: BitConfig,
+    data: Partial<GroupTagJson> | Partial<GroupTagJson>[] | undefined,
+  ): Partial<GroupTagJson> | Partial<GroupTagJson>[] | undefined {
+    if (data != null && (!Array.isArray(data) || data.length > 0)) return data;
+
+    const groupConfig = bitConfig.tags[ConfigKey.property_accessibilityGroupTag] as
+      PropertyTagConfig | undefined;
+    const name = groupConfig?.defaultValue;
+    if (name == null) return data;
+
+    const tag = (
+      groupConfig?.chain?.[ConfigKey.property_accessibilityTag] as PropertyTagConfig | undefined
+    )?.defaultValue;
+
+    return [{ name, tags: tag != null ? [tag] : [] }];
   }
 
   /**

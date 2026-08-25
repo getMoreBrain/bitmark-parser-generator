@@ -132,6 +132,8 @@ export interface BitContentProcessorResult {
   sourceBB?: number[][];
   groupTag?: Partial<GroupTagJson>[];
   tag?: string[];
+  accessibilityGroupTag?: Partial<GroupTagJson>[];
+  accessibilityTag?: string[];
   imageSource?: Partial<ImageSourceJson>;
   technicalTerm?: Partial<TechnicalTermJson>;
   servings?: Partial<ServingsJson>;
