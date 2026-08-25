@@ -314,7 +314,7 @@ const GROUPS: _GroupsConfig = {
       {
         key: ConfigKey.property_sourceBB,
         description: 'The source bounding box(es) for the bit (x, y, x1, y1)',
-        format: TagFormat.coordinates,
+        format: TagFormat.numberList4,
         maxCount: Count.infinity,
       },
       {

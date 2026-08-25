@@ -170,45 +170,41 @@ class ConfigBuilder {
       return tag.jsonKey == null || tag.jsonKey === bare;
     };
 
-    // PLAN-151 (bitmark-parser): resolved-default + emission-policy export.
-    // The parser-side config models every tag as a RESOLVED default plus an
-    // orthogonal `emit` policy; the legacy `nullable` field and redundant
-    // natural defaults are no longer part of the exported schema:
-    //   - internal `nullable: true`      → `emit: "passthrough"` (absence is
-    //     a distinct state). A NON-natural defaultValue stays exported
-    //     alongside — a non-natural default is always emitted, no matter the
-    //     policy; a natural one is redundant on every policy and drops.
-    //   - defaultValue == format natural → dropped (redundant: an absent key
-    //     already means the natural — 'false' / '0' / '')
-    //   - defaultValue non-natural       → `default` + `emit: "always"` (the
-    //     key never goes absent; preserves the historical
-    //     materialise-in-both-modes behaviour)
-    //   - otherwise                      → nothing (implicit `nonNatural`)
+    // PLAN-152 (bitmark-parser): required `default` (null = omit) + `alwaysEmit`.
+    // EVERY exported tag carries a `default`:
+    //   - JSON null means OMIT: absence is the canonical state — an absent
+    //     input stays absent in every mode (formerly `nullable`; bitmark
+    //     cannot represent null, so null is always spelled by absence).
+    //   - otherwise a value: the authored non-natural defaultValue, else the
+    //     format natural ('false' / '0' / '').
+    // `alwaysEmit: true` (emitted only when true) forces emission even in
+    // optimized mode. A non-natural default is always emitted, so it REQUIRES
+    // alwaysEmit: true; omit + alwaysEmit is invalid (parser-side confgen
+    // enforces both — see the PLAN-152 truth table).
     const naturalDefaultFor = (format: string): string | undefined => {
       switch (format) {
         case 'boolean':
           return 'false';
         case 'number':
           return '0';
-        case 'coordinates':
-          return undefined; // intrinsically passthrough — no natural value
+        case 'numberList4':
+          return undefined; // no representable natural — default is omit
         default:
           return ''; // '', 'string', 'bitmark+'
       }
     };
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const defaultAndEmitFields = (tag: any, format: string): object => {
-      if (tag.nullable) {
-        return {
-          ...(tag.defaultValue != null && tag.defaultValue !== naturalDefaultFor(format)
-            ? { default: tag.defaultValue }
-            : {}),
-          emit: 'passthrough',
-        };
+    const defaultAndAlwaysEmitFields = (tag: any, format: string): object => {
+      const natural = naturalDefaultFor(format);
+      if (natural === undefined) return { default: null }; // numberList4
+      if (tag.defaultValue != null && tag.defaultValue !== natural) {
+        // Non-natural default: always emitted (nullable or not).
+        return { default: tag.defaultValue, alwaysEmit: true };
       }
-      if (tag.defaultValue == null) return {};
-      if (tag.defaultValue === naturalDefaultFor(format)) return {}; // redundant natural
-      return { default: tag.defaultValue, emit: 'always' };
+      // Legacy nullable → omit (a natural defaultValue alongside is dropped:
+      // absence-distinct semantics dominate).
+      if (tag.nullable) return { default: null };
+      return { default: natural };
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -221,7 +217,7 @@ class ConfigBuilder {
       let chain: any = undefined;
 
       // Tag value formats use the stored vocabulary directly
-      // (string | boolean | bitmark+ | number | coordinates); `string` is the
+      // (string | boolean | bitmark+ | number | numberList4); `string` is the
       // natural default and is omitted on emission.
       if (tagType === BitTagConfigKeyType.tag) {
         tagName = tag.key;
@@ -245,8 +241,8 @@ class ConfigBuilder {
           format = 'bitmark+';
         } else if (tag.format === TagFormat.number) {
           format = 'number';
-        } else if (tag.format === TagFormat.coordinates) {
-          format = 'coordinates';
+        } else if (tag.format === TagFormat.numberList4) {
+          format = 'numberList4';
         }
       } else if (tagType === BitTagConfigKeyType.resource) {
         format = 'string';
@@ -326,7 +322,7 @@ class ConfigBuilder {
           { value: tag.htmlKey as HtmlKey, present: hasHtml },
         ),
         ...(format && format !== 'string' ? { format } : {}),
-        ...defaultAndEmitFields(tag, format),
+        ...defaultAndAlwaysEmitFields(tag, format),
         ...(tag.minCount != null && tag.minCount !== 0 ? { min: tag.minCount } : {}),
         ...(tag.maxCount != null && tag.maxCount !== 1 ? { max: tag.maxCount } : {}),
         description: tag.description ?? '',

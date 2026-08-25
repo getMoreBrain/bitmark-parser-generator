@@ -170,7 +170,7 @@ function propertyContentProcessor(
               location: TextLocation.tag,
             });
 
-          case TagFormat.coordinates:
+          case TagFormat.numberList4:
             const coordRaw = Breakscape.unbreakscape(v as BreakscapedString, {
               format: TextFormat.plainText,
               location: TextLocation.tag,
