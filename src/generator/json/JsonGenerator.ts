@@ -469,10 +469,14 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
   // bitmarkAst -> bits -> bitsValue -> isCollapsible
 
   /**
-   * PLAN-016: `isCollapsible` is emitted only when true. `false` is the implied
-   * default for every bit, so it is never written to the JSON — an absent key
-   * means the bit's configured default (`true` for the deprecated
-   * `*-collapsible` bit types, `false` everywhere else).
+   * `isCollapsible` is emitted only when explicitly set on the bit — an explicit
+   * `true`/`false` in the source is emitted as-is, and an absent tag yields no
+   * JSON key (the tag is nullable in the config: no default, unset when absent).
+   *
+   * Two exceptions always carry a value: chapter bits default to `false`
+   * (`defaultValue: 'false'` in the bit config, applied in `cleanBitJson()`),
+   * and the deprecated `*-collapsible` bit types default to `true` (materialised
+   * into the AST by the Builder).
    *
    * Defining these handlers suppresses the generic property handlers that
    * `generatePropertyHandlers()` would otherwise install for this tag.
@@ -482,7 +486,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return false;
 
-    if (node.value === true) this.bitJson.isCollapsible = true;
+    if (node.value != null) this.bitJson.isCollapsible = node.value === true;
 
     // Stop traversal of this branch
     return false;
@@ -1776,6 +1780,7 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
         //
         if (bitJson.toc == null) bitJson.toc = true; // Always set on chapter bits?
         if (bitJson.progress == null) bitJson.progress = true; // Always set on chapter bits
+        if (bitJson.isCollapsible == null) bitJson.isCollapsible = false; // Always set on chapter bits
         if (bitJson.level == null) bitJson.level = 1; // Set level 1 if none set (makes no sense, but in ANTLR parser)
         if (bitJson.body == null) bitJson.body = this.bodyDefault;
         //

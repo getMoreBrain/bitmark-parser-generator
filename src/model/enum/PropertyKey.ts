@@ -1,6 +1,8 @@
 import { type EnumType } from '@ncoderz/superenum';
 
 const propertyKeys = {
+  property_accessibilityGroupTag: '@accessibilityGroupTag',
+  property_accessibilityTag: '@accessibilityTag',
   property_action: '@action',
   property_activityType: '@activityType',
   property_additionalSolutions: '@additionalSolutions',

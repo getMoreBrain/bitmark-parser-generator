@@ -68,6 +68,11 @@
       "type": "array",
       "items": { "$ref": "#/$defs/GroupTagJson" }
     },
+    "accessibilityTag": { "$ref": "#/$defs/stringOrStringArray" },
+    "accessibilityGroupTag": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/GroupTagJson" }
+    },
     "reductionTag": { "$ref": "#/$defs/stringOrStringArray" },
     "bubbleTag": { "$ref": "#/$defs/stringOrStringArray" },
     "extractorTag": { "$ref": "#/$defs/stringOrStringArray" },

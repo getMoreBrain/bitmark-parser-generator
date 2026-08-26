@@ -139,6 +139,17 @@ class BaseBuilder {
 
           return StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
 
+        case TagFormat.enumeration: {
+          // An enumeration is string-valued: never null, boolean, or number.
+          // Coerce numbers to strings as for plainText; anything else
+          // non-string or empty resolves to the defaultValue (empty string
+          // when none).
+          if (NumberUtils.asNumber(v) != null) v = `${v}`;
+          const enumValue = StringUtils.isString(v) ? StringUtils.trimmedString(v) : undefined;
+          if (enumValue == null || enumValue === '') return propertyConfig?.defaultValue ?? '';
+          return enumValue;
+        }
+
         case TagFormat.number:
           return NumberUtils.asNumber(v);
 

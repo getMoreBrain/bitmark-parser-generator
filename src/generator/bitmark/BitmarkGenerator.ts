@@ -458,6 +458,37 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     return false;
   }
 
+  // bitmarkAst -> bits -> bitsValue -> accessibilityGroupTag
+
+  protected enter_accessibilityGroupTag(node: NodeInfo, route: NodeInfo[]): boolean {
+    const accessibilityGroupTag = node.value as GroupTagJson[];
+
+    // Ignore values that are not at the bit level as they might be handled elsewhere
+    const parent = this.getParentNode(route);
+    if (parent?.key !== NodeType.bitsValue) return true;
+
+    for (const gt of accessibilityGroupTag) {
+      const { name, tags } = gt;
+
+      this.writeProperty('accessibilityGroupTag', name, route, {
+        format: TagFormat.plainText,
+        writeEmpty: true,
+      });
+      if (tags && tags.length > 0) {
+        for (const t of tags) {
+          this.writeProperty('accessibilityTag', t, route, {
+            format: TagFormat.plainText,
+            writeEmpty: true,
+            forceChain: true,
+          });
+        }
+      }
+    }
+
+    // Stop traversal of this branch
+    return false;
+  }
+
   // bitmarkAst -> bits -> bitsValue -> labelTrue / labelFalse
 
   protected leaf_labelTrue(node: NodeInfo, route: NodeInfo[]): boolean {

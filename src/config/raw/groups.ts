@@ -4,6 +4,10 @@ import { GroupConfigType } from '../../model/config/enum/GroupConfigType.ts';
 import { Count } from '../../model/enum/Count.ts';
 import { TagFormat } from '../../model/enum/TagFormat.ts';
 
+// The accessibility classification vocabulary, shared by every `@accessibilityTag`
+// declaration (standalone, chained, and the defaulted re-declarations below).
+const ACCESSIBILITY_TAG_VALUES = ['complex', 'functional', 'decorative', 'standard'];
+
 const GROUPS: _GroupsConfig = {
   [ConfigKey.group_standardAllBits]: {
     name: 'Standard',
@@ -111,6 +115,7 @@ const GROUPS: _GroupsConfig = {
         key: ConfigKey.property_isCollapsible,
         description: 'If true, the bit is collapsible',
         format: TagFormat.boolean,
+        nullable: true,
       },
       {
         key: ConfigKey.property_spansPageBreak,
@@ -276,6 +281,36 @@ const GROUPS: _GroupsConfig = {
         ],
       },
       {
+        key: ConfigKey.property_accessibilityTag,
+        description: 'The accessibility classification(s) for the bit',
+        format: TagFormat.enumeration,
+        values: ACCESSIBILITY_TAG_VALUES,
+        nullable: true,
+        maxCount: Count.infinity,
+      },
+      {
+        key: ConfigKey.property_accessibilityGroupTag,
+        jsonKey: 'accessibilityGroupTag.name',
+        // Entity-merge semantics, as for `@groupTag`: repeated
+        // `[@accessibilityGroupTag: name]` occurrences with the same value fold
+        // into one entry; chained `@accessibilityTag` children's arrays merge as sets.
+        exportJsonKey: { accessibilityGroupTag: [{ '@id': 'name', name: '$' }] },
+        description: 'The accessibility group tag(s) for the bit',
+        format: TagFormat.plainText,
+        maxCount: Count.infinity,
+        chain: [
+          {
+            key: ConfigKey.property_accessibilityTag,
+            exportJsonKey: { tags: ['$'] },
+            description: 'The accessibility classification(s) for the group',
+            format: TagFormat.enumeration,
+            values: ACCESSIBILITY_TAG_VALUES,
+            nullable: true,
+            maxCount: Count.infinity,
+          },
+        ],
+      },
+      {
         key: ConfigKey.property_reviewTag,
         description: 'The review tag(s) for the bit',
         format: TagFormat.plainText,
@@ -403,6 +438,38 @@ const GROUPS: _GroupsConfig = {
         format: TagFormat.plainText,
         maxCount: Count.infinity,
         exportJsonKey: {},
+      },
+    ],
+  },
+  [ConfigKey.group_accessibilityDecorative]: {
+    name: 'Accessibility (decorative)',
+    description:
+      'Accessibility tags defaulting to a decorative image, for bits that are decorative by definition',
+    type: GroupConfigType.standard,
+    // Re-declares `@accessibilityGroupTag` (in full — tag hydration is last-wins
+    // per config key, it does not merge) with the decorative defaults. The
+    // standalone `@accessibilityTag` is deliberately NOT re-declared: the default
+    // belongs to the group structure only.
+    tags: [
+      {
+        key: ConfigKey.property_accessibilityGroupTag,
+        jsonKey: 'accessibilityGroupTag.name',
+        exportJsonKey: { accessibilityGroupTag: [{ '@id': 'name', name: '$' }] },
+        description: 'The accessibility group tag(s) for the bit',
+        format: TagFormat.plainText,
+        defaultValue: 'image',
+        maxCount: Count.infinity,
+        chain: [
+          {
+            key: ConfigKey.property_accessibilityTag,
+            exportJsonKey: { tags: ['$'] },
+            description: 'The accessibility classification(s) for the group',
+            format: TagFormat.enumeration,
+            values: ACCESSIBILITY_TAG_VALUES,
+            defaultValue: 'decorative',
+            maxCount: Count.infinity,
+          },
+        ],
       },
     ],
   },

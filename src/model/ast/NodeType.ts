@@ -14,6 +14,10 @@ const NodeType = {
   __isDefaultExample: '__isDefaultExample',
   __typeAlias: '__typeAlias',
 
+  accessibilityGroupTag: 'accessibilityGroupTag',
+  accessibilityGroupTagValue: 'accessibilityGroupTagValue',
+  accessibilityTag: 'accessibilityTag',
+  accessibilityTagValue: 'accessibilityTagValue',
   action: 'action',
   actionValue: 'actionValue',
   activityType: 'activityType',

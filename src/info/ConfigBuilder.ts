@@ -206,6 +206,8 @@ class ConfigBuilder {
           format = 'number';
         } else if (tag.format === TagFormat.coordinates) {
           format = 'coordinates';
+        } else if (tag.format === TagFormat.enumeration) {
+          format = 'enum';
         }
       } else if (tagType === BitTagConfigKeyType.resource) {
         format = 'string';
@@ -285,6 +287,7 @@ class ConfigBuilder {
           { value: tag.htmlKey as HtmlKey, present: hasHtml },
         ),
         ...(format && format !== 'string' ? { format } : {}),
+        ...(tag.values != null ? { values: tag.values } : {}),
         ...(tag.defaultValue != null ? { default: tag.defaultValue } : {}),
         ...(tag.nullable ? { nullable: true } : {}),
         ...(tag.minCount != null && tag.minCount !== 0 ? { min: tag.minCount } : {}),

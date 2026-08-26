@@ -65,6 +65,8 @@ export interface BitJson {
   slug: string;
   tag: string | string[];
   groupTag: GroupTagJson[];
+  accessibilityTag: string | string[];
+  accessibilityGroupTag: GroupTagJson[];
   reviewTag: string | string[];
   reviewerTag: string | string[];
   reductionTag: string | string[];
@@ -267,7 +269,7 @@ export interface BitJson {
   level: number;
   toc: boolean;
   progress: boolean;
-  isCollapsible: boolean;
+  isCollapsible: boolean | null;
   anchor: string;
   reference: string | string[]; // Has 2 meanings, depending on bit (anchor/reference, or @reference)
   referenceEnd: string;
