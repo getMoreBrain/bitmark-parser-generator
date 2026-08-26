@@ -41,9 +41,7 @@ describe('isCollapsible property', () => {
     });
 
     test('.chapter with an explicit value emits that value', () => {
-      expect(toJson('[.chapter]\n[@isCollapsible:true]\n[#Title]')[0].bit.isCollapsible).toBe(
-        true,
-      );
+      expect(toJson('[.chapter]\n[@isCollapsible:true]\n[#Title]')[0].bit.isCollapsible).toBe(true);
     });
 
     test('round-trip: bitmark => JSON => bitmark', () => {
