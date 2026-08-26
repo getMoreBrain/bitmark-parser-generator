@@ -90,10 +90,10 @@ describe('*-collapsible bit type migration', () => {
       expect(json[0].bit.isCollapsible).toBe(true);
     });
 
-    test('an explicit @isCollapsible:false still wins (migrated type, no key)', () => {
+    test('an explicit @isCollapsible:false still wins (migrated type, emitted false)', () => {
       const json = toJson('[.info-collapsible]\n[@isCollapsible:false]\n\nContent');
       expect(json[0].bit.type).toBe('info');
-      expect(json[0].bit.isCollapsible).toBeUndefined();
+      expect(json[0].bit.isCollapsible).toBe(false);
     });
 
     test('a commented old-format bit migrates', () => {

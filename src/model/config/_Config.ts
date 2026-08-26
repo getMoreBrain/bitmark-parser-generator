@@ -12,7 +12,12 @@ import { type BitTypeType } from '../enum/BitType.ts';
  * scope-shifts, predicates) lives in the new parser's compiler, not here.
  */
 export type ExportJsonKey =
-  null | boolean | number | string | ExportJsonKey[] | { [k: string]: ExportJsonKey };
+  | null
+  | boolean
+  | number
+  | string
+  | ExportJsonKey[]
+  | { [k: string]: ExportJsonKey };
 
 /**
  * Key-pattern value for the HTML backend of the key-pattern language.
@@ -163,6 +168,7 @@ export interface _AbstractTagConfig {
   values?: string[]; // If the format is an enumeration, the possible values of the property
   defaultValue?: string; // The default value of the tag if omitted from the markup
   nullable?: boolean; // If true, the tag's value is null when absent (not the type's zero value)
+  alwaysEmit?: boolean; // If true, the key is always emitted, even when the value is the format's natural default (materialised when absent). Contradicts `nullable`.
   jsonKey?: string; // If the json key is different from the tag (legacy mini-language)
   exportJsonKey?: ExportJsonKey; // New JSON-pattern form (specs/JSONKEY_SYNTAX.md). Omit when default.
   htmlKey?: HtmlKey; // HTML key-pattern form (see HTML.md). Omit when absent.

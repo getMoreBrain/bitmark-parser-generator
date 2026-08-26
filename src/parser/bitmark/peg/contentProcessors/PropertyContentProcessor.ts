@@ -24,7 +24,10 @@ import {
 } from '../BitmarkPegParserTypes.ts';
 import { bookChainContentProcessor } from './BookChainContentProcessor.ts';
 import { exampleTagContentProcessor } from './ExampleTagContentProcessor.ts';
-import { groupTagChainContentProcessor } from './GroupTagChainContentProcessor.ts';
+import {
+  ACCESSIBILITY_GROUP_TAG,
+  groupTagChainContentProcessor,
+} from './GroupTagChainContentProcessor.ts';
 import { imageSourceChainContentProcessor } from './ImageSourceChainContentProcessor.ts';
 import { commentTagContentProcessor as internalCommentTagContentProcessor } from './InternalCommentTagContentProcessor.ts';
 import { markConfigChainContentProcessor } from './MarkConfigChainContentProcessor.ts';
@@ -66,6 +69,16 @@ function propertyContentProcessor(
       return;
     } else if (configKey === ConfigKey.property_groupTag) {
       groupTagChainContentProcessor(context, contentDepth, propertyConfig.chain, content, target);
+      return;
+    } else if (configKey === ConfigKey.property_accessibilityGroupTag) {
+      groupTagChainContentProcessor(
+        context,
+        contentDepth,
+        propertyConfig.chain,
+        content,
+        target,
+        ACCESSIBILITY_GROUP_TAG,
+      );
       return;
     } else if (
       configKey === ConfigKey.property_ratingLevelStart ||
@@ -136,6 +149,30 @@ function propertyContentProcessor(
                 location: TextLocation.tag,
               },
             );
+
+          case TagFormat.enumeration: {
+            // An enumeration is string-valued: never null, boolean, or number.
+            // A valueless or empty tag resolves to the defaultValue (empty string
+            // when none); a value outside the vocabulary passes through with a
+            // parser warning.
+            const enumValue = Breakscape.unbreakscape(
+              StringUtils.isString(v)
+                ? (StringUtils.trimmedString(v) as BreakscapedString)
+                : undefined,
+              {
+                format: TextFormat.plainText,
+                location: TextLocation.tag,
+              },
+            );
+            if (enumValue == null || enumValue === '') return c.defaultValue ?? '';
+            if (c.values && !c.values.includes(enumValue)) {
+              context.addWarning(
+                `Invalid value '${enumValue}' for property [@${tag}]. Valid values: ${c.values.join(' | ')}`,
+                content as TypeKeyValue,
+              );
+            }
+            return enumValue;
+          }
 
           case TagFormat.number:
             return NumberUtils.asNumber(

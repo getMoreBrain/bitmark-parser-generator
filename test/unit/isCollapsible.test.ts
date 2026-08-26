@@ -9,9 +9,10 @@ const toJson = (bitmark: string): BitWrapperJson[] =>
   bpg.convert(bitmark, { bitmarkVersion: BitmarkVersion.v2 }) as BitWrapperJson[];
 
 describe('isCollapsible property', () => {
-  describe('normal bits (implied default false)', () => {
+  describe('normal bits (no default, only emitted when set)', () => {
     test('absent => key not emitted', () => {
-      expect(toJson('[.article]\n\nContent')[0].bit.isCollapsible).toBeUndefined();
+      const bit = toJson('[.article]\n\nContent')[0].bit;
+      expect('isCollapsible' in bit).toBe(false);
     });
 
     test('@isCollapsible:true => emitted as true', () => {
@@ -20,10 +21,10 @@ describe('isCollapsible property', () => {
       );
     });
 
-    test('@isCollapsible:false => key not emitted (false is never written)', () => {
-      expect(
-        toJson('[.article]\n[@isCollapsible:false]\n\nContent')[0].bit.isCollapsible,
-      ).toBeUndefined();
+    test('@isCollapsible:false => emitted as false', () => {
+      expect(toJson('[.article]\n[@isCollapsible:false]\n\nContent')[0].bit.isCollapsible).toBe(
+        false,
+      );
     });
 
     test('available on any bit, not just .chapter', () => {
@@ -31,12 +32,16 @@ describe('isCollapsible property', () => {
       expect(toJson('[.image]\n[@isCollapsible:true]')[0].bit.isCollapsible).toBe(true);
     });
 
-    test('.chapter no longer force-emits false', () => {
+    test('.chapter always emits it, defaulting to false', () => {
       const json = toJson('[.chapter]\n[#Title]');
-      expect(json[0].bit.isCollapsible).toBeUndefined();
+      expect(json[0].bit.isCollapsible).toBe(false);
       // The other chapter defaults are unchanged
       expect(json[0].bit.toc).toBe(true);
       expect(json[0].bit.progress).toBe(true);
+    });
+
+    test('.chapter with an explicit value emits that value', () => {
+      expect(toJson('[.chapter]\n[@isCollapsible:true]\n[#Title]')[0].bit.isCollapsible).toBe(true);
     });
 
     test('round-trip: bitmark => JSON => bitmark', () => {
@@ -57,14 +62,14 @@ describe('isCollapsible property', () => {
       );
     });
 
-    test('@isCollapsible:false => no key, so the consumer falls back to the bit default (true)', () => {
+    test('@isCollapsible:false => emitted as false (explicit value wins)', () => {
       expect(
         toJson('[.info-collapsible]\n[@isCollapsible:false]\n\nContent')[0].bit.isCollapsible,
-      ).toBeUndefined();
+      ).toBe(false);
     });
 
     test('the non-collapsible base bit does not default to true', () => {
-      expect(toJson('[.info]\n\nContent')[0].bit.isCollapsible).toBeUndefined();
+      expect('isCollapsible' in toJson('[.info]\n\nContent')[0].bit).toBe(false);
     });
 
     // NOTE: the bit type itself is migrated to its non-collapsible cousin by PLAN-017;

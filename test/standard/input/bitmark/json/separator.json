@@ -4,8 +4,18 @@
       "type": "separator",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["92375"],
+      "id": [
+        "92375"
+      ],
       "needsValidation": true,
+      "accessibilityGroupTag": [
+        {
+          "name": "image",
+          "tags": [
+            "decorative"
+          ]
+        }
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -37,6 +47,14 @@
       "type": "separator",
       "format": "bitmark++",
       "bitLevel": 1,
+      "accessibilityGroupTag": [
+        {
+          "name": "image",
+          "tags": [
+            "decorative"
+          ]
+        }
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -57,8 +75,18 @@
       "type": "separator-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "id": ["151971"],
+      "id": [
+        "151971"
+      ],
       "validationDate": "2024-07-15T14:32:18Z",
+      "accessibilityGroupTag": [
+        {
+          "name": "image",
+          "tags": [
+            "decorative"
+          ]
+        }
+      ],
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -125,9 +153,110 @@
               "offset": 109
             }
           }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%marginNumber]",
+          "location": {
+            "start": {
+              "line": 15,
+              "column": 13,
+              "offset": 174
+            },
+            "end": {
+              "line": 15,
+              "column": 28,
+              "offset": 189
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 15,
+                "column": 10,
+                "offset": 171
+              },
+              "end": {
+                "line": 15,
+                "column": 13,
+                "offset": 174
+              }
+            }
+          }
         }
       ]
     },
     "bitmark": "[.separator-alt:bitmark--]\n[@id:151971]\n[@validationDate:2024-07-15T14:32:18Z]\n[%][%][%][%][%marginNumber]\n\nThe bit content"
+  },
+  {
+    "bit": {
+      "type": "separator-alt",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "accessibilityGroupTag": [
+        {
+          "name": "rule",
+          "tags": [
+            "standard"
+          ]
+        }
+      ],
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "An authored separator",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.separator-alt]\n[@accessibilityGroupTag: rule ][@accessibilityTag: standard ]\nAn authored separator"
+  },
+  {
+    "bit": {
+      "type": "print-page-break",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "No accessibility default here",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.3.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.37.3"
+    },
+    "bitmark": "[.print-page-break]\nNo accessibility default here"
   }
 ]

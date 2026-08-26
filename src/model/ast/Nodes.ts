@@ -116,6 +116,8 @@ export interface Bit {
   slug?: Property;
   tag?: Property;
   groupTag?: GroupTagJson[];
+  accessibilityTag?: Property;
+  accessibilityGroupTag?: GroupTagJson[];
   reviewTag?: Property;
   reviewerTag?: Property;
   reductionTag?: Property;

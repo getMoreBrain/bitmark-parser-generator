@@ -202,8 +202,17 @@ class ConfigBuilder {
         return { default: tag.defaultValue, alwaysEmit: true };
       }
       // Legacy nullable → omit (a natural defaultValue alongside is dropped:
-      // absence-distinct semantics dominate).
-      if (tag.nullable) return { default: null };
+      // absence-distinct semantics dominate). Contradicts alwaysEmit — omit
+      // ignores the flag — so fail loud.
+      if (tag.nullable) {
+        if (tag.alwaysEmit) {
+          throw new Error('nullable + alwaysEmit is contradictory (tag ' + tag.key + ')');
+        }
+        return { default: null };
+      }
+      // Authored alwaysEmit: pin a natural-default key (e.g. chapter's
+      // @isCollapsible — always emitted, defaults false).
+      if (tag.alwaysEmit) return { default: natural, alwaysEmit: true };
       return { default: natural };
     };
 
@@ -243,6 +252,8 @@ class ConfigBuilder {
           format = 'number';
         } else if (tag.format === TagFormat.numberList4) {
           format = 'numberList4';
+        } else if (tag.format === TagFormat.enumeration) {
+          format = 'enum';
         }
       } else if (tagType === BitTagConfigKeyType.resource) {
         format = 'string';
@@ -322,6 +333,7 @@ class ConfigBuilder {
           { value: tag.htmlKey as HtmlKey, present: hasHtml },
         ),
         ...(format && format !== 'string' ? { format } : {}),
+        ...(tag.values != null ? { values: tag.values } : {}),
         ...defaultAndAlwaysEmitFields(tag, format),
         ...(tag.minCount != null && tag.minCount !== 0 ? { min: tag.minCount } : {}),
         ...(tag.maxCount != null && tag.maxCount !== 1 ? { max: tag.maxCount } : {}),
