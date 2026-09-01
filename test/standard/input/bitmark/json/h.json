@@ -254,5 +254,68 @@
       ]
     },
     "bitmark": "[.h]\n[##Heading with a body that is not allowed]\nThis body is not allowed and generates a warning."
+  },
+  {
+    "bit": {
+      "type": "h",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Heading with a footer that is not allowed",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "level": 2,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This footer is not allowed and generates a warning.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "Bit 'h' should not have a footer.",
+          "text": "[.h]\n[##Heading with a footer that is not allowed]\n~~~~\nThis footer is not allowed and generates a warning.\n",
+          "location": {
+            "start": {
+              "line": 21,
+              "column": 1,
+              "offset": 303
+            },
+            "end": {
+              "line": 25,
+              "column": 1,
+              "offset": 411
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.h]\n[##Heading with a footer that is not allowed]\n~~~~\nThis footer is not allowed and generates a warning."
   }
 ]

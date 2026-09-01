@@ -21,3 +21,7 @@ Body with bitmark++ blocks is ordinary body content.
 [!This instruction is not allowed and will be ignored]
 [?This hint is not allowed and will be ignored]
 Paragraph body.
+
+[.p&image]
+Paragraph with a resource attachment, which is not allowed and generates warnings.
+[&image:https://cdn.bitbook.education/cat.jpg]

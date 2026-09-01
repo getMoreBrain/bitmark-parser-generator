@@ -17,3 +17,8 @@
 [.h]
 [##Heading with a body that is not allowed]
 This body is not allowed and generates a warning.
+
+[.h]
+[##Heading with a footer that is not allowed]
+~~~~
+This footer is not allowed and generates a warning.

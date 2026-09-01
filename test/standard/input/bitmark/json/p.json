@@ -275,5 +275,87 @@
       ]
     },
     "bitmark": "[.p]\n[!This instruction is not allowed and will be ignored]\n[?This hint is not allowed and will be ignored]\nParagraph body."
+  },
+  {
+    "bit": {
+      "type": "p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "jpg",
+          "provider": "cdn.bitbook.education",
+          "src": "https://cdn.bitbook.education/cat.jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paragraph with a resource attachment, which is not allowed and generates warnings.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
+          "text": "[&image:https://cdn.bitbook.education/cat.jpg]",
+          "location": {
+            "start": {
+              "line": 27,
+              "column": 1,
+              "offset": 506
+            },
+            "end": {
+              "line": 27,
+              "column": 47,
+              "offset": 552
+            }
+          }
+        },
+        {
+          "message": "Resource type [&image] is specified in the bit header, but no extra resource is allowed for this bit.",
+          "text": "[.p&image]\nParagraph with a resource attachment, which is not allowed and generates warnings.\n[&image:https://cdn.bitbook.education/cat.jpg]\n",
+          "location": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 412
+            },
+            "end": {
+              "line": 28,
+              "column": 1,
+              "offset": 553
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.p&image]\nParagraph with a resource attachment, which is not allowed and generates warnings.\n[&image:https://cdn.bitbook.education/cat.jpg]"
   }
 ]
