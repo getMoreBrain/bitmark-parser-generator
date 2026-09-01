@@ -50,10 +50,11 @@ Bodies are ordinary **bitmark++** like every other bit — no new text format
   non-normative split, no `-alt` smart variants — matches `smart-standard-list`).
 - `.h` = title/level + item only: `bodyAllowed: false`, `footerAllowed: false`,
   no toc/progress/anchor (NOT chapter-based).
+- **`.h` has no variants** (2026-09-01): there is no `h-alt` and no
+  `smart-standard-h` (resolves former D2).
 
 ## Open Decisions
 
-- **D2**: Does `.h` also get a `smart-standard-h`? (Not in request; default: no.)
 - **D3**: Title level > 7 on `.h`: emit parser warning; keep or clamp value
   (default: warn + clamp to 7; chapter behavior unchanged).
 
