@@ -10,11 +10,13 @@ resource attachments):
 
 - `[.p]`, `[.p-alt]` — lightweight paragraph
 - `[.list]`, `[.list-alt]` — lightweight list (whole list family redefined, see decisions)
-- `[.smart-standard-p]` — smart standard variant (pattern: `smart-standard-list`)
-- `[.h]` — lightweight heading with chapter-style title levels 1–7
+- `[.smart-standard-p]`, `[.smart-standard-list]` — smart standard variants
+- `[.h]` — lightweight heading with chapter-style title levels 1–7 (title/level
+  + item ONLY — no body, no footer)
 
-Bodies are ordinary **bitmark++** like every other bit — no new text format
-(decision, 2026-09-01). "Lightweight" refers to the tag set only.
+Where a body is allowed (`.p` / list family), it is ordinary **bitmark++** like
+every other bit — no new text format (decision, 2026-09-01). "Lightweight"
+refers to the tag set only.
 
 ## Background / Current State
 
@@ -73,26 +75,26 @@ Bodies are ordinary **bitmark++** like every other bit — no new text format
 
 ### FR2 — Bit definitions
 
-| Bit | BitType key | Base | Footer | Title | Item |
-| --- | --- | --- | --- | --- | --- |
-| `.p` | `p` | `_standardLight` | yes | no | yes |
-| `.p-alt` | `pAlt` | `p` | ← | ← | ← |
-| `.smart-standard-p` | `smartStandardP` | `p` | ← | ← | ← |
-| `.list` | `list` (existing, rebased) | `_standardLight` | yes | no | yes |
-| `.list-alt` | `listAlt` | `list` | ← | ← | ← |
-| `.h` | `h` | `_standardLight` | no | levels 1–7 | yes |
+| Bit                 | BitType key                | Base             | Body      | Footer | Title      | Item |
+| ------------------- | -------------------------- | ---------------- | --------- | ------ | ---------- | ---- |
+| `.p`                | `p`                        | `_standardLight` | bitmark++ | yes    | no         | yes  |
+| `.p-alt`            | `pAlt`                     | `p`              | ←         | ←      | ←          | ←    |
+| `.smart-standard-p` | `smartStandardP`           | `p`              | ←         | ←      | ←          | ←    |
+| `.list`             | `list` (existing, rebased) | `_standardLight` | bitmark++ | yes    | no         | yes  |
+| `.list-alt`         | `listAlt`                  | `list`           | ←         | ←      | ←          | ←    |
+| `.h`                | `h`                        | `_standardLight` | **none**  | no     | levels 1–7 | yes  |
 
 List-family rebase (existing bits; `standard-list` is re-rooted onto `list`,
 the other chain links are unchanged):
 
-| Bit (existing) | Base today | Base after |
-| --- | --- | --- |
-| `list` | `article` | `_standardLight` |
-| `list-item` | `article` | `_standardLight` |
-| `standard-list` | `article` | `list` |
-| `standard-list-item` | `list-item` | ← (unchanged) |
-| `smart-standard-list` | `standard-list` | ← (unchanged) |
-| `smart-standard-list-item` | `standard-list-item` | ← (unchanged) |
+| Bit (existing)             | Base today           | Base after       |
+| -------------------------- | -------------------- | ---------------- |
+| `list`                     | `article`            | `_standardLight` |
+| `list-item`                | `article`            | `_standardLight` |
+| `standard-list`            | `article`            | `list`           |
+| `standard-list-item`       | `list-item`          | ← (unchanged)    |
+| `smart-standard-list`      | `standard-list`      | ← (unchanged)    |
+| `smart-standard-list-item` | `standard-list-item` | ← (unchanged)    |
 
 The deprecated `smart-standard-list(-item)-collapsible` bits keep their base
 and inherit the lightweight tag set (and derive `bitGroups`) automatically.
