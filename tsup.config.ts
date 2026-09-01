@@ -35,7 +35,7 @@ const browserDefines = {
 export default defineConfig([
   // Node builds (ESM / CJS)
   {
-    entry: ['src/index.ts'],
+    entry: ['src/index.ts', 'src/translations.ts'],
     format: ['esm', 'cjs'],
     target: 'es2020',
     outDir: 'dist',
@@ -65,7 +65,7 @@ export default defineConfig([
   },
   // Browser build (CJS)
   {
-    entry: ['src/index.ts'],
+    entry: ['src/index.ts', 'src/translations.ts'],
     format: ['cjs'],
     target: 'es2020',
     outDir: 'dist/browser/cjs',
@@ -87,7 +87,7 @@ export default defineConfig([
   },
   // Browser build (ESM)
   {
-    entry: ['src/index.ts'],
+    entry: ['src/index.ts', 'src/translations.ts'],
     format: ['esm'],
     target: 'es2020',
     outDir: 'dist/browser/esm',

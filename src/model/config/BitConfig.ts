@@ -1,3 +1,4 @@
+import { type BitGroupType } from '../enum/BitGroup.ts';
 import { type BitTypeType } from '../enum/BitType.ts';
 import { Count } from '../enum/Count.ts';
 import { type ExampleTypeType } from '../enum/ExampleType.ts';
@@ -14,6 +15,8 @@ interface ToStringOptions {
 class BitConfig {
   readonly since: string; // Supported since version
   readonly bitType: BitTypeType;
+  readonly title?: string; // PLAN-020: English display name (other languages via ./translations)
+  readonly bitGroups: BitGroupType[]; // PLAN-020: resolved bit-group memberships (D6 derivation applied)
   readonly inheritedBitTypes: BitTypeType[]; // Bit inheritance tree (array for order)
   readonly inheritedBitTypesSet: Set<BitTypeType>; // Bit inheritance tree (set for faster lookup)
   readonly textFormatDefault: TextFormatType; // Default text format
@@ -32,6 +35,8 @@ class BitConfig {
   public constructor(config: {
     since: string;
     bitType: BitTypeType;
+    title: string | undefined;
+    bitGroups: BitGroupType[];
     inheritedBitTypes: BitTypeType[];
     textFormatDefault: TextFormatType;
     tags: TagsConfig;
@@ -62,9 +67,13 @@ class BitConfig {
       resourceAttachmentAllowed,
       rootExampleType,
       comboResourceConfigKey,
+      title,
+      bitGroups,
     } = config;
     this.since = since;
     this.bitType = bitType;
+    this.title = title;
+    this.bitGroups = bitGroups;
     this.inheritedBitTypes = inheritedBitTypes;
     this.inheritedBitTypesSet = new Set(inheritedBitTypes);
     this.textFormatDefault = textFormatDefault;
