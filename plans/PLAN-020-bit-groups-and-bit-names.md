@@ -39,6 +39,7 @@ resource-type groupings. Never plain "group".
 | D11 | Quiz categories | Registry entries support optional **`subgroupOf: BitGroupKey` metadata** (informational only — membership stays explicit/flat). `cloze`/`match`/`flashcard`/`multiple-choice`/… get `subgroupOf: 'quizzes'`, replacing the book service's `quizCategories()` knowledge. |
 | D12 | Translation source | `docs/translations.json` (in repo): 464 entries × 6 complete languages (`en, de, es, fr, ro, it`); all 54 group keys covered; 396/671 bit types covered (rest fall back). |
 | D13 | Export completeness | The `assets/config/**/*.jsonc` export is consumed by the **new parser**: it must contain ALL group information (registries, aliases, `subgroupOf`, memberships, en titles) — **everything except the translation language maps**, which stay out of the jsonc export entirely. |
+| D13a | **REVISES D13** — no member list in bit-group jsonc | D13 exported each bit group's RESOLVED `bitTypes` so the consuming parser needed no derivation. Wrong trade: that tree is the consumer's **input config** and becomes hand-maintained, so a member list there is a second home for a fact already authored per bit (`bitGroups` in `bits.ts`) — a mirror of 671 bit files that no human can keep in sync, and the exact duplication ticket 9407 exists to remove. Bit-group jsonc is now **metadata only** (key, aliases, title, description, `subgroupOf`, `allowEmpty`, `since`); consumers invert the per-bit direction, which is trivial and drift-free. Resource groups are unaffected: `ResourceType` values have no per-item config, so their central `resourceTypes` list IS the single source. (Downstream: bitmark-parser PLAN-173 P1a.) |
 
 ## Functional Requirements
 
@@ -64,12 +65,12 @@ resource-type groupings. Never plain "group".
 - FR9: API — resource-group equivalents of FR5–FR7 over `ResourceType` values.
 - FR10: Config export (`ConfigBuilder`) writes `assets/config/bit-groups/*.jsonc` and
   `assets/config/resource-groups/*.jsonc` (one file per group: key, aliases,
-  description, en `title`, `subgroupOf`, resolved member list — resolved means
-  post D6 derivation, so the new parser needs no derivation logic), and includes
-  `bitGroups` + en `title` in each bit's exported `.jsonc`. Per D13 the export is
-  lossless for the new parser except translations: the non-en language maps are
-  NOT exported to jsonc (they remain in `docs/translations.json` and the
-  `./translations` subpath module).
+  description, en `title`, `subgroupOf`, `allowEmpty`) and includes `bitGroups` + en
+  `title` in each bit's exported `.jsonc`. Bit-group files carry **no member list**
+  (D13a) — per-bit `bitGroups` is the single home; resource-group files DO carry
+  `resourceTypes` (no per-item config exists to author it on). Translations are not
+  exported to jsonc: the language maps remain in `docs/translations.json` and the
+  `./translations` subpath module.
 - FR11: Validation — build/test fails when:
   - a bit references an unknown bit-group key;
   - a non-internal (`_*`), non-deprecated-with-target bit declares no `bitGroups`

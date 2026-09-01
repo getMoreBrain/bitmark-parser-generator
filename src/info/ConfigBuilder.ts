@@ -931,8 +931,14 @@ class ConfigBuilder {
     writeCardConfigs();
 
     // PLAN-020: bit-group registry export (assets/config/bit-groups/*.jsonc).
-    // Lossless for the new parser except translations (D13): key, aliases, en title,
-    // description, subgroupOf, and RESOLVED member bit types (D6 derivation applied).
+    // METADATA ONLY: key, aliases, en title, description, subgroupOf, allowEmpty.
+    //
+    // Deliberately NO member list (revises D13's "lossless" intent, PLAN-173 P1a):
+    // membership is authored per bit (`bitGroups` in bits.ts, exported on each bit's
+    // jsonc) and that is its single home. This tree is the consuming parser's INPUT
+    // config and becomes hand-maintained; a member list here would be a second home
+    // for the same fact, which no human could keep in sync with 671 bit files.
+    // Consumers invert the per-bit direction — a trivial, drift-free derivation.
     for (const [key, g] of Object.entries(BIT_GROUPS)) {
       const json = {
         name: key,
@@ -942,7 +948,6 @@ class ConfigBuilder {
         subgroupOf: g.subgroupOf,
         since: g.since,
         ...(g.allowEmpty ? { allowEmpty: true } : {}),
-        bitTypes: Config.getBitTypesForBitGroups([key]),
       };
       const output = path.join(outputFolderBitGroups, `${key}.jsonc`);
       fileWrites.push(fs.writeFile(output, JSON.stringify(json, null, 2)));
