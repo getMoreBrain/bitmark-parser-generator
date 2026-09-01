@@ -12,12 +12,7 @@ import { type BitTypeType } from '../enum/BitType.ts';
  * scope-shifts, predicates) lives in the new parser's compiler, not here.
  */
 export type ExportJsonKey =
-  | null
-  | boolean
-  | number
-  | string
-  | ExportJsonKey[]
-  | { [k: string]: ExportJsonKey };
+  null | boolean | number | string | ExportJsonKey[] | { [k: string]: ExportJsonKey };
 
 /**
  * Key-pattern value for the HTML backend of the key-pattern language.
@@ -42,8 +37,10 @@ export type HtmlKey = null | boolean | number | string | HtmlKey[] | { [k: strin
  * import). Omit when absent.
  */
 export type MappingKeys = { [mappingId: string]: HtmlKey };
+import { type BitGroupType } from '../enum/BitGroup.ts';
 import { type CountType } from '../enum/Count.ts';
 import { type ExampleTypeType } from '../enum/ExampleType.ts';
+import { type ResourceTypeType } from '../enum/ResourceType.ts';
 import { type TagType } from '../enum/Tag.ts';
 import { type TagFormatType } from '../enum/TagFormat.ts';
 import { type TextFormatType } from '../enum/TextFormat.ts';
@@ -68,6 +65,11 @@ export interface _BitConfig {
   since: string; // Supported since version
   name?: string; // Will default to the configKey minus prefix if not provided
   description: string;
+  title?: string; // PLAN-020: English display name; other languages live in the ./translations subpath module
+  // PLAN-020: bit-group memberships (search/filter categories). Explicit — no inheritance via
+  // baseBitType. Required (possibly []) on every non-internal bit, EXCEPT deprecated bits with a
+  // migration target, which derive their target's memberships unless they declare their own.
+  bitGroups?: BitGroupType[];
   baseBitType?: BitTypeType; // The base bit type
   textFormatDefault?: TextFormatType; // Default text format
   quizBit?: true; // True if the bit is a quiz bit
@@ -86,6 +88,39 @@ export interface _BitConfig {
 export interface _BitAliasConfig {
   since: string; // Supported since version
   deprecated?: string; // Deprecated version
+}
+
+/**
+ * PLAN-020: Bit-group registry (search/filter categories over bit types).
+ * Not to be confused with the tag groups of {@link _GroupsConfig}.
+ */
+export interface _BitGroupsConfig {
+  [bitGroupKey: string]: _BitGroupConfig;
+}
+
+export interface _BitGroupConfig {
+  since: string; // Supported since version
+  aliases?: string[]; // Alternative lookup keys (for renames); must not collide with any key/alias
+  description: string;
+  title: string; // English display name; other languages live in the ./translations subpath module
+  subgroupOf?: BitGroupType; // Informational only — implies NO membership (members must also declare the parent group)
+  allowEmpty?: true; // Key kept for consumer compatibility although no known bit type is a member
+}
+
+/**
+ * PLAN-020: Resource-group registry (search/filter categories over resource types).
+ * Membership is central (canonical kebab-case ResourceType values only).
+ */
+export interface _ResourceGroupsConfig {
+  [resourceGroupKey: string]: _ResourceGroupConfig;
+}
+
+export interface _ResourceGroupConfig {
+  since: string; // Supported since version
+  aliases?: string[]; // Alternative lookup keys (for renames); must not collide with any key/alias
+  description: string;
+  title: string; // English display name; other languages live in the ./translations subpath module
+  resourceTypes: ResourceTypeType[];
 }
 
 export interface _GroupsConfig {

@@ -4,9 +4,11 @@ import { Enum } from '@ncoderz/superenum';
 import fs from 'fs-extra';
 
 import { Config } from '../config/Config.ts';
+import { BIT_GROUPS } from '../config/raw/bitGroups.ts';
 import { BITS } from '../config/raw/bits.ts';
 import { CARDS } from '../config/raw/cardSets.ts';
 import { GROUPS } from '../config/raw/groups.ts';
+import { RESOURCE_GROUPS } from '../config/raw/resourceGroups.ts';
 import type {
   _AbstractTagConfig,
   _BitConfig,
@@ -79,9 +81,14 @@ class ConfigBuilder {
     const outputFolderBits = path.join(outputFolder, 'bits');
     const outputFolderGroups = path.join(outputFolder, 'groups');
     const outputFolderCards = path.join(outputFolder, 'cards');
+    // PLAN-020: bit-group / resource-group registries (search/filter categories)
+    const outputFolderBitGroups = path.join(outputFolder, 'bit-groups');
+    const outputFolderResourceGroups = path.join(outputFolder, 'resource-groups');
     fs.ensureDirSync(outputFolderBits);
     fs.ensureDirSync(outputFolderGroups);
     fs.ensureDirSync(outputFolderCards);
+    fs.ensureDirSync(outputFolderBitGroups);
+    fs.ensureDirSync(outputFolderResourceGroups);
 
     // Clean up existing config files
     const bitsFiles = fs.readdirSync(outputFolderBits).filter((f) => f.endsWith('.jsonc'));
@@ -95,6 +102,18 @@ class ConfigBuilder {
     const cardsFiles = fs.readdirSync(outputFolderCards).filter((f) => f.endsWith('.jsonc'));
     for (const file of cardsFiles) {
       fs.removeSync(path.join(outputFolderCards, file));
+    }
+    const bitGroupsFiles = fs
+      .readdirSync(outputFolderBitGroups)
+      .filter((f) => f.endsWith('.jsonc'));
+    for (const file of bitGroupsFiles) {
+      fs.removeSync(path.join(outputFolderBitGroups, file));
+    }
+    const resourceGroupsFiles = fs
+      .readdirSync(outputFolderResourceGroups)
+      .filter((f) => f.endsWith('.jsonc'));
+    for (const file of resourceGroupsFiles) {
+      fs.removeSync(path.join(outputFolderResourceGroups, file));
     }
     const fileWrites: Promise<void>[] = [];
     const tagEntriesTypeOrder = [
@@ -739,7 +758,12 @@ class ConfigBuilder {
       // for hand-authored provenance).
       const bitJson = {
         name: b.bitType,
+        // PLAN-020: English display name; non-en translations are NOT exported (D13)
+        title: resolvedBitConfig.title,
         description: b.description ?? '',
+        // PLAN-020: resolved bit-group memberships (D6 derivation applied) — the new
+        // parser needs no derivation logic. Omitted when empty (internal bits).
+        bitGroups: resolvedBitConfig.bitGroups.length > 0 ? resolvedBitConfig.bitGroups : undefined,
         since: resolvedBitConfig.since,
         deprecated: resolvedBitConfig.deprecated,
         // PLAN-017 migration target (config-derived); lets downstream engines
@@ -905,6 +929,39 @@ class ConfigBuilder {
     writeBitsAsGroupConfigs(bitGroupConfigs);
 
     writeCardConfigs();
+
+    // PLAN-020: bit-group registry export (assets/config/bit-groups/*.jsonc).
+    // Lossless for the new parser except translations (D13): key, aliases, en title,
+    // description, subgroupOf, and RESOLVED member bit types (D6 derivation applied).
+    for (const [key, g] of Object.entries(BIT_GROUPS)) {
+      const json = {
+        name: key,
+        aliases: g.aliases,
+        title: g.title,
+        description: g.description,
+        subgroupOf: g.subgroupOf,
+        since: g.since,
+        ...(g.allowEmpty ? { allowEmpty: true } : {}),
+        bitTypes: Config.getBitTypesForBitGroups([key]),
+      };
+      const output = path.join(outputFolderBitGroups, `${key}.jsonc`);
+      fileWrites.push(fs.writeFile(output, JSON.stringify(json, null, 2)));
+    }
+
+    // PLAN-020: resource-group registry export (assets/config/resource-groups/*.jsonc).
+    // Members are canonical kebab-case ResourceType values only (D10).
+    for (const [key, g] of Object.entries(RESOURCE_GROUPS)) {
+      const json = {
+        name: key,
+        aliases: g.aliases,
+        title: g.title,
+        description: g.description,
+        since: g.since,
+        resourceTypes: Config.getResourceTypesForResourceGroups([key]),
+      };
+      const output = path.join(outputFolderResourceGroups, `${key}.jsonc`);
+      fileWrites.push(fs.writeFile(output, JSON.stringify(json, null, 2)));
+    }
 
     // Fail fast on missing exportJsonKey before any file write — this is a
     // source-config error and the on-disk output would be wrong.

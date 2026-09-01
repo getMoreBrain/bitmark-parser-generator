@@ -1,6 +1,7 @@
 import { type _BitsConfig } from '../../model/config/_Config.ts';
 import { CardSetConfigKey } from '../../model/config/enum/CardSetConfigKey.ts';
 import { ConfigKey } from '../../model/config/enum/ConfigKey.ts';
+import { BitGroup } from '../../model/enum/BitGroup.ts';
 import { BitType } from '../../model/enum/BitType.ts';
 import { Count } from '../../model/enum/Count.ts';
 import { ExampleType } from '../../model/enum/ExampleType.ts';
@@ -33,6 +34,8 @@ const BITS: _BitsConfig = {
 
   [BitType.appFlashcards]: {
     since: '1.3.0',
+    title: 'Flashcards',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'App flashcards bit, used for flashcard quizzes in the app',
     quizBit: true,
@@ -74,16 +77,20 @@ const BITS: _BitsConfig = {
   },
   [BitType.appFlashcardsQuiz]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.appFlashcards,
     description: 'App flashcards quiz bit',
   },
   [BitType.appFlashcardsLearn]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.appFlashcards,
     description: 'App flashcards learn bit',
   },
   [BitType.appLink]: {
     since: '1.3.0',
+    title: 'Link',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'App link bit, used to link to other bits in the app',
     tags: [
@@ -101,16 +108,19 @@ const BITS: _BitsConfig = {
   },
   [BitType.appRag]: {
     since: '5.14.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'App RAG (Retrieval-Augmented Generation) bit, equal to article',
   },
   [BitType.appSearch]: {
     since: '5.14.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'App search bit, equal to article',
   },
   [BitType.author]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.authors, BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Represents an author of something',
     tags: [
@@ -135,16 +145,22 @@ const BITS: _BitsConfig = {
   },
   [BitType.bookAuthor]: {
     since: '4.2.0',
+    title: 'Author',
+    bitGroups: [BitGroup.authors, BitGroup.static],
     baseBitType: BitType.author,
     description: 'Represents an author of a book',
   },
   [BitType.articleAuthor]: {
     since: '4.2.0',
+    title: 'Article Author',
+    bitGroups: [BitGroup.authors, BitGroup.static],
     baseBitType: BitType.author,
     description: 'Represents an author of a book',
   },
   [BitType.article]: {
     since: '1.3.0',
+    title: 'Article',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Article bit, used for articles / paragraphs',
     tags: [
@@ -161,11 +177,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.articleAlt]: {
     since: '1.15.0',
+    title: 'Article Altnerative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Alternative article bit',
   },
   [BitType.articleResponsive]: {
     since: '1.21.0',
+    title: 'Responsive',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Responsive article bit, used for articles that adapt to the screen size',
     tags: [
@@ -179,21 +199,28 @@ const BITS: _BitsConfig = {
   },
   [BitType.articleResponsiveAlt]: {
     since: '2.0.0',
+    title: 'Responsive Alternative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.articleResponsive,
     description: 'Alternative responsive article bit',
   },
   [BitType.standardArticleNormative]: {
     since: '1.16.0',
+    title: 'Standard Article (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Standard normative article bit',
   },
   [BitType.standardArticleNonNormative]: {
     since: '1.16.0',
+    title: 'Standard Article (Non Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Standard non-normative article bit',
   },
   [BitType.smartStandardArticleNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardArticleNormative,
     description: 'Smart standard normative article bit',
     // PLAN-140 W3 (NISO import, tranche 1): one article bit per NISO
@@ -221,6 +248,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardArticleNonNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardArticleNonNormative,
     description: 'Smart standard non-normative article bit',
     // PLAN-140 Q4 (normativity inheritance): a <p> is non-normative because
@@ -276,21 +304,28 @@ const BITS: _BitsConfig = {
   },
   [BitType.statement]: {
     since: '1.3.0',
+    title: 'Statement',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Statement bit, used for statements in documents',
   },
   [BitType.pageArticle]: {
     since: '1.15.0',
+    title: 'Page Article',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Page article bit',
   },
   [BitType.pageArticleAlt]: {
     since: '1.15.0',
+    title: 'Page Article Alternative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Alternative page article bit',
   },
   [BitType.pageArticleResponsive]: {
     since: '1.21.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Responsive page article bit, used for articles that adapt to the screen size',
     tags: [
@@ -304,6 +339,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.buttonCopyText]: {
     since: '1.4.3',
+    title: 'Copy Text',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Button copy text bit, used to create a button that copies text to the clipboard',
     tags: [
@@ -316,6 +353,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.catalogItemBook]: {
     since: '4.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Catalog item book bit, used to represent a book product in a catalog with cover and description',
@@ -482,6 +520,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.catalogItemExternalBook]: {
     since: '4.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Catalog item external book bit, used to represent an external book product in a catalog with link to external shop',
@@ -648,6 +687,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.catalogItemProduct]: {
     since: '4.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Catalog item product bit, used to represent a general product in a catalog with cover and description',
@@ -802,6 +842,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.callToAction]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Call to action bit, used to create a call to action button',
     tags: [
@@ -820,76 +861,91 @@ const BITS: _BitsConfig = {
   },
   [BitType.callToActionSubscribe]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action subscribe bit',
   },
   [BitType.callToActionContact]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action contact bit',
   },
   [BitType.callToActionJoin]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action join bit',
   },
   [BitType.callToActionMail]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action mail bit',
   },
   [BitType.callToActionLearnMore]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action learn more bit',
   },
   [BitType.callToActionSeeMore]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action see more bit',
   },
   [BitType.callToActionWatch]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action watch bit',
   },
   [BitType.callToActionStartNow]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action start now bit',
   },
   [BitType.callToActionGetOffer]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action get offer bit',
   },
   [BitType.callToActionBookNow]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action book now bit',
   },
   [BitType.callToActionShopNow]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action shop now bit',
   },
   [BitType.callToActionGetNow]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action get now bit',
   },
   [BitType.callToActionDownload]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action download bit',
   },
   [BitType.callToActionCreateAccount]: {
     since: '1.15.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call to action create account bit',
   },
   [BitType.appBitmarkFromJavascript]: {
     since: '1.4.5',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'App bitmark from JavaScript, used to create bits from JavaScript in the app',
     tags: [
@@ -904,11 +960,13 @@ const BITS: _BitsConfig = {
   },
   [BitType.appBitmarkFromEditor]: {
     since: '1.4.5',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.appBitmarkFromJavascript,
     description: 'App bitmark from editor, used to create bits from the editor in the app',
   },
   [BitType.articleEmbed]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Article embed bit, used to embed articles from other sources',
     tags: [
@@ -926,6 +984,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.articleLink]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Article link bit, used to link to articles from other sources',
     tags: [
@@ -943,6 +1002,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.audio]: {
     since: '1.3.0',
+    title: 'Audio',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Audio bit, used for audio files',
     tags: [
@@ -960,6 +1021,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.audioEmbed]: {
     since: '1.3.0',
+    title: 'Embed audio',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Audio embed bit, used to embed audio files from other sources',
     tags: [
@@ -977,6 +1040,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.audioLink]: {
     since: '1.3.0',
+    title: 'Audio Link',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Audio link bit, used to link to audio files from other sources',
     tags: [
@@ -994,6 +1059,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.bitAlias]: {
     since: '1.3.0',
+    title: 'Bit Alias',
+    bitGroups: [BitGroup.other, BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Bit alias, used to create an alias for a bit',
     tags: [
@@ -1013,6 +1080,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.diff]: {
     since: '3.13.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Diff bit, used to show differences between two bits',
     tags: [
@@ -1025,6 +1093,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.book]: {
     since: '1.3.0',
+    title: 'Book',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Book bit, used to represent a book',
     // PLAN-141 F5 (NISO import): the <std-meta> front-matter container is
@@ -1043,168 +1113,232 @@ const BITS: _BitsConfig = {
   },
   [BitType.bookEnd]: {
     since: '3.27.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'End of book bit',
   },
   [BitType.bookAcknowledgements]: {
     since: '1.17.0',
+    title: 'Book Acknowledgements',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Acknowledgements section of a book',
   },
   [BitType.bookAddendum]: {
     since: '1.3.0',
+    title: 'Book Addendum',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Addendum section of a book',
   },
   [BitType.bookAfterword]: {
     since: '1.3.0',
+    title: 'Book Afterword',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Afterword section of a book',
   },
   [BitType.bookAppendix]: {
     since: '1.3.0',
+    title: 'Book Appendix',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Appendix section of a book',
   },
   [BitType.bookArticle]: {
     since: '1.3.0',
+    title: 'Book Article',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Article section of a book',
   },
   [BitType.bookAutherBio]: {
     since: '1.3.0',
+    title: 'Book Author Bio',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Author biography section of a book',
   },
   [BitType.bookBibliography]: {
     since: '1.3.0',
+    title: 'Book Bibliography',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Bibliography section of a book',
   },
   [BitType.bookComingSoon]: {
     since: '1.3.0',
+    title: 'Book Coming Soon',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Coming soon section of a book',
   },
   [BitType.bookConclusion]: {
     since: '1.3.0',
+    title: 'Book Conclusion',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Conclusion section of a book',
   },
   [BitType.bookCopyright]: {
     since: '1.3.0',
+    title: 'Book Copyright',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Copyright section of a book',
   },
   [BitType.bookCopyrightPermissions]: {
     since: '1.3.0',
+    title: 'Book Copyright Permissions',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Copyright permissions section of a book',
   },
   [BitType.bookDedication]: {
     since: '1.3.0',
+    title: 'Book Dedication',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Dedication section of a book',
   },
   [BitType.bookEndnotes]: {
     since: '1.3.0',
+    title: 'Book Endnotes',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Endnotes section of a book',
   },
   [BitType.bookEpigraph]: {
     since: '1.3.0',
+    title: 'Book Epigraph',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Epigraph section of a book',
   },
   [BitType.bookEpilogue]: {
     since: '1.3.0',
+    title: 'Book Epilogue',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Epilogue section of a book',
   },
   [BitType.bookForword]: {
     since: '1.3.0',
+    title: 'Book Foreword',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Foreword section of a book',
   },
   [BitType.bookFrontispiece]: {
     since: '1.3.0',
+    title: 'Book Frontispiece',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Frontispiece section of a book',
   },
   [BitType.bookImprint]: {
     since: '1.3.0',
+    title: 'Book Imprint',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Imprint section of a book',
   },
   [BitType.bookIncitingIncident]: {
     since: '1.3.0',
+    title: 'Inciting Incident',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Inciting incident section of a book',
   },
   [BitType.bookIntroduction]: {
     since: '1.3.0',
+    title: 'Book Introduction',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Introduction section of a book',
   },
   [BitType.bookListOfContributors]: {
     since: '1.3.0',
+    title: 'Book List Of Contributors',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'List of contributors section of a book',
   },
   [BitType.bookNotes]: {
     since: '1.3.0',
+    title: 'Book Notes',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Notes section of a book',
   },
   [BitType.bookPostscript]: {
     since: '1.3.0',
+    title: 'Book Postscript',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Postscript section of a book',
   },
   [BitType.bookPreface]: {
     since: '1.3.0',
+    title: 'Book Preface',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Preface section of a book',
   },
   [BitType.bookPrologue]: {
     since: '1.3.0',
+    title: 'Book Prologue',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Prologue section of a book',
   },
   [BitType.bookReadMore]: {
     since: '1.3.0',
+    title: 'Read More',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Read more section of a book',
   },
   [BitType.bookReferenceList]: {
     //
     since: '3.2.0',
+    title: 'Book Reference List',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Book reference list, used to list references in a book',
     cardSet: CardSetConfigKey.bookReferenceList,
   },
   [BitType.bookRequestForABookReview]: {
     since: '1.3.0',
+    title: 'Request For A Book Review',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Request for a book review section of a book',
   },
   [BitType.bookSummary]: {
     since: '1.3.0',
+    title: 'Book Summary',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Summary section of a book',
   },
   [BitType.bookTeaser]: {
     since: '1.3.0',
+    title: 'Book Teaser',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Teaser section of a book',
   },
   [BitType.bookTitle]: {
     since: '1.3.0',
+    title: 'Book Title',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Title section of a book',
   },
   [BitType.bookCover]: {
     since: '3.27.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Cover image of a book',
     tags: [
@@ -1224,6 +1358,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.bookAlias]: {
     since: '1.4.3',
+    title: 'Book Alias',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.book,
     description: 'Book alias, used to create an alias for a book',
     tags: [
@@ -1237,6 +1373,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.bookDiff]: {
     since: '3.10.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.book,
     description: 'Book diff, used to show differences between two book versions',
     tags: [
@@ -1249,6 +1386,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.bookClose]: {
     since: '1.18.0',
+    title: 'Close Book',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Close section of a book, used to close the book',
     tags: [
@@ -1261,6 +1400,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.bookReference]: {
     since: '2.2.0',
+    title: 'Book Reference',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Book reference, used to reference a book in another book',
     tags: [
@@ -1295,6 +1436,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.botActionResponse]: {
     since: '1.3.0',
+    title: 'Bot Action Response',
+    bitGroups: [BitGroup.bots],
     baseBitType: BitType._standard,
     description: 'Bot action response bit, used to define responses for bot actions',
 
@@ -1302,6 +1445,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.botActionSend]: {
     since: '1.3.0',
+    title: 'Bot Action Send',
+    bitGroups: [BitGroup.botAction, BitGroup.bots],
     baseBitType: BitType._standard,
     description: 'Bot action send bit, used to define actions for sending messages',
     tags: [
@@ -1314,6 +1459,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.browserImage]: {
     since: '1.3.0',
+    title: 'Browser Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Browser image bit, used to display images in the browser',
     tags: [
@@ -1333,6 +1480,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.card1]: {
     since: '1.3.0',
+    title: 'Card',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Card bit, used for cards in quizzes',
     quizBit: true,
@@ -1345,17 +1494,27 @@ const BITS: _BitsConfig = {
   },
   [BitType.question1]: {
     since: '1.3.0',
+    title: 'Question',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.card1,
     description: 'Question card bit',
   },
-  [BitType.survey1]: { since: '1.3.0', baseBitType: BitType.card1, description: 'Survey card bit' },
+  [BitType.survey1]: {
+    since: '1.3.0',
+    bitGroups: [BitGroup.survey, BitGroup.surveys],
+    baseBitType: BitType.card1,
+    description: 'Survey card bit',
+  },
   [BitType.surveyAnonymous1]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.surveyAnonymous, BitGroup.surveys],
     baseBitType: BitType.card1,
     description: 'Anonymous survey card bit',
   },
   [BitType.chapter]: {
     since: '1.3.0',
+    title: 'Chapter',
+    bitGroups: [BitGroup.other, BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Chapter bit, used to define chapters in books or articles',
     // PLAN-140 W3 (NISO import, tranche 1): recover a chapter from a NISO
@@ -1406,6 +1565,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.clozeAndMultipleChoiceText]: {
     since: '1.3.0',
+    title: 'Cloze And Multiple Choice Text',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description:
       'Cloze and multiple choice text bit, used for quizzes with cloze and multiple choice questions',
@@ -1450,11 +1611,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.coachCallToActionClozeAndMultipleChoiceText]: {
     since: '1.3.0',
+    title: 'Coach Call To Action Cloze And Multiple Choice Text',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.clozeAndMultipleChoiceText,
     description: 'Coach call to action cloze and multiple choice text bit',
   },
   [BitType.cloze]: {
     since: '1.3.0',
+    title: 'Cloze',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description: 'Cloze bit, used for fill-in-the-blank questions in quizzes',
     quizBit: true,
@@ -1504,6 +1669,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.clozeInstructionGrouped]: {
     since: '1.3.0',
+    title: 'Cloze Instruction Grouped',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType.cloze,
     description:
       'Cloze instruction grouped bit, used for cloze questions with grouped instructions',
@@ -1520,6 +1687,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.clozeSolutionGrouped]: {
     since: '1.3.0',
+    title: 'Cloze Solution Grouped',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType.cloze,
     description: 'Cloze solution grouped bit, used for cloze questions with grouped solutions',
     tags: [
@@ -1540,32 +1709,41 @@ const BITS: _BitsConfig = {
   },
   [BitType.clozeSeveral]: {
     since: '3.5.0',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType.cloze,
     description: 'Cloze several bit, used for cloze questions with multiple answers',
   },
   [BitType.gapText]: {
     since: '1.5.15',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType.cloze,
     description: 'Gap text bit, used for fill-in-the-blank questions in quizzes with text gaps',
   },
   [BitType.gapTextInstructionGrouped]: {
     since: '1.5.15',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType.clozeInstructionGrouped,
     description:
       'Gap text instruction grouped bit, used for fill-in-the-blank questions with grouped instructions',
   },
   [BitType.coachSelfReflectionCloze]: {
     since: '1.3.0',
+    title: 'Coach Self Reflection Cloze',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.cloze,
     description: 'Coach self-reflection cloze bit, used for self-reflection questions in coaching',
   },
   [BitType.coachCallToActionCloze]: {
     since: '1.3.0',
+    title: 'Coach Call To Action Cloze',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.cloze,
     description: 'Coach call to action cloze bit, used for call to action questions in coaching',
   },
   [BitType.clozeList]: {
     since: '1.4.13',
+    title: 'Cloze List',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description: 'Cloze list bit, used for lists of cloze questions in quizzes',
     quizBit: true,
@@ -1590,6 +1768,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.code]: {
     since: '1.3.0',
+    title: 'Code',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Code bit, used for code snippets in articles or documents',
     // PLAN-141 F4 (NISO import): a <code> block is a CONTENT bit with a
@@ -1630,6 +1810,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.formula]: {
     since: '1.35.0',
+    title: 'Formula',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Formula bit, used for mathematical formulas in articles or documents',
 
@@ -1637,22 +1819,28 @@ const BITS: _BitsConfig = {
   },
   [BitType.formulaImage]: {
     since: '5.23.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.formula,
     description: 'Formula image bit, used for mathematical formulas rendered as images',
   },
   [BitType.smartStandardFormula]: {
     since: '3.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.formula,
     description: 'Smart standard formula bit, used for mathematical formulas in smart standards',
   },
   [BitType.smartStandardFormulaNonNormative]: {
     since: '3.11.0',
+    title: 'Smart Standard Formula (Non Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.formula,
     description:
       'Smart standard non-normative formula bit, used for mathematical formulas in smart standards that are non-normative',
   },
   [BitType.smartStandardFormulaNormative]: {
     since: '3.11.0',
+    title: 'Smart Standard Formula (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.formula,
     description:
       'Smart standard normative formula bit, used for mathematical formulas in smart standards that are normative',
@@ -1672,89 +1860,110 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardRemarkFormula]: {
     since: '3.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.formula,
     description:
       'Smart standard remark formula bit, used for mathematical formulas in smart standards remarks',
   },
   [BitType.smartStandardRemarkFormulaNonNormative]: {
     since: '3.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.formula,
     description:
       'Smart standard non-normative remark formula bit, used for mathematical formulas in smart standards remarks that are non-normative',
   },
   [BitType.smartStandardRemarkFormulaNormative]: {
     since: '3.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.formula,
     description:
       'Smart standard normative remark formula bit, used for mathematical formulas in smart standards remarks that are normative',
   },
   [BitType.appCodeCell]: {
     since: '1.4.3',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'App code cell, used to create code cells in the app editor',
   },
   [BitType.appCodeEditor]: {
     since: '1.4.3',
+    title: 'Code Editor',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'App code editor, used to create code editors in the app editor',
   },
   [BitType.appCodeIde]: {
     since: '1.4.3',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'App code IDE, used to create code IDEs in the app editor',
   },
   [BitType.codeRuntime]: {
     since: '1.4.3',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'Code runtime, used to define the runtime environment for code snippets',
   },
   [BitType.consoleLog]: {
     since: '1.4.3',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'Console log, used to log messages to the console in code snippets',
   },
   [BitType.output]: {
     since: '1.4.3',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'Output bit, used to display output from code snippets',
   },
   [BitType.stdout]: {
     since: '1.4.3',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'Standard output bit, used to display standard output from code snippets',
   },
   [BitType.sandbox]: {
     since: '4.10.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'A sandbox bit, used to create a sandboxed environment for code execution',
   },
   [BitType.sandboxOutputJson]: {
     since: '4.10.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'A sandbox output JSON bit, used to display JSON output from sandboxed code',
   },
   [BitType.sandboxOutputMarkup]: {
     since: '4.10.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'A sandbox output markup bit, used to display markup output from sandboxed code',
   },
   [BitType.sandboxOutputRender]: {
     since: '4.10.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'A sandbox output render bit, used to display rendered output from sandboxed code',
   },
   [BitType.step]: {
     since: '1.5.1',
+    title: 'Step',
+    bitGroups: [BitGroup.static, BitGroup.steps],
     baseBitType: BitType.article,
     description: 'Step bit, used to define steps in a process or guide',
   },
   [BitType.stepImageScreenshot]: {
     since: '1.5.1',
+    title: 'Step Image Screenshot',
+    bitGroups: [BitGroup.static, BitGroup.steps],
     baseBitType: BitType.image,
     description: 'Step image screenshot bit, used to display screenshots in steps',
   },
   [BitType.stepImageScreenshotWithPointer]: {
     since: '1.5.1',
+    title: 'Step Image Screenshot With Pointer',
+    bitGroups: [BitGroup.static, BitGroup.steps],
     baseBitType: BitType.image,
     description:
       'Step image screenshot with pointer bit, used to display screenshots with pointers in steps',
@@ -1777,11 +1986,14 @@ const BITS: _BitsConfig = {
   },
   [BitType.milestone]: {
     since: '1.20.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.step,
     description: 'Milestone bit, used to define milestones in a process or guide',
   },
   [BitType.conversationLeft1]: {
     since: '1.3.0',
+    title: 'Conversation Left',
+    bitGroups: [BitGroup.conversation, BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Conversation left bit, used to create a conversation on the left side of the screen',
@@ -1795,66 +2007,82 @@ const BITS: _BitsConfig = {
   },
   [BitType.conversationLeft1Scream]: {
     since: '1.3.0',
+    title: 'Conversation Left Scream',
+    bitGroups: [BitGroup.conversation, BitGroup.static],
     baseBitType: BitType.conversationLeft1,
     description:
       'Conversation left scream bit, used to create a conversation with a scream on the left side of the screen',
   },
   [BitType.conversationLeft1Thought]: {
     since: '1.3.0',
+    title: 'Conversation Left Thought',
+    bitGroups: [BitGroup.conversation, BitGroup.static],
     baseBitType: BitType.conversationLeft1,
     description:
       'Conversation left thought bit, used to create a conversation with a thought on the left side of the screen',
   },
   [BitType.conversationRight1]: {
     since: '1.3.0',
+    title: 'Conversation Right',
+    bitGroups: [BitGroup.conversation, BitGroup.static],
     baseBitType: BitType.conversationLeft1,
     description:
       'Conversation right bit, used to create a conversation on the right side of the screen',
   },
   [BitType.conversationRight1Scream]: {
     since: '1.3.0',
+    title: 'Conversation Right Scream',
+    bitGroups: [BitGroup.conversation, BitGroup.static],
     baseBitType: BitType.conversationLeft1,
     description:
       'Conversation right scream bit, used to create a conversation with a scream on the right side of the screen',
   },
   [BitType.conversationRight1Thought]: {
     since: '1.3.0',
+    title: 'Conversation Right Thought',
+    bitGroups: [BitGroup.conversation, BitGroup.static],
     baseBitType: BitType.conversationLeft1,
     description:
       'Conversation right thought bit, used to create a conversation with a thought on the right side of the screen',
   },
   [BitType.clozeAndMultipleChoiceTextConversationLeft1]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType.conversationLeft1,
     description:
       'Cloze and multiple choice text conversation left bit, used for conversations with cloze and multiple choice text on the left side of the screen',
   },
   [BitType.clozeAndMultipleChoiceTextConversationLeft1Scream]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType.conversationLeft1,
     description:
       'Cloze and multiple choice text conversation left scream bit, used for conversations with cloze and multiple choice text and a scream on the left side of the screen',
   },
   [BitType.clozeAndMultipleChoiceTextConversationLeft1Thought]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType.conversationLeft1,
     description:
       'Cloze and multiple choice text conversation left thought bit, used for conversations with cloze and multiple choice text and a thought on the left side of the screen',
   },
   [BitType.clozeAndMultipleChoiceTextConversationRight1]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType.conversationLeft1,
     description:
       'Cloze and multiple choice text conversation right bit, used for conversations with cloze and multiple choice text on the right side of the screen',
   },
   [BitType.clozeAndMultipleChoiceTextConversationRight1Scream]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType.conversationLeft1,
     description:
       'Cloze and multiple choice text conversation right scream bit, used for conversations with cloze and multiple choice text and a scream on the right side of the screen',
   },
   [BitType.clozeAndMultipleChoiceTextConversationRight1Thought]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.cloze, BitGroup.quizzes],
     baseBitType: BitType.conversationLeft1,
     description:
       'Cloze and multiple choice text conversation right thought bit, used for conversations with cloze and multiple choice text and a thought on the right side of the screen',
@@ -1862,6 +2090,7 @@ const BITS: _BitsConfig = {
 
   [BitType.advertising]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'General advertising content bit',
     tags: [
@@ -1873,6 +2102,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.advertisingAdvertorial]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Advertorial content bit (sponsored article)',
     tags: [
@@ -1885,6 +2115,7 @@ const BITS: _BitsConfig = {
 
   [BitType.advertisingCallToAction]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call-to-action for advertising',
     tags: [
@@ -1896,6 +2127,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.advertisingCallToActionMeeting]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.callToAction,
     description: 'Call-to-action for meeting or appointment',
     tags: [
@@ -1908,6 +2140,8 @@ const BITS: _BitsConfig = {
 
   [BitType.advertisingBanner]: {
     since: '4.2.0',
+    title: 'Advertising Banner',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Banner advertisement bit',
     tags: [
@@ -1919,6 +2153,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.advertisingSkyscraper]: {
     since: '4.2.0',
+    title: 'Advertising Skyscraper',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Skyscraper (vertical) advertisement bit',
     tags: [
@@ -1930,6 +2166,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.advertisingRectangle]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Rectangle advertisement bit',
     tags: [
@@ -1942,6 +2179,8 @@ const BITS: _BitsConfig = {
 
   [BitType.advertisingFullPage]: {
     since: '4.2.0',
+    title: 'Full-page Advertising',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Full-page advertisement bit',
     tags: [
@@ -1953,6 +2192,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.advertisingHalfPage]: {
     since: '4.2.0',
+    title: 'Half-Page Advertising',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Half-page advertisement bit',
     tags: [
@@ -1964,6 +2205,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.advertisingQuarterPage]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Quarter-page advertisement bit',
     tags: [
@@ -1975,6 +2217,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.advertisingClassifiedPage]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Classifieds advertisement page bit',
     tags: [
@@ -1986,6 +2229,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.advertisingLandscape]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Landscape format advertisement bit',
     tags: [
@@ -1997,6 +2241,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.advertisingPortrait]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Portrait format advertisement bit',
     tags: [
@@ -2009,16 +2254,22 @@ const BITS: _BitsConfig = {
 
   [BitType.cookPreparation]: {
     since: '1.3.0',
+    title: 'Cook Preparation',
+    bitGroups: [BitGroup.cooking, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Cook preparation bit',
   },
   [BitType.cookStep]: {
     since: '1.3.0',
+    title: 'Cook Step',
+    bitGroups: [BitGroup.cooking, BitGroup.static, BitGroup.steps],
     baseBitType: BitType.article,
     description: 'Cook step bit',
   },
   [BitType.cookIngredients]: {
     since: '1.5.16',
+    title: 'Cook Ingredients',
+    bitGroups: [BitGroup.cooking, BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Cook ingredients bit, used to define ingredients for recipes',
     tags: [
@@ -2077,72 +2328,98 @@ const BITS: _BitsConfig = {
   },
   [BitType.recipe]: {
     since: '1.5.24',
+    title: 'Recipe',
+    bitGroups: [BitGroup.recipes, BitGroup.static],
     baseBitType: BitType.cookIngredients,
     description: 'Recipe bit, used to define a recipe',
   },
   [BitType.cookRemark]: {
     since: '1.3.0',
+    title: 'Cook Remark',
+    bitGroups: [BitGroup.cooking, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Cook remark bit, used to add remarks to recipes',
   },
   [BitType.cookVariation]: {
     since: '1.3.0',
+    title: 'Cook Variation',
+    bitGroups: [BitGroup.cooking, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Cook variation bit, used to define variations of recipes',
   },
   [BitType.cookInsert]: {
     since: '1.3.0',
+    title: 'Cook Insert',
+    bitGroups: [BitGroup.cooking, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Cook insert bit, used to insert additional content in recipes',
   },
   [BitType.cookNoteOnQuantity]: {
     since: '3.27.0',
+    bitGroups: [BitGroup.cooking, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Cook note on quantity bit, used to add notes on ingredient quantities in recipes',
   },
   [BitType.cookArrangement]: {
     since: '1.3.0',
+    title: 'Cook Arrangement',
+    bitGroups: [BitGroup.cooking, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Cook arrangement bit, used to arrange ingredients or steps in recipes',
   },
   [BitType.cookPracticeAdvise]: {
     since: '1.3.0',
+    title: 'Cook Practice Advise',
+    bitGroups: [BitGroup.cooking, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Cook practice advice bit, used to provide practical advice in recipes',
   },
   [BitType.cookPlate]: {
     since: '1.3.0',
+    title: 'Cook Plate',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Cook plate bit, used to define the presentation of a dish',
   },
   [BitType.cookRecommendation]: {
     since: '1.3.0',
+    title: 'Cook Recommendation',
+    bitGroups: [BitGroup.cooking, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Cook recommendation bit, used to recommend dishes or ingredients',
   },
   [BitType.cookPersonalRecommendation]: {
     since: '1.3.0',
+    title: 'Cook Personal Recommendation',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Cook personal recommendation bit, used to provide personal recommendations for dishes or ingredients',
   },
   [BitType.cookSideDrink]: {
     since: '1.3.0',
+    title: 'Cook Side Drink',
+    bitGroups: [BitGroup.cooking, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Cook side drink bit, used to define side drinks for dishes',
   },
   [BitType.cookSideDish]: {
     since: '1.3.0',
+    title: 'Cook Side Dish',
+    bitGroups: [BitGroup.cooking, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Cook side dish bit, used to define side dishes for main courses',
   },
   [BitType.cookTimer]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Cook timer bit, used to set timers for cooking steps',
   },
   [BitType.document]: {
     since: '1.3.0',
+    title: 'Document',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Document bit, used to define documents in articles or books',
     tags: [
@@ -2160,6 +2437,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.documentDownload]: {
     since: '1.3.0',
+    title: 'Document Download',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Document download bit, used to define downloadable documents in articles or books',
@@ -2179,12 +2458,14 @@ const BITS: _BitsConfig = {
   },
   [BitType.leDocumentDownload]: {
     since: '3.18.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.documentDownload,
     description:
       'LE Document download bit, used to define downloadable documents in learning experiences',
   },
   [BitType.documentEmbed]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Document embed bit, used to embed documents in articles or books',
     tags: [
@@ -2203,6 +2484,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.documentLink]: {
     since: '1.3.0',
+    title: 'Document Link',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Document link bit, used to link to documents in articles or books',
     tags: [
@@ -2221,6 +2504,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.essay]: {
     since: '1.3.0',
+    title: 'Essay',
+    bitGroups: [BitGroup.essay, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description: 'Essay bit, used to define essays in articles or books',
     quizBit: true,
@@ -2273,16 +2558,22 @@ const BITS: _BitsConfig = {
   },
   [BitType.coachSelfReflectionEssay]: {
     since: '1.3.0',
+    title: 'Coach Self Reflection Essay',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.essay,
     description: 'Coach self-reflection essay bit',
   },
   [BitType.coachCallToActionEssay]: {
     since: '1.3.0',
+    title: 'Coach Call To Action Essay',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.essay,
     description: 'Coach call to action essay bit',
   },
   [BitType.example]: {
     since: '1.3.0',
+    title: 'Example',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Example bit, used to provide examples in articles or books',
     tags: [
@@ -2310,30 +2601,38 @@ const BITS: _BitsConfig = {
   },
   [BitType.exampleAlt]: {
     since: '1.16.0',
+    title: 'Example Alternative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.example,
     description:
       'Alternative example bit, used to provide alternative examples in articles or books',
   },
   [BitType.standardExampleNormative]: {
     since: '1.16.0',
+    title: 'Standard Example (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.example,
     description:
       'Standard normative example bit, used to provide normative examples in articles or books',
   },
   [BitType.standardExampleNonNormative]: {
     since: '1.16.0',
+    title: 'Standard Example (Non Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.example,
     description:
       'Standard non-normative example bit, used to provide non-normative examples in articles or books',
   },
   [BitType.smartStandardExampleNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardExampleNormative,
     description:
       'Smart standard normative example bit, used to provide normative examples in smart standards',
   },
   [BitType.smartStandardExampleNonNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardExampleNonNormative,
     description:
       'Smart standard non-normative example bit, used to provide non-normative examples in smart standards',
@@ -2370,6 +2669,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.authorContentBitGenerator]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Body contains the content of one or more bits to be created by the bit generator',
     tags: [
@@ -2383,36 +2683,46 @@ const BITS: _BitsConfig = {
   },
   [BitType.appAiPrompt]: {
     since: '1.3.0',
+    title: 'AI Prompt',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'App AI prompt bit, used to create AI prompts in the app editor',
   },
   [BitType.aiPrompt]: {
     since: '1.3.0',
+    title: 'AI Prompt',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'AI prompt bit, used to create AI prompts in articles or books',
   },
   [BitType.aiChat]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'AI chat bit, used to create an AI chat',
   },
   [BitType.aiEditor]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'AI editor bit, used to create an AI editor',
   },
   [BitType.aiTutor]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'AI tutor bit, used to create an AI tutor',
   },
   [BitType.aiWbt]: {
     since: '4.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'AI WBT bit, used to create an AI WBT (Web-Based Training)',
   },
   [BitType.articleAi]: {
     since: '1.3.0',
+    title: 'AI Article',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Article AI bit, used to create AI-generated articles',
     tags: [
@@ -2430,295 +2740,396 @@ const BITS: _BitsConfig = {
   },
   [BitType.articleAttachment]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Article attachment bit, used to attach files to articles',
   },
   [BitType.assignment]: {
     since: '1.3.0',
+    title: 'Assignment',
+    bitGroups: [BitGroup.assignment, BitGroup.quizzes],
     baseBitType: BitType.essay,
     description: 'Assignment bit, used to define assignments in articles or books',
   },
   [BitType.audioTranscript]: {
     since: '1.3.0',
+    title: 'Audio Transcript',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Audio transcript bit, used to provide transcripts for audio files in articles or books',
   },
   [BitType.bitmarkExample]: {
     since: '1.3.0',
+    title: 'bitmark Example',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.example,
     description: 'Bitmark example bit, used to provide examples for bitmarks in articles or books',
   },
   [BitType.blogArticle]: {
     since: '1.3.0',
+    title: 'Blog Article',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Blog article bit, used to define blog articles in articles or books',
   },
   [BitType.bug]: {
     since: '1.3.0',
+    title: 'Bug',
+    bitGroups: [BitGroup.static, BitGroup.warning],
     baseBitType: BitType.article,
     description: 'Bug bit, used to report bugs in articles or books',
   },
   [BitType.bugAlt]: {
     since: '1.16.0',
+    title: 'Bug Alternative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.bug,
     description:
       'Alternative bug bit, used to report bugs in articles or books with alternative styling',
   },
   [BitType.checklist]: {
     since: '1.3.0',
+    title: 'Checklist',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Checklist bit, used to create checklists in articles or books',
   },
   [BitType.coachAudioTranscript]: {
     since: '1.3.0',
+    title: 'Coach Audio Transcript',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Coach audio transcript bit, used to provide transcripts for audio files in coaching articles or books',
   },
   [BitType.coachCallToActionChecklist]: {
     since: '1.3.0',
+    title: 'Coach Call To Action Checklist',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Coach call to action checklist bit, used to create checklists in coaching articles or books',
   },
   [BitType.coachHomeRules]: {
     since: '1.3.0',
+    title: 'Coach Home Rules',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Coach home rules bit, used to define home rules in coaching articles or books',
   },
   [BitType.coachVideoTranscript]: {
     since: '1.3.0',
+    title: 'Coach Video Transcript',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Coach video transcript bit, used to provide transcripts for video files in coaching articles or books',
   },
   [BitType.correction]: {
     since: '1.3.0',
+    title: 'Correction',
+    bitGroups: [BitGroup.correction, BitGroup.quizzes, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Correction bit, used to provide corrections in articles or books',
   },
   [BitType.danger]: {
     since: '1.3.0',
+    title: 'Danger',
+    bitGroups: [BitGroup.static, BitGroup.warning],
     baseBitType: BitType.article,
     description:
       'Danger bit, used to highlight dangerous or critical information in articles or books',
   },
   [BitType.dangerAlt]: {
     since: '1.16.0',
+    title: 'Danger Alternative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Alternative danger bit, used to highlight dangerous or critical information in articles or books with alternative styling',
   },
   [BitType.definitionTerm]: {
     since: '1.34.0',
+    title: 'Definition Term',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Definition term bit, used to define terms in articles or books',
   },
   [BitType.deleted]: {
     since: '3.9.0',
+    title: 'Deleted Bit',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Deleted bit, used to indicate deleted content in articles or books',
   },
   [BitType.details1]: {
     since: '1.3.0',
+    title: 'Details',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Details bit, used to provide additional details in articles or books',
   },
   [BitType.details]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Details bit, used to provide additional details in articles or books',
   },
   [BitType.qAndA]: {
     since: '3.5.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Q&A bit, used to create question and answer sections in articles or books',
   },
   [BitType.editorial]: {
     since: '1.3.0',
+    title: 'Editorial',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Editorial bit, used to provide editorial content in articles or books',
   },
   [BitType.editorNote]: {
     since: '1.3.0',
+    title: 'Editor Note',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Editor note bit, used to provide notes from the editor in articles or books',
   },
   [BitType.featured]: {
     since: '1.3.0',
+    title: 'Featured',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Featured bit, used to highlight featured content in articles or books',
   },
   [BitType.glossaryTerm]: {
     since: '1.33.0',
+    title: 'Glossary Term',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Glossary term bit, used to define glossary terms in articles or books',
   },
   [BitType.help]: {
     since: '1.3.0',
+    title: 'Help',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Help bit, used to provide help or support information in articles or books',
   },
   [BitType.helpAlt]: {
     since: '1.16.0',
+    title: 'Help Alt',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.help,
     description:
       'Alternative help bit, used to provide help or support information in articles or books with alternative styling',
   },
   [BitType.hint]: {
     since: '1.3.0',
+    title: 'Hint',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Hint bit, used to provide hints or tips in articles or books',
   },
   [BitType.hintAlt]: {
     since: '1.16.0',
+    title: 'Hint Alternative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.hint,
     description:
       'Alternative hint bit, used to provide hints or tips in articles or books with alternative styling',
   },
   [BitType.indexTerm]: {
     since: '1.33.0',
+    title: 'Index Term',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Index term bit, used to define index terms in articles or books',
   },
   [BitType.info]: {
     since: '1.3.0',
+    title: 'Info',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Info bit, used to provide informational content in articles or books',
   },
   [BitType.infoAlt]: {
     since: '1.16.0',
+    title: 'Info Alternative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.info,
     description:
       'Alternative info bit, used to provide informational content in articles or books with alternative styling',
   },
   [BitType.langLearningOutcomes]: {
     since: '1.3.0',
+    title: 'Language Learning Outcomes',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language learning outcomes bit, used to define learning outcomes in language articles or books',
   },
   [BitType.langEnablingLanguageSkills]: {
     since: '1.3.0',
+    title: 'Language Enabling Language Skills',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language enabling skills bit, used to define enabling language skills in language articles or books',
   },
   [BitType.langLifeSkills]: {
     since: '1.3.0',
+    title: 'Language Life Skills',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language life skills bit, used to define life skills in language articles or books',
   },
   [BitType.langEnglishAroundWorld]: {
     since: '1.3.0',
+    title: 'Language English Around World',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language English around the world bit, used to provide information about English usage around the world in language articles or books',
   },
   [BitType.langGoodToKnow]: {
     since: '1.3.0',
+    title: 'Language Good To Know',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language good to know bit, used to provide useful information in language articles or books',
   },
   [BitType.langLearningGoal]: {
     since: '1.3.0',
+    title: 'Language Learning Goal',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language learning goal bit, used to define learning goals in language articles or books',
   },
   [BitType.langLearningStrategy]: {
     since: '1.3.0',
+    title: 'Language Learning Strategy',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language learning strategy bit, used to define learning strategies in language articles or books',
   },
   [BitType.langLikeALocal]: {
     since: '1.3.0',
+    title: 'Language Like A Local',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language like a local bit, used to provide tips for speaking like a local in language articles or books',
   },
   [BitType.langMaterial]: {
     since: '1.3.0',
+    title: 'Language Material',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language material bit, used to provide language learning materials in language articles or books',
   },
   [BitType.langUsefulPhrases]: {
     since: '1.3.0',
+    title: 'Language Useful Phrases',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language useful phrases bit, used to provide useful phrases in language articles or books',
   },
   [BitType.langLevelDown]: {
     since: '1.3.0',
+    title: 'Language Level Down',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language level down bit, used to provide information about lower language levels in language articles or books',
   },
   [BitType.langLevelUp]: {
     since: '1.3.0',
+    title: 'Language Level Up',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language level up bit, used to provide information about higher language levels in language articles or books',
   },
   [BitType.langExtraActivity]: {
     since: '1.3.0',
+    title: 'Language Extra Activity',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language extra activity bit, used to provide additional activities in language articles or books',
   },
   [BitType.langVideoScript]: {
     since: '1.3.0',
+    title: 'Language Video Script',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language video script bit, used to provide scripts for language learning videos in articles or books',
   },
   [BitType.langAudioScript]: {
     since: '1.3.0',
+    title: 'Language Audio Script',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language audio script bit, used to provide scripts for language learning audio files in articles or books',
   },
   [BitType.langVocabulary]: {
     since: '1.3.0',
+    title: 'Language Vocabulary',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language vocabulary bit, used to provide vocabulary lists in language articles or books',
   },
   [BitType.langHomework]: {
     since: '1.3.0',
+    title: 'Language Homework',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language homework bit, used to define homework assignments in language articles or books',
   },
   [BitType.langTeacherNote]: {
     since: '1.3.0',
+    title: 'Language Teacher Note',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language teacher note bit, used to provide notes for teachers in language articles or books',
   },
   [BitType.langTeacherPronunciation]: {
     since: '1.3.0',
+    title: 'Language Teacher Pronunciation',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Language teacher pronunciation bit, used to provide pronunciation guidance for teachers in language articles or books',
   },
   [BitType.list]: {
     since: '1.22.0',
+    title: 'List',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'List bit, used to create lists in articles or books',
   },
   [BitType.standardList]: {
     since: '1.22.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Standard list bit, used to create standard lists in articles or books',
   },
   [BitType.smartStandardList]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardList,
     description:
       'Smart standard list bit, used to create smart standard lists in articles or books',
@@ -2747,45 +3158,59 @@ const BITS: _BitsConfig = {
   },
   [BitType.message]: {
     since: '1.3.0',
+    title: 'Message',
+    bitGroups: [BitGroup.message, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Message bit, used to create messages in articles or books',
   },
   [BitType.newspaperArticle]: {
     since: '1.3.0',
+    title: 'Newspaper Article',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Newspaper article bit, used to define newspaper articles in articles or books',
   },
   [BitType.note]: {
     since: '1.3.0',
+    title: 'Note',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Note bit, used to provide notes in articles or books',
   },
   [BitType.noteAlt]: {
     since: '1.16.0',
+    title: 'Note Alternative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.note,
     description:
       'Alternative note bit, used to provide notes in articles or books with alternative styling',
   },
   [BitType.standardNoteNormative]: {
     since: '1.16.0',
+    title: 'Standard Note (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.note,
     description:
       'Standard normative note bit, used to provide normative notes in articles or books',
   },
   [BitType.standardNoteNonNormative]: {
     since: '1.16.0',
+    title: 'Standard Note (Non Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.note,
     description:
       'Standard non-normative note bit, used to provide non-normative notes in articles or books',
   },
   [BitType.smartStandardNoteNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardNoteNormative,
     description:
       'Smart standard normative note bit, used to provide normative notes in smart standards',
   },
   [BitType.smartStandardNoteNonNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardNoteNonNormative,
     description:
       'Smart standard non-normative note bit, used to provide non-normative notes in smart standards',
@@ -2832,6 +3257,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.noteAi]: {
     since: '1.3.0',
+    title: 'Note AI',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.note,
     description: 'Note AI bit, used to create AI-generated notes in articles or books',
     tags: [
@@ -2849,16 +3276,21 @@ const BITS: _BitsConfig = {
   },
   [BitType.notebookArticle]: {
     since: '1.3.0',
+    title: 'Notebook Article',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Notebook article bit, used to define notebook articles in articles or books',
   },
   [BitType.preparationNote]: {
     since: '1.3.0',
+    title: 'Preparation Note',
+    bitGroups: [BitGroup.preparationNote, BitGroup.quizzes, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Preparation note bit, used to provide preparation notes in articles or books',
   },
   [BitType.printThisBook]: {
     since: '5.4.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Print this book bit, used to create a button that prints the entire book',
     tags: [
@@ -2871,6 +3303,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.printThisChapter]: {
     since: '5.4.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Print this chapter bit, used to create a button that prints the current chapter',
     tags: [
@@ -2889,6 +3322,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.printPageBreak]: {
     since: '5.4.0',
+    bitGroups: [BitGroup.static],
     // Based on `article`, not `separator`: `separator` adds nothing over `article`,
     // and basing on it would inherit the decorative accessibility defaults.
     baseBitType: BitType.article,
@@ -2897,40 +3331,51 @@ const BITS: _BitsConfig = {
   },
   [BitType.releaseNotesSummary]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Release notes summary bit, used to summarize release notes in articles or books',
   },
   [BitType.remark]: {
     since: '1.3.0',
+    title: 'Remark',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Remark bit, used to provide remarks in articles or books',
   },
   [BitType.remarkAlt]: {
     since: '1.16.0',
+    title: 'Remark Alternative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.remark,
     description:
       'Alternative remark bit, used to provide remarks in articles or books with alternative styling',
   },
   [BitType.standardRemarkNormative]: {
     since: '1.16.0',
+    title: 'Standard Remark (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Standard normative remark bit, used to provide normative remarks in articles or books',
   },
   [BitType.standardRemarkNonNormative]: {
     since: '1.16.0',
+    title: 'Standard Remark (Non Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Standard non-normative remark bit, used to provide non-normative remarks in articles or books',
   },
   [BitType.smartStandardRemarkNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardRemarkNormative,
     description:
       'Smart standard normative remark bit, used to provide normative remarks in smart standards',
   },
   [BitType.smartStandardRemarkNonNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardRemarkNonNormative,
     description:
       'Smart standard non-normative remark bit, used to provide non-normative remarks in smart standards',
@@ -2979,12 +3424,16 @@ const BITS: _BitsConfig = {
   },
   [BitType.selfAssessment]: {
     since: '1.3.0',
+    title: 'Self Assessment',
+    bitGroups: [BitGroup.selfAssessment, BitGroup.static, BitGroup.surveys],
     baseBitType: BitType.article,
     description:
       'Self-assessment bit, used to create self-assessment sections in articles or books',
   },
   [BitType.separator]: {
     since: '1.4.15',
+    title: 'Separator',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Separator bit, used to create visual separators in articles or books',
     tags: [
@@ -2996,6 +3445,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.separatorAlt]: {
     since: '1.16.0',
+    title: 'Separator Alternative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.separator,
     description:
       'Alternative separator bit, used to create visual separators in articles or books with alternative styling',
@@ -3008,21 +3459,28 @@ const BITS: _BitsConfig = {
   },
   [BitType.sticker]: {
     since: '1.5.28',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Sticker bit, used to create stickers in articles or books',
   },
   [BitType.sideNote]: {
     since: '1.3.0',
+    title: 'Side Note',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Side note bit, used to provide side notes in articles or books',
   },
   [BitType.summary]: {
     since: '1.3.0',
+    title: 'Summary',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Summary bit, used to provide summaries in articles or books',
   },
   [BitType.summaryAi]: {
     since: '1.3.0',
+    title: 'Summary AI',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.summary,
     description: 'AI-generated summary bit',
     tags: [
@@ -3040,28 +3498,38 @@ const BITS: _BitsConfig = {
   },
   [BitType.videoTranscript]: {
     since: '1.3.0',
+    title: 'Video Transcript',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Video transcript bit, used to provide transcripts for video files in articles or books',
   },
   [BitType.warning]: {
     since: '1.3.0',
+    title: 'Warning',
+    bitGroups: [BitGroup.static, BitGroup.warning],
     baseBitType: BitType.article,
     description: 'Warning bit, used to highlight warnings in articles or books',
   },
   [BitType.warningAlt]: {
     since: '1.16.0',
+    title: 'Warning Alternative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.warning,
     description:
       'Alternative warning bit, used to highlight warnings in articles or books with alternative styling',
   },
   [BitType.workbookArticle]: {
     since: '1.3.0',
+    title: 'Workbook Article',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Workbook article bit, used to define workbook articles in articles or books',
   },
   [BitType.collapsible]: {
     since: '1.21.0',
+    title: 'Collapsible',
+    bitGroups: [BitGroup.static],
     deprecated: '5.37.0',
     baseBitType: BitType.article,
     description: 'Collapsible bit, used to create collapsible sections in articles or books',
@@ -3076,6 +3544,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.sideNoteCollapsible]: {
     since: '1.21.0',
+    title: 'Side Note Collapsible',
     deprecated: '5.37.0',
     baseBitType: BitType.sideNote,
     description:
@@ -3091,6 +3560,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.infoCollapsible]: {
     since: '1.21.0',
+    title: 'Info Collapsible',
     deprecated: '5.37.0',
     baseBitType: BitType.info,
     description:
@@ -3106,6 +3576,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.remarkCollapsible]: {
     since: '1.21.0',
+    title: 'Remark Collapsible',
     deprecated: '5.37.0',
     baseBitType: BitType.remark,
     description: 'Remark collapsible bit, used to create collapsible remarks in articles or books',
@@ -3120,6 +3591,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.warningCollapsible]: {
     since: '1.21.0',
+    title: 'Warning Collapsible',
     deprecated: '5.37.0',
     baseBitType: BitType.warning,
     description:
@@ -3135,6 +3607,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.dangerCollapsible]: {
     since: '1.21.0',
+    title: 'Danger Collapsible',
     deprecated: '5.37.0',
     baseBitType: BitType.danger,
     description:
@@ -3150,6 +3623,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.noteCollapsible]: {
     since: '1.21.0',
+    title: 'Note Collapsible',
     deprecated: '5.37.0',
     baseBitType: BitType.note,
     description: 'Note collapsible bit, used to create collapsible notes in articles or books',
@@ -3164,6 +3638,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.exampleCollapsible]: {
     since: '1.21.0',
+    title: 'Example Collapsible',
     deprecated: '5.37.0',
     baseBitType: BitType.example,
     description:
@@ -3179,6 +3654,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.hintCollapsible]: {
     since: '1.21.0',
+    title: 'Hint Collapsible',
     deprecated: '5.37.0',
     baseBitType: BitType.hint,
     description: 'Hint collapsible bit, used to create collapsible hints in articles or books',
@@ -3193,6 +3669,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.bugCollapsible]: {
     since: '1.21.0',
+    title: 'Bug Collapsible',
     deprecated: '5.37.0',
     baseBitType: BitType.bug,
     description: 'Bug collapsible bit, used to create collapsible bug reports in articles or books',
@@ -3207,6 +3684,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.platformPath]: {
     since: '3.14.1',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Platform path bit, used to define paths in the platform',
     tags: [
@@ -3219,6 +3697,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.appCalculatorLatex]: {
     since: '4.10.0',
+    title: 'Calculator LaTeX',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'A LaTeX calculator bit, used to create a calculator that can interpret LaTeX expressions',
@@ -3232,6 +3712,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.container]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Container bit, used to group bits together in articles or books',
     tags: [
@@ -3246,145 +3727,173 @@ const BITS: _BitsConfig = {
   },
   [BitType.containerWrap]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container wrap bit, used to wrap content in a container',
   },
   [BitType.containerNowrap]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container nowrap bit, used to prevent wrapping of content in a container',
   },
   [BitType.containerNowrapStretch]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description:
       'Container nowrap stretch bit, used to stretch content without wrapping in a container',
   },
   [BitType.containerGroup]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container group bit, used to group multiple containers together',
   },
   [BitType.containerFolder]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container folder bit, used to create folders for organizing bits',
   },
   [BitType.containerCarousel]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container carousel bit, used to create carousels for displaying bits',
   },
   [BitType.containerCards]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container cards bit, used to create card layouts for displaying bits',
   },
   [BitType.containerGrid]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container grid bit, used to create grid layouts for displaying bits',
   },
   [BitType.containerStack]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container stack bit, used to create stacked layouts for displaying bits',
   },
   [BitType.containerSlides]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container slides bit, used to create slide presentations for displaying bits',
   },
   [BitType.containerGallery]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container gallery bit, used to create galleries for displaying bits',
   },
   [BitType.containerScroller]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container scroller bit, used to create scrolling sections for displaying bits',
   },
   [BitType.containerTabs]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container tabs bit, used to create tabbed sections for displaying bits',
   },
   [BitType.containerAccordionTabs]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description:
       'Container accordion tabs bit, used to create accordion-style tabbed sections for displaying bits',
   },
   [BitType.containerFolderAll]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description:
       'Container folder all bit, used to create folders that can contain all types of bits',
   },
   [BitType.containerBits2]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description:
       'Container bits 2 bit, used to create a container for bits with additional features',
   },
   [BitType.containerCookRecipe]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description:
       'Container cook recipe bit, used to create recipe containers for displaying cooking recipes',
   },
   [BitType.containerNewsArticle]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container news article bit, used to create containers for news articles',
   },
   [BitType.containerPreview]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Container preview bit, used to create preview sections for displaying bits',
   },
   [BitType.pageContainer]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.container,
     description: 'Page container bit, used to create containers for pages in articles or books',
   },
   [BitType.pageContainerWrap]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageContainer,
     description: 'Page container wrap bit, used to wrap content in a page container',
   },
   [BitType.pageContainerNowrap]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageContainer,
     description:
       'Page container nowrap bit, used to prevent wrapping of content in a page container',
   },
   [BitType.pageContainerNowrapStretch]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageContainer,
     description:
       'Page container nowrap stretch bit, used to stretch content without wrapping in a page container',
   },
   [BitType.pageContainerFolder]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageContainer,
     description:
       'Page container folder bit, used to create folders for organizing bits in a page container',
   },
   [BitType.pageContainerGroup]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageContainer,
     description: 'Page container group bit, used to group multiple page containers together',
   },
   [BitType.metalevelExplanation]: {
     since: '1.10.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Metalevel explanation bit, used to provide explanations for metalevels in articles or books',
   },
   [BitType.module]: {
     since: '1.5.26',
+    title: 'Module',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Module bit, used to define modules in articles or books',
     tags: [
@@ -3410,6 +3919,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.moduleProduct]: {
     since: '1.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.module,
     description: 'Module product bit, used to define products in modules',
     tags: [
@@ -3424,6 +3934,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.exampleList]: {
     since: '1.4.13',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.example,
     description: 'Example list bit, used to create lists of examples in articles or books',
     cardSet: CardSetConfigKey.exampleBitList,
@@ -3431,6 +3942,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorPage]: {
     since: '1.5.17',
+    title: 'Extractor Page',
+    bitGroups: [BitGroup.extractor, BitGroup.pages],
     baseBitType: BitType.image,
     description: 'Extractor page bit, used to extract pages from images',
   },
@@ -3451,6 +3964,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorPageWithBlocks]: {
     since: '1.5.21',
+    title: 'Extractor Page With Blocks',
+    bitGroups: [BitGroup.extractor],
     baseBitType: BitType.image,
     description: 'Extractor page with blocks bit, used to extract pages with blocks from images',
   },
@@ -3471,6 +3986,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorConfiguration]: {
     since: '1.7.1',
+    title: 'Extractor Configuration',
+    bitGroups: [BitGroup.extractor],
     baseBitType: BitType._standard,
     description: 'Extractor configuration bit, used to configure extractors in articles or books',
 
@@ -3478,6 +3995,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorBlueprintConfiguration]: {
     since: '5.11.0',
+    bitGroups: [BitGroup.extractor, BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Extractor blueprint configuration bit, used to specify extractor blueprint configuration when extracting from blueprints',
@@ -3486,6 +4004,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorImage]: {
     since: '4.3.0',
+    bitGroups: [BitGroup.extractor, BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Extractor images bit, used for images extracted from PDFs',
     tags: [
@@ -3511,6 +4030,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorImageCollapsible]: {
     since: '4.3.0',
+    title: 'Extractor Collapsible Image',
     deprecated: '5.37.0',
     baseBitType: BitType.extractorImage,
     description: 'Collapsible extractor images bit, used for  images extracted from PDFs',
@@ -3525,6 +4045,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorBlueprint]: {
     since: '5.12.0',
+    title: 'Extractor Blueprint',
+    bitGroups: [BitGroup.extractor, BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Extractor blueprint bit, used to provide blueprint information about extractors',
     textFormatDefault: TextFormat.json,
@@ -3543,6 +4065,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorInformation]: {
     since: '3.8.0',
+    title: 'Extractor Information',
+    bitGroups: [BitGroup.extractor],
     baseBitType: BitType._standard,
     description:
       'Extractor information bit, used to provide information about extractors in articles or books',
@@ -3551,6 +4075,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorTheme]: {
     since: '5.7.0',
+    title: 'Theme',
+    bitGroups: [BitGroup.extractor, BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Extractor theme bit, used to store design/theme JSON extracted from documents',
 
@@ -3558,6 +4084,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorReconcile]: {
     since: '5.35.0',
+    bitGroups: [BitGroup.extractor, BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Extractor reconcile bit, used to store PDF-compare reconciliation decisions (config and issues) in JSON',
@@ -3565,12 +4092,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorAiChat]: {
     since: '3.19.0',
+    bitGroups: [BitGroup.extractor, BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Extractor AI chat bit, used to create AI chat interfaces for extractors in articles or books',
   },
   [BitType.extractorBlock]: {
     since: '1.5.16',
+    title: 'Extractor Block',
+    bitGroups: [BitGroup.extractor],
     baseBitType: BitType._standard,
     description: 'Extractor block bit, used to define blocks within extractor pages',
     tags: [
@@ -3640,11 +4170,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorRepeatedText]: {
     since: '1.5.21',
+    title: 'Extractor Repeated Text',
+    bitGroups: [BitGroup.extractor],
     baseBitType: BitType.article,
     description: 'Extractor repeated text bit, used to define repeated text in extractor pages',
   },
   [BitType.extractorRule]: {
     since: '5.17.0',
+    title: 'Extractor Rule',
+    bitGroups: [BitGroup.extractor, BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Extractor rule bit, used to define extraction rules with reference images and instructions',
@@ -3664,6 +4198,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorPageNumber]: {
     since: '1.5.21',
+    title: 'Extractor Page Number',
+    bitGroups: [BitGroup.extractor],
     baseBitType: BitType.article,
     description: 'Extractor page number bit, used to define page numbers in extractor pages',
   },
@@ -3684,6 +4220,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorPageHeader]: {
     since: '1.5.21',
+    title: 'Extractor Page Header',
+    bitGroups: [BitGroup.extractor],
     baseBitType: BitType.article,
     description: 'Extractor page header bit, used to define headers in extractor pages',
   },
@@ -3704,6 +4242,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.extractorPageFooter]: {
     since: '1.5.21',
+    title: 'Extractor Page Footer',
+    bitGroups: [BitGroup.extractor],
     baseBitType: BitType.article,
     description: 'Extractor page footer bit, used to define footers in extractor pages',
   },
@@ -3724,6 +4264,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageOpenBook]: {
     since: '1.5.10',
+    title: 'Page Open Book',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Page open book bit, used to create pages that open books in articles or books',
     tags: [
@@ -3791,6 +4333,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.printBook]: {
     since: '5.5.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Print book bit, used to create pages that open books without author information in articles or books',
@@ -3850,18 +4393,23 @@ const BITS: _BitsConfig = {
   },
   [BitType.openBookChapter]: {
     since: '4.16.0',
+    title: 'Open Chapter',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageOpenBook,
     description:
       'Open book chapter bit, derived from page-open-book, used to create chapter pages that open books',
   },
   [BitType.openBookChapterTeaser]: {
     since: '4.16.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.openBookChapter,
     description:
       'Open book chapter teaser bit, equal to open-book-chapter, used to create teaser chapter pages that open books',
   },
   [BitType.pageOpenBookList]: {
     since: '2.1.0',
+    title: 'Page Open Book List',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Page open book list bit, used to create pages that open lists of books in articles or books',
@@ -3903,6 +4451,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageSubscribe]: {
     since: '1.5.10',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Page subscribe bit, used to create pages that allow users to subscribe to content',
@@ -3927,11 +4476,14 @@ const BITS: _BitsConfig = {
   },
   [BitType.assignmentList]: {
     since: '1.4.13',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.exampleList,
     description: 'Assignment list bit, used to create lists of assignments in articles or books',
   },
   [BitType.pageFooter]: {
     since: '1.4.13',
+    title: 'Page Footer',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'Page footer bit, used to create footers in articles or books',
     tags: [
@@ -3947,6 +4499,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.legend]: {
     since: '3.12.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Legend bit, used to provide legends in articles or books',
 
@@ -3954,18 +4507,23 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardLegend]: {
     since: '3.12.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.legend,
     description:
       'Smart standard legend bit, used to provide smart standard legends in articles or books',
   },
   [BitType.smartStandardLegendNonNormative]: {
     since: '3.12.0',
+    title: 'Smart Standard Legend (Non Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.legend,
     description:
       'Smart standard non-normative legend bit, used to provide non-normative smart standard legends in articles or books',
   },
   [BitType.smartStandardLegendNormative]: {
     since: '3.12.0',
+    title: 'Smart Standard Legend (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.legend,
     description:
       'Smart standard normative legend bit, used to provide normative smart standard legends in articles or books',
@@ -3985,24 +4543,29 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardRemarkLegend]: {
     since: '3.12.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.legend,
     description:
       'Smart standard remark legend bit, used to provide smart standard remarks in legends',
   },
   [BitType.smartStandardRemarkLegendNonNormative]: {
     since: '3.12.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.legend,
     description:
       'Smart standard non-normative remark legend bit, used to provide non-normative smart standard remarks in legends',
   },
   [BitType.smartStandardRemarkLegendNormative]: {
     since: '3.12.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.legend,
     description:
       'Smart standard normative remark legend bit, used to provide normative smart standard remarks in legends',
   },
   [BitType.definitionList]: {
     since: '1.34.0',
+    title: 'Definition List',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Definition list bit, used to create lists of definitions in articles or books',
     tags: [
@@ -4023,6 +4586,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.definitionListCollapsible]: {
     since: '5.25.0',
+    title: 'Collapsible definition list',
     deprecated: '5.37.0',
     baseBitType: BitType.definitionList,
     description:
@@ -4038,18 +4602,22 @@ const BITS: _BitsConfig = {
   },
   [BitType.standardDefinitionListNormative]: {
     since: '5.24.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.definitionList,
     description:
       'Standard normative definition list bit, used to create normative standard definition lists in articles or books',
   },
   [BitType.standardDefinitionListNonNormative]: {
     since: '5.24.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.definitionList,
     description:
       'Standard non-normative definition list bit, used to create non-normative standard definition lists in articles or books',
   },
   [BitType.smartStandardDefinitionListNormative]: {
     since: '5.24.0',
+    title: 'Smart Standard Definition List (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardDefinitionListNormative,
     description:
       'Smart standard normative definition list bit, used to create normative smart standard definition lists in articles or books',
@@ -4065,12 +4633,14 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardDefinitionListNonNormative]: {
     since: '5.24.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardDefinitionListNonNormative,
     description:
       'Smart standard non-normative definition list bit, used to create non-normative smart standard definition lists in articles or books',
   },
   [BitType.metaSearchDefaultTerms]: {
     since: '3.12.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Meta search default terms bit, used to define default search terms in articles',
 
@@ -4078,11 +4648,14 @@ const BITS: _BitsConfig = {
   },
   [BitType.metaSearchDefaultTopics]: {
     since: '3.12.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.metaSearchDefaultTerms,
     description: 'Meta search default topics bit, used to define default search topics in articles',
   },
   [BitType.flashcard]: {
     since: '1.3.0',
+    title: 'Flashcard',
+    bitGroups: [BitGroup.flashcard, BitGroup.quizzes, BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Flashcard bit, used to create flashcards in articles or books',
     quizBit: true,
@@ -4108,6 +4681,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.flashcard1]: {
     since: '1.3.0',
+    title: 'Flashcard 1',
+    bitGroups: [BitGroup.flashcard, BitGroup.quizzes, BitGroup.static],
     baseBitType: BitType.flashcard,
     description: 'Flashcard 1 bit',
     // PLAN-085: use the flashcard1 cardset (sections.default.maxCount=1)
@@ -4117,6 +4692,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.qAndACard]: {
     since: '3.25.0',
+    title: 'Q&A Card',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.flashcard1,
     description: 'Q&A card bit, used to create question and answer cards in articles or books',
     // PLAN-085: q-and-a-card permits multiple cards (some fixtures carry
@@ -4126,6 +4703,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.focusImage]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Focus image bit, used to create images with focus points in articles or books',
     tags: [
@@ -4145,6 +4723,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.highlightText]: {
     since: '1.3.0',
+    title: 'Highlight Text',
+    bitGroups: [BitGroup.highlightText, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description: 'Highlight text bit, used to create highlighted text in articles or books',
     quizBit: true,
@@ -4177,6 +4757,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.image]: {
     since: '1.3.0',
+    title: 'Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Image bit, used to create images in articles or books',
     tags: [
@@ -4200,56 +4782,76 @@ const BITS: _BitsConfig = {
   },
   [BitType.appCreateBitsFromImage]: {
     since: '1.3.0',
+    title: 'Create Bits From Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'App create bits from image bit, used to create bits from images in the app',
   },
   [BitType.appGetScreenshot]: {
     since: '1.3.0',
+    title: 'Get Screenshot',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'App get screenshot bit, used to capture screenshots in the app',
   },
   [BitType.detailsImage]: {
     since: '1.3.0',
+    title: 'Details Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Details image bit, used to create detailed images in articles or books',
   },
   [BitType.figure]: {
     since: '1.3.0',
+    title: 'Figure',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Figure bit, used to create figures in articles or books',
     cardSet: CardSetConfigKey.definitionList,
   },
   [BitType.imageBanner]: {
     since: '1.3.0',
+    title: 'Banner Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Image banner bit, used to create banners in articles or books',
   },
   [BitType.imageFigure]: {
     since: '1.3.0',
+    title: 'Figure Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Image figure bit, used to create figures with images in articles or books',
     cardSet: CardSetConfigKey.definitionList,
   },
   [BitType.imageFigureAlt]: {
     since: '1.16.0',
+    title: 'Figure Alternative Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.imageFigure,
     description:
       'Alternative image figure bit, used to create figures with alternative images in articles or books',
   },
   [BitType.standardImageFigureNormative]: {
     since: '1.16.0',
+    title: 'Standard Figure (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.imageFigure,
     description:
       'Standard normative image figure bit, used to create normative image figures in articles or books',
   },
   [BitType.standardImageFigureNonNormative]: {
     since: '1.16.0',
+    title: 'Standard Figure (Non Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.imageFigure,
     description:
       'Standard non-normative image figure bit, used to create non-normative image figures in articles or books',
   },
   [BitType.smartStandardImageFigureNormative]: {
     since: '1.28.0',
+    title: 'Smart Standard Image/Figure (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardImageFigureNormative,
     description:
       'Smart standard normative image figure bit, used to create smart standard normative image figures in articles or books',
@@ -4264,6 +4866,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardImageFigureNonNormative]: {
     since: '1.28.0',
+    title: 'Smart Standard Figure (Non Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardImageFigureNonNormative,
     description:
       'Smart standard non-normative image figure bit, used to create smart standard non-normative image figures in articles or books',
@@ -4300,11 +4904,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.imageLandscape]: {
     since: '1.3.0',
+    title: 'Landscape Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Image landscape bit, used to create landscape images in articles or books',
   },
   [BitType.imageMood]: {
     since: '1.3.0',
+    title: 'Mood Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Image mood bit, used to create mood images in articles or books',
     tags: [
@@ -4316,16 +4924,22 @@ const BITS: _BitsConfig = {
   },
   [BitType.imagePortrait]: {
     since: '1.3.0',
+    title: 'Portrait Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Image portrait bit, used to create portrait images in articles or books',
   },
   [BitType.imagePrototype]: {
     since: '1.3.0',
+    title: 'Prototype Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Image prototype bit, used to create prototype images in articles or books',
   },
   [BitType.imageSeparator]: {
     since: '1.4.15',
+    title: 'Separator Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Image separator bit, used to create separators in articles or books',
     tags: [
@@ -4343,6 +4957,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.imageSeparatorAlt]: {
     since: '1.16.0',
+    title: 'Separator Alternative Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.imageSeparator,
     description:
       'Alternative image separator bit, used to create alternative separators in articles or books',
@@ -4355,38 +4971,52 @@ const BITS: _BitsConfig = {
   },
   [BitType.imageScreenshot]: {
     since: '1.3.0',
+    title: 'Screenshot',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Image screenshot bit, used to create screenshots in articles or books',
   },
   [BitType.imageStyled]: {
     since: '1.3.0',
+    title: 'Styled Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Image styled bit, used to create styled images in articles or books',
   },
   [BitType.imageSuperWide]: {
     since: '1.3.0',
+    title: 'Super Wide Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Image super wide bit, used to create super wide images in articles or books',
   },
   [BitType.imageZoom]: {
     since: '1.3.0',
+    title: 'Image Zoom',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Image zoom bit, used to create zoomable images in articles or books',
   },
   [BitType.langLifeSkillIcon]: {
     since: '1.3.0',
+    title: 'Language Life Skill Icon',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description:
       'Language life skill icon bit, used to create icons for life skills in articles or books',
   },
   [BitType.lifeSkillSticker]: {
     since: '1.3.0',
+    title: 'Life Skill Sticker',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description:
       'Life skill sticker bit, used to create stickers for life skills in articles or books',
   },
   [BitType.pageBanner]: {
     since: '1.4.3',
+    title: 'Page Banner',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Page banner bit, used to create banners for pages in articles or books',
     tags: [
@@ -4405,17 +5035,22 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageHero]: {
     since: '1.11.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageBanner,
     description: 'Page hero bit, used to create hero sections in articles or books',
   },
   [BitType.screenshot]: {
     since: '1.3.0',
+    title: 'Screenshot',
+    bitGroups: [BitGroup.static],
     deprecated: '1.4.0',
     baseBitType: BitType.image,
     description: 'Screenshot bit, used to create screenshots in articles or books',
   },
   [BitType.tableImage]: {
     since: '1.5.15',
+    title: 'Table Image',
+    bitGroups: [BitGroup.static, BitGroup.tables],
     baseBitType: BitType.tableExtended,
     description: 'Table image bit, used to create images in tables in articles or books',
     tags: [
@@ -4446,102 +5081,124 @@ const BITS: _BitsConfig = {
   },
   [BitType.tableImageAlt]: {
     since: '1.16.0',
+    title: 'Table Image Alt',
+    bitGroups: [BitGroup.static, BitGroup.tables],
     baseBitType: BitType.tableImage,
     description:
       'Alternative table image bit, used to create alternative images in tables in articles or books',
   },
   [BitType.standardTableImageNormative]: {
     since: '1.16.0',
+    title: 'Standard Table (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.tableImage,
     description:
       'Standard normative table image bit, used to create normative images in tables in articles or books',
   },
   [BitType.standardTableImageNonNormative]: {
     since: '1.16.0',
+    title: 'Standard Table (Non Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.tableImage,
     description:
       'Standard non-normative table image bit, used to create non-normative images in tables in articles or books',
   },
   [BitType.standardRemarkTableImageNormative]: {
     since: '1.17.0',
+    title: 'Standard Remark on Table (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.tableImage,
     description:
       'Standard normative remark table image bit, used to create normative remark images in tables in articles or books',
   },
   [BitType.standardRemarkTableImageNonNormative]: {
     since: '1.17.0',
+    title: 'Standard Remark on Table (Non Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.tableImage,
     description:
       'Standard non-normative remark table image bit, used to create non-normative remark images in tables in articles or books',
   },
   [BitType.standardTableExtendedImageNormative]: {
     since: '1.16.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.tableExtendedImage,
     description:
       'Standard normative extended table image bit, used to create normative extended images in tables in articles or books',
   },
   [BitType.standardTableExtendedImageNonNormative]: {
     since: '1.16.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.tableExtendedImage,
     description:
       'Standard non-normative extended table image bit, used to create non-normative extended images in tables in articles or books',
   },
   [BitType.standardRemarkTableExtendedImageNormative]: {
     since: '1.17.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.tableExtendedImage,
     description:
       'Standard normative remark extended table image bit, used to create normative remark extended images in tables in articles or books',
   },
   [BitType.standardRemarkTableExtendedImageNonNormative]: {
     since: '1.17.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.tableExtendedImage,
     description:
       'Standard non-normative remark extended table image bit, used to create non-normative remark extended images in tables in articles or books',
   },
   [BitType.smartStandardTableImageNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardTableImageNormative,
     description:
       'Smart standard normative table image bit, used to create smart standard normative images in tables in articles or books',
   },
   [BitType.smartStandardTableImageNonNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardTableImageNonNormative,
     description:
       'Smart standard non-normative table image bit, used to create smart standard non-normative images in tables in articles or books',
   },
   [BitType.smartStandardRemarkTableImageNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardRemarkTableImageNormative,
     description:
       'Smart standard normative remark table image bit, used to create smart standard normative remark images in tables in articles or books',
   },
   [BitType.smartStandardRemarkTableImageNonNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardRemarkTableImageNonNormative,
     description:
       'Smart standard non-normative remark table image bit, used to create smart standard non-normative remark images in tables in articles or books',
   },
   [BitType.smartStandardTableExtendedImageNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardTableExtendedImageNormative,
     description:
       'Smart standard normative extended table image bit, used to create smart standard normative extended images in tables in articles or books',
   },
   [BitType.smartStandardTableExtendedImageNonNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardTableExtendedImageNonNormative,
     description:
       'Smart standard non-normative extended table image bit, used to create smart standard non-normative extended images in tables in articles or books',
   },
   [BitType.smartStandardRemarkTableExtendedImageNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardRemarkTableExtendedImageNormative,
     description:
       'Smart standard normative remark extended table image bit, used to create smart standard normative remark extended images in tables in articles or books',
   },
   [BitType.smartStandardRemarkTableExtendedImageNonNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardRemarkTableExtendedImageNonNormative,
     description:
       'Smart standard non-normative remark extended table image bit, used to create smart standard non-normative remark extended images in tables in articles or books',
@@ -4668,6 +5325,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.imageLink]: {
     since: '1.3.0',
+    title: 'Image Link',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Image link bit, used to create links with images in articles or books',
     tags: [
@@ -4685,6 +5344,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.imageOnDevice]: {
     since: '1.3.0',
+    title: 'Image On Device',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Image on device bit, used to create images stored on the device in articles or books',
@@ -4707,6 +5368,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.imageResponsive]: {
     since: '1.3.0',
+    title: 'Responsive Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Responsive image bit, used to create responsive images in articles or books',
     tags: [
@@ -4726,6 +5389,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.imagesLogoGrave]: {
     since: '1.5.11',
+    title: 'Logo Grave Image',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Logo grave images bit, used to create logo grave images in articles or books',
     tags: [
@@ -4747,6 +5412,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.prototypeImages]: {
     since: '1.6.1',
+    title: 'Prototype Images',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.imagesLogoGrave,
     description: 'Prototype images bit, used to create prototype images in articles or books',
     tags: [
@@ -4762,6 +5429,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.internalLink]: {
     since: '1.3.0',
+    title: 'Internal Link',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Internal link bit, used to create links to other bits in articles or books',
     tags: [
@@ -4775,6 +5444,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.interview]: {
     since: '1.3.0',
+    title: 'Interview',
+    bitGroups: [BitGroup.interview, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description: 'Interview bit, used to create interviews in articles or books',
     quizBit: true,
@@ -4806,16 +5477,22 @@ const BITS: _BitsConfig = {
   },
   [BitType.interviewInstructionGrouped]: {
     since: '1.3.0',
+    title: 'Interview Instruction Grouped',
+    bitGroups: [BitGroup.interview, BitGroup.quizzes],
     baseBitType: BitType.interview,
     description: 'Grouped interview instruction bit',
   },
   [BitType.botInterview]: {
     since: '1.3.0',
+    title: 'Bot Interview',
+    bitGroups: [BitGroup.bots],
     baseBitType: BitType.interview,
     description: 'Bot interview bit, used to create bot interviews in articles or books',
   },
   [BitType.brandColor]: {
     since: '4.12.0',
+    title: 'Color',
+    bitGroups: [BitGroup.static, BitGroup.whiteLabel],
     baseBitType: BitType._standard,
     description: 'Brand color bit, used to define brand colors',
     tags: [
@@ -4833,6 +5510,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.learningPathBook]: {
     since: '1.3.0',
+    title: 'Learning Path Book',
+    bitGroups: [BitGroup.learningPath],
     baseBitType: BitType._standard,
     description: 'Learning path book bit, used to create learning paths in articles or books',
     tags: [
@@ -4845,64 +5524,82 @@ const BITS: _BitsConfig = {
   },
   [BitType.bookLink]: {
     since: '1.3.0',
+    title: 'Book Link',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathBook,
     description: 'Book link bit, used to create links to books in learning paths',
   },
   [BitType.bookLinkNext]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathBook,
     description: 'Next book link bit, used to create links to the next book in learning paths',
   },
   [BitType.bookLinkPrev]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathBook,
     description:
       'Previous book link bit, used to create links to the previous book in learning paths',
   },
   [BitType.learningPathClassroomEvent]: {
     since: '1.3.0',
+    title: 'Learning Path Classroom Event',
+    bitGroups: [BitGroup.learningPath],
     baseBitType: BitType.learningPathBook,
     description:
       'Learning path classroom event bit, used to create classroom events in learning paths',
   },
   [BitType.learningPathClassroomTraining]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.learningPath],
     baseBitType: BitType.learningPathBook,
     description:
       'Learning path classroom training bit, used to create classroom training in learning paths',
   },
   [BitType.learningPathClosing]: {
     since: '1.3.0',
+    title: 'Learning Path Closing',
+    bitGroups: [BitGroup.learningPath],
     baseBitType: BitType.learningPathBook,
     description: 'Learning path closing bit, used to close learning paths',
   },
   [BitType.learningPathFeedback]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.learningPath],
     baseBitType: BitType.learningPathBook,
     description: 'Learning path feedback bit, used to provide feedback in learning paths',
   },
   [BitType.learningPathLearningGoal]: {
     since: '1.3.0',
+    title: 'Learning Path Learning Goal',
+    bitGroups: [BitGroup.learningPath],
     baseBitType: BitType.learningPathBook,
     description: 'Learning path learning goal bit, used to define learning goals in learning paths',
   },
   [BitType.learningPathLti]: {
     since: '1.3.0',
+    title: 'Learning Path Lti',
+    bitGroups: [BitGroup.learningPath],
     baseBitType: BitType.learningPathBook,
     description: 'Learning path LTI bit, used to integrate LTI tools in learning paths',
   },
   [BitType.learningPathSign]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.learningPath],
     baseBitType: BitType.learningPathBook,
     description: 'Learning path sign bit, used to create signs in learning paths',
   },
   [BitType.learningPathStep]: {
     since: '1.3.0',
+    title: 'Learning Path Step',
+    bitGroups: [BitGroup.learningPath, BitGroup.steps],
     baseBitType: BitType.learningPathBook,
     description: 'Learning path step bit, used to create steps in learning paths',
   },
   [BitType.learningPathBotTraining]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.learningPath],
     baseBitType: BitType.learningPathBook,
     description: 'Learning path bot training bit, used to create bot training in learning paths',
     tags: [
@@ -4915,6 +5612,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.learningPathExternalLink]: {
     since: '1.3.0',
+    title: 'Learning Path External Link',
+    bitGroups: [BitGroup.learningPath],
     baseBitType: BitType.learningPathBook,
     description: 'Learning path external link bit, used to create external links in learning paths',
     tags: [
@@ -4932,6 +5631,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.learningPathVideoCall]: {
     since: '1.3.0',
+    title: 'Learning Path Video Call',
+    bitGroups: [BitGroup.learningPath],
     baseBitType: BitType.learningPathBook,
     description: 'Learning path video call bit, used to create video calls in learning paths',
     tags: [
@@ -4944,6 +5645,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.leLearningObjectives]: {
     since: '1.25.0',
+    title: 'Learning Objectives',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathLearningGoal,
     description: 'Learning objectives bit, used to define learning objectives in learning paths',
     tags: [
@@ -4956,6 +5659,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.leVideoCall]: {
     since: '1.25.0',
+    title: 'Video Call',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathVideoCall,
     description: 'Video call bit, used to create video calls in learning paths',
     tags: [
@@ -4968,6 +5673,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.leClassroomEvent]: {
     since: '1.25.0',
+    title: 'Classroom Event',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathClassroomEvent,
     description: 'Classroom event bit, used to create classroom events in learning paths',
     tags: [
@@ -4980,11 +5687,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.leMultiDayEvent]: {
     since: '3.32.0',
+    title: 'Multi-day Event',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.leClassroomEvent,
     description: 'Multi-day event bit, used to create multi-day events in learning paths',
   },
   [BitType.leCompletion]: {
     since: '1.25.0',
+    title: 'Completion',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathClosing,
     description: 'Completion bit, used to mark the completion of learning paths',
     tags: [
@@ -4997,6 +5708,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.leExternalLink]: {
     since: '1.25.0',
+    title: 'External Link',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathExternalLink,
     description: 'External link bit, used to create external links in learning paths',
     tags: [
@@ -5009,6 +5722,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.leReadBook]: {
     since: '1.25.0',
+    title: 'Read Book',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathBook,
     description: 'Read book bit, used to create reading tasks in learning paths',
     tags: [
@@ -5021,6 +5736,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.leLearningStep]: {
     since: '1.25.0',
+    title: 'Learning Step',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathStep,
     description: 'Learning step bit, used to create steps in learning paths',
     tags: [
@@ -5033,6 +5750,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.lePreparationTask]: {
     since: '1.26.0',
+    title: 'Preparation Task',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathBook,
     description: 'Preparation task bit, used to create preparation tasks in learning paths',
     tags: [
@@ -5045,36 +5764,43 @@ const BITS: _BitsConfig = {
   },
   [BitType.leRead]: {
     since: '1.27.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.lePreparationTask,
     description: 'Read task bit, used to create reading tasks in learning paths',
   },
   [BitType.leTask]: {
     since: '1.27.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.lePreparationTask,
     description: 'Task bit, used to create tasks in learning paths',
   },
   [BitType.leTodo]: {
     since: '1.27.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.lePreparationTask,
     description: 'Todo bit, used to create todo tasks in learning paths',
   },
   [BitType.leFollowUpTask]: {
     since: '1.27.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.lePreparationTask,
     description: 'Follow-up task bit, used to create follow-up tasks in learning paths',
   },
   [BitType.leFinishingTask]: {
     since: '1.27.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.lePreparationTask,
     description: 'Finishing task bit, used to create finishing tasks in learning paths',
   },
   [BitType.leAssignment]: {
     since: '1.27.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.lePreparationTask,
     description: 'Assignment bit, used to create assignments in learning paths',
   },
   [BitType.leWatchVideoEmbed]: {
     since: '1.27.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathBook,
     description: 'Watch video embed bit, used to embed videos in learning paths',
     tags: [
@@ -5097,6 +5823,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.leListenAudioEmbed]: {
     since: '1.27.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.learningPathBook,
     description: 'Listen audio embed bit, used to embed audio in learning paths',
     tags: [
@@ -5120,6 +5847,7 @@ const BITS: _BitsConfig = {
 
   [BitType.listItem]: {
     since: '1.22.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description: 'List item bit, used to create list items in articles or books',
     tags: [
@@ -5134,11 +5862,13 @@ const BITS: _BitsConfig = {
   },
   [BitType.standardListItem]: {
     since: '1.22.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.listItem,
     description: 'Standard list item bit, used to create standard list items in articles or books',
   },
   [BitType.smartStandardListItem]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardListItem,
     description:
       'Smart standard list item bit, used to create smart standard list items in articles or books',
@@ -5172,6 +5902,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.mark]: {
     since: '1.3.0',
+    title: 'Mark',
+    bitGroups: [BitGroup.mark, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description: 'Mark bit, used to create marks in articles or books',
     quizBit: true,
@@ -5204,6 +5936,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.match]: {
     since: '1.3.0',
+    title: 'Match',
+    bitGroups: [BitGroup.match, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description: 'Match bit, used to create matching pairs in articles or books',
     quizBit: true,
@@ -5242,30 +5976,39 @@ const BITS: _BitsConfig = {
   },
   [BitType.matchAll]: {
     since: '1.3.0',
+    title: 'Match All',
+    bitGroups: [BitGroup.match, BitGroup.quizzes],
     baseBitType: BitType.match,
     description:
       'Match all bit, used to create matching pairs with all options in articles or books',
   },
   [BitType.matchReverse]: {
     since: '1.3.0',
+    title: 'Match Reverse',
+    bitGroups: [BitGroup.match, BitGroup.quizzes],
     baseBitType: BitType.match,
     description:
       'Match reverse bit, used to create matching pairs with reversed options in articles or books',
   },
   [BitType.matchAllReverse]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.match, BitGroup.quizzes],
     baseBitType: BitType.match,
     description:
       'Match all reverse bit, used to create matching pairs with all options and reversed in articles or books',
   },
   [BitType.matchSolutionGrouped]: {
     since: '1.3.0',
+    title: 'Match Solution Grouped',
+    bitGroups: [BitGroup.match, BitGroup.quizzes],
     baseBitType: BitType.match,
     description:
       'Grouped match solution bit, used to create grouped matching solutions in articles or books',
   },
   [BitType.matchMatrix]: {
     since: '1.3.0',
+    title: 'Match Matrix',
+    bitGroups: [BitGroup.match, BitGroup.quizzes],
     baseBitType: BitType.match,
     description:
       'Match matrix bit, used to create matching pairs in a matrix format in articles or books',
@@ -5273,12 +6016,16 @@ const BITS: _BitsConfig = {
   },
   [BitType.matchAudio]: {
     since: '1.3.0',
+    title: 'Match Audio',
+    bitGroups: [BitGroup.match, BitGroup.quizzes],
     baseBitType: BitType.match,
     description: 'Match audio bit, used to create matching pairs with audio in articles or books',
     cardSet: CardSetConfigKey.matchAudioPairs,
   },
   [BitType.matchPicture]: {
     since: '1.3.0',
+    title: 'Match Picture',
+    bitGroups: [BitGroup.match, BitGroup.quizzes],
     baseBitType: BitType.match,
     description:
       'Match picture bit, used to create matching pairs with pictures in articles or books',
@@ -5286,6 +6033,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.feedback]: {
     since: '3.13.0',
+    title: 'Feedback',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Feedback bit, used to provide feedback in articles or books',
     tags: [
@@ -5300,21 +6049,28 @@ const BITS: _BitsConfig = {
   },
   [BitType.learningDocumentationFeedback]: {
     since: '3.13.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.feedback,
     description: 'Feedback for learning documentation',
   },
   [BitType.handInFeedbackExpert]: {
     since: '3.30.0',
+    title: 'Expert Feedback',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.feedback,
     description: 'Feedback for expert hand-in',
   },
   [BitType.handInFeedbackSelf]: {
     since: '3.30.0',
+    title: 'Hand-In Feedback (Self)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.feedback,
     description: 'Self-feedback for hand-in',
   },
   [BitType.multipleChoice1]: {
     since: '1.3.0',
+    title: 'Multiple Choice 1',
+    bitGroups: [BitGroup.multipleChoice, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description:
       'Multiple choice 1 bit, used to create single-choice questions in articles or books',
@@ -5344,12 +6100,16 @@ const BITS: _BitsConfig = {
   },
   [BitType.coachSelfReflectionMultipleChoice1]: {
     since: '1.3.0',
+    title: 'Coach Self Reflection Multiple Choice 1',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.multipleChoice1,
     description:
       'Coach self-reflection multiple choice 1 bit, used for self-reflection in coaching',
   },
   [BitType.multipleChoice]: {
     since: '1.3.0',
+    title: 'Multiple Choice',
+    bitGroups: [BitGroup.multipleChoice, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description:
       'Multiple choice bit, used to create multiple-choice questions in articles or books',
@@ -5380,11 +6140,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.coachSelfReflectionMultipleChoice]: {
     since: '1.3.0',
+    title: 'Coach Self Reflection Multiple Choice',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.multipleChoice,
     description: 'Coach self-reflection multiple choice bit, used for self-reflection in coaching',
   },
   [BitType.multipleChoiceText]: {
     since: '1.3.0',
+    title: 'Multiple Choice Text',
+    bitGroups: [BitGroup.multipleChoice, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description:
       'Multiple choice text bit, used to create multiple-choice questions with text in articles or books',
@@ -5414,18 +6178,24 @@ const BITS: _BitsConfig = {
   },
   [BitType.coachCallToActionMultipleChoiceText]: {
     since: '1.3.0',
+    title: 'Coach Call To Action Multiple Choice Text',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.multipleChoiceText,
     description:
       'Coach call to action multiple choice text bit, used for self-reflection in coaching',
   },
   [BitType.coachSelfReflectionMultipleChoiceText]: {
     since: '1.3.0',
+    title: 'Coach Self Reflection Multiple Choice Text',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.multipleChoiceText,
     description:
       'Coach self-reflection multiple choice text bit, used for self-reflection in coaching',
   },
   [BitType.multipleResponse1]: {
     since: '1.3.0',
+    title: 'Multiple Response 1',
+    bitGroups: [BitGroup.multipleResponse, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description:
       'Multiple response 1 bit, used to create multiple-response questions in articles or books',
@@ -5455,12 +6225,16 @@ const BITS: _BitsConfig = {
   },
   [BitType.coachSelfReflectionMultipleResponse1]: {
     since: '1.3.0',
+    title: 'Coach Self Reflection Multiple Response 1',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.multipleResponse1,
     description:
       'Coach self-reflection multiple response 1 bit, used for self-reflection in coaching',
   },
   [BitType.multipleResponse]: {
     since: '1.3.0',
+    title: 'Multiple Response',
+    bitGroups: [BitGroup.multipleResponse, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description:
       'Multiple response bit, used to create multiple-response questions in articles or books',
@@ -5491,12 +6265,16 @@ const BITS: _BitsConfig = {
   },
   [BitType.coachSelfReflectionMultipleResponse]: {
     since: '1.3.0',
+    title: 'Coach Self Reflection Multiple Response',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.multipleResponse,
     description:
       'Coach self-reflection multiple response bit, used for self-reflection in coaching',
   },
   [BitType.page]: {
     since: '1.3.0',
+    title: 'Page',
+    bitGroups: [BitGroup.pages, BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Page bit, used to create pages in articles or books',
     tags: [
@@ -5530,16 +6308,21 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageCoverImage]: {
     since: '1.22.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.page,
     description: 'Page cover image bit, used to create cover images for pages',
   },
   [BitType.advertisingAdvertorialPage]: {
     since: '4.5.0',
+    title: 'Advertorial',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.page,
     description: 'Advertorial Page bit, used to create advertorial pages',
   },
   [BitType.pageBuyButton]: {
     since: '1.4.3',
+    title: 'Page Buy Button',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Page buy button bit, used to create buy buttons on pages',
     tags: [
@@ -5562,16 +6345,21 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageBuyButtonAlt]: {
     since: '1.31.0',
+    title: 'Page Buy Button Alternative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageBuyButton,
     description: 'Alternative page buy button bit, used to create alternative buy buttons on pages',
   },
   [BitType.pageBuyButtonPromotion]: {
     since: '1.5.11',
+    title: 'Page Buy Button Promotion',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageBuyButton,
     description: 'Page buy button for promotions, used to create buy buttons on promotional pages',
   },
   [BitType.pageSubpage]: {
     since: '1.6.6',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Page subpage bit, used to create subpages in articles or books',
     tags: [
@@ -5589,41 +6377,49 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageShopInShop]: {
     since: '1.6.6',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageSubpage,
     description: 'Page shop-in-shop bit, used to create shop-in-shop pages in articles or books',
   },
   [BitType.pageCategory]: {
     since: '1.6.6',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageSubpage,
     description: 'Page category bit, used to create category pages in articles or books',
   },
   [BitType.pageAcademy]: {
     since: '1.6.6',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageSubpage,
     description: 'Page academy bit, used to create academy pages in articles or books',
   },
   [BitType.pagePromotion]: {
     since: '1.6.6',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageSubpage,
     description: 'Page promotion bit, used to create promotional pages in articles or books',
   },
   [BitType.pageSpecial]: {
     since: '1.6.6',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.pageSubpage,
     description: 'Page special bit, used to create special pages in articles or books',
   },
   [BitType.pageEnd]: {
     since: '5.33.0',
+    bitGroups: [BitGroup.pages, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Page end bit, used to mark the end of a page section in articles or books',
   },
   [BitType.pageStart]: {
     since: '5.33.0',
+    bitGroups: [BitGroup.pages, BitGroup.static],
     baseBitType: BitType.article,
     description: 'Page start bit, used to mark the start of a page section in articles or books',
   },
   [BitType.pagePerson]: {
     since: '1.5.16',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Page person bit, used to create person pages in articles or books',
     tags: [
@@ -5645,6 +6441,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageProduct]: {
     since: '1.4.17',
+    title: 'Page Product',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Page product bit, used to create product pages in articles or books',
     tags: [
@@ -5663,6 +6461,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageProductList]: {
     since: '1.4.17',
+    title: 'Page Product List',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Page product list bit, used to create product lists in articles or books',
     tags: [
@@ -5688,6 +6488,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageProductVideo]: {
     since: '1.4.17',
+    title: 'Page Product Video',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Page product video bit, used to create product video pages in articles or books',
     tags: [
@@ -5706,6 +6508,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageProductVideoList]: {
     since: '1.4.17',
+    title: 'Page Product Video List',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Page product video list bit, used to create product video lists in articles or books',
@@ -5733,6 +6537,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.pageSectionFolder]: {
     since: '1.4.17',
+    title: 'Page Section Folder',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Page section folder bit, used to create section folders in articles or books',
     tags: [
@@ -5751,11 +6557,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.photo]: {
     since: '1.3.0',
+    title: 'Photo',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.image,
     description: 'Photo bit, used to create photo bits in articles or books',
   },
   [BitType.platform]: {
     since: '4.12.0',
+    title: 'Platform Information',
+    bitGroups: [BitGroup.static, BitGroup.whiteLabel],
     baseBitType: BitType._standard,
     description: 'Platform bit, used to define platform properties',
     tags: [
@@ -5785,6 +6595,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.platformBrandTarget]: {
     since: '4.15.0',
+    title: 'Target Mode',
+    bitGroups: [BitGroup.static, BitGroup.whiteLabel],
     baseBitType: BitType._standard,
     description: 'Platform brand target bit, used to define the brand target for publishing',
     tags: [
@@ -5798,6 +6610,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.platformHeader]: {
     since: '4.12.0',
+    title: 'Header Styling',
+    bitGroups: [BitGroup.static, BitGroup.whiteLabel],
     baseBitType: BitType._standard,
     description: 'Platform header bit, used to define platform header properties',
     tags: [
@@ -5828,6 +6642,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.platformMain]: {
     since: '4.12.0',
+    title: 'Main Styling',
+    bitGroups: [BitGroup.static, BitGroup.whiteLabel],
     baseBitType: BitType._standard,
     description: 'Platform main bit, used to define platform main properties',
     tags: [
@@ -5839,6 +6655,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.platformMainButton]: {
     since: '4.12.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Platform main button bit, used to define platform main button properties',
     tags: [
@@ -5850,6 +6667,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.platformMainInput]: {
     since: '4.12.0',
+    title: 'Main Input Styling',
+    bitGroups: [BitGroup.static, BitGroup.whiteLabel],
     baseBitType: BitType._standard,
     description: 'Platform main input bit, used to define platform main input properties',
     tags: [
@@ -5861,6 +6680,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.platformSection]: {
     since: '4.12.0',
+    title: 'Sections Styling',
+    bitGroups: [BitGroup.static, BitGroup.whiteLabel],
     baseBitType: BitType._standard,
     description: 'Platform section bit, used to define platform section properties',
     tags: [
@@ -5872,6 +6693,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.platformSectionButton]: {
     since: '4.12.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Platform section button bit, used to define platform section button properties',
     tags: [
@@ -5883,6 +6705,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.platformSectionChat]: {
     since: '4.12.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Platform section chat bit, used to define platform section chat properties',
     tags: [
@@ -5906,6 +6729,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.platformSectionHeader]: {
     since: '4.12.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Platform section header bit, used to define platform section header properties',
     tags: [
@@ -5917,6 +6741,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.platformSectionInput]: {
     since: '4.12.0',
+    title: 'Section Input Styling',
+    bitGroups: [BitGroup.static, BitGroup.whiteLabel],
     baseBitType: BitType._standard,
     description: 'Platform section input bit, used to define platform section input properties',
     tags: [
@@ -5928,6 +6754,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.platformSystemIcon]: {
     since: '4.12.0',
+    title: 'System Icon Styling',
+    bitGroups: [BitGroup.static, BitGroup.whiteLabel],
     baseBitType: BitType._standard,
     description: 'Platform system icon bit, used to define platform system icon properties',
     tags: [
@@ -5939,6 +6767,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.quote]: {
     since: '1.3.0',
+    title: 'Quote',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Quote bit, used to create quotes in articles or books',
     tags: [
@@ -5951,16 +6781,22 @@ const BITS: _BitsConfig = {
   },
   [BitType.rating]: {
     since: '1.3.0',
+    title: 'Rating',
+    bitGroups: [BitGroup.rating, BitGroup.surveys],
     baseBitType: BitType._standard,
     description: 'Rating bit, used to create rating bits in articles or books',
   },
   [BitType.coachSelfReflectionRating]: {
     since: '1.3.0',
+    title: 'Coach Self Reflection Rating',
+    bitGroups: [BitGroup.rating, BitGroup.surveys],
     baseBitType: BitType.rating,
     description: 'Coach self-reflection rating bit, used for self-reflection in coaching',
   },
   [BitType.releaseNote]: {
     since: '1.3.0',
+    title: 'Release Note',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Release note bit, used to create release notes in articles or books',
     tags: [
@@ -5984,6 +6820,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.reviewNote]: {
     since: '1.3.0',
+    title: 'Review Note',
+    bitGroups: [BitGroup.reviews, BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Review note bit, used to create review notes in articles or books',
     tags: [
@@ -6028,48 +6866,63 @@ const BITS: _BitsConfig = {
   },
   [BitType.reviewAuthorNote]: {
     since: '1.3.0',
+    title: 'Review Author Note',
+    bitGroups: [BitGroup.reviews, BitGroup.static],
     baseBitType: BitType.reviewNote,
     description: 'Author review note bit, used to create author notes in reviews',
   },
   [BitType.reviewCustomerNote]: {
     //
     since: '3.5.0',
+    title: 'Review Customer Note',
+    bitGroups: [BitGroup.reviews, BitGroup.static],
     baseBitType: BitType.reviewNote,
     description: 'Customer review note bit, used to create customer notes in reviews',
   },
   [BitType.reviewError]: {
     since: '5.8.0',
+    bitGroups: [BitGroup.reviewErrors, BitGroup.reviews, BitGroup.static],
     baseBitType: BitType.reviewNote,
     description: 'Review error note bit, used to create error notes in reviews',
   },
   [BitType.reviewErrorAi]: {
     since: '5.8.0',
+    bitGroups: [BitGroup.reviewErrors, BitGroup.reviews, BitGroup.static],
     baseBitType: BitType.reviewNote,
     description: 'Review error AI note bit, used to create AI error notes in reviews',
   },
   [BitType.reviewErrorTranslation]: {
     since: '5.8.0',
+    bitGroups: [BitGroup.reviewErrors, BitGroup.reviews, BitGroup.static],
     baseBitType: BitType.reviewNote,
     description:
       'Review error translation note bit, used to create translation error notes in reviews',
   },
   [BitType.reviewReviewerNote]: {
     since: '1.3.0',
+    title: 'Review Reviewer Note',
+    bitGroups: [BitGroup.reviews, BitGroup.static],
     baseBitType: BitType.reviewNote,
     description: 'Reviewer review note bit, used to create reviewer notes in reviews',
   },
   [BitType.reviewRequestForReviewNote]: {
     since: '1.3.0',
+    title: 'Review Request For Review Note',
+    bitGroups: [BitGroup.reviewErrors, BitGroup.reviews],
     baseBitType: BitType.reviewNote,
     description: 'Request for review note bit, used to create notes requesting reviews',
   },
   [BitType.reviewApprovedNote]: {
     since: '1.3.0',
+    title: 'Review Approved Note',
+    bitGroups: [BitGroup.reviews, BitGroup.static],
     baseBitType: BitType.reviewNote,
     description: 'Approved review note bit, used to create notes for approved reviews',
   },
   [BitType.sampleSolution]: {
     since: '1.3.0',
+    title: 'Sample Solution',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Sample solution bit, used to create sample solutions in articles or books',
     tags: [
@@ -6092,6 +6945,8 @@ const BITS: _BitsConfig = {
 
   [BitType.sequence]: {
     since: '1.3.0',
+    title: 'Sequence',
+    bitGroups: [BitGroup.quizzes, BitGroup.sequence],
     baseBitType: BitType._standard,
     description: 'Sequence bit, used to create sequences in articles or books',
     quizBit: true,
@@ -6120,6 +6975,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.stillImageFilm]: {
     since: '1.3.0',
+    title: 'Still image film',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Still image film bit, used to create still image films in articles or books',
     tags: [
@@ -6139,6 +6996,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.stillImageFilmEmbed]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Still image film embed bit, used to embed still image films in articles or books',
     tags: [
@@ -6158,6 +7016,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.stillImageFilmLink]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Still image film link bit, used to create still image film links in articles or books',
@@ -6178,16 +7037,22 @@ const BITS: _BitsConfig = {
   },
   [BitType.surveyAnonymous]: {
     since: '1.3.0',
+    title: 'Survey Anonymous',
+    bitGroups: [BitGroup.surveyAnonymous, BitGroup.surveys],
     baseBitType: BitType._standard,
     description: 'Anonymous survey bit, used to create anonymous surveys in articles or books',
   },
   [BitType.survey]: {
     since: '1.3.0',
+    title: 'Survey',
+    bitGroups: [BitGroup.survey, BitGroup.surveys],
     baseBitType: BitType._standard,
     description: 'Survey bit, used to create surveys in articles or books',
   },
   [BitType.surveyMatrix]: {
     since: '1.6.2',
+    title: 'Survey Matrix',
+    bitGroups: [BitGroup.survey, BitGroup.surveys],
     baseBitType: BitType.image,
     description: 'Survey matrix bit, used to create survey matrices in articles or books',
     tags: [
@@ -6216,12 +7081,16 @@ const BITS: _BitsConfig = {
   },
   [BitType.surveyMatrixMe]: {
     since: '1.6.2',
+    title: 'Survey Matrix Me',
+    bitGroups: [BitGroup.survey, BitGroup.surveys],
     baseBitType: BitType.surveyMatrix,
     description:
       'Survey matrix me bit, used to create personal survey matrices in articles or books',
   },
   [BitType.surveyRating]: {
     since: '1.6.0',
+    title: 'Survey Rating',
+    bitGroups: [BitGroup.survey, BitGroup.surveys],
     baseBitType: BitType._standard,
     description: 'Survey rating bit, used to create rating surveys in articles or books',
     tags: [
@@ -6270,17 +7139,23 @@ const BITS: _BitsConfig = {
   },
   [BitType.surveyRatingOnce]: {
     since: '1.6.0',
+    title: 'Survey Rating Once',
+    bitGroups: [BitGroup.survey, BitGroup.surveys],
     baseBitType: BitType.surveyRating,
     description:
       'Survey rating once bit, used to create one-time rating surveys in articles or books',
   },
   [BitType.surveyRatingDisplay]: {
     since: '1.6.0',
+    title: 'Survey Rating Display',
+    bitGroups: [BitGroup.survey, BitGroup.surveys],
     baseBitType: BitType.surveyRating,
     description: 'Survey rating display bit, used to display rating surveys in articles or books',
   },
   [BitType.scorm]: {
     since: '1.5.11',
+    title: 'Scorm',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'SCORM bit, used to embed SCORM content in articles or books',
     tags: [
@@ -6298,6 +7173,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.pronunciationTable]: {
     since: '3.1.0',
+    title: 'Pronunciation Table',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Pronunciation table bit, used to create pronunciation tables in articles or books',
@@ -6306,6 +7183,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.table]: {
     since: '1.5.19',
+    title: 'Table',
+    bitGroups: [BitGroup.static, BitGroup.tables],
     baseBitType: BitType._standard,
     description: 'Table bit, used to create tables in articles or books',
     tags: [
@@ -6397,12 +7276,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.tableExtended]: {
     since: '4.14.0',
+    title: 'Table',
+    bitGroups: [BitGroup.tables],
     baseBitType: BitType.table,
     description: 'Extended table bit, used to create complex tables with all HTML table features',
     cardSet: CardSetConfigKey.tableExtended,
   },
   [BitType.tableExtendedImage]: {
     since: '5.13.0',
+    bitGroups: [BitGroup.static, BitGroup.tables],
     baseBitType: BitType.tableExtended,
     description:
       'Extended table image bit, used to create complex tables with images and all HTML table features',
@@ -6434,83 +7316,104 @@ const BITS: _BitsConfig = {
   },
   [BitType.tableAlt]: {
     since: '1.16.0',
+    title: 'Table Alternative',
+    bitGroups: [BitGroup.static, BitGroup.tables],
     baseBitType: BitType.table,
     description: 'Alternative table bit, used to create alternative tables in articles or books',
   },
   [BitType.standardTableNormative]: {
     since: '1.16.0',
+    title: 'Standard Table (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.table,
     description:
       'Standard normative table bit, used to create standard normative tables in articles or books',
   },
   [BitType.standardTableNonNormative]: {
     since: '1.16.0',
+    title: 'Standard Table (Non Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.table,
     description:
       'Standard non-normative table bit, used to create standard non-normative tables in articles or books',
   },
   [BitType.standardRemarkTableNormative]: {
     since: '1.17.0',
+    title: 'Standard Remark on Table (Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.table,
     description:
       'Standard normative remark table bit, used to create standard normative remark tables in articles or books',
   },
   [BitType.standardRemarkTableNonNormative]: {
     since: '1.17.0',
+    title: 'Standard Remark on Table (Non Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.table,
     description:
       'Standard non-normative remark table bit, used to create standard non-normative remark tables in articles or books',
   },
   [BitType.standardTableExtendedNormative]: {
     since: '1.16.0',
+    title: 'Standard, Extended, Normative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.tableExtended,
     description:
       'Standard normative extended table bit, used to create standard normative extended tables in articles or books',
   },
   [BitType.standardTableExtendedNonNormative]: {
     since: '1.16.0',
+    title: 'Standard Table (Extended Non-Normative)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.tableExtended,
     description:
       'Standard non-normative extended table bit, used to create standard non-normative extended tables in articles or books',
   },
   [BitType.standardRemarkTableExtendedNormative]: {
     since: '1.17.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.tableExtended,
     description:
       'Standard normative remark extended table bit, used to create standard normative remark extended tables in articles or books',
   },
   [BitType.standardRemarkTableExtendedNonNormative]: {
     since: '1.17.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.tableExtended,
     description:
       'Standard non-normative remark extended table bit, used to create standard non-normative remark extended tables in articles or books',
   },
   [BitType.smartStandardTableNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardTableNormative,
     description:
       'Smart standard normative table bit, used to create smart standard normative tables in articles or books',
   },
   [BitType.smartStandardTableNonNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardTableNonNormative,
     description:
       'Smart standard non-normative table bit, used to create smart standard non-normative tables in articles or books',
   },
   [BitType.smartStandardRemarkTableNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardRemarkTableNormative,
     description:
       'Smart standard normative remark table bit, used to create smart standard normative remark tables in articles or books',
   },
   [BitType.smartStandardRemarkTableNonNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardRemarkTableNonNormative,
     description:
       'Smart standard non-normative remark table bit, used to create smart standard non-normative remark tables in articles or books',
   },
   [BitType.smartStandardTableExtendedNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardTableExtendedNormative,
     description:
       'Smart standard normative extended table bit, used to create smart standard normative extended tables in articles or books',
@@ -6526,18 +7429,21 @@ const BITS: _BitsConfig = {
   },
   [BitType.smartStandardTableExtendedNonNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardTableExtendedNonNormative,
     description:
       'Smart standard non-normative extended table bit, used to create smart standard non-normative extended tables in articles or books',
   },
   [BitType.smartStandardRemarkTableExtendedNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardRemarkTableExtendedNormative,
     description:
       'Smart standard normative remark extended table bit, used to create smart standard normative remark extended tables in articles or books',
   },
   [BitType.smartStandardRemarkTableExtendedNonNormative]: {
     since: '1.28.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.standardRemarkTableExtendedNonNormative,
     description:
       'Smart standard non-normative remark extended table bit, used to create smart standard non-normative remark extended tables in articles or books',
@@ -6664,16 +7570,20 @@ const BITS: _BitsConfig = {
   },
   [BitType.parameters]: {
     since: '1.18.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.table,
     description: 'Parameters bit, used to create parameter tables in articles or books',
   },
   [BitType.toc]: {
     since: '1.3.0',
+    title: 'Toc',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Table of contents bit, used to create a table of contents in articles or books',
   },
   [BitType.tocChapter]: {
     since: '1.5.5',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.toc,
     description: 'Table of contents chapter bit, used to create chapters in the table of contents',
     tags: [
@@ -6687,6 +7597,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.tocInline]: {
     since: '3.24.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.toc,
     description:
       'Inline table of contents bit, used to create inline tables of contents in articles or books',
@@ -6701,6 +7612,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.tocResource]: {
     since: '3.31.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.toc,
     description:
       'Table of contents resource bit, used to create resources in the table of contents',
@@ -6721,6 +7633,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.tocContent]: {
     since: '3.31.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.toc,
     description:
       'Table of contents content bit, used to create content sections in the table of contents',
@@ -6741,127 +7654,165 @@ const BITS: _BitsConfig = {
   },
   [BitType.anchor]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Anchor bit, used to create anchors in articles or books',
   },
   [BitType.bitBookEnding]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Bit book ending bit, used to create endings in articles or books',
   },
   [BitType.bitBookSummary]: {
     since: '1.3.0',
+    title: 'Book Summary',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Bit book summary bit, used to create summaries in articles or books',
   },
   [BitType.botActionAnnounce]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.botAction],
     baseBitType: BitType._standard,
     description: 'Bot action announce bit, used to create announcements in articles or books',
   },
   [BitType.botActionRatingNumber]: {
     since: '1.3.0',
+    title: 'Bot Rating Number',
+    bitGroups: [BitGroup.bots],
     baseBitType: BitType._standard,
     description:
       'Bot action rating number bit, used to create rating number actions in articles or books',
   },
   [BitType.botActionRemind]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.botAction],
     baseBitType: BitType._standard,
     description: 'Bot action remind bit, used to create reminders in articles or books',
   },
   [BitType.botActionSave]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.botAction],
     baseBitType: BitType._standard,
     description: 'Bot action save bit, used to create save actions in articles or books',
   },
   [BitType.botActionTrueFalse]: {
     since: '1.3.0',
+    title: 'Bot Action True False',
+    bitGroups: [BitGroup.botAction, BitGroup.bots],
     baseBitType: BitType._standard,
     description:
       'Bot action true/false bit, used to create true/false actions in articles or books',
   },
   [BitType.chapterSubjectMatter]: {
     since: '1.3.0',
+    title: 'Chapter Subject Matter',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Chapter subject matter bit, used to create subject matter chapters in articles or books',
   },
   [BitType.chat]: {
     since: '1.3.0',
+    title: 'Chat',
+    bitGroups: [BitGroup.chat, BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Chat bit, used to create chat sections in articles or books',
   },
   [BitType.conclusion]: {
     since: '1.3.0',
+    title: 'Conclusion',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Conclusion bit, used to create conclusions in articles or books',
   },
   [BitType.conclusionAlt]: {
     since: '1.16.0',
+    title: 'Conclusion Altenrative',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.conclusion,
     description:
       'Alternative conclusion bit, used to create alternative conclusions in articles or books',
   },
   [BitType.documentUpload]: {
     since: '1.3.0',
+    title: 'Document Upload',
+    bitGroups: [BitGroup.documentUpload, BitGroup.quizzes],
     baseBitType: BitType._standard,
     description:
       'Document upload bit, used to create document upload sections in articles or books',
   },
   [BitType.footNote]: {
     since: '1.3.0',
+    title: 'Foot Note',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Footnote bit, used to create footnotes in articles or books',
   },
   [BitType.formFreeText]: {
     since: '5.3.0',
+    bitGroups: [BitGroup.interview, BitGroup.quizzes],
     baseBitType: BitType.interview,
     description: 'Form free text bit, used to create free text forms in articles or books',
   },
   [BitType.groupBorn]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Group born bit, used to create group born sections in articles or books',
   },
   [BitType.groupDied]: {
     since: '1.3.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Group died bit, used to create group died sections in articles or books',
   },
   [BitType.recordAudio]: {
     since: '1.3.0',
+    title: 'Record Audio',
+    bitGroups: [BitGroup.quizzes, BitGroup.recordAudio],
     baseBitType: BitType._standard,
     description: 'Record audio bit, used to create audio recording sections in articles or books',
   },
   [BitType.recordVideo]: {
     since: '1.5.24',
+    title: 'Record Video',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType._standard,
     description: 'Record video bit, used to create video recording sections in articles or books',
   },
   [BitType.stickyNote]: {
     since: '1.3.0',
+    title: 'Sticky Note',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Sticky note bit, used to create sticky notes in articles or books',
   },
   [BitType.takePicture]: {
     since: '1.3.0',
+    title: 'Take Picture',
+    bitGroups: [BitGroup.quizzes, BitGroup.takePicture],
     baseBitType: BitType._standard,
     description: 'Take picture bit, used to create picture taking sections in articles or books',
   },
   [BitType.handInAudio]: {
     since: '1.5.15',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Hand in audio bit, used to create audio submission sections in articles or books',
   },
   [BitType.handInContact]: {
     since: '1.5.15',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Hand in contact bit, used to create contact submission sections in articles or books',
   },
   [BitType.handInDocument]: {
     since: '1.5.15',
+    title: 'Hand in Document',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Hand in document bit, used to create document submission sections in articles or books',
@@ -6869,6 +7820,8 @@ const BITS: _BitsConfig = {
   [BitType.handInFile]: {
     //
     since: '3.2.0',
+    title: 'Hand in File',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Hand in file bit, used to create file submission sections in articles or books',
     tags: [
@@ -6883,35 +7836,42 @@ const BITS: _BitsConfig = {
   },
   [BitType.handInFreeText]: {
     since: '5.3.0',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.interview,
     description:
       'Hand in free text bit, used to create free text submission sections in articles or books',
   },
   [BitType.handInFreeTextExpert]: {
     since: '5.3.0',
+    bitGroups: [BitGroup.quizzes],
     baseBitType: BitType.interview,
     description:
       'Hand in free text expert bit, used to create free text expert submission sections in articles or books',
   },
   [BitType.handInLocation]: {
     since: '1.5.15',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Hand in location bit, used to create location submission sections in articles or books',
   },
   [BitType.handInPhoto]: {
     since: '1.5.15',
+    title: 'Hand in Photo',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Hand in photo bit, used to create photo submission sections in articles or books',
   },
   [BitType.handInScan]: {
     since: '1.5.15',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Hand in scan bit, used to create scan submission sections in articles or books',
   },
   [BitType.handInSystemMedia]: {
     //
     since: '1.5.15',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description:
       'Hand in system media bit, used to create system media submission sections in articles or books',
@@ -6928,6 +7888,7 @@ const BITS: _BitsConfig = {
   [BitType.handInSubmit]: {
     //
     since: '3.2.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Hand in submit bit, used to create submission sections in articles or books',
     tags: [
@@ -6952,16 +7913,21 @@ const BITS: _BitsConfig = {
   },
   [BitType.handInVideo]: {
     since: '1.5.15',
+    title: 'Hand In Video',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Hand in video bit, used to create video submission sections in articles or books',
   },
   [BitType.handInVoice]: {
     since: '1.5.15',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Hand in voice bit, used to create voice submission sections in articles or books',
   },
   [BitType.trueFalse1]: {
     since: '1.3.0',
+    title: 'True False',
+    bitGroups: [BitGroup.quizzes, BitGroup.trueFalse],
     baseBitType: BitType._standard,
     description: 'True/False bit, used to create true/false questions in articles or books',
     quizBit: true,
@@ -7030,6 +7996,8 @@ const BITS: _BitsConfig = {
 
   [BitType.trueFalse]: {
     since: '1.3.0',
+    title: 'True False',
+    bitGroups: [BitGroup.quizzes, BitGroup.trueFalse],
     baseBitType: BitType._standard,
     description: 'True/False bit, used to create true/false questions in articles or books',
     quizBit: true,
@@ -7065,6 +8033,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.vendorAmcharts5Chart]: {
     since: '1.5.8',
+    title: 'Amcharts 5 Chart',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'AmCharts 5 chart bit, used to embed AmCharts 5 charts in articles or books',
 
@@ -7072,11 +8042,14 @@ const BITS: _BitsConfig = {
   },
   [BitType.vendorDatadogDashboard]: {
     since: '5.2.0',
+    title: 'Datadog Dashboard',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.nonProductionPrototypeIframe,
     description: 'A Datadog dashboard bit, used to embed Datadog dashboards',
   },
   [BitType.vendorDatadogDashboardEmbed]: {
     since: '3.12.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description:
       'Datadog dashboard embed bit, used to embed Datadog dashboards in articles or books',
@@ -7092,6 +8065,7 @@ const BITS: _BitsConfig = {
   },
   [BitType.vendorFormbricksEmbed]: {
     since: '3.8.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'Formbricks embed bit, used to embed Formbricks surveys in articles or books',
     tags: [
@@ -7105,12 +8079,15 @@ const BITS: _BitsConfig = {
   },
   [BitType.vendorFormbricksEmbedAnonymous]: {
     since: '3.9.0',
+    title: 'Formbricks Embed Anonymous',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.vendorFormbricksEmbed,
     description:
       'Anonymous Formbricks embed bit, used to embed anonymous Formbricks surveys in articles or books',
   },
   [BitType.vendorFormbricksLink]: {
     since: '3.8.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description:
       'Formbricks link bit, used to create links to Formbricks surveys in articles or books',
@@ -7125,17 +8102,22 @@ const BITS: _BitsConfig = {
   },
   [BitType.vendorFormbricksLinkAnonymous]: {
     since: '3.9.0',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.vendorFormbricksLink,
     description:
       'Anonymous Formbricks link bit, used to create links to anonymous Formbricks surveys in articles or books',
   },
   [BitType.vendorHighchartsChart]: {
     since: '1.5.28',
+    title: 'Highcharts Chart',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.vendorAmcharts5Chart,
     description: 'Highcharts chart bit, used to embed Highcharts charts in articles or books',
   },
   [BitType.vendorIframelyEmbed]: {
     since: '1.5.10',
+    title: 'Iframely Embed',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description:
       'Iframely embed bit, used to embed content from various sources in articles or books',
@@ -7162,24 +8144,28 @@ const BITS: _BitsConfig = {
   },
   [BitType.vendorIframelyCard]: {
     since: '1.5.10',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.vendorIframelyEmbed,
     description:
       'Iframely card bit, used to create cards for embedded content in articles or books',
   },
   [BitType.vendorIframelyPreview]: {
     since: '1.5.10',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.vendorIframelyEmbed,
     description:
       'Iframely preview bit, used to create previews for embedded content in articles or books',
   },
   [BitType.vendorIframelyPreviewMini]: {
     since: '1.5.10',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.vendorIframelyEmbed,
     description:
       'Iframely preview mini bit, used to create mini previews for embedded content in articles or books',
   },
   [BitType.vendorJupyterOutput]: {
     since: '1.4.3',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'Jupyter output bit, used to embed Jupyter notebook outputs in articles or books',
     tags: [
@@ -7199,29 +8185,35 @@ const BITS: _BitsConfig = {
   },
   [BitType.vendorJupyterCellCode]: {
     since: '1.4.3',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.vendorJupyterOutput,
     description:
       'Jupyter cell code bit, used to embed Jupyter notebook cell code in articles or books',
   },
   [BitType.vendorJupyterCellMarkdown]: {
     since: '1.4.3',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.vendorJupyterOutput,
     description:
       'Jupyter cell markdown bit, used to embed Jupyter notebook cell markdown in articles or books',
   },
   [BitType.vendorJupyterCellRaw]: {
     since: '1.4.3',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.vendorJupyterOutput,
     description:
       'Jupyter cell raw bit, used to embed Jupyter notebook cell raw content in articles or books',
   },
   [BitType.vendorJupyterIpynb]: {
     since: '1.4.3',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.vendorJupyterOutput,
     description: 'Jupyter IPYNB bit, used to embed Jupyter notebook files in articles or books',
   },
   [BitType.vendorPadletEmbed]: {
     since: '1.3.0',
+    title: 'Padlet Embed',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.code,
     description: 'Padlet embed bit, used to embed Padlet boards in articles or books',
     tags: [
@@ -7235,6 +8227,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.vendorStripePricingTable]: {
     since: '1.20.0',
+    title: 'Stripe Pricing Table',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.article,
     description:
       'Stripe pricing table bit, used to embed Stripe pricing tables in articles or books',
@@ -7255,12 +8249,16 @@ const BITS: _BitsConfig = {
   },
   [BitType.vendorStripePricingTableExternal]: {
     since: '3.13.0',
+    title: 'Stripe Pricing Table External',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.vendorStripePricingTable,
     description:
       'External Stripe pricing table bit, used to embed external Stripe pricing tables in articles or books',
   },
   [BitType.vendorStripePricingTablePrintOnRequest]: {
     since: '5.21.0',
+    title: 'Print on Request',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.vendorStripePricingTable,
     description:
       'Stripe pricing table bit with print-on-request customer/product IDs, used to embed Stripe pricing tables tied to a specific print-on-request customer and product',
@@ -7289,6 +8287,8 @@ const BITS: _BitsConfig = {
 
   [BitType.video]: {
     since: '1.3.0',
+    title: 'Video',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Video bit, used to embed videos in articles or books',
     tags: [
@@ -7306,16 +8306,22 @@ const BITS: _BitsConfig = {
   },
   [BitType.videoLandscape]: {
     since: '1.3.0',
+    title: 'Video (Landscape)',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.video,
     description: 'Landscape video bit, used to embed landscape videos in articles or books',
   },
   [BitType.videoPortrait]: {
     since: '1.3.0',
+    title: 'Video Portrait',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.video,
     description: 'Portrait video bit, used to embed portrait videos in articles or books',
   },
   [BitType.videoEmbed]: {
     since: '1.3.0',
+    title: 'Video Embed',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Video embed bit, used to embed videos from external sources in articles or books',
     tags: [
@@ -7333,18 +8339,24 @@ const BITS: _BitsConfig = {
   },
   [BitType.videoEmbedLandscape]: {
     since: '1.3.0',
+    title: 'Video Embed Landscape',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.videoEmbed,
     description:
       'Landscape video embed bit, used to embed landscape videos from external sources in articles or books',
   },
   [BitType.videoEmbedPortrait]: {
     since: '1.3.0',
+    title: 'Video Embed Portrait',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.videoEmbed,
     description:
       'Portrait video embed bit, used to embed portrait videos from external sources in articles or books',
   },
   [BitType.videoLink]: {
     since: '1.3.0',
+    title: 'Video Link',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Video link bit, used to create links to videos in articles or books',
     tags: [
@@ -7362,18 +8374,24 @@ const BITS: _BitsConfig = {
   },
   [BitType.videoLinkLandscape]: {
     since: '1.3.0',
+    title: 'Video Link Landscape',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.videoLink,
     description:
       'Landscape video link bit, used to create links to landscape videos in articles or books',
   },
   [BitType.videoLinkPortrait]: {
     since: '1.3.0',
+    title: 'Video Link Portrait',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.videoLink,
     description:
       'Portrait video link bit, used to create links to portrait videos in articles or books',
   },
   [BitType.websiteLink]: {
     since: '1.3.0',
+    title: 'Website Link',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType._standard,
     description: 'Website link bit, used to create links to websites in articles or books',
     tags: [
@@ -7391,6 +8409,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.nonProductionPrototypeIframe]: {
     since: '4.20.0',
+    title: 'iFrame (Not for Production)',
+    bitGroups: [BitGroup.nonProduction, BitGroup.static],
     baseBitType: BitType._standard,
     description: 'A non-production prototype iframe bit, used to embed prototype iframes',
     tags: [
@@ -7407,6 +8427,8 @@ const BITS: _BitsConfig = {
   },
   [BitType.vendorLearndashEmbed]: {
     since: '5.0.0',
+    title: 'Learndash',
+    bitGroups: [BitGroup.static],
     baseBitType: BitType.nonProductionPrototypeIframe,
     description: 'Learndash embed bit, used to embed Learndash content in an iframe',
   },

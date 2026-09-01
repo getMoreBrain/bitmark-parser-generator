@@ -36,6 +36,16 @@
       "import": "./dist/index.js",
       "require": "./dist/index.js"
     },
+    "./browser/translations": {
+      "browser": "./dist/browser/esm/translations.js",
+      "import": "./dist/browser/esm/translations.js",
+      "require": "./dist/browser/cjs/translations.cjs"
+    },
+    "./translations": {
+      "browser": "./dist/browser/esm/translations.js",
+      "import": "./dist/translations.js",
+      "require": "./dist/translations.cjs"
+    },
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs",

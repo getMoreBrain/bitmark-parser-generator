@@ -1,676 +1,676 @@
 # bitmark-parser-generator
 
-Version: 5.37.0
+Version: 5.38.0
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)
-advertising (since: 4.2.0)
-advertising-advertorial (since: 4.2.0)
-advertising-advertorial-page (since: 4.5.0)
-advertising-call-to-action (since: 4.2.0)
-advertising-call-to-action-meeting (since: 4.2.0)
-advertising-banner (since: 4.2.0)
-advertising-skyscraper (since: 4.2.0)
-advertising-rectangle (since: 4.2.0)
-advertising-full-page (since: 4.2.0)
-advertising-half-page (since: 4.2.0)
-advertising-quarter-page (since: 4.2.0)
-advertising-classified-page (since: 4.2.0)
-advertising-landscape (since: 4.2.0)
-advertising-portrait (since: 4.2.0)
-ai-chat (since: 4.2.0)
-ai-editor (since: 4.2.0)
-ai-prompt (since: 1.3.0)
-ai-tutor (since: 4.2.0)
-ai-wbt (since: 4.2.0)
-anchor (since: 1.3.0)
-app-ai-prompt (since: 1.3.0)
-app-bitmark-from-editor (since: 1.4.5)
-app-bitmark-from-javascript (since: 1.4.5)
-app-calculator-latex (since: 4.10.0)
-app-code-cell (since: 1.4.3)
-app-code-editor (since: 1.4.3)
-app-code-ide (since: 1.4.3)
-app-create-bits-from-image (since: 1.3.0)
-app-flashcards (since: 1.3.0)
-app-flashcards-learn (since: 1.3.0)
-app-flashcards-quiz (since: 1.3.0)
-app-get-screenshot (since: 1.3.0)
-app-link (since: 1.3.0)
-app-rag (since: 5.14.0)
-app-search (since: 5.14.0)
-article (since: 1.3.0)
-article-ai (since: 1.3.0)
-article-alt (since: 1.15.0)
-article-attachment (since: 1.3.0)
-article-author (since: 4.2.0)
-article-embed (since: 1.3.0)
-article-link (since: 1.3.0)
-article-responsive (since: 1.21.0)
-article-responsive-alt (since: 2.0.0)
-assignment (since: 1.3.0)
-assignment-list (since: 1.4.13)
-audio (since: 1.3.0)
-audio-embed (since: 1.3.0)
-audio-link (since: 1.3.0)
-audio-transcript (since: 1.3.0)
-author (since: 4.2.0)
-author-content-bit-generator (since: 4.2.0)
-bit-alias (since: 1.3.0)
-bit-book-ending (since: 1.3.0)
-bit-book-summary (since: 1.3.0)
-bitmark-example (since: 1.3.0)
-blog-article (since: 1.3.0)
-book (since: 1.3.0)
-book-acknowledgements (since: 1.17.0)
-book-addendum (since: 1.3.0)
-book-afterword (since: 1.3.0)
-book-alias (since: 1.4.3)
-book-appendix (since: 1.3.0)
-book-article (since: 1.3.0)
-book-author (since: 4.2.0)
-book-author-bio (since: 1.3.0)
-book-bibliography (since: 1.3.0)
-book-close (since: 1.18.0)
-book-coming-soon (since: 1.3.0)
-book-conclusion (since: 1.3.0)
-book-copyright (since: 1.3.0)
-book-copyright-permissions (since: 1.3.0)
-book-cover (since: 3.27.0)
-book-dedication (since: 1.3.0)
-book-diff (since: 3.10.0)
-book-end (since: 3.27.0)
-book-endnotes (since: 1.3.0)
-book-epigraph (since: 1.3.0)
-book-epilogue (since: 1.3.0)
-book-foreword (since: 1.3.0)
-book-frontispiece (since: 1.3.0)
-book-imprint (since: 1.3.0)
-book-inciting-incident (since: 1.3.0)
-book-introduction (since: 1.3.0)
-book-link (since: 1.3.0)
-book-link-next (since: 1.3.0)
-book-link-prev (since: 1.3.0)
-book-list-of-contributors (since: 1.3.0)
-book-notes (since: 1.3.0)
-book-postscript (since: 1.3.0)
-book-preface (since: 1.3.0)
-book-prologue (since: 1.3.0)
-book-read-more (since: 1.3.0)
-book-reference (since: 2.2.0)
-book-reference-list (since: 3.2.0)
-book-request-for-a-book-review (since: 1.3.0)
-book-summary (since: 1.3.0)
-book-teaser (since: 1.3.0)
-book-title (since: 1.3.0)
-bot-action-announce (since: 1.3.0)
-bot-action-rating-number (since: 1.3.0)
-bot-action-remind (since: 1.3.0)
-bot-action-response (since: 1.3.0)
-bot-action-save (since: 1.3.0)
-bot-action-send (since: 1.3.0)
-bot-action-true-false (since: 1.3.0)
-bot-interview (since: 1.3.0)
-brand-color (since: 4.12.0)
-browser-image (since: 1.3.0)
-bug (since: 1.3.0)
-bug-alt (since: 1.16.0)
-bug-collapsible (since: 1.21.0, deprecated: 5.37.0)
-button-copy-text (since: 1.4.3)
-catalog-item-book (since: 4.15.0)
-catalog-item-external-book (since: 4.15.0)
-catalog-item-product (since: 4.15.0)
-call-to-action (since: 1.15.0)
-call-to-action-book-now (since: 1.15.0)
-call-to-action-contact (since: 1.15.0)
-call-to-action-create-account (since: 1.15.0)
-call-to-action-download (since: 1.15.0)
-call-to-action-get-now (since: 1.15.0)
-call-to-action-get-offer (since: 1.15.0)
-call-to-action-join (since: 1.15.0)
-call-to-action-learn-more (since: 1.15.0)
-call-to-action-mail (since: 1.15.0)
-call-to-action-see-more (since: 1.15.0)
-call-to-action-shop-now (since: 1.15.0)
-call-to-action-start-now (since: 1.15.0)
-call-to-action-subscribe (since: 1.15.0)
-call-to-action-watch (since: 1.15.0)
-card-1 (since: 1.3.0)
-chapter (since: 1.3.0)
-chapter-subject-matter (since: 1.3.0)
-chat (since: 1.3.0)
-checklist (since: 1.3.0)
-cloze (since: 1.3.0)
-cloze-and-multiple-choice-text (since: 1.3.0)
-cloze-instruction-grouped (since: 1.3.0)
-cloze-list (since: 1.4.13)
-cloze-several (since: 3.5.0)
-cloze-solution-grouped (since: 1.3.0)
-coach-audio-transcript (since: 1.3.0)
-coach-call-to-action-checklist (since: 1.3.0)
-coach-call-to-action-cloze (since: 1.3.0)
-coach-call-to-action-cloze-and-multiple-choice-text (since: 1.3.0)
-coach-call-to-action-essay (since: 1.3.0)
-coach-call-to-action-multiple-choice-text (since: 1.3.0)
-coach-home-rules (since: 1.3.0)
-coach-self-reflection-cloze (since: 1.3.0)
-coach-self-reflection-essay (since: 1.3.0)
-coach-self-reflection-multiple-choice (since: 1.3.0)
-coach-self-reflection-multiple-choice-1 (since: 1.3.0)
-coach-self-reflection-multiple-choice-text (since: 1.3.0)
-coach-self-reflection-multiple-response (since: 1.3.0)
-coach-self-reflection-multiple-response-1 (since: 1.3.0)
-coach-self-reflection-rating (since: 1.3.0)
-coach-video-transcript (since: 1.3.0)
-code (since: 1.3.0)
-code-runtime (since: 1.4.3)
-collapsible (since: 1.21.0, deprecated: 5.37.0)
-conclusion (since: 1.3.0)
-conclusion-alt (since: 1.16.0)
-console-log (since: 1.4.3)
-container (since: 1.9.0)
-container-accordion-tabs (since: 1.11.0)
-container-bits-2 (since: 1.11.0)
-container-cards (since: 1.11.0)
-container-carousel (since: 1.11.0)
-container-cook-recipe (since: 1.11.0)
-container-folder (since: 1.9.0)
-container-folder-all (since: 1.11.0)
-container-gallery (since: 1.11.0)
-container-grid (since: 1.11.0)
-container-group (since: 1.9.0)
-container-news-article (since: 1.11.0)
-container-nowrap (since: 1.9.0)
-container-nowrap-stretch (since: 1.9.0)
-container-preview (since: 1.11.0)
-container-scroller (since: 1.11.0)
-container-slides (since: 1.11.0)
-container-stack (since: 1.11.0)
-container-tabs (since: 1.11.0)
-container-wrap (since: 1.9.0)
-conversation-left-1 (since: 1.3.0)
-conversation-left-1-scream (since: 1.3.0)
-conversation-left-1-thought (since: 1.3.0)
-conversation-right-1 (since: 1.3.0)
-conversation-right-1-scream (since: 1.3.0)
-conversation-right-1-thought (since: 1.3.0)
-cloze-and-multiple-choice-text-conversation-left-1 (since: 1.3.0)
-cloze-and-multiple-choice-text-conversation-left-1-scream (since: 1.3.0)
-cloze-and-multiple-choice-text-conversation-left-1-thought (since: 1.3.0)
-cloze-and-multiple-choice-text-conversation-right-1 (since: 1.3.0)
-cloze-and-multiple-choice-text-conversation-right-1-scream (since: 1.3.0)
-cloze-and-multiple-choice-text-conversation-right-1-thought (since: 1.3.0)
-cook-arrangement (since: 1.3.0)
-cook-ingredients (since: 1.5.16)
-cook-insert (since: 1.3.0)
-cook-note-on-quantity (since: 3.27.0)
-cook-personal-recommendation (since: 1.3.0)
-cook-plate (since: 1.3.0)
-cook-practice-advise (since: 1.3.0)
-cook-preparation (since: 1.3.0)
-cook-recommendation (since: 1.3.0)
-cook-remark (since: 1.3.0)
-cook-side-dish (since: 1.3.0)
-cook-side-drink (since: 1.3.0)
-cook-step (since: 1.3.0)
-cook-timer (since: 1.3.0)
-cook-variation (since: 1.3.0)
-correction (since: 1.3.0)
-danger (since: 1.3.0)
-danger-alt (since: 1.16.0)
-danger-collapsible (since: 1.21.0, deprecated: 5.37.0)
-definition-list (since: 1.34.0)
-definition-list-collapsible (since: 5.25.0, deprecated: 5.37.0)
-definition-term (since: 1.34.0)
-deleted (since: 3.9.0)
-details (since: 1.3.0)
-details-1 (since: 1.3.0)
-details-image (since: 1.3.0)
-diff (since: 3.13.0)
-document (since: 1.3.0)
-document-download (since: 1.3.0)
-document-embed (since: 1.3.0)
-document-link (since: 1.3.0)
-document-upload (since: 1.3.0)
-editorial (since: 1.3.0)
-editor-note (since: 1.3.0)
-essay (since: 1.3.0)
-example (since: 1.3.0)
-example-alt (since: 1.16.0)
-example-collapsible (since: 1.21.0, deprecated: 5.37.0)
-example-list (since: 1.4.13)
-extractor-ai-chat (since: 3.19.0)
-extractor-block (since: 1.5.16)
-extractor-blueprint (since: 5.12.0)
-extractor-blueprint-configuration (since: 5.11.0)
-extractor-configuration (since: 1.7.1)
-extractor-image (since: 4.3.0)
-extractor-image-collapsible (since: 4.3.0, deprecated: 5.37.0)
-extractor-information (since: 3.8.0)
-extractor-page (since: 1.5.17)
-extractor-page-collapsible (since: 1.30.0, deprecated: 5.37.0)
-extractor-page-footer (since: 1.5.21)
-extractor-page-footer-collapsible (since: 1.30.0, deprecated: 5.37.0)
-extractor-page-header (since: 1.5.21)
-extractor-page-header-collapsible (since: 1.30.0, deprecated: 5.37.0)
-extractor-page-number (since: 1.5.21)
-extractor-page-number-collapsible (since: 1.30.0, deprecated: 5.37.0)
-extractor-page-with-blocks (since: 1.5.21)
-extractor-page-with-blocks-collapsible (since: 1.30.0, deprecated: 5.37.0)
-extractor-reconcile (since: 5.35.0)
-extractor-repeated-text (since: 1.5.21)
-extractor-rule (since: 5.17.0)
-extractor-theme (since: 5.7.0)
-featured (since: 1.3.0)
-feedback (since: 3.13.0)
-figure (since: 1.3.0)
-flashcard (since: 1.3.0)
-flashcard-1 (since: 1.3.0)
-focus-image (since: 1.3.0)
-foot-note (since: 1.3.0)
-form-free-text (since: 5.3.0)
-formula (since: 1.35.0)
-formula-image (since: 5.23.0)
-gap-text (since: 1.5.15)
-gap-text-instruction-grouped (since: 1.5.15)
-glossary-term (since: 1.33.0)
-group-born (since: 1.3.0)
-group-died (since: 1.3.0)
-hand-in-audio (since: 1.5.15)
-hand-in-contact (since: 1.5.15)
-hand-in-document (since: 1.5.15)
-hand-in-feedback-expert (since: 3.30.0)
-hand-in-feedback-self (since: 3.30.0)
-hand-in-file (since: 3.2.0)
-hand-in-free-text (since: 5.3.0)
-hand-in-free-text-expert (since: 5.3.0)
-hand-in-location (since: 1.5.15)
-hand-in-photo (since: 1.5.15)
-hand-in-scan (since: 1.5.15)
-hand-in-submit (since: 3.2.0)
-hand-in-system-media (since: 1.5.15)
-hand-in-video (since: 1.5.15)
-hand-in-voice (since: 1.5.15)
-help (since: 1.3.0)
-help-alt (since: 1.16.0)
-highlight-text (since: 1.3.0)
-hint (since: 1.3.0)
-hint-alt (since: 1.16.0)
-hint-collapsible (since: 1.21.0, deprecated: 5.37.0)
-image (since: 1.3.0)
-image-banner (since: 1.3.0)
-image-figure (since: 1.3.0)
-image-figure-alt (since: 1.16.0)
-image-landscape (since: 1.3.0)
-image-link (since: 1.3.0)
-image-mood (since: 1.3.0)
-image-on-device (since: 1.3.0)
-image-portrait (since: 1.3.0)
-image-prototype (since: 1.3.0)
-image-responsive (since: 1.3.0)
-image-screenshot (since: 1.3.0)
-image-separator (since: 1.4.15)
-image-separator-alt (since: 1.16.0)
-images-logo-grave (since: 1.5.11)
-image-styled (since: 1.3.0)
-image-super-wide (since: 1.3.0)
-image-zoom (since: 1.3.0)
-index-term (since: 1.33.0)
-info (since: 1.3.0)
-info-alt (since: 1.16.0)
-info-collapsible (since: 1.21.0, deprecated: 5.37.0)
-internal-link (since: 1.3.0)
-interview (since: 1.3.0)
-interview-instruction-grouped (since: 1.3.0)
-lang-audio-script (since: 1.3.0)
-lang-enabling-language-skills (since: 1.3.0)
-lang-english-around-world (since: 1.3.0)
-lang-extra-activity (since: 1.3.0)
-lang-good-to-know (since: 1.3.0)
-lang-homework (since: 1.3.0)
-lang-learning-goal (since: 1.3.0)
-lang-learning-outcomes (since: 1.3.0)
-lang-learning-strategy (since: 1.3.0)
-lang-level-down (since: 1.3.0)
-lang-level-up (since: 1.3.0)
-lang-life-skill-icon (since: 1.3.0)
-lang-life-skills (since: 1.3.0)
-lang-like-a-local (since: 1.3.0)
-lang-material (since: 1.3.0)
-lang-teacher-note (since: 1.3.0)
-lang-teacher-pronunciation (since: 1.3.0)
-lang-useful-phrases (since: 1.3.0)
-lang-video-script (since: 1.3.0)
-lang-vocabulary (since: 1.3.0)
-learning-documentation-feedback (since: 3.13.0)
-learning-path-book (since: 1.3.0)
-learning-path-bot-training (since: 1.3.0)
-learning-path-classroom-event (since: 1.3.0)
-learning-path-classroom-training (since: 1.3.0)
-learning-path-closing (since: 1.3.0)
-learning-path-external-link (since: 1.3.0)
-learning-path-feedback (since: 1.3.0)
-learning-path-learning-goal (since: 1.3.0)
-learning-path-lti (since: 1.3.0)
-learning-path-sign (since: 1.3.0)
-learning-path-step (since: 1.3.0)
-learning-path-video-call (since: 1.3.0)
-le-assignment (since: 1.27.0)
-le-classroom-event (since: 1.25.0)
-le-completion (since: 1.25.0)
-le-external-link (since: 1.25.0)
-le-finishing-task (since: 1.27.0)
-le-follow-up-task (since: 1.27.0)
-le-multi-day-event (since: 3.32.0)
-legend (since: 3.12.0)
-le-document-download (since: 3.18.0)
-le-learning-objectives (since: 1.25.0)
-le-learning-step (since: 1.25.0)
-le-listen-audio-embed (since: 1.27.0)
-le-preparation-task (since: 1.26.0)
-le-read (since: 1.27.0)
-le-read-book (since: 1.25.0)
-le-task (since: 1.27.0)
-le-todo (since: 1.27.0)
-le-video-call (since: 1.25.0)
-le-watch-video-embed (since: 1.27.0)
-life-skill-sticker (since: 1.3.0)
-list (since: 1.22.0)
-list-item (since: 1.22.0)
-mark (since: 1.3.0)
-match (since: 1.3.0)
-match-all (since: 1.3.0)
-match-all-reverse (since: 1.3.0)
-match-audio (since: 1.3.0)
-match-matrix (since: 1.3.0)
-match-picture (since: 1.3.0)
-match-reverse (since: 1.3.0)
-match-solution-grouped (since: 1.3.0)
-message (since: 1.3.0)
-metalevel-explanation (since: 1.10.0)
-meta-search-default-terms (since: 3.12.0)
-meta-search-default-topics (since: 3.12.0)
-milestone (since: 1.20.0)
-module (since: 1.5.26)
-module-product (since: 1.9.0)
-multiple-choice (since: 1.3.0)
-multiple-choice-1 (since: 1.3.0)
-multiple-choice-text (since: 1.3.0)
-multiple-response (since: 1.3.0)
-multiple-response-1 (since: 1.3.0)
-newspaper-article (since: 1.3.0)
-non-production-prototype-iframe (since: 4.20.0)
-note (since: 1.3.0)
-note-ai (since: 1.3.0)
-note-alt (since: 1.16.0)
-notebook-article (since: 1.3.0)
-note-collapsible (since: 1.21.0, deprecated: 5.37.0)
-output (since: 1.4.3)
-page (since: 1.3.0)
-page-academy (since: 1.6.6)
-page-article (since: 1.15.0)
-page-article-alt (since: 1.15.0)
-page-article-responsive (since: 1.21.0)
-page-banner (since: 1.4.3)
-page-buy-button (since: 1.4.3)
-page-buy-button-alt (since: 1.31.0)
-page-buy-button-promotion (since: 1.5.11)
-page-category (since: 1.6.6)
-page-collapsible (since: 1.30.0, deprecated: 5.37.0)
-page-container (since: 1.9.0)
-page-container-folder (since: 1.9.0)
-page-container-group (since: 1.9.0)
-page-container-nowrap (since: 1.9.0)
-page-container-nowrap-stretch (since: 1.9.0)
-page-container-wrap (since: 1.9.0)
-page-cover-image (since: 1.22.0)
-page-footer (since: 1.4.13)
-page-hero (since: 1.11.0)
-page-open-book (since: 1.5.10)
-page-open-book-list (since: 2.1.0)
-print-book (since: 5.5.0)
-open-book-chapter (since: 4.16.0)
-open-book-chapter-teaser (since: 4.16.0)
-page-person (since: 1.5.16)
-page-product (since: 1.4.17)
-page-product-list (since: 1.4.17)
-page-product-video (since: 1.4.17)
-page-product-video-list (since: 1.4.17)
-page-promotion (since: 1.6.6)
-page-section-folder (since: 1.4.17)
-page-shop-in-shop (since: 1.6.6)
-page-special (since: 1.6.6)
-page-end (since: 5.33.0)
-page-start (since: 5.33.0)
-page-subpage (since: 1.6.6)
-page-subscribe (since: 1.5.10)
-parameters (since: 1.18.0)
-photo (since: 1.3.0)
-platform (since: 4.12.0)
-platform-brand-target (since: 4.15.0)
-platform-header (since: 4.12.0)
-platform-main (since: 4.12.0)
-platform-main-button (since: 4.12.0)
-platform-main-input (since: 4.12.0)
-platform-path (since: 3.14.1)
-platform-section (since: 4.12.0)
-platform-section-button (since: 4.12.0)
-platform-section-chat (since: 4.12.0)
-platform-section-header (since: 4.12.0)
-platform-section-input (since: 4.12.0)
-platform-system-icon (since: 4.12.0)
-preparation-note (since: 1.3.0)
-print-this-book (since: 5.4.0)
-print-this-chapter (since: 5.4.0)
-print-page-break (since: 5.4.0)
-pronunciation-table (since: 3.1.0)
-prototype-images (since: 1.6.1)
-q-and-a (since: 3.5.0)
-q-and-a-card (since: 3.25.0)
-question-1 (since: 1.3.0)
-quote (since: 1.3.0)
-rating (since: 1.3.0)
-recipe (since: 1.5.24)
-record-audio (since: 1.3.0)
-record-video (since: 1.5.24)
-release-note (since: 1.3.0)
-release-notes-summary (since: 1.3.0)
-remark (since: 1.3.0)
-remark-alt (since: 1.16.0)
-remark-collapsible (since: 1.21.0, deprecated: 5.37.0)
-review-approved-note (since: 1.3.0)
-review-author-note (since: 1.3.0)
-review-customer-note (since: 3.5.0)
-review-error (since: 5.8.0)
-review-error-ai (since: 5.8.0)
-review-error-translation (since: 5.8.0)
-review-note (since: 1.3.0)
-review-request-for-review-note (since: 1.3.0)
-review-reviewer-note (since: 1.3.0)
-sample-solution (since: 1.3.0)
-sandbox (since: 4.10.0)
-sandbox-output-json (since: 4.10.0)
-sandbox-output-markup (since: 4.10.0)
-sandbox-output-render (since: 4.10.0)
-scorm (since: 1.5.11)
-screenshot (since: 1.3.0, deprecated: 1.4.0)
-self-assessment (since: 1.3.0)
-separator (since: 1.4.15)
-separator-alt (since: 1.16.0)
-sequence (since: 1.3.0)
-side-note (since: 1.3.0)
-side-note-collapsible (since: 1.21.0, deprecated: 5.37.0)
-smart-standard-article-non-normative (since: 1.28.0)
-smart-standard-article-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-article-normative (since: 1.28.0)
-smart-standard-article-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-definition-list-non-normative (since: 5.24.0)
-smart-standard-definition-list-normative (since: 5.24.0)
-smart-standard-example-non-normative (since: 1.28.0)
-smart-standard-example-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-example-normative (since: 1.28.0)
-smart-standard-example-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-formula (since: 3.11.0)
-smart-standard-formula-non-normative (since: 3.11.0)
-smart-standard-formula-normative (since: 3.11.0)
-smart-standard-image-figure-non-normative (since: 1.28.0)
-smart-standard-image-figure-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-image-figure-normative (since: 1.28.0)
-smart-standard-image-figure-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-legend (since: 3.12.0)
-smart-standard-legend-non-normative (since: 3.12.0)
-smart-standard-legend-normative (since: 3.12.0)
-smart-standard-list (since: 1.28.0)
-smart-standard-list-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-list-item (since: 1.28.0)
-smart-standard-list-item-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-note-non-normative (since: 1.28.0)
-smart-standard-note-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-note-normative (since: 1.28.0)
-smart-standard-note-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-remark-legend (since: 3.12.0)
-smart-standard-remark-legend-non-normative (since: 3.12.0)
-smart-standard-remark-legend-normative (since: 3.12.0)
-smart-standard-remark-formula (since: 3.11.0)
-smart-standard-remark-formula-non-normative (since: 3.11.0)
-smart-standard-remark-formula-normative (since: 3.11.0)
-smart-standard-remark-non-normative (since: 1.28.0)
-smart-standard-remark-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-remark-normative (since: 1.28.0)
-smart-standard-remark-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-remark-table-extended-image-non-normative (since: 1.28.0)
-smart-standard-remark-table-extended-image-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-remark-table-extended-image-normative (since: 1.28.0)
-smart-standard-remark-table-extended-image-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-remark-table-extended-non-normative (since: 1.28.0)
-smart-standard-remark-table-extended-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-remark-table-extended-normative (since: 1.28.0)
-smart-standard-remark-table-extended-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-remark-table-image-non-normative (since: 1.28.0)
-smart-standard-remark-table-image-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-remark-table-image-normative (since: 1.28.0)
-smart-standard-remark-table-image-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-remark-table-non-normative (since: 1.28.0)
-smart-standard-remark-table-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-remark-table-normative (since: 1.28.0)
-smart-standard-remark-table-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-table-extended-image-non-normative (since: 1.28.0)
-smart-standard-table-extended-image-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-table-extended-image-normative (since: 1.28.0)
-smart-standard-table-extended-image-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-table-extended-non-normative (since: 1.28.0)
-smart-standard-table-extended-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-table-extended-normative (since: 1.28.0)
-smart-standard-table-extended-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-table-image-non-normative (since: 1.28.0)
-smart-standard-table-image-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-table-image-normative (since: 1.28.0)
-smart-standard-table-image-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-table-non-normative (since: 1.28.0)
-smart-standard-table-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-smart-standard-table-normative (since: 1.28.0)
-smart-standard-table-normative-collapsible (since: 1.28.0, deprecated: 5.37.0)
-standard-article-non-normative (since: 1.16.0)
-standard-article-normative (since: 1.16.0)
-standard-definition-list-non-normative (since: 5.24.0)
-standard-definition-list-normative (since: 5.24.0)
-standard-example-non-normative (since: 1.16.0)
-standard-example-normative (since: 1.16.0)
-standard-image-figure-non-normative (since: 1.16.0)
-standard-image-figure-normative (since: 1.16.0)
-standard-list (since: 1.22.0)
-standard-list-item (since: 1.22.0)
-standard-note-non-normative (since: 1.16.0)
-standard-note-normative (since: 1.16.0)
-standard-remark-non-normative (since: 1.16.0)
-standard-remark-normative (since: 1.16.0)
-standard-remark-table-extended-image-non-normative (since: 1.17.0)
-standard-remark-table-extended-image-normative (since: 1.17.0)
-standard-remark-table-extended-non-normative (since: 1.17.0)
-standard-remark-table-extended-normative (since: 1.17.0)
-standard-remark-table-image-non-normative (since: 1.17.0)
-standard-remark-table-image-normative (since: 1.17.0)
-standard-remark-table-non-normative (since: 1.17.0)
-standard-remark-table-normative (since: 1.17.0)
-standard-table-extended-image-non-normative (since: 1.16.0)
-standard-table-extended-image-normative (since: 1.16.0)
-standard-table-extended-non-normative (since: 1.16.0)
-standard-table-extended-normative (since: 1.16.0)
-standard-table-image-non-normative (since: 1.16.0)
-standard-table-image-normative (since: 1.16.0)
-standard-table-non-normative (since: 1.16.0)
-standard-table-normative (since: 1.16.0)
-statement (since: 1.3.0)
-stdout (since: 1.4.3)
-step (since: 1.5.1)
-step-image-screenshot (since: 1.5.1)
-step-image-screenshot-with-pointer (since: 1.5.1)
-sticker (since: 1.5.28)
-sticky-note (since: 1.3.0)
-still-image-film (since: 1.3.0)
-still-image-film-embed (since: 1.3.0)
-still-image-film-link (since: 1.3.0)
-summary (since: 1.3.0)
-summary-ai (since: 1.3.0)
-survey (since: 1.3.0)
-survey-1 (since: 1.3.0)
-survey-anonymous (since: 1.3.0)
-survey-anonymous-1 (since: 1.3.0)
-survey-matrix (since: 1.6.2)
-survey-matrix-me (since: 1.6.2)
-survey-rating (since: 1.6.0)
-survey-rating-display (since: 1.6.0)
-survey-rating-once (since: 1.6.0)
-table (since: 1.5.19)
-table-alt (since: 1.16.0)
-table-extended (since: 4.14.0)
-table-extended-image (since: 5.13.0)
-table-image (since: 1.5.15)
-table-image-alt (since: 1.16.0)
-take-picture (since: 1.3.0)
-toc (since: 1.3.0)
-toc-chapter (since: 1.5.5)
-toc-inline (since: 3.24.0)
-toc-resource (since: 3.31.0)
-toc-content (since: 3.31.0)
-true-false (since: 1.3.0)
-true-false-1 (since: 1.3.0)
-vendor-amcharts-5-chart (since: 1.5.8)
-vendor-datadog-dashboard (since: 5.2.0)
-vendor-datadog-dashboard-embed (since: 3.12.0)
-vendor-formbricks-embed (since: 3.8.0)
-vendor-formbricks-link (since: 3.8.0)
-vendor-formbricks-embed-anonymous (since: 3.9.0)
-vendor-formbricks-link-anonymous (since: 3.9.0)
-vendor-highcharts-chart (since: 1.5.28)
-vendor-iframely-card (since: 1.5.10)
-vendor-iframely-embed (since: 1.5.10)
-vendor-iframely-preview (since: 1.5.10)
-vendor-iframely-preview-mini (since: 1.5.10)
-vendor-jupyter-cell-code (since: 1.4.3)
-vendor-jupyter-cell-markdown (since: 1.4.3)
-vendor-jupyter-cell-raw (since: 1.4.3)
-vendor-jupyter-ipynb (since: 1.4.3)
-vendor-jupyter-output (since: 1.4.3)
-vendor-learndash-embed (since: 5.0.0)
-vendor-padlet-embed (since: 1.3.0)
-vendor-stripe-pricing-table (since: 1.20.0)
-vendor-stripe-pricing-table-external (since: 3.13.0)
-vendor-stripe-pricing-table-print-on-request (since: 5.21.0)
-video (since: 1.3.0)
-video-embed (since: 1.3.0)
-video-embed-landscape (since: 1.3.0)
-video-embed-portrait (since: 1.3.0)
-video-landscape (since: 1.3.0)
-video-link (since: 1.3.0)
-video-link-landscape (since: 1.3.0)
-video-link-portrait (since: 1.3.0)
-video-portrait (since: 1.3.0)
-video-transcript (since: 1.3.0)
-warning (since: 1.3.0)
-warning-alt (since: 1.16.0)
-warning-collapsible (since: 1.21.0, deprecated: 5.37.0)
-website-link (since: 1.3.0)
-workbook-article (since: 1.3.0)
+advertising (since: 4.2.0) [static]
+advertising-advertorial (since: 4.2.0) [static]
+advertising-advertorial-page (since: 4.5.0) [static]
+advertising-call-to-action (since: 4.2.0) [static]
+advertising-call-to-action-meeting (since: 4.2.0) [static]
+advertising-banner (since: 4.2.0) [static]
+advertising-skyscraper (since: 4.2.0) [static]
+advertising-rectangle (since: 4.2.0) [static]
+advertising-full-page (since: 4.2.0) [static]
+advertising-half-page (since: 4.2.0) [static]
+advertising-quarter-page (since: 4.2.0) [static]
+advertising-classified-page (since: 4.2.0) [static]
+advertising-landscape (since: 4.2.0) [static]
+advertising-portrait (since: 4.2.0) [static]
+ai-chat (since: 4.2.0) [static]
+ai-editor (since: 4.2.0) [static]
+ai-prompt (since: 1.3.0) [static]
+ai-tutor (since: 4.2.0) [static]
+ai-wbt (since: 4.2.0) [static]
+anchor (since: 1.3.0) [static]
+app-ai-prompt (since: 1.3.0) [static]
+app-bitmark-from-editor (since: 1.4.5) [static]
+app-bitmark-from-javascript (since: 1.4.5) [static]
+app-calculator-latex (since: 4.10.0) [static]
+app-code-cell (since: 1.4.3) [static]
+app-code-editor (since: 1.4.3) [static]
+app-code-ide (since: 1.4.3) [static]
+app-create-bits-from-image (since: 1.3.0) [static]
+app-flashcards (since: 1.3.0) [static]
+app-flashcards-learn (since: 1.3.0) [static]
+app-flashcards-quiz (since: 1.3.0) [static]
+app-get-screenshot (since: 1.3.0) [static]
+app-link (since: 1.3.0) [static]
+app-rag (since: 5.14.0) [static]
+app-search (since: 5.14.0) [static]
+article (since: 1.3.0) [static]
+article-ai (since: 1.3.0) [static]
+article-alt (since: 1.15.0) [static]
+article-attachment (since: 1.3.0) [static]
+article-author (since: 4.2.0) [authors, static]
+article-embed (since: 1.3.0) [static]
+article-link (since: 1.3.0) [static]
+article-responsive (since: 1.21.0) [static]
+article-responsive-alt (since: 2.0.0) [static]
+assignment (since: 1.3.0) [assignment, quizzes]
+assignment-list (since: 1.4.13) [static]
+audio (since: 1.3.0) [static]
+audio-embed (since: 1.3.0) [static]
+audio-link (since: 1.3.0) [static]
+audio-transcript (since: 1.3.0) [static]
+author (since: 4.2.0) [authors, static]
+author-content-bit-generator (since: 4.2.0) [static]
+bit-alias (since: 1.3.0) [other, static]
+bit-book-ending (since: 1.3.0) [static]
+bit-book-summary (since: 1.3.0) [static]
+bitmark-example (since: 1.3.0) [static]
+blog-article (since: 1.3.0) [static]
+book (since: 1.3.0) [static]
+book-acknowledgements (since: 1.17.0) [static]
+book-addendum (since: 1.3.0) [static]
+book-afterword (since: 1.3.0) [static]
+book-alias (since: 1.4.3) [static]
+book-appendix (since: 1.3.0) [static]
+book-article (since: 1.3.0) [static]
+book-author (since: 4.2.0) [authors, static]
+book-author-bio (since: 1.3.0) [static]
+book-bibliography (since: 1.3.0) [static]
+book-close (since: 1.18.0) [static]
+book-coming-soon (since: 1.3.0) [static]
+book-conclusion (since: 1.3.0) [static]
+book-copyright (since: 1.3.0) [static]
+book-copyright-permissions (since: 1.3.0) [static]
+book-cover (since: 3.27.0) [static]
+book-dedication (since: 1.3.0) [static]
+book-diff (since: 3.10.0) [static]
+book-end (since: 3.27.0) [static]
+book-endnotes (since: 1.3.0) [static]
+book-epigraph (since: 1.3.0) [static]
+book-epilogue (since: 1.3.0) [static]
+book-foreword (since: 1.3.0) [static]
+book-frontispiece (since: 1.3.0) [static]
+book-imprint (since: 1.3.0) [static]
+book-inciting-incident (since: 1.3.0) [static]
+book-introduction (since: 1.3.0) [static]
+book-link (since: 1.3.0) [static]
+book-link-next (since: 1.3.0) [static]
+book-link-prev (since: 1.3.0) [static]
+book-list-of-contributors (since: 1.3.0) [static]
+book-notes (since: 1.3.0) [static]
+book-postscript (since: 1.3.0) [static]
+book-preface (since: 1.3.0) [static]
+book-prologue (since: 1.3.0) [static]
+book-read-more (since: 1.3.0) [static]
+book-reference (since: 2.2.0) [static]
+book-reference-list (since: 3.2.0) [static]
+book-request-for-a-book-review (since: 1.3.0) [static]
+book-summary (since: 1.3.0) [static]
+book-teaser (since: 1.3.0) [static]
+book-title (since: 1.3.0) [static]
+bot-action-announce (since: 1.3.0) [bot-action]
+bot-action-rating-number (since: 1.3.0) [bots]
+bot-action-remind (since: 1.3.0) [bot-action]
+bot-action-response (since: 1.3.0) [bots]
+bot-action-save (since: 1.3.0) [bot-action]
+bot-action-send (since: 1.3.0) [bot-action, bots]
+bot-action-true-false (since: 1.3.0) [bot-action, bots]
+bot-interview (since: 1.3.0) [bots]
+brand-color (since: 4.12.0) [static, white-label]
+browser-image (since: 1.3.0) [static]
+bug (since: 1.3.0) [static, warning]
+bug-alt (since: 1.16.0) [static]
+bug-collapsible (since: 1.21.0, deprecated: 5.37.0) [static, warning]
+button-copy-text (since: 1.4.3) [static]
+catalog-item-book (since: 4.15.0) [static]
+catalog-item-external-book (since: 4.15.0) [static]
+catalog-item-product (since: 4.15.0) [static]
+call-to-action (since: 1.15.0) [static]
+call-to-action-book-now (since: 1.15.0) [static]
+call-to-action-contact (since: 1.15.0) [static]
+call-to-action-create-account (since: 1.15.0) [static]
+call-to-action-download (since: 1.15.0) [static]
+call-to-action-get-now (since: 1.15.0) [static]
+call-to-action-get-offer (since: 1.15.0) [static]
+call-to-action-join (since: 1.15.0) [static]
+call-to-action-learn-more (since: 1.15.0) [static]
+call-to-action-mail (since: 1.15.0) [static]
+call-to-action-see-more (since: 1.15.0) [static]
+call-to-action-shop-now (since: 1.15.0) [static]
+call-to-action-start-now (since: 1.15.0) [static]
+call-to-action-subscribe (since: 1.15.0) [static]
+call-to-action-watch (since: 1.15.0) [static]
+card-1 (since: 1.3.0) [static]
+chapter (since: 1.3.0) [other, static]
+chapter-subject-matter (since: 1.3.0) [static]
+chat (since: 1.3.0) [chat, static]
+checklist (since: 1.3.0) [static]
+cloze (since: 1.3.0) [cloze, quizzes]
+cloze-and-multiple-choice-text (since: 1.3.0) [cloze, quizzes]
+cloze-instruction-grouped (since: 1.3.0) [cloze, quizzes]
+cloze-list (since: 1.4.13) [cloze, quizzes]
+cloze-several (since: 3.5.0) [cloze, quizzes]
+cloze-solution-grouped (since: 1.3.0) [cloze, quizzes]
+coach-audio-transcript (since: 1.3.0) [static]
+coach-call-to-action-checklist (since: 1.3.0) [static]
+coach-call-to-action-cloze (since: 1.3.0) [quizzes]
+coach-call-to-action-cloze-and-multiple-choice-text (since: 1.3.0) [quizzes]
+coach-call-to-action-essay (since: 1.3.0) [quizzes]
+coach-call-to-action-multiple-choice-text (since: 1.3.0) [quizzes]
+coach-home-rules (since: 1.3.0) [static]
+coach-self-reflection-cloze (since: 1.3.0) [quizzes]
+coach-self-reflection-essay (since: 1.3.0) [quizzes]
+coach-self-reflection-multiple-choice (since: 1.3.0) [quizzes]
+coach-self-reflection-multiple-choice-1 (since: 1.3.0) [quizzes]
+coach-self-reflection-multiple-choice-text (since: 1.3.0) [quizzes]
+coach-self-reflection-multiple-response (since: 1.3.0) [quizzes]
+coach-self-reflection-multiple-response-1 (since: 1.3.0) [quizzes]
+coach-self-reflection-rating (since: 1.3.0) [rating, surveys]
+coach-video-transcript (since: 1.3.0) [static]
+code (since: 1.3.0) [static]
+code-runtime (since: 1.4.3) [static]
+collapsible (since: 1.21.0, deprecated: 5.37.0) [static]
+conclusion (since: 1.3.0) [static]
+conclusion-alt (since: 1.16.0) [static]
+console-log (since: 1.4.3) [static]
+container (since: 1.9.0) [static]
+container-accordion-tabs (since: 1.11.0) [static]
+container-bits-2 (since: 1.11.0) [static]
+container-cards (since: 1.11.0) [static]
+container-carousel (since: 1.11.0) [static]
+container-cook-recipe (since: 1.11.0) [static]
+container-folder (since: 1.9.0) [static]
+container-folder-all (since: 1.11.0) [static]
+container-gallery (since: 1.11.0) [static]
+container-grid (since: 1.11.0) [static]
+container-group (since: 1.9.0) [static]
+container-news-article (since: 1.11.0) [static]
+container-nowrap (since: 1.9.0) [static]
+container-nowrap-stretch (since: 1.9.0) [static]
+container-preview (since: 1.11.0) [static]
+container-scroller (since: 1.11.0) [static]
+container-slides (since: 1.11.0) [static]
+container-stack (since: 1.11.0) [static]
+container-tabs (since: 1.11.0) [static]
+container-wrap (since: 1.9.0) [static]
+conversation-left-1 (since: 1.3.0) [conversation, static]
+conversation-left-1-scream (since: 1.3.0) [conversation, static]
+conversation-left-1-thought (since: 1.3.0) [conversation, static]
+conversation-right-1 (since: 1.3.0) [conversation, static]
+conversation-right-1-scream (since: 1.3.0) [conversation, static]
+conversation-right-1-thought (since: 1.3.0) [conversation, static]
+cloze-and-multiple-choice-text-conversation-left-1 (since: 1.3.0) [cloze, quizzes]
+cloze-and-multiple-choice-text-conversation-left-1-scream (since: 1.3.0) [cloze, quizzes]
+cloze-and-multiple-choice-text-conversation-left-1-thought (since: 1.3.0) [cloze, quizzes]
+cloze-and-multiple-choice-text-conversation-right-1 (since: 1.3.0) [cloze, quizzes]
+cloze-and-multiple-choice-text-conversation-right-1-scream (since: 1.3.0) [cloze, quizzes]
+cloze-and-multiple-choice-text-conversation-right-1-thought (since: 1.3.0) [cloze, quizzes]
+cook-arrangement (since: 1.3.0) [cooking, static]
+cook-ingredients (since: 1.5.16) [cooking, static]
+cook-insert (since: 1.3.0) [cooking, static]
+cook-note-on-quantity (since: 3.27.0) [cooking, static]
+cook-personal-recommendation (since: 1.3.0) [static]
+cook-plate (since: 1.3.0) [static]
+cook-practice-advise (since: 1.3.0) [cooking, static]
+cook-preparation (since: 1.3.0) [cooking, static]
+cook-recommendation (since: 1.3.0) [cooking, static]
+cook-remark (since: 1.3.0) [cooking, static]
+cook-side-dish (since: 1.3.0) [cooking, static]
+cook-side-drink (since: 1.3.0) [cooking, static]
+cook-step (since: 1.3.0) [cooking, static, steps]
+cook-timer (since: 1.3.0) [static]
+cook-variation (since: 1.3.0) [cooking, static]
+correction (since: 1.3.0) [correction, quizzes, static]
+danger (since: 1.3.0) [static, warning]
+danger-alt (since: 1.16.0) [static]
+danger-collapsible (since: 1.21.0, deprecated: 5.37.0) [static, warning]
+definition-list (since: 1.34.0) [static]
+definition-list-collapsible (since: 5.25.0, deprecated: 5.37.0) [static]
+definition-term (since: 1.34.0) [static]
+deleted (since: 3.9.0) [static]
+details (since: 1.3.0) [static]
+details-1 (since: 1.3.0) [static]
+details-image (since: 1.3.0) [static]
+diff (since: 3.13.0) [static]
+document (since: 1.3.0) [static]
+document-download (since: 1.3.0) [static]
+document-embed (since: 1.3.0) [static]
+document-link (since: 1.3.0) [static]
+document-upload (since: 1.3.0) [document-upload, quizzes]
+editorial (since: 1.3.0) [static]
+editor-note (since: 1.3.0) [static]
+essay (since: 1.3.0) [essay, quizzes]
+example (since: 1.3.0) [static]
+example-alt (since: 1.16.0) [static]
+example-collapsible (since: 1.21.0, deprecated: 5.37.0) [static]
+example-list (since: 1.4.13) [static]
+extractor-ai-chat (since: 3.19.0) [extractor, static]
+extractor-block (since: 1.5.16) [extractor]
+extractor-blueprint (since: 5.12.0) [extractor, static]
+extractor-blueprint-configuration (since: 5.11.0) [extractor, static]
+extractor-configuration (since: 1.7.1) [extractor]
+extractor-image (since: 4.3.0) [extractor, static]
+extractor-image-collapsible (since: 4.3.0, deprecated: 5.37.0) [extractor, static]
+extractor-information (since: 3.8.0) [extractor]
+extractor-page (since: 1.5.17) [extractor, pages]
+extractor-page-collapsible (since: 1.30.0, deprecated: 5.37.0) [extractor, pages]
+extractor-page-footer (since: 1.5.21) [extractor]
+extractor-page-footer-collapsible (since: 1.30.0, deprecated: 5.37.0) [extractor]
+extractor-page-header (since: 1.5.21) [extractor]
+extractor-page-header-collapsible (since: 1.30.0, deprecated: 5.37.0) [extractor]
+extractor-page-number (since: 1.5.21) [extractor]
+extractor-page-number-collapsible (since: 1.30.0, deprecated: 5.37.0) [extractor]
+extractor-page-with-blocks (since: 1.5.21) [extractor]
+extractor-page-with-blocks-collapsible (since: 1.30.0, deprecated: 5.37.0) [extractor]
+extractor-reconcile (since: 5.35.0) [extractor, static]
+extractor-repeated-text (since: 1.5.21) [extractor]
+extractor-rule (since: 5.17.0) [extractor, static]
+extractor-theme (since: 5.7.0) [extractor, static]
+featured (since: 1.3.0) [static]
+feedback (since: 3.13.0) [static]
+figure (since: 1.3.0) [static]
+flashcard (since: 1.3.0) [flashcard, quizzes, static]
+flashcard-1 (since: 1.3.0) [flashcard, quizzes, static]
+focus-image (since: 1.3.0) [static]
+foot-note (since: 1.3.0) [static]
+form-free-text (since: 5.3.0) [interview, quizzes]
+formula (since: 1.35.0) [static]
+formula-image (since: 5.23.0) [static]
+gap-text (since: 1.5.15) [cloze, quizzes]
+gap-text-instruction-grouped (since: 1.5.15) [cloze, quizzes]
+glossary-term (since: 1.33.0) [static]
+group-born (since: 1.3.0) [static]
+group-died (since: 1.3.0) [static]
+hand-in-audio (since: 1.5.15) [static]
+hand-in-contact (since: 1.5.15) [static]
+hand-in-document (since: 1.5.15) [static]
+hand-in-feedback-expert (since: 3.30.0) [static]
+hand-in-feedback-self (since: 3.30.0) [static]
+hand-in-file (since: 3.2.0) [static]
+hand-in-free-text (since: 5.3.0) [quizzes]
+hand-in-free-text-expert (since: 5.3.0) [quizzes]
+hand-in-location (since: 1.5.15) [static]
+hand-in-photo (since: 1.5.15) [static]
+hand-in-scan (since: 1.5.15) [static]
+hand-in-submit (since: 3.2.0) [static]
+hand-in-system-media (since: 1.5.15) [static]
+hand-in-video (since: 1.5.15) [static]
+hand-in-voice (since: 1.5.15) [static]
+help (since: 1.3.0) [static]
+help-alt (since: 1.16.0) [static]
+highlight-text (since: 1.3.0) [highlight-text, quizzes]
+hint (since: 1.3.0) [static]
+hint-alt (since: 1.16.0) [static]
+hint-collapsible (since: 1.21.0, deprecated: 5.37.0) [static]
+image (since: 1.3.0) [static]
+image-banner (since: 1.3.0) [static]
+image-figure (since: 1.3.0) [static]
+image-figure-alt (since: 1.16.0) [static]
+image-landscape (since: 1.3.0) [static]
+image-link (since: 1.3.0) [static]
+image-mood (since: 1.3.0) [static]
+image-on-device (since: 1.3.0) [static]
+image-portrait (since: 1.3.0) [static]
+image-prototype (since: 1.3.0) [static]
+image-responsive (since: 1.3.0) [static]
+image-screenshot (since: 1.3.0) [static]
+image-separator (since: 1.4.15) [static]
+image-separator-alt (since: 1.16.0) [static]
+images-logo-grave (since: 1.5.11) [static]
+image-styled (since: 1.3.0) [static]
+image-super-wide (since: 1.3.0) [static]
+image-zoom (since: 1.3.0) [static]
+index-term (since: 1.33.0) [static]
+info (since: 1.3.0) [static]
+info-alt (since: 1.16.0) [static]
+info-collapsible (since: 1.21.0, deprecated: 5.37.0) [static]
+internal-link (since: 1.3.0) [static]
+interview (since: 1.3.0) [interview, quizzes]
+interview-instruction-grouped (since: 1.3.0) [interview, quizzes]
+lang-audio-script (since: 1.3.0) [static]
+lang-enabling-language-skills (since: 1.3.0) [static]
+lang-english-around-world (since: 1.3.0) [static]
+lang-extra-activity (since: 1.3.0) [static]
+lang-good-to-know (since: 1.3.0) [static]
+lang-homework (since: 1.3.0) [static]
+lang-learning-goal (since: 1.3.0) [static]
+lang-learning-outcomes (since: 1.3.0) [static]
+lang-learning-strategy (since: 1.3.0) [static]
+lang-level-down (since: 1.3.0) [static]
+lang-level-up (since: 1.3.0) [static]
+lang-life-skill-icon (since: 1.3.0) [static]
+lang-life-skills (since: 1.3.0) [static]
+lang-like-a-local (since: 1.3.0) [static]
+lang-material (since: 1.3.0) [static]
+lang-teacher-note (since: 1.3.0) [static]
+lang-teacher-pronunciation (since: 1.3.0) [static]
+lang-useful-phrases (since: 1.3.0) [static]
+lang-video-script (since: 1.3.0) [static]
+lang-vocabulary (since: 1.3.0) [static]
+learning-documentation-feedback (since: 3.13.0) [static]
+learning-path-book (since: 1.3.0) [learning-path]
+learning-path-bot-training (since: 1.3.0) [learning-path]
+learning-path-classroom-event (since: 1.3.0) [learning-path]
+learning-path-classroom-training (since: 1.3.0) [learning-path]
+learning-path-closing (since: 1.3.0) [learning-path]
+learning-path-external-link (since: 1.3.0) [learning-path]
+learning-path-feedback (since: 1.3.0) [learning-path]
+learning-path-learning-goal (since: 1.3.0) [learning-path]
+learning-path-lti (since: 1.3.0) [learning-path]
+learning-path-sign (since: 1.3.0) [learning-path]
+learning-path-step (since: 1.3.0) [learning-path, steps]
+learning-path-video-call (since: 1.3.0) [learning-path]
+le-assignment (since: 1.27.0) [static]
+le-classroom-event (since: 1.25.0) [static]
+le-completion (since: 1.25.0) [static]
+le-external-link (since: 1.25.0) [static]
+le-finishing-task (since: 1.27.0) [static]
+le-follow-up-task (since: 1.27.0) [static]
+le-multi-day-event (since: 3.32.0) [static]
+legend (since: 3.12.0) [static]
+le-document-download (since: 3.18.0) [static]
+le-learning-objectives (since: 1.25.0) [static]
+le-learning-step (since: 1.25.0) [static]
+le-listen-audio-embed (since: 1.27.0) [static]
+le-preparation-task (since: 1.26.0) [static]
+le-read (since: 1.27.0) [static]
+le-read-book (since: 1.25.0) [static]
+le-task (since: 1.27.0) [static]
+le-todo (since: 1.27.0) [static]
+le-video-call (since: 1.25.0) [static]
+le-watch-video-embed (since: 1.27.0) [static]
+life-skill-sticker (since: 1.3.0) [static]
+list (since: 1.22.0) [static]
+list-item (since: 1.22.0) [static]
+mark (since: 1.3.0) [mark, quizzes]
+match (since: 1.3.0) [match, quizzes]
+match-all (since: 1.3.0) [match, quizzes]
+match-all-reverse (since: 1.3.0) [match, quizzes]
+match-audio (since: 1.3.0) [match, quizzes]
+match-matrix (since: 1.3.0) [match, quizzes]
+match-picture (since: 1.3.0) [match, quizzes]
+match-reverse (since: 1.3.0) [match, quizzes]
+match-solution-grouped (since: 1.3.0) [match, quizzes]
+message (since: 1.3.0) [message, static]
+metalevel-explanation (since: 1.10.0) [static]
+meta-search-default-terms (since: 3.12.0) [static]
+meta-search-default-topics (since: 3.12.0) [static]
+milestone (since: 1.20.0) [static]
+module (since: 1.5.26) [static]
+module-product (since: 1.9.0) [static]
+multiple-choice (since: 1.3.0) [multiple-choice, quizzes]
+multiple-choice-1 (since: 1.3.0) [multiple-choice, quizzes]
+multiple-choice-text (since: 1.3.0) [multiple-choice, quizzes]
+multiple-response (since: 1.3.0) [multiple-response, quizzes]
+multiple-response-1 (since: 1.3.0) [multiple-response, quizzes]
+newspaper-article (since: 1.3.0) [static]
+non-production-prototype-iframe (since: 4.20.0) [non-production, static]
+note (since: 1.3.0) [static]
+note-ai (since: 1.3.0) [static]
+note-alt (since: 1.16.0) [static]
+notebook-article (since: 1.3.0) [static]
+note-collapsible (since: 1.21.0, deprecated: 5.37.0) [static]
+output (since: 1.4.3) [static]
+page (since: 1.3.0) [pages, static]
+page-academy (since: 1.6.6) [static]
+page-article (since: 1.15.0) [static]
+page-article-alt (since: 1.15.0) [static]
+page-article-responsive (since: 1.21.0) [static]
+page-banner (since: 1.4.3) [static]
+page-buy-button (since: 1.4.3) [static]
+page-buy-button-alt (since: 1.31.0) [static]
+page-buy-button-promotion (since: 1.5.11) [static]
+page-category (since: 1.6.6) [static]
+page-collapsible (since: 1.30.0, deprecated: 5.37.0) [pages, static]
+page-container (since: 1.9.0) [static]
+page-container-folder (since: 1.9.0) [static]
+page-container-group (since: 1.9.0) [static]
+page-container-nowrap (since: 1.9.0) [static]
+page-container-nowrap-stretch (since: 1.9.0) [static]
+page-container-wrap (since: 1.9.0) [static]
+page-cover-image (since: 1.22.0) [static]
+page-footer (since: 1.4.13) [static]
+page-hero (since: 1.11.0) [static]
+page-open-book (since: 1.5.10) [static]
+page-open-book-list (since: 2.1.0) [static]
+print-book (since: 5.5.0) [static]
+open-book-chapter (since: 4.16.0) [static]
+open-book-chapter-teaser (since: 4.16.0) [static]
+page-person (since: 1.5.16) [static]
+page-product (since: 1.4.17) [static]
+page-product-list (since: 1.4.17) [static]
+page-product-video (since: 1.4.17) [static]
+page-product-video-list (since: 1.4.17) [static]
+page-promotion (since: 1.6.6) [static]
+page-section-folder (since: 1.4.17) [static]
+page-shop-in-shop (since: 1.6.6) [static]
+page-special (since: 1.6.6) [static]
+page-end (since: 5.33.0) [pages, static]
+page-start (since: 5.33.0) [pages, static]
+page-subpage (since: 1.6.6) [static]
+page-subscribe (since: 1.5.10) [static]
+parameters (since: 1.18.0) [static]
+photo (since: 1.3.0) [static]
+platform (since: 4.12.0) [static, white-label]
+platform-brand-target (since: 4.15.0) [static, white-label]
+platform-header (since: 4.12.0) [static, white-label]
+platform-main (since: 4.12.0) [static, white-label]
+platform-main-button (since: 4.12.0) [static]
+platform-main-input (since: 4.12.0) [static, white-label]
+platform-path (since: 3.14.1) [static]
+platform-section (since: 4.12.0) [static, white-label]
+platform-section-button (since: 4.12.0) [static]
+platform-section-chat (since: 4.12.0) [static]
+platform-section-header (since: 4.12.0) [static]
+platform-section-input (since: 4.12.0) [static, white-label]
+platform-system-icon (since: 4.12.0) [static, white-label]
+preparation-note (since: 1.3.0) [preparation-note, quizzes, static]
+print-this-book (since: 5.4.0) [static]
+print-this-chapter (since: 5.4.0) [static]
+print-page-break (since: 5.4.0) [static]
+pronunciation-table (since: 3.1.0) [static]
+prototype-images (since: 1.6.1) [static]
+q-and-a (since: 3.5.0) [static]
+q-and-a-card (since: 3.25.0) [quizzes]
+question-1 (since: 1.3.0) [static]
+quote (since: 1.3.0) [static]
+rating (since: 1.3.0) [rating, surveys]
+recipe (since: 1.5.24) [recipes, static]
+record-audio (since: 1.3.0) [quizzes, record-audio]
+record-video (since: 1.5.24) [quizzes]
+release-note (since: 1.3.0) [static]
+release-notes-summary (since: 1.3.0) [static]
+remark (since: 1.3.0) [static]
+remark-alt (since: 1.16.0) [static]
+remark-collapsible (since: 1.21.0, deprecated: 5.37.0) [static]
+review-approved-note (since: 1.3.0) [reviews, static]
+review-author-note (since: 1.3.0) [reviews, static]
+review-customer-note (since: 3.5.0) [reviews, static]
+review-error (since: 5.8.0) [review-errors, reviews, static]
+review-error-ai (since: 5.8.0) [review-errors, reviews, static]
+review-error-translation (since: 5.8.0) [review-errors, reviews, static]
+review-note (since: 1.3.0) [reviews, static]
+review-request-for-review-note (since: 1.3.0) [review-errors, reviews]
+review-reviewer-note (since: 1.3.0) [reviews, static]
+sample-solution (since: 1.3.0) [static]
+sandbox (since: 4.10.0) [static]
+sandbox-output-json (since: 4.10.0) [static]
+sandbox-output-markup (since: 4.10.0) [static]
+sandbox-output-render (since: 4.10.0) [static]
+scorm (since: 1.5.11) [static]
+screenshot (since: 1.3.0, deprecated: 1.4.0) [static]
+self-assessment (since: 1.3.0) [self-assessment, static, surveys]
+separator (since: 1.4.15) [static]
+separator-alt (since: 1.16.0) [static]
+sequence (since: 1.3.0) [quizzes, sequence]
+side-note (since: 1.3.0) [static]
+side-note-collapsible (since: 1.21.0, deprecated: 5.37.0) [static]
+smart-standard-article-non-normative (since: 1.28.0) [static]
+smart-standard-article-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-article-normative (since: 1.28.0) [static]
+smart-standard-article-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-definition-list-non-normative (since: 5.24.0) [static]
+smart-standard-definition-list-normative (since: 5.24.0) [static]
+smart-standard-example-non-normative (since: 1.28.0) [static]
+smart-standard-example-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-example-normative (since: 1.28.0) [static]
+smart-standard-example-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-formula (since: 3.11.0) [static]
+smart-standard-formula-non-normative (since: 3.11.0) [static]
+smart-standard-formula-normative (since: 3.11.0) [static]
+smart-standard-image-figure-non-normative (since: 1.28.0) [static]
+smart-standard-image-figure-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-image-figure-normative (since: 1.28.0) [static]
+smart-standard-image-figure-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-legend (since: 3.12.0) [static]
+smart-standard-legend-non-normative (since: 3.12.0) [static]
+smart-standard-legend-normative (since: 3.12.0) [static]
+smart-standard-list (since: 1.28.0) [static]
+smart-standard-list-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-list-item (since: 1.28.0) [static]
+smart-standard-list-item-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-note-non-normative (since: 1.28.0) [static]
+smart-standard-note-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-note-normative (since: 1.28.0) [static]
+smart-standard-note-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-remark-legend (since: 3.12.0) [static]
+smart-standard-remark-legend-non-normative (since: 3.12.0) [static]
+smart-standard-remark-legend-normative (since: 3.12.0) [static]
+smart-standard-remark-formula (since: 3.11.0) [static]
+smart-standard-remark-formula-non-normative (since: 3.11.0) [static]
+smart-standard-remark-formula-normative (since: 3.11.0) [static]
+smart-standard-remark-non-normative (since: 1.28.0) [static]
+smart-standard-remark-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-remark-normative (since: 1.28.0) [static]
+smart-standard-remark-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-remark-table-extended-image-non-normative (since: 1.28.0) [static]
+smart-standard-remark-table-extended-image-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-remark-table-extended-image-normative (since: 1.28.0) [static]
+smart-standard-remark-table-extended-image-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-remark-table-extended-non-normative (since: 1.28.0) [static]
+smart-standard-remark-table-extended-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-remark-table-extended-normative (since: 1.28.0) [static]
+smart-standard-remark-table-extended-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-remark-table-image-non-normative (since: 1.28.0) [static]
+smart-standard-remark-table-image-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-remark-table-image-normative (since: 1.28.0) [static]
+smart-standard-remark-table-image-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-remark-table-non-normative (since: 1.28.0) [static]
+smart-standard-remark-table-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-remark-table-normative (since: 1.28.0) [static]
+smart-standard-remark-table-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-table-extended-image-non-normative (since: 1.28.0) [static]
+smart-standard-table-extended-image-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-table-extended-image-normative (since: 1.28.0) [static]
+smart-standard-table-extended-image-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-table-extended-non-normative (since: 1.28.0) [static]
+smart-standard-table-extended-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-table-extended-normative (since: 1.28.0) [static]
+smart-standard-table-extended-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-table-image-non-normative (since: 1.28.0) [static]
+smart-standard-table-image-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-table-image-normative (since: 1.28.0) [static]
+smart-standard-table-image-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-table-non-normative (since: 1.28.0) [static]
+smart-standard-table-non-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+smart-standard-table-normative (since: 1.28.0) [static]
+smart-standard-table-normative-collapsible (since: 1.28.0, deprecated: 5.37.0) [static]
+standard-article-non-normative (since: 1.16.0) [static]
+standard-article-normative (since: 1.16.0) [static]
+standard-definition-list-non-normative (since: 5.24.0) [static]
+standard-definition-list-normative (since: 5.24.0) [static]
+standard-example-non-normative (since: 1.16.0) [static]
+standard-example-normative (since: 1.16.0) [static]
+standard-image-figure-non-normative (since: 1.16.0) [static]
+standard-image-figure-normative (since: 1.16.0) [static]
+standard-list (since: 1.22.0) [static]
+standard-list-item (since: 1.22.0) [static]
+standard-note-non-normative (since: 1.16.0) [static]
+standard-note-normative (since: 1.16.0) [static]
+standard-remark-non-normative (since: 1.16.0) [static]
+standard-remark-normative (since: 1.16.0) [static]
+standard-remark-table-extended-image-non-normative (since: 1.17.0) [static]
+standard-remark-table-extended-image-normative (since: 1.17.0) [static]
+standard-remark-table-extended-non-normative (since: 1.17.0) [static]
+standard-remark-table-extended-normative (since: 1.17.0) [static]
+standard-remark-table-image-non-normative (since: 1.17.0) [static]
+standard-remark-table-image-normative (since: 1.17.0) [static]
+standard-remark-table-non-normative (since: 1.17.0) [static]
+standard-remark-table-normative (since: 1.17.0) [static]
+standard-table-extended-image-non-normative (since: 1.16.0) [static]
+standard-table-extended-image-normative (since: 1.16.0) [static]
+standard-table-extended-non-normative (since: 1.16.0) [static]
+standard-table-extended-normative (since: 1.16.0) [static]
+standard-table-image-non-normative (since: 1.16.0) [static]
+standard-table-image-normative (since: 1.16.0) [static]
+standard-table-non-normative (since: 1.16.0) [static]
+standard-table-normative (since: 1.16.0) [static]
+statement (since: 1.3.0) [static]
+stdout (since: 1.4.3) [static]
+step (since: 1.5.1) [static, steps]
+step-image-screenshot (since: 1.5.1) [static, steps]
+step-image-screenshot-with-pointer (since: 1.5.1) [static, steps]
+sticker (since: 1.5.28) [static]
+sticky-note (since: 1.3.0) [static]
+still-image-film (since: 1.3.0) [static]
+still-image-film-embed (since: 1.3.0) [static]
+still-image-film-link (since: 1.3.0) [static]
+summary (since: 1.3.0) [static]
+summary-ai (since: 1.3.0) [static]
+survey (since: 1.3.0) [survey, surveys]
+survey-1 (since: 1.3.0) [survey, surveys]
+survey-anonymous (since: 1.3.0) [survey-anonymous, surveys]
+survey-anonymous-1 (since: 1.3.0) [survey-anonymous, surveys]
+survey-matrix (since: 1.6.2) [survey, surveys]
+survey-matrix-me (since: 1.6.2) [survey, surveys]
+survey-rating (since: 1.6.0) [survey, surveys]
+survey-rating-display (since: 1.6.0) [survey, surveys]
+survey-rating-once (since: 1.6.0) [survey, surveys]
+table (since: 1.5.19) [static, tables]
+table-alt (since: 1.16.0) [static, tables]
+table-extended (since: 4.14.0) [tables]
+table-extended-image (since: 5.13.0) [static, tables]
+table-image (since: 1.5.15) [static, tables]
+table-image-alt (since: 1.16.0) [static, tables]
+take-picture (since: 1.3.0) [quizzes, take-picture]
+toc (since: 1.3.0) [static]
+toc-chapter (since: 1.5.5) [static]
+toc-inline (since: 3.24.0) [static]
+toc-resource (since: 3.31.0) [static]
+toc-content (since: 3.31.0) [static]
+true-false (since: 1.3.0) [quizzes, true-false]
+true-false-1 (since: 1.3.0) [quizzes, true-false]
+vendor-amcharts-5-chart (since: 1.5.8) [static]
+vendor-datadog-dashboard (since: 5.2.0) [static]
+vendor-datadog-dashboard-embed (since: 3.12.0) [static]
+vendor-formbricks-embed (since: 3.8.0) [static]
+vendor-formbricks-link (since: 3.8.0) [static]
+vendor-formbricks-embed-anonymous (since: 3.9.0) [static]
+vendor-formbricks-link-anonymous (since: 3.9.0) [static]
+vendor-highcharts-chart (since: 1.5.28) [static]
+vendor-iframely-card (since: 1.5.10) [static]
+vendor-iframely-embed (since: 1.5.10) [static]
+vendor-iframely-preview (since: 1.5.10) [static]
+vendor-iframely-preview-mini (since: 1.5.10) [static]
+vendor-jupyter-cell-code (since: 1.4.3) [static]
+vendor-jupyter-cell-markdown (since: 1.4.3) [static]
+vendor-jupyter-cell-raw (since: 1.4.3) [static]
+vendor-jupyter-ipynb (since: 1.4.3) [static]
+vendor-jupyter-output (since: 1.4.3) [static]
+vendor-learndash-embed (since: 5.0.0) [static]
+vendor-padlet-embed (since: 1.3.0) [static]
+vendor-stripe-pricing-table (since: 1.20.0) [static]
+vendor-stripe-pricing-table-external (since: 3.13.0) [static]
+vendor-stripe-pricing-table-print-on-request (since: 5.21.0) [static]
+video (since: 1.3.0) [static]
+video-embed (since: 1.3.0) [static]
+video-embed-landscape (since: 1.3.0) [static]
+video-embed-portrait (since: 1.3.0) [static]
+video-landscape (since: 1.3.0) [static]
+video-link (since: 1.3.0) [static]
+video-link-landscape (since: 1.3.0) [static]
+video-link-portrait (since: 1.3.0) [static]
+video-portrait (since: 1.3.0) [static]
+video-transcript (since: 1.3.0) [static]
+warning (since: 1.3.0) [static, warning]
+warning-alt (since: 1.16.0) [static]
+warning-collapsible (since: 1.21.0, deprecated: 5.37.0) [static, warning]
+website-link (since: 1.3.0) [static]
+workbook-article (since: 1.3.0) [static]
 
 </pre>
