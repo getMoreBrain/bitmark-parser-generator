@@ -38,10 +38,12 @@ Bodies are ordinary **bitmark++** like every other bit — no new text format
 
 - **Bodies are bitmark++** (2026-09-01): no new `TextFormat` value, no
   `TextParser`/breakscaping/grammar changes. Drops former FR1 entirely.
-- **`.list` may be redefined** (2026-09-01): the existing `list` bits are unused
-  in production, so `.list` is rebased onto the lightweight base (loses
-  instruction/lead/hint and resource attachments). `.standard-list` /
-  `.smart-standard-list` stay article-based and unchanged (out of scope).
+- **The whole list family is redefined** (2026-09-01): the existing list bits
+  are unused in production, so the ENTIRE family is rebased onto the
+  lightweight base (loses instruction/lead/hint and resource attachments):
+  `list`, `list-item`, `standard-list`, `standard-list-item`,
+  `smart-standard-list`, `smart-standard-list-item` (the deprecated
+  `*-collapsible` leaves follow automatically via `baseBitType`).
 - Smart standard naming: `smart-standard-<bit>` only (no normative /
   non-normative split, no `-alt` smart variants — matches `smart-standard-list`).
 - `.h` = title/level + item only: `bodyAllowed: false`, `footerAllowed: false`,
@@ -76,6 +78,20 @@ Bodies are ordinary **bitmark++** like every other bit — no new text format
 | `.list-alt` | `listAlt` | `list` | ← | ← | ← |
 | `.h` | `h` | `_standardLight` | no | levels 1–7 | yes |
 
+List-family rebase (existing bits, chains preserved):
+
+| Bit (existing) | Base today | Base after |
+| --- | --- | --- |
+| `list` | `article` | `_standardLight` |
+| `list-item` | `article` | `_standardLight` |
+| `standard-list` | `article` | `list` |
+| `standard-list-item` | `list-item` | ← (unchanged) |
+| `smart-standard-list` | `standard-list` | ← (unchanged) |
+| `smart-standard-list-item` | `standard-list-item` | ← (unchanged) |
+
+The deprecated `smart-standard-list(-item)-collapsible` bits keep their base
+and inherit the lightweight tag set (and derive `bitGroups`) automatically.
+
 - All: default body format (bitmark++), `since:` next minor version.
 - `.h`: `bodyAllowed: false`, `footerAllowed: false`,
   `tag_title` configured like chapter (`jsonKey: 'title|setMulti(level)'`,
@@ -95,8 +111,9 @@ Bodies are ordinary **bitmark++** like every other bit — no new text format
 
 ## Non-Functional Requirements
 
-- No regression for existing bits: full test suite passes; `chapter`,
-  `article`, `standard-list`, `smart-standard-list` outputs unchanged.
+- No regression for bits outside the list family: full test suite passes;
+  `chapter` and `article` outputs unchanged. List-family fixtures are expected
+  to change (lightweight tag set) and are regenerated + manually verified.
 - No grammar changes expected (header and text grammars untouched). If any
   `.pegjs` changes: regenerate parsers (`npm run build-grammar-*`) —
   staleness test enforces this.
@@ -108,7 +125,8 @@ Bodies are ordinary **bitmark++** like every other bit — no new text format
 1. Merge `main` into this branch first (brings PLAN-020 bit-groups validation).
 2. Enums: `BitType` additions (`p`, `pAlt`, `smartStandardP`, `listAlt`, `h`).
 3. Config: `group_standardItem`, `_standardLight` base, bit entries in
-   `src/config/raw/bits.ts` (incl. `.list` rebase, `bitGroups`, `title`).
+   `src/config/raw/bits.ts` (incl. the list-family rebase, `bitGroups`,
+   `title`).
 4. Parser: title/level processing for `.h`; level validation (D3).
 5. Generators: `.h` title regeneration (`[#`×level`]`).
 6. `JsonParser`/`Builder`: accept new bits round-trip.
@@ -116,9 +134,10 @@ Bodies are ordinary **bitmark++** like every other bit — no new text format
 ## Testing
 
 - `test/standard/input/bitmark/`: new inputs `p.bitmark`, `p-alt.bitmark`,
-  `smart-standard-p.bitmark`, `list-alt.bitmark`, `h.bitmark`, updated
-  `list.bitmark`; expected JSON via `npm run regenerate-bitmark-test-json`
-  after manual verification.
+  `smart-standard-p.bitmark`, `list-alt.bitmark`, `h.bitmark`; existing
+  list-family fixtures (`list`, `list-item`, `standard-list*`,
+  `smart-standard-list*`) updated for the lightweight tag set; expected JSON
+  via `npm run regenerate-bitmark-test-json` after manual verification.
 - Cases: plain body; inline styling; bitmark++ blocks in body (allowed —
   ordinary body behavior); item tag; footer (`.p`/`.list` only); rejected tags
   (instruction/hint/lead → warning); `.h` levels 1, 7, and 8 (D3);
