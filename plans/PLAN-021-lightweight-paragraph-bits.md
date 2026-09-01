@@ -9,7 +9,7 @@ Add lightweight body bits with a **minimal tag set** (no instruction/hint/lead, 
 resource attachments):
 
 - `[.p]`, `[.p-alt]` — lightweight paragraph
-- `[.list]`, `[.list-alt]` — lightweight list (`.list` redefined, see decisions)
+- `[.list]`, `[.list-alt]` — lightweight list (whole list family redefined, see decisions)
 - `[.smart-standard-p]` — smart standard variant (pattern: `smart-standard-list`)
 - `[.h]` — lightweight heading with chapter-style title levels 1–7
 
@@ -18,8 +18,9 @@ Bodies are ordinary **bitmark++** like every other bit — no new text format
 
 ## Background / Current State
 
-- `.list`, `.standard-list`, `.smart-standard-list` already exist, all based on
-  `article` (instruction/lead/hint via `_standard`).
+- The list family already exists: `list`, `list-item`, and `standard-list` are
+  based on `article`; `standard-list-item` and the `smart-standard-list(-item)`
+  variants chain off them (instruction/lead/hint via `_standard`).
 - Item/lead/pageNumber/marginNumber is a single chained tag group
   (`group_standardItemLead` in `src/config/raw/groups.ts`); instruction/hint are
   added by `group_standardItemLeadInstructionHint`; `_standard` pulls all of
@@ -37,7 +38,8 @@ Bodies are ordinary **bitmark++** like every other bit — no new text format
 ## Decisions (resolved with user)
 
 - **Bodies are bitmark++** (2026-09-01): no new `TextFormat` value, no
-  `TextParser`/breakscaping/grammar changes. Drops former FR1 entirely.
+  `TextParser`/breakscaping/grammar changes. Drops the original plan's
+  text-format requirement (old FR1) entirely.
 - **The whole list family is redefined** (2026-09-01): the existing list bits
   are unused in production, so the ENTIRE family is rebased onto the
   lightweight base (loses instruction/lead/hint and resource attachments):
@@ -65,7 +67,8 @@ Bodies are ordinary **bitmark++** like every other bit — no new text format
    `group_standardItem` + `property_example` (same example entry as
    `group_standardTags`). Excluded vs `_standard`: instruction, hint, lead
    (+ chain).
-3. All new bits: `resourceAttachmentAllowed: false`.
+3. `_standardLight` sets `resourceAttachmentAllowed: false` — inherited by all
+   new bits AND the rebased list family.
 
 ### FR2 — Bit definitions
 
@@ -78,7 +81,8 @@ Bodies are ordinary **bitmark++** like every other bit — no new text format
 | `.list-alt` | `listAlt` | `list` | ← | ← | ← |
 | `.h` | `h` | `_standardLight` | no | levels 1–7 | yes |
 
-List-family rebase (existing bits, chains preserved):
+List-family rebase (existing bits; `standard-list` is re-rooted onto `list`,
+the other chain links are unchanged):
 
 | Bit (existing) | Base today | Base after |
 | --- | --- | --- |
@@ -92,13 +96,14 @@ List-family rebase (existing bits, chains preserved):
 The deprecated `smart-standard-list(-item)-collapsible` bits keep their base
 and inherit the lightweight tag set (and derive `bitGroups`) automatically.
 
-- All: default body format (bitmark++), `since:` next minor version.
+- All new bits: default body format (bitmark++), `since:` next minor version
+  (rebased existing bits keep their `since`).
 - `.h`: `bodyAllowed: false`, `footerAllowed: false`,
   `tag_title` configured like chapter (`jsonKey: 'title|setMulti(level)'`,
   `exportJsonKey: { title: '$', level: '$level' }`).
-- PLAN-020 compliance: all new bits declare `bitGroups: [BitGroup.static]`
-  (`.list` keeps its existing membership) and an English `title`
-  (e.g. 'Paragraph', 'List', 'Heading').
+- PLAN-020 compliance: all new bits declare `bitGroups: [BitGroup.static]` and
+  an English `title` (e.g. 'Paragraph', 'Heading'); the rebased existing bits
+  already carry `bitGroups` + `title` (unchanged).
 
 ### FR3 — `.h` title/level processing
 
@@ -122,7 +127,8 @@ and inherit the lightweight tag set (and derive `bitGroups`) automatically.
 
 ## Implementation Outline
 
-1. Merge `main` into this branch first (brings PLAN-020 bit-groups validation).
+1. Merge `main` into this branch first (brings PLAN-020 bit-groups validation)
+   — DONE (`fae9b4b5`).
 2. Enums: `BitType` additions (`p`, `pAlt`, `smartStandardP`, `listAlt`, `h`).
 3. Config: `group_standardItem`, `_standardLight` base, bit entries in
    `src/config/raw/bits.ts` (incl. the list-family rebase, `bitGroups`,
@@ -139,7 +145,7 @@ and inherit the lightweight tag set (and derive `bitGroups`) automatically.
   `smart-standard-list*`) updated for the lightweight tag set; expected JSON
   via `npm run regenerate-bitmark-test-json` after manual verification.
 - Cases: plain body; inline styling; bitmark++ blocks in body (allowed —
-  ordinary body behavior); item tag; footer (`.p`/`.list` only); rejected tags
+  ordinary body behavior); item tag; footer (all bits except `.h`); rejected tags
   (instruction/hint/lead → warning); `.h` levels 1, 7, and 8 (D3);
   `.h` with body → warning/error; resource attachment rejected.
 - Round-trip: bitmark → JSON → bitmark stable for all new bits.
