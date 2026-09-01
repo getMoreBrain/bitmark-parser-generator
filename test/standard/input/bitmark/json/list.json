@@ -70,9 +70,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
@@ -102,10 +102,7 @@
       "id": [
         "151971"
       ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [
+      "item": [
         {
           "type": "paragraph",
           "content": [
@@ -117,6 +114,9 @@
           "attrs": {}
         }
       ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": [
@@ -133,9 +133,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -166,6 +166,130 @@
               "line": 10,
               "column": 27,
               "offset": 219
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%]",
+          "location": {
+            "start": {
+              "line": 12,
+              "column": 4,
+              "offset": 236
+            },
+            "end": {
+              "line": 12,
+              "column": 7,
+              "offset": 239
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 12,
+                "column": 1,
+                "offset": 233
+              },
+              "end": {
+                "line": 12,
+                "column": 4,
+                "offset": 236
+              }
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%]",
+          "location": {
+            "start": {
+              "line": 12,
+              "column": 7,
+              "offset": 239
+            },
+            "end": {
+              "line": 12,
+              "column": 10,
+              "offset": 242
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 12,
+                "column": 4,
+                "offset": 236
+              },
+              "end": {
+                "line": 12,
+                "column": 7,
+                "offset": 239
+              }
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%]",
+          "location": {
+            "start": {
+              "line": 12,
+              "column": 10,
+              "offset": 242
+            },
+            "end": {
+              "line": 12,
+              "column": 13,
+              "offset": 245
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 12,
+                "column": 7,
+                "offset": 239
+              },
+              "end": {
+                "line": 12,
+                "column": 10,
+                "offset": 242
+              }
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%marginNumber]",
+          "location": {
+            "start": {
+              "line": 12,
+              "column": 13,
+              "offset": 245
+            },
+            "end": {
+              "line": 12,
+              "column": 28,
+              "offset": 260
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 12,
+                "column": 10,
+                "offset": 242
+              },
+              "end": {
+                "line": 12,
+                "column": 13,
+                "offset": 245
+              }
             }
           }
         }

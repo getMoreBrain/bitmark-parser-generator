@@ -1,0 +1,19 @@
+[.h]
+[#Top level heading]
+
+[.h]
+[##Second level heading]
+
+[.h]
+[#######Level seven heading]
+
+[.h]
+[###Heading with an item]
+[%4.1]
+
+[.h]
+[########Level eight heading is clamped to seven with a warning]
+
+[.h]
+[##Heading with a body that is not allowed]
+This body is not allowed and generates a warning.

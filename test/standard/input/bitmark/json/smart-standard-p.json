@@ -1,0 +1,75 @@
+[
+  {
+    "bit": {
+      "type": "smart-standard-p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a smart standard paragraph.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.smart-standard-p]\nThis is a smart standard paragraph."
+  },
+  {
+    "bit": {
+      "type": "smart-standard-p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "2",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Smart standard paragraph with an item.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.smart-standard-p]\n[%2]\nSmart standard paragraph with an item."
+  }
+]

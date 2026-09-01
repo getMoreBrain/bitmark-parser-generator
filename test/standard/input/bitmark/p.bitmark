@@ -1,0 +1,23 @@
+[.p]
+This is a lightweight paragraph.
+
+[.p]
+Paragraph with **bold** and __italic__ inline styling.
+
+[.p]
+[%1]
+[@id:9001]
+Paragraph with an item, an id, and a footer.
+~~~~
+The footer of the paragraph.
+
+[.p]
+Body with bitmark++ blocks is ordinary body content.
+
+• Bullet one
+• Bullet two
+
+[.p]
+[!This instruction is not allowed and will be ignored]
+[?This hint is not allowed and will be ignored]
+Paragraph body.

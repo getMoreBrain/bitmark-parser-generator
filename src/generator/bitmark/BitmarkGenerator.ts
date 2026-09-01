@@ -2432,8 +2432,8 @@ class BitmarkGenerator extends AstWalkerGenerator<BitmarkAst, void> {
     const parent = this.getParentNode(route);
     if (parent?.key !== NodeType.bitsValue) return true;
 
-    // Ensure this is a chapter bit
-    if (!Config.isOfBitType(this.bitType, [BitType.chapter])) return true;
+    // Ensure this is a chapter or `.h` heading bit (PLAN-021)
+    if (!Config.isOfBitType(this.bitType, [BitType.chapter, BitType.h])) return true;
 
     const level = node.value as number;
     const bit = parent?.value as Bit;

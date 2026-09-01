@@ -3,6 +3,8 @@ import { type EnumType } from '@ncoderz/superenum';
 const groupKeys = {
   group_accessibilityDecorative: 'group_accessibilityDecorative',
   group_standardAllBits: 'group_standardAllBits',
+  group_standardExample: 'group_standardExample',
+  group_standardItem: 'group_standardItem',
   group_standardItemLead: 'group_standardItemLead',
   group_standardItemLeadInstructionHint: 'group_standardItemLeadInstructionHint',
   group_standardInstructionHint: 'group_standardInstructionHint',
