@@ -4,6 +4,7 @@ const BitType = {
   _error: '_error', // Used for error handling to indicate a bit type that is not supported or a bit parse error
   _comment: '_comment', // Used to indicate a bit is commented out
   _standard: '_standard', // Not to be used as a bit, but as a base for other bit types
+  _standardLight: '_standard-light', // PLAN-021: lightweight base (minimal tag set), not to be used as a bit
   advertising: 'advertising',
   advertisingAdvertorial: 'advertising-advertorial',
   advertisingAdvertorialPage: 'advertising-advertorial-page',
@@ -297,6 +298,7 @@ const BitType = {
   handInSystemMedia: 'hand-in-system-media',
   handInVideo: 'hand-in-video',
   handInVoice: 'hand-in-voice',
+  h: 'h',
   help: 'help',
   helpAlt: 'help-alt',
   highlightText: 'highlight-text',
@@ -382,6 +384,7 @@ const BitType = {
   leWatchVideoEmbed: 'le-watch-video-embed',
   lifeSkillSticker: 'life-skill-sticker',
   list: 'list',
+  listAlt: 'list-alt',
   listItem: 'list-item',
   mark: 'mark',
   match: 'match',
@@ -412,6 +415,8 @@ const BitType = {
   notebookArticle: 'notebook-article',
   noteCollapsible: 'note-collapsible',
   output: 'output',
+  p: 'p',
+  pAlt: 'p-alt',
   page: 'page',
   pageAcademy: 'page-academy',
   pageArticle: 'page-article',
@@ -535,6 +540,7 @@ const BitType = {
   smartStandardNoteNonNormativeCollapsible: 'smart-standard-note-non-normative-collapsible',
   smartStandardNoteNormative: 'smart-standard-note-normative',
   smartStandardNoteNormativeCollapsible: 'smart-standard-note-normative-collapsible',
+  smartStandardP: 'smart-standard-p',
   smartStandardRemarkLegend: 'smart-standard-remark-legend',
   smartStandardRemarkLegendNonNormative: 'smart-standard-remark-legend-non-normative',
   smartStandardRemarkLegendNormative: 'smart-standard-remark-legend-normative',

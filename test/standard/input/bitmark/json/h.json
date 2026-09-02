@@ -1,0 +1,321 @@
+[
+  {
+    "bit": {
+      "type": "h",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Top level heading",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "level": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.h]\n[#Top level heading]"
+  },
+  {
+    "bit": {
+      "type": "h",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Second level heading",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "level": 2,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.h]\n[##Second level heading]"
+  },
+  {
+    "bit": {
+      "type": "h",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Level seven heading",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "level": 7,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.h]\n[#######Level seven heading]"
+  },
+  {
+    "bit": {
+      "type": "h",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Heading with an item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "level": 3,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4.1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.h]\n[###Heading with an item]\n[%4.1]"
+  },
+  {
+    "bit": {
+      "type": "h",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Level eight heading is clamped to seven with a warning",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "level": 7,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "Title level of 8 too high, setting to max value of 7",
+          "text": "[.h]\n[########Level eight heading is clamped to seven with a warning]\n",
+          "location": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 132
+            },
+            "end": {
+              "line": 16,
+              "column": 1,
+              "offset": 202
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.h]\n[########Level eight heading is clamped to seven with a warning]"
+  },
+  {
+    "bit": {
+      "type": "h",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Heading with a body that is not allowed",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "level": 2,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This body is not allowed and generates a warning.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "Bit 'h' should not have a body.",
+          "text": "[.h]\n[##Heading with a body that is not allowed]\nThis body is not allowed and generates a warning.\n",
+          "location": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 203
+            },
+            "end": {
+              "line": 20,
+              "column": 1,
+              "offset": 302
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.h]\n[##Heading with a body that is not allowed]\nThis body is not allowed and generates a warning."
+  },
+  {
+    "bit": {
+      "type": "h",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Heading with a footer that is not allowed",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "level": 2,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This footer is not allowed and generates a warning.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "Bit 'h' should not have a footer.",
+          "text": "[.h]\n[##Heading with a footer that is not allowed]\n~~~~\nThis footer is not allowed and generates a warning.\n",
+          "location": {
+            "start": {
+              "line": 21,
+              "column": 1,
+              "offset": 303
+            },
+            "end": {
+              "line": 25,
+              "column": 1,
+              "offset": 411
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.h]\n[##Heading with a footer that is not allowed]\n~~~~\nThis footer is not allowed and generates a warning."
+  }
+]

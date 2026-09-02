@@ -1,0 +1,361 @@
+[
+  {
+    "bit": {
+      "type": "p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "This is a lightweight paragraph.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.p]\nThis is a lightweight paragraph."
+  },
+  {
+    "bit": {
+      "type": "p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paragraph with ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "bold",
+              "type": "text"
+            },
+            {
+              "text": " and ",
+              "type": "text"
+            },
+            {
+              "marks": [
+                {
+                  "type": "italic"
+                }
+              ],
+              "text": "italic",
+              "type": "text"
+            },
+            {
+              "text": " inline styling.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.p]\nParagraph with **bold** and __italic__ inline styling."
+  },
+  {
+    "bit": {
+      "type": "p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "id": [
+        "9001"
+      ],
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paragraph with an item, an id, and a footer.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "footer": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "The footer of the paragraph.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.p]\n[%1]\n[@id:9001]\nParagraph with an item, an id, and a footer.\n~~~~\nThe footer of the paragraph."
+  },
+  {
+    "bit": {
+      "type": "p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Body with bitmark++ blocks is ordinary body content.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Bullet one",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "text": "Bullet two",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.p]\nBody with bitmark++ blocks is ordinary body content.\n\n• Bullet one\n• Bullet two"
+  },
+  {
+    "bit": {
+      "type": "p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paragraph body.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "'!' tag '!' is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.p]\n[!This instruction is not allowed and will be ignored]\n[?This hint is not allowed and will be ignored]\nParagraph body.\n",
+          "location": {
+            "start": {
+              "line": 20,
+              "column": 1,
+              "offset": 287
+            },
+            "end": {
+              "line": 24,
+              "column": 1,
+              "offset": 411
+            }
+          }
+        },
+        {
+          "message": "'?' tag '?' is not valid here (incorrectly chained?). It will be ignored",
+          "text": "[.p]\n[!This instruction is not allowed and will be ignored]\n[?This hint is not allowed and will be ignored]\nParagraph body.\n",
+          "location": {
+            "start": {
+              "line": 20,
+              "column": 1,
+              "offset": 287
+            },
+            "end": {
+              "line": 24,
+              "column": 1,
+              "offset": 411
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.p]\n[!This instruction is not allowed and will be ignored]\n[?This hint is not allowed and will be ignored]\nParagraph body."
+  },
+  {
+    "bit": {
+      "type": "p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "resource": {
+        "type": "image",
+        "image": {
+          "format": "jpg",
+          "provider": "cdn.bitbook.education",
+          "src": "https://cdn.bitbook.education/cat.jpg",
+          "width": null,
+          "height": null,
+          "alt": "",
+          "zoomDisabled": false,
+          "license": "",
+          "copyright": "",
+          "showInIndex": false,
+          "caption": [],
+          "selected": false
+        }
+      },
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paragraph with a resource attachment, which is not allowed and generates warnings.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.38.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "[&image] is included more than the required 0 time(s). Did you forget the '&image' in the bit header?",
+          "text": "[&image:https://cdn.bitbook.education/cat.jpg]",
+          "location": {
+            "start": {
+              "line": 27,
+              "column": 1,
+              "offset": 506
+            },
+            "end": {
+              "line": 27,
+              "column": 47,
+              "offset": 552
+            }
+          }
+        },
+        {
+          "message": "Resource type [&image] is specified in the bit header, but no extra resource is allowed for this bit.",
+          "text": "[.p&image]\nParagraph with a resource attachment, which is not allowed and generates warnings.\n[&image:https://cdn.bitbook.education/cat.jpg]\n",
+          "location": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 412
+            },
+            "end": {
+              "line": 28,
+              "column": 1,
+              "offset": 553
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.p&image]\nParagraph with a resource attachment, which is not allowed and generates warnings.\n[&image:https://cdn.bitbook.education/cat.jpg]"
+  }
+]

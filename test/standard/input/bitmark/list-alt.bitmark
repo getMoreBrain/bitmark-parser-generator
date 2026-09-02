@@ -1,0 +1,8 @@
+[.list-alt]
+This is a lightweight alternative list.
+
+[.list-alt]
+[%1]
+List alt with an item and a footer.
+~~~~
+The footer of the list.

@@ -38,9 +38,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -71,6 +71,37 @@
               "line": 1,
               "column": 40,
               "offset": 39
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%marginNumber]",
+          "location": {
+            "start": {
+              "line": 3,
+              "column": 13,
+              "offset": 65
+            },
+            "end": {
+              "line": 3,
+              "column": 28,
+              "offset": 80
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 3,
+                "column": 10,
+                "offset": 62
+              },
+              "end": {
+                "line": 3,
+                "column": 13,
+                "offset": 65
+              }
             }
           }
         }
@@ -117,9 +148,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -150,6 +181,37 @@
               "line": 8,
               "column": 44,
               "offset": 139
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%marginNumber]",
+          "location": {
+            "start": {
+              "line": 10,
+              "column": 13,
+              "offset": 165
+            },
+            "end": {
+              "line": 10,
+              "column": 28,
+              "offset": 180
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 10,
+                "column": 10,
+                "offset": 162
+              },
+              "end": {
+                "line": 10,
+                "column": 13,
+                "offset": 165
+              }
             }
           }
         }
@@ -198,9 +260,9 @@
       "example": null
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -231,6 +293,37 @@
               "line": 14,
               "column": 40,
               "offset": 234
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%marginNumber]",
+          "location": {
+            "start": {
+              "line": 16,
+              "column": 13,
+              "offset": 260
+            },
+            "end": {
+              "line": 16,
+              "column": 28,
+              "offset": 275
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 16,
+                "column": 10,
+                "offset": 257
+              },
+              "end": {
+                "line": 16,
+                "column": 13,
+                "offset": 260
+              }
             }
           }
         }
@@ -279,9 +372,9 @@
       "example": null
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -312,6 +405,37 @@
               "line": 21,
               "column": 44,
               "offset": 334
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%marginNumber]",
+          "location": {
+            "start": {
+              "line": 23,
+              "column": 13,
+              "offset": 360
+            },
+            "end": {
+              "line": 23,
+              "column": 28,
+              "offset": 375
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 23,
+                "column": 10,
+                "offset": 357
+              },
+              "end": {
+                "line": 23,
+                "column": 13,
+                "offset": 360
+              }
             }
           }
         }
@@ -391,9 +515,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3"
+      "textParserVersion": "8.41.1"
     },
     "bitmark": "[.standard-image-figure-normative]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]"
   },
@@ -559,9 +683,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3"
+      "textParserVersion": "8.41.1"
     },
     "bitmark": "[.standard-image-figure-non-normative]\nDie Texte und Aufgaben in diesem __fakultativen Teil B__ stellen ein Angebot für Lerner und Lerngruppen dar, die ihre sprachlichen Fähigkeiten zusätzlich erweitern möchten.\n[&backgroundWallpaper:https://miro.medium.com/background.png]\n[&image:https://docs.bitbook.education/bit-books/schubert/schubert_erkundungen_b2/web-resources/images/gesch_ft_kommerz_und_handel_958.png]\n\n====\n[#Legende]\n--\n[#]\n====\nA\n--\nKörper\n====\nB\n--\nStromquelle\n====\n\n~~~~\nOptional Footer"
   },
@@ -573,10 +697,7 @@
       "id": [
         "151971"
       ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [
+      "item": [
         {
           "type": "paragraph",
           "content": [
@@ -588,6 +709,9 @@
           "attrs": {}
         }
       ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": [
@@ -604,9 +728,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -639,6 +763,130 @@
               "offset": 1335
             }
           }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%]",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 4,
+              "offset": 1352
+            },
+            "end": {
+              "line": 59,
+              "column": 7,
+              "offset": 1355
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 59,
+                "column": 1,
+                "offset": 1349
+              },
+              "end": {
+                "line": 59,
+                "column": 4,
+                "offset": 1352
+              }
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%]",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 7,
+              "offset": 1355
+            },
+            "end": {
+              "line": 59,
+              "column": 10,
+              "offset": 1358
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 59,
+                "column": 4,
+                "offset": 1352
+              },
+              "end": {
+                "line": 59,
+                "column": 7,
+                "offset": 1355
+              }
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%]",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 10,
+              "offset": 1358
+            },
+            "end": {
+              "line": 59,
+              "column": 13,
+              "offset": 1361
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 59,
+                "column": 7,
+                "offset": 1355
+              },
+              "end": {
+                "line": 59,
+                "column": 10,
+                "offset": 1358
+              }
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%marginNumber]",
+          "location": {
+            "start": {
+              "line": 59,
+              "column": 13,
+              "offset": 1361
+            },
+            "end": {
+              "line": 59,
+              "column": 28,
+              "offset": 1376
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 59,
+                "column": 10,
+                "offset": 1358
+              },
+              "end": {
+                "line": 59,
+                "column": 13,
+                "offset": 1361
+              }
+            }
+          }
         }
       ]
     },
@@ -652,10 +900,7 @@
       "id": [
         "151971"
       ],
-      "item": [],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [
+      "item": [
         {
           "type": "paragraph",
           "content": [
@@ -667,6 +912,9 @@
           "attrs": {}
         }
       ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": [
@@ -684,9 +932,9 @@
       "listItemIndent": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -717,6 +965,130 @@
               "line": 63,
               "column": 32,
               "offset": 1426
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%]",
+          "location": {
+            "start": {
+              "line": 65,
+              "column": 4,
+              "offset": 1443
+            },
+            "end": {
+              "line": 65,
+              "column": 7,
+              "offset": 1446
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 65,
+                "column": 1,
+                "offset": 1440
+              },
+              "end": {
+                "line": 65,
+                "column": 4,
+                "offset": 1443
+              }
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%]",
+          "location": {
+            "start": {
+              "line": 65,
+              "column": 7,
+              "offset": 1446
+            },
+            "end": {
+              "line": 65,
+              "column": 10,
+              "offset": 1449
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 65,
+                "column": 4,
+                "offset": 1443
+              },
+              "end": {
+                "line": 65,
+                "column": 7,
+                "offset": 1446
+              }
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%]",
+          "location": {
+            "start": {
+              "line": 65,
+              "column": 10,
+              "offset": 1449
+            },
+            "end": {
+              "line": 65,
+              "column": 13,
+              "offset": 1452
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 65,
+                "column": 7,
+                "offset": 1446
+              },
+              "end": {
+                "line": 65,
+                "column": 10,
+                "offset": 1449
+              }
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%marginNumber]",
+          "location": {
+            "start": {
+              "line": 65,
+              "column": 13,
+              "offset": 1452
+            },
+            "end": {
+              "line": 65,
+              "column": 28,
+              "offset": 1467
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 65,
+                "column": 10,
+                "offset": 1449
+              },
+              "end": {
+                "line": 65,
+                "column": 13,
+                "offset": 1452
+              }
             }
           }
         }
@@ -739,9 +1111,9 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3"
+      "textParserVersion": "8.41.1"
     },
     "bitmark": "[.standard-list-item:bitmark++]\n[@listItemIndent:5]"
   },
@@ -784,9 +1156,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -817,6 +1189,37 @@
               "line": 72,
               "column": 37,
               "offset": 1575
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%marginNumber]",
+          "location": {
+            "start": {
+              "line": 74,
+              "column": 13,
+              "offset": 1601
+            },
+            "end": {
+              "line": 74,
+              "column": 28,
+              "offset": 1616
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 74,
+                "column": 10,
+                "offset": 1598
+              },
+              "end": {
+                "line": 74,
+                "column": 13,
+                "offset": 1601
+              }
             }
           }
         }
@@ -863,9 +1266,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -896,6 +1299,37 @@
               "line": 79,
               "column": 41,
               "offset": 1672
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%marginNumber]",
+          "location": {
+            "start": {
+              "line": 81,
+              "column": 13,
+              "offset": 1698
+            },
+            "end": {
+              "line": 81,
+              "column": 28,
+              "offset": 1713
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 81,
+                "column": 10,
+                "offset": 1695
+              },
+              "end": {
+                "line": 81,
+                "column": 13,
+                "offset": 1698
+              }
             }
           }
         }
@@ -942,9 +1376,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -975,6 +1409,37 @@
               "line": 85,
               "column": 39,
               "offset": 1766
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%marginNumber]",
+          "location": {
+            "start": {
+              "line": 87,
+              "column": 13,
+              "offset": 1792
+            },
+            "end": {
+              "line": 87,
+              "column": 28,
+              "offset": 1807
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 87,
+                "column": 10,
+                "offset": 1789
+              },
+              "end": {
+                "line": 87,
+                "column": 13,
+                "offset": 1792
+              }
             }
           }
         }
@@ -1021,9 +1486,9 @@
       ]
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -1054,6 +1519,37 @@
               "line": 92,
               "column": 43,
               "offset": 1865
+            }
+          }
+        },
+        {
+          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
+          "text": "[%marginNumber]",
+          "location": {
+            "start": {
+              "line": 94,
+              "column": 13,
+              "offset": 1891
+            },
+            "end": {
+              "line": 94,
+              "column": 28,
+              "offset": 1906
+            }
+          },
+          "original": {
+            "text": "[%]",
+            "location": {
+              "start": {
+                "line": 94,
+                "column": 10,
+                "offset": 1888
+              },
+              "end": {
+                "line": 94,
+                "column": 13,
+                "offset": 1891
+              }
             }
           }
         }
@@ -1095,9 +1591,9 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -1169,9 +1665,9 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -1243,9 +1739,9 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -1317,9 +1813,9 @@
       "body": []
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3",
+      "textParserVersion": "8.41.1",
       "warnings": [
         {
           "message": "Invalid text format 'bitmark--', defaulting to 'bitmark++'",
@@ -1497,13 +1993,12 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
-
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3"
+      "textParserVersion": "8.41.1"
     },
     "bitmark": "[.standard-table-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -1647,13 +2142,12 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
-
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3"
+      "textParserVersion": "8.41.1"
     },
     "bitmark": "[.standard-table-non-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -1797,13 +2291,12 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
-
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3"
+      "textParserVersion": "8.41.1"
     },
     "bitmark": "[.standard-remark-table-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   },
@@ -1947,13 +2440,12 @@
       "tableWhitespaceNoWrap": false,
       "tableAutoWidth": true,
       "tableResizableColumns": false,
-
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.1.0",
+      "version": "5.38.0",
       "bitmarkVersion": "3",
-      "textParserVersion": "8.37.3"
+      "textParserVersion": "8.41.1"
     },
     "bitmark": "[.standard-remark-table-non-normative]\n[@tableFixedHeader:true]\n[@tableSearch:true]\n[@tableSort:true]\n[@tablePagination:true]\n====\n[#Name]\n--\n[#Email]\n--\n[#Phone Number]\n====\nJohn\n--\njohn@example.com\n--\n(353) 01 222 3333\n====\nMark\n--\nmark@gmail.com\n--\n(01) 22 888 4444\n===="
   }

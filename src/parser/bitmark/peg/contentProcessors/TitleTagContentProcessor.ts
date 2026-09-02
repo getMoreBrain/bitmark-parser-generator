@@ -46,21 +46,38 @@ function titleTagContentProcessor(
   };
 }
 
+/**
+ * PLAN-021 (D3): maximum title level for `.h` heading bits. Chapter is unclamped
+ * (unchanged legacy behavior).
+ */
+const H_TITLE_LEVEL_MAX = 7;
+
 function buildTitles(
-  _context: BitmarkPegParserContext,
+  context: BitmarkPegParserContext,
   bitType: BitTypeType,
   title: { titleAst: TextAst; titleString: string }[] | undefined,
 ): BitSpecificTitles {
   title = title ?? [];
 
-  if (Config.isOfBitType(bitType, BitType.chapter)) {
+  // Chapter and `.h` (PLAN-021) emit title + level rather than title/subtitle
+  if (Config.isOfBitType(bitType, [BitType.chapter, BitType.h])) {
     let t: { titleAst: TextAst; titleString: string } | undefined;
     if (title.length > 0) t = title[title.length - 1];
+
+    let level: number | undefined = title.length > 0 ? title.length - 1 : undefined;
+
+    // PLAN-021 (D3): `.h` title levels are 1-7; warn + clamp when exceeded
+    if (level != null && level > H_TITLE_LEVEL_MAX && Config.isOfBitType(bitType, BitType.h)) {
+      context.addWarning(
+        `Title level of ${level} too high, setting to max value of ${H_TITLE_LEVEL_MAX}`,
+      );
+      level = H_TITLE_LEVEL_MAX;
+    }
 
     return {
       title: t?.titleAst ?? [],
       titleString: t?.titleString ?? '',
-      level: title.length > 0 ? title.length - 1 : undefined,
+      level,
     };
   } else {
     if (Array.isArray(title)) {

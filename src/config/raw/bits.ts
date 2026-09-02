@@ -32,6 +32,26 @@ const BITS: _BitsConfig = {
     ],
   },
 
+  [BitType._standardLight]: {
+    since: '5.39.0',
+    description:
+      'PLAN-021: Lightweight standard base bit with a minimal tag set (item + example only — no instruction/hint/lead, no resource attachments), used as a base for other bits, should not be used directly',
+    resourceAttachmentAllowed: false,
+    tags: [
+      {
+        key: ConfigKey.group_standardAllBits,
+        description: 'Standard tags for all bits',
+      },
+      {
+        key: ConfigKey.group_standardItem,
+        description: 'The item tag (no lead/pageNumber/marginNumber chain)',
+      },
+      {
+        key: ConfigKey.group_standardExample,
+        description: 'The bit-level example property',
+      },
+    ],
+  },
   [BitType.appFlashcards]: {
     since: '1.3.0',
     title: 'Flashcards',
@@ -2910,6 +2930,24 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.article,
     description: 'Glossary term bit, used to define glossary terms in articles or books',
   },
+  [BitType.h]: {
+    since: '5.39.0',
+    title: 'Heading',
+    bitGroups: [BitGroup.static],
+    baseBitType: BitType._standardLight,
+    description:
+      'Lightweight heading bit with chapter-style title levels 1-7; title/level + item only — no body, no footer',
+    bodyAllowed: false,
+    footerAllowed: false,
+    tags: [
+      {
+        key: ConfigKey.tag_title,
+        description: 'The title of the heading',
+        jsonKey: 'title|setMulti(level)',
+        exportJsonKey: { title: '$', level: '$level' },
+      },
+    ],
+  },
   [BitType.help]: {
     since: '1.3.0',
     title: 'Help',
@@ -3118,13 +3156,22 @@ const BITS: _BitsConfig = {
     since: '1.22.0',
     title: 'List',
     bitGroups: [BitGroup.static],
-    baseBitType: BitType.article,
+    // PLAN-021: rebased from article onto the lightweight base
+    baseBitType: BitType._standardLight,
     description: 'List bit, used to create lists in articles or books',
+  },
+  [BitType.listAlt]: {
+    since: '5.39.0',
+    title: 'List Alt',
+    bitGroups: [BitGroup.static],
+    baseBitType: BitType.list,
+    description: 'Lightweight list bit (alternative), based on list',
   },
   [BitType.standardList]: {
     since: '1.22.0',
     bitGroups: [BitGroup.static],
-    baseBitType: BitType.article,
+    // PLAN-021: re-rooted from article onto the lightweight list
+    baseBitType: BitType.list,
     description: 'Standard list bit, used to create standard lists in articles or books',
   },
   [BitType.smartStandardList]: {
@@ -3140,6 +3187,13 @@ const BITS: _BitsConfig = {
     mappingKeys: {
       'xml-niso-iec': { '@el': 'ref-list', '@attr': { id: '$customerId' }, '▼': '$anchor' },
     },
+  },
+  [BitType.smartStandardP]: {
+    since: '5.39.0',
+    title: 'Smart Standard Paragraph',
+    bitGroups: [BitGroup.static],
+    baseBitType: BitType.p,
+    description: 'Smart standard paragraph bit, based on p',
   },
   [BitType.smartStandardListCollapsible]: {
     since: '1.28.0',
@@ -5848,7 +5902,8 @@ const BITS: _BitsConfig = {
   [BitType.listItem]: {
     since: '1.22.0',
     bitGroups: [BitGroup.static],
-    baseBitType: BitType.article,
+    // PLAN-021: rebased from article onto the lightweight base
+    baseBitType: BitType._standardLight,
     description: 'List item bit, used to create list items in articles or books',
     tags: [
       {
@@ -6270,6 +6325,20 @@ const BITS: _BitsConfig = {
     baseBitType: BitType.multipleResponse,
     description:
       'Coach self-reflection multiple response bit, used for self-reflection in coaching',
+  },
+  [BitType.p]: {
+    since: '5.39.0',
+    title: 'Paragraph',
+    bitGroups: [BitGroup.static],
+    baseBitType: BitType._standardLight,
+    description: 'Lightweight paragraph bit with a minimal tag set',
+  },
+  [BitType.pAlt]: {
+    since: '5.39.0',
+    title: 'Paragraph Alt',
+    bitGroups: [BitGroup.static],
+    baseBitType: BitType.p,
+    description: 'Lightweight paragraph bit (alternative), based on p',
   },
   [BitType.page]: {
     since: '1.3.0',

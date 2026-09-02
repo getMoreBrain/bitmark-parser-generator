@@ -473,6 +473,33 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
+  [ConfigKey.group_standardExample]: {
+    type: GroupConfigType.standard,
+    description:
+      'PLAN-021: Standard group for the bit-level example property only. Mirror of the group_standardTags property_example entry, used by the lightweight bits (_standardLight).',
+    tags: [
+      {
+        key: ConfigKey.property_example,
+        exportJsonKey: [{ '@keyonly': {} }, { '@absent': { isExample: true } }, { example: '$' }],
+        description: 'The example(s) for the bit',
+        format: TagFormat.bitmarkText,
+        nullable: true,
+      },
+    ],
+  },
+  [ConfigKey.group_standardItem]: {
+    type: GroupConfigType.standard,
+    description:
+      'PLAN-021: Standard group for the item tag ONLY (no lead/pageNumber/marginNumber chain). Used by the lightweight bits (_standardLight).',
+    tags: [
+      {
+        key: ConfigKey.tag_item,
+        jsonKey: 'item',
+        exportJsonKey: { item: '$' },
+        description: 'The item for the bit',
+      },
+    ],
+  },
   [ConfigKey.group_standardItemLead]: {
     type: GroupConfigType.standard,
     description: 'Standard group for item, lead, page number, and margin number tags',
