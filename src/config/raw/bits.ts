@@ -33,7 +33,7 @@ const BITS: _BitsConfig = {
   },
 
   [BitType._standardLight]: {
-    since: '5.39.0',
+    since: '5.40.0',
     description:
       'PLAN-021: Lightweight standard base bit with a minimal tag set (item + example only — no instruction/hint/lead, no resource attachments), used as a base for other bits, should not be used directly',
     resourceAttachmentAllowed: false,
@@ -2931,7 +2931,7 @@ const BITS: _BitsConfig = {
     description: 'Glossary term bit, used to define glossary terms in articles or books',
   },
   [BitType.h]: {
-    since: '5.39.0',
+    since: '5.40.0',
     title: 'Heading',
     bitGroups: [BitGroup.static],
     baseBitType: BitType._standardLight,
@@ -3161,7 +3161,7 @@ const BITS: _BitsConfig = {
     description: 'List bit, used to create lists in articles or books',
   },
   [BitType.listAlt]: {
-    since: '5.39.0',
+    since: '5.40.0',
     title: 'List Alt',
     bitGroups: [BitGroup.static],
     baseBitType: BitType.list,
@@ -3189,7 +3189,7 @@ const BITS: _BitsConfig = {
     },
   },
   [BitType.smartStandardP]: {
-    since: '5.39.0',
+    since: '5.40.0',
     title: 'Smart Standard Paragraph',
     bitGroups: [BitGroup.static],
     baseBitType: BitType.p,
@@ -6327,14 +6327,14 @@ const BITS: _BitsConfig = {
       'Coach self-reflection multiple response bit, used for self-reflection in coaching',
   },
   [BitType.p]: {
-    since: '5.39.0',
+    since: '5.40.0',
     title: 'Paragraph',
     bitGroups: [BitGroup.static],
     baseBitType: BitType._standardLight,
     description: 'Lightweight paragraph bit with a minimal tag set',
   },
   [BitType.pAlt]: {
-    since: '5.39.0',
+    since: '5.40.0',
     title: 'Paragraph Alt',
     bitGroups: [BitGroup.static],
     baseBitType: BitType.p,
