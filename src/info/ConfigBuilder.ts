@@ -4,9 +4,11 @@ import { Enum } from '@ncoderz/superenum';
 import fs from 'fs-extra';
 
 import { Config } from '../config/Config.ts';
+import { BIT_GROUPS } from '../config/raw/bitGroups.ts';
 import { BITS } from '../config/raw/bits.ts';
 import { CARDS } from '../config/raw/cardSets.ts';
 import { GROUPS } from '../config/raw/groups.ts';
+import { RESOURCE_GROUPS } from '../config/raw/resourceGroups.ts';
 import type {
   _AbstractTagConfig,
   _BitConfig,
@@ -79,9 +81,14 @@ class ConfigBuilder {
     const outputFolderBits = path.join(outputFolder, 'bits');
     const outputFolderGroups = path.join(outputFolder, 'groups');
     const outputFolderCards = path.join(outputFolder, 'cards');
+    // PLAN-020: bit-group / resource-group registries (search/filter categories)
+    const outputFolderBitGroups = path.join(outputFolder, 'bit-groups');
+    const outputFolderResourceGroups = path.join(outputFolder, 'resource-groups');
     fs.ensureDirSync(outputFolderBits);
     fs.ensureDirSync(outputFolderGroups);
     fs.ensureDirSync(outputFolderCards);
+    fs.ensureDirSync(outputFolderBitGroups);
+    fs.ensureDirSync(outputFolderResourceGroups);
 
     // Clean up existing config files
     const bitsFiles = fs.readdirSync(outputFolderBits).filter((f) => f.endsWith('.jsonc'));
@@ -95,6 +102,18 @@ class ConfigBuilder {
     const cardsFiles = fs.readdirSync(outputFolderCards).filter((f) => f.endsWith('.jsonc'));
     for (const file of cardsFiles) {
       fs.removeSync(path.join(outputFolderCards, file));
+    }
+    const bitGroupsFiles = fs
+      .readdirSync(outputFolderBitGroups)
+      .filter((f) => f.endsWith('.jsonc'));
+    for (const file of bitGroupsFiles) {
+      fs.removeSync(path.join(outputFolderBitGroups, file));
+    }
+    const resourceGroupsFiles = fs
+      .readdirSync(outputFolderResourceGroups)
+      .filter((f) => f.endsWith('.jsonc'));
+    for (const file of resourceGroupsFiles) {
+      fs.removeSync(path.join(outputFolderResourceGroups, file));
     }
     const fileWrites: Promise<void>[] = [];
     const tagEntriesTypeOrder = [
@@ -170,6 +189,52 @@ class ConfigBuilder {
       return tag.jsonKey == null || tag.jsonKey === bare;
     };
 
+    // PLAN-152 (bitmark-parser): required `default` (null = omit) + `alwaysEmit`.
+    // EVERY exported tag carries a `default`:
+    //   - JSON null means OMIT: absence is the canonical state — an absent
+    //     input stays absent in every mode (formerly `nullable`; bitmark
+    //     cannot represent null, so null is always spelled by absence).
+    //   - otherwise a value: the authored non-natural defaultValue, else the
+    //     format natural ('false' / '0' / '').
+    // `alwaysEmit: true` (emitted only when true) forces emission even in
+    // optimized mode. A non-natural default is always emitted, so it REQUIRES
+    // alwaysEmit: true; omit + alwaysEmit is invalid (parser-side confgen
+    // enforces both — see the PLAN-152 truth table).
+    const naturalDefaultFor = (format: string): string | undefined => {
+      switch (format) {
+        case 'boolean':
+          return 'false';
+        case 'number':
+          return '0';
+        case 'numberList4':
+          return undefined; // no representable natural — default is omit
+        default:
+          return ''; // '', 'string', 'bitmark+'
+      }
+    };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const defaultAndAlwaysEmitFields = (tag: any, format: string): object => {
+      const natural = naturalDefaultFor(format);
+      if (natural === undefined) return { default: null }; // numberList4
+      if (tag.defaultValue != null && tag.defaultValue !== natural) {
+        // Non-natural default: always emitted (nullable or not).
+        return { default: tag.defaultValue, alwaysEmit: true };
+      }
+      // Legacy nullable → omit (a natural defaultValue alongside is dropped:
+      // absence-distinct semantics dominate). Contradicts alwaysEmit — omit
+      // ignores the flag — so fail loud.
+      if (tag.nullable) {
+        if (tag.alwaysEmit) {
+          throw new Error('nullable + alwaysEmit is contradictory (tag ' + tag.key + ')');
+        }
+        return { default: null };
+      }
+      // Authored alwaysEmit: pin a natural-default key (e.g. chapter's
+      // @isCollapsible — always emitted, defaults false).
+      if (tag.alwaysEmit) return { default: natural, alwaysEmit: true };
+      return { default: natural };
+    };
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const processTagEntries = (tag: any, pathStack: string[]): any[] => {
       const tags: unknown[] = [];
@@ -180,7 +245,7 @@ class ConfigBuilder {
       let chain: any = undefined;
 
       // Tag value formats use the stored vocabulary directly
-      // (string | boolean | bitmark+ | number | coordinates); `string` is the
+      // (string | boolean | bitmark+ | number | numberList4); `string` is the
       // natural default and is omitted on emission.
       if (tagType === BitTagConfigKeyType.tag) {
         tagName = tag.key;
@@ -204,8 +269,8 @@ class ConfigBuilder {
           format = 'bitmark+';
         } else if (tag.format === TagFormat.number) {
           format = 'number';
-        } else if (tag.format === TagFormat.coordinates) {
-          format = 'coordinates';
+        } else if (tag.format === TagFormat.numberList4) {
+          format = 'numberList4';
         } else if (tag.format === TagFormat.enumeration) {
           format = 'enum';
         }
@@ -288,8 +353,7 @@ class ConfigBuilder {
         ),
         ...(format && format !== 'string' ? { format } : {}),
         ...(tag.values != null ? { values: tag.values } : {}),
-        ...(tag.defaultValue != null ? { default: tag.defaultValue } : {}),
-        ...(tag.nullable ? { nullable: true } : {}),
+        ...defaultAndAlwaysEmitFields(tag, format),
         ...(tag.minCount != null && tag.minCount !== 0 ? { min: tag.minCount } : {}),
         ...(tag.maxCount != null && tag.maxCount !== 1 ? { max: tag.maxCount } : {}),
         description: tag.description ?? '',
@@ -694,9 +758,17 @@ class ConfigBuilder {
       // for hand-authored provenance).
       const bitJson = {
         name: b.bitType,
+        // PLAN-020: English display name; non-en translations are NOT exported (D13)
+        title: resolvedBitConfig.title,
         description: b.description ?? '',
+        // PLAN-020: resolved bit-group memberships (D6 derivation applied) — the new
+        // parser needs no derivation logic. Omitted when empty (internal bits).
+        bitGroups: resolvedBitConfig.bitGroups.length > 0 ? resolvedBitConfig.bitGroups : undefined,
         since: resolvedBitConfig.since,
         deprecated: resolvedBitConfig.deprecated,
+        // PLAN-017 migration target (config-derived); lets downstream engines
+        // remap deprecated bit types without any name-based logic.
+        migrateTo: Config.getMigratedBitType(b.bitType),
         bodyFormat: resolvedBitConfig.textFormatDefault ?? 'bitmark--',
         ...(resolvedBitConfig.bodyRequired ? { bodyRequired: true } : {}),
         ...(resolvedBitConfig.bodyAllowed === false ? { bodyForbidden: true } : {}),
@@ -857,6 +929,44 @@ class ConfigBuilder {
     writeBitsAsGroupConfigs(bitGroupConfigs);
 
     writeCardConfigs();
+
+    // PLAN-020: bit-group registry export (assets/config/bit-groups/*.jsonc).
+    // METADATA ONLY: key, aliases, en title, description, subgroupOf, allowEmpty.
+    //
+    // Deliberately NO member list (revises D13's "lossless" intent, PLAN-173 P1a):
+    // membership is authored per bit (`bitGroups` in bits.ts, exported on each bit's
+    // jsonc) and that is its single home. This tree is the consuming parser's INPUT
+    // config and becomes hand-maintained; a member list here would be a second home
+    // for the same fact, which no human could keep in sync with 671 bit files.
+    // Consumers invert the per-bit direction — a trivial, drift-free derivation.
+    for (const [key, g] of Object.entries(BIT_GROUPS)) {
+      const json = {
+        name: key,
+        aliases: g.aliases,
+        title: g.title,
+        description: g.description,
+        subgroupOf: g.subgroupOf,
+        since: g.since,
+        ...(g.allowEmpty ? { allowEmpty: true } : {}),
+      };
+      const output = path.join(outputFolderBitGroups, `${key}.jsonc`);
+      fileWrites.push(fs.writeFile(output, JSON.stringify(json, null, 2)));
+    }
+
+    // PLAN-020: resource-group registry export (assets/config/resource-groups/*.jsonc).
+    // Members are canonical kebab-case ResourceType values only (D10).
+    for (const [key, g] of Object.entries(RESOURCE_GROUPS)) {
+      const json = {
+        name: key,
+        aliases: g.aliases,
+        title: g.title,
+        description: g.description,
+        since: g.since,
+        resourceTypes: Config.getResourceTypesForResourceGroups([key]),
+      };
+      const output = path.join(outputFolderResourceGroups, `${key}.jsonc`);
+      fileWrites.push(fs.writeFile(output, JSON.stringify(json, null, 2)));
+    }
 
     // Fail fast on missing exportJsonKey before any file write — this is a
     // source-config error and the on-disk output would be wrong.

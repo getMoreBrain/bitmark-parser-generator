@@ -9,12 +9,24 @@ import { type JsonOptions } from './generator/json/JsonGenerator.ts';
 import { JsonObjectGenerator } from './generator/json/JsonObjectGenerator.ts';
 // import { TextFormat, TextFormatType } from './model/enum/TextFormat.ts';
 import { TextGenerator } from './generator/text/TextGenerator.ts';
-import { InfoBuilder, type SupportedBit } from './info/InfoBuilder.ts';
+import {
+  type BitGroupInfo,
+  type BitGroupsOptions,
+  InfoBuilder,
+  type ResourceGroupInfo,
+  type ResourceGroupsOptions,
+  type SupportedBit,
+} from './info/InfoBuilder.ts';
 import { type BitmarkAst } from './model/ast/Nodes.ts';
+import { type BitGroupType } from './model/enum/BitGroup.ts';
 import { BitmarkParserType, type BitmarkParserTypeType } from './model/enum/BitmarkParserType.ts';
 import { BitmarkVersion, type BitmarkVersionType } from './model/enum/BitmarkVersion.ts';
+import { type BitTypeType } from './model/enum/BitType.ts';
+import { type ResourceGroupType } from './model/enum/ResourceGroup.ts';
+import { type ResourceTypeType } from './model/enum/ResourceType.ts';
 import { InfoFormat, type InfoFormatType } from './model/info/enum/InfoFormat.ts';
 import { InfoType, type InfoTypeType } from './model/info/enum/InfoType.ts';
+import { type TranslationsData } from './model/TranslationsData.ts';
 import { BitmarkParser } from './parser/bitmark/BitmarkParser.ts';
 import { type HtmlTableFormat, HtmlTableParser } from './parser/html/HtmlTableParser.ts';
 import { JsonParser } from './parser/json/JsonParser.ts';
@@ -71,6 +83,8 @@ export interface InfoOptions {
    * - deprecated: list of deprecated bits
    * - all: list of supported bits and deprecated bits
    * - bit: configuration for a specific bit, or all bits
+   * - bitGroups: all bit groups with their member bit types (PLAN-020)
+   * - resourceGroups: all resource groups with their member resource types (PLAN-020)
    */
   type?: InfoTypeType;
 
@@ -513,7 +527,28 @@ class BitmarkParserGenerator {
     const includeNonDeprecated = all || !deprecated;
     const includeDeprecated = all || deprecated;
 
-    if (opts.type === InfoType.bit) {
+    if (opts.type === InfoType.bitGroups) {
+      // PLAN-020: full bit-group catalog
+      const bitGroups = builder.getBitGroups();
+      if (outputString) {
+        res = bitGroups
+          .map(
+            (g) =>
+              `${g.key}${g.subgroupOf ? ` (subgroup of: ${g.subgroupOf})` : ''}\n  ${g.bitTypes.join(', ')}`,
+          )
+          .join('\n');
+      } else {
+        res = bitGroups;
+      }
+    } else if (opts.type === InfoType.resourceGroups) {
+      // PLAN-020: full resource-group catalog
+      const resourceGroups = builder.getResourceGroups();
+      if (outputString) {
+        res = resourceGroups.map((g) => `${g.key}\n  ${g.resourceTypes.join(', ')}`).join('\n');
+      } else {
+        res = resourceGroups;
+      }
+    } else if (opts.type === InfoType.bit) {
       const bitConfigs = builder.getSupportedBitConfigs().filter((b) => {
         if (!opts.bit) return true;
         const bitType = Config.getBitType(opts.bit);
@@ -556,6 +591,118 @@ class BitmarkParserGenerator {
     }
 
     return res;
+  }
+
+  /**
+   * PLAN-020: Register translated display names for bit types, bit groups, and resource
+   * groups.
+   *
+   * The data is provided by the `./translations` subpath export (kept out of the main
+   * bundle for size). Without registration, all name lookups fall back to the inline
+   * English titles / technical keys.
+   *
+   * ```ts
+   * import { TRANSLATIONS } from '@gmb/bitmark-parser-generator/translations';
+   * bpg.registerTranslations(TRANSLATIONS);
+   * ```
+   */
+  public registerTranslations(data: TranslationsData): void {
+    Config.registerTranslations(data);
+  }
+
+  /**
+   * PLAN-020: Get all known bit groups, each with its aliases, description, resolved
+   * title, subgroupOf metadata, and member bit types.
+   *
+   * @param options language (title resolution), subgroupOf (filter, e.g. 'quizzes' for
+   *        quiz categories), includeDeprecated (default: true)
+   */
+  public getBitGroups(options?: BitGroupsOptions): BitGroupInfo[] {
+    return new InfoBuilder().getBitGroups(options);
+  }
+
+  /**
+   * PLAN-020: Get all known resource groups, each with its member resource types
+   * (canonical kebab-case values only).
+   */
+  public getResourceGroups(options?: ResourceGroupsOptions): ResourceGroupInfo[] {
+    return new InfoBuilder().getResourceGroups(options);
+  }
+
+  /**
+   * PLAN-020: Get all bit types belonging to one or more bit groups (union, deduped,
+   * sorted). Serves search queries such as `g=cloze&g=table`. Inputs may be canonical
+   * keys or aliases; unknown inputs are ignored.
+   *
+   * @param options includeDeprecated: include deprecated bit types (default: true —
+   *        stored legacy content must still be found by search)
+   */
+  public getBitTypesForBitGroups(
+    bitGroups: (BitGroupType | string)[],
+    options?: { includeDeprecated?: boolean },
+  ): BitTypeType[] {
+    return Config.getBitTypesForBitGroups(bitGroups, options);
+  }
+
+  /**
+   * PLAN-020: Get the bit groups that one or more bit types belong to, with resolved
+   * titles and members. Unknown bit types are ignored.
+   */
+  public getBitGroupsForBitTypes(
+    bitTypes: (BitTypeType | string)[],
+    options?: BitGroupsOptions,
+  ): BitGroupInfo[] {
+    return new InfoBuilder().getBitGroupsForBitTypes(bitTypes, options);
+  }
+
+  /**
+   * PLAN-020: Get the resource types belonging to one or more resource groups (union,
+   * deduped, sorted; canonical kebab-case values only — normalize legacy camelCase
+   * spellings such as `imageLink` before matching).
+   */
+  public getResourceTypesForResourceGroups(
+    resourceGroups: (ResourceGroupType | string)[],
+  ): ResourceTypeType[] {
+    return Config.getResourceTypesForResourceGroups(resourceGroups);
+  }
+
+  /**
+   * PLAN-020: Get the resource groups that one or more resource types belong to.
+   */
+  public getResourceGroupsForResourceTypes(
+    resourceTypes: (ResourceTypeType | string)[],
+  ): ResourceGroupType[] {
+    return Config.getResourceGroupsForResourceTypes(resourceTypes);
+  }
+
+  /**
+   * PLAN-020: Get the translated display name of a bit type.
+   *
+   * Fallback chain: requested BCP-47 tag (progressively stripping subtags:
+   * `de-CH` → `de`) → English title → technical key. Non-English languages require
+   * {@link registerTranslations}.
+   */
+  public getBitTitle(bitType: BitTypeType | string, language?: string): string {
+    return Config.getBitTitle(bitType, language);
+  }
+
+  /**
+   * PLAN-020: Get the translated display name of a bit group (key or alias accepted).
+   * Fallback chain as {@link getBitTitle}.
+   */
+  public getBitGroupTitle(bitGroup: BitGroupType | string, language?: string): string {
+    return Config.getBitGroupTitle(bitGroup, language);
+  }
+
+  /**
+   * PLAN-020: Get the translated display name of a resource group (key or alias
+   * accepted). Fallback chain as {@link getBitTitle}.
+   */
+  public getResourceGroupTitle(
+    resourceGroup: ResourceGroupType | string,
+    language?: string,
+  ): string {
+    return Config.getResourceGroupTitle(resourceGroup, language);
   }
 
   /**
@@ -1469,7 +1616,10 @@ class BitmarkParserGenerator {
     for (const rootBit of supportedBits) {
       res += `${rootBit.name} (since: ${rootBit.since}`;
       if (rootBit.deprecated) res += `, deprecated: ${rootBit.deprecated}`;
-      res += ')\n';
+      res += ')';
+      // PLAN-020: bit-group memberships
+      if (rootBit.bitGroups) res += ` [${rootBit.bitGroups.join(', ')}]`;
+      res += '\n';
     }
 
     return res;

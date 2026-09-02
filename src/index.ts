@@ -10,11 +10,13 @@ export { BitmarkStringGenerator } from './generator/bitmark/BitmarkStringGenerat
 export { JsonGenerator } from './generator/json/JsonGenerator.ts';
 export { JsonStringGenerator } from './generator/json/JsonStringGenerator.ts';
 export { NodeType } from './model/ast/NodeType.ts';
+export { BitGroup } from './model/enum/BitGroup.ts';
 export { BitmarkParserType } from './model/enum/BitmarkParserType.ts';
 export { BitmarkVersion } from './model/enum/BitmarkVersion.ts';
 export { BitType } from './model/enum/BitType.ts';
 export { BodyTextFormat } from './model/enum/BodyTextFormat.ts';
 export { CardSetVersion } from './model/enum/CardSetVersion.ts';
+export { ResourceGroup } from './model/enum/ResourceGroup.ts';
 export { TextMarkType } from './model/enum/TextMarkType.ts';
 export { TextNodeType } from './model/enum/TextNodeType.ts';
 export { InfoFormat } from './model/info/enum/InfoFormat.ts';
@@ -80,6 +82,14 @@ export type { BitmarkOptions } from './generator/bitmark/BitmarkGenerator.ts';
 export type { Generator } from './generator/Generator.ts';
 export { HtmlTableGenerator } from './generator/html/HtmlTableGenerator.ts';
 export type { JsonOptions } from './generator/json/JsonGenerator.ts';
+export type {
+  BitGroupInfo,
+  BitGroupsOptions,
+  ResourceGroupInfo,
+  ResourceGroupsOptions,
+  SupportedBit,
+  SupportedBitsOptions,
+} from './info/InfoBuilder.ts';
 export { type BreakscapedString } from './model/ast/BreakscapedString.ts';
 export type {
   Bit,
@@ -130,11 +140,13 @@ export type {
   XRefMark,
   XRefMarkAttibutes,
 } from './model/ast/TextNodes.ts';
+export type { BitGroupType } from './model/enum/BitGroup.ts';
 export type { BitmarkParserTypeType } from './model/enum/BitmarkParserType.ts';
 export type { BitmarkVersionType } from './model/enum/BitmarkVersion.ts';
 export type { BitTypeType } from './model/enum/BitType.ts';
 export type { BodyTextFormatType } from './model/enum/BodyTextFormat.ts';
 export type { CardSetVersionType } from './model/enum/CardSetVersion.ts';
+export type { ResourceGroupType } from './model/enum/ResourceGroup.ts';
 export type { ResourceTypeType } from './model/enum/ResourceType.ts';
 export type { TextMarkTypeType } from './model/enum/TextMarkType.ts';
 export type { TextNodeTypeType } from './model/enum/TextNodeType.ts';
@@ -231,6 +243,7 @@ export type {
   WebsiteLinkResourceJson,
   WebsiteLinkResourceWrapperJson,
 } from './model/json/ResourceJson.ts';
+export type { TranslationsData } from './model/TranslationsData.ts';
 export {
   type HtmlTableFormat,
   type HtmlTableParseOptions,

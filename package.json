@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-parser-generator",
-  "version": "5.38.0",
+  "version": "5.39.0",
   "description": "A bitmark parser and generator using Peggy.js",
   "author": "Get More Brain Ltd",
   "license": "ISC",
@@ -35,6 +35,16 @@
     "./esm": {
       "import": "./dist/index.js",
       "require": "./dist/index.js"
+    },
+    "./browser/translations": {
+      "browser": "./dist/browser/esm/translations.js",
+      "import": "./dist/browser/esm/translations.js",
+      "require": "./dist/browser/cjs/translations.cjs"
+    },
+    "./translations": {
+      "browser": "./dist/browser/esm/translations.js",
+      "import": "./dist/translations.js",
+      "require": "./dist/translations.cjs"
     },
     ".": {
       "import": "./dist/index.js",

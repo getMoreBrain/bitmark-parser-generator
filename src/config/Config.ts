@@ -9,17 +9,22 @@ import { ResourcesConfig } from '../model/config/ResourcesConfig.ts';
 import { ResourceTagConfig } from '../model/config/ResourceTagConfig.ts';
 import { type TagConfig } from '../model/config/TagConfig.ts';
 import { type TagsConfig } from '../model/config/TagsConfig.ts';
+import { type BitGroupType } from '../model/enum/BitGroup.ts';
 import { BitTagConfigKeyType } from '../model/enum/BitTagConfigKeyType.ts';
 import { BitType, type BitTypeType } from '../model/enum/BitType.ts';
 import { Count } from '../model/enum/Count.ts';
+import { type ResourceGroupType } from '../model/enum/ResourceGroup.ts';
 import type { ResourceKeyType } from '../model/enum/ResourceKey.ts';
 import { resourceTypeToConfigKey, type ResourceTypeType } from '../model/enum/ResourceType.ts';
 import { TagFormat } from '../model/enum/TagFormat.ts';
 import { TextFormat } from '../model/enum/TextFormat.ts';
+import { type TranslationsData } from '../model/TranslationsData.ts';
 import { ObjectUtils } from '../utils/ObjectUtils.ts';
 import { ConfigHydrator } from './ConfigHydrator.ts';
+import { BIT_GROUPS } from './raw/bitGroups.ts';
 import { BITS } from './raw/bits.ts';
 import { GROUPS } from './raw/groups.ts';
+import { RESOURCE_GROUPS } from './raw/resourceGroups.ts';
 
 /**
  * PLAN-017: suffix identifying the deprecated collapsible bit types.
@@ -38,8 +43,250 @@ class Config {
   private allResourcesCache: TagsConfig | undefined;
   private comboResourcesCache: Map<ConfigKeyType, TagsConfig | undefined> = new Map();
 
+  // PLAN-020: bit-group / resource-group lookup caches (built lazily, immutable afterwards)
+  private bitGroupKeyCache: Map<string, BitGroupType> | undefined; // key + aliases -> key
+  private bitGroupToBitTypesCache: Map<BitGroupType, BitTypeType[]> | undefined;
+  private resourceGroupKeyCache: Map<string, ResourceGroupType> | undefined; // key + aliases -> key
+  private translations: TranslationsData | undefined; // normalized: lowercase language tags
+
   constructor() {
     //
+  }
+
+  //
+  // PLAN-020: Bit groups, resource groups & translated names
+  //
+
+  /**
+   * Register translated display names (from the `./translations` subpath export).
+   *
+   * Without registration, name lookups fall back to the inline English `title` / the
+   * technical key. Idempotent; last registration wins.
+   */
+  public registerTranslations(data: TranslationsData): void {
+    // Normalize language tags to lowercase for case-insensitive BCP-47 lookup
+    const normalized: TranslationsData = {};
+    for (const [key, langs] of Object.entries(data)) {
+      const entry: { [lang: string]: string } = {};
+      for (const [lang, text] of Object.entries(langs)) {
+        entry[lang.toLowerCase()] = text;
+      }
+      normalized[key] = entry;
+    }
+    this.translations = normalized;
+  }
+
+  /**
+   * Resolve a bit-group key or alias to the canonical bit-group key.
+   *
+   * @returns the canonical key, or undefined if unknown (never throws)
+   */
+  public getBitGroupKey(keyOrAlias: BitGroupType | string | undefined): BitGroupType | undefined {
+    if (keyOrAlias == null) return undefined;
+    return this.getBitGroupKeyMap().get(keyOrAlias);
+  }
+
+  /**
+   * Resolve a resource-group key or alias to the canonical resource-group key.
+   *
+   * @returns the canonical key, or undefined if unknown (never throws)
+   */
+  public getResourceGroupKey(
+    keyOrAlias: ResourceGroupType | string | undefined,
+  ): ResourceGroupType | undefined {
+    if (keyOrAlias == null) return undefined;
+    return this.getResourceGroupKeyMap().get(keyOrAlias);
+  }
+
+  /**
+   * Get the resolved bit-group memberships for a bit type.
+   *
+   * Memberships are explicit per bit — no inheritance via baseBitType. The one exception:
+   * a deprecated bit with a migration target derives its target's memberships unless it
+   * declares its own (D6).
+   *
+   * @param bitType the bit type (unknown / invalid types return [])
+   */
+  public getBitGroupsForBitType(bitType: BitTypeType | string | undefined): BitGroupType[] {
+    if (bitType == null) return [];
+    const _bitConfig = BITS[bitType as BitTypeType];
+    if (!_bitConfig) return [];
+    // Copy: the raw config is immutable at runtime and must not leak by reference
+    if (_bitConfig.bitGroups) return [..._bitConfig.bitGroups];
+    const target = this.getMigratedBitType(bitType as BitTypeType);
+    if (target) return this.getBitGroupsForBitType(target);
+    return [];
+  }
+
+  /**
+   * Get all bit types belonging to one or more bit groups (union, deduped, sorted).
+   *
+   * Serves search queries such as `g=cloze&g=table`. Inputs may be canonical keys or
+   * aliases; unknown inputs are ignored (never throws).
+   *
+   * @param bitGroups bit-group keys or aliases
+   * @param options includeDeprecated: include deprecated bit types (default: true —
+   *        stored legacy content must still be found by search)
+   */
+  public getBitTypesForBitGroups(
+    bitGroups: (BitGroupType | string)[],
+    options?: { includeDeprecated?: boolean },
+  ): BitTypeType[] {
+    const includeDeprecated = options?.includeDeprecated ?? true;
+    const map = this.getBitGroupToBitTypesMap();
+    const res = new Set<BitTypeType>();
+    for (const g of bitGroups) {
+      const key = this.getBitGroupKey(g);
+      if (!key) continue;
+      for (const bt of map.get(key) ?? []) {
+        if (!includeDeprecated && BITS[bt]?.deprecated) continue;
+        res.add(bt);
+      }
+    }
+    return [...res].sort();
+  }
+
+  /**
+   * Get the bit groups that one or more bit types belong to (union, deduped, sorted).
+   *
+   * Unknown bit types are ignored (never throws).
+   */
+  public getBitGroupsForBitTypes(bitTypes: (BitTypeType | string)[]): BitGroupType[] {
+    const res = new Set<BitGroupType>();
+    for (const bt of bitTypes) {
+      for (const g of this.getBitGroupsForBitType(bt)) res.add(g);
+    }
+    return [...res].sort();
+  }
+
+  /**
+   * Get the resource types belonging to one or more resource groups (union, deduped,
+   * sorted). Members are canonical kebab-case values only — normalize legacy camelCase
+   * input values before matching against them.
+   */
+  public getResourceTypesForResourceGroups(
+    resourceGroups: (ResourceGroupType | string)[],
+  ): ResourceTypeType[] {
+    const res = new Set<ResourceTypeType>();
+    for (const g of resourceGroups) {
+      const key = this.getResourceGroupKey(g);
+      if (!key) continue;
+      for (const rt of RESOURCE_GROUPS[key].resourceTypes) res.add(rt);
+    }
+    return [...res].sort();
+  }
+
+  /**
+   * Get the resource groups that one or more resource types belong to (union, deduped,
+   * sorted). Unknown resource types are ignored.
+   */
+  public getResourceGroupsForResourceTypes(
+    resourceTypes: (ResourceTypeType | string)[],
+  ): ResourceGroupType[] {
+    const wanted = new Set(resourceTypes);
+    const res = new Set<ResourceGroupType>();
+    for (const [key, g] of Object.entries(RESOURCE_GROUPS)) {
+      if (g.resourceTypes.some((rt) => wanted.has(rt))) res.add(key as ResourceGroupType);
+    }
+    return [...res].sort();
+  }
+
+  /**
+   * Get the translated display name of a bit type.
+   *
+   * Fallback chain (D8): requested BCP-47 tag → progressively stripped subtags → inline
+   * English `title` → technical key.
+   */
+  public getBitTitle(bitType: BitTypeType | string, language?: string): string {
+    const inline = BITS[bitType as BitTypeType]?.title;
+    return this.translate(bitType as string, inline, language);
+  }
+
+  /**
+   * Get the translated display name of a bit group (key or alias accepted).
+   * Fallback chain as {@link getBitTitle}.
+   */
+  public getBitGroupTitle(keyOrAlias: BitGroupType | string, language?: string): string {
+    const key = this.getBitGroupKey(keyOrAlias);
+    if (!key) return keyOrAlias as string;
+    return this.translate(key, BIT_GROUPS[key].title, language);
+  }
+
+  /**
+   * Get the translated display name of a resource group (key or alias accepted).
+   * Fallback chain as {@link getBitTitle}.
+   */
+  public getResourceGroupTitle(keyOrAlias: ResourceGroupType | string, language?: string): string {
+    const key = this.getResourceGroupKey(keyOrAlias);
+    if (!key) return keyOrAlias as string;
+    return this.translate(key, RESOURCE_GROUPS[key].title, language);
+  }
+
+  private translate(key: string, inlineTitle: string | undefined, language?: string): string {
+    if (language && this.translations) {
+      const entry = this.translations[key];
+      if (entry) {
+        // BCP-47 fallback walk: de-CH-1996 → de-CH → de
+        let lang = language.toLowerCase();
+        for (;;) {
+          const text = entry[lang];
+          if (text) return text;
+          const idx = lang.lastIndexOf('-');
+          if (idx < 0) break;
+          lang = lang.substring(0, idx);
+        }
+      }
+    }
+    // en → inline title; final fallback: technical key
+    return inlineTitle ?? key;
+  }
+
+  private getBitGroupKeyMap(): Map<string, BitGroupType> {
+    if (!this.bitGroupKeyCache) {
+      const map = new Map<string, BitGroupType>();
+      for (const [key, g] of Object.entries(BIT_GROUPS)) {
+        if (map.has(key)) throw new Error(`Duplicate bit-group key/alias: ${key}`);
+        map.set(key, key as BitGroupType);
+        for (const alias of g.aliases ?? []) {
+          if (map.has(alias)) throw new Error(`Duplicate bit-group key/alias: ${alias}`);
+          map.set(alias, key as BitGroupType);
+        }
+      }
+      this.bitGroupKeyCache = map;
+    }
+    return this.bitGroupKeyCache;
+  }
+
+  private getResourceGroupKeyMap(): Map<string, ResourceGroupType> {
+    if (!this.resourceGroupKeyCache) {
+      const map = new Map<string, ResourceGroupType>();
+      for (const [key, g] of Object.entries(RESOURCE_GROUPS)) {
+        if (map.has(key)) throw new Error(`Duplicate resource-group key/alias: ${key}`);
+        map.set(key, key as ResourceGroupType);
+        for (const alias of g.aliases ?? []) {
+          if (map.has(alias)) throw new Error(`Duplicate resource-group key/alias: ${alias}`);
+          map.set(alias, key as ResourceGroupType);
+        }
+      }
+      this.resourceGroupKeyCache = map;
+    }
+    return this.resourceGroupKeyCache;
+  }
+
+  private getBitGroupToBitTypesMap(): Map<BitGroupType, BitTypeType[]> {
+    if (!this.bitGroupToBitTypesCache) {
+      const map = new Map<BitGroupType, BitTypeType[]>();
+      for (const key of Object.keys(BIT_GROUPS)) map.set(key as BitGroupType, []);
+      for (const bt of Object.keys(BITS).sort()) {
+        for (const g of this.getBitGroupsForBitType(bt as BitTypeType)) {
+          const list = map.get(g);
+          if (!list) throw new Error(`Bit '${bt}' references unknown bit group '${g}'`);
+          list.push(bt as BitTypeType);
+        }
+      }
+      this.bitGroupToBitTypesCache = map;
+    }
+    return this.bitGroupToBitTypesCache;
   }
 
   /**
@@ -191,9 +438,14 @@ class Config {
       }
 
       // Create the bit config
+      // PLAN-020: title and bitGroups come from the bit's OWN raw config (with D6
+      // derivation for deprecated bits), NOT from the merged inheritance chain —
+      // memberships are explicit and must not leak from baseBitType.
       bitConfig = new BitConfig({
         since,
         bitType,
+        title: BITS[bitType]?.title,
+        bitGroups: this.getBitGroupsForBitType(bitType),
         inheritedBitTypes,
         textFormatDefault: textFormatDefault ?? TextFormat.bitmarkText,
         tags,
