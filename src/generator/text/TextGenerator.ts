@@ -17,9 +17,7 @@ import {
   type LatexTextNode,
   type LinkMark,
   type ListTextNode,
-  type MediaAttributes,
   type RefMark,
-  type SectionTextNode,
   type SymbolMark,
   type TaskItemTextNode,
   type TextAst,
@@ -38,8 +36,10 @@ import { TextLocation, type TextLocationType } from '../../model/enum/TextLocati
 import { TextMarkType, type TextMarkTypeType } from '../../model/enum/TextMarkType.ts';
 import { TextNodeType, type TextNodeTypeType } from '../../model/enum/TextNodeType.ts';
 import { type BodyBitJson, type BodyBitsJson } from '../../model/json/BodyBitJson.ts';
-import { StringUtils } from '../../utils/StringUtils.ts';
 import { AstWalkerGenerator } from '../AstWalkerGenerator.ts';
+import { canFollowBareUrl, isSimpleLinkNode, normalizeTextAst } from './TextAstNormalizer.ts';
+import { normalizeBlockCodeLanguage } from './TextGrammarConstraints.ts';
+import { serializeMediaChain } from './TextMediaAttrs.ts';
 
 const DEFAULT_OPTIONS: TextOptions = {
   bodyBitCallback: undefined,
@@ -141,27 +141,14 @@ const INLINE_MARK_TYPES: TextMarkTypeType[] = [
   TextMarkType.comment,
 ];
 
-// Valid colors for the highlight|color: / userHighlight|color: compound chains.
-// Must match the HighlightColor rule in text-grammar.pegjs.
-const HIGHLIGHT_COLORS = [
-  'orange',
-  'yellow',
-  'green',
-  'blue',
-  'purple',
-  'pink',
-  'brown',
-  'white',
-  'black',
-  'gray',
-];
-
 // Regex explanation:
 // - Match newline or carriage return + newline
 const INDENTATION_REGEX = new RegExp(/(\n|\r\n)/, 'g');
 
-const LINK_REGEX = new RegExp(/https?:\/\/|mailto:(.*)/, 'g');
 const LINK_BREAKSCAPE_REGEX = new RegExp(/\]/, 'g');
+
+// Text whose first line contains a '|' could continue a just-closed inline chain
+const CHAIN_CONTINUATION_REGEX = /^[^\n\r\u2028\u2029]*\|/;
 
 /**
  * Text generation options
@@ -191,6 +178,8 @@ export type GenerateOptions = {
   noBreakscaping?: boolean;
   forceInline?: boolean;
   noMarkup?: boolean;
+  /** The AST is a chain value (footnote content): only plain text and short-form marks */
+  chainValueContext?: boolean;
 };
 
 const Stage = {
@@ -203,10 +192,6 @@ export type StageType = EnumType<typeof Stage>;
 
 export type WriteCallback = (s: string) => void;
 export type BodyBitCallback = (bodyBit: BodyBitJson, index: number, route: NodeInfo[]) => string;
-
-interface MediaAttributeOptions {
-  ignoreAttributes?: Set<string>;
-}
 
 interface TextOptionsInternal extends TextOptions {
   isInternal?: boolean;
@@ -239,6 +224,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   private textDepth = 0;
   private placeholderIndex = 0;
   private placeholders: BodyBitsJson = {};
+  private chainJustClosed = false;
+  private simpleLinkAllowed = true;
 
   // For pre-text
   private rootParagraphNodeContentIndex = 0;
@@ -319,6 +306,13 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
     this.generateOptions = Object.assign({}, options);
 
+    // Reduce the AST to what the text grammar can express (PLAN-022)
+    ast = normalizeTextAst(ast, {
+      format: textFormat ?? TextFormat.bitmarkText,
+      location: textLocation,
+      chainValue: this.generateOptions.chainValueContext,
+    });
+
     this.validateGenerateOptions(ast);
 
     if (!this.generateOptions.plainTextDividerAllowed) {
@@ -387,6 +381,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.textDepth = 0;
     this.placeholderIndex = 0;
     this.placeholders = {};
+    this.chainJustClosed = false;
+    this.simpleLinkAllowed = true;
 
     // For pre-text
     this.rootParagraphNodeContentIndex = 0;
@@ -494,6 +490,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         break;
 
       case TextNodeType.text: {
+        this.simpleLinkAllowed = this.isSimpleLinkAllowedAfter(route);
         this.writeMarks(node, Stage.enter);
         this.writeText(node);
         this.writeMarks(node, Stage.between);
@@ -507,10 +504,6 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       case TextNodeType.heading:
         this.writeHeading(node as HeadingTextNode);
         this.inHeading = true;
-        break;
-
-      case TextNodeType.section:
-        this.writeSection(node as SectionTextNode);
         break;
 
       case TextNodeType.listItem:
@@ -595,7 +588,6 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       case TextNodeType.heading:
         this.inHeading = false;
 
-      case TextNodeType.section:
       case TextNodeType.image:
         if (!this.inParagraph) {
           // Block type nodes, write 2x newline
@@ -843,6 +835,12 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       s = s.replace(INDENTATION_REGEX, `$1${indentationString}`);
     }
 
+    // Seal a just-closed inline chain: text like 'bold|' directly after '==a==|italic|' would
+    // otherwise be read as a further chain item
+    if (this.chainJustClosed && CHAIN_CONTINUATION_REGEX.test(s)) {
+      s = `^${s}`;
+    }
+
     // If have pre-text, and this is the correct index, write the plain text divider
     if (this.havePreText && this.rootParagraphNodeContentIndex === this.preTextIndex) {
       // Write the plain text divider
@@ -878,16 +876,15 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
    * @returns true if a simple link, otherwise false
    */
   protected isSimpleLink(node: TextNode): boolean {
-    if (node.text == null) return false;
-    if (node.marks?.length !== 1) return false;
+    return this.simpleLinkAllowed && isSimpleLinkNode(node, undefined);
+  }
 
-    const href = this.getLinkHref(node);
-    if (href) {
-      // Get the text part of the link
-      const hrefText = href.replace(LINK_REGEX, '$1');
-      return hrefText === node.text;
-    }
-    return false;
+  /**
+   * The bare-URL link short form is only safe when whatever is written next cannot be read as
+   * part of the URL (the parser's Url rule consumes every following UrlChar).
+   */
+  protected isSimpleLinkAllowedAfter(route: NodeInfo[]): boolean {
+    return canFollowBareUrl(this.getSiblingNodes(route).right as TextNode | undefined);
   }
 
   /**
@@ -901,17 +898,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
 
     const href = this.getLinkHref(node);
     if (href) {
-      let res: string;
-      // Get the text part of the link
-      const hrefText = href.replace(LINK_REGEX, '$1');
-      if (hrefText === node.text) {
-        // Return the link as the text
-        res = href;
-      } else {
-        res = node.text;
-      }
-      res = (res ?? '').replace(LINK_BREAKSCAPE_REGEX, '^]'); // Link breakscaping
-      return res;
+      // Simple link: the link itself is the text
+      const res = this.isSimpleLink(node) ? href : node.text;
+      return res.replace(LINK_BREAKSCAPE_REGEX, '^]'); // Link breakscaping
     }
     return false;
   }
@@ -985,20 +974,13 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       const forceSingleMark =
         this.generateOptions.forceInline || !!(this.inInline || this.inHeading);
 
+      // The marks are already reduced to representable marks in a representable order
+      // (TextAstNormalizer / TextMarkSanitizer). No marks: the text is written unmarked.
+      const marks = node.marks;
+      if (marks.length === 0) return;
+
       // If node has marks, it cannot be a pre-text node
       this.thisNodeIsPreText = false;
-
-      // Empty marks occur when the inline mark has no attributes - write an inline mark with no attributes
-      const emptyMarks = node.marks.length === 0;
-      if (emptyMarks) {
-        // Write the mark start / end around the text
-        this.writeMarkTextWrapper(INLINE_MARK);
-        return;
-      }
-
-      // Resolve legacy mark combinations and drop marks the current grammar cannot express
-      const marks = this.getWritableMarks(node.marks);
-      if (marks.length === 0) return; // all marks dropped - the text is written unmarked
 
       // Single marks are only valid if there is only one mark for this text
       // They are only used in inline / heading marks since bitmark-- was dropped.
@@ -1096,7 +1078,10 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
             }
           }
           // Write the mark end
-          if (inlineMarkWritten) this.writeInlineMarkStartEnd();
+          if (inlineMarkWritten) {
+            this.writeInlineMarkStartEnd();
+            this.chainJustClosed = true;
+          }
         }
       }
     }
@@ -1160,18 +1145,6 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.write(s);
   }
 
-  protected writeSection(node: SectionTextNode): void {
-    let s = '';
-    if (node.section) {
-      s = `|${node.section}: `;
-    } else {
-      s = '|';
-    }
-
-    // Write the section tag
-    this.write(s);
-  }
-
   protected writeBullet(node: TextNode, route: NodeInfo[]) {
     // if (node.attrs == null || !node.attrs.start) return;
     // const attrs = node.attrs;
@@ -1202,7 +1175,8 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
       bullet += '•a ';
     } else if (listType === TextNodeType.taskList) {
       const taskList = node as TaskItemTextNode;
-      const checked = taskList.attrs?.checked ?? false;
+      // The grammar only knows true / false; anything else is unchecked
+      const checked = taskList.attrs?.checked === true;
       bullet += checked ? '•+ ' : '•- ';
     }
     if (bullet) this.write(bullet);
@@ -1213,34 +1187,27 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     const attrs = node.attrs;
 
     const inlineImage = node.type === TextNodeType.imageInline;
+    const kind = inlineImage ? 'imageInline' : 'image';
 
-    let ignoreAttributes: Set<string> | undefined;
-    if (inlineImage) {
-      ignoreAttributes = new Set(['alt', 'zoomDisabled', 'title']);
-      // Suppress attrs equal to the grammar defaults (the parser re-adds them)
-      const a = attrs as unknown as Record<string, unknown>;
-      if (a.alignmentVertical === 'top') ignoreAttributes.add('alignmentVertical');
-      if (a.size === 'line-height') ignoreAttributes.add('size');
-    }
-    const mediaAttrs = this.getMediaAttrs(inlineImage ? 'imageInline' : 'image', attrs, {
-      ignoreAttributes,
-    });
+    // The attrs are already reduced to the grammar's chain items (TextAstNormalizer)
+    const chain = serializeMediaChain(kind, attrs as unknown as Record<string, unknown>);
 
     let s = '';
     if (inlineImage) {
       s = `==${attrs.alt ?? ''}==`;
     }
-    s += mediaAttrs ? `|${mediaAttrs}|` : '';
+    s += `|${kind}:${attrs.src}${chain}|`;
 
     // Write the text
     this.write(s);
   }
 
   protected writeCodeBlock(node: CodeBlockTextNode): void {
-    if (node.attrs == null || !node.attrs.language) return;
-    const attrs = node.attrs;
+    // The parser emits a top-level 'language' (not attrs) for '|code' without a language
+    const raw = node.attrs?.language ?? (node as unknown as { language?: unknown }).language;
+    const language = normalizeBlockCodeLanguage(raw) ?? '';
 
-    const s = `|code:${attrs.language}\n`;
+    const s = language ? `|code:${language}\n` : '|code\n';
 
     // Write the text
     this.write(s);
@@ -1294,60 +1261,6 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     }
 
     this.write(s);
-  }
-
-  /**
-   * Resolve the marks of a text node into the marks that will actually be written.
-   *
-   * - Merges a legacy standalone 'duration' mark into its sibling 'timer' mark.
-   * - Drops marks the current grammar cannot express (standalone 'duration', 'timer'
-   *   without a duration).
-   * - Moves a 'textStyle'/'color' mark before a preceding bare 'highlight'/'userHighlight'
-   *   mark when its color is a valid highlight color; written in the original order the
-   *   output would re-parse as a highlight-with-color compound mark and change meaning.
-   */
-  protected getWritableMarks(nodeMarks: TextMark[]): TextMark[] {
-    const attrsOf = (m: TextMark) => (m.attrs ?? {}) as Record<string, unknown>;
-
-    let marks: TextMark[] = [...nodeMarks];
-
-    // Merge a legacy timer + duration mark pair
-    const timer = marks.find((m) => m.type === TextMarkType.timer);
-    const duration = marks.find((m) => m.type === TextMarkType.duration);
-    if (timer && duration && !attrsOf(timer).duration) {
-      marks = marks.map((m) =>
-        m === timer
-          ? ({
-              ...timer,
-              attrs: { ...attrsOf(timer), duration: attrsOf(duration).duration },
-            } as TextMark)
-          : m,
-      );
-    }
-
-    // Drop marks the current grammar cannot express
-    marks = marks.filter((m) => {
-      if (m.type === TextMarkType.duration) return false;
-      if (m.type === TextMarkType.timer) return !!attrsOf(m).duration;
-      return true;
-    });
-
-    // Reorder [bare highlight/userHighlight, textStyle(valid highlight color)] pairs
-    const isBareHighlight = (m: TextMark) =>
-      (m.type === TextMarkType.highlight || m.type === TextMarkType.userHighlight) &&
-      !attrsOf(m).color;
-    const isHighlightColorStyle = (m: TextMark) =>
-      (m.type === TextMarkType.textStyle || m.type === TextMarkType.color) &&
-      HIGHLIGHT_COLORS.indexOf(attrsOf(m).color as string) !== -1;
-    for (let i = 0; i < marks.length - 1; i++) {
-      if (isBareHighlight(marks[i]) && isHighlightColorStyle(marks[i + 1])) {
-        const tmp = marks[i];
-        marks[i] = marks[i + 1];
-        marks[i + 1] = tmp;
-      }
-    }
-
-    return marks;
   }
 
   /**
@@ -1431,6 +1344,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         {
           ...this.generateOptions,
           forceInline: true,
+          chainValueContext: true,
         },
       ) ?? '';
 
@@ -1450,6 +1364,7 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
         {
           ...this.generateOptions,
           forceInline: true,
+          chainValueContext: true,
         },
       ) ?? '';
 
@@ -1457,11 +1372,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
   }
 
   protected writeSymbolMark(mark: SymbolMark) {
-    if (mark.attrs == null) return;
-    const attrs = mark.attrs;
-
-    const mediaAttrs = this.getMediaAttrs('symbol', attrs);
-    const s = mediaAttrs ?? '';
+    // The attrs are already reduced to the grammar's chain items (TextMarkSanitizer)
+    const attrs = (mark.attrs ?? {}) as unknown as Record<string, unknown>;
+    const s = `symbol:${attrs.src ?? ''}${serializeMediaChain('symbol', attrs)}`;
 
     // Write the text
     this.write(s);
@@ -1503,63 +1416,6 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     this.writeString(tag);
   }
 
-  protected getMediaAttrs(
-    mediaType: string,
-    attrs: MediaAttributes,
-    options?: MediaAttributeOptions,
-  ): string | undefined {
-    if (!mediaType) return undefined;
-
-    const opts = Object.assign({}, options);
-    const ignoreAttributes = opts.ignoreAttributes ?? new Set();
-
-    let s = `${mediaType}:${attrs?.src ?? ''}`;
-
-    // Loop and write the attributes (except src, as written above)
-    const entries = Object.entries(attrs).filter(([k, _v]) => k !== 'src');
-
-    for (let i = 0; i < entries.length; i++) {
-      const [k, v] = entries[i];
-
-      // Ignore certain attributes
-      if (ignoreAttributes.has(k)) continue;
-
-      switch (k) {
-        case 'textAlign':
-          if (v !== 'left') s += `|captionAlign:${v}`;
-          break;
-        case 'alignment':
-          if (v !== 'center') if (v) s += `|alignment:${v}`;
-          break;
-        case 'title':
-          if (v) s += `|caption:${v}`;
-          break;
-        case 'class':
-          if (v !== 'center') if (v) s += `|align:${v}`;
-          break;
-        case 'comment':
-          if (v) s += `|#${v}`;
-          break;
-        case '':
-          // This case handles reverse of strange behaviour in the text parser when a key is empty
-          if (StringUtils.isString(v)) s += `|:${v}`;
-          else s += `|`;
-          break;
-        case 'zoomDisabled':
-          if (!v) s += '|zoomDisabled:false';
-          break;
-        case 'alt':
-        case 'width':
-        case 'height':
-        default:
-          if (k && v) s += `|${k}:${v}`;
-          break;
-      }
-    }
-
-    return s;
-  }
-
   //
   // Helper functions
   //
@@ -1592,6 +1448,9 @@ class TextGenerator extends AstWalkerGenerator<TextAst, BreakscapedString> {
     // Handle case where the already written text, combined with this text, would create an unwanted control
     // sequence, e.g. old* **new**. In this case, a ^ is inserted to break the sequence.
     value = this.getInterTextBreakscape(value) + value;
+
+    // Anything written ends the 'just closed an inline chain' state (set again by the chain writer)
+    this.chainJustClosed = false;
 
     if (this.options.writeCallback) {
       this.options.writeCallback(value);
