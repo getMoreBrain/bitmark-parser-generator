@@ -1,0 +1,13 @@
+chain marks: ==text==|footnote:x|
+|
+textStyle: ==text==|footnote:x|
+|
+nested footnote: ==text==|footnote*:x|
+|
+pipe in text: text
+|
+hardBreak: ==text==|footnote:a b|
+|
+short-form mark and bare URL: ==text==|footnote:see **b** at https://a.com|
+|
+content string: ==text==|footnote:|

@@ -1,0 +1,120 @@
+[
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "see "
+      },
+      {
+        "type": "text",
+        "text": "a.com",
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://a.com"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": " now"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "a.com",
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://a.com"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "a.com",
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://a.com"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "b",
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "a.com",
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://a.com"
+            }
+          }
+        ]
+      },
+      {
+        "type": "imageInline",
+        "attrs": {
+          "src": "https://img.io/i.png",
+          "alt": "x"
+        }
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "a.com/x y",
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://a.com/x y"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,176 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "var: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "link: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "ref: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "xref (mandatory): text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "xref (optional reference): ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "xref",
+            "attrs": {
+              "xref": "a",
+              "reference": ""
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "extref reference element: ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "extref",
+            "attrs": {
+              "extref": "e",
+              "references": [
+                "ok"
+              ],
+              "provider": "p"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "extref provider: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "comment: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "colorPicker: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "timer name (optional): ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "timer",
+            "attrs": {
+              "name": "",
+              "duration": "P1D"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "code language (optional): ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "code",
+            "attrs": {
+              "language": "plain text"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "newline in var: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

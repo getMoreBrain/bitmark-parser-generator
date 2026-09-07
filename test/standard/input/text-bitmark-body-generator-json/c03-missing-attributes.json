@@ -1,0 +1,135 @@
+[
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "var: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "var"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "symbol: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "symbol"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "link: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "link"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "colorPicker: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "colorPicker"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "textStyle: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "textStyle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "code: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "code"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "footnote: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "footnote"
+          }
+        ]
+      }
+    ]
+  }
+]

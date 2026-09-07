@@ -1,0 +1,112 @@
+[
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "bold with attrs: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "bold",
+            "attrs": {
+              "color": "red"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "marks not an array: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": "bold"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "junk mark entries: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          null,
+          5,
+          "x",
+          {},
+          {
+            "attrs": {
+              "color": "red"
+            }
+          },
+          {
+            "type": "Bold"
+          },
+          {
+            "type": "bold"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "text not a string: "
+      },
+      {
+        "type": "text",
+        "text": 5
+      },
+      {
+        "type": "text",
+        "text": "end"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "references not an array: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "extref",
+            "attrs": {
+              "extref": "e",
+              "references": "x",
+              "provider": "p"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

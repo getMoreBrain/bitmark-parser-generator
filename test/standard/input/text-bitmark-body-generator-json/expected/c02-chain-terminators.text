@@ -1,0 +1,23 @@
+var: text
+|
+link: text
+|
+ref: text
+|
+xref (mandatory): text
+|
+xref (optional reference): ==text==|xref:a|
+|
+extref reference element: ==text==|extref:e|►ok|provider:p|
+|
+extref provider: text
+|
+comment: text
+|
+colorPicker: text
+|
+timer name (optional): ==text==|timer|duration:P1D|
+|
+code language (optional): ==text==|code|
+|
+newline in var: text

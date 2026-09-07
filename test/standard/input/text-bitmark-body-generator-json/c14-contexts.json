@@ -1,0 +1,403 @@
+[
+  {
+    "type": "section",
+    "section": "foo",
+    "content": [
+      {
+        "type": "text",
+        "text": "section text"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "a"
+      },
+      {
+        "type": "image",
+        "attrs": {
+          "src": "https://img.io/i.png"
+        }
+      },
+      {
+        "type": "text",
+        "text": "b"
+      }
+    ]
+  },
+  {
+    "type": "bulletList",
+    "attrs": {},
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 1
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "H"
+              }
+            ]
+          },
+          {
+            "type": "codeBlock",
+            "attrs": {
+              "language": "js"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "c"
+              }
+            ]
+          },
+          {
+            "type": "image",
+            "attrs": {
+              "src": "https://img.io/i.png"
+            }
+          },
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "type": "text",
+                "text": "a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "bulletList",
+    "attrs": {},
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "type": "text",
+                "text": "a"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "listItem",
+        "content": []
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "bulletList",
+    "attrs": {},
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "bulletList",
+            "attrs": {},
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {},
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "a"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "bulletList",
+    "attrs": {},
+    "content": [
+      {
+        "type": "bulletList",
+        "attrs": {},
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {},
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "a"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "bulletList",
+    "attrs": {},
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "type": "text",
+                "text": "a"
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "attrs": {},
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {},
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "b"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "orderedList",
+            "attrs": {},
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {},
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "c"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "bulletList",
+    "attrs": {},
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "type": "text",
+                "text": "a"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "type": "text",
+                "text": "\tb"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "bulletList",
+    "attrs": {},
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "type": "text",
+                "text": "a"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "type": "text",
+                "text": "b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 1
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "H"
+      },
+      {
+        "type": "bulletList",
+        "attrs": {},
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {},
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "a"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "codeBlock",
+    "attrs": {
+      "language": "js"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "x",
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ]
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "text",
+        "text": "y"
+      }
+    ]
+  },
+  {
+    "type": "bulletList",
+    "attrs": {},
+    "content": []
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "inline image with empty alt: "
+      },
+      {
+        "type": "imageInline",
+        "attrs": {
+          "src": "https://img.io/i.png",
+          "alt": ""
+        }
+      },
+      {
+        "type": "text",
+        "text": " end"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "inline image with == in alt: "
+      },
+      {
+        "type": "imageInline",
+        "attrs": {
+          "src": "https://img.io/i.png",
+          "alt": "a==b"
+        }
+      },
+      {
+        "type": "text",
+        "text": " end"
+      }
+    ]
+  }
+]

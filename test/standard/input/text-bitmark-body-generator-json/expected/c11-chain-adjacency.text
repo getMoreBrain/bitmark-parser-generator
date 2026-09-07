@@ -1,0 +1,13 @@
+==a==|italic|^bold|
+|
+==a==|italic|^color:red|
+|
+==a==|italic|^|x
+|
+==a==|italic|^x|
+y
+|
+==a==|italic|x
+bold|
+|
+==a==|bold|^ x|y

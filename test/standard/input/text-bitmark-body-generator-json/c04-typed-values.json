@@ -1,0 +1,145 @@
+[
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "timer duration without P: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "timer",
+            "attrs": {
+              "name": "n",
+              "duration": "123"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "timer duration empty: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "timer",
+            "attrs": {
+              "name": "n",
+              "duration": ""
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "attrs": {
+      "src": "img.png",
+      "alt": "relative src"
+    }
+  },
+  {
+    "type": "image",
+    "attrs": {
+      "src": "https://img.io/i.png",
+      "width": "abc",
+      "height": -5,
+      "alignment": "bad",
+      "textAlign": "bad",
+      "zoomDisabled": "yes"
+    }
+  },
+  {
+    "type": "image",
+    "attrs": {
+      "src": "https://img.io/i.png",
+      "width": "300",
+      "zoomDisabled": "false",
+      "alignment": "right"
+    }
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "inline image src: "
+      },
+      {
+        "type": "imageInline",
+        "attrs": {
+          "src": "img.png",
+          "alt": "a"
+        }
+      },
+      {
+        "type": "text",
+        "text": " end"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "inline image attrs: "
+      },
+      {
+        "type": "imageInline",
+        "attrs": {
+          "src": "https://img.io/i.png",
+          "alt": "a",
+          "width": "abc",
+          "alignmentVertical": "bad",
+          "size": "bad"
+        }
+      },
+      {
+        "type": "text",
+        "text": " end"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "symbol attrs: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "s",
+              "width": "abc",
+              "alignment": "bad",
+              "comment": "a|b"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

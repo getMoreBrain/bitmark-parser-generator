@@ -1,0 +1,274 @@
+[
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "var: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "var",
+            "attrs": {
+              "name": "a|b"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "link: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://a.com/x|y"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "ref: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "ref",
+            "attrs": {
+              "reference": "a|b"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "xref (mandatory): "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "xref",
+            "attrs": {
+              "xref": "a|b",
+              "reference": ""
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "xref (optional reference): "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "xref",
+            "attrs": {
+              "xref": "a",
+              "reference": "b|c"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "extref reference element: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "extref",
+            "attrs": {
+              "extref": "e",
+              "references": [
+                "ok",
+                "a|b"
+              ],
+              "provider": "p"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "extref provider: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "extref",
+            "attrs": {
+              "extref": "e",
+              "references": [],
+              "provider": "p|q"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "comment: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "comment",
+            "comment": "a|b"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "colorPicker: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": "a|b"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "timer name (optional): "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "timer",
+            "attrs": {
+              "name": "a|b",
+              "duration": "P1D"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "code language (optional): "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "code",
+            "attrs": {
+              "language": "a|b"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "newline in var: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "var",
+            "attrs": {
+              "name": "a\nb"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

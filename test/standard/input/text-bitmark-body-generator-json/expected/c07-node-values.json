@@ -1,0 +1,163 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Level 4",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Level 0",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Level x",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "heading",
+    "content": [
+      {
+        "text": "Level 2",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "level": 2
+    }
+  },
+  {
+    "type": "heading",
+    "content": [
+      {
+        "text": "Line 1 Line 2",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "level": 1
+    }
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "a",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "b",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "orderedList",
+    "attrs": {
+      "start": 3
+    },
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "a",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "codeBlock",
+    "language": "",
+    "content": [
+      {
+        "type": "text",
+        "text": "let a = 1"
+      }
+    ]
+  },
+  {
+    "type": "codeBlock",
+    "attrs": {
+      "language": "js"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "let b = 2"
+      }
+    ]
+  },
+  {
+    "type": "taskList",
+    "content": [
+      {
+        "type": "taskItem",
+        "attrs": {
+          "checked": false
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "not checked",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "taskItem",
+        "attrs": {
+          "checked": true
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "text": "checked",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "attrs": {}
+  }
+]

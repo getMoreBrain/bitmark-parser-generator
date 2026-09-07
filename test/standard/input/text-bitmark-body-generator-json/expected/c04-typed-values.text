@@ -1,0 +1,12 @@
+timer duration without P: text
+|
+timer duration empty: text
+|image:https://img.io/i.png|
+
+|image:https://img.io/i.png|alignment:right|zoomDisabled:false|width:300|
+
+inline image src:  end
+|
+inline image attrs: ==a==|imageInline:https://img.io/i.png| end
+|
+symbol attrs: ==text==|symbol:s|

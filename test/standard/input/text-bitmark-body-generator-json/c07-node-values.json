@@ -1,0 +1,206 @@
+[
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 4
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "Level 4"
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 0
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "Level 0"
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "attrs": {
+      "level": "x"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "Level x"
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 2
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "Level 2"
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 1
+    },
+    "content": []
+  },
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 1
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "Line 1"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "text",
+        "text": "Line 2"
+      }
+    ]
+  },
+  {
+    "type": "orderedList",
+    "attrs": {
+      "start": "x"
+    },
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "type": "text",
+                "text": "a"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "type": "text",
+                "text": "b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "orderedList",
+    "attrs": {
+      "start": 3
+    },
+    "content": [
+      {
+        "type": "listItem",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "type": "text",
+                "text": "a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "codeBlock",
+    "language": "",
+    "content": [
+      {
+        "type": "text",
+        "text": "let a = 1"
+      }
+    ]
+  },
+  {
+    "type": "codeBlock",
+    "attrs": {
+      "language": "JS"
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "let b = 2",
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "taskList",
+    "attrs": {},
+    "content": [
+      {
+        "type": "taskItem",
+        "attrs": {
+          "checked": "yes"
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "type": "text",
+                "text": "not checked"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "taskItem",
+        "attrs": {
+          "checked": true
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {},
+            "content": [
+              {
+                "type": "text",
+                "text": "checked"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

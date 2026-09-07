@@ -1,0 +1,136 @@
+[
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "a",
+        "marks": [
+          {
+            "type": "italic"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "bold|"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "a",
+        "marks": [
+          {
+            "type": "italic"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "color:red|"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "a",
+        "marks": [
+          {
+            "type": "italic"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "|x"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "a",
+        "marks": [
+          {
+            "type": "italic"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "x|"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "text",
+        "text": "y"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "a",
+        "marks": [
+          {
+            "type": "italic"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "x"
+      },
+      {
+        "type": "hardBreak"
+      },
+      {
+        "type": "text",
+        "text": "bold|"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "a",
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "s"
+            }
+          },
+          {
+            "type": "bold"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": " x|y"
+      }
+    ]
+  }
+]

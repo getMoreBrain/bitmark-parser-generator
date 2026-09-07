@@ -1,0 +1,66 @@
+[
+  {
+    "type": "image",
+    "attrs": {
+      "alignment": "center",
+      "textAlign": "left",
+      "src": "https://img.io/i.png",
+      "alt": null,
+      "title": null,
+      "class": "center",
+      "zoomDisabled": true
+    }
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "attrs": {
+          "alt": "a",
+          "src": "https://img.io/i.png",
+          "alignmentVertical": "top",
+          "size": "line-height",
+          "zoomDisabled": true
+        },
+        "type": "imageInline"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "s"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "bold"
+          },
+          {
+            "type": "highlightYellow"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

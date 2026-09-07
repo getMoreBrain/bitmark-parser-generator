@@ -1,0 +1,145 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "var: ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "var",
+            "attrs": {
+              "name": ""
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "symbol: ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": ""
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "link: ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "colorPicker: ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "colorPicker",
+            "attrs": {
+              "propertyRef": ""
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "textStyle: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "code: ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "code",
+            "attrs": {
+              "language": "plain text"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "footnote: ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "footnote",
+            "attrs": {
+              "content": []
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

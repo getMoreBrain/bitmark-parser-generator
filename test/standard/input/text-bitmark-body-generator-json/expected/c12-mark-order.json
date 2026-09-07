@@ -1,0 +1,130 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "ref",
+            "attrs": {
+              "reference": "b"
+            }
+          },
+          {
+            "type": "xref",
+            "attrs": {
+              "xref": "a",
+              "reference": ""
+            }
+          }
+        ],
+        "text": "t",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "bold"
+          },
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "s"
+            }
+          }
+        ],
+        "text": "t",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "comment",
+            "comment": "c"
+          },
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "s"
+            }
+          }
+        ],
+        "text": "t",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "s"
+            }
+          }
+        ],
+        "text": "t",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "textStyle",
+            "attrs": {
+              "color": "yellow"
+            }
+          },
+          {
+            "type": "userHighlight"
+          }
+        ],
+        "text": "t",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          },
+          {
+            "type": "textStyle",
+            "attrs": {
+              "color": "red"
+            }
+          }
+        ],
+        "text": "t",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

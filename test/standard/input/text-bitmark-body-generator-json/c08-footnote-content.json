@@ -1,0 +1,247 @@
+[
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "chain marks: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "footnote",
+            "attrs": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "x",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    },
+                    {
+                      "type": "italic"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "textStyle: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "footnote",
+            "attrs": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "x",
+                  "marks": [
+                    {
+                      "type": "textStyle",
+                      "attrs": {
+                        "color": "red"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "nested footnote: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "footnote*",
+            "attrs": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "x",
+                  "marks": [
+                    {
+                      "type": "footnote",
+                      "attrs": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "y"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "pipe in text: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "footnote",
+            "attrs": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "a|b"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "hardBreak: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "footnote",
+            "attrs": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "a"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "type": "text",
+                  "text": "b"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "short-form mark and bare URL: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "footnote",
+            "attrs": {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "see "
+                },
+                {
+                  "type": "text",
+                  "text": "b",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " at "
+                },
+                {
+                  "type": "text",
+                  "text": "a.com",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://a.com"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "content string: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "footnote",
+            "attrs": {
+              "content": "hello"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,136 @@
+[
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "t",
+        "marks": [
+          {
+            "type": "xref",
+            "attrs": {
+              "xref": "a",
+              "reference": ""
+            }
+          },
+          {
+            "type": "ref",
+            "attrs": {
+              "reference": "b"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "t",
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "s"
+            }
+          },
+          {
+            "type": "bold"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "t",
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "s"
+            }
+          },
+          {
+            "type": "comment",
+            "comment": "c"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "t",
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "s"
+            }
+          },
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "u"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "t",
+        "marks": [
+          {
+            "type": "userHighlight"
+          },
+          {
+            "type": "textStyle",
+            "attrs": {
+              "color": "yellow"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "t",
+        "marks": [
+          {
+            "type": "highlight"
+          },
+          {
+            "type": "textStyle",
+            "attrs": {
+              "color": "red"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

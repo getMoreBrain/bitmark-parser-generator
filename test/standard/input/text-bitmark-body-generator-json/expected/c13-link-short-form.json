@@ -1,0 +1,128 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "see ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://a.com",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "a.com",
+        "type": "text"
+      },
+      {
+        "text": " now",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://a.com",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "a.com",
+        "type": "text"
+      },
+      {
+        "text": ".",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://a.com",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "a.com",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "text": "b",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://a.com",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "a.com",
+        "type": "text"
+      },
+      {
+        "attrs": {
+          "alt": "x",
+          "src": "https://img.io/i.png",
+          "alignmentVertical": "top",
+          "size": "line-height",
+          "zoomDisabled": true
+        },
+        "type": "imageInline"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "marks": [
+          {
+            "type": "link",
+            "attrs": {
+              "href": "https://a.com/x y",
+              "target": "_blank"
+            }
+          }
+        ],
+        "text": "a.com/x y",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]

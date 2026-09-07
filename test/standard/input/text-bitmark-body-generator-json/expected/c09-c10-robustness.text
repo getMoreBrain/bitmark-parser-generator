@@ -1,0 +1,9 @@
+bold with attrs: ==text==|bold|
+|
+marks not an array: text
+|
+junk mark entries: ==text==|bold|
+|
+text not a string: end
+|
+references not an array: ==text==|extref:e|provider:p|

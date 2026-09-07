@@ -229,3 +229,60 @@ Round-trip integrity (text → JSON → text → JSON) is enforced by the
 regenerated after grammar changes (`npm run build-grammar-text`). The browser-bundle
 tests (`web-*.test.ts`) run against `dist/` — run `npm run tsup && npm run build-browser`
 (or a full `npm run build`) after grammar/source changes or they will test stale code.
+
+---
+
+## 7. Generator representability rules (PLAN-022, bug #10567)
+
+**Rule**: the text generator (JSON → bitmark text) writes a piece of markup only if the text
+parser turns that markup back into the JSON it came from. The parser turns invalid markup into
+text; the generator turns invalid JSON into text. Nothing invalid is ever emitted (it would be
+baked into the content as literal `==…==|…|` tags on the next round trip).
+
+Applied per attribute, mechanically:
+
+1. An attribute the grammar has no rule for (`bold{color}`, `image{class}`, stale parser output
+   keys `error`/`type`/`msg`/`found`) is ignored; the mark/node is still written.
+2. An attribute with a value outside its grammar rule is not written and **never coerced**
+   (`RED` is not `red`, `"x"` is not `1`, level `4` is not `3`). If the grammar rule has an
+   alternative without that segment (`|highlight|`, `|code|`, `|timer|duration:…|`, `|xref:x|`,
+   `Ref*`, `MediaChain?`) that form is written; if the segment is mandatory (`color:` of
+   textStyle, `duration:` of timer, the value of `link:`/`var:`/`►`/`xref:`/`extref:`/`provider:`/
+   `footnote:`/`symbol:`/`colorPicker:`/`#`, `src` of image/imageInline, `==alt==` of imageInline,
+   `TitleTags`, ordered-list digits) the mark/node is dropped and its text kept.
+3. Absent is not invalid: an absent free-string value is written empty (`|link:|`,
+   `|footnote:|`); absent structural values take the existing defaults (heading level 1, list
+   start 1, `|code`).
+4. Parser normalisation is mirrored, not extended: free strings are trimmed, inline code language
+   is lower-cased.
+
+**Value classes** (mirror of the grammar; `TextGrammarConstraints.ts`, drift-guarded by
+`test/unit/generator/text-grammar-constraints-sync.test.ts`): `chainString` (no `|`, no line
+terminator), `Color`, `HighlightColor`, `MediaAlignment`, `InlineMediaAlignment`,
+`InlineMediaSize`, `Boolean`, `UInt` (`[0-9]+`), `Duration` (`P…`), `UrlHttp` (block image src),
+`Url` (inline image src, bare-URL link), `inlineAlt` (non-empty, no `==`, not starting/ending
+with `=`), heading level 1..3.
+
+**Contexts** (`TextAstNormalizer.ts`): block (root, body) admits heading / paragraph / lists /
+image / codeBlock; inline (paragraph and heading content, tag-location root) admits text /
+hardBreak / imageInline / latex / body bits - block children are flattened (heading: hardBreak →
+space, empty heading dropped); a list item holds one paragraph then at most one sublist (further
+paragraphs join with hardBreak, a second sublist becomes a new item with an empty paragraph, an
+item without a paragraph gets an empty paragraph line, an empty item is dropped); code content is
+plain text; footnote content is a `|`-free single line with short-form standard marks or a bare
+URL only. `section` nodes have no grammar form and are written as paragraphs.
+
+**Adjacency and order** (`TextMarkSanitizer.ts`, `TextGenerator.ts`): text after an inline chain
+whose first line contains `|` is sealed with `^` (`==a==|italic|^bold|`); `ref` is written
+before an `xref` with an empty reference; `symbol` is written last, a second symbol is dropped,
+and a symbol is dropped when the rest of its line contains `|` (its media chain would swallow the
+segment); the bare-URL link short form is only used when the following character is not a
+`UrlChar` (else `==text==|link:…|`).
+
+**Behaviour change**: an image whose `src` is not an `http(s)://` URL (e.g. a relative path from
+an HTML table) is dropped rather than written as literal text.
+
+**Fixtures / conformance reference**: `test/standard/input/text-bitmark-body-generator-json/`
+(`<id>.json` input, `expected/<id>.text`, `expected/<id>.json`), one file per sub-class C1–C15
+of PLAN-022; unit matrices in `test/unit/generator/text-generator-representable-*.test.ts` and
+the generative `text-generator-adjacency-sweep.test.ts`.

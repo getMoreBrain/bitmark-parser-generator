@@ -1,0 +1,19 @@
+Empty colour (#10567): text
+|
+Unknown colour: text
+|
+Wrong case: text
+|
+Whitespace: text
+|
+Number: text
+|
+Legacy color mark: text / ==text==|color:aqua|
+|
+Valid: ==text==|color:red|
+|
+Highlight with bad colour: ==text==|highlight| / ==text==|userHighlight|
+|
+Highlight with a Color that is not a HighlightColor: ==text==|highlight|
+|
+In a chain: ==text==|bold|italic|

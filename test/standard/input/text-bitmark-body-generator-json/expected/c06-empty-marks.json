@@ -1,0 +1,34 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "abc",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "all dropped: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "heading",
+    "content": [
+      {
+        "text": "H",
+        "type": "text"
+      }
+    ],
+    "attrs": {
+      "level": 1
+    }
+  }
+]

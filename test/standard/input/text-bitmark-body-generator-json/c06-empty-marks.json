@@ -1,0 +1,59 @@
+[
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "a"
+      },
+      {
+        "type": "text",
+        "text": "b",
+        "marks": []
+      },
+      {
+        "type": "text",
+        "text": "c"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "all dropped: "
+      },
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "foo"
+          },
+          {
+            "type": "textStyle",
+            "attrs": {
+              "color": ""
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "attrs": {
+      "level": 1
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "H",
+        "marks": []
+      }
+    ]
+  }
+]

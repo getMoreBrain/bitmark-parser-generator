@@ -373,11 +373,21 @@ describe('round-trip', () => {
   it('HTML formulas and images can round-trip through bitmark table cells', () => {
     const html =
       '<table><tr><td>Inline <math alttext="x^2"></math> ' +
-      '<img src="x.png" alt="pic" width="40"></td></tr></table>';
+      '<img src="https://img.io/x.png" alt="pic" width="40"></td></tr></table>';
     const bitmark = bpg.convertHtmlTable(html) as string;
     const out = bpg.convertHtmlTable(bitmark) as string;
     expect(out).toContain('<math alttext="x^2"></math>');
-    expect(out).toContain('<img src="x.png" alt="pic" width="40">');
+    expect(out).toContain('<img src="https://img.io/x.png" alt="pic" width="40">');
+  });
+
+  it('an image with a src that is not a URL cannot be expressed in bitmark and is dropped', () => {
+    // The text grammar only accepts http(s):// or mailto: image sources; the generator never
+    // writes markup the text parser would turn into literal text (PLAN-022)
+    const html =
+      '<table><tr><td>Inline <img src="x.png" alt="pic" width="40"> end</td></tr></table>';
+    const bitmark = bpg.convertHtmlTable(html) as string;
+    expect(bitmark).not.toContain('imageInline');
+    expect(bitmark).toContain('Inline  end');
   });
 });
 

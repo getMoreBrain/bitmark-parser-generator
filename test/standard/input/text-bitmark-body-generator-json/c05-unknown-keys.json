@@ -1,0 +1,73 @@
+[
+  {
+    "type": "image",
+    "attrs": {
+      "src": "https://img.io/i.png",
+      "class": "left",
+      "": "v",
+      "foo": "bar",
+      "error": "Found unknown property or invalid value: foo"
+    }
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "imageInline",
+        "attrs": {
+          "src": "https://img.io/i.png",
+          "alt": "a",
+          "foo": "bar",
+          "type": "error",
+          "msg": "width must be a positive integer.",
+          "found": "abc"
+        }
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "symbol",
+            "attrs": {
+              "src": "s",
+              "error": "Found unknown property or invalid value: bold",
+              "foo": "bar"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "attrs": {},
+    "content": [
+      {
+        "type": "text",
+        "text": "text",
+        "marks": [
+          {
+            "type": "bold",
+            "attrs": {
+              "color": "red"
+            }
+          },
+          {
+            "type": "highlightYellow",
+            "attrs": {
+              "color": "red"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

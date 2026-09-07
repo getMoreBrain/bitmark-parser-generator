@@ -1,0 +1,169 @@
+[
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Empty colour (#10567): text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Unknown colour: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Wrong case: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Whitespace: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Number: text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Legacy color mark: text / ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "textStyle",
+            "attrs": {
+              "color": "aqua"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Valid: ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "textStyle",
+            "attrs": {
+              "color": "red"
+            }
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Highlight with bad colour: ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      },
+      {
+        "text": " / ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "userHighlight"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "Highlight with a Color that is not a HighlightColor: ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "highlight"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  },
+  {
+    "type": "paragraph",
+    "content": [
+      {
+        "text": "In a chain: ",
+        "type": "text"
+      },
+      {
+        "marks": [
+          {
+            "type": "bold"
+          },
+          {
+            "type": "italic"
+          }
+        ],
+        "text": "text",
+        "type": "text"
+      }
+    ],
+    "attrs": {}
+  }
+]
