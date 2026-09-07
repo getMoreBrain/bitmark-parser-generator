@@ -37,15 +37,30 @@ validate against the grammar rule that will consume it is an instance of this cl
 | C8 | Nested chain-value context ignores its restrictions | footnote content with any `\|`-form mark (`bold+italic`, `textStyle`) or a `\|` in its text → `footnote:==x==\|bold\|italic\|\|` → marks escape onto the OUTER text |
 | C9 | Standard mark silently dropped on junk attrs | `bold{color:"red"}` → not a "standard mark" any more → text written unstyled (lossy, though valid) |
 | C10 | Generator throws on malformed shapes | `marks: "bold"`, `marks: [null]`, `text: 5` → exception (violates "parser errors contained, don't crash process") |
+| C11 | Plain text after an inline chain is swallowed into the chain | `[text a (italic)][text "bold\|"]` → `==a==\|italic\|bold\|` → **bold mark on `a`, text gone**; same for `color:red\|`, `►b\|` |
+| C12 | Mark order the grammar reads differently | `[xref(a,""), ref(b)]` → `\|xref:a\|►b\|` → xref with reference `b`, ref gone; `[symbol, bold]` → `\|symbol:s\|bold\|` → symbol `error` attr, bold gone (symbol's `MediaChain` swallows every later segment); `[symbol, comment]` → symbol.comment |
+| C13 | Bare-URL link short form runs into following text | `[link a.com][text "."]` → `https://a.com.` → href becomes `https://a.com.` (`^` cannot break it: it is a `UrlChar`) |
+| C14 | Node in a context the grammar has no form for | `section` → `\|foo: a` literal; heading with empty content → `# ` → paragraph `"#"`; block image inside a paragraph → literal; heading / codeBlock / image inside a listItem → literal `# H`, `\|code:js`; empty listItem → `• ` → paragraph `"•"`; sublist as first child of an item → `• \t• a` garbage; list directly inside a list; marks inside a codeBlock → `==x==\|bold\|` literal in the code; at **tag location** every block node (heading, list, image, codeBlock) → literal `# H`, `• a`, `\|image:…\|` |
+| C15 | `TextFormat.plainText` with an AST input still writes bitmark markup | `bold` → `==t==\|bold\|`, heading → `# H`, list → `• a` into a plain-text body → literal in the JSON string |
 
 Only a partial-chain failure (C1/C2 as the 2nd+ segment) keeps the earlier marks; a failure in
 the first segment loses everything. Either way the output is not the input, and the literal
 tags become permanent.
 
-Verified with a probe of ~130 malformed inputs against the current generator + v8.41.1 parser
-(see Appendix A for the full observed inventory). Cases that already behave correctly:
+Verified with a probe of ~200 malformed inputs against the current generator + v8.41.1 parser
+(see Appendices A and B for the full observed inventory). Cases that already behave correctly:
 unknown mark types (dropped), `timer` without duration (dropped, PLAN-015), legacy
-`color`/`duration` marks (normalised, PLAN-015), `highlight`+`textStyle` ordering (PLAN-015).
+`color`/`duration` marks (normalised, PLAN-015), `highlight`+`textStyle` ordering (PLAN-015),
+and everything the breakscaping layer already covers — line-start block tags in text
+(`• `, `•1 `, `# `, `\|`, `\|code`, `\|image:`), also after a `hardBreak` and inside code
+blocks; `[!n]` body-bit placeholders in text; `====`; `=` next to a mark; tabs; two
+consecutive `hardBreak`s.
+
+C1–C10 emit markup the parser rejects (it becomes literal text). C11–C13 emit *valid*
+markup that the parser reads as **different** markup (text is lost into a mark); the
+"no leaked markup" oracle does not see them, only AST equality does. C14–C15 are the same
+defect at node level: the generator writes a node's markup in a context whose grammar rule
+has no such node.
 
 ## Goal
 
@@ -104,6 +119,25 @@ JSON into text.**
   runs on the result.
 - **FR11 #10567 end to end.** The reported bit JSON converts to bitmark with no `\|color:\|`
   and converts back to plain text nodes.
+- **FR12 Chain close is sealed against following text (C11).** After the closing `\|` of an
+  inline chain, if the next written text (up to its first line terminator) contains a `\|`, a
+  `^` is inserted first. Verified: `==a==\|italic\|^bold\|` re-parses as italic `a` + text
+  `bold\|`.
+- **FR13 Canonical mark order (C12).** Marks are written in an order the grammar reads back
+  unambiguously: `ref` marks before any `xref` whose reference is empty (verified
+  `\|►b\|xref:a\|` → `[ref b, xref a ""]`); `symbol` last (verified `\|#c\|symbol:s\|`,
+  `\|bold\|symbol:s\|`); a second `symbol` on the same node has no form → dropped. Extends the
+  PLAN-015 `highlight`/`textStyle` reorder; all reorders live in one place.
+- **FR14 Link short form is context-checked (C13).** The bare-URL form is used only when
+  `href` matches the `Url` rule fully **and** the next written character is not a `UrlChar`
+  (end of text, whitespace, line terminator); otherwise the chain form
+  `==a.com==\|link:https://a.com\|` (verified to re-parse with `.` as separate text).
+- **FR15 Context rules (C14).** Each container admits only the child node types its grammar
+  rule produces; anything else is reduced per the Context table below.
+- **FR16 Plain text format (C15).** With `TextFormat.plainText` the generator writes no
+  bitmark markup at all: marks dropped, block structure reduced to text and newlines exactly
+  as for the tag-location inline context. (Check whether the bitmark generator can ever pass a
+  `TextAst` with `plainText`; if not, this is defensive and cheap.)
 
 ### Non-functional
 
@@ -170,6 +204,25 @@ JSON into text.**
 | `orderedList*` | `start → listStart` (essential: bullet digits mandatory) | invalid → list dropped, item paragraphs written; absent → 1 (existing default) |
 | `taskItem` | `checked → Boolean` | only `true` → `•+`, else `•-` (non-boolean ignored) |
 
+## Context table (FR15)
+
+| Context | Grammar rule | Children with a form | Everything else |
+|---------|--------------|----------------------|-----------------|
+| block (root, body location) | `Block+` | heading, paragraph, lists, image, codeBlock; inline nodes at root (parser wraps them in a paragraph — normal form) | `section` → paragraph of its content; unknown block types → content written (unchanged) |
+| inline (paragraph content; heading content; **root at tag location**, `bitmarkPlus`) | `InlineTags` | text, hardBreak, imageInline, latex, body bits | block child → its text content flattened inline (paragraphs / list items / code lines separated by hardBreak); block image → nothing; **heading**: hardBreak → space, empty content → heading dropped (`# ` alone re-parses as paragraph `#`) |
+| list | `BulletListLine+` | listItem / taskItem (item marker follows the *list* type — parser normal form) | a list directly inside a list → written as an item with an empty paragraph line holding that sublist (verified `• ` NL `\t• a` → item `[paragraph[], sublist]`) |
+| listItem | `BulletListLine` | first a paragraph, then at most one sublist | no leading paragraph → empty paragraph line written (`• ` NL) so the sublist stays attached; further paragraphs → joined into the first with hardBreak (parser normal form, continuation lines); heading / codeBlock → text flattened into the paragraph; image → nothing; a 2nd+ sublist → new item with an empty paragraph (verified, keeps the sublist type); item with no content at all → dropped (`• ` alone re-parses as paragraph `•`); leading tabs on continuation lines stripped (they are indentation to the parser) |
+| code (codeBlock content) | `CodeBody` | plain text; hardBreak → newline | marks dropped; nested nodes → text |
+| chain value (footnote / footnote\* content) | `bitmarkPlusString` on a `\|`-free string | plain text; single standard mark in short form; hardBreak → space | see FR5 |
+| plainText format | — | text and newlines | FR16 |
+
+Accepted parser normal forms (valid output, AST differs on first round trip, stable after —
+covered by the idempotence oracle, documented, not "fixed"): inline nodes at root gain a
+paragraph; raw `\n`/`\r`/` `/` ` inside a text node re-parse as `hardBreak`; two
+paragraphs in a list item become one with a `hardBreak`; a list's item type follows the list
+type; `text: ""` nodes disappear (parser `cleanEmptyTextNodes`) — the generator does not
+write them (today it writes `==^==\|bold\|` for them).
+
 ## Resolution rule (replaces case-by-case decisions)
 
 Every choice below is derived from one rule, not decided: **the generator writes a piece of
@@ -222,6 +275,12 @@ Former open questions, answered by the rule:
 | `imageInline{src:"img.png"}` / `{alt:"a==b"}` | literal text / truncated alt; both segments mandatory | nothing (node dropped) |
 | `image{alignment:"bad"}`, `{width:"abc"}`, `{class:"left"}` | `error` attr; chain items optional | `\|image:…\|` without that item |
 | `taskItem{checked:"yes"}` | grammar only knows `true`/`false` | `•- ` (attr ignored, default unchecked) |
+| `section{section:"foo"}` | `\|foo: a` → paragraph `"\|foo: a"`; no grammar rule | paragraph `a` |
+| heading at tag location | `# H` → text `"# H"` (`bitmarkPlus` has no blocks) | `H` |
+| bullet list at tag location | `• a` NL `• b` → text with hardBreak | `a` hardBreak `b` |
+| `[symbol, bold]` | `\|symbol:s\|bold\|` → symbol with `error`, bold lost | `\|bold\|symbol:s\|` |
+| `[xref(a,""), ref(b)]` | `\|xref:a\|►b\|` → xref reference `b` | `\|►b\|xref:a\|` |
+| italic `a` then text `bold\|` | `==a==\|italic\|bold\|` → bold on `a` | `==a==\|italic\|^bold\|` |
 
 ## Design
 
@@ -244,7 +303,19 @@ Former open questions, answered by the rule:
   - `writeFootnoteMark` / `writeFootnoteStarMark`: internal generator runs with a new
     `GenerateOptions.chainValueContext` (extends `forceInline`) implementing FR5; the writer
     checks the result for `\|`/line terminators and drops the mark.
-  - `isSimpleLink`: additionally require `href` to match `Url` fully.
+  - `isSimpleLink`: additionally require `href` to match `Url` fully and the following
+    character not to be a `UrlChar` (FR14). Needs one-node lookahead: the generator already
+    receives `left`/`right` in `between_*` callbacks; use `right` (or peek the parent's
+    content) rather than buffering output.
+  - `getInterTextBreakscape`: new rule for the chain-close case (FR12), alongside the
+    existing half-mark and `[`-tag rules.
+  - Mark ordering (FR13) in `getWritableMarks`, next to the PLAN-015 reorder.
+  - Context tracking: replace the ad-hoc `inParagraph` / `inHeading` / `inCodeBlock` /
+    `inBulletList` / `inInline` flags with an explicit context stack (block, inline, list,
+    listItem, code, chainValue) consulted by `handleEnterNode`; the Context table is a
+    function of (context, node.type). Tag location pushes `inline` at the root;
+    `plainText` format pushes a variant that writes no marks.
+  - `writeSection`: removed (no grammar rule; content written as a paragraph).
 - Architecture check: generator layer only; grammar remains source of truth (mirror + drift
   test); parsers, AST, config, breakscaping untouched. Output stays deterministic.
 
@@ -253,7 +324,10 @@ Former open questions, answered by the rule:
 - **T1 Unit — representability matrix** `test/unit/generator/text-generator-representable-markup.test.ts`.
   Table-driven; one row per cell of the mark table × {valid, empty, missing, wrong-enum,
   wrong-case, whitespace, `\|`, newline, wrong-type} where the class makes the cell
-  meaningful, plus node table rows, C6, C8, C9, C10 shapes, and both locations (FR9).
+  meaningful, plus node table rows, C6, C8, C9, C10 shapes, the C11–C13 order/adjacency
+  cases (every mark type followed by text containing `\|`; every ordered pair of chain mark
+  types; short-form link followed by each `UrlChar` class and by whitespace), every
+  (context × node type) cell of the Context table, and both locations (FR9).
   Every row asserts four things, the last two being the mechanical form of the Resolution
   rule so no row depends on hand judgement:
   1. `generate(json)` equals the expected markup;
@@ -264,8 +338,14 @@ Former open questions, answered by the rule:
      `\|…\|`, `#### `, `•x ` fragment can appear as literal text;
   4. idempotence: `generate(parse(generate(json))) === generate(json)`.
   Oracles 3 and 4 are also run over every existing parser fixture JSON and over the full
-  Appendix A probe matrix (as a fixed list), so the whole class is checked, not only the rows
-  written by hand.
+  Appendix A + B probe matrices (as a fixed list), so the whole class is checked, not only the
+  rows written by hand. Oracle 2 is the one that catches C11–C13 (text lost into a mark) and
+  must not be weakened to a substring check.
+- **T1b Unit — generative adjacency sweep** (cheap, high yield for C11–C13): for every
+  pair (mark type A with valid attrs, following text T) where T ranges over a fixed list of
+  chain-item spellings (`bold\|`, `color:red\|`, `►x\|`, `link:x\|`, `#c\|`, `\|x`, `.`,
+  `/path`, ` next`), and every ordered pair of chain mark types (A, B) on one node, assert
+  oracles 2–4. Runs in both locations.
   Reuse the `mark()` / `ast()` / `reparseMarks()` helpers from
   `text-generator-legacy-marks.test.ts` (extract to a shared helper if useful).
 - **T2 Unit — #10567 end to end** (same file or `bitmark-generator-invalid-text-json.test.ts`):
@@ -300,9 +380,9 @@ Former open questions, answered by the rule:
 ## Out of scope
 
 - Grammar changes (e.g. escaping `\|` inside chain values, headings beyond level 3).
-- The inverse class: the parser *adding* markup the JSON did not have — a plain text node
-  containing `https://…` re-parses with an auto `link` mark (observed; breakscaping layer).
-- `section` text node (`writeSection`): no grammar rule exists; unchanged.
+- The parser *adding* markup the JSON did not have where no escape exists in the grammar:
+  a plain text node containing `https://…` re-parses with an auto `link` mark (`^` is a
+  `UrlChar`, so it cannot be broken). Documented as a known parser normal form.
 - Rust implementation changes (fixtures + doc are the handover).
 - Bitmark-level (bit/tag) generator validation — a separate class, see PLAN-014 for the
   JSON-generator analogue.
@@ -313,9 +393,15 @@ Former open questions, answered by the rule:
 - [ ] T1 matrix green in both locations; T3 green against v8.41.1.
 - [ ] T4 fixtures committed; `expected/*.json` checked against the Resolution rule table.
 - [ ] T5/T6 green with zero fixture changes.
-- [ ] Probe script re-run (Appendix A) shows no row whose re-parse contains a literal `==`,
-      `\|` chain fragment, `#### `, `•x `, or a parser `error` attribute originating from
-      generator output.
+- [ ] Probe scripts re-run (Appendices A and B) show no row whose re-parse contains a literal
+      `==`, `\|` chain fragment, `#### `, `•x `, or a parser `error` attribute originating
+      from generator output, and no row where a text node's text is missing from the
+      re-parsed AST (C11–C13).
+- [ ] Every write site in `TextGenerator` (`writeText`, `writeMarks` + each `writeXxxMark`,
+      `writeParagraph`, `writeHardBreak`, `writeHeading`, `writeBullet`, `writeImage`,
+      `writeCodeBlock`, `writeLatex`, `writeBodyBit`, media attr writer) is traced to a
+      grammar rule and a row in the value-class / mark / node / context tables; any site
+      without a row is a gap in this plan.
 
 ## Appendix A — observed current behaviour (probe, generator + parser v8.41.1)
 
@@ -360,3 +446,41 @@ Correct today: unknown mark type, `link`/`ref`/`xref`/`extref`/`footnote`/`symbo
 `colorPicker`/`var`/`code` with empty values, `code` language upper-case (parser lower-cases),
 `timer{duration:""}` (dropped), `latex` formula with `==` or `\|`, `image{width:"300"}`,
 `imageInline{srcAlt, comment}`, `highlightYellow{junk attrs}`.
+
+## Appendix B — observed current behaviour, second probe (ordering, adjacency, contexts)
+
+Same legend as Appendix A; **SWALLOW** = valid markup, but text or a mark is absorbed into
+another mark (AST changes, nothing literal to see).
+
+| Input | Generated | Result |
+|-------|-----------|--------|
+| italic `a` + text `bold\|` / `color:red\|` | `==a==\|italic\|bold\|` | SWALLOW (bold on `a`, text gone) |
+| italic `a` + text `\|x` | `==a==\|italic\|\|x` | ok (`\|x` literal) |
+| `[xref(a,""), ref(b)]` | `\|xref:a\|►b\|` | SWALLOW (xref reference `b`) |
+| `[xref(a,"r"), ref(b)]`, `[extref, ref]`, `[ref, extref]`, `[bold, symbol]`, `[timer, textStyle]`, `[code, bold]`, `[bold, bold]`, `[link, link]` | — | ok |
+| `[symbol, bold]` / `[symbol, symbol]` | `\|symbol:s\|bold\|` | ERR (symbol `error` attr, 2nd mark gone) |
+| `[symbol, comment]` | `\|symbol:s\|#c\|` | SWALLOW (symbol.comment) |
+| `[userHighlight, textStyle(yellow)]` | `\|color:yellow\|userHighlight\|` | ok (PLAN-015 reorder covers userHighlight) |
+| short-form link `a.com` + text `.` | `https://a.com.` | SWALLOW (href gains `.`) |
+| `section{section:"foo"}` / no name | `\|foo: a` / `\|a` | LIT |
+| heading, empty content | `# ` | LIT (paragraph `#`) |
+| heading containing a list | `# H• a` | garbage heading text |
+| block image inside paragraph | `a\|image:…\|b` | LIT |
+| imageInline / latex / text at root | — | ok (parser wraps in paragraph) |
+| listItem: two paragraphs | `• a` NL `b` | normal form (one paragraph + hardBreak) |
+| listItem: heading / codeBlock / image | `• # H`, `• \|code:js`, `• \|image:…\|` | LIT |
+| listItem: text directly | `• a` | ok |
+| listItem: empty | `• ` | LIT (paragraph `•`) |
+| listItem: sublist first, no paragraph | `• \t• a` | LIT |
+| list directly inside list | `\t• a` | wrong nesting |
+| listItem: paragraph + two sublists (bullet, ordered) | `• a` NL `\t• b` NL `\t•1 c` | merged into one bulletList (type of 2nd lost) |
+| taskList with listItem / bulletList with taskItem | — | normal form (item follows list type) |
+| `orderedList{start:0}` | `•0 a` | ok |
+| codeBlock: text with marks | `==x==\|bold\|y` inside code | marks become literal code text |
+| codeBlock: hardBreak; lines looking like `• `, `# `, `\|`, `\|code:`, `\|image:`; empty content; language with `\|` | — | ok (breakscaped / allowed by `CodeLanguage`) |
+| text `""` with marks | `\|` NL `==^==\|bold\|` | valid but pointless (empty paragraph) |
+| continuation line in list item starting with a tab | `• a` NL `\tb` | item ends, `b` becomes a paragraph |
+| **tag location**: heading / list / image / codeBlock | `# H`, `• a`, `\|image:…\|`, `\|code:js` | LIT |
+| tag location: two paragraphs / empty paragraph between | `a` NL `b` | normal form (hardBreaks) |
+| tag location: text `• a`, `[!0]` | `• a`, `[!0^]` | ok |
+| **plainText format**: bold / textStyle `""` / heading / list | `==t==\|bold\|`, `==t==\|color:\|`, `# H`, `• a` | markup written into plain text |
