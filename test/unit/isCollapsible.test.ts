@@ -9,6 +9,12 @@ const toJson = (bitmark: string): BitWrapperJson[] =>
   bpg.convert(bitmark, { bitmarkVersion: BitmarkVersion.v2 }) as BitWrapperJson[];
 
 describe('isCollapsible property', () => {
+  test('every bit emits collapsed as false by default', () => {
+    const json = toJson('[.article]\n\nContent\n\n[.note]\n\nMore content');
+
+    expect(json.map(({ bit }) => bit.collapsed)).toEqual([false, false]);
+  });
+
   describe('normal bits (no default, only emitted when set)', () => {
     test('absent => key not emitted', () => {
       const bit = toJson('[.article]\n\nContent')[0].bit;
