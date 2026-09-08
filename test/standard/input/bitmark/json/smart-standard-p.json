@@ -4,6 +4,8 @@
       "type": "smart-standard-p",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "item": [],
       "lead": [],
       "pageNumber": [],
@@ -35,6 +37,8 @@
       "type": "smart-standard-p",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "item": [
         {
           "type": "paragraph",

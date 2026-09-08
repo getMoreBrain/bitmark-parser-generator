@@ -4,6 +4,8 @@
       "type": "smart-standard-article-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151971"
       ],
@@ -114,6 +116,8 @@
       "type": "smart-standard-article-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151971"
       ],
@@ -224,6 +228,8 @@
       "type": "smart-standard-example-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151971"
       ],
@@ -336,6 +342,8 @@
       "type": "smart-standard-example-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151971"
       ],
@@ -448,6 +456,8 @@
       "type": "smart-standard-image-figure-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "backgroundWallpaper": {
         "type": "image",
         "image": {
@@ -526,6 +536,8 @@
       "type": "smart-standard-image-figure-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "backgroundWallpaper": {
         "type": "image",
         "image": {
@@ -694,6 +706,8 @@
       "type": "smart-standard-list",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151971"
       ],
@@ -897,6 +911,8 @@
       "type": "smart-standard-list-item",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151971"
       ],
@@ -1101,6 +1117,8 @@
       "type": "smart-standard-list-item",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "listItemIndent": 5,
       "item": [],
       "lead": [],
@@ -1122,6 +1140,8 @@
       "type": "smart-standard-note-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151971"
       ],
@@ -1232,6 +1252,8 @@
       "type": "smart-standard-note-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151971"
       ],
@@ -1342,6 +1364,8 @@
       "type": "smart-standard-remark-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151971"
       ],
@@ -1452,6 +1476,8 @@
       "type": "smart-standard-remark-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151971"
       ],
@@ -1562,6 +1588,8 @@
       "type": "smart-standard-table-image-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151971"
       ],
@@ -1636,6 +1664,8 @@
       "type": "smart-standard-table-image-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151972"
       ],
@@ -1710,6 +1740,8 @@
       "type": "smart-standard-remark-table-image-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151971"
       ],
@@ -1784,6 +1816,8 @@
       "type": "smart-standard-remark-table-image-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "id": [
         "151972"
       ],
@@ -1858,6 +1892,8 @@
       "type": "smart-standard-table-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "tableFixedHeader": true,
       "tableSearch": true,
       "tableSort": true,
@@ -2007,6 +2043,8 @@
       "type": "smart-standard-table-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "tableFixedHeader": true,
       "tableSearch": true,
       "tableSort": true,
@@ -2156,6 +2194,8 @@
       "type": "smart-standard-remark-table-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "tableFixedHeader": true,
       "tableSearch": true,
       "tableSort": true,
@@ -2305,6 +2345,8 @@
       "type": "smart-standard-remark-table-non-normative",
       "format": "bitmark++",
       "bitLevel": 1,
+      "isSelectable": false,
+      "selected": false,
       "tableFixedHeader": true,
       "tableSearch": true,
       "tableSort": true,
