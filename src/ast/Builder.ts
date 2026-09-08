@@ -398,6 +398,7 @@ class Builder extends BaseBuilder {
       toc?: boolean;
       progress?: boolean;
       isCollapsible?: boolean | null; // null (from JSON input) is treated as not set
+      collapsed?: boolean;
       anchor?: string;
       reference?: string;
       referenceEnd?: string;
@@ -1651,6 +1652,7 @@ class Builder extends BaseBuilder {
         data.isCollapsible ?? (isCollapsibleDefaultsTrue ? true : undefined),
         options,
       ),
+      collapsed: data.collapsed ?? false,
       anchor: data.anchor,
       reference: data.reference,
       referenceEnd: data.referenceEnd,

@@ -270,6 +270,7 @@ export interface BitJson {
   toc: boolean;
   progress: boolean;
   isCollapsible: boolean | null;
+  collapsed: boolean;
   anchor: string;
   reference: string | string[]; // Has 2 meanings, depending on bit (anchor/reference, or @reference)
   referenceEnd: string;

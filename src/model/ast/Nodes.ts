@@ -333,6 +333,7 @@ export interface Bit {
   toc?: Property;
   progress?: Property;
   isCollapsible?: Property;
+  collapsed?: boolean;
   anchor?: string;
   reference?: string;
   referenceEnd?: string;

@@ -50,6 +50,7 @@ class JsonCleanupUtils {
       }
 
       for (const bw of bitWrappers) {
+        if (bw.bit && bw.bit.collapsed == null) bw.bit.collapsed = false;
         this.normalizeTableFormats(bw);
       }
     }
