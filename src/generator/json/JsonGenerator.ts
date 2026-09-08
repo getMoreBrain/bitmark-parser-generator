@@ -1622,9 +1622,6 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       originalType: bit.isCommented ? bit.bitType : undefined,
       format,
       bitLevel: bit.bitLevel,
-      collapsed: bit.collapsed ?? false,
-      isSelectable: bit.isSelectable ?? false,
-      selected: bit.selected ?? false,
     };
 
     return bitJson;

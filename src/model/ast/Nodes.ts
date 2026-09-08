@@ -333,9 +333,9 @@ export interface Bit {
   toc?: Property;
   progress?: Property;
   isCollapsible?: Property;
-  collapsed?: boolean;
-  isSelectable?: boolean;
-  selected?: boolean;
+  collapsed?: Property;
+  isSelectable?: Property;
+  selected?: Property;
   anchor?: string;
   reference?: string;
   referenceEnd?: string;

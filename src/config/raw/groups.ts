@@ -118,6 +118,24 @@ const GROUPS: _GroupsConfig = {
         nullable: true,
       },
       {
+        key: ConfigKey.property_collapsed,
+        description: 'If true, the bit is collapsed',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
+      {
+        key: ConfigKey.property_isSelectable,
+        description: 'If true, the bit is selectable',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
+      {
+        key: ConfigKey.property_selected,
+        description: 'If true, the bit is selected',
+        format: TagFormat.boolean,
+        defaultValue: 'false',
+      },
+      {
         key: ConfigKey.property_spansPageBreak,
         description: 'If true, the bit spans a page break',
         format: TagFormat.boolean,

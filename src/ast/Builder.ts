@@ -397,7 +397,7 @@ class Builder extends BaseBuilder {
       level?: number | string;
       toc?: boolean;
       progress?: boolean;
-      isCollapsible?: boolean | null; // null (from JSON input) is treated as not set
+      isCollapsible?: boolean;
       collapsed?: boolean;
       isSelectable?: boolean;
       selected?: boolean;
@@ -1654,9 +1654,14 @@ class Builder extends BaseBuilder {
         data.isCollapsible ?? (isCollapsibleDefaultsTrue ? true : undefined),
         options,
       ),
-      collapsed: data.collapsed ?? false,
-      isSelectable: data.isSelectable ?? false,
-      selected: data.selected ?? false,
+      collapsed: this.toAstProperty(bitType, ConfigKey.property_collapsed, data.collapsed, options),
+      isSelectable: this.toAstProperty(
+        bitType,
+        ConfigKey.property_isSelectable,
+        data.isSelectable,
+        options,
+      ),
+      selected: this.toAstProperty(bitType, ConfigKey.property_selected, data.selected, options),
       anchor: data.anchor,
       reference: data.reference,
       referenceEnd: data.referenceEnd,

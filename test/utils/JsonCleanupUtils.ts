@@ -50,9 +50,6 @@ class JsonCleanupUtils {
       }
 
       for (const bw of bitWrappers) {
-        if (bw.bit && bw.bit.collapsed == null) bw.bit.collapsed = false;
-        if (bw.bit && bw.bit.isSelectable == null) bw.bit.isSelectable = false;
-        if (bw.bit && bw.bit.selected == null) bw.bit.selected = false;
         this.normalizeTableFormats(bw);
       }
     }

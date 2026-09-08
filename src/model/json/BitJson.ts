@@ -269,7 +269,7 @@ export interface BitJson {
   level: number;
   toc: boolean;
   progress: boolean;
-  isCollapsible: boolean | null;
+  isCollapsible: boolean;
   collapsed: boolean;
   isSelectable: boolean;
   selected: boolean;
