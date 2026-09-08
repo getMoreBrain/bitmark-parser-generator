@@ -1623,6 +1623,8 @@ class JsonGenerator extends AstWalkerGenerator<BitmarkAst, void> {
       format,
       bitLevel: bit.bitLevel,
       collapsed: bit.collapsed ?? false,
+      isSelectable: bit.isSelectable ?? false,
+      selected: bit.selected ?? false,
     };
 
     return bitJson;

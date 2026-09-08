@@ -399,6 +399,8 @@ class Builder extends BaseBuilder {
       progress?: boolean;
       isCollapsible?: boolean | null; // null (from JSON input) is treated as not set
       collapsed?: boolean;
+      isSelectable?: boolean;
+      selected?: boolean;
       anchor?: string;
       reference?: string;
       referenceEnd?: string;
@@ -1653,6 +1655,8 @@ class Builder extends BaseBuilder {
         options,
       ),
       collapsed: data.collapsed ?? false,
+      isSelectable: data.isSelectable ?? false,
+      selected: data.selected ?? false,
       anchor: data.anchor,
       reference: data.reference,
       referenceEnd: data.referenceEnd,

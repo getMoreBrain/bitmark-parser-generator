@@ -271,6 +271,8 @@ export interface BitJson {
   progress: boolean;
   isCollapsible: boolean | null;
   collapsed: boolean;
+  isSelectable: boolean;
+  selected: boolean;
   anchor: string;
   reference: string | string[]; // Has 2 meanings, depending on bit (anchor/reference, or @reference)
   referenceEnd: string;
