@@ -1535,6 +1535,7 @@ const GROUPS: _GroupsConfig = {
         description: 'If true, the book is public',
         format: TagFormat.boolean,
         defaultValue: 'false',
+        alwaysEmit: true,
       },
       {
         key: ConfigKey.property_isTemplate,
