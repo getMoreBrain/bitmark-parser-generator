@@ -62,6 +62,8 @@ describe('bitmark-parser', () => {
       instruction: '',
       body: 'Hello World',
       collapsed: false,
+      isSelectable: false,
+      selected: false,
     });
   });
 
