@@ -35,7 +35,7 @@ const BITS: _BitsConfig = {
   [BitType._standardLight]: {
     since: '5.40.0',
     description:
-      'PLAN-021: Lightweight standard base bit with a minimal tag set (item + example only — no instruction/hint/lead, no resource attachments), used as a base for other bits, should not be used directly',
+      'PLAN-021/023: Lightweight standard base bit with a minimal tag set (page number, margin number and example only — no instruction/hint, no item/lead values, no resource attachments), used as a base for other bits, should not be used directly',
     resourceAttachmentAllowed: false,
     tags: [
       {
@@ -43,8 +43,8 @@ const BITS: _BitsConfig = {
         description: 'Standard tags for all bits',
       },
       {
-        key: ConfigKey.group_standardItem,
-        description: 'The item tag (no lead/pageNumber/marginNumber chain)',
+        key: ConfigKey.group_standardPageMargin,
+        description: 'The page/margin number tags (item and lead are placeholders taking no value)',
       },
       {
         key: ConfigKey.group_standardExample,
@@ -2936,7 +2936,7 @@ const BITS: _BitsConfig = {
     bitGroups: [BitGroup.static],
     baseBitType: BitType._standardLight,
     description:
-      'Lightweight heading bit with chapter-style title levels 1-7; title/level + item only — no body, no footer',
+      'Lightweight heading bit with chapter-style title levels 1-7; title/level + item + page/margin number — no body, no footer',
     bodyAllowed: false,
     footerAllowed: false,
     tags: [
@@ -2945,6 +2945,14 @@ const BITS: _BitsConfig = {
         description: 'The title of the heading',
         jsonKey: 'title|setMulti(level)',
         exportJsonKey: { title: '$', level: '$level' },
+      },
+      // PLAN-023: `h` is the one lightweight bit whose item carries a value (a
+      // heading label such as [%4.1]). This entry is keyed on tag_item, the same
+      // key as the group inherited from _standardLight, and bit tags are merged
+      // after inherited ones — so it REPLACES group_standardPageMargin's chain.
+      {
+        key: ConfigKey.group_standardItemPageMargin,
+        description: 'The item and page/margin number tags (lead is a placeholder taking no value)',
       },
     ],
   },
@@ -5912,6 +5920,16 @@ const BITS: _BitsConfig = {
           'Indentation level for the list item, used to define the hierarchy of the list',
         format: TagFormat.number,
         defaultValue: '0',
+      },
+      // PLAN-023: a list item carries a label ('a)', 'iii.'), so — like `h` and
+      // unlike the other lightweight bits — its item takes a value. Keyed on
+      // tag_item, the same key as the group inherited from _standardLight, and
+      // bit tags merge after inherited ones, so this REPLACES that chain.
+      // Inherited by standard-list-item -> smart-standard-list-item and the
+      // collapsible leaf. The list CONTAINER bits keep the placeholder chain.
+      {
+        key: ConfigKey.group_standardItemPageMargin,
+        description: 'The item and page/margin number tags (lead takes no value)',
       },
     ],
   },
