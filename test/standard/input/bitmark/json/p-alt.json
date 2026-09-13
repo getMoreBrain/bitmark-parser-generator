@@ -24,7 +24,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -35,18 +35,7 @@
       "type": "p-alt",
       "format": "bitmark++",
       "bitLevel": 1,
-      "item": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "A",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
+      "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
@@ -57,7 +46,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Alternative paragraph with an item.",
+              "text": "Alternative paragraph with an item value, which is not allowed and generates a warning.",
               "type": "text"
             }
           ],
@@ -66,10 +55,81 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "[%] 'item' does not take a value on bit 'p-alt'. It will be ignored.",
+          "text": "[%A]",
+          "location": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 64
+            },
+            "end": {
+              "line": 5,
+              "column": 5,
+              "offset": 68
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.p-alt]\n[%A]\nAlternative paragraph with an item value, which is not allowed and generates a warning."
+  },
+  {
+    "bit": {
+      "type": "p-alt",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "12",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "m3",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Alternative paragraph with a page number and a margin number.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
-    "bitmark": "[.p-alt]\n[%A]\nAlternative paragraph with an item."
+    "bitmark": "[.p-alt]\n[%][%][%12][%m3]\nAlternative paragraph with a page number and a margin number."
   }
 ]

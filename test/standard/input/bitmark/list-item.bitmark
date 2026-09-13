@@ -19,3 +19,15 @@ The bit content
 
 [.standard-list-item:bitmark++]
 [@listItemIndent:5]
+
+[.list-item]
+[%a)]
+List item with an item label, which IS allowed on the list-item family.
+
+[.list-item]
+[%a)][%][%12][%m3]
+List item with a label, a page number and a margin number.
+
+[.list-item]
+[%a)][%lead][%12]
+List item with a lead value, which is not allowed and generates a warning.

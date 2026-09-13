@@ -71,7 +71,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -110,7 +110,7 @@
       "listItemIndent": 0
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -124,7 +124,10 @@
       "id": [
         "151971"
       ],
-      "item": [
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
         {
           "type": "paragraph",
           "content": [
@@ -136,9 +139,6 @@
           "attrs": {}
         }
       ],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": [
@@ -156,7 +156,7 @@
       "listItemIndent": 0
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -189,99 +189,6 @@
               "line": 14,
               "column": 32,
               "offset": 274
-            }
-          }
-        },
-        {
-          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
-          "text": "[%]",
-          "location": {
-            "start": {
-              "line": 16,
-              "column": 4,
-              "offset": 291
-            },
-            "end": {
-              "line": 16,
-              "column": 7,
-              "offset": 294
-            }
-          },
-          "original": {
-            "text": "[%]",
-            "location": {
-              "start": {
-                "line": 16,
-                "column": 1,
-                "offset": 288
-              },
-              "end": {
-                "line": 16,
-                "column": 4,
-                "offset": 291
-              }
-            }
-          }
-        },
-        {
-          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
-          "text": "[%]",
-          "location": {
-            "start": {
-              "line": 16,
-              "column": 7,
-              "offset": 294
-            },
-            "end": {
-              "line": 16,
-              "column": 10,
-              "offset": 297
-            }
-          },
-          "original": {
-            "text": "[%]",
-            "location": {
-              "start": {
-                "line": 16,
-                "column": 4,
-                "offset": 291
-              },
-              "end": {
-                "line": 16,
-                "column": 7,
-                "offset": 294
-              }
-            }
-          }
-        },
-        {
-          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
-          "text": "[%]",
-          "location": {
-            "start": {
-              "line": 16,
-              "column": 10,
-              "offset": 297
-            },
-            "end": {
-              "line": 16,
-              "column": 13,
-              "offset": 300
-            }
-          },
-          "original": {
-            "text": "[%]",
-            "location": {
-              "start": {
-                "line": 16,
-                "column": 7,
-                "offset": 294
-              },
-              "end": {
-                "line": 16,
-                "column": 10,
-                "offset": 297
-              }
             }
           }
         },
@@ -335,10 +242,190 @@
       "body": []
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
     "bitmark": "[.standard-list-item:bitmark++]\n[@listItemIndent:5]"
+  },
+  {
+    "bit": {
+      "type": "list-item",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "a)",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "List item with an item label, which IS allowed on the list-item family.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "listItemIndent": 0
+    },
+    "parser": {
+      "version": "5.41.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.list-item]\n[%a)]\nList item with an item label, which IS allowed on the list-item family."
+  },
+  {
+    "bit": {
+      "type": "list-item",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "a)",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "12",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "m3",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "List item with a label, a page number and a margin number.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "listItemIndent": 0
+    },
+    "parser": {
+      "version": "5.41.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.list-item]\n[%a)][%][%12][%m3]\nList item with a label, a page number and a margin number."
+  },
+  {
+    "bit": {
+      "type": "list-item",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "a)",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "12",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "List item with a lead value, which is not allowed and generates a warning.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "listItemIndent": 0
+    },
+    "parser": {
+      "version": "5.41.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "[%] 'lead' does not take a value on bit 'list-item'. It will be ignored.",
+          "text": "[%lead]",
+          "location": {
+            "start": {
+              "line": 32,
+              "column": 6,
+              "offset": 589
+            },
+            "end": {
+              "line": 32,
+              "column": 13,
+              "offset": 596
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.list-item]\n[%a)][%lead][%12]\nList item with a lead value, which is not allowed and generates a warning."
   }
 ]

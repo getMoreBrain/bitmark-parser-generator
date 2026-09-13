@@ -15,6 +15,19 @@ export type ExportJsonKey =
   null | boolean | number | string | ExportJsonKey[] | { [k: string]: ExportJsonKey };
 
 /**
+ * Whole-pattern key form meaning "this tag takes NO value"
+ * (see specs/JSONKEY_SYNTAX.md §6.2).
+ *
+ * The tag still fires — it is lexed, consumes its position in a chain, and
+ * satisfies cardinality — but it writes nothing, and any value the author wrote
+ * in it is dropped with a parser warning.
+ *
+ * Distinct from `{}` (consumed and used, written elsewhere) and from
+ * `null`/absent (written at the tag-name default key).
+ */
+export const JSONKEY_IGNORE = '@ignore';
+
+/**
  * Key-pattern value for the HTML backend of the key-pattern language.
  * See crates/lib/jsonkey_parser/doc/HTML.md (design: PLAN-109).
  *

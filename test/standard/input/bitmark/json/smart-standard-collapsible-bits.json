@@ -39,7 +39,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -150,7 +150,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -263,7 +263,7 @@
       "example": null
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -376,7 +376,7 @@
       "example": null
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -520,7 +520,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -689,7 +689,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -704,7 +704,10 @@
         "151971"
       ],
       "isCollapsible": true,
-      "item": [
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
         {
           "type": "paragraph",
           "content": [
@@ -716,9 +719,6 @@
           "attrs": {}
         }
       ],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": [
@@ -735,7 +735,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -768,99 +768,6 @@
               "line": 57,
               "column": 45,
               "offset": 1461
-            }
-          }
-        },
-        {
-          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
-          "text": "[%]",
-          "location": {
-            "start": {
-              "line": 59,
-              "column": 4,
-              "offset": 1478
-            },
-            "end": {
-              "line": 59,
-              "column": 7,
-              "offset": 1481
-            }
-          },
-          "original": {
-            "text": "[%]",
-            "location": {
-              "start": {
-                "line": 59,
-                "column": 1,
-                "offset": 1475
-              },
-              "end": {
-                "line": 59,
-                "column": 4,
-                "offset": 1478
-              }
-            }
-          }
-        },
-        {
-          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
-          "text": "[%]",
-          "location": {
-            "start": {
-              "line": 59,
-              "column": 7,
-              "offset": 1481
-            },
-            "end": {
-              "line": 59,
-              "column": 10,
-              "offset": 1484
-            }
-          },
-          "original": {
-            "text": "[%]",
-            "location": {
-              "start": {
-                "line": 59,
-                "column": 4,
-                "offset": 1478
-              },
-              "end": {
-                "line": 59,
-                "column": 7,
-                "offset": 1481
-              }
-            }
-          }
-        },
-        {
-          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
-          "text": "[%]",
-          "location": {
-            "start": {
-              "line": 59,
-              "column": 10,
-              "offset": 1484
-            },
-            "end": {
-              "line": 59,
-              "column": 13,
-              "offset": 1487
-            }
-          },
-          "original": {
-            "text": "[%]",
-            "location": {
-              "start": {
-                "line": 59,
-                "column": 7,
-                "offset": 1481
-              },
-              "end": {
-                "line": 59,
-                "column": 10,
-                "offset": 1484
-              }
             }
           }
         },
@@ -908,7 +815,10 @@
         "151971"
       ],
       "isCollapsible": true,
-      "item": [
+      "item": [],
+      "lead": [],
+      "pageNumber": [],
+      "marginNumber": [
         {
           "type": "paragraph",
           "content": [
@@ -920,9 +830,6 @@
           "attrs": {}
         }
       ],
-      "lead": [],
-      "pageNumber": [],
-      "marginNumber": [],
       "hint": [],
       "instruction": [],
       "body": [
@@ -940,7 +847,7 @@
       "listItemIndent": 0
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -973,99 +880,6 @@
               "line": 63,
               "column": 50,
               "offset": 1570
-            }
-          }
-        },
-        {
-          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
-          "text": "[%]",
-          "location": {
-            "start": {
-              "line": 65,
-              "column": 4,
-              "offset": 1587
-            },
-            "end": {
-              "line": 65,
-              "column": 7,
-              "offset": 1590
-            }
-          },
-          "original": {
-            "text": "[%]",
-            "location": {
-              "start": {
-                "line": 65,
-                "column": 1,
-                "offset": 1584
-              },
-              "end": {
-                "line": 65,
-                "column": 4,
-                "offset": 1587
-              }
-            }
-          }
-        },
-        {
-          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
-          "text": "[%]",
-          "location": {
-            "start": {
-              "line": 65,
-              "column": 7,
-              "offset": 1590
-            },
-            "end": {
-              "line": 65,
-              "column": 10,
-              "offset": 1593
-            }
-          },
-          "original": {
-            "text": "[%]",
-            "location": {
-              "start": {
-                "line": 65,
-                "column": 4,
-                "offset": 1587
-              },
-              "end": {
-                "line": 65,
-                "column": 7,
-                "offset": 1590
-              }
-            }
-          }
-        },
-        {
-          "message": "[%] is included more than the required 1 time(s). The earlier ones will be ignored",
-          "text": "[%]",
-          "location": {
-            "start": {
-              "line": 65,
-              "column": 10,
-              "offset": 1593
-            },
-            "end": {
-              "line": 65,
-              "column": 13,
-              "offset": 1596
-            }
-          },
-          "original": {
-            "text": "[%]",
-            "location": {
-              "start": {
-                "line": 65,
-                "column": 7,
-                "offset": 1590
-              },
-              "end": {
-                "line": 65,
-                "column": 10,
-                "offset": 1593
-              }
             }
           }
         },
@@ -1120,7 +934,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -1166,7 +980,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -1277,7 +1091,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -1388,7 +1202,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -1499,7 +1313,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -1605,7 +1419,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -1680,7 +1494,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -1755,7 +1569,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -1830,7 +1644,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -2014,7 +1828,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -2164,7 +1978,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -2314,7 +2128,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -2464,7 +2278,7 @@
       "tableColumnMinWidth": 0
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },

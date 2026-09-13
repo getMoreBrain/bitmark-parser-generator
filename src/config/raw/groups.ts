@@ -505,19 +505,112 @@ const GROUPS: _GroupsConfig = {
       },
     ],
   },
-  [ConfigKey.group_standardItem]: {
+  // PLAN-023: the two lightweight variants of group_standardItemLead. Both carry
+  // the FULL four-link chain so that pageNumber / marginNumber are reachable —
+  // the chain is positional (1st = item, 2nd = lead, 3rd = pageNumber,
+  // 4th = marginNumber), so the earlier links must exist even when they hold no
+  // value.
+  //
+  // A placeholder link is declared `exportJsonKey: '@ignore'` — the key-pattern
+  // language's "tag takes no value" form (specs/JSONKEY_SYNTAX.md §6.2): the tag
+  // fires and consumes its chain slot, writes nothing, and any value the author
+  // wrote there is dropped with a warning.
+  //
+  // Deliberately NOT `{}` or `null`. `{}` means "consumed and used, written
+  // elsewhere" — that is how [@internalComment] and [@isCaseSensitive] are
+  // declared, and both carry a meaningful value. `null`/absent means "use the
+  // tag-name default key".
+  //
+  // The legacy `jsonKey` is kept on placeholder links purely to name the slot
+  // ('item' / 'lead') in the parser warning; it is not exported.
+  //
+  // Consequence: lightweight markup is either no [%] at all, or a chain of at
+  // least three — [%][%][%pageNumber].
+  [ConfigKey.group_standardPageMargin]: {
     type: GroupConfigType.standard,
     description:
-      'PLAN-021: Standard group for the item tag ONLY (no lead/pageNumber/marginNumber chain). Used by the lightweight bits (_standardLight).',
+      'PLAN-023: Standard group for page number and margin number tags, with the preceding item and lead links as positional placeholders that take no value. Used by the lightweight bits (_standardLight).',
+    tags: [
+      {
+        key: ConfigKey.tag_item,
+        jsonKey: 'item',
+        exportJsonKey: '@ignore',
+        // PLAN-140 W3 (NISO import): the clause/note label of a mapped
+        // source element ([%1], [%ANMERKUNG 1]) — same as group_standardItemLead.
+        // Provisional: NISO is unreleased, and this mapping cannot fire while
+        // the link is a placeholder.
+        mappingKeys: { 'xml-niso-iec': { '@el': 'label', '@text': '$' } },
+        description: 'Placeholder for the item; takes no value on lightweight bits',
+        chain: [
+          {
+            key: ConfigKey.tag_item,
+            jsonKey: 'lead',
+            exportJsonKey: '@ignore',
+            description: 'Placeholder for the lead; takes no value on lightweight bits',
+            maxCount: 1,
+            chain: [
+              {
+                key: ConfigKey.tag_item,
+                jsonKey: 'pageNumber',
+                exportJsonKey: { pageNumber: '$' },
+                description: 'The page number for the bit',
+                maxCount: 1,
+                chain: [
+                  {
+                    key: ConfigKey.tag_item,
+                    jsonKey: 'marginNumber',
+                    exportJsonKey: { marginNumber: '$' },
+                    description: 'The margin number for the bit',
+                    maxCount: 1,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  [ConfigKey.group_standardItemPageMargin]: {
+    type: GroupConfigType.standard,
+    description:
+      'PLAN-023: Standard group for item, page number and margin number tags, with the lead link as a positional placeholder that takes no value. Used by the lightweight heading bit (h).',
     tags: [
       {
         key: ConfigKey.tag_item,
         jsonKey: 'item',
         exportJsonKey: { item: '$' },
         // PLAN-140 W3 (NISO import): the clause/note label of a mapped
-        // source element ([%1], [%ANMERKUNG 1]) — same as group_standardItemLead.
+        // source element ([%1], [%ANMERKUNG 1]). Provisional; NISO is unreleased.
         mappingKeys: { 'xml-niso-iec': { '@el': 'label', '@text': '$' } },
         description: 'The item for the bit',
+        chain: [
+          {
+            key: ConfigKey.tag_item,
+            jsonKey: 'lead',
+            exportJsonKey: '@ignore',
+            description: 'Placeholder for the lead; takes no value on lightweight bits',
+            maxCount: 1,
+            chain: [
+              {
+                key: ConfigKey.tag_item,
+                jsonKey: 'pageNumber',
+                exportJsonKey: { pageNumber: '$' },
+                description: 'The page number for the bit',
+                maxCount: 1,
+                chain: [
+                  {
+                    key: ConfigKey.tag_item,
+                    jsonKey: 'marginNumber',
+                    exportJsonKey: { marginNumber: '$' },
+                    description: 'The margin number for the bit',
+                    maxCount: 1,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
     ],
   },

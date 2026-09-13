@@ -12,6 +12,18 @@
 [%4.1]
 
 [.h]
+[###Heading with an item, a page number and a margin number]
+[%4.1][%][%12][%m3]
+
+[.h]
+[###Heading with a page number but no item]
+[%][%][%12]
+
+[.h]
+[###Heading with a lead value, which is not allowed and generates a warning]
+[%4.1][%lead][%12]
+
+[.h]
 [########Level eight heading is clamped to seven with a warning]
 
 [.h]

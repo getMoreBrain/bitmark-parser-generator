@@ -7,9 +7,21 @@ Paragraph with **bold** and __italic__ inline styling.
 [.p]
 [%1]
 [@id:9001]
-Paragraph with an item, an id, and a footer.
+Paragraph with an item value, which is not allowed and generates a warning, an id, and a footer.
 ~~~~
 The footer of the paragraph.
+
+[.p]
+[%][%][%12]
+Paragraph with a page number. The item and lead placeholders take no value.
+
+[.p]
+[%][%][%12][%m3]
+Paragraph with a page number and a margin number.
+
+[.p]
+[%a][%b][%12]
+Paragraph with values in both placeholders, which generates two warnings.
 
 [.p]
 Body with bitmark++ blocks is ordinary body content.

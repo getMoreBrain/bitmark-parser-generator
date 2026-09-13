@@ -26,7 +26,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -59,7 +59,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -92,7 +92,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -136,11 +136,194 @@
       "body": []
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
     "bitmark": "[.h]\n[###Heading with an item]\n[%4.1]"
+  },
+  {
+    "bit": {
+      "type": "h",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Heading with an item, a page number and a margin number",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "level": 3,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4.1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "12",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "m3",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "5.41.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.h]\n[###Heading with an item, a page number and a margin number]\n[%4.1][%][%12][%m3]"
+  },
+  {
+    "bit": {
+      "type": "h",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Heading with a page number but no item",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "level": 3,
+      "item": [],
+      "lead": [],
+      "pageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "12",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "5.41.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.h]\n[###Heading with a page number but no item]\n[%][%][%12]"
+  },
+  {
+    "bit": {
+      "type": "h",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "title": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Heading with a lead value, which is not allowed and generates a warning",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "level": 3,
+      "item": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "4.1",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "lead": [],
+      "pageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "12",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": []
+    },
+    "parser": {
+      "version": "5.41.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "[%] 'lead' does not take a value on bit 'h'. It will be ignored.",
+          "text": "[%lead]",
+          "location": {
+            "start": {
+              "line": 24,
+              "column": 7,
+              "offset": 369
+            },
+            "end": {
+              "line": 24,
+              "column": 14,
+              "offset": 376
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.h]\n[###Heading with a lead value, which is not allowed and generates a warning]\n[%4.1][%lead][%12]"
   },
   {
     "bit": {
@@ -169,7 +352,7 @@
       "body": []
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -178,14 +361,14 @@
           "text": "[.h]\n[########Level eight heading is clamped to seven with a warning]\n",
           "location": {
             "start": {
-              "line": 14,
+              "line": 26,
               "column": 1,
-              "offset": 132
+              "offset": 383
             },
             "end": {
-              "line": 16,
+              "line": 28,
               "column": 1,
-              "offset": 202
+              "offset": 453
             }
           }
         }
@@ -231,7 +414,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -240,14 +423,14 @@
           "text": "[.h]\n[##Heading with a body that is not allowed]\nThis body is not allowed and generates a warning.\n",
           "location": {
             "start": {
-              "line": 17,
+              "line": 29,
               "column": 1,
-              "offset": 203
+              "offset": 454
             },
             "end": {
-              "line": 20,
+              "line": 32,
               "column": 1,
-              "offset": 302
+              "offset": 553
             }
           }
         }
@@ -294,7 +477,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -303,14 +486,14 @@
           "text": "[.h]\n[##Heading with a footer that is not allowed]\n~~~~\nThis footer is not allowed and generates a warning.\n",
           "location": {
             "start": {
-              "line": 21,
+              "line": 33,
               "column": 1,
-              "offset": 303
+              "offset": 554
             },
             "end": {
-              "line": 25,
+              "line": 37,
               "column": 1,
-              "offset": 411
+              "offset": 662
             }
           }
         }

@@ -95,6 +95,7 @@ re-types them under the schema.
 | `{ k1: v1, k2: v2 }`                      | object — fields/keys can be literals, sigils, scope-shifts, templates |
 | object with no `"$"` placeholder anywhere | constants-only rule — fires on tag presence, emits only literals      |
 | `null`                                    | no JSON output                                                        |
+| `"@ignore"`                               | tag takes **no value**: fires, emits nothing, any value is ignored    |
 | template key (e.g. `"sub${level}title"`)  | key with sigil interpolation; reverse splits literal anchors          |
 
 ### 6.1 Object-key forms
@@ -114,6 +115,51 @@ Keys in an object can be:
 The braced placeholder form `${name}` lets a sigil sit immediately next to
 ident-characters, e.g. `"sub${level}title"` (otherwise `$leveltitle` reads
 greedily as one identifier).
+
+### 6.2 `"@ignore"` — the tag takes no value
+
+`"@ignore"` declares that a tag accepts **no value**. The tag still fires —
+it is lexed, it consumes its position in a chain, and it satisfies
+cardinality — but it writes nothing, and any value the author wrote in it is
+**dropped with a parser warning**.
+
+```json
+"@ignore"
+```
+
+Whole-pattern form only: top level of a rule, never a key, never a value
+inside an object or array, and never combined with other rules.
+
+It is **not** the same as `{}` or `null`:
+
+| Form       | Value is…                              | Author writing a value |
+| ---------- | -------------------------------------- | ---------------------- |
+| `"@ignore"`| not permitted                          | warning, value dropped |
+| `{}`       | consumed and used, written elsewhere   | correct and expected   |
+| `null`     | written at the tag-name default key    | correct and expected   |
+
+The distinction matters: `{}` is how `[@internalComment]` and
+`[@isCaseSensitive]` are declared, and both carry a meaningful value. Only
+`"@ignore"` says the value is a mistake.
+
+**Positional chains.** The motivating case is a chain whose links are
+distinguished by position rather than by name, such as `[%]` (§11.4) and
+`[►]` (§11.5). A leading link that the bit does not support is declared
+`"@ignore"` so the later links stay reachable:
+
+```json
+[%]  chain pos 1   →  "@ignore"                    ← no item on this bit
+[%]  chain pos 2   →  "@ignore"                    ← no lead on this bit
+[%]  chain pos 3   →  { "pageNumber":   "$" }
+[%]  chain pos 4   →  { "marginNumber": "$" }
+```
+
+Markup is then either no `[%]` at all, or a chain of at least three:
+`[%][%][%pageNumber]`. On the reverse leg an `"@ignore"` link is written as
+an empty tag whenever a later link in the chain carries a value.
+
+`"@ignore"` is not restricted to chains — it is valid on any tag whose value
+is never meaningful.
 
 ## 7. Multiple rules per tag
 
@@ -272,8 +318,13 @@ has four entries for `[%]`, distinguished by chain position:
 [%]  chain pos 4   →  { "marginNumber": "$" }
 ```
 
-Empty `[%]` reserves a slot (handled by parser/schema, not jsonKey — schema
-flag `emptyReservesSlot: true` on the tag).
+An empty `[%]` reserves its slot: the tag fires and advances the chain
+position whether or not it carries text, so the later slots stay reachable.
+
+Where a bit does not support one of the leading slots, that link is declared
+`"@ignore"` (§6.2) rather than given a key — the slot is still reserved, and
+a value written there is dropped with a warning. This supersedes the earlier
+`emptyReservesSlot: true` schema flag, which was never implemented.
 
 ### 11.5 `[►]` two-slot (handled by chaining)
 
