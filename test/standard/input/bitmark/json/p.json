@@ -24,7 +24,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -81,7 +81,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -95,18 +95,7 @@
       "id": [
         "9001"
       ],
-      "item": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "1",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
+      "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
@@ -117,7 +106,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Paragraph with an item, an id, and a footer.",
+              "text": "Paragraph with an item value, which is not allowed and generates a warning, an id, and a footer.",
               "type": "text"
             }
           ],
@@ -138,11 +127,200 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "[%] 'item' does not take a value on bit 'p'. It will be ignored.",
+          "text": "[%1]",
+          "location": {
+            "start": {
+              "line": 8,
+              "column": 1,
+              "offset": 105
+            },
+            "end": {
+              "line": 8,
+              "column": 5,
+              "offset": 109
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.p]\n[%1]\n[@id:9001]\nParagraph with an item value, which is not allowed and generates a warning, an id, and a footer.\n~~~~\nThe footer of the paragraph."
+  },
+  {
+    "bit": {
+      "type": "p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "12",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paragraph with a page number. The item and lead placeholders take no value.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
-    "bitmark": "[.p]\n[%1]\n[@id:9001]\nParagraph with an item, an id, and a footer.\n~~~~\nThe footer of the paragraph."
+    "bitmark": "[.p]\n[%][%][%12]\nParagraph with a page number. The item and lead placeholders take no value."
+  },
+  {
+    "bit": {
+      "type": "p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "12",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "m3",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paragraph with a page number and a margin number.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.41.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1"
+    },
+    "bitmark": "[.p]\n[%][%][%12][%m3]\nParagraph with a page number and a margin number."
+  },
+  {
+    "bit": {
+      "type": "p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "12",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "marginNumber": [],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Paragraph with values in both placeholders, which generates two warnings.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.41.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "[%] 'item' does not take a value on bit 'p'. It will be ignored.",
+          "text": "[%a]",
+          "location": {
+            "start": {
+              "line": 23,
+              "column": 1,
+              "offset": 425
+            },
+            "end": {
+              "line": 23,
+              "column": 5,
+              "offset": 429
+            }
+          }
+        },
+        {
+          "message": "[%] 'lead' does not take a value on bit 'p'. It will be ignored.",
+          "text": "[%b]",
+          "location": {
+            "start": {
+              "line": 23,
+              "column": 5,
+              "offset": 429
+            },
+            "end": {
+              "line": 23,
+              "column": 9,
+              "offset": 433
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.p]\n[%a][%b][%12]\nParagraph with values in both placeholders, which generates two warnings."
   },
   {
     "bit": {
@@ -205,7 +383,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -236,7 +414,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -245,14 +423,14 @@
           "text": "[.p]\n[!This instruction is not allowed and will be ignored]\n[?This hint is not allowed and will be ignored]\nParagraph body.\n",
           "location": {
             "start": {
-              "line": 20,
+              "line": 32,
               "column": 1,
-              "offset": 287
+              "offset": 600
             },
             "end": {
-              "line": 24,
+              "line": 36,
               "column": 1,
-              "offset": 411
+              "offset": 724
             }
           }
         },
@@ -261,14 +439,14 @@
           "text": "[.p]\n[!This instruction is not allowed and will be ignored]\n[?This hint is not allowed and will be ignored]\nParagraph body.\n",
           "location": {
             "start": {
-              "line": 20,
+              "line": 32,
               "column": 1,
-              "offset": 287
+              "offset": 600
             },
             "end": {
-              "line": 24,
+              "line": 36,
               "column": 1,
-              "offset": 411
+              "offset": 724
             }
           }
         }
@@ -318,7 +496,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1",
       "warnings": [
@@ -327,14 +505,14 @@
           "text": "[&image:https://cdn.bitbook.education/cat.jpg]",
           "location": {
             "start": {
-              "line": 27,
+              "line": 39,
               "column": 1,
-              "offset": 506
+              "offset": 819
             },
             "end": {
-              "line": 27,
+              "line": 39,
               "column": 47,
-              "offset": 552
+              "offset": 865
             }
           }
         },
@@ -343,14 +521,14 @@
           "text": "[.p&image]\nParagraph with a resource attachment, which is not allowed and generates warnings.\n[&image:https://cdn.bitbook.education/cat.jpg]\n",
           "location": {
             "start": {
-              "line": 25,
+              "line": 37,
               "column": 1,
-              "offset": 412
+              "offset": 725
             },
             "end": {
-              "line": 28,
+              "line": 40,
               "column": 1,
-              "offset": 553
+              "offset": 866
             }
           }
         }

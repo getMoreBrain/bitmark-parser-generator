@@ -24,7 +24,7 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
@@ -35,18 +35,7 @@
       "type": "smart-standard-p",
       "format": "bitmark++",
       "bitLevel": 1,
-      "item": [
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "text": "2",
-              "type": "text"
-            }
-          ],
-          "attrs": {}
-        }
-      ],
+      "item": [],
       "lead": [],
       "pageNumber": [],
       "marginNumber": [],
@@ -57,7 +46,7 @@
           "type": "paragraph",
           "content": [
             {
-              "text": "Smart standard paragraph with an item.",
+              "text": "Smart standard paragraph with an item value, which is not allowed and generates a warning.",
               "type": "text"
             }
           ],
@@ -66,10 +55,81 @@
       ]
     },
     "parser": {
-      "version": "5.38.0",
+      "version": "5.41.0",
+      "bitmarkVersion": "3",
+      "textParserVersion": "8.41.1",
+      "warnings": [
+        {
+          "message": "[%] 'item' does not take a value on bit 'smart-standard-p'. It will be ignored.",
+          "text": "[%2]",
+          "location": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 77
+            },
+            "end": {
+              "line": 5,
+              "column": 5,
+              "offset": 81
+            }
+          }
+        }
+      ]
+    },
+    "bitmark": "[.smart-standard-p]\n[%2]\nSmart standard paragraph with an item value, which is not allowed and generates a warning."
+  },
+  {
+    "bit": {
+      "type": "smart-standard-p",
+      "format": "bitmark++",
+      "bitLevel": 1,
+      "item": [],
+      "lead": [],
+      "pageNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "12",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "marginNumber": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "m3",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ],
+      "hint": [],
+      "instruction": [],
+      "body": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "text": "Smart standard paragraph with a page number and a margin number.",
+              "type": "text"
+            }
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "parser": {
+      "version": "5.41.0",
       "bitmarkVersion": "3",
       "textParserVersion": "8.41.1"
     },
-    "bitmark": "[.smart-standard-p]\n[%2]\nSmart standard paragraph with an item."
+    "bitmark": "[.smart-standard-p]\n[%][%][%12][%m3]\nSmart standard paragraph with a page number and a margin number."
   }
 ]
