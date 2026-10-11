@@ -38,6 +38,7 @@ const BitGroup = {
   nonProduction: 'non-production',
   other: 'other',
   pages: 'pages',
+  plan: 'plan',
   preparationNote: 'preparation-note',
   quizzes: 'quizzes',
   rating: 'rating',

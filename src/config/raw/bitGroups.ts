@@ -159,6 +159,11 @@ const BIT_GROUPS: _BitGroupsConfig = {
     description: 'Page bits',
     title: 'Pages',
   },
+  [BitGroup.plan]: {
+    since: '5.43.0',
+    description: 'Plan bits (tasks shown as cards in the plan view of books with @subtype: plan)',
+    title: 'Plan',
+  },
   [BitGroup.preparationNote]: {
     since: '5.39.0',
     description: 'Preparation note task bits',

@@ -5705,6 +5705,65 @@ const BITS: _BitsConfig = {
       },
     ],
   },
+  [BitType.planTask]: {
+    since: '5.43.0',
+    title: 'Plan Task',
+    bitGroups: [BitGroup.plan],
+    baseBitType: BitType._standard,
+    description: 'Plan task bit, used to create task cards in the plan view of plan books',
+    tags: [
+      {
+        key: ConfigKey.property_book,
+        description: 'The book the plan task links to',
+        format: TagFormat.plainText,
+        chain: [
+          {
+            exportJsonKey: { reference: '$' },
+            key: ConfigKey.tag_reference,
+            format: TagFormat.plainText,
+            description: 'The reference for the book the plan task links to',
+            maxCount: 1,
+            chain: [
+              {
+                key: ConfigKey.tag_reference,
+                jsonKey: 'referenceEnd',
+                exportJsonKey: { referenceEnd: '$' },
+                format: TagFormat.plainText,
+                description: 'The referenceEnd for the book the plan task links to',
+                maxCount: 1,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        key: ConfigKey.property_date,
+        description: 'The planned date of the plan task, set by the author',
+        format: TagFormat.plainText,
+      },
+    ],
+  },
+  [BitType.planTaskAlt]: {
+    since: '5.43.0',
+    title: 'Plan Task Alt',
+    bitGroups: [BitGroup.plan],
+    baseBitType: BitType.planTask,
+    description: 'Plan task bit with an alternative look (theme)',
+  },
+  [BitType.planTaskClosing]: {
+    since: '5.43.0',
+    title: 'Plan Task Closing',
+    bitGroups: [BitGroup.plan],
+    baseBitType: BitType.planTask,
+    description: 'Plan task bit that closes a lane; the plan view keeps it at the end of the lane',
+  },
+  [BitType.planTaskClosingAlt]: {
+    since: '5.43.0',
+    title: 'Plan Task Closing Alt',
+    bitGroups: [BitGroup.plan],
+    baseBitType: BitType.planTaskClosing,
+    description: 'Plan task closing bit with an alternative look (theme)',
+  },
   [BitType.leLearningObjectives]: {
     since: '1.25.0',
     title: 'Learning Objectives',
