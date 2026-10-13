@@ -25,7 +25,6 @@ const config = [
       'specs',
       'plans',
       '.claude',
-      'submodules',
       '.github',
       'src/generated',
       '**/*.d.ts',
