@@ -155,11 +155,11 @@ class ConfigBuilder {
     };
 
     // The emitted `mappingKeys` record: members keyed by mapping-type id
-    // (`json`, `html`, plus named mappings like `xml-niso-iec` carried
-    // verbatim from the raw config's `mappingKeys` field). A null value
-    // means "no key" and is never emitted; an empty record is omitted
-    // entirely. `base` seeds the record with the raw named mappings; the
-    // json/html members (from exportJsonKey/htmlKey) overlay it.
+    // (`json`, `html`, plus any named mappings carried verbatim from the raw
+    // config's `mappingKeys` field). A null value means "no key" and is never
+    // emitted; an empty record is omitted entirely. `base` seeds the record
+    // with the raw named mappings; the json/html members (from
+    // exportJsonKey/htmlKey) overlay it.
     type MappingKeysRecord = Record<string, unknown>;
     const mappingKeysField = (
       base: MappingKeysRecord | undefined,

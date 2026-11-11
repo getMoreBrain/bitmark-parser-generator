@@ -1,7 +1,10 @@
 @gmb/bitmark-parser-generator
 ================
 
-![Build & Test](https://github.com/getMoreBrain/bitmark-parser-generator/actions/workflows/build-test.yml/badge.svg?branch=main)
+[![npm](https://img.shields.io/npm/v/@gmb/bitmark-parser-generator)](https://www.npmjs.com/package/@gmb/bitmark-parser-generator)
+[![Downloads](https://img.shields.io/npm/dm/@gmb/bitmark-parser-generator)](https://www.npmjs.com/package/@gmb/bitmark-parser-generator)
+[![Publish](https://github.com/getMoreBrain/bitmark-parser-generator/actions/workflows/publish.yml/badge.svg)](https://github.com/getMoreBrain/bitmark-parser-generator/actions/workflows/publish.yml)
+[![License](https://img.shields.io/npm/l/@gmb/bitmark-parser-generator)](./LICENSE)
 
 A bitmark parser and generator using Peggy.js.
 
