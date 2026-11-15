@@ -1,6 +1,6 @@
 # bitmark-parser-generator
 
-Version: 5.44.2
+Version: 5.44.3
 ## Supported Bits
 <pre>
 _standard (since: 3.2.0)

@@ -1,12 +1,21 @@
 # Publishes a release to npm when its tag is pushed, then creates the GitHub release.
 # Release commits and tags are created by the export bot; the release notes are the tag's commit
 # message.
+#
+# Can also be run manually for an existing tag (e.g. if the tag push did not trigger a run):
+#   gh workflow run Publish -f tag=vX.Y.Z
 
 name: Publish
 
 on:
   push:
     tags: ['v*.*.*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing release tag to publish (vX.Y.Z)'
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -15,8 +24,19 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      TAG: ${{ inputs.tag || github.ref_name }}
     steps:
+      - name: Check tag
+        run: |
+          if ! [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Not a release tag: $TAG (expected vX.Y.Z)"
+            exit 1
+          fi
+
       - uses: actions/checkout@v6
+        with:
+          ref: refs/tags/${{ env.TAG }}
 
       - uses: actions/setup-node@v6
         with:
@@ -34,12 +54,12 @@ jobs:
         run: npm publish --access public --provenance
 
       - name: Release notes
-        run: git log -1 --format=%b "$GITHUB_REF_NAME" > release-notes.md
+        run: git log -1 --format=%b HEAD > release-notes.md
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.ref_name }}
-          name: ${{ github.ref_name }}
+          tag_name: ${{ env.TAG }}
+          name: ${{ env.TAG }}
           body_path: release-notes.md
           draft: false
